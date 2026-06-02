@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как сканировать документы с Canon на Windows 7: Полное руководство — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция по настройке сканирования с принтеров Canon на Windows 7. Решение проблем с драйверами, использование IJ Scan Utility и WIA.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-skanirovat-dokumenty-s-printera-na-kompyuter-windows-7-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как сканировать документы с Canon на Windows 7: Полное руководство">
+    <meta property="og:description" content="Пошаговая инструкция по настройке сканирования с принтеров Canon на Windows 7. Решение проблем с драйверами, использование IJ Scan Utility и WIA.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как сканировать документы с Canon на Windows 7: Полное руководство</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-в-процесс-сканирования">Введение в процесс сканирования</a></li><li><a href="#подготовка-оборудования-и-установка-драйверов">Подготовка оборудования и установка драйверов</a></li><li><a href="#использование-утилиты-ij-scan-utility">Использование утилиты IJ Scan Utility</a></li><li><a href="#сканирование-через-стандартные-средства-windows-7">Сканирование через стандартные средства Windows 7</a></li><li><a href="#решение-частых-проблем-и-ошибок">Решение частых проблем и ошибок</a></li><li><a href="#настройка-качества-и-форматов-файлов">Настройка качества и форматов файлов</a></li><li><a href="#использование-дополнительных-утилит">Использование дополнительных утилит</a></li><li><a href="#специфика-работы-с-сетевыми-принтерами">Специфика работы с сетевыми принтерами</a></li><li><a href="#заключение-и-итоговые-рекомендации">Заключение и итоговые рекомендации</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-sdelat-kserokopiyu-na-printere-canon-pixma-mg2440.html">Как сделать ксерокопию на принтере Canon Pixma MG2440: полная инструкция</a></li><li><a href="/articles/k/ka/kak-otkserokopirovat-na-printere-canon-bez-kompyutera.html">Как отксерокопировать на принтере Canon без компьютера: полная инструкция</a></li><li><a href="/articles/k/ka/kak-sdelat-kserokopiyu-na-printere-canon-mg2545s.html">Как сделать ксерокопию на принтере Canon MG2545s: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-skanirovat-s-printera-na-kompyuter-canon-mf4400.html">Как настроить сканирование с Canon MF4400 на компьютер: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-otskanirovat-printerom-canon.html">Как отсканировать документ на принтере Canon: полное руководство</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полное руководство по сканированию документов с Canon на Windows 7</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-в-процесс-сканирования">Введение в процесс сканирования</a></li><li><a href="#подготовка-оборудования-и-установка-драйверов">Подготовка оборудования и установка драйверов</a></li><li><a href="#использование-утилиты-ij-scan-utility">Использование утилиты IJ Scan Utility</a></li><li><a href="#сканирование-через-стандартные-средства-windows-7">Сканирование через стандартные средства Windows 7</a></li><li><a href="#решение-частых-проблем-и-ошибок">Решение частых проблем и ошибок</a></li><li><a href="#настройка-качества-и-форматов-файлов">Настройка качества и форматов файлов</a></li><li><a href="#использование-дополнительных-утилит">Использование дополнительных утилит</a></li><li><a href="#специфика-работы-с-сетевыми-принтерами">Специфика работы с сетевыми принтерами</a></li><li><a href="#заключение-и-итоговые-рекомендации">Заключение и итоговые рекомендации</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-в-процесс-сканирования">Введение в процесс сканирования</h2>
+<p>Работа с бумажными документами в эпоху цифровых технологий требует надежного инструмента для оцифровки. Если вы используете многофункциональное устройство <em>Canon</em> в связке с операционной системой <code>Windows 7</code>, процесс может показаться сложным из-за различий в драйверах и интерфейсах. Однако, зная правильные алгоритмы, вы сможете быстро переводить изображения и текст в электронный вид.</p>
+<p>Многие пользователи сталкиваются с трудностями именно при первоначальной настройке или после обновления программного обеспечения. Главной проблемой часто становится отсутствие правильного <strong>драйвера сканера</strong> или конфликт утилит. В этой статье мы разберем все рабочие способы: от использования встроенных средств системы до специализированного софта от производителя.</p>
+<p>Важно понимать, что <em>Windows 7</em> является достаточно старой системой, поэтому современные версии ПО могут не поддерживать её полностью. Вам потребуется искать специфические версии утилит, адаптированные именно под эту архитектуру. Без корректной установки <strong>канонировских драйверов</strong> сканирование будет невозможным, даже если принтер печатает безупречно.</p>
+
+<h2 id="подготовка-оборудования-и-установка-драйверов">Подготовка оборудования и установка драйверов</h2>
+<p>Перед тем как начать процесс сканирования, необходимо убедиться, что ваше оборудование корректно распознается системой. Физическое подключение происходит через USB-кабель, который должен быть плотно вставлен в порт компьютера и в соответствующий разъем на корпусе принтера <em>Canon</em>.</p>
+<p>Система <code>Windows 7</code> часто пытается автоматически найти драйвер через Центр обновлений, но этот процесс может затянуться или завершиться ошибкой. Лучше всего использовать официальный установочный диск, идущий в комплекте с устройством, или скачать архив с сайта поддержки. Ключевым моментом является наличие пакета <strong>IJ Scan Utility</strong>, который отвечает за управление сканированием.</p>
+<p>Если у вас уже установлена программа, но она не видит устройство, попробуйте переустановить драйвер. Для этого удалите старое ПО через <code>Панель управления → Программы и компоненты</code>, перезагрузите ПК и запустите установщик от имени администратора. Это даст системе права на внесение критических изменений в реестр, необходимые для работы <strong>USB-интерфейса</strong>.</p>
+<blockquote>⚠️ Внимание: Убедитесь, что вы скачиваете драйвер именно для вашей модели, так как <strong>Canon PIXMA</strong> и <em>Canon imageCLASS</em> используют разные протоколы взаимодействия с ОС.</blockquote>
+
+<h2 id="использование-утилиты-ij-scan-utility">Использование утилиты IJ Scan Utility</h2>
+<p>Это самый надежный способ работы с устройствами <em>Canon</em>, так как программа предоставляет расширенные настройки качества и формата. После установки утилита создает ярлык на рабочем столе, который запускает интерфейс сканирования. Интерфейс программы интуитивно понятен, но требует внимательного выбора режима.</p>
+<p>В главном окне вы увидите несколько кнопок: <code>Документ</code>, <code>Фото</code> и <code>Пленка</code>. Для обычного бумажного документа выберите первый вариант. Здесь вы можете задать разрешение <code>300 DPI</code> или выше, если планируете дальнейшее редактирование. Система также позволяет автоматически обрезать края страницы, что экономит место на диске.</p>
+<p>Особое внимание уделите разделу <code>Настройки</code>, где можно указать папку для сохранения файлов. По умолчанию изображения могут сохраняться в скрытую папку документов, найти которую новичку будет сложно. Измените путь на видимую папку, например, <code>C:\Скан</code> или <code>Рабочий стол</code>, чтобы не потерять результат работы.</p>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к сканированию</h4><label class="check-item"><input type="checkbox"><span>Установлен драйвер Canon IJ Scan Utility</span></label><label class="check-item"><input type="checkbox"><span>Принтер включен и подключен по USB</span></label><label class="check-item"><input type="checkbox"><span>Открыта утилита IJ Scan Utility</span></label><label class="check-item"><input type="checkbox"><span>Выбрана папка для сохранения файлов</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="сканирование-через-стандартные-средства-windows-7">Сканирование через стандартные средства Windows 7</h2>
+<p>Если утилиты от производителя нет или она работает некорректно, можно воспользоваться встроенными возможностями самой операционной системы. В <code>Windows 7</code> эта функция встроена в раздел <code>Оборудование и звук</code> и называется <strong>Факсы и сканирование</strong>. Это универсальный инструмент, который использует стандартный драйвер WIA.</p>
+<p>Для запуска откройте меню <code>Пуск</code> и введите в поиске <code>Факсы и сканирование</code>. В открывшемся окне нажмите кнопку <code>Новое сканирование</code> в верхнем левом углу. Откроется окно предпросмотра, где можно выбрать профиль сканирования. Здесь же вы увидите имя вашего устройства <em>Canon</em>, если оно подключено.</p>
+<p>В этом режиме доступны настройки цвета, типа документа и разрешения. Стандартный профиль <strong>Черно-белый документ</strong> отлично подходит для текстовых файлов. Если вы сканируете фотографии, переключите режим на <strong>Цветной</strong> и укажите формат сохранения, например, <code>JPEG</code> или <code>TIFF</code> для лучшего качества.</p>
+<blockquote>⚠️ Внимание: Стандартный драйвер WIA может работать медленнее, чем родной драйвер IJ Scan Utility, и иногда не поддерживает продвинутые функции удаления фона.</blockquote>
+<div class="pb-poll" id="poll-5d32b779"><div class="pb-poll-question">📊 Какой способ сканирования вы используете чаще?</div><div class="pb-poll-option" data-poll="5d32b779" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Через родную утилиту Canon</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="5d32b779" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Через стандартное окно Windows</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="5d32b779" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Через сторонние программы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="5d32b779" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, как сканировать</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="решение-частых-проблем-и-ошибок">Решение частых проблем и ошибок</h2>
+<p>В процессе эксплуатации пользователи часто сталкиваются с сообщениями об ошибках, которые блокируют работу. Одной из самых распространенных проблем является сообщение <code>Статус соединения с устройством прерван</code>. Это часто случается при использовании длинных USB-кабелей или подключении через USB-хаб.</p>
+<p>Для устранения проблемы попробуйте подключить кабель напрямую в порт на материнской плате, избегая передних портов корпуса системного блока. Также проверьте, не спит ли принтер. Некоторые модели <em>Canon</em> переходят в режим глубокого сна, из которого не могут "проснуться" по команде сканирования без физического нажатия кнопки.</p>
+<p>Другая частая ошибка — <strong>отсутствие драйвера сканера</strong> при наличии драйвера принтера. Это может произойти, если при установке был выбран режим "Минимальная установка". В таком случае необходимо скачать полный пакет драйверов с официального сайта, где в разделе <strong>Дополнительные утилиты</strong> должна быть галочка напротив сканера.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип ошибки</th>
+<th>Вероятная причина</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Устройство не найдено</td>
+<td>Проблема с кабелем или портом</td>
+<td>Замените USB-кабель или подключите к другому порту</td>
+</tr>
+<tr>
+<td>Ошибка 0x000000f</td>
+<td>Конфликт драйверов</td>
+<td>Полная переустановка ПО с удалением старых версий</td>
+</tr>
+<tr>
+<td>Сканирование зависло</td>
+<td>Нехватка оперативной памяти</td>
+<td>Закройте лишние программы, уменьшите разрешение</td>
+</tr>
+<tr>
+<td>Черный экран</td>
+<td>Закрыта крышка сканера</td>
+<td>Откройте и закройте крышку, проверьте наличие стекла</td>
+</tr>
+</tbody>
+</table></div>
+<details class="pb-accordion"><summary>Почему принтер печатает, но не сканирует?Если принтер печатает, значит, драйвер печати установлен верно. Однако драйвер печати и драйвер сканирования — это разные модули ПО. В полной версии драйвера Canon они идут вместе, но при кастомной установке или через Центр обновлений Windows часто ставится только модуль печати. Проверьте раздел "Диспетчер устройств" и убедитесь, что сканер отображается как отдельное устройство, а не как "Неизвестное устройство".-->
+
+<h2 id="настройка-качества-и-форматов-файлов">Настройка качества и форматов файлов</h2>
+<p>Качество итогового файла напрямую зависит от выбранных параметров перед запуском. Для текстовых документов оптимальным считается разрешение <code>300 DPI</code> в формате черно-белого изображения. Это обеспечивает четкость шрифтов при минимальном размере файла.</p>
+<p>Если вам нужно сохранить цветные фотографии или графику, увеличьте разрешение до <code>600 DPI</code> и выберите формат <strong>PNG</strong> или <strong>JPEG</strong> высокого качества. Формат <code>PDF</code> идеален для многостраничных документов, так как позволяет объединить несколько страниц в один файл без потери структуры.</p>
+<p>Помните о том, что высокое разрешение значительно увеличивает время сканирования и занимаемое место на диске. Для архивирования старых документов лучше использовать сжатый <strong>PDF</strong>, а для последующей обработки в графических редакторах — <strong>TIFF</strong> без сжатия.</p>
+<!--WIDGET</summary><div class="pb-accordion-body"><p>tip:Перед сканированием протрите стекло сканера специальной салфеткой. Даже мелкие частицы пыли или разводы от пальцев могут испортить изображение и затруднить распознавание текста (OCR).</p></div></details>
+
+<h2 id="использование-дополнительных-утилит">Использование дополнительных утилит</h2>
+<p>Помимо стандартных средств, существуют специализированные программы для работы со сканерами. Например, <em>NAPS2</em> (Not Another PDF Scanner 2) — это бесплатное приложение с открытым кодом, которое поддерживает множество моделей <em>Canon</em> в <code>Windows 7</code>.</p>
+<p>Такой софт часто работает стабильнее, если родные драйверы конфликтуют с системой. Интерфейс подобных программ обычно проще, но функционал ограничен базовыми настройками. Это отличный вариант для тех, кому нужно быстро отсканировать документ без лишних настроек.</p>
+<p>Однако, для профессиональных задач, таких как сканирование пленок или слайдов, лучше все же использовать родное ПО <strong>Canon IJ Scan Utility</strong>, так как оно имеет доступ к уникальным алгоритмам обработки изображения, заложенным производителем.</p>
+<blockquote>⚠️ Внимание: При использовании сторонних программ убедитесь, что драйвер WIA (Windows Image Acquisition) включен в вашей системе, так как большинство сторонних решений работают через этот интерфейс, а не через родные протоколы Canon.</blockquote>
+
+<h2 id="специфика-работы-с-сетевыми-принтерами">Специфика работы с сетевыми принтерами</h2>
+<p>Если ваш принтер <em>Canon</em> подключен к сети через Wi-Fi или кабель Ethernet, процесс сканирования имеет свои особенности. В <code>Windows 7</code> сетевые устройства могут определяться медленнее, чем локальные USB-устройства.</p>
+<p>Для корректной работы необходимо, чтобы компьютер и принтер находились в одной сетевой подсети. Проверьте настройки IP-адреса. В утилите сканирования нужно будет указать не только модель, но и IP-адрес устройства, если автоматическое обнаружение не сработало.</p>
+<p>Иногда возникает проблема, когда сетевой принтер виден, но сканирование по сети отключено в настройках самого устройства. Зайдите в веб-интерфейс принтера через браузер, найдите раздел <code>Настройки сети</code> и убедитесь, что функция <strong>Сканирование по сети</strong> активна.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Сетевое сканирование требует стабильного соединения; при слабых сигналах Wi-Fi процесс может прерываться с ошибкой тайм-аута, поэтому для больших файлов лучше использовать проводное подключение.</p></aside>
+
+<h2 id="заключение-и-итоговые-рекомендации">Заключение и итоговые рекомендации</h2>
+<p>Сканирование документов на <em>Canon</em> в среде <code>Windows 7</code> — задача вполне решаемая при наличии правильных драйверов. Главное правило — не полагаться только на автоматическую установку системы, а использовать полный пакет ПО от производителя.</p>
+<p>Регулярно обновляйте прошивку устройства, если это возможно, так как это улучшает совместимость со старыми версиями ОС. Если стандартные методы не помогают, попробуйте альтернативные программы или проверьте целостность USB-кабеля.</p>
+<p>Помните, что <mark>установка драйверов от имени администратора является обязательным условием для корректной работы сканера на Windows 7</mark>. Это обеспечивает доступ к системным ресурсам, необходимым для захвата изображения. Следуя этим инструкциям, вы сможете эффективно использовать свой принтер для оцифровки любых документов.</p>
+
+<h2 id="часто-задаваемые-вопросы">Часто задаваемые вопросы</h2>
+<details>
+<summary>Что делать, если компьютер не видит сканер Canon вообще?</summary>
+<p>Проверьте кабель USB, попробуйте другой порт. Убедитесь, что в "Диспетчере устройств" нет желтых восклицательных знаков рядом с устройством. Возможно, требуется ручная установка драйвера через поиск в системе.</p>
+</details>
+<details>
+<summary>Как сканировать в PDF на Windows 7?</summary>
+<p>В утилите IJ Scan Utility выберите режим "Документ", а в параметрах сохранения укажите формат PDF. В стандартном окне "Факсы и сканирование" также можно выбрать PDF как целевой формат перед запуском процесса.</p>
+</details>
+<details>
+<summary>Можно ли сканировать с телефона в Windows 7?</summary>
+<p>Прямое сканирование с телефона на компьютер без посредников невозможно. Однако вы можете использовать мобильное приложение Canon PRINT, чтобы сканировать документ на телефон, а затем переслать его на компьютер через облако или USB.</p>
+</details>
+<details>
+<summary>Почему сканирование происходит очень медленно?</summary>
+<p>Медленная работа может быть связана с высоким разрешением (DPI), плохим USB-кабелем или запуском других тяжелых программ. Попробуйте снизить разрешение до 200-300 DPI для текстовых документов.</p>
+</details>
+<details>
+<summary>Нужен ли диск для установки драйверов?</summary>
+<p>Нет, диск не обязателен. Все актуальные драйверы можно скачать с официального сайта поддержки Canon в разделе загрузок, выбрав вашу модель и операционную систему Windows 7.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-sdelat-kserokopiyu-na-printere-canon-pixma-mg2440.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать ксерокопию на принтере Canon Pixma MG2440: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по созданию ксерокопий на модели Canon Pixma MG2440. Настройка качества, работ</span>
+            </a><a href="/articles/k/ka/kak-otkserokopirovat-na-printere-canon-bez-kompyutera.html" class="pb-related-card">
+                <span class="pb-related-title">Как отксерокопировать на принтере Canon без компьютера: полная инструкция</span>
+                <span class="pb-related-desc">Узнайте, как сделать ксерокопию на принтере Canon без ПК. Подробная инструкция по настройке, работе </span>
+            </a><a href="/articles/k/ka/kak-sdelat-kserokopiyu-na-printere-canon-mg2545s.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать ксерокопию на принтере Canon MG2545s: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробный гайд по копированию документов на Canon MG2545s. Узнайте, как настроить качество, цвет и м</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-s-printera-na-kompyuter-canon-mf4400.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить сканирование с Canon MF4400 на компьютер: Полная инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по использованию функции сканирования с МФУ Canon imageCLASS MF4400. Настройка</span>
+            </a><a href="/articles/k/ka/kak-otskanirovat-printerom-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как отсканировать документ на принтере Canon: полное руководство</span>
+                <span class="pb-related-desc">Подробная инструкция по сканированию с принтеров Canon через USB, Wi-Fi и мобильные приложения. Реше</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-dokumenty-s-printera-canon-mp250-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы с принтера Canon MP250 на компьютер: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по настройке сканирования документов и фотографий с МФУ Canon Pixma MP250 на ПК</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

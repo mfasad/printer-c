@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Magic Lantern для Canon: пошаговая установка и настройка — Кэнон Инфо</title>
+    <meta name="description" content="Инструкция как установить Magic Lantern на фотоаппараты Canon. Требования, совместимость прошивок, риски и настройка основных модулей для съемки.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-magic-lantern-kak-ustanovit.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Magic Lantern для Canon: пошаговая установка и настройка">
+    <meta property="og:description" content="Инструкция как установить Magic Lantern на фотоаппараты Canon. Требования, совместимость прошивок, риски и настройка основных модулей для съемки.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/fotoapparaty-canon/">Фотоаппараты Canon</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Magic Lantern для Canon: пошаговая установка и настройка</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-камеры-и-проверка-совместимости">Подготовка камеры и проверка совместимости</a></li><li><a href="#форматирование-карты-памяти-и-создание-файлов">Форматирование карты памяти и создание файлов</a></li><li><a href="#процесс-загрузки-и-активации-модуля">Процесс загрузки и активации модуля</a></li><li><a href="#настройка-ключевых-модулей-и-функций">Настройка ключевых модулей и функций</a></li><li><a href="#риски-проблемы-и-безопасность-данных">Риски, проблемы и безопасность данных</a></li><li><a href="#удаление-и-восстановление-штатной-прошивки">Удаление и восстановление штатной прошивки</a></li><li><a href="#faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-fotografirovat-zvezdnoe-nebo-canon.html">Как фотографировать звездное небо на Canon: Полное руководство по настройкам</a></li><li><a href="/articles/c/ca/canon-eos-500d-kak-web-kamera.html">Canon EOS 500D как веб-камера: настройка и подключение к ПК</a></li><li><a href="/articles/k/ka/kak-otklyuchit-blokirovku-karty-pamyati-na-fotoapparate-canon.html">Как отключить блокировку карты памяти на фотоаппарате Canon</a></li><li><a href="/articles/k/ka/kak-formatirovat-fleshku-dlya-canon.html">Как правильно форматировать флешку для фотоаппарата Canon</a></li><li><a href="/articles/c/ca/canon-chya-firma-kakoj-strany.html">Canon — страна производитель и история бренда: кто делает технику</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как установить Magic Lantern на камеру Canon: полное руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-камеры-и-проверка-совместимости">Подготовка камеры и проверка совместимости</a></li><li><a href="#форматирование-карты-памяти-и-создание-файлов">Форматирование карты памяти и создание файлов</a></li><li><a href="#процесс-загрузки-и-активации-модуля">Процесс загрузки и активации модуля</a></li><li><a href="#настройка-ключевых-модулей-и-функций">Настройка ключевых модулей и функций</a></li><li><a href="#риски-проблемы-и-безопасность-данных">Риски, проблемы и безопасность данных</a></li><li><a href="#удаление-и-восстановление-штатной-прошивки">Удаление и восстановление штатной прошивки</a></li><li><a href="#faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Модуль <strong>Magic Lantern</strong> представляет собой мощный инструмент с открытым исходным кодом, который значительно расширяет функциональность цифровых зеркальных камер <em>Canon</em>. С его помощью пользователи могут получить доступ к продвинутым функциям видеосъемки, гистограммам, фокусировке по пику и многим другим инструментам, отсутствующим в штатной прошивке. Однако процесс внедрения этого ПО требует высокой точности и понимания технических нюансов устройства.</p>
+
+<p>Многие начинающие фотографы ошибочно полагают, что установка занимает несколько секунд и не несет рисков. На самом деле, процедура требует строгого соблюдения последовательности действий, проверки совместимости версий и понимания принципа работы <strong>модифицированной прошивки</strong>. Неправильные действия могут привести к невозможности запуска камеры, поэтому перед началом работы необходимо внимательно изучить все требования.</p>
+
+<h2 id="подготовка-камеры-и-проверка-совместимости">Подготовка камеры и проверка совместимости</h2>
+
+<p>Первым и самым важным этапом является проверка того, поддерживает ли ваша модель камеры данный модуль. Не все устройства <em>Canon</em> способны работать с <strong>Magic Lantern</strong>, особенно новые модели с сенсорным управлением или экранированными разделами памяти. Вам необходимо посетить официальный сайт проекта и найти список поддерживаемых камер в разделе <code>Supported Cameras</code>.</p>
+
+<p>Критически важно проверить версию <strong>официальной прошивки</strong>, установленной на вашем устройстве. Разработчики сообщают, что поддержка часто зависит от конкретной версии ПО, и иногда требуется откатиться на более старую версию прошивки для корректной работы модуля. Если ваша камера работает на самой последней версии, установка может быть невозможна без специальных ухищрений.</p>
+
+<p>Совместимость определяется по модели и версии. Ниже приведена таблица с популярными моделями и версиями прошивок, которые часто используются для установки:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Модель камеры</th>
+<th>Популярная версия прошивки</th>
+<th>Статус поддержки</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canon EOS 5D Mark III</td>
+<td>1.1.3 / 1.1.5</td>
+<td>Полная</td>
+</tr>
+<tr>
+<td>Canon EOS 5D Mark IV</td>
+<td>1.2.3 (неразглашенная)</td>
+<td>Частичная (экспериментальная)</td>
+</tr>
+<tr>
+<td>Canon EOS 60D</td>
+<td>1.0.9 / 1.1.5</td>
+<td>Полная</td>
+</tr>
+<tr>
+<td>Canon EOS 80D</td>
+<td>1.1.5</td>
+<td>Нет (заблокировано)</td>
+</tr>
+<tr>
+<td>Canon EOS 5DS R</td>
+<td>1.0.0</td>
+<td>Частичная</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Обратите внимание, что для некоторых моделей, таких как <em>5D Mark IV</em> или <em>6D Mark II</em>, установка возможна только при наличии уязвимости в прошивке, которую Canon может закрыть в будущем. Это означает, что вам нужно действовать быстро, если вы нашли рабочую версию.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Не пытайтесь установить модуль на камеры, не указанные в официальном списке поддержки. Это гарантированно приведет к неработоспособности устройства или появлению ошибок при загрузке.</p>
+</blockquote>
+
+<h2 id="форматирование-карты-памяти-и-создание-файлов">Форматирование карты памяти и создание файлов</h2>
+
+<p>После того как вы убедились в совместимости, необходимо подготовить карту памяти. Система не увидит файлы модуля, если карта находится в стандартном формате NTFS или exFAT. Вам потребуется отформатировать её именно так, как это видит камера, используя меню самого устройства в разделе <code>Настройки > Форматировать карту</code>.</p>
+
+<p>Критически важно использовать карту памяти с достаточной скоростью записи и чтения. Медленные карты могут привести к тому, что модуль не загрузится или вызовет зависание камеры при включении. Рекомендуется использовать карты класса <strong>UHS-I</strong> или выше, чтобы обеспечить стабильную работу дополнительных функций.</p>
+
+<p>Следующий шаг — загрузка архива с программой. Скачивайте файлы только с <code>magiclantern Syndicate</code> или проверенных зеркал. После скачивания распакуйте архив на компьютер, но не просто копируйте содержимое, а используйте утилиту <code>installer.exe</code> (для Windows) или аналогичную для других ОС, чтобы правильно записать <strong>bootfiles</strong> на карту.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка карты памяти</h4><label class="check-item"><input type="checkbox"><span>Отформатировать карту в камере</span></label><label class="check-item"><input type="checkbox"><span>Скачать архив с официального сайта</span></label><label class="check-item"><input type="checkbox"><span>Запустить установщик Magic Lantern</span></label><label class="check-item"><input type="checkbox"><span>Проверить наличие файла autoexec.bin</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="процесс-загрузки-и-активации-модуля">Процесс загрузки и активации модуля</h2>
+
+<p>Вставьте подготовленную карту памяти в камеру. Включите устройство. В этот момент происходит самое важное событие: камера считывает <strong>bootflag</strong> с карты и запускает код модуля вместо штатной прошивки. Обычно это сопровождается появлением логотипа Magic Lantern или черным экраном на несколько секунд перед загрузкой интерфейса.</p>
+
+<p>Если экран остается черным или камера не включается, немедленно выключите её переключателем питания. Это может означать, что файл <code>autoexec.bin</code> поврежден или несовместим с текущей версией прошивки. Не паникуйте, в большинстве случаев это исправляется повторной записью правильных файлов на карту.</p>
+
+<p>Как только камера успешно загрузилась, вы увидите новый интерфейс в меню настроек. Перейдите в раздел <code>Menu > Magic Lantern</code>. Здесь вы должны активировать модуль, установив переключатель в положение <strong>On</strong>. После этого система перезагрузится, и вы сможете пользоваться всеми новыми функциями.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Если процесс загрузки завис на логотипе или логотипе Canon, не держите камеру включенной более 2-3 минут. Это может привести к перегреву батареи или сбросу настроек. Выключите её и проверьте целостность файлов на карте.</p>
+</blockquote>
+
+<details class="pb-accordion"><summary>Что делать, если камера не видит карту?|Если камера не видит карту с модулем, попробуйте отформатировать её в FAT32 на компьютере с помощью утилиты GPFDISK или аналогичной, так как стандартное форматирование может создать раздел, который модуль не поддерживает.-->
+
+<p>В некоторых случаях, особенно на старых моделях, требуется выполнить принудительную загрузку. Для этого удерживайте кнопку <code>Playback</code> или <code>Menu</code> при включении камеры. Это заставляет систему считывать карту приоритетно. Однако на современных моделях <em>Canon</em> этот метод может не работать из-за изменений в загрузчике.</p>
+
+<p>Успешная активация подтверждается появлением дополнительной строки с информацией о версии модуля в нижнем углу видоискателя или на экране. Если вы видите версию, например, <code>2.3.0</code>, то установка прошла успешно.</p>
+
+<!--WIDGET</summary><div class="pb-accordion-body"><p>poll:Насколько часто вы используете режим видеосъемки на Canon?:Никогда|Редко|Постоянно|Только для обучения</p></div></details>
+
+<h2 id="настройка-ключевых-модулей-и-функций">Настройка ключевых модулей и функций</h2>
+
+<p>После установки модуля перед вами открывается огромный простор для настроек. Наиболее востребованными функциями являются <strong>Focus Peaking</strong> (подсветка фокуса) и <strong>Zebra</strong> (индикация пересветов). Эти инструменты позволяют значительно повысить точность съемки, особенно при работе с ручным фокусом и в сложных условиях освещения.</p>
+
+<p>Для настройки видеосъемки перейдите в раздел <code>Movie</code>. Здесь вы можете активировать функцию <strong>Sound</strong>, которая позволяет записывать звук с внешнего микрофона, и включить <strong>Timecode</strong> для синхронизации видео в процессе монтажа. Важно настроить уровни звука вручную, так как автоматическая регулировка часто приводит к искажениям.</p>
+
+<p>Не забывайте о модуле <strong>Raw Video</strong>, который позволяет записывать видео в формате RAW с высоким динамическим диапазоном. Однако эта функция требует огромного объема памяти и очень быстрой карты. Убедитесь, что ваша карта поддерживает скорость записи не менее <code>120 МБ/с</code>, иначе видео будет прерываться.</p>
+
+<p>Раздел <code>Audio</code> содержит настройки для мониторинга звука. Рекомендуется включить <strong>Headphone</strong> мониторинг, чтобы слышать, что записывает камера, и избежать случайной записи тишины или шума ветра.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для комфортной настройки модуля используйте внешний монитор или подключите камеру к компьютеру, чтобы видеть гистограмму в реальном времени без перекрывания интерфейса камеры.</p></aside>
+
+<p>Также стоит уделить внимание модулю <strong>Exposure</strong>. Здесь можно настроить автоматический брекетинг экспозиции, что полезно при съемке пейзажей. Установите шаг компенсации экспозиции в <code>1/3 EV</code> или <code>1/2 EV</code> в зависимости от ваших задач.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Активация режима записи RAW видео значительно увеличивает нагрев матрицы и процессора. Не используйте этот режим для длительных съемок без перерыва, чтобы избежать перегрева камеры и принудительного отключения.</p>
+</blockquote>
+
+<h2 id="риски-проблемы-и-безопасность-данных">Риски, проблемы и безопасность данных</h2>
+
+<p>Несмотря на всю пользу, использование <strong>Magic Lantern</strong> несет определенные риски. Самым серьезным последствием может быть "окирпичивание" камеры, если файл автозагрузки окажется несовместимым или поврежденным. В худшем случае камера может перестать включаться, требуя перепрошивки через сервисный центр.</p>
+
+<p>Также существует риск потери данных. Модуль может конфликтовать с системой управления файлами камеры, что приведет к невозможности чтения карт памяти в штатном режиме. Поэтому крайне важно делать резервные копии всех важных снимков перед установкой и после неё.</p>
+
+<p>Гарантийные обязательства производителя в случае использования стороннего ПО обычно аннулируются. Если камера сломается из-за ошибки в коде модуля, сервисный центр может отказать в бесплатном ремонте. Это стоит учитывать перед экспериментированием.</p>
+
+<p>Иногда возникают конфликты с картами памяти определенного производителя. Если у вас возникли проблемы, попробуйте заменить карту на другую, желательно от известного бренда, и повторить процесс форматирования.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Использование Magic Lantern всегда связано с риском повреждения системы камеры; всегда сохраняйте резервную копию оригинальных файлов прошивки и данных на карте памяти перед началом любых манипуляций.</p></aside>
+
+<h2 id="удаление-и-восстановление-штатной-прошивки">Удаление и восстановление штатной прошивки</h2>
+
+<p>Если вы решите отказаться от использования модуля или перейдете на другую камеру, вам потребуется удалить его. Для этого достаточно просто отформатировать карту памяти в камере. Это удалит все файлы, включая <code>autoexec.bin</code>, и камера вернется к штатному режиму работы.</p>
+
+<p>В некоторых случаях, если модуль был встроен глубоко или вызвал ошибки, может потребоваться обновление официальной прошивки. Скачайте последнюю версию с сайта <em>Canon</em>, перенесите её на карту и выполните обновление через меню <code>Настройки > Версия прошивки</code>.</p>
+
+<p>После обновления проверьте работоспособность всех функций камеры. Убедитесь, что меню вернулось в исходное состояние и нет лишних пунктов. Если камера ведет себя нестабильно, выполните сброс настроек до заводских в разделе <code>Настройки > Сброс настроек</code>.</p>
+
+<p> В таких ситуациях может потребоваться повторная загрузка официальной прошивки, чтобы восстановить целостность системы.</p>
+
+
+
+<h2 id="faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</h2>
+
+<details>
+<summary>Можно ли установить Magic Lantern на Canon EOS R?</summary>
+<p>Нет, на беззеркальные камеры серии EOS R (и EOS M с новыми процессорами) установка модуля невозможна из-за закрытой архитектуры системы и отсутствия уязвимостей в загрузчике.</p>
+</details>
+
+<details>
+<summary>Как часто нужно обновлять модуль?</summary>
+<p>Обновлять модуль рекомендуется только если вы столкнулись с критическими ошибками или вам нужна новая функция. Обновление на нестабильную версию может привести к проблемам, поэтому всегда проверяйте стабильность сборки на форуме перед установкой.</p>
+</details>
+
+<details>
+<summary>Почему камера зависает при включении с картой?</summary>
+<p>Чаще всего это происходит из-за несовместимости версии модуля с версией прошивки камеры или повреждения файла <code>autoexec.bin</code>. Попробуйте загрузить более старую версию модуля или отформатировать карту в FAT32 на компьютере.</p>
+</details>
+
+<details>
+<summary>Влияет ли модуль на срок службы камеры?</summary>
+<p>Само по себе наличие модуля не сокращает срок службы, но активное использование функций, вызывающих перегрев (например, запись RAW видео), может ускорить износ матрицы и процессора. Используйте эти функции с осторожностью.</p>
+</details>
+
+<details>
+<summary>Можно ли вернуть гарантию после установки?</summary>
+<p>Официально — сложно. Если сервисный центр обнаружит следы вмешательства в программное обеспечение или измененные файлы на карте, они могут отказать в гарантии. Лучше удалять все следы перед обращением в сервис.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-fotografirovat-zvezdnoe-nebo-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как фотографировать звездное небо на Canon: Полное руководство по настройкам</span>
+                <span class="pb-related-desc">Пошаговая инструкция по съемке Млечного пути и звезд на камеры Canon. Настройки ISO, выдержка, фокус</span>
+            </a><a href="/articles/c/ca/canon-eos-500d-kak-web-kamera.html" class="pb-related-card">
+                <span class="pb-related-title">Canon EOS 500D как веб-камера: настройка и подключение к ПК</span>
+                <span class="pb-related-desc">Подробная инструкция, как использовать фотоаппарат Canon EOS 500D в качестве веб-камеры для стримов </span>
+            </a><a href="/articles/k/ka/kak-otklyuchit-blokirovku-karty-pamyati-na-fotoapparate-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как отключить блокировку карты памяти на фотоаппарате Canon</span>
+                <span class="pb-related-desc">Полная инструкция по разблокировке карт памяти в камерах Canon. Решение ошибок записи, проверка меха</span>
+            </a><a href="/articles/k/ka/kak-formatirovat-fleshku-dlya-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как правильно форматировать флешку для фотоаппарата Canon</span>
+                <span class="pb-related-desc">Пошаговая инструкция по форматированию карты памяти для Canon. Выбор файловой системы, устранение ош</span>
+            </a><a href="/articles/c/ca/canon-chya-firma-kakoj-strany.html" class="pb-related-card">
+                <span class="pb-related-title">Canon — страна производитель и история бренда: кто делает технику</span>
+                <span class="pb-related-desc">Узнайте, какой стране принадлежит Canon. Подробный разбор истории бренда, стран производства фотоапп</span>
+            </a><a href="/articles/k/ka/kak-na-canon-vklyuchit-tajmer.html" class="pb-related-card">
+                <span class="pb-related-title">Как на Canon включить таймер: пошаговая инструкция для фотоаппаратов</span>
+                <span class="pb-related-desc">Подробное руководство по настройке таймера на фотоаппаратах Canon: EOS, PowerShot и других моделях. </span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

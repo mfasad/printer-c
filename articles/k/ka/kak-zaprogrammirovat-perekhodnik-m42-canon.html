@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как запрограммировать переходник M42 на Canon: прошивка и настройки — Кэнон Инфо</title>
+    <meta name="description" content="Полная инструкция по прошивке адаптеров M42-EOS. Как активировать передачу данных, настроить EXIF и избежать ошибок при установке проприетарного ПО.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-zaprogrammirovat-perekhodnik-m42-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как запрограммировать переходник M42 на Canon: прошивка и настройки">
+    <meta property="og:description" content="Полная инструкция по прошивке адаптеров M42-EOS. Как активировать передачу данных, настроить EXIF и избежать ошибок при установке проприетарного ПО.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/fotoapparaty-canon/">Фотоаппараты Canon</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как запрограммировать переходник M42 на Canon: прошивка и настройки</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#типы-адаптеров-и-необходимость-перепрошивки">Типы адаптеров и необходимость перепрошивки</a></li><li><a href="#подготовка-оборудования-и-программного-обеспечения">Подготовка оборудования и программного обеспечения</a></li><li><a href="#процесс-записи-данных-в-чип-адаптера">Процесс записи данных в чип адаптера</a></li><li><a href="#настройка-передачи-данных-exif">Настройка передачи данных EXIF</a></li><li><a href="#таблица-совместимости-и-распространенных-ошибок">Таблица совместимости и распространенных ошибок</a></li><li><a href="#важные-нюансы-и-ограничения">Важные нюансы и ограничения</a></li><li><a href="#проверка-работы-и-финальная-настройка">Проверка работы и финальная настройка</a></li><li><a href="#альтернативные-методы-передачи-данных">Альтернативные методы передачи данных</a></li><li><a href="#частые-вопросы-пользователей">Частые вопросы пользователей</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-vyklyuchit-avtofokus-na-canon.html">Как выключить автофокус на Canon: полные инструкции для EOS и PowerShot</a></li><li><a href="/articles/k/ka/kak-snimat-video-na-kenon-60-d.html">Как снимать видео на Canon 60D: Полный гайд по настройкам и режимам</a></li><li><a href="/articles/k/ka/kak-zaryadit-tsifrovik-canon.html">Как зарядить камеру Canon: способы, адаптеры и советы</a></li><li><a href="/articles/k/ka/kak-pravilno-fokusirovatsya-na-zerkalke-canon.html">Как правильно фокусироваться на зеркальной камере Canon: Пошаговое руководство</a></li><li><a href="/articles/k/ka/kak-podklyuchit-ajfon-k-fotoapparatu-canon.html">Как подключить iPhone к фотоаппарату Canon: полные инструкции</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Программирование адаптера M42 для камер Canon: от прошивки до настройки EXIF</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#типы-адаптеров-и-необходимость-перепрошивки">Типы адаптеров и необходимость перепрошивки</a></li><li><a href="#подготовка-оборудования-и-программного-обеспечения">Подготовка оборудования и программного обеспечения</a></li><li><a href="#процесс-записи-данных-в-чип-адаптера">Процесс записи данных в чип адаптера</a></li><li><a href="#настройка-передачи-данных-exif">Настройка передачи данных EXIF</a></li><li><a href="#таблица-совместимости-и-распространенных-ошибок">Таблица совместимости и распространенных ошибок</a></li><li><a href="#важные-нюансы-и-ограничения">Важные нюансы и ограничения</a></li><li><a href="#проверка-работы-и-финальная-настройка">Проверка работы и финальная настройка</a></li><li><a href="#альтернативные-методы-передачи-данных">Альтернативные методы передачи данных</a></li><li><a href="#частые-вопросы-пользователей">Частые вопросы пользователей</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Многие фотографы, желающие использовать винтажную оптику от системы M42 на современных зеркальных камерах Canon, сталкиваются с ограничением: камера не видит объектив и не передает данные об экспозиции в кадр.</p>
+<p>Для решения этой проблемы существует специальный класс адаптеров, оснащенных чипом памяти. <strong>Программирование переходника</strong> позволяет камере идентифицировать объектив, записывать его параметры в метаданные снимка и использовать автоматический режим экспозиции (Av) без постоянных переключений.</p>
+<p>Процесс настройки требует внимательности, так как вы работаете с физическим чипом, обеспечивающим <strong>связь между оптикой и байонетом</strong>. Ниже мы разберем, как правильно перепрошить адаптер, какие данные внести и как избежать распространенных ошибок при настройке.</p>
+
+<h2 id="типы-адаптеров-и-необходимость-перепрошивки">Типы адаптеров и необходимость перепрошивки</h2>
+<p>Не все переходники с резьбой M42 одинаковы. Существуют простые механические кольца, которые лишь удерживают линзу, и электронные адаптеры со встроенным <strong>чипом Micro-USB</strong> или контактной площадкой. Именно последние подлежат программированию, так как они эмулируют присутствие родного объектива Canon.</p>
+<p>Если ваш адаптер имеет контакты, но камера пишет ошибку «Линза заблокирована» или не издает звук фокусировки, это верный признак того, что чип пуст или содержит некорректные данные. <strong>Прошивка адаптера</strong> заполняет память информацией о фокусном расстоянии и максимальной диафрагме.</p>
+<p>Важно понимать, что разные модели адаптеров используют разные протоколы обмена данными. Универсальные решения могут не подходить для специфических версий прошивки камеры, поэтому важно перед началом работы определить модель чипа внутри устройства.</p>
+
+<h2 id="подготовка-оборудования-и-программного-обеспечения">Подготовка оборудования и программного обеспечения</h2>
+<p>Перед тем как начать процесс, вам потребуется компьютер с операционной системой Windows (чаще всего ПО работает только на ней) и соответствующие драйверы. Вам также понадобится сам адаптер, кабель Mini-USB или Micro-USB (зависит от версии интерфейса адаптера) и специализированная утилита.</p>
+<p>Скачайте драйверы и файл прошивки с официального сайта производителя адаптера или доверенного сообщества энтузиастов. Установите драйвер виртуального COM-порта, чтобы компьютер мог распознать адаптер как внешнее устройство.</p>
+<p>Проверьте заряд батареи в камере, хотя сам процесс прошивки происходит через ПК, но для последующей проверки работоспособности <strong>камера должна быть готова</strong>. Подключите адаптер к компьютеру и убедитесь, что в диспетчере устройств он определяется как виртуальный порт.</p>
+
+<div class="pb-poll" id="poll-452728e1"><div class="pb-poll-question">📊 Какой тип адаптера M42 вы используете?</div><div class="pb-poll-option" data-poll="452728e1" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Простой механический</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="452728e1" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Электронный без прошивки</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="452728e1" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Прошиваемый адаптер (с чипом)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="452728e1" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю точной модели</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="процесс-записи-данных-в-чип-адаптера">Процесс записи данных в чип адаптера</h2>
+<p>Запустите утилиту для программирования. Интерфейс программы обычно представляет собой таблицу с полями ввода, где нужно указать параметры вашего объектива. В поле <code>Focal Length</code> введите фокусное расстояние в миллиметрах (например, <code>50</code> или <code>58</code>).</p>
+<p>В следующем поле <code>Max Aperture</code> укажите максимальную диафрагму. Если у вас объектив с постоянной диафрагмой, введите точное значение, например <code>1.4</code> или <code>2.0</code>. Для объективов с переменным зумом введите значение самой широкой диафрагмы в начальном положении.</p>
+<p>Нажмите кнопку <code>Write</code> или <code>Прошить</code>. Процесс занимает несколько секунд. После успешной записи появится сообщение «Success» или «OK». Если вы видите ошибку, проверьте подключение кабеля и перезапустите программу.</p>
+<p>Не отключайте адаптер от компьютера до тех пор, пока индикатор не погаснет или программа не подтвердит завершение операции. Прерывание процесса может привести к <strong>повреждению памяти чипа</strong>, после чего адаптер станет бесполезным.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к прошивке</h4><label class="check-item"><input type="checkbox"><span>Установить драйверы COM-порта</span></label><label class="check-item"><input type="checkbox"><span>Подключить адаптер к ПК</span></label><label class="check-item"><input type="checkbox"><span>Запустить утилиту</span></label><label class="check-item"><input type="checkbox"><span>Ввести параметры объектива</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="настройка-передачи-данных-exif">Настройка передачи данных EXIF</h2>
+<p>После записи основных параметров необходимо убедиться, что камера корректно считывает их. Вставьте адаптер с объективом в камеру Canon. Включите питание и перейдите в режим съемки.</p>
+<p>Сделайте пробный снимок. Затем подключите камеру к компьютеру и просмотрите свойства файла. В метаданных должен быть указан не просто «Объектив», а конкретная модель и фокусное расстояние, которые вы вводили в программе.</p>
+<p>Если данные не записываются, возможно, в камере отключена функция записи информации об объективе или вы используете <strong>неподдерживаемую версию прошивки</strong> камеры. Проверьте настройки меню камеры в разделе «Настройки дисплея» или «Информация о съемке».</p>
+
+<details class="pb-accordion"><summary>Проблемы с фокусировкой</summary><div class="pb-accordion-body"><p>Если после прошивки камера не может сфокусироваться, это часто связано с тем, что объектив M42 не имеет автоматического механизма диафрагмы. Камера может пытаться открыть диафрагму для оценки резкости, но линза остается закрытой. Решение: использовать режим приоритета диафрагмы (Av), полностью открыть объектив для фокусировки, а затем закрыть диафрагму перед съемкой (или использовать кнопку предварительного просмотра глубины резкости).</p></div></details>
+
+<h2 id="таблица-совместимости-и-распространенных-ошибок">Таблица совместимости и распространенных ошибок</h2>
+<p>Ниже приведена таблица, которая поможет сопоставить тип адаптера с возможным программным обеспечением и ошибками, которые могут возникнуть при неправильной настройке.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип адаптера</th>
+<th>Необходимое ПО</th>
+<th>Частая ошибка</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Китайский адаптер с чипом A9</td>
+<td>Softwares A9 v2.0</td>
+<td>Ошибка 04</td>
+<td>Проверить контакт USB, сменить кабель</td>
+</tr>
+<tr>
+<td>Adaptall-2 с электронным чипом</td>
+<td>Универсальный прошивальщик</td>
+<td>Нет данных EXIF</td>
+<td>Сбросить настройки камеры, повторить запись</td>
+</tr>
+<tr>
+<td>Адаптер с поддержкой IS</td>
+<td>Специализированная утилита</td>
+<td>Дрожание картинки</td>
+<td>Отключить стабилизатор в меню объектива</td>
+</tr>
+<tr>
+<td>Кастомный чип (Arduino-based)</td>
+<td>Собственный софт автора</td>
+<td>Камера не видит адаптер</td>
+<td>Проверить полярность пайки контактов</td>
+</tr>
+</tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед тем как вкручивать дорогой винтажный объектив в адаптер, убедитесь, что резьба M42 очищена от пыли и ворса. Мелкие частицы могут повредить контакты адаптера или поцарапать заднюю линзу объектива при установке на камеру.</p></aside>
+
+<h2 id="важные-нюансы-и-ограничения">Важные нюансы и ограничения</h2>
+<p>Программируемый адаптер не делает объектив M42 полноценно автоматическим в том смысле, как это понимается для современных стекол. Вы все равно будете вынуждены вручную устанавливать диафрагму, если у объектива нет механизма передачи усилия.</p>
+<p>В некоторых случаях камера может выдавать предупреждение о том, что <strong>объектив не обнаружен</strong>, даже после успешной прошивки. Это связано с особенностями алгоритмов проверки подлинности в последних прошивках камер Canon EOS.</p>
+<p> Если вы введете неверное фокусное расстояние, например <code>200</code> вместо <code>50</code>, камера будет пытаться компенсировать искажения, как для телеобъектива, что может привести к неточностям при использовании функций стабилизации.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Программирование адаптера M42 — это не волшебство, а эмуляция данных. Качество съемки все равно зависит от ручной фокусировки и навыков фотографа, а адаптер лишь помогает сохранить информацию о съемке в файле.</p></aside>
+
+<blockquote>⚠️ Внимание: Некоторые адаптеры прошиваются однократно или имеют ограниченное количество циклов перезаписи. Не меняйте настройки без необходимости, так как это может привести к блокировке чипа.</blockquote>
+
+<h2 id="проверка-работы-и-финальная-настройка">Проверка работы и финальная настройка</h2>
+<p>После того как данные записаны, проведите тестовую съемку. Сфокусируйтесь на объекте, оцените резкость и сделайте серию снимков с разными значениями диафрагмы. Проверьте, сохраняется ли информация о <strong>значении F-number</strong> в свойствах файла.</p>
+<p>Если вы используете переходник с функцией передачи данных о высоте (для коррекции перспективы), убедитесь, что в камере включено отображение этой информации. Это требует дополнительной настройки в меню <code>Custom Functions</code>.</p>
+<p>В случае возникновения проблем с электрическим контактом, попробуйте аккуратно почистить контакты адаптера спиртовой салфеткой или ластиком, чтобы убрать окисление, которое могло возникнуть при хранении.</p>
+
+<blockquote>⚠️ Внимание: Никогда не пытайтесь разобрать адаптер, если он находится на гарантии, и избегайте использования агрессивных химикатов для чистки, так как это может разъесть пластиковый корпус и нарушить герметичность.</blockquote>
+
+<h2 id="альтернативные-методы-передачи-данных">Альтернативные методы передачи данных</h2>
+<p>Если прошивка стандартного адаптера не приносит результата, существуют альтернативные решения. Некоторые энтузиасты используют адаптеры с внешним модулем Bluetooth, который передает данные прямо на смартфон через приложение, а затем переносит их в файл.</p>
+<p>Другой вариант — использование адаптеров с <strong>встроенным чипом памяти</strong>, который не требует прошивки через ПК, а настраивается прямо в камере через специальное меню или кнопки на корпусе адаптера.</p>
+<p>Выбор метода зависит от вашей цели: если вам нужно просто сохранять данные в EXIF, достаточно простого чипа. Если же вы планируете синхронизировать настройки с компьютером в реальном времени, потребуется более сложная электроника.</p>
+
+<blockquote>⚠️ Внимание: При покупке адаптера с чипом убедитесь, что он совместим с вашей конкретной моделью камеры. Адаптеры для камер Canon EOS 60D могут некорректно работать с новыми моделями серии EOS R или EOS 5D Mark IV без обновления прошивки.</blockquote>
+
+<details class="pb-accordion"><summary>Что делать, если камера перестала видеть адаптер после прошивки?</summary><div class="pb-accordion-body"><p>В этом случае попробуйте выполнить полный сброс настроек камеры до заводских. Иногда конфликт версий прошивки камеры и чипа адаптера блокирует работу. Если сброс не помог, возможно, чип был поврежден, и потребуется замена адаптера или обращение к специалисту по ремонту электроники.</p></div></details>
+
+<h2 id="частые-вопросы-пользователей">Частые вопросы пользователей</h2>
+
+<details>
+<summary>Нужно ли каждый раз прошивать адаптер при смене объектива?</summary>
+<p>Нет, если адаптер универсальный и позволяет сохранять несколько профилей, вы можете переключаться между ними через меню адаптера. Однако для большинства простых чипов прошивка фиксирует параметры одного объектива. Для смены объектива нужно либо прошивать адаптер заново, либо использовать механический адаптер без чипа.</p>
+</details>
+
+<details>
+<summary>Можно ли прошивать адаптер на Mac или Linux?</summary>
+<p>Официальное программное обеспечение для большинства чипов адаптеров M42 разработано только для Windows. На macOS или Linux потребуется запускать виртуальную машину с Windows, так как драйверы виртуального COM-порта и утилиты прошивки не имеют нативных версий для этих ОС.</p>
+</details>
+
+<details>
+<summary>Что делать, если введённые данные не сохраняются?</summary>
+<p>Проверьте, правильно ли вы определили контакты на адаптере. Ошибка в подключении кабеля может привести к тому, что данные не будут записаны в память. Также убедитесь, что вы используете последнюю версию драйверов для вашей операционной системы.</p>
+</details>
+
+<details>
+<summary>Влияет ли прошивка адаптера на гарантию камеры?</summary>
+<p>Нет, программирование адаптера не влияет на гарантию камеры Canon, так как это внешнее устройство. Однако, если адаптер некачественный и повредит контакты байонета камеры, это может стать причиной отказа в гарантийном ремонте камеры.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать прошиваемый адаптер с объективами других систем?</summary>
+<p>Технически да, если вы используете переходник с резьбой M42 к другому байонету, но данные в чипе будут относиться к параметрам объектива M42. Если вы переходите на другую систему (например, Nikon F), вам потребуется специализированный адаптер для этой системы.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-vyklyuchit-avtofokus-na-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как выключить автофокус на Canon: полные инструкции для EOS и PowerShot</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как отключить автофокус на камерах Canon. Режимы MF, переключатели на объектив</span>
+            </a><a href="/articles/k/ka/kak-snimat-video-na-kenon-60-d.html" class="pb-related-card">
+                <span class="pb-related-title">Как снимать видео на Canon 60D: Полный гайд по настройкам и режимам</span>
+                <span class="pb-related-desc">Подробная инструкция по видеосъемке на зеркальную камеру Canon 60D. Настройка экспозиции, фокусировк</span>
+            </a><a href="/articles/k/ka/kak-zaryadit-tsifrovik-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как зарядить камеру Canon: способы, адаптеры и советы</span>
+                <span class="pb-related-desc">Полная инструкция по зарядке аккумуляторов Canon. Разбор штатных зарядок, питания от USB и альтернат</span>
+            </a><a href="/articles/k/ka/kak-pravilno-fokusirovatsya-na-zerkalke-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как правильно фокусироваться на зеркальной камере Canon: Пошаговое руководство</span>
+                <span class="pb-related-desc">Узнайте, как настроить автофокус на зеркалках Canon. Разбор режимов, точек фокусировки, методов ручн</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-ajfon-k-fotoapparatu-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить iPhone к фотоаппарату Canon: полные инструкции</span>
+                <span class="pb-related-desc">Пошаговое руководство по соединению iPhone с камерами Canon. Настройка Wi-Fi, Bluetooth, использован</span>
+            </a><a href="/articles/k/ka/kak-vybrat-zerkalnyj-fotoapparat-dlya-nachinayushchego-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как выбрать зеркальный Canon для новичка: гид по моделям и рынкам</span>
+                <span class="pb-related-desc">Полный разбор выбора зеркальной камеры Canon для начинающих. Сравнение моделей, цены б/у рынка, объе</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

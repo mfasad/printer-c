@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Решение проблем: не устанавливаются драйвера на принтер Canon — Кэнон Инфо</title>
+    <meta name="description" content="Полное руководство по устранению ошибок при установке драйверов Canon. Пошаговые инструкции, проверка Port, удаление старого ПО и советы экспертов.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ch/chto-delat-esli-ne-ustanavlivayutsya-drajvera-na-printer-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Решение проблем: не устанавливаются драйвера на принтер Canon">
+    <meta property="og:description" content="Полное руководство по устранению ошибок при установке драйверов Canon. Пошаговые инструкции, проверка Port, удаление старого ПО и советы экспертов.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/podklyuchenie-k-pk/">Подключение к ПК</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Решение проблем: не устанавливаются драйвера на принтер Canon</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-системы-перед-установкой">Подготовка системы перед установкой</a></li><li><a href="#полная-очистка-системы-от-старых-версий">Полная очистка системы от старых версий</a></li><li><a href="#загрузка-правильного-по-с-официального-источника">Загрузка правильного ПО с официального источника</a></li><li><a href="#алгоритм-ручной-установки-и-проверка-портов">Алгоритм ручной установки и проверка портов</a></li><li><a href="#использование-утилиты-canon-ij-network-tool">Использование утилиты Canon IJ Network Tool</a></li><li><a href="#устранение-ошибок-реестра-и-системных-конфликтов">Устранение ошибок реестра и системных конфликтов</a></li><li><a href="#когда-стоит-обратиться-в-сервисный-центр">Когда стоит обратиться в сервисный центр</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-ustanovit-printer-na-kompyuter-canon-lbp-1120.html">Как установить принтер Canon LBP 1120 на компьютер: пошаговая инструкция</a></li><li><a href="/articles/c/ca/canon-mf4150-kak-podklyuchit-k-windows-10.html">Как подключить Canon imageCLASS MF4150 к Windows 10: полная инструкция</a></li><li><a href="/articles/p/po/pochemu-kompyuter-ne-vidit-skaner-canon-mf3010.html">Компьютер не видит сканер Canon MF3010: 7 причин и решения</a></li><li><a href="/articles/k/ka/kak-s-fotoapparata-kenon-skinut-fotki-na-kompyuter.html">Как перенести фото с Canon на ПК: 5 проверенных способов</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-mp150.html">Подключение принтера Canon MP150: драйверы, USB и сеть</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Не устанавливаются драйвера на принтер Canon: пошаговое руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-системы-перед-установкой">Подготовка системы перед установкой</a></li><li><a href="#полная-очистка-системы-от-старых-версий">Полная очистка системы от старых версий</a></li><li><a href="#загрузка-правильного-по-с-официального-источника">Загрузка правильного ПО с официального источника</a></li><li><a href="#алгоритм-ручной-установки-и-проверка-портов">Алгоритм ручной установки и проверка портов</a></li><li><a href="#использование-утилиты-canon-ij-network-tool">Использование утилиты Canon IJ Network Tool</a></li><li><a href="#устранение-ошибок-реестра-и-системных-конфликтов">Устранение ошибок реестра и системных конфликтов</a></li><li><a href="#когда-стоит-обратиться-в-сервисный-центр">Когда стоит обратиться в сервисный центр</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Столкновение с ситуацией, когда компьютер отказывается распознавать новое устройство или выдаёт ошибку во время инсталляции программного обеспечения, знакомо многим пользователям. Ошибки при установке драйверов на принтеры <em>Canon</em> могут возникать по самым разным причинам: от конфликта с антивирусом до повреждения системных файлов.</p>
+<p>Игнорирование проблемы приводит к тому, что дорогостоящее оборудование простаивает, а рабочий процесс встает. <strong>Драйвер</strong> — это критически важный мост между операционной системой и аппаратной частью устройства, и его некорректная работа блокирует все функции печати, сканирования и копирования.</p>
+<p>В этой статье мы разберем основные сценарии сбоя и предложим рабочие методы восстановления. Вам не придется искать информацию на форумах, так как здесь собраны проверенные алгоритмы действий, от простых перезагрузок до глубокой очистки реестра. <strong>Установка драйвера</strong> требует внимательности к деталям, и мы поможем вам избежать типичных ошибок.</p>
+
+<h2 id="подготовка-системы-перед-установкой">Подготовка системы перед установкой</h2>
+<p>Прежде чем пытаться обновлять или заново инсталлировать программное обеспечение, необходимо создать безопасную среду для операции. Часто проблема кроется не в самом файле драйвера, а в блокировке процесса внешними факторами или остатками предыдущих версий ПО.</p>
+<p>Сначала отключите принтер от компьютера и выключите его. Это критически важно, так как операционная система Windows может попытаться автоматически подхватить устройство через <strong>Plug and Play</strong> до начала ручной установки, что часто приводит к конфликту версий. Убедитесь, что кабель USB не имеет повреждений, а порт исправен.</p>
+<p>Второй шаг — отключение антивируса и брандмауэра. Программы защиты могут ошибочно воспринимать установщик драйверов как потенциально опасное приложение и блокировать запись файлов в системные папки. Это особенно актуально для сторонних антивирусных решений, не входящих в стандартный набор защиты Windows.</p>
+<p>Также проверьте наличие обновлений самой операционной системы. Устаревшие компоненты ядра могут не поддерживать новые протоколы связи, используемые в драйверах для моделей <em>Canon imageRUNNER</em> или <em>Canon PIXMA</em>. Перейдите в <code>Параметры → Обновление и безопасность</code> и убедитесь, что система полностью обновлена.</p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Никогда не запускайте установщик драйвера, если принтер уже подключен и включен, до тех пор, пока программа явно не попросит вас это сделать. Ручное управление моментом подключения кабеля — ключ к успеху.</blockquote>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к установке драйверов</h4><label class="check-item"><input type="checkbox"><span>Отключить принтер от ПК</span></label><label class="check-item"><input type="checkbox"><span>Выключить антивирус</span></label><label class="check-item"><input type="checkbox"><span>Проверить обновления Windows</span></label><label class="check-item"><input type="checkbox"><span>Очистить очередь печати</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="полная-очистка-системы-от-старых-версий">Полная очистка системы от старых версий</h2>
+<p>Если драйвер не устанавливается после первой попытки, скорее всего, в системе остались "хвосты" от предыдущих версий или неудачных установок. Стандартное удаление через <strong>Панель управления</strong> часто бывает недостаточным, так как оно не затрагивает системные сервисы и драйверы ядра.</p>
+<p>Необходимо использовать утилиту удаления принтеров. Зайдите в <code>Параметры → Устройства → Принтеры и сканеры</code>. Если устройство отображается в списке, нажмите на него и выберите <code>Удалить устройство</code>. Но это еще не конец процесса.</p>
+<p>Самый надежный способ — использование специального инструмента <em>Canon Print Service</em> или встроенной утилиты очистки. Просто удаление ярлыка на рабочем столе не решает проблему. Вам нужно зайти в <code>Службы</code> (services.msc) и остановить службу <strong>Диспетчер печати</strong>, после чего удалить папку драйверов вручную, если это возможно.</p>
+
+<p>Для глубокой очистки выполните следующие действия:</p>
+<ul>
+    <li>🚫 Откройте <code>Управление устройствами</code> и удалите все упоминания принтера в разделе "Устройства обработки изображений" и "Принтеры".</li>
+    <li>🚫 Удалите папку <code>C:\Program Files\Canon</code> или <code>C:\Program Files (x86)\Canon</code> полностью.</li>
+    <li>🚫 Очистите папку временных файлов, нажав <code>Win + R</code> и введя <code>%temp%</code>.</li>
+</ul>
+
+<details class="pb-accordion"><summary>Что делать, если драйвер не удаляется?</summary><div class="pb-accordion-body"><p>Если система пишет "Файл используется", вам нужно загрузиться в Безопасном режиме. В безопасном режиме Windows загружает минимальный набор драйверов, что позволяет удалить "зависшие" файлы принтера без конфликтов. После удаления перезагрузите систему в нормальный режим и пробуйте установку заново.</p></div></details>
+
+<h2 id="загрузка-правильного-по-с-официального-источника">Загрузка правильного ПО с официального источника</h2>
+<p>Одна из самых частых причин ошибки — загрузка некорректного установщика. Многие пользователи скачивают драйверы с третьих сторонних сайтов, которые предлагают "универсальные пакеты" или несовместимые версии. Для принтеров <em>Canon</em> это особенно критично, так как ПО для МФУ отличается от ПО для лазерных принтеров.</p>
+<p>Всегда используйте официальный сайт поддержки производителя. Перейдите в раздел <strong>Загрузки</strong> и введите точную модель вашего устройства. Обратите внимание на разрядность операционной системы: драйвер для <code>Windows 10 x64</code> не подойдет для <code>Windows 10 x86</code>.</p>
+<p>Существует два типа драйверов: базовый драйвер печати (UFR II или PCL) и полный пакет драйверов (Full Driver). Если ваша цель — просто печатать, базового драйвера достаточно. Если же вам нужен доступ к сканированию, копированию и настройке сетевых функций, обязательно скачивайте полный пакет.</p>
+<p>Также стоит проверить версию драйвера. Иногда новые версии содержат баги, совместимые только с новееми ревизиями ОС. В таком случае можно попробовать скачать предыдущую стабильную версию, указанную в архиве на сайте <em>Canon</em>.</p>
+
+<blockquote>🛡️ <strong>Важно:</strong> Убедитесь, что скачанный файл имеет цифровую подпись. В свойствах файла должна быть информация о издателе <em>Canon Inc.</em>. Если подпись отсутствует или недействительна, установка будет заблокирована Windows.</blockquote>
+
+<h2 id="алгоритм-ручной-установки-и-проверка-портов">Алгоритм ручной установки и проверка портов</h2>
+<p>Если автоматический установщик выдает ошибку, попробуйте метод ручной установки через <strong>Диспетчер устройств</strong> или <code>Добавление принтера</code>. Этот способ позволяет обойти многие проверки совместимости, которые блокируют стандартный мастер установки.</p>
+<p>Подключите принтер к ПК, включите его и дождитесь, пока Windows обнаружит новое оборудование. Если устройство определяется как "Неизвестное устройство", нажмите правой кнопкой мыши и выберите <code>Обновить драйвер</code>. Выберите опцию <strong>Выполнить поиск драйверов на этом компьютере</strong> и укажите путь к распакованной папке с загруженным драйвером.</p>
+<p>Критически важным моментом является проверка <strong>порта</strong>. Иногда драйвер устанавливается, но принтер не отвечает, потому что система пытается общаться через виртуальный порт, а физически кабель подключен к другому. Зайдите в <code>Свойства принтера → Порты</code> и убедитесь, что галочка стоит напротив правильного <em>USB001</em> (или виртуального порта для принтера).</p>
+<p>Для сетевых принтеров проверьте IP-адрес. Если адрес изменился, драйвер перестанет работать. В этом случае необходимо перенастроить порт вручную, введя актуальный IP-адрес устройства в поле <code>Добавить порт → Standard TCP/IP Port</code>.</p>
+
+<div class="pb-poll" id="poll-cb999e5e"><div class="pb-poll-question">📊 Какая операционная система установлена на вашем ПК?</div><div class="pb-poll-option" data-poll="cb999e5e" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 10</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="cb999e5e" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 11</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="cb999e5e" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">macOS</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="cb999e5e" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Linux</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="использование-утилиты-canon-ij-network-tool">Использование утилиты Canon IJ Network Tool</h2>
+<p>Для сетевых моделей и принтеров, подключенных через Wi-Fi, стандартные средства Windows часто работают некорректно. Специализированная утилита <em>IJ Network Tool</em> позволяет найти устройство в сети, проверить его статус и обновить прошивку, что иногда решает проблему с драйвером.</p>
+<p>После установки этого инструмента запустите его. Программа просканирует вашу локальную сеть и покажет все найденные принтеры <em>Canon</em>. Если устройство отображается как "Offline", попробуйте обновить статус или перенастроить порт прямо из этого окна.</p>
+<p>Важно отметить, что <strong>IJ Network Tool</strong> может помочь в случаях, когда принтер виден в сети, но драйвер "не видит" его для печати. Это происходит из-за конфликта имен устройств или неправильного разрешения DNS.</p>
+<p>Иногда утилита предлагает обновить прошивку принтера. Если драйвер конфликтует со старой версией прошивки, обновление прошивки через эту утилиту может стать решающим шагом. Следуйте инструкциям на экране, но не прерывайте процесс обновления.</p>
+
+<div class="pb-table-wrap"><table>
+    <thead>
+        <tr>
+            <th>Проблема</th>
+            <th>Типичная причина</th>
+            <th>Решение</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Ошибка "Устройство не найдено"</td>
+            <td>Неверный порт или кабель</td>
+            <td>Проверьте порт в свойствах принтера</td>
+        </tr>
+        <tr>
+            <td>Драйвер устанавливается, но не работает</td>
+            <td>Конфликт версий ПО</td>
+            <td>Полная очистка реестра и переустановка</td>
+        </tr>
+        <tr>
+            <td>Синий экран при установке</td>
+            <td>Поврежденные системные файлы</td>
+            <td>Запуск команды <code>sfc /scannow</code></td>
+        </tr>
+        <tr>
+            <td>Принтер работает только в режиме копирования</td>
+            <td>Не установлен драйвер сканирования</td>
+            <td>Установите полный пакет драйверов</td>
+        </tr>
+    </tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Проверка порта — это самый частый шаг, который игнорируют пользователи. Убедитесь, что физическое подключение соответствует логическому выбору порта в настройках Windows.</p></aside>
+
+<h2 id="устранение-ошибок-реестра-и-системных-конфликтов">Устранение ошибок реестра и системных конфликтов</h2>
+<p>Если все вышеперечисленные методы не помогли, проблема может лежать глубже — в реестре Windows. Ошибочные записи от старых принтеров или вирусов могут блокировать установку новых драйверов. В этом случае потребуется использование редактора реестра или утилит для очистки.</p>
+<p>Вы можете вручную удалить ключи реестра, связанные с принтером. Откройте <code>regedit</code> и перейдите по пути <code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows x64\Drivers\Version-3</code>. Найдите папку с именем вашего принтера и удалите её. <mark>Будьте крайне осторожны при работе с реестром, так как удаление неверных ключей может повредить работу всей операционной системы.</mark></p>
+<p>Также стоит проверить наличие конфликтов с другими устройствами. Иногда драйверы для сканеров других брендов вступают в конфликт с драйверами <em>Canon</em>. Попробуйте временно отключить или удалить драйверы других устройств ввода-вывода.</p>
+<p>Запустите проверку целостности системных файлов. Откройте командную строку от имени администратора и введите команду <pre><code>sfc /scannow</code></pre>. Эта процедура найдет и восстановит поврежденные системные файлы, которые могут мешать работе драйверов.</p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Перед редактированием реестра обязательно создайте точку восстановления системы. Если что-то пойдет не так, вы сможете откатить изменения до момента, когда все работало корректно.</blockquote>
+
+<h2 id="когда-стоит-обратиться-в-сервисный-центр">Когда стоит обратиться в сервисный центр</h2>
+<p>Если ни один из программных методов не помог установить драйвер, возможно, проблема носит аппаратный характер. Неисправность USB-порта на материнской плате, повреждение контроллера печати внутри самого устройства или аппаратная блокировка могут препятствовать работе.</p>
+<p>Попробуйте подключить принтер к другому компьютеру. Если на другом ПК драйвер устанавливается без проблем, значит, причина именно в вашей операционной системе или железе ПК. Если же ошибка повторяется на разных машинах, скорее всего, неисправен сам принтер.</p>
+<p>В случае аппаратной неисправности самостоятельные попытки ремонта могут усугубить ситуацию. Профессиональные специалисты сервисного центра <em>Canon</em> проведут диагностику и заменят неисправный модуль.</p>
+
+<ul>
+    <li>✅ Проверьте кабель на другом ПК.</li>
+    <li>✅ Попробуйте другой USB-порт (желательно USB 2.0, так как некоторые старые модели некорректно работают с USB 3.0).</li>
+    <li>✅ Обратите внимание на индикаторы на корпусе принтера — мигание определенных лампочек указывает на ошибку, которую нужно устранить.</li>
+</ul>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если принтер старый и официальные драйверы для вашей новой версии Windows не вышли, попробуйте запустить установщик в режиме совместимости. Нажмите правой кнопкой на файл setup.exe, выберите "Свойства", затем вкладку "Совместимость" и укажите версию Windows, для которой предназначен драйвер.</p></aside>
+
+<details>
+    <summary>Почему драйвер устанавливается, но принтер не печатает?</summary>
+    <p>Это может быть связано с тем, что драйвер установлен, но порт выбран неверно, или очередь печати заблокирована. Проверьте свойства принтера и убедитесь, что порт <code>USB001</code> или <code>TCP/IP</code> соответствует реальному подключению. Также очистите очередь печати в диспетчере задач.</p>
+</details>
+
+<details>
+    <summary>Можно ли использовать универсальный драйвер для Canon?</summary>
+    <p>Для некоторых моделей существуют универсальные драйверы (UFR II), которые подходят для широкого спектра устройств. Однако они могут не поддерживать все функции конкретного МФУ, такие как двусторонняя печать или сканирование в сеть. Лучше использовать родной драйвер.</p>
+</details>
+
+<details>
+    <summary>Что делать, если установщик завис на 0% или 99%?</summary>
+    <p>Это часто указывает на конфликт с антивирусом или поврежденный файл загрузки. Попробуйте отключить интернет и антивирус, затем запустите установщик от имени администратора. Если файл скачан с ошибкой, удаляйте его и скачивайте заново, проверяя контрольную сумму.</p>
+</details>
+
+<details>
+    <summary>Нужно ли удалять старый драйвер перед установкой нового?</summary>
+    <p>Да, настоятельно рекомендуется полностью удалять старую версию драйвера перед установкой новой. Остатки старого ПО могут конфликтовать с новым, вызывая ошибки установки или нестабильную работу принтера после инсталляции.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-ustanovit-printer-na-kompyuter-canon-lbp-1120.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить принтер Canon LBP 1120 на компьютер: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по подключению и настройке принтера Canon LBP 1120 на Windows 10/11. Скачивани</span>
+            </a><a href="/articles/c/ca/canon-mf4150-kak-podklyuchit-k-windows-10.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon imageCLASS MF4150 к Windows 10: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка Canon MF4150 на Windows 10. Установка драйверов, устранение ошибок совместимости</span>
+            </a><a href="/articles/p/po/pochemu-kompyuter-ne-vidit-skaner-canon-mf3010.html" class="pb-related-card">
+                <span class="pb-related-title">Компьютер не видит сканер Canon MF3010: 7 причин и решения</span>
+                <span class="pb-related-desc">Проблема: ПК не видит сканер Canon MF3010. Узнайте, как исправить драйверы, проверить USB-порт и нас</span>
+            </a><a href="/articles/k/ka/kak-s-fotoapparata-kenon-skinut-fotki-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как перенести фото с Canon на ПК: 5 проверенных способов</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как скинуть фотографии с фотоаппарата Canon на компьютер через USB, картридер,</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-canon-mp150.html" class="pb-related-card">
+                <span class="pb-related-title">Подключение принтера Canon MP150: драйверы, USB и сеть</span>
+                <span class="pb-related-desc">Пошаговая инструкция по установке и подключению МФУ Canon Pixma MP150. Решение проблем с драйверами,</span>
+            </a><a href="/articles/p/pr/printer-canon-pixma-mg2540s-kak-podklyuchit.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon Pixma MG2540S к компьютеру: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка принтера Canon Pixma MG2540S: загрузка драйверов, подключение по USB и Wi-Fi, ус</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

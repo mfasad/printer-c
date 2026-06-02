@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Canon как веб-камера: полное руководство по настройке и программам — Кэнон Инфо</title>
+    <meta name="description" content="Как использовать фотоаппарат Canon в качестве веб-камеры для стримов и Zoom. Обзор утилит EOS Webcam Utility и OBS, сравнение качества и задержек.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ke/kenon-kak-veb-kamera.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Canon как веб-камера: полное руководство по настройке и программам">
+    <meta property="og:description" content="Как использовать фотоаппарат Canon в качестве веб-камеры для стримов и Zoom. Обзор утилит EOS Webcam Utility и OBS, сравнение качества и задержек.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/fotoapparaty-canon/">Фотоаппараты Canon</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Canon как веб-камера: полное руководство по настройке и программам</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#официальная-утилита-canon-eos-webcam-utility">Официальная утилита Canon EOS Webcam Utility</a></li><li><a href="#настройка-камеры-перед-подключением">Настройка камеры перед подключением</a></li><li><a href="#сторонние-решения-для-расширенного-контроля">Сторонние решения для расширенного контроля</a></li><li><a href="#сравнение-методов-подключения">Сравнение методов подключения</a></li><li><a href="#оптимизация-изображения-и-звука">Оптимизация изображения и звука</a></li><li><a href="#типичные-проблемы-и-их-решение">Типичные проблемы и их решение</a></li><li><a href="#итоги-и-рекомендации">Итоги и рекомендации</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-pereklyuchat-diafragmu-na-canon.html">Как переключать диафрагму на Canon: Полное руководство для фотолюбителей</a></li><li><a href="/articles/c/ca/canon-sx40-hs-kak-vklyuchit-ruchnuyu-fokusirovku.html">Как включить ручную фокусировку на Canon PowerShot SX40 HS</a></li><li><a href="/articles/s/sk/skolko-vesit-canon-550-d.html">Вес Canon 550D: точные данные и сравнение с аналогами</a></li><li><a href="/articles/k/ka/kak-vklyuchit-vaj-faj-na-fotoapparate-canon.html">Как включить Wi-Fi на фотоаппарате Canon: Полная инструкция</a></li><li><a href="/articles/b/bl/blokirovka-zerkala-v-canon-chto-eto.html">Блокировка зеркала в Canon: что это и зачем нужно</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Использование фотоаппаратов Canon в качестве профессиональной веб-камеры</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#официальная-утилита-canon-eos-webcam-utility">Официальная утилита Canon EOS Webcam Utility</a></li><li><a href="#настройка-камеры-перед-подключением">Настройка камеры перед подключением</a></li><li><a href="#сторонние-решения-для-расширенного-контроля">Сторонние решения для расширенного контроля</a></li><li><a href="#сравнение-методов-подключения">Сравнение методов подключения</a></li><li><a href="#оптимизация-изображения-и-звука">Оптимизация изображения и звука</a></li><li><a href="#типичные-проблемы-и-их-решение">Типичные проблемы и их решение</a></li><li><a href="#итоги-и-рекомендации">Итоги и рекомендации</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>В эпоху удаленной работы и развития видеоблогинга качество изображения играет решающую роль, и встроенные веб-камеры ноутбуков часто не выдерживают конкуренции. Фотоаппараты <strong>Canon</strong> обладают огромными матрицами и сменной оптикой, что позволяет получать картинку с красивым размытием фона и глубокой цветопередачей, недоступной обычным гаджетам.</p>
+
+<p>Превратить вашу зеркальную или беззеркальную камеру в устройство для видеозвонков стало значительно проще благодаря официальным драйверам и сторонним решениям. Вам не обязательно быть профессиональным стримером, чтобы насладиться эффектом боке и четкостью изображения в Zoom, Skype или Google Meet.</p>
+
+<h2 id="официальная-утилита-canon-eos-webcam-utility">Официальная утилита Canon EOS Webcam Utility</h2>
+<p>Компания <em>Canon</em> выпустила бесплатное программное обеспечение, которое делает процесс подключения максимально простым для пользователей Windows и macOS. Эта утилита <code>EOS Webcam Utility</code> эмулирует стандартное устройство UVC, что позволяет системе распознавать камеру как обычную веб-камеру без сложной настройки.</p>
+
+<p>Важно понимать, что поддержка распространяется не на все модели сразу, а список совместимых устройств постоянно обновляется. Обычно поддерживаются современные беззеркальные камеры серий <em>R</em>, <em>M</em>, а также продвинутые зеркалки серии <em>EOS 90D</em> и новее. Проверьте список на официальном сайте перед установкой, чтобы избежать проблем с драйверами.</p>
+
+<p>Процесс подключения предельно интуитивен: после установки драйвера достаточно подключить камеру через USB-кабель в режим видеовыхода, и в настройках видеозвонка появится новая запись. Однако стоит учитывать, что качество передачи сигнала ограничено разрешением <code>1920x1080</code> и частотой <code>30 кадров в секунду</code>, что может быть недостаточно для профессионального вещания.</p>
+
+<blockquote>⚠️ Внимание: Утилита <code>EOS Webcam Utility</code> может не поддерживать старые модели камер, выпущенные до 2019-2020 годов. Для таких устройств потребуется использование стороннего ПО или покупка чистого захвата.</blockquote>
+
+<h2 id="настройка-камеры-перед-подключением">Настройка камеры перед подключением</h2>
+<p>Прежде чем начинать программную настройку, необходимо правильно подготовить само устройство, чтобы избежать перегрева и потери заряда во время длительных трансляций. Первым делом установите камеру на штатив или устойчивую поверхность, так как использование штатива с «горячим башмаком» обеспечит надежное крепление.</p>
+
+<p>В меню камеры необходимо отключить функции энергосбережения, которые могут прервать видеопоток, если вы забудете нажать кнопку. Перейдите в <code>Настройки → Питание → Автоотключение</code> и установите значение <strong>«Всегда включено»</strong> или максимальное время ожидания.</p>
+
+<p>Кроме того, критически важно перевести камеру в режим видеовыхода. В зависимости от модели это может быть отдельный пункт в меню или переключение на режим Live View. Для стабильной работы настоятельно рекомендуется использовать внешний источник питания, такой как <em>AC-adapter kit</em> или <strong>пустая батарея</strong> с подключением к розетке, чтобы избежать внезапного выключения.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка камеры Canon</h4><label class="check-item"><input type="checkbox"><span>Очистить объектив от пыли</span></label><label class="check-item"><input type="checkbox"><span>Установить режим Live View</span></label><label class="check-item"><input type="checkbox"><span>Отключить автоотключение питания</span></label><label class="check-item"><input type="checkbox"><span>Подключить питание от сети</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Не забудьте также настроить экспозицию вручную, чтобы избежать мерцания изображения при смене освещения в комнате. Используйте режим <code>M</code> (Manual) и подберите выдержку, кратную частоте сети (например, <code>1/50</code> для 50 Гц), чтобы исключить стробоскопический эффект.</p>
+
+<h2 id="сторонние-решения-для-расширенного-контроля">Сторонние решения для расширенного контроля</h2>
+<p>Если официальная утилита не дает нужного качества или не поддерживает вашу модель, на помощь приходят профессиональные программы для захвата видеосигнала. Наиболее популярным и мощным инструментом является <em>OBS Studio</em> в связке с плагинами <strong>Webcam</strong> или <em>NDI</em>.</p>
+
+<p>Этот метод требует наличия карты видеозахвата, которая подключается к компьютеру через <code>HDMI</code>. Сигнал с камеры поступает на карту, а OBS перенаправляет его в программу для звонков через виртуальную камеру. Это позволяет использовать все функции камеры, включая высокую частоту кадров <code>60 Гц</code> и высокое разрешение.</p>
+
+<p>Альтернативным вариантом является использование платных утилит, таких как <em>CamLink</em> или специализированное ПО от производителя карты захвата. Они часто обеспечивают более низкую задержку и лучшую стабильность соединения по сравнению с бесплатными решениями, что критично для живых стримов.</p>
+
+<details class="pb-accordion"><summary>Что дает карта видеозахвата?|Карта видеозахвата позволяет передавать сигнал в формате 4K, если камера его поддерживает, и обеспечивает полный контроль над цветокоррекцией и звуком через OBS, чего невозможно добиться через стандартный USB-драйвер.-->
+
+<p>Важно отметить, что использование HDMI-кабеля может привести к значительному нагреву камеры, так как разъемы не всегда имеют эффективное охлаждение. Рекомендуется использовать кабели с магнитными разъемами или специальные крепления для защиты портов.</p>
+
+<h2 id="сравнение-методов-подключения">Сравнение методов подключения</h2>
+<p>Выбор способа подключения зависит от ваших задач, бюджета и модели камеры. Прямое подключение через USB с утилитой Canon идеально для простых конференций, где важна простота настройки и минимальная задержка без дополнительного оборудования.</p>
+
+<p>В то же время, использование карты видеозахвата открывает двери в мир профессионального вещания, позволяя создавать многокамерные трансляции и накладывать графику в реальном времени. Однако этот путь требует дополнительных вложений и более глубоких технических знаний для настройки.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Требования</th>
+<th>Качество</th>
+<th>Задержка</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EOS Webcam Utility</td>
+<td>USB-кабель, ПК/Mac</td>
+<td>1080p 30fps</td>
+<td>Низкая</td>
+</tr>
+<tr>
+<td>OBS + Карта захвата</td>
+<td>HDMI-кабель, Карта захвата</td>
+<td>4K / 60fps</td>
+<td>Средняя</td>
+</tr>
+<tr>
+<td>Сторонние утилиты</td>
+<td>USB, Специфичное ПО</td>
+<td>Зависит от модели</td>
+<td>Высокая</td>
+</tr>
+<tr>
+<td>IP-подключение</td>
+<td>Wi-Fi, Приложение</td>
+<td>Сжатое</td>
+<td>Высокая</td>
+</tr>
+</tbody>
+</table></div>
+
+<!--WIDGET</summary><div class="pb-accordion-body"><p>poll:Какой метод подключения вы планируете использовать?:Официальная утилита Canon|OBS + Карта захвата|Стороннее ПО|Пока не определился</p></div></details>
+
+<h2 id="оптимизация-изображения-и-звука">Оптимизация изображения и звука</h2>
+<p>Качество картинки зависит не только от камеры, но и от настроек освещения и объектива. Используйте светосильный объектив с фиксированным фокусным расстоянием, например, <em>Canon EF 50mm f/1.8</em>, чтобы получить естественное размытие фона и выделить спикера.</p>
+
+<p>Звук встроенным микрофоном камеры часто бывает невнятным и наполненным шумом помещения. Для качественной аудиосвязи лучше подключить внешний микрофон прямо в компьютер или использовать беспроводную петличку, подключенную к камере через вход <code>3.5mm</code>.</p>
+
+<p>В настройках программы для звонков выберите профиль <strong>Canon EOS Webcam</strong> и убедитесь, что разрешение установлено на максимальное доступное значение. Иногда система по умолчанию выбирает <code>720p</code>, что снижает четкость мелких деталей.</p>
+
+<blockquote>⚠️ Внимание: При использовании HDMI-кабеля убедитесь, что он поддерживает передачу видеосигнала, а не только питание. Дешевые кабели могут вызывать помехи или полную потерю сигнала при длинной длине.</blockquote>
+
+<h2 id="типичные-проблемы-и-их-решение">Типичные проблемы и их решение</h2>
+<p>Наиболее частая проблема — камера не определяется системой или выдает ошибку при попытке подключения. Это часто случается, если подключение было сделано до запуска программы или драйвера. Перезагрузите компьютер и попробуйте снова, подключая кабель только после полной загрузки ОС.</p>
+
+<p>Если изображение мерцает или имеет полосы, необходимо изменить частоту кадров в меню камеры на синхронизированную с сетью (<code>50 Гц</code> для стран СНГ или <code>60 Гц</code> для США). Также проверьте, не включен ли режим <strong>Anti-flicker</strong> (Защита от мерцания) в настройках съемки.</p>
+
+<p>При работе через OBS иногда возникает проблема с задержкой звука или его отсутствием. В этом случае проверьте настройки аудиовхода в <code>Настройки → Аудио</code> и убедитесь, что выбран правильный источник микрофона.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если камера перегревается и отключается, снимите заднюю крышку, чтобы улучшить теплоотвод, или используйте внешний вентилятор для обдува корпуса во время длительных трансляций.</p></aside>
+
+<h2 id="итоги-и-рекомендации">Итоги и рекомендации</h2>
+<p>Использование <em>Canon</em> в качестве веб-камеры — это отличный способ повысить качество вашей видеосвязи без покупки дорогостоящих профессиональных комплектов. Даже базовый уровень подключения через USB-драйвер дает колоссальное преимущество перед встроенными камерами ноутбуков.</p>
+
+<p>Для профессиональных задач и стриминга однозначно стоит рассмотреть вариант с картой видеозахвата и OBS Studio, так как это дает полный контроль над процессом. Не бойтесь экспериментировать с настройками экспозиции и оптикой, чтобы найти идеальный баланс для вашего сценария.</p>
+
+<p>Помните, что стабильность соединения и правильное освещение важнее, чем максимальные технические характеристики камеры. Уделяйте внимание деталям обстановки, и ваша картинка будет выглядеть профессионально и надежно.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Использование внешней карты захвата и OBS Studio — самый гибкий и качественный способ превратить Canon в веб-камеру, но требует дополнительных вложений и времени на настройку.</p></aside>
+
+<details>
+<summary>Нужен ли специальный USB-кабель?</summary>
+<p>Рекомендуется использовать оригинальный USB-кабель, идущий в комплекте с камерой. Дешевые кабели могут не обеспечивать достаточную скорость передачи данных для видеопотока или не иметь функции передачи питания.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать Canon с Mac?</summary>
+<p>Да, официальная утилита <code>EOS Webcam Utility</code> поддерживает macOS (версии 10.13 и новее). Однако список поддерживаемых моделей может отличаться от списка для Windows, поэтому проверьте совместимость на сайте Canon.</p>
+</details>
+
+<details>
+<summary>Почему картинка темная в Zoom?</summary>
+<p>Камера может находиться в режиме автоматической экспозиции и подстраиваться под общую освещенность комнаты. Переключитесь в режим ручных настроек (M) и увеличьте значение ISO или выдержки, либо добавьте более яркий источник света перед камерой.</p>
+</details>
+
+<details>
+<summary>Поддерживается ли передача звука с камеры через USB?</summary>
+<p>Через официальную утилиту Canon звук обычно не передается, так как драйвер работает только как видеопоток. Для передачи звука необходимо использовать внешний микрофон или подключать аудиокабель отдельно к звуковой карте компьютера.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-pereklyuchat-diafragmu-na-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как переключать диафрагму на Canon: Полное руководство для фотолюбителей</span>
+                <span class="pb-related-desc">Узнайте, как менять диафрагму на камерах Canon в разных режимах. Инструкция для EOS, R и PowerShot. </span>
+            </a><a href="/articles/c/ca/canon-sx40-hs-kak-vklyuchit-ruchnuyu-fokusirovku.html" class="pb-related-card">
+                <span class="pb-related-title">Как включить ручную фокусировку на Canon PowerShot SX40 HS</span>
+                <span class="pb-related-desc">Пошаговая инструкция: активация режима MF, использование маунта фокусировки и настройка помощи при р</span>
+            </a><a href="/articles/s/sk/skolko-vesit-canon-550-d.html" class="pb-related-card">
+                <span class="pb-related-title">Вес Canon 550D: точные данные и сравнение с аналогами</span>
+                <span class="pb-related-desc">Узнайте, сколько весит Canon EOS 550D с объективом и без — официальные характеристики, сравнение с д</span>
+            </a><a href="/articles/k/ka/kak-vklyuchit-vaj-faj-na-fotoapparate-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как включить Wi-Fi на фотоаппарате Canon: Полная инструкция</span>
+                <span class="pb-related-desc">Подробная пошаговая инструкция по активации и настройке беспроводной связи на камерах Canon. Подключ</span>
+            </a><a href="/articles/b/bl/blokirovka-zerkala-v-canon-chto-eto.html" class="pb-related-card">
+                <span class="pb-related-title">Блокировка зеркала в Canon: что это и зачем нужно</span>
+                <span class="pb-related-desc">Разбираем функцию блокировки зеркала в фотоаппаратах Canon. Как работает механизм, когда включать ре</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-canon-4000d-k-kompyuteru-cherez-wifi.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon EOS 4000D к компьютеру через Wi-Fi: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Полное руководство по настройке беспроводного подключения камеры Canon 4000D к ПК. Инструкция по нас</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как отключить управление цветом в драйвере принтера Canon: подробная инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговое руководство по отключению коррекции цвета в драйверах Canon. Настройка режима печати, отключение ICC-профилей и отключение управления цветом для точной цветопередачи.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-otklyuchit-upravlenie-tsvetom-v-drajvere-printera-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как отключить управление цветом в драйвере принтера Canon: подробная инструкция">
+    <meta property="og:description" content="Пошаговое руководство по отключению коррекции цвета в драйверах Canon. Настройка режима печати, отключение ICC-профилей и отключение управления цветом для точной цветопередачи.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как отключить управление цветом в драйвере принтера Canon: подробная инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#почему-принтер-canon-искажает-цвета-и-что-такое-icc-профили">Почему принтер Canon искажает цвета и что такое ICC-профили</a></li><li><a href="#пошаговая-настройка-окна-свойств-принтера-в-windows">Пошаговая настройка окна свойств принтера в Windows</a></li><li><a href="#детальная-настройка-режима-color-matching-в-canon-ij">Детальная настройка режима Color Matching в Canon IJ</a></li><li><a href="#таблица-режимов-работы-с-цветом-и-их-назначение">Таблица режимов работы с цветом и их назначение</a></li><li><a href="#управление-цветом-через-меню-самого-устройства">Управление цветом через меню самого устройства</a></li><li><a href="#особенности-настройки-для-macos-и-приложений-adobe">Особенности настройки для macOS и приложений Adobe</a></li><li><a href="#решение-проблем-после-отключения-коррекции">Решение проблем после отключения коррекции</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-ustanovit-printer-canon-250.html">Как установить принтер Canon 250: драйверы, Wi-Fi и USB</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-3411-k-wifi.html">Как подключить принтер Canon 3411 к Wi-Fi: полная инструкция</a></li><li><a href="/articles/k/ka/kak-vklyuchit-vaj-faj-na-printere-canon-pixma-mp-495.html">Настройка Wi-Fi на Canon Pixma MP495: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-nastroit-setevoj-printer-canon-mf3010.html">Настройка сетевого Canon MF3010: пошаговая инструкция 2026</a></li><li><a href="/articles/k/ka/kak-podsoedinit-canon-k-macbook.html">Как подключить Canon к MacBook: Полное руководство по USB и Wi-Fi</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Инструкция: как отключить управление цветом в драйвере Canon</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#почему-принтер-canon-искажает-цвета-и-что-такое-icc-профили">Почему принтер Canon искажает цвета и что такое ICC-профили</a></li><li><a href="#пошаговая-настройка-окна-свойств-принтера-в-windows">Пошаговая настройка окна свойств принтера в Windows</a></li><li><a href="#детальная-настройка-режима-color-matching-в-canon-ij">Детальная настройка режима Color Matching в Canon IJ</a></li><li><a href="#таблица-режимов-работы-с-цветом-и-их-назначение">Таблица режимов работы с цветом и их назначение</a></li><li><a href="#управление-цветом-через-меню-самого-устройства">Управление цветом через меню самого устройства</a></li><li><a href="#особенности-настройки-для-macos-и-приложений-adobe">Особенности настройки для macOS и приложений Adobe</a></li><li><a href="#решение-проблем-после-отключения-коррекции">Решение проблем после отключения коррекции</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Часто пользователи сталкиваются с проблемой, когда отпечатанные документы или фотографии не соответствуют тому, что они видят на мониторе. Цвета могут выглядеть блеклыми, слишком насыщенными или с неестественным оттенком. В большинстве случаев проблема кроется не в аппаратной части устройства, а в программных настройках <strong>управления цветом</strong>.</p>
+
+<p>Драйвер принтера <em>Canon</em> по умолчанию пытается автоматически корректировать цвета, чтобы компенсировать различия между экраном и бумагой. Однако для профессиональных задач, когда требуется точное совпадение с исходным файлом, такое вмешательство становится помехой. Вам необходимо деактивировать автоматические алгоритмы и перевести устройство в режим полной ручной или отключенной обработки.</p>
+
+<p>Процесс отключения зависит от версии операционной системы и конкретной модели принтера, но базовая логика остается неизменной. Ниже мы рассмотрим, как превратить настройки <code>Цвет</code> в <code>Выключено</code>, чтобы получить предсказуемый результат печати.</p>
+
+<h2 id="почему-принтер-canon-искажает-цвета-и-что-такое-icc-профили">Почему принтер Canon искажает цвета и что такое ICC-профили</h2>
+
+<p>Основная причина искажения кроется в механизме <strong>цветоменеджмента</strong>. Система пытается сопоставить цветовое пространство вашего монитора (обычно sRGB или Adobe RGB) с цветовым профилем бумаги и чернил принтера. Эта процедура называется наложением <em>ICC-профиля</em>.</p>
+
+<p>Когда вы отправляете файл на печать, драйвер анализирует оттенки и решает, как их интерпретировать. Если вы работаете с графическими редакторами, где профили уже настроены, дополнительный расчет со стороны драйвера приводит к двойной коррекции. Результат — перенасыщенные или серые оттенки, которые сложно предсказать без опыта.</p>
+
+<p>Чтобы избежать этого, необходимо понять разницу между управлением цветом на уровне программы и на уровне драйвера. Важно контролировать именно <strong>драйвер принтера</strong>, так как он является последним звеном перед физической печатью.</p>
+
+<blockquote>⚠️ Внимание: Отключение управления цветом может привести к появлению неестественных цветов на обычной офисной бумаге. Данная настройка наиболее эффективна при использовании специализированных фотобумаг.</blockquote>
+
+<h2 id="пошаговая-настройка-окна-свойств-принтера-в-windows">Пошаговая настройка окна свойств принтера в Windows</h2>
+
+<p>Первый шаг — открытие панели управления устройством. Нажмите правой кнопкой мыши на иконку вашего принтера в разделе <code>Устройства и принтеры</code> и выберите пункт <code>Настройка печати</code> или <code>Свойства принтера</code>. В открывшемся окне перейдите на вкладку <code>Дополнительно</code> или <code>Цвет</code>, в зависимости от версии драйвера.</p>
+
+<p>Найдите раздел, отвечающий за <strong>Управление цветом</strong> (Color Management). Обычно это выпадающий список или радиокнопки. По умолчанию там часто стоит значение <em>Автоматическая коррекция</em> или <strong>Применять настройки принтера</strong>. Вам нужно изменить этот параметр на <code>Отключено</code> или <code>Нет</code>.</p>
+
+<p>В некоторых моделях серии <em>imagePROGRAF</em> или <em>PIXMA Pro</em> это меню может быть скрыто за кнопкой <code>Расширенные настройки</code>. После изменений не забудьте нажать <code>Применить</code>, чтобы сохранить профиль для текущей очереди печати.</p>
+
+<details class="pb-accordion"><summary>Где найти вкладку Color Management в старых драйверах?</summary><div class="pb-accordion-body"><p>В старых версиях драйверов (Windows 7/8) вкладка может называться "Меню настроек" и находиться во вкладке "Параметры страницы" или "Свойства страницы". Ищите раздел "Цвет" в нижней части окна.</p></div></details>
+
+<h2 id="детальная-настройка-режима-color-matching-в-canon-ij">Детальная настройка режима Color Matching в Canon IJ</h2>
+
+<p>Для принтеров <em>Canon</em> с интегрированным ПО IJ Printer Assistant существует отдельный режим настройки. В окне свойств устройства найдите переключатель <strong>Color Matching</strong>. Здесь доступны варианты: <em>ColorSync</em>, <em>ICM</em> и <em>Отключено</em>.</p>
+
+<p>Если вы используете программное обеспечение Adobe Photoshop или Lightroom, выбор должен падать на <code>Отключено</code>. В этом случае программа сама управляет профилем, а драйвер просто передает данные без изменений. Это критически важно для <strong>фотографической печати</strong>.</p>
+
+<p>Если же вы печатаете документы из Word или браузера, где настройки цвета не заданы явно, можно использовать режим <em>Применить настройки принтера</em>, но это не всегда дает желаемый результат точности. Для профессиональных задач всегда выбирайте вариант без коррекции.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Чек-лист перед отключением управления цветом</h4><label class="check-item"><input type="checkbox"><span>Проверить тип бумаги в настройках</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в актуальности драйвера</span></label><label class="check-item"><input type="checkbox"><span>Выбрать режим "Отключено" в Color Matching</span></label><label class="check-item"><input type="checkbox"><span>Сохранить настройки в профиле</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="таблица-режимов-работы-с-цветом-и-их-назначение">Таблица режимов работы с цветом и их назначение</h2>
+
+<p>Чтобы не запутаться в терминах, ниже приведена таблица с основными режимами работы цветопередачи в драйверах <em>Canon</em>. Понимание разницы поможет выбрать правильный путь отключения.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Режим</th>
+<th>Назначение</th>
+<th>Когда использовать</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Автоматический (Авто)</td>
+<td>Принтер сам выбирает профиль</td>
+<td>Для бытовых документов и фото</td>
+</tr>
+<tr>
+<td>ICM (Windows Color)</td>
+<td>Использует системный профиль Windows</td>
+<td>При печати из стандартных программ</td>
+</tr>
+<tr>
+<td>ColorSync (macOS)</td>
+<td>Использует профиль Apple ColorSync</td>
+<td>Для пользователей Mac OS</td>
+</tr>
+<tr>
+<td>Отключено (Off)</td>
+<td>Полное отсутствие коррекции</td>
+<td>Для печати из Photoshop/Lightroom</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Обратите внимание, что режим <strong>Отключено</strong> требует, чтобы вы сами задали настройки цвета в приложении, которое отправляет документ на печать. Иначе цвета могут выглядеть сероватыми, так как драйвер не будет компенсировать разницу в яркости.</p>
+
+<blockquote>⚠️ Внимание: Если вы отключите управление цветом, а в графическом редакторе также не настроен профиль, цвета будут выглядеть "сырыми" и не такими яркими, как на экране.</blockquote>
+
+<div class="pb-poll" id="poll-dbfe0073"><div class="pb-poll-question">📊 В какой программе вы чаще всего печатаете?</div><div class="pb-poll-option" data-poll="dbfe0073" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Adobe Photoshop</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="dbfe0073" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Microsoft Word</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="dbfe0073" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Браузер</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="dbfe0073" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Фотографический просмотрщик</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="управление-цветом-через-меню-самого-устройства">Управление цветом через меню самого устройства</h2>
+
+<p>Не все настройки находятся в компьютере. Некоторые принтеры серии <em>imagePROGRAF</em> имеют собственный интерфейс управления цветом через сенсорный экран. Перейдите в <code>Настройки</code> → <code>Установка</code> → <code>Цвет</code>.</p>
+
+<p>Здесь можно найти опцию <strong>Режим управления цветом</strong>. Если она активна, принтер будет применять свои внутренние таблицы трансформации. Для отключения выберите <code>Прямая передача</code> или <code>Нет</code>.</p>
+
+<p>Это особенно актуально для больших форматов, где подключение к ПК может быть нестабильным, и пользователь хочет контролировать процесс непосредственно на устройстве. Изменения в <strong>встроенном ПО</strong> сохраняются даже после перезагрузки.</p>
+
+<p>Если вы используете специализированную бумагу, например, водостойкую матовую, убедитесь, что профиль бумаги выбран верно. Даже при отключенном управлении цветом неправильный выбор носителя может исказить результат.</p>
+
+<h2 id="особенности-настройки-для-macos-и-приложений-adobe">Особенности настройки для macOS и приложений Adobe</h2>
+
+<p>В среде macOS логика работы с цветом строится иначе. При отправке документа на принтер <em>Canon</em> в окне печати выберите <code>Показать подробности</code>. Найдите раздел <strong>Color Management</strong> или <em>Color Sync</em>.</p>
+
+<p>В списке <code>Профиль</code> выберите <em>Нет</em> (None) или <code>Отключено</code>. Это отключит коррекцию на уровне операционной системы, передавая данные напрямую в драйвер. Важно: не оставляйте настройку "Применить настройки принтера", если вы работаете в <strong>Photoshop</strong>.</p>
+
+<p>В самом Photoshop при печати перейдите в <code>Управление цветом</code> и выберите <em>Управление цветом Photoshop</em>. Это гарантирует, что именно программа, а не система или драйвер, будет красить пиксели.</p>
+
+<p>Иногда драйверы <em>Canon</em> для Mac требуют установки дополнительного компонента Color Management. Если опции нет, проверьте наличие обновлений в приложении "Canon My Printer" или на официальном сайте.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед массовой печатью всегда делайте тестовую распечатку на маленьком участке бумаги, чтобы убедиться, что цвета соответствуют ожиданиям без коррекции.</p></aside>
+
+<h2 id="решение-проблем-после-отключения-коррекции">Решение проблем после отключения коррекции</h2>
+
+<p>После отключения управления цветом вы можете заметить, что черные оттенки стали менее глубокими. Это нормально, так как драйвер перестал компенсировать ограничение чернил на бумаге. Для решения этой проблемы используйте функцию <strong>Black Point Compensation</strong> в настройках принтера.</p>
+
+<p>Если цвета все равно кажутся странными, проверьте, не включен ли режим <em>Экономия чернил</em> или <em>Быстрая печать</em>. Эти режимы часто меняют подачу пигмента, что может быть воспринято как проблема с цветом.</p>
+
+<p>В редких случаях требуется полное удаление драйвера и установка чистой версии, где настройки сбрасываются на заводские. Это помогает, если предыдущие попытки настройки привели к конфликту профилей.</p>
+
+<p>Всегда сверяйте результаты с эталоном. Если ваша цель — точное совпадение, отключение <strong>автоматической коррекции</strong> — это единственный путь к профессиональному результату.</p>
+
+<blockquote>⚠️ Внимание: В новых версиях драйверов Canon (версия 5.0 и выше) интерфейс меню может измениться. Если вы не видите знакомых пунктов, проверьте наличие обновлений ПО или обратитесь к документации конкретной модели.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главный вывод: Отключение управления цветом в драйвере необходимо только тогда, когда вы полностью контролируете цветовое пространство в исходной программе.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Почему после отключения управления цветом цвета стали тусклыми?</summary>
+<p>Это происходит потому, что драйвер перестал компенсировать ограничения бумаги. В автоматическом режиме принтер добавляет насыщенности, чтобы компенсировать блеклость бумаги. При отключении вы видите "чистый" сигнал. Убедитесь, что в графическом редакторе выбран правильный цветовой профиль.</p>
+</details>
+
+<details>
+<summary>Можно ли отключить управление цветом только для одного документа?</summary>
+<p>Да, это возможно. При печати из программы выберите <code>Свойства</code> принтера, настройте нужный режим (например, <em>Отключено</em>) и примените его непосредственно перед печатью. Эти настройки не сохранятся глобально для всех задач, если вы не создадите отдельный профиль печати.</p>
+</details>
+
+<details>
+<summary>Что делать, если в драйвере нет опции "Отключено"?</summary>
+<p>В некоторых офисных моделях Canon эта опция скрыта или заменена на "Применить настройки принтера". Попробуйте обновить драйвер до последней версии с официального сайта. Если опции нет, возможно, модель не поддерживает ручное отключение коррекции.</p>
+</details>
+
+<details>
+<summary>Как влияет отключение на скорость печати?</summary>
+<p>Отключение управления цветом обычно немного ускоряет процесс, так как процессору не нужно обрабатывать сложные цветовые преобразования в реальном времени. Однако разница может быть незаметна при печати небольших документов.</p>
+</details>
+
+<details>
+<summary>Нужно ли отключать цвет при печати текста?</summary>
+<p>Нет, для черно-белого текста или простых документов это не требуется. Настройка управления цветом критична только для печати фотографий и графических изображений, где важна точность оттенков.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-ustanovit-printer-canon-250.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить принтер Canon 250: драйверы, Wi-Fi и USB</span>
+                <span class="pb-related-desc">Подробная инструкция по установке принтеров Canon серии 250. Настройка драйверов для Windows/Mac, по</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-canon-3411-k-wifi.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon 3411 к Wi-Fi: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по настройке беспроводного подключения принтера Canon 3411 к сети Wi-Fi. Метод</span>
+            </a><a href="/articles/k/ka/kak-vklyuchit-vaj-faj-na-printere-canon-pixma-mp-495.html" class="pb-related-card">
+                <span class="pb-related-title">Настройка Wi-Fi на Canon Pixma MP495: пошаговая инструкция</span>
+                <span class="pb-related-desc">Как подключить Canon Pixma MP495 к беспроводной сети. Подробная инструкция по настройке WPS, кнопке </span>
+            </a><a href="/articles/k/ka/kak-nastroit-setevoj-printer-canon-mf3010.html" class="pb-related-card">
+                <span class="pb-related-title">Настройка сетевого Canon MF3010: пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Узнайте, как подключить Canon MF3010 к сети. Подробная инструкция по установке драйверов, настройке </span>
+            </a><a href="/articles/k/ka/kak-podsoedinit-canon-k-macbook.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon к MacBook: Полное руководство по USB и Wi-Fi</span>
+                <span class="pb-related-desc">Пошаговая инструкция по настройке принтеров и фотоаппаратов Canon на macOS. Решаем проблемы драйверо</span>
+            </a><a href="/articles/c/ch/chto-delat-esli-kompyuter-ne-nakhodit-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Компьютер не видит принтер Canon: 7 рабочих способов решения</span>
+                <span class="pb-related-desc">Принтер Canon не определяется системой? Узнайте, как исправить ошибки подключения USB и Wi-Fi, обнов</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

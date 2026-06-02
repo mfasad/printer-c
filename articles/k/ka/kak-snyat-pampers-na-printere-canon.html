@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как сбросить счетчик памперса на принтерах Canon: Инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговое руководство по очистке ватного модуля (Absorber) на принтерах Canon. Сброс ошибки 0x200010, 1687 и др. через Service Tool.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-snyat-pampers-na-printere-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как сбросить счетчик памперса на принтерах Canon: Инструкция">
+    <meta property="og:description" content="Пошаговое руководство по очистке ватного модуля (Absorber) на принтерах Canon. Сброс ошибки 0x200010, 1687 и др. через Service Tool.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-nav-active">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/remont-i-oshibki/">Ремонт и ошибки</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как сбросить счетчик памперса на принтерах Canon: Инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#что-такое-памперс-и-почему-он-блокирует-принтер">Что такое памперс и почему он блокирует принтер</a></li><li><a href="#подготовка-оборудования-к-процедуре-сброса">Подготовка оборудования к процедуре сброса</a></li><li><a href="#алгоритм-входа-в-сервисный-режим">Алгоритм входа в сервисный режим</a></li><li><a href="#работа-с-сервисной-утилитой-и-обнуление-счетчика">Работа с сервисной утилитой и обнуление счетчика</a></li><li><a href="#особенности-сброса-для-разных-серий-canon">Особенности сброса для разных серий Canon</a></li><li><a href="#физическая-замена-ватного-модуля-когда-она-необходима">Физическая замена ватного модуля: когда она необходима</a></li><li><a href="#проверка-результата-и-диагностика">Проверка результата и диагностика</a></li><li><a href="#частые-ошибки-пользователей-при-сбросе">Частые ошибки пользователей при сбросе</a></li><li><a href="#faq-ответы-на-распространенные-вопросы">FAQ: Ответы на распространенные вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/p/po/pochemu-ne-vyezzhaet-kartridzh-iz-printera-kenon.html">Принтер Canon не выпускает картридж: причины и способы решения</a></li><li><a href="/articles/k/ka/kak-ubrat-zazhevannuyu-bumagu-iz-printera-canon.html">Как убрать зажеванную бумагу из принтера Canon: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-razobrat-printer-kenon-lbp-6020.html">Как разобрать Canon LBP6020: пошаговая инструкция по демонтажу</a></li><li><a href="/articles/p/pr/printer-kenon-ne-zakhvatyvaet-bumagu-chto-delat-piksma.html">Canon Pixma не захватывает бумагу: причины и ремонт</a></li><li><a href="/articles/k/ka/kak-sbrosit-printer-canon-mg2540s.html">Сброс принтера Canon MG2540S: инструкция по обнулению счетчиков</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полный гид: Как сбросить и очистить счетчик ватного модуля Canon</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#что-такое-памперс-и-почему-он-блокирует-принтер">Что такое памперс и почему он блокирует принтер</a></li><li><a href="#подготовка-оборудования-к-процедуре-сброса">Подготовка оборудования к процедуре сброса</a></li><li><a href="#алгоритм-входа-в-сервисный-режим">Алгоритм входа в сервисный режим</a></li><li><a href="#работа-с-сервисной-утилитой-и-обнуление-счетчика">Работа с сервисной утилитой и обнуление счетчика</a></li><li><a href="#особенности-сброса-для-разных-серий-canon">Особенности сброса для разных серий Canon</a></li><li><a href="#физическая-замена-ватного-модуля-когда-она-необходима">Физическая замена ватного модуля: когда она необходима</a></li><li><a href="#проверка-результата-и-диагностика">Проверка результата и диагностика</a></li><li><a href="#частые-ошибки-пользователей-при-сбросе">Частые ошибки пользователей при сбросе</a></li><li><a href="#faq-ответы-на-распространенные-вопросы">FAQ: Ответы на распространенные вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Принтеры <em>Canon</em> — это надежная техника, которая со временем сталкивается с неизбежным физическим ограничением: заполнением <strong>памперса</strong>. Этот компонент, технически называемый ватным модулем или <em>PAD</em>, впитывает чернила при прочистке печатающей головки и во время первых запусков устройства. Когда он переполняется, аппарат блокирует работу, выдавая ошибку с кодами <strong>0x200010</strong>, <strong>1687</strong> или <strong>5B00</strong>, и требует визита в сервисный центр.</p>
+<p>Многие пользователи ошибочно полагают, что единственное решение — это полная замена ватного модуля на новый. Однако, физическая замена часто не требуется, если вы знаете, как программно обнулить счетчик. <strong>Сброс памперса</strong> позволяет продолжить работу устройства без лишних затрат, просто «обманув» прошивку, сообщив ей, что емкость модуля пуста.</p>
+<p><strong>Важно понимать:</strong> программный сброс не удаляет чернила из ваты. Если модуль физически переполнен, чернила могут вытечь на стол или внутрь корпуса. Поэтому процедуру следует проводить только после оценки уровня заполнения или предварительной замены ваты, если она мокрая насквозь.</p>
+
+<h2 id="что-такое-памперс-и-почему-он-блокирует-принтер">Что такое памперс и почему он блокирует принтер</h2>
+<p>Внутри любого струйного принтера <em>Canon</em>, особенно популярных серий <strong>MG</strong>, <strong>MX</strong> и <strong>TR</strong>, находится система сбора отходов. Это пористая губка, расположенная под кареткой печатающей головки. При каждой процедуре очистки сопел или при старте устройства система принудительно прогоняет через головку чернила для удаления засохших пузырьков воздуха.</p>
+<p>Эти чернила стекают именно в этот ватный модуль. Микроконтроллер принтера ведет строгий подсчет каждого прогона чернил. По достижении определенного значения, заложенного производителем, срабатывает программный ограничитель. Принтер переходит в режим обслуживания (Service Mode) и отказывается печатать, пока вы не устраните причину.</p>
+<p>Физическая замена <strong>PAD</strong> — это трудоемкий процесс, требующий полной разборки корпуса, что часто приводит к повреждению хрупких пластиковых защелок. Гораздо эффективнее сначала попробовать программный сброс. Если после обнуления счетчика чернила не текут, значит, вата еще имеет запас емкости, и устройство будет работать еще долго.</p>
+
+<h2 id="подготовка-оборудования-к-процедуре-сброса">Подготовка оборудования к процедуре сброса</h2>
+<p>Перед началом любых манипуляций необходимо подготовить рабочее место и само устройство. Убедитесь, что принтер подключен к компьютеру напрямую через кабель <strong>USB</strong>. Использование Wi-Fi или разветвителей может привести к потере связи в критический момент ввода сервисной команды.</p>
+<p>Вам потребуется специальная утилита, которую часто называют <em>Service Tool</em> или <strong>Wicreset</strong> (хотя Wicreset платный, для <em>Canon</strong> чаще используют бесплатные аналоговые сервисные программы, например, Service Tool 3300, 3400 или 4300). Важно подобрать версию софта, соответствующую вашей модели и версии прошивки.</p>
+<p>Скачивать утилиты лучше из проверенных источников, так как в интернете много модифицированных версий с вирусами. Перед запуском обязательно отключите антивирус на время работы, так как он может блокировать доступ к портам принтера.</p>
+<blockquote>
+<p>⚠️ Внимание: Все действия по сбросу счетчика вы выполняете на свой страх и риск. Неправильные команды в сервисном режиме могут привести к полной «окирпичиванию» устройства, после чего восстановление потребует перепрошивки памяти через программатор.</p>
+</blockquote>
+
+<div class="pb-poll" id="poll-ebdb53d4"><div class="pb-poll-question">📊 Какая у вас модель принтера Canon?</div><div class="pb-poll-option" data-poll="ebdb53d4" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">MG серия (MG2540, MG3640 и др.)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ebdb53d4" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">MX серия (MX474, MX514 и др.)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ebdb53d4" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">TR серия (TR4540, TR8540 и др.)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ebdb53d4" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">G серия с СНПЧ (G1010, G2010 и др.)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="алгоритм-входа-в-сервисный-режим">Алгоритм входа в сервисный режим</h2>
+<p>Самый сложный этап — это правильный вход в сервисный режим. Последовательность нажатий кнопок должна быть идеальной. Выключите принтер кнопкой питания, дождитесь полной остановки механизмов и погасания индикаторов.</p>
+<p>Зажмите и удерживайте кнопку <strong>Stop/Reset</em> (красный треугольник в круге), не отпуская её, нажмите кнопку <strong>Power</em> (включение). Теперь, продолжая удерживать кнопку питания, отпустите кнопку <em>Stop/Reset</em> (дважды нажмите на неё, если инструкция требует двойного нажатия, обычно это 2 раза для MG серии).</p>
+<p>Индикация на панели начнет меняться: мигать зеленым и оранжевым. Не отпускайте кнопку питания, пока индикатор не перестанет мигать и не загорится постоянным зеленым цветом (или оранжевым, в зависимости от модели). Только после этого можно отпускать кнопку питания. Если экран компьютера определил устройство, значит, вы успешно перешли в режим обслуживания.</p>
+<blockquote>
+<p>⚠️ Внимание: Если индикатор начал мигать в определенном ритме (например, 5 раз оранжевым, 1 раз зеленым), это указывает на ошибку входа. Сбросьте питание и повторите попытку, ускорив или замедлив ритм нажатий.</p>
+</blockquote>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед запуском утилиты</h4><label class="check-item"><input type="checkbox"><span>Принтер выключен</span></label><label class="check-item"><input type="checkbox"><span>Кабель USB подключен плотно</span></label><label class="check-item"><input type="checkbox"><span>Утилита запущена от имени администратора</span></label><label class="check-item"><input type="checkbox"><span>Антивирус временно отключен</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="работа-с-сервисной-утилитой-и-обнуление-счетчика">Работа с сервисной утилитой и обнуление счетчика</h2>
+<p>После подключения запустите программу <em>Service Tool</strong>. В выпадающем списке версий (Version) выберите ту, которая соответствует вашему устройству. Если программа не видит принтер, проверьте диспетчер устройств Windows — принтер должен отображаться как <strong>Canon MEM</strong> или <strong>USBPRINT</strong>.</p>
+<p>Найдите раздел <strong>Clear Ink Counter</strong> (Очистка счетчика чернил). Здесь вам нужно выбрать конкретный тип памперса. Обычно это <strong>Main</strong> (основной) и <strong>Part</strong> (частичный, для промывки головки). Для полного сброса выбирайте <strong>Main Absorber</strong>.</p>
+<p>Нажмите кнопку <strong>Set</strong> или <strong>Clear</strong>. Программа выдаст сообщение об успешном обнулении. После этого рекомендуется нажать кнопку <strong>Power Off</em> в интерфейсе утилиты или просто выключить принтер, чтобы настройки закрепились.</p>
+
+<details class="pb-accordion"><summary>Что делать, если утилита выдает ошибку?Если программа пишет "Error" или "Communication failed", попробуйте зайти в диспетчер устройств, найти принтер, нажать правой кнопкой мыши -> Свойства -> Сведения -> ИД оборудования и скопировать значение. Затем введите его в поиск, чтобы найти точную версию сервисной утилиты. Часто проблема в том, что версия софта слишком старая для новой прошивки принтера.-->
+
+<h2 id="особенности-сброса-для-разных-серий-canon">Особенности сброса для разных серий Canon</h2>
+<p>Разные поколения принтеров <em>Canon</em> имеют свои нюансы. Например, для популярных моделей серии <strong>G1010, G2010</strong> (где встроена система СНПЧ) процедура может отличаться. У них часто используется утилита <strong>SSC Service Utility</strong> или специфический <em>Service Tool 3400</em>.</p>
+<p>В устройствах серии <strong>MX</strong> (мультифункция с телефоном) важно не перепутать кнопки. Иногда требуется зажать <code>Stop</code> на 5 секунд перед включением. Обязательно сверяйтесь с документацией именно для вашей модификации, так как паттерны нажатий могут различаться даже у близнецов-моделей.</p>
+<p>Современные модели с Wi-Fi модулем (например, <strong>TR8540</strong>) часто требуют более сложного входа, иногда с использованием кнопки <code>Home</code> или сенсорного экрана для переключения режимов, если кнопка <em>Stop</em> не срабатывает в комбинации с питанием.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Серия принтера</th>
+<th>Типичная ошибка</th>
+<th>Рекомендуемый софт</th>
+<th>Сложность входа</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>MG2400 / MG2540</em></td>
+<td><strong>5B00</strong></td>
+<td>Service Tool 3300</td>
+<td>Низкая</td>
+</tr>
+<tr>
+<td><em>MG3600 / MG3640</em></td>
+<td><strong>1687</strong></td>
+<td>Service Tool 4300</td>
+<td>Средняя</td>
+</tr>
+<tr>
+<td><em>MX494 / MX514</em></td>
+<td><strong>0x200010</strong></td>
+<td>Service Tool 3400</td>
+<td>Высокая</td>
+</tr>
+<tr>
+<td><em>G1010 / G2010</em></td>
+<td><strong>E05</strong> (Пустой контейнер)</td>
+<td>WicReset / SSC</td>
+<td>Средняя</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="физическая-замена-ватного-модуля-когда-она-необходима">Физическая замена ватного модуля</summary><div class="pb-accordion-body"><p> когда она необходима</h2>
+<p>Программный сброс не решает проблему, если вата превратилась в гель. Если чернила вытекают из корпуса или пахнут на рабочем столе, единственный выход — <strong>замена PAD</strong>. Для этого нужно разобрать принтер, открутить винты и аккуратно извлечь впитывающую губку.</p>
+<p>Замененный модуль можно промыть под струей воды, высушить и установить обратно, но лучше использовать новую поролон. После физической замены обязательно выполните процедуру сброса счетчика, иначе принтер все равно заблокируется, даже с новой чистой ватой.</p>
+<p>Сборка устройства требует внимательности: все шлейфы должны быть подключены плотно, а пластиковые защелки — зафиксированы. Неправильная установка может привести к тому, что каретка будет цепляться за корпус, издавая странный шум при движении.</p>
+<blockquote>
+<p>⚠️ Внимание: Не используйте агрессивные растворители для промывки ваты, так как это может разрушить структуру поролона и привести к его крошению внутри механизма принтера. Используйте только теплую воду.</p>
+</blockquote>
+
+
+
+<h2 id="проверка-результата-и-диагностика">Проверка результата и диагностика</h2>
+<p>После сброса включите принтер и попробуйте выполнить тестовую печать. Если ошибка исчезла, а принтер начал печатать, поздравляем — процедура прошла успешно. Проверьте уровень чернил через утилиту драйвера на компьютере.</p>
+<p>Если ошибка возвращается сразу после перезагрузки, возможно, вы выбрали неверный тип счетчика в утилите или версия программы некорректно считала состояние памяти. Попробуйте другую версию <em>Service Tool</em> или проверьте, не переполнен ли <strong>частичный</strong> (Partial) счетчик.</p>
+<p>В некоторых случаях помогает полная очистка всех счетчиков в меню утилиты. Это обнуляет и основной модуль, и модуль промывки головки. Однако это не рекомендуется делать слишком часто, так как это может запутать логику работы устройства в будущем.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Программный сброс — это временное решение. Если вы не замените ватный модуль, чернила продолжат накапливаться и в итоге вытекут наружу, испортив мебель.</p></aside>
+
+<h2 id="частые-ошибки-пользователей-при-сбросе">Частые ошибки пользователей при сбросе</h2>
+<p>Самая частая ошибка — неправильное нажатие кнопок. Ритм должен быть уверенным. Задержка между нажатием кнопки питания и отпусканием кнопки стоп должна быть минимальной. Если индикатор мигнет зеленым и погаснет, значит, вы слишком долго держали кнопку или нажали её слишком рано.</p>
+<p>Другая проблема — использование утилиты от другой модели. Например, попытка сбросить <strong>MG2540</strong> программой для <strong>MX494</strong>. Это может привести к тому, что счетчик обнулится, но настройки памяти будут повреждены, и принтер перестанет определяться драйвером.</p>
+<p>Не стоит также пытаться сбросить счетчик с помощью драйвера Windows. Стандартное меню обслуживания драйвера не имеет доступа к глубинным сервисным регистрам памяти, где хранится значение <strong>PAD</strong>.</p>
+
+<h2 id="faq-ответы-на-распространенные-вопросы">FAQ: Ответы на распространенные вопросы</h2>
+
+<details>
+<summary>Можно ли сбросить памперс без специального софта?</summary>
+<p>Нет, стандартными средствами Windows или драйвером это сделать невозможно. Требуется доступ к сервисным регистрам через утилиту <em>Service Tool</em> или аналогичные программы, работающие на низком уровне.</p>
+</details>
+
+<details>
+<summary>Сколько раз можно сбрасывать счетчик?</summary>
+<p>Технически счетчик можно сбрасывать бесконечно, так как он просто обнуляет значение до нуля. Однако, если физическая емкость вата заполнена, чернила начнут вытекать на стол.</p>
+</details>
+
+<details>
+<summary>Что означает ошибка 5B00?</summary>
+<p>Ошибка <strong>5B00</strong> (или <strong>0x200010</strong>) означает, что ватный модуль (Absorber) полностью заполнен и принтер требует обслуживания или замены компонента.</p>
+</details>
+
+<details>
+<summary>Нужно ли выключать принтер после сброса?</summary>
+<p>Да, после нажатия кнопки сброса в утилите принтер нужно выключить кнопкой питания и включить снова, чтобы изменения вступили в силу и система перезагрузилась.</p>
+</details>
+
+<p>Регулярный контроль состояния ватного модуля и своевременный сброс счетчика позволят вашему принтеру <em>Canon</em> служить верой и правдой долгие годы, экономя деньги на сервисном обслуживании и покупке новых устройств.</p></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/p/po/pochemu-ne-vyezzhaet-kartridzh-iz-printera-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Принтер Canon не выпускает картридж: причины и способы решения</span>
+                <span class="pb-related-desc">Картридж застрял в принтере Canon? Разбор частых причин блокировки, инструкция по безопасному извлеч</span>
+            </a><a href="/articles/k/ka/kak-ubrat-zazhevannuyu-bumagu-iz-printera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как убрать зажеванную бумагу из принтера Canon: пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как безопасно извлечь замятую бумагу из принтеров Canon. Пошаговая инструкция, таблица ошиб</span>
+            </a><a href="/articles/k/ka/kak-razobrat-printer-kenon-lbp-6020.html" class="pb-related-card">
+                <span class="pb-related-title">Как разобрать Canon LBP6020: пошаговая инструкция по демонтажу</span>
+                <span class="pb-related-desc">Подробное руководство по разборке принтера Canon LBP6020. Инструкция по снятию корпуса, замене терми</span>
+            </a><a href="/articles/p/pr/printer-kenon-ne-zakhvatyvaet-bumagu-chto-delat-piksma.html" class="pb-related-card">
+                <span class="pb-related-title">Canon Pixma не захватывает бумагу: причины и ремонт</span>
+                <span class="pb-related-desc">Принтер Canon не берет бумагу? Разбор причин засорения, износа роликов и алгоритм самостоятельной чи</span>
+            </a><a href="/articles/k/ka/kak-sbrosit-printer-canon-mg2540s.html" class="pb-related-card">
+                <span class="pb-related-title">Сброс принтера Canon MG2540S: инструкция по обнулению счетчиков</span>
+                <span class="pb-related-desc">Полное руководство как сбросить принтер Canon MG2540S до заводских настроек и обнулить сервисный сче</span>
+            </a><a href="/articles/c/ca/canon-oshibka-u052-kak-ispravit.html" class="pb-related-card">
+                <span class="pb-related-title">Ошибка U052 на принтере Canon: причины и способы устранения</span>
+                <span class="pb-related-desc">Принтер Canon показывает ошибку U052? Узнайте, как диагностировать проблему с донором чернил и самос</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

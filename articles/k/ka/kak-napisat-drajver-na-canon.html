@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как написать драйвер на Canon: гайд по разработке UFR II и BRN — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговое руководство по созданию драйверов для принтеров Canon. Обзор SDK, архитектуры UFR II, инструменты PPD и отладка.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-napisat-drajver-na-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как написать драйвер на Canon: гайд по разработке UFR II и BRN">
+    <meta property="og:description" content="Пошаговое руководство по созданию драйверов для принтеров Canon. Обзор SDK, архитектуры UFR II, инструменты PPD и отладка.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как написать драйвер на Canon: гайд по разработке UFR II и BRN</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-в-архитектуру-драйверов-canon">Введение в архитектуру драйверов Canon</a></li><li><a href="#выбор-инструментов-и-sdk">Выбор инструментов и SDK</a></li><li><a href="#работа-с-языками-описания-страниц">Работа с языками описания страниц</a></li><li><a href="#создание-ppd-файлов-и-конфигурация">Создание PPD-файлов и конфигурация</a></li><li><a href="#таблица-совместимости-протоколов">Таблица совместимости протоколов</a></li><li><a href="#тестирование-и-отладка">Тестирование и отладка</a></li><li><a href="#интеграция-с-операционной-системой">Интеграция с операционной системой</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-napechatat-foto-10kh15-na-printere-canon-g2415.html">Как напечатать фото 10х15 на принтере Canon G2415: Полная инструкция</a></li><li><a href="/articles/w/wh/what-means-canon.html">Что означает Canon: Значение бренда, история и типы устройств</a></li><li><a href="/articles/k/ka/kak-polzovatsya-printerom-canon-ir-2016j.html">Как пользоваться принтером Canon iR 2016j: Полная инструкция по настройке</a></li><li><a href="/articles/k/ka/kak-sdelat-glubokuyu-ochistku-printera-canon-cherez-kompyuter.html">Как сделать глубокую очистку принтера Canon через компьютер: Инструкция</a></li><li><a href="/articles/c/ca/canon-pixma-mg3640-pochemu-ne-pechataet.html">Canon Pixma MG3640 не печатает: 7 причин и пошаговое решение</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полный гайд: как написать драйвер на Canon</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-в-архитектуру-драйверов-canon">Введение в архитектуру драйверов Canon</a></li><li><a href="#выбор-инструментов-и-sdk">Выбор инструментов и SDK</a></li><li><a href="#работа-с-языками-описания-страниц">Работа с языками описания страниц</a></li><li><a href="#создание-ppd-файлов-и-конфигурация">Создание PPD-файлов и конфигурация</a></li><li><a href="#таблица-совместимости-протоколов">Таблица совместимости протоколов</a></li><li><a href="#тестирование-и-отладка">Тестирование и отладка</a></li><li><a href="#интеграция-с-операционной-системой">Интеграция с операционной системой</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-в-архитектуру-драйверов-canon">Введение в архитектуру драйверов Canon</h2>
+<p>Разработка драйвера для оборудования <em>Canon</em> — это сложный инженерный процесс, требующий глубокого понимания протоколов обмена данными и внутреннего устройства языков описания страниц. В отличие от простых универсальных решений, создание собственного <strong>драйвера</strong> позволяет оптимизировать скорость печати, снизить нагрузку на процессор и реализовать специфические функции, недоступные в стандартных поставках.</p>
+<p>Основой большинства современных устройств <em>Canon</em> является технология <strong>UFR II</strong> (Ultra Fast Renderer 2), которая выполняет рендеринг страницы непосредственно на компьютере пользователя перед отправкой на устройство. Это означает, что ваш код должен генерировать специфический поток данных, который принтер способен интерпретировать без дополнительных вычислений. Понимание того, как <strong>спулер</strong> обрабатывает данные, критично для успешной реализации.</p>
+
+<h2 id="выбор-инструментов-и-sdk">Выбор инструментов и SDK</h2>
+<p>Для начала работы вам необходимо получить доступ к профессиональным утилитам, которые предоставляет производитель. Компания <em>Canon</em> выпускает специальный пакет <strong>UFR II/UFRII LT SDK</strong>, содержащий библиотеки, заголовочные файлы и примеры кода на языках C/C++. Без этого набора написать корректный драйвер практически невозможно, так как закрытые протоколы не публикуются в открытом доступе для широкой аудитории.</p>
+<p>Вам потребуется интегрировать библиотеки рендеринга в вашу среду разработки, будь то Visual Studio или более кроссплатформенные решения. Важно отметить, что <strong>архитектура драйвера</strong> тесно связана с операционной системой, поэтому для Windows используются специфические API GDI или XPS, а для Linux — CUPS и PPD-файлы. Ошибки в выборе версии SDK могут привести к несовместимости с новыми моделями.</p>
+<blockquote>⚠️ Внимание: Лицензионное соглашение SDK строго ограничивает использование полученных знаний для создания коммерческих продуктов без письменного разрешения компании <em>Canon</em>. Нарушение этого пункта ведет к юридическим последствиям и блокировке доступа к обновлениям.</blockquote>
+<p>Помимо SDK, необходимо подготовить окружение для отладки. Вам понадобится виртуальная машина или тестовый стенд с установленной целевой ОС, а также доступ к физическому устройству <em>Canon</em> или эмулятору, если такой предусмотрен в документации. Убедитесь, что у вас есть права администратора для установки демо-драйверов и перехвата системных вызовов.</p>
+<div class="pb-poll" id="poll-f0dc1a68"><div class="pb-poll-question">📊 Какой язык программирования вы используете для разработки</div><div class="pb-poll-option" data-poll="f0dc1a68" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Python</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f0dc1a68" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">C++</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f0dc1a68" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">C#</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f0dc1a68" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Java</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f0dc1a68" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другой</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="работа-с-языками-описания-страниц">Работа с языками описания страниц</h2>
+<p>Сердцем любого принтерного драйвера является генератор данных. В случае с <em>Canon</em> это не просто перевод кода в bitmap, а создание сложной структуры команд. Вы должны реализовать модуль, который преобразует графические примитивы в команды <strong>PCL</strong> или проприетарный формат <strong>UFR II</strong>. Это требует знания синтаксиса и правил компрессии данных, чтобы избежать переполнения буфера принтера.</p>
+<p>Особое внимание уделите работе со шрифтами и цветами. Драйвер должен корректно обрабатывать вложения шрифтов, если они отсутствуют в памяти устройства, и управлять цветовым профилем <strong>ICC</strong> для точной передачи оттенков. Ошибки здесь часто проявляются в виде артефактов на печати или неправильного отображения текста.</p>
+<ul>
+<li>🖨️ Изучите спецификацию <strong>UFR II Command Language</strong> для понимания структуры пакетов данных.</li>
+<li>🎨 Реализуйте конвертацию цветовых пространств RGB/CMYK внутри драйвера.</li>
+<li>🔤 Настройте обработку embedded font и системных гарнитур.</li>
+</ul>
+<p>Иногда возникает необходимость поддержки устаревших протоколов, если вы разрабатываете софт для специализированного оборудования. В таких случаях может потребоваться реализация эмуляции <strong>PostScript</strong> или <strong>PCL 6</strong>, хотя нативная поддержка <em>Canon</em> обычно лучше оптимизирована. Не забудьте проверить совместимость с различными версиями прошивок принтеров.</p>
+<details class="pb-accordion"><summary>Детали о структуре пакета UFR II</summary><div class="pb-accordion-body"><p>Пакет UFR II состоит из заголовка, указывающего тип команды, и тела, содержащего данные изображения или инструкции по управлению механизмом. Заголовок всегда начинается с байта 0xFF, за которым следует идентификатор команды и длина данных.</p></div></details>
+
+<h2 id="создание-ppd-файлов-и-конфигурация">Создание PPD-файлов и конфигурация</h2>
+<p>Для корректной работы в среде <strong>CUPS</strong> (Linux, macOS) или при использовании <em>Canon</em> Printer Driver в Windows, критически важен правильно составленный <strong>PPD</strong> (PostScript Printer Description) файл. Этот текст содержит описание возможностей устройства, разрешения, типы бумаги и доступные опции. Ошибка в синтаксисе PPD приведет к тому, что принтер не будет виден в системе или не сможет выполнять сложные задания.</p>
+<p>Вам необходимо описать все аппаратные модули, установленные в устройство: лотки, финишеры, дыроколы. Это делается через секции <code>*OpenUI</code> и <code>*CloseUI</code> в файле конфигурации. Отсутствие описания для опционального модуля приведет к тому, что пользователь не сможет выбрать его при отправке задания, даже если он физически присутствует.</p>
+<pre><code>*OpenUI *PageSize/Media Size: PickOne
+<p>*DefaultPageSize: A4</p>
+<p>*PageSize A4/A4: "<</code><code>PageSize [595 842]>> setpagedevice"</code></p>
+<p>```</p>
+<p>Ручное редактирование PPD файлов часто вызывает трудности, поэтому рекомендуется использовать инструменты генерации, входящие в состав SDK. Однако понимание структуры файла необходимо для отладки ошибок парсинга. Если драйвер не видит настройки двусторонней печати, скорее всего, проблема именно в секции <strong>Duplex</strong> внутри PPD.</p>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка PPD файла</h4><label class="check-item"><input type="checkbox"><span>Синтаксис заголовков корректен</span></label><label class="check-item"><input type="checkbox"><span>Описаны все лотки бумаги</span></label><label class="check-item"><input type="checkbox"><span>Указаны поддерживаемые разрешения</span></label><label class="check-item"><input type="checkbox"><span>Прописаны опции финишера</span></label><label class="check-item"><input type="checkbox"><span>Нет дубликатов опций</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="таблица-совместимости-протоколов">Таблица совместимости протоколов</h2>
+<p>При разработке важно учитывать, какие протоколы поддерживают разные серии устройств. Ниже приведена сводная таблица основных технологий, используемых в продукции <em>Canon</em> за последнее десятилетие.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Протокол</th>
+<th>Версия</th>
+<th>Поддержка в SDK</th>
+<th>Применение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UFR II</td>
+<td>3.0+</td>
+<td>Полная</td>
+<td>Современные офисные МФУ</td>
+</tr>
+<tr>
+<td>UFR II LT</td>
+<td>2.0</td>
+<td>Лимитированная</td>
+<td>Персональные принтеры</td>
+</tr>
+<tr>
+<td>BRN</td>
+<td>1.5</td>
+<td>Базовая</td>
+<td>Бюджетные модели</td>
+</tr>
+<tr>
+<td>PostScript 3</td>
+<td>3017</td>
+<td>Частичная</td>
+<td>Гибридные устройства</td>
+</tr>
+<tr>
+<td>PCL 6</td>
+<td>Enhanced</td>
+<td>Эмуляция</td>
+<td>Совместимость со старым ПО</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>⚠️ Внимание: Версии протоколов могут меняться с выходом новых прошивок для устройств. Всегда сверяйте текущие спецификации в официальном центре поддержки разработчиков перед запуском проекта.</blockquote>
+<p>Использование устаревших протоколов может привести к потере функциональности, такой как работа с высокими разрешениями или сложной версткой. <strong>Оптимизация</strong> драйвера под конкретный протокол позволяет добиться максимальной скорости печати, но требует тщательного тестирования на каждом этапе разработки.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Правильный выбор протокола UFR II или BRN определяет не только скорость работы, но и стабильность взаимодействия с аппаратной частью принтера Canon.</p></aside>
+
+<h2 id="тестирование-и-отладка">Тестирование и отладка</h2>
+<p>Процесс тестирования драйвера <strong>Canon</strong> включает в себя проверку на стабильность при больших нагрузках. Вам необходимо создать скрипты, которые будут генерировать массовые задания печати, включая сложные графические документы и текстовые массивы. Это поможет выявить утечки памяти в коде драйвера и ошибки в обработке буферов.</p>
+<p>Используйте утилиты логирования, встроенные в ОС или предоставляемые SDK, для анализа передаваемых данных. Если принтер отображает ошибку "Data Overflow", это часто указывает на то, что драйвер отправляет данные быстрее, чем принтер может их обработать, или использует неверный формат пакетов. <strong>Логирование</strong> трафика поможет найти точку разрыва.</p>
+<p>Не забывайте тестировать работу драйвера при прерывании соединения. Что произойдет, если отключить USB-кабель в момент печати? Драйвер должен корректно обработать ошибку и предложить пользователю восстановить соединение, не зависая и не блокируя очередь печати.</p>
+<ul>
+<li>🧪 Проведите стресс-тест с печатью 1000+ страниц подряд.</li>
+<li>🔌 Проверьте реакцию на отключение кабеля и перезагрузку принтера.</li>
+<li>🐞 Отладьте работу с различными разрешениями и глубинами цвета.</li>
+</ul>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для ускорения отладки настройте сохранение логов драйвера в текстовый файл с отметкой времени, чтобы быстро находить последовательность команд перед сбоем.</p></aside>
+
+<h2 id="интеграция-с-операционной-системой">Интеграция с операционной системой</h2>
+<p>После успешной отладки необходимо упаковать драйвер в установочный пакет, совместимый с целевой ОС. Для Windows это может быть MSI с цифровым подписанным сертификатом, чтобы избежать предупреждений безопасности. В Linux пакеты часто собираются в формате .deb или .rpm, следуя стандартам дистрибутива.</p>
+<p>Важно реализовать механизм автоматического обнаружения устройства. Современные ОС требуют, чтобы драйвер правильно регистрировался в системе устройств и предоставлял корректные описания для интерфейса управления. Ошибки в <strong>реестре</strong> или системных вызовах могут привести к тому, что система не увидит принтер, даже если он подключен физически.</p>
+<p>Рассмотрите возможность создания кроссплатформенного решения, если ваша цель — поддержка нескольких ОС. Однако помните, что <strong>архитектура</strong> драйверов для Windows и Linux существенно различается, и единый код ядра не всегда возможен без использования специфических обвязок.</p>
+<blockquote>⚠️ Внимание: Требования к цифровой подписи драйверов ужесточаются с каждым годом. Убедитесь, что ваш код соответствует последним стандартам безопасности (WHQL для Windows), иначе система заблокирует загрузку модуля.</blockquote>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Корректная подпись и регистрация драйвера в системе — это финальный барьер, без преодоления которого установщик не сможет развернуть компоненты на компьютере пользователя.</p></aside>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+<details>
+<summary>Сколько времени нужно, чтобы написать драйвер для Canon?</summary>
+<p>Время разработки зависит от сложности задачи. Для базового драйвера, поддерживающего только печать текста, может хватить 2-3 недель. Полноценный драйвер с поддержкой всех аппаратных функций, сканирования и сетевых протоколов может занимать от 3 до 6 месяцев активной работы команды.</p>
+</details>
+<details>
+<summary>Нужен ли доступ к исходному коду принтера?</summary>
+<p>Нет, вам не нужен код самого принтера. Достаточно получить доступ к документированному SDK (Software Development Kit) от производителя, который содержит библиотеки и примеры для создания драйвера, работающего на стороне хоста.</p>
+</details>
+<details>
+<summary>Можно ли использовать драйвер Canon на Linux без официального SDK?</summary>
+<p>Существуют открытые драйверы (например, CUPS), но они часто имеют ограниченный функционал. Для доступа ко всем возможностям устройства, таким как управление лотками или специальные режимы печати, использование официального SDK <em>Canon</em> является предпочтительным и более надежным решением.</p>
+</details>
+<details>
+<summary>Что делать, если драйвер выдает ошибку рендеринга?</summary>
+<p>Проверьте корректность переданных данных в логах. Часто проблема кроется в неверном формате изображения или превышении допустимого размера страницы для конкретного протокола. Сравните вывод с эталонным файлом из SDK.</p>
+</details>
+<details>
+<summary>Какой язык программирования лучше выбрать для драйвера?</summary>
+<p>Для Windows традиционно используется C/C++ из-за высокой производительности и доступа к API системы. Для кроссплатформенных решений также популярны C++ с использованием библиотек Qt, а для скриптовых частей настройки могут использоваться Python или Shell.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-napechatat-foto-10kh15-na-printere-canon-g2415.html" class="pb-related-card">
+                <span class="pb-related-title">Как напечатать фото 10х15 на принтере Canon G2415: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по печати фотографий 10х15 на принтере Canon G2415. Настройки драйвера, выбор </span>
+            </a><a href="/articles/w/wh/what-means-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Что означает Canon: Значение бренда, история и типы устройств</span>
+                <span class="pb-related-desc">Узнайте, что значит слово Canon в контексте фототехники и оргтехники. Разбор истории бренда, значени</span>
+            </a><a href="/articles/k/ka/kak-polzovatsya-printerom-canon-ir-2016j.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться принтером Canon iR 2016j: Полная инструкция по настройке</span>
+                <span class="pb-related-desc">Руководство по эксплуатации МФУ Canon imageRUNNER 2016j. Настройка сети, управление панелями, устран</span>
+            </a><a href="/articles/k/ka/kak-sdelat-glubokuyu-ochistku-printera-canon-cherez-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать глубокую очистку принтера Canon через компьютер: Инструкция</span>
+                <span class="pb-related-desc">Полное руководство по запуску глубокой очистки дюз принтеров Canon через утилиту Inkjet Printer Util</span>
+            </a><a href="/articles/c/ca/canon-pixma-mg3640-pochemu-ne-pechataet.html" class="pb-related-card">
+                <span class="pb-related-title">Canon Pixma MG3640 не печатает: 7 причин и пошаговое решение</span>
+                <span class="pb-related-desc">Принтер Canon Pixma MG3640 отказывается работать? Разбираем причины: от пустых картриджей до сбоев д</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-canon-pixma-mg3600.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon Pixma MG3600: Полная инструкция по Wi-Fi и USB</span>
+                <span class="pb-related-desc">Пошаговое руководство: как быстро настроить принтер Canon Pixma MG3600 через Wi-Fi Direct, USB или м</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

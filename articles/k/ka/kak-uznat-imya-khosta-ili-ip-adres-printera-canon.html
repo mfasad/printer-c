@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как узнать IP-адрес и имя хоста принтера Canon: полное руководство — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция, как найти IP-адрес и имя хоста на принтерах Canon. Методы через дисплей, меню и утилиту Remote UI для любой модели.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-uznat-imya-khosta-ili-ip-adres-printera-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как узнать IP-адрес и имя хоста принтера Canon: полное руководство">
+    <meta property="og:description" content="Пошаговая инструкция, как найти IP-адрес и имя хоста на принтерах Canon. Методы через дисплей, меню и утилиту Remote UI для любой модели.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как узнать IP-адрес и имя хоста принтера Canon: полное руководство</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#вывод-данных-через-меню-настроек-на-дисплее-устройства">Вывод данных через меню настроек на дисплее устройства</a></li><li><a href="#печать-отчета-о-конфигурации-сети">Печать отчета о конфигурации сети</a></li><li><a href="#использование-утилиты-canon-remote-ui">Использование утилиты Canon Remote UI</a></li><li><a href="#проверка-через-командную-строку-и-утилиты-поиска">Проверка через командную строку и утилиты поиска</a></li><li><a href="#таблица-типовых-путей-к-настройкам-в-популярных-сериях">Таблица типовых путей к настройкам в популярных сериях</a></li><li><a href="#решение-проблем-с-dhcp-и-статическими-адресами">Решение проблем с DHCP и статическими адресами</a></li><li><a href="#частые-ошибки-при-настройке-сети">Частые ошибки при настройке сети</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-sbrosit-nastrojki-printera-canon-mg3140.html">Как сбросить настройки принтера Canon MG3140: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-ustanovit-drajver-na-printer-canon-lbp-1120-dlya-windows-10-64-bit.html">Установка драйвера Canon LBP 1120 на Windows 10 64 bit: Пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-vstavit-kartridzhi-v-printer-kenon-piksma.html">Как вставить картриджи в принтер Canon Pixma: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kakoj-printer-luchshe-hp-ili-canon-strujnyj-tsvetnoj.html">Какой струйный принтер лучше: HP или Canon — честное сравнение</a></li><li><a href="/articles/c/ca/canon-mp250-kak-otklyuchit-proverku-chernil.html">Как отключить проверку чернил Canon MP250: полное руководство</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как узнать имя хоста или IP-адрес принтера Canon</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#вывод-данных-через-меню-настроек-на-дисплее-устройства">Вывод данных через меню настроек на дисплее устройства</a></li><li><a href="#печать-отчета-о-конфигурации-сети">Печать отчета о конфигурации сети</a></li><li><a href="#использование-утилиты-canon-remote-ui">Использование утилиты Canon Remote UI</a></li><li><a href="#проверка-через-командную-строку-и-утилиты-поиска">Проверка через командную строку и утилиты поиска</a></li><li><a href="#таблица-типовых-путей-к-настройкам-в-популярных-сериях">Таблица типовых путей к настройкам в популярных сериях</a></li><li><a href="#решение-проблем-с-dhcp-и-статическими-адресами">Решение проблем с DHCP и статическими адресами</a></li><li><a href="#частые-ошибки-при-настройке-сети">Частые ошибки при настройке сети</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Сетевая идентификация является фундаментом для бесперебойной работы офисной техники. Без корректного <strong>IP-адреса</strong> или <strong>имени хоста</strong> компьютер не сможет установить соединение с принтером, что приведет к остановке печати. Пользователи часто сталкиваются с ситуацией, когда драйверы установлены, но устройство не отвечает на запросы из сети. В таких случаях критически важно проверить сетевые настройки непосредственно на самом аппаратном обеспечении.</p>
+
+<p>Процедура поиска данных зависит от конкретной модели вашего <em>Canon</em> и типа интерфейса, который используется. Современные устройства серии <em>imageRUNNER</em> или <em>PIXMA</em> имеют развитые графические интерфейсы, позволяющие быстро получить информацию, в то время как старые модели могут требовать ввода специальных комбинаций клавиш. Мы разберем все доступные способы, чтобы вы могли выбрать наиболее подходящий для вашей ситуации.</p>
+
+<h2 id="вывод-данных-через-меню-настроек-на-дисплее-устройства">Вывод данных через меню настроек на дисплее устройства</h2>
+
+<p>Самый прямой и надежный способ получить информацию о сетевых параметрах — использовать встроенный дисплей самого принтера. Это исключает необходимость подключения дополнительных программ или поиска устройства в сети. Для начала необходимо перейти в главное меню, нажав кнопку <code>Settings</code> или иконку гаечного ключа на сенсорном экране.</p>
+
+<p>Далее нужно найти раздел, отвечающий за сетевые соединения. В большинстве моделей <em>Canon</em> он называется <code>Network</code> или <code>LAN</code>. После входа в этот раздел следует выбрать пункт <code>Network Settings</code> или <code>TCP/IP Settings</code>. Именно здесь хранятся текущие данные о <strong>IPv4-адресе</strong> и имени узла.</p>
+
+<p>Обратите внимание, что на некоторых моделях информация может быть скрыта в подменю. Если вы видите список протоколов, выберите <code>IPv4</code>, чтобы увидеть конкретные цифры адресации. Также стоит проверить статус DHCP, чтобы понять, назначен ли адрес автоматически или прописан вручную.</p>
+
+<blockquote>⚠️ Внимание: Если на дисплее отображается адрес <code>0.0.0.0</code> или <code>169.254.x.x</code>, это означает, что принтер не смог получить корректный IP от роутера. Необходимо проверить физическое подключение кабеля или настройки Wi-Fi.</blockquote>
+
+<h2 id="печать-отчета-о-конфигурации-сети">Печать отчета о конфигурации сети</h2>
+
+<p>Если сенсорный экран поврежден или отображает некорректные символы, отличным решением будет печать отчета о конфигурации. Этот документ содержит исчерпывающую информацию о всех параметрах устройства, включая <strong>MAC-адрес</strong>, <strong>IP-адрес</strong> и версию прошивки. Это особенно полезно при первой настройке или замене сетевого контроллера.</p>
+
+<p>Для генерации отчета перейдите в раздел <code>Device Settings</code> (Настройки устройства) и выберите пункт <code>Print Reports</code> (Печать отчетов). В списке доступных форматов найдите <code>Network Setting</code> или <code>Network Status</code>. Нажмите <code>Start</code>, и принтер выдаст лист с подробными техническими данными.</p>
+
+<p>На полученном листе ищите строку <code>IP Address</code> и <code>Host Name</code>. Эти данные можно использовать для ручной настройки драйвера на компьютере или для входа в веб-интерфейс управления. Физический носитель информации удобен тем, что его можно передать системному администратору для удаленной диагностики без необходимости перепечатки.</p>
+
+<div class="pb-poll" id="poll-f5ca5155"><div class="pb-poll-question">📊 Как часто вы меняете IP-адрес принтера?</div><div class="pb-poll-option" data-poll="f5ca5155" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Никогда, он статический</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f5ca5155" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Редко, только при сбоях</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f5ca5155" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Часто, при переездах</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f5ca5155" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, как это сделать</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="использование-утилиты-canon-remote-ui">Использование утилиты Canon Remote UI</h2>
+
+<p>Для продвинутого управления устройством <em>Canon</em> отлично подходит встроенный веб-сервер, доступ к которому осуществляется через браузер. Инструмент <code>Remote UI</code> позволяет управлять принтером так, как если бы вы стояли перед его дисплеем. Это идеальный способ проверить <strong>имя хоста</strong> и изменить сетевые настройки удаленно.</p>
+
+<p>Чтобы открыть интерфейс, необходимо ввести IP-адрес принтера в адресную строку браузера. Если адрес неизвестен, утилита <code>Canon IJ Network Tool</code> поможет его найти, просканировав локальную подсеть. После загрузки страницы перейдите в раздел <code>Device Settings</code> и выберите <code>Network</code>.</p>
+
+<p>В открывшемся меню вы увидите полную картину сетевой конфигурации. Здесь можно не только посмотреть текущий <strong>DNS</strong> и <strong>Gateway</strong>, но и изменить имя хоста, если оно конфликтует с другими устройствами. Интерфейс Remote UI поддерживает несколько языков и часто обновляется для новых моделей.</p>
+
+<p>Стоит отметить, что для доступа к полному функционалу может потребоваться авторизация. Стандартное имя пользователя — <code>admin</code>, а пароль часто совпадает с серийным номером устройства или задается при первой настройке.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к работе с Remote UI</h4><label class="check-item"><input type="checkbox"><span>Узнать текущий IP-адрес</span></label><label class="check-item"><input type="checkbox"><span>Подключить ПК к той же сети</span></label><label class="check-item"><input type="checkbox"><span>Открыть браузер</span></label><label class="check-item"><input type="checkbox"><span>Ввести адрес в строку</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="проверка-через-командную-строку-и-утилиты-поиска">Проверка через командную строку и утилиты поиска</h2>
+
+<p>Иногда проще найти устройство через компьютер, чем искать информацию на самом принтере. Для этого используются стандартные сетевые утилиты. В операционной системе Windows можно воспользоваться командной строкой для проверки доступности узла по <strong>ping</strong>, если вы знаете его имя хоста.</p>
+
+<p>Введите команду <pre><code>ping имя-хоста</code></pre> или <pre><code>ping IP-адрес</code></pre>. Если устройство откликается, вы увидите время ответа в миллисекундах. Это подтвердит, что принтер подключен к сети и готов к работе. Если отзыв отсутствует, проблема может быть в кабеле или настройках роутера.</p>
+
+<p>Существуют также специализированные утилиты, такие как <code>Advanced IP Scanner</code> или фирменный <code>Canon IJ Network Tool</code>. Они автоматически просматривают все устройства в локальной сети и выдают список с их IP-адресами, именами и производителем. Это самый быстрый способ найти потерявшееся устройство в большом офисе.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если вы используете статический IP-адрес, обязательно добавьте его в исключения брандмауэра Windows, чтобы антивирус не блокировал соединения с принтером.</p></aside>
+
+<h2 id="таблица-типовых-путей-к-настройкам-в-популярных-сериях">Таблица типовых путей к настройкам в популярных сериях</h2>
+
+<p>Меню разных серий принтеров <em>Canon</em> может отличаться, что создает путаницу у пользователей. Для удобства мы собрали основные пути к сетевым настройкам в таблице. Это поможет быстрее сориентироваться в интерфейсе вашего конкретного устройства.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Серия принтера</th>
+<th>Путь к IP-адресу</th>
+<th>Комбинация кнопок (если нет меню)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>PIXMA</em> (ные)</td>
+<td><code>Setup</code> → <code>Device Settings</code> → <code>Lan Settings</code></td>
+<td>Удержание <code>Resume</code> при включении</td>
+</tr>
+<tr>
+<td><em>imageRUNNER</em> (Офисные)</td>
+<td><code>Settings</code> → <code>Network</code> → <code>IPv4</code></td>
+<td>Нет (используется сенсор)</td>
+</tr>
+<tr>
+<td><em>imagePROGRAF</em> (Траффик)</td>
+<td><code>Setup</code> → <code>Network Settings</code> → <code>LAN Settings</code></td>
+<td>Нет (используется сенсор)</td>
+</tr>
+<tr>
+<td><em>MAXIFY</em> (МФУ)</td>
+<td><code>Menu</code> → <code>Wi-Fi Setup</code> → <code>LAN Settings</code></td>
+<td>Нет (используется сенсор)</td>
+</tr>
+</tbody>
+</table></div>
+
+<details class="pb-accordion"><summary>Что делать, если IP-адрес часто меняется?</summary><div class="pb-accordion-body"><p>Если вы используете DHCP, адрес может меняться при перезагрузке роутера. Для стабильной работы настройте резервирование адреса (Static Lease) в настройках вашего маршрутизатора, привязав IP к MAC-адресу принтера.</p></div></details>
+
+<h2 id="решение-проблем-с-dhcp-и-статическими-адресами">Решение проблем с DHCP и статическими адресами</h2>
+
+<p>Частой проблемой является нестабильность адреса при использовании динамической раздачи (DHCP). Если принтер получает новый IP после перезагрузки, драйвер на компьютере перестает видеть его, и печать блокируется. Чтобы этого избежать, рекомендуется настроить <strong>статический IP-адрес</strong> или зарезервировать текущий адрес в роутере.</p>
+
+<p>Для установки статического адреса зайдите в меню <code>TCP/IP Settings</code> и переключите режим с <code>Auto</code> на <code>Manual</code>. Введите адрес, который не используется другими устройствами в сети, подмаску и шлюз. Убедитесь, что введенные данные соответствуют вашей локальной сети.</p>
+
+<p>Также важно проверить, не конфликтует ли выбранное имя хоста с другим оборудованием. Уникальное имя хоста упрощает идентификацию устройства в сети с множеством принтеров. Если вы меняете имя, не используйте спецсимволы и пробелы, разрешены только латинские буквы и цифры.</p>
+
+<blockquote>⚠️ Внимание: При ручном назначении IP-адреса убедитесь, что вы знаете диапазон адресов, выдаваемых вашим роутером. Выберите адрес вне этого диапазона, чтобы избежать конфликта двух устройств с одинаковым IP.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Статический IP-адрес — обязательное условие для стабильной работы принтера в корпоративной сети или при наличии нескольких устройств печати.</p></aside>
+
+<h2 id="частые-ошибки-при-настройке-сети">Частые ошибки при настройке сети</h2>
+
+<p>Пользователи часто допускают ошибки при вводе данных, что приводит к невозможности печати. Самая распространенная проблема — неправильное введение маски подсети или шлюза. Даже одна неверная цифра сделает устройство недоступным для сети, хотя локальный канал будет работать.</p>
+
+<p>Другой частой ошибкой является игнорирование версии протокола. Некоторые старые драйверы могут не поддерживать <strong>IPv6</strong>, при этом принтер настроен только на него. В таком случае необходимо переключить устройство на <strong>IPv4</strong> или установить обновленные драйверы, поддерживающие новые стандарты.</p>
+
+<p>Иногда проблема кроется в безопасности сети. Брандмауэр антивируса или самого роутера может блокировать порты, используемые принтером для печати (обычно <code>9100</code>, <code>515</code>, <code>631</code>). Проверьте настройки фильтрации трафика, если устройство видно, но не печатает.</p>
+
+<blockquote>⚠️ Внимание: Не отключайте полностью защиту сети для доступа к принтеру. Достаточно создать исключение для IP-адреса устройства в настройках брандмауэра, сохранив безопасность остальных компьютеров.</blockquote>
+
+<details>
+<summary>Что делать, если я не могу найти меню Network?</summary>
+<p>Если вы не можете найти раздел сети в меню, проверьте, не включен ли режим энергосбережения или блокировки интерфейса. На некоторых моделях нужно сначала нажать кнопку <code>Function</code> или <code>Menu</code>, чтобы открыть расширенные настройки. Также возможно, что сетевой модуль не установлен физически.</p>
+</details>
+
+<details>
+<summary>Можно ли узнать IP-адрес без включения принтера?</summary>
+<p>Нет, без включения питания принтера получить данные о его сетевом адресе невозможно. Устройство должно быть подключено к сети и пройти инициализацию. Исключение составляют случаи, когда данные были сохранены в отчете ранее или известны из конфигурации роутера.</p>
+</details>
+
+<details>
+<summary>Почему имя хоста может не отображаться?</summary>
+<p>Некоторые старые или бюджетные модели <em>Canon</em> могут не поддерживать отображение имени хоста, используя только IP-адрес для идентификации. В таких случаях используйте IP-адрес для настройки драйвера. Также имя может быть скрыто, если не установлена опция NetBIOS или DNS.</p>
+</details>
+
+<details>
+<summary>Как сбросить сетевые настройки к заводским?</summary>
+<p>Если все настройки запутаны, можно выполнить сброс. Для этого зайдите в <code>Device Settings</code> → <code>Reset</code> → <code>LAN Settings</code> или выберите <code>Factory Reset</code> в общих настройках. Будьте осторожны: это удалит все сохраненные Wi-Fi пароли и статические адреса.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-sbrosit-nastrojki-printera-canon-mg3140.html" class="pb-related-card">
+                <span class="pb-related-title">Как сбросить настройки принтера Canon MG3140: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по сбросу настроек Canon MG3140. Сброс счетчиков чернил, возврат к заводским п</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-drajver-na-printer-canon-lbp-1120-dlya-windows-10-64-bit.html" class="pb-related-card">
+                <span class="pb-related-title">Установка драйвера Canon LBP 1120 на Windows 10 64 bit: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Полная инструкция по установке драйверов для принтера Canon LBP 1120 на Windows 10 64 бит. Решение п</span>
+            </a><a href="/articles/k/ka/kak-vstavit-kartridzhi-v-printer-kenon-piksma.html" class="pb-related-card">
+                <span class="pb-related-title">Как вставить картриджи в принтер Canon Pixma: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробная инструкция по замене картриджей в принтерах Canon Pixma. Узнайте, как правильно установить</span>
+            </a><a href="/articles/k/ka/kakoj-printer-luchshe-hp-ili-canon-strujnyj-tsvetnoj.html" class="pb-related-card">
+                <span class="pb-related-title">Какой струйный принтер лучше: HP или Canon — честное сравнение</span>
+                <span class="pb-related-desc">Сравниваем струйные принтеры HP и Canon. Обзоры технологий, стоимости печати, качества фото и надежн</span>
+            </a><a href="/articles/c/ca/canon-mp250-kak-otklyuchit-proverku-chernil.html" class="pb-related-card">
+                <span class="pb-related-title">Как отключить проверку чернил Canon MP250: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по отключению контроля чернил на принтере Canon MP250. Методы сброса, использов</span>
+            </a><a href="/articles/k/ka/kak-na-printere-canon-g2415.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить и обслуживать принтер Canon G2415: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по подключению, заправке и устранению ошибок принтера Canon G2415. Узнайте, ка</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

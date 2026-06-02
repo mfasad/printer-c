@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как работает камера Canon: устройство, сенсор и автофокус — Кэнон Инфо</title>
+    <meta name="description" content="Подробный разбор принципов работы фотоаппаратов Canon. Узнайте о матрице, процессоре DIGIC, системе автофокусировки Dual Pixel и алгоритмах обработки снимков.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-rabotaet-kamera-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как работает камера Canon: устройство, сенсор и автофокус">
+    <meta property="og:description" content="Подробный разбор принципов работы фотоаппаратов Canon. Узнайте о матрице, процессоре DIGIC, системе автофокусировки Dual Pixel и алгоритмах обработки снимков.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/fotoapparaty-canon/">Фотоаппараты Canon</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как работает камера Canon: устройство, сенсор и автофокус</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#основы-работы-цифрового-фотоаппарата">Основы работы цифрового фотоаппарата</a></li><li><a href="#оптическая-система-и-механизм-затвора">Оптическая система и механизм затвора</a></li><li><a href="#датчик-изображения-и-технология-dual-pixel-cmos-af">Датчик изображения и технология Dual Pixel CMOS AF</a></li><li><a href="#процессор-digic-и-обработка-изображения">Процессор DIGIC и обработка изображения</a></li><li><a href="#система-стабилизации-и-управления-экспозицией">Система стабилизации и управления экспозицией</a></li><li><a href="#обработка-файлов-и-алгоритмы-изображения">Обработка файлов и алгоритмы изображения</a></li><li><a href="#интерфейсы-и-передача-данных">Интерфейсы и передача данных</a></li><li><a href="#faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-snimat-severnoe-siyanie-na-canon.html">Как снимать северное сияние на Canon: настройки, советы и секреты</a></li><li><a href="/articles/c/ch/chto-znachit-krasnaya-poloska-na-obektive-canon.html">Красная полоска на объективе Canon: значение, линейки и совместимость</a></li><li><a href="/articles/k/ke/kenon-450d-kak-polzovatsya.html">Как пользоваться Canon 450D: Полное руководство по настройке и съемке</a></li><li><a href="/articles/c/ch/chto-takoe-kit-v-fotoapparate-canon.html">Что такое Kit в фотоаппаратах Canon: полный разбор комплекта</a></li><li><a href="/articles/c/ch/chto-takoe-stm-v-obektive-canon.html">Что такое STM в объективах Canon: особенности и преимущества</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Архитектура и принципы работы фотоаппаратов Canon</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#основы-работы-цифрового-фотоаппарата">Основы работы цифрового фотоаппарата</a></li><li><a href="#оптическая-система-и-механизм-затвора">Оптическая система и механизм затвора</a></li><li><a href="#датчик-изображения-и-технология-dual-pixel-cmos-af">Датчик изображения и технология Dual Pixel CMOS AF</a></li><li><a href="#процессор-digic-и-обработка-изображения">Процессор DIGIC и обработка изображения</a></li><li><a href="#система-стабилизации-и-управления-экспозицией">Система стабилизации и управления экспозицией</a></li><li><a href="#обработка-файлов-и-алгоритмы-изображения">Обработка файлов и алгоритмы изображения</a></li><li><a href="#интерфейсы-и-передача-данных">Интерфейсы и передача данных</a></li><li><a href="#faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="основы-работы-цифрового-фотоаппарата">Основы работы цифрового фотоаппарата</h2>
+
+<p>В основе любого современного устройства от компании <em>Canon</em> лежит сложная цепочка взаимодействия оптических, механических и электронных компонентов. Когда вы нажимаете кнопку спуска затвора, происходит не просто фиксация изображения, а мгновенный запуск множества параллельных процессов, которые для человеческого глаза остаются невидимыми.</p>
+
+<p>Свет проходит через объектив, попадает на <strong>матрицу</strong>, где преобразуется в цифровой сигнал, после чего мощный процессор обрабатывает эти данные, создавая готовый файл. Понимание этой цепочки критически важно для правильного управления настройками экспозиции и получения качественного результата в любых условиях освещения.</p>
+
+<p>В отличие от пленочных камер, где химическая реакция была финальным этапом, в цифровых зеркальных и беззеркальных моделях <em>EOS</em> каждый пиксель матрицы мгновенно считывается и анализируется. Это позволяет системе мгновенно корректировать параметры съемки, предлагая пользователю интерактивный просмотр изображения на экране.</p>
+
+<h2 id="оптическая-система-и-механизм-затвора">Оптическая система и механизм затвора</h2>
+
+<p>Первый этап работы камеры — это управление световым потоком. Объектив собирает лучи света и фокусирует их на плоскости сенсора. В зеркальных моделях <em>Canon EOS</em> (например, серии <strong>90D</strong> или <em>5D Mark IV</em>) свет отражается от главного зеркала вверх в видоискатель, позволяя фотографу видеть реальную картину через объектив.</p>
+
+<p>В момент съемки зеркало поднимается, открывая путь свету к матрице. В этот же момент срабатывает <strong>механический затвор</em>, состоящий из двух шторок. Первая шторка открывает окно для света, а вторая закрывает его через заданное время. Именно выдержка определяет, сколько времени свет воздействует на сенсор.</p>
+
+<p>В беззеркальных камерах <em>R</em>-серии (таких как <em>R5</em> или <em>R6</strong>) механизм работает иначе. Здесь нет зеркала, и затвор может быть как механическим, так и <strong>электронным</strong>. При электронном спуске считывание данных происходит последовательно построчно, что позволяет достичь экстремально высоких скоростей съемки, недоступных механике.</p>
+
+<p>Важно учитывать, что при использовании электронных затворов может возникать эффект «скручивания» (rolling shutter), если объект движется очень быстро. Это физическое ограничение метода считывания.</p>
+
+<blockquote>⚠️ Внимание: Использование электронного затвора при съемке под искусственным освещением (например, в зале или на сцене) может привести к появлению полос на изображении из-за несоответствия частоты мерцания ламп и скорости считывания матрицы.</blockquote>
+
+<div class="pb-poll" id="poll-223928bc"><div class="pb-poll-question">📊 Какой тип затвора вы предпочитаете?</div><div class="pb-poll-option" data-poll="223928bc" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Механический</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="223928bc" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Электронный</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="223928bc" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Электронный приоритет</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="223928bc" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не важно</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="датчик-изображения-и-технология-dual-pixel-cmos-af">Датчик изображения и технология Dual Pixel CMOS AF</h2>
+
+<p>Сердцем любой камеры Canon является <strong>CMOS-сенсор</em>. Он состоит из миллионов фотодиодов, каждый из которых преобразует попадающий на него свет в электрический заряд. Однако уникальность технологий Canon заключается не только в качестве самого сенсора, но и в способе его считывания и фокусировки.</p>
+
+<p>Революционной разработкой стала технология <em>Dual Pixel CMOS AF</em>. В отличие от традиционных сенсоров, где часть пикселей отводится под фазовый автофокус, здесь каждый пиксель разделен на два фотодиода. Это позволяет использовать <strong>всю площадь матрицы</strong> для автофокусировки, обеспечивая невероятную скорость и точность наведения даже в режиме Live View и видеосъемки.</p>
+
+<p>Благодаря этой технологии система автофокусировки работает по принципу фазового детектирования, который раньше был доступен только в оптическом видоискателе зеркалок. Теперь же вы получаете мгновенное наведение фокуса, покрывающее почти 100% кадра.</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Технология</th>
+      <th>Принцип работы</th>
+      <th>Основное преимущество</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>Dual Pixel AF</em></td>
+      <td>Разделение пикселя на два фотодиода</td>
+      <td>Скорость и покрытие зоны фокусировки</td>
+    </tr>
+    <tr>
+      <td><em>Pixel Shift</em></td>
+      <td>Сдвиг сенсора на полпикселя</td>
+      <td>Резкое увеличение детализации</td>
+    </tr>
+    <tr>
+      <td><em>ISO Expansion</em></td>
+      <td>Электронное усиление сигнала</td>
+      <td>Съемка в экстремально темных условиях</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Для получения максимальной детализации в некоторых моделях доступна функция сдвига сенсора. Камера делает несколько снимков со смещением матрицы, объединяя их в один файл с удвоенным количеством цветовых данных.</p>
+
+<h2 id="процессор-digic-и-обработка-изображения">Процессор DIGIC и обработка изображения</h2>
+
+<p>После того как свет превратился в электрические импульсы, на сцену выходит мощный процессор <strong>DIGIC</strong> (Digital Image Core). Это «мозг» камеры, который отвечает за обработку сырых данных с матрицы. От версии процессора напрямую зависят скорость работы меню, буфер записи и возможности шумоподавления.</p>
+
+<p>Процессор выполняет сложнейшие математические вычисления: балансирует <strong>белый цвет</strong>, корректирует тона, снижает шумы и применяет резкость. В последних моделях серии <em>R3</em> и <em>R5</em> процессоры способны анализировать сцену в реальном времени, распознавая лица, глаза людей и животных, а также транспортные средства.</p>
+
+<p>Именно DIGIC управляет алгоритмами распознавания объектов. Он постоянно сканирует кадр, определяя, на чем именно нужно сфокусироваться. Если объект выходит из зоны фокуса или закрывается, система мгновенно пересчитывает параметры и обновляет данные.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Параметры, влияющие на работу процессора</h4><label class="check-item"><input type="checkbox"><span>Разрешение матрицы</span></label><label class="check-item"><input type="checkbox"><span>Чувствительность ISO</span></label><label class="check-item"><input type="checkbox"><span>Количество кадров в серийной съемке</span></label><label class="check-item"><input type="checkbox"><span>Тип файла (RAW/JPEG)</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Скорость обработки напрямую влияет на время между кадрами. Если процессор не успевает обработать данные, камера переходит в режим буферизации, и съемка замедляется до тех пор, пока свободное место в памяти не освободится.</p>
+
+<blockquote>⚠️ Внимание: При использовании формата RAW+JPEG с высоким разрешением и частотой серийной съемки процессор испытывает максимальную нагрузку, что может привести к перегреву корпуса при длительной работе без перерывов.</blockquote>
+
+<h2 id="система-стабилизации-и-управления-экспозицией">Система стабилизации и управления экспозицией</h2>
+
+<p>Стабилизация изображения в камерах Canon реализуется через два основных механизма: стабилизатор в самом объективе (<strong>IS</strong>) и сдвиг матрицы (<strong>IBIS</strong>). В беззеркальной системе <em>EOS R</strong> они часто работают совместно, обеспечивая до 8 стопов компенсации дрожания рук.</p>
+
+<p>Матрица подвешена на магнитных подвесках и может двигаться по осям X, Y и повороту. Датчики гироскопов фиксируют микро-движения рук фотографа и передают сигнал на процессор, который мгновенно компенсирует сдвиг, двигая сенсор в противоположную сторону.</p>
+
+<p>Управление экспозицией строится на анализе данных с <strong>светочувствительного сенсора</strong> (в зеркалках) или непосредственно с матрицы (в беззеркалках). Система оценивает яркость сцены и предлагает оптимальное сочетание выдержки, диафрагмы и ISO.</p>
+
+<p>Вы можете выбрать один из режимов съемки: от полностью автоматического, где камера принимает все решения, до ручного, где вы контролируете каждый параметр. Однако даже в ручном режиме система может подсказывать правильные настройки через видоискатель.</p>
+
+<details class="pb-accordion"><summary>Как работает стабилизация в кинематографическом режиме?</summary><div class="pb-accordion-body"><p>В режиме видео стабилизация часто переключается в режим «Активный», который дополнительно компонует кадр, обрезая края изображения для большей плавности движения.</p></div></details>
+
+<h2 id="обработка-файлов-и-алгоритмы-изображения">Обработка файлов и алгоритмы изображения</h2>
+
+<p>Финальный этап работы камеры — это формирование файла. В зависимости от выбора пользователя, данные могут сохраняться в формате <strong>JPEG</strong> или <strong>RAW</strong>.JPEG обрабатывается внутри камеры с применением всех настроек стиля изображения, тогда как RAW содержит «сырые» данные с минимальной обработкой.</p>
+
+<p>Алгоритмы Canon известны своей цветопередачей, особенно в тонах кожи. Процессор DIGIC использует сложные цветовые матрицы и карты, чтобы сделать оттенки естественными. Это достигается за счет предварительного анализа сцены и выбора оптимального профиля цвета.</p>
+
+<p>При съемке в RAW вы получаете максимальный контроль над изображением на этапе постобработки, сохраняя всю информацию о тенях и светах. JPEG же удобен для быстрой передачи и публикации, так как файл уже готов к использованию.</p>
+
+<p>Важно понимать, что даже при съемке в RAW камера применяет базовый профиль цвета, который можно изменить в настройках. Это влияет на то, как вы видите изображение на экране камеры сразу после съемки.</p>
+
+<ul>
+  <li>📷 <strong>RAW</strong> — максимальное качество и гибкость редактирования, большие объемы файлов.</li>
+  <li>🖼️ <strong>JPEG</em> — готовый к использованию файл, оптимизированный цвет и резкость.</li>
+  <li>📦 <strong>HEIF</em> — современный формат с высокой глубиной цвета (10 бит) и меньшим размером.</li>
+</ul>
+
+<h2 id="интерфейсы-и-передача-данных">Интерфейсы и передача данных</h2>
+
+<p>Современные камеры Canon оснащены мощными интерфейсами для передачи данных. Встроенный Wi-Fi и Bluetooth позволяют мгновенно переносить снимки на смартфон или компьютер. Технология <em>Bluetooth Low Energy</strong> постоянно поддерживает связь с устройством управления, не разряжая батарею.</p>
+
+<p>При передаче файлов используется протокол PTP или MTP, который позволяет камере распознаваться как съемный диск или медиа-устройство. Это упрощает импорт фотографий в программы для редактирования без необходимости использования карт-ридеров.</p>
+
+<p>Для профессиональной передачи данных в реальном времени используется разъем Ethernet или подключение через USB-C с функцией <strong>USB Tethering</em>. Это критически важно для репортажной и студийной съемки, где каждый кадр должен мгновенно попадать на сервер.</p>
+
+<p>Скорость передачи зависит от стандарта Wi-Fi (802.11ac или ax) и загруженности эфира. В некоторых условиях может потребоваться настройка статического IP-адреса для стабильного соединения.</p>
+
+<blockquote>⚠️ Внимание: При использовании функции дистанционного управления через приложение Canon Camera Connect убедитесь, что на телефоне отключен режим энергосбережения, так как это может прервать соединение.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для максимальной скорости передачи больших RAW-файлов используйте карту памяти формата CFexpress Type B и подключайте камеру к ПК через кабель USB-C 3.2 Gen 2.</p></aside>
+
+<h2 id="faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</h2>
+
+<details>
+  <summary>Почему камера Canon иногда фокусируется медленно?</summary>
+  <p>Скорость автофокуса зависит от яркости сцены, контрастности объекта и используемого объектива. В условиях низкой освещенности система может переключаться в режим «поиска» (hunting), пытаясь поймать фокус.</p>
+</details>
+
+<details>
+  <summary>В чем разница между оптическим и электронным видоискателем?</summary>
+  <p>Оптический видоискатель (в зеркалках) показывает реальную картинку через объектив без задержек, но не отображает экспозицию до нажатия спуска. Электронный (в беззеркалках) показывает изображение с матрицы в реальном времени, позволяя заранее увидеть результат настроек.</p>
+</details>
+
+<details>
+  <summary>Как работает режим «Ночная портретная съемка»?</summary>
+  <p>В этом режиме камера автоматически замедляет выдержку, чтобы захватить больше света от фона, и использует вспышку для подсветки переднего плана. Это позволяет сохранить эффект вечернего освещения, не размывая лицо модели.</p>
+</details>
+
+<details>
+  <summary>Можно ли использовать старые объективы EF на новых камерах R?</summary>
+  <p>Да, для этого существует адаптер <em>Mount Adapter EF-EOS R</em>. К нему можно подключить любой объектив системы EF, и он будет работать с полным функционалом автофокуса и стабилизации.</p>
+</details>
+
+<p>Понимание принципов работы вашей камеры позволяет выйти за пределы автоматических режимов и начать творить, используя все возможности устройства на 100%. Экспериментируйте с настройками и изучайте особенности вашего оборудования.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Современные камеры Canon — это сложные компьютеры, где скорость работы и качество снимков определяются балансом между работой матрицы, процессора DIGIC и алгоритмов искусственного интеллекта.</p></aside></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-snimat-severnoe-siyanie-na-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как снимать северное сияние на Canon: настройки, советы и секреты</span>
+                <span class="pb-related-desc">Полное руководство по фотосъемке полярного сияния на фотоаппараты Canon. Настройки экспозиции, фокус</span>
+            </a><a href="/articles/c/ch/chto-znachit-krasnaya-poloska-na-obektive-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Красная полоска на объективе Canon: значение, линейки и совместимость</span>
+                <span class="pb-related-desc">Что означает красная линия на объективе Canon? Разбор флагманской линейки L-series, совместимость с </span>
+            </a><a href="/articles/k/ke/kenon-450d-kak-polzovatsya.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться Canon 450D: Полное руководство по настройке и съемке</span>
+                <span class="pb-related-desc">Пошаговая инструкция по освоению зеркальной камеры Canon 450D. Разбор меню, режимов экспозиции, наст</span>
+            </a><a href="/articles/c/ch/chto-takoe-kit-v-fotoapparate-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Что такое Kit в фотоаппаратах Canon: полный разбор комплекта</span>
+                <span class="pb-related-desc">Узнайте, что входит в набор Canon Kit, чем он отличается от Body Only и стоит ли покупать объектив в</span>
+            </a><a href="/articles/c/ch/chto-takoe-stm-v-obektive-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Что такое STM в объективах Canon: особенности и преимущества</span>
+                <span class="pb-related-desc">Разбираем технологию STM в оптике Canon. Узнайте, чем отличаются шаговые моторы, как они влияют на в</span>
+            </a><a href="/articles/c/ca/canon-kak-podklyuchit-k-telefonu.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon к телефону: Полное руководство по Wi-Fi и Bluetooth</span>
+                <span class="pb-related-desc">Пошаговая инструкция, как подключить принтер или камеру Canon к смартфону. Настройка Canon PRINT, Wi</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

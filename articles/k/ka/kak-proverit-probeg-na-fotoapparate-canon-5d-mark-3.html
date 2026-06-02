@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как проверить пробег на Canon 5D Mark III: 5 способов с фото — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция, как узнать реальный пробег затвора Canon 5D Mark III через EXIF, EOS Info, Magic Lantern и сервисные меню. Сравнение точности методов + FAQ.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-proverit-probeg-na-fotoapparate-canon-5d-mark-3.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как проверить пробег на Canon 5D Mark III: 5 способов с фото">
+    <meta property="og:description" content="Пошаговая инструкция, как узнать реальный пробег затвора Canon 5D Mark III через EXIF, EOS Info, Magic Lantern и сервисные меню. Сравнение точности методов + FAQ.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/fotoapparaty-canon/">Фотоаппараты Canon</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как проверить пробег на Canon 5D Mark III: 5 способов с фото</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#1-проверка-пробега-через-exif-данные-самый-простой-способ">1. Проверка пробега через EXIF-данные (самый простой способ)</a></li><li><a href="#2-сервисное-меню-canon-5d-mark-iii-скрытые-данные">2. Сервисное меню Canon 5D Mark III: скрытые данные</a></li><li><a href="#3-использование-утилиты-eos-info">3. Использование утилиты EOS Info</a></li><li><a href="#4-пробег-через-magic-lantern-альтернативный-метод">4. Пробег через Magic Lantern: альтернативный метод</a></li><li><a href="#5-аппаратная-диагностика-когда-программные-методы-не-работают">5. Аппаратная диагностика: когда программные методы не работают</a></li><li><a href="#сравнение-методов-проверки-пробега-какой-выбрать">Сравнение методов проверки пробега: какой выбрать?</a></li><li><a href="#чек-лист-покупателя-бу-canon-5d-mark-iii">Чек-лист покупателя б/у Canon 5D Mark III</a></li><li><a href="#faq-частые-вопросы-о-пробеге-canon-5d-mark-iii">FAQ: Частые вопросы о пробеге Canon 5D Mark III</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ca/canon-1000d-kakogo-goda.html">Canon 1000D: год выпуска, характеристики и особенности модели</a></li><li><a href="/articles/k/ka/karty-pamyati-dlya-fotoapparata-canon-kakie-luchshe.html">Лучшие карты памяти для фотоаппаратов Canon: выбор формата и скорости</a></li><li><a href="/articles/c/ca/canon-60d-kakaya-karta-pamyati.html">Какая карта памяти для Canon 60D: типы, скорость и выбор</a></li><li><a href="/articles/k/ka/kak-otformatirovat-kartu-kameroj-canon.html">Как отформатировать карту памяти в камере Canon: Полный гайд</a></li><li><a href="/articles/k/ka/kakuyu-sd-kartu-vybrat-dlya-fotoapparata-canon.html">Какую SD карту выбрать для Canon: рейтинг надежности и скорости</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как проверить пробег затвора на Canon 5D Mark III: все работающие способы</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#1-проверка-пробега-через-exif-данные-самый-простой-способ">1. Проверка пробега через EXIF-данные (самый простой способ)</a></li><li><a href="#2-сервисное-меню-canon-5d-mark-iii-скрытые-данные">2. Сервисное меню Canon 5D Mark III: скрытые данные</a></li><li><a href="#3-использование-утилиты-eos-info">3. Использование утилиты EOS Info</a></li><li><a href="#4-пробег-через-magic-lantern-альтернативный-метод">4. Пробег через Magic Lantern: альтернативный метод</a></li><li><a href="#5-аппаратная-диагностика-когда-программные-методы-не-работают">5. Аппаратная диагностика: когда программные методы не работают</a></li><li><a href="#сравнение-методов-проверки-пробега-какой-выбрать">Сравнение методов проверки пробега: какой выбрать?</a></li><li><a href="#чек-лист-покупателя-бу-canon-5d-mark-iii">Чек-лист покупателя б/у Canon 5D Mark III</a></li><li><a href="#faq-частые-вопросы-о-пробеге-canon-5d-mark-iii">FAQ: Частые вопросы о пробеге Canon 5D Mark III</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Покупка б/у <em>Canon EOS 5D Mark III</em> — всегда риск нарваться на камеру с «скрученным» счётчиком срабатываний затвора. Продавцы нередко сбрасывают пробег программно или скрывают реальное состояние техники, а ресурс затвора у этой модели ограничен <strong>150–200 тысячами срабатываний</strong> (по данным <em>Canon</em>). Как же выяснить правду, если EXIF-данные очищены, а меню камеры ничего не показывает?</p>
+
+<p>В этой статье — <strong>5 проверенных методов</strong> проверки пробега, включая скрытые сервисные функции, анализ EXIF через сторонние утилиты и даже аппаратную диагностику. Мы сравним точность каждого способа, расскажем о подводных камнях (например, почему <mark>Magic Lantern может показывать заниженные значения после прошивки</mark>) и дадим чек-лист для покупки б/у камеры. Если вы планируете приобрести <em>5D Mark III</em> с рук — сохраните эту инструкцию!</p>
+
+<h2 id="1-проверка-пробега-через-exif-данные-самый-простой-способ">1. Проверка пробега через EXIF-данные (самый простой способ)</h2>
+
+<p>Первое, что стоит сделать — извлечь информацию о количестве срабатываний затвора из метаданных фотографий. Этот метод работает, если продавец не очищал EXIF или не сбрасывал счётчик программно. Для анализа подойдут любые RAW-файлы (<code>.CR2</code>) или JPEG, сделанные на проверяемой камере.</p>
+
+<p>Используйте одно из этих приложений:</p>
+<ul>
+  <li>🖥️ <strong>ExifTool</strong> (бесплатная консольная утилита для Windows/macOS/Linux) — показывает параметр <code>ShutterCount</code>.</li>
+  <li>📱 <strong>Exif Viewer by Fluntro</strong> (iOS) или <strong>Photo EXIF Editor</strong> (Android) — мобильные приложения с поддержкой <em>Canon</em>.</li>
+  <li>🌐 Онлайн-сервисы вроде <strong>Exif.info</strong> или <strong>Jeffrey’s Exif Viewer</strong> — загружаете фото и смотрите поле <code>Image Number</code>.</li>
+</ul>
+
+<p>Пример команды для <strong>ExifTool</strong>:</p>
+<pre><code>exiftool -ShutterCount IMG_1234.CR2</code></pre>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Если в EXIF отсутствует поле <code>ShutterCount</code>, это не всегда означает обнуление счётчика. Некоторые версии прошивки <em>5D Mark III</em> не сохраняют этот параметр в метаданные JPEG (только в RAW). Попробуйте проанализировать несколько файлов разных форматов.</blockquote>
+
+<p>Точность метода: <strong>90%</strong> (если EXIF не редактировался). Минус — требует наличия оригинальных фотографий с камеры, которых у продавца может не быть.</p>
+
+<div class="pb-poll" id="poll-eb216932"><div class="pb-poll-question">📊 Какой способ проверки пробега вы используете чаще?</div><div class="pb-poll-option" data-poll="eb216932" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Через EXIF</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="eb216932" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Сервисное меню</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="eb216932" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Magic Lantern</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="eb216932" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Специализированные утилиты</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="eb216932" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Не проверяю</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="2-сервисное-меню-canon-5d-mark-iii-скрытые-данные">2. Сервисное меню Canon 5D Mark III: скрытые данные</h2>
+
+<p><em>Canon 5D Mark III</em>, как и другие профессиональные камеры серии, хранит информацию о пробеге в сервисном меню. Этот метод не требует подключения к ПК, но нужно аккуратно следовать инструкции — неправильные действия могут сбросить настройки камеры.</p>
+
+<p>Пошаговая инструкция:</p>
+<ol>
+  <li>Включите камеру в режиме просмотра (<code>PLAY</code>).</li>
+  <li>Нажмите кнопки в последовательности:
+    <code>MENU → INFO → MENU → INFO → SET</code> (для прошивок до 1.2.3)
+<p>или</p>
+    <code>MENU → INFO → DISP → SET</code> (для прошивок 1.3.3 и новее).
+  </li>
+  <li>В открывшемся сервисном меню выберите пункт <code>Shutter count</code> или <code>ShutterActuations</code> (может называться по-разному).</li>
+  <li>Запишите значение — это и есть реальный пробег затвора.</li>
+</ol>
+
+<p>Если пункта со счётчиком нет, попробуйте альтернативный путь:</p>
+<ul>
+  <li>🔧 Перейдите в <code>Sensor Info</code> → <code>Shutter</code>.</li>
+  <li>📊 В некоторых версиях пробег отображается в разделе <code>System</code> → <code>Mecha</code>.</li>
+</ul>
+
+<blockquote>⚠️ <strong>Внимание:</strong> После выхода из сервисного меню камера может временно «зависнуть» (до 30 секунд). Не извлекайте аккумулятор и не нажимайте другие кнопки — дождитесь автоматической перезагрузки.</blockquote>
+
+
+<p>Зарядить аккумулятор минимум на 50%|</p>
+<p>Сделать резервную копию настроек камеры|</p>
+<p>Использовать оригинальную карту памяти|</p>
+<p>Не прерывать процесс до завершения--></p>
+
+<p>Точность метода: <strong>99%</strong> (показывает аппаратный счётчик, который нельзя сбросить программно). Минус — риск случайно изменить сервисные настройки.</p>
+
+<h2 id="3-использование-утилиты-eos-info">3. Использование утилиты EOS Info</h2>
+
+<p><strong>EOS Info</strong> — бесплатная программа для Windows, которая считывает данные прямо с камеры через USB. Она показывает не только пробег затвора, но и версию прошивки, серийный номер, время работы и даже температуру матрицы. Скачать её можно с официального сайта разработчика (поищите по запросу <code>EOS Info shutter count</code>).</p>
+
+<p>Инструкция:</p>
+<ol>
+  <li>Подключите <em>5D Mark III</em> к ПК через USB-кабель (режим <code>PTP</code>).</li>
+  <li>Запустите <strong>EOS Info</strong> и выберите вашу камеру в списке устройств.</li>
+  <li>В разделе <code>Shutter Count</code> будет отображено текущее значение.</li>
+</ol>
+
+<p>Преимущества метода:</p>
+<ul>
+  <li>📊 Показывает дополнительные параметры: количество включений камеры (<code>Power On Count</code>), время работы (<code>Power On Time</code>).</li>
+  <li>🔄 Работает даже если EXIF очищен.</li>
+  <li>🛠️ Поддерживает все версии прошивок <em>5D Mark III</em>.</li>
+</ul>
+
+<p>Недостатки:</p>
+<ul>
+  <li>⚠️ Требует установки драйверов <em>Canon EOS Utility</em> (если не установлены).</li>
+  <li>🖥️ Работает только на Windows (нет версий для macOS/Linux).</li>
+</ul>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если EOS Info не видит камеру, попробуйте переключить USB-режим в настройках <em>5D Mark III</em> на <code>PTP</code> (а не <code>MTP</code>) и использовать оригинальный кабель от Canon.</p></aside>
+
+<h2 id="4-пробег-через-magic-lantern-альтернативный-метод">4. Пробег через Magic Lantern: альтернативный метод</h2>
+
+<p><strong>Magic Lantern</strong> — популярная альтернативная прошивка для камер <em>Canon</em>, которая добавляет расширенные функции, включая отображение счётчика затвора. Если на <em>5D Mark III</em> уже установлен <strong>ML</strong>, пробег можно узнать прямо в меню:</p>
+
+<p>Шаги:</p>
+<ol>
+  <li>Включите камеру и зайдите в меню <strong>Magic Lantern</strong> (кнопка <code>TRASH</code>).</li>
+  <li>Перейдите в раздел <code>Debug</code> → <code>Shutter count</code>.</li>
+  <li>Запишите значение — оно обновляется в реальном времени.</li>
+</ol>
+
+<p>Особенности метода:</p>
+<ul>
+  <li>🔄 Показывает пробег даже если он был сброшен через сервисное меню (но только если <strong>ML</strong> установлен <em>до</em> сброса).</li>
+  <li>📉 Может отображать заниженные значения, если прошивка устанавливалась поверх обнулённого счётчика.</li>
+  <li>⚡ Требует наличия <strong>Magic Lantern</strong> (если его нет, установка ради проверки пробега нецелесообразна).</li>
+</ul>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Если продавец утверждает, что пробег сброшен «официально» в сервисном центре <em>Canon</em>, попросите документ с печатью. Без него такие заявления — повод усомниться в честности.</blockquote>
+
+<details class="pb-accordion"><summary>Что делать, если Magic Lantern показывает 0?</summary><div class="pb-accordion-body"><p>
+<p>Если счётчик в <strong>ML</strong> обнулен, но камера явно б/у, это может означать:</p>
+<p>1. Прошивка была установлена <em>после</em> программного сброса пробега.</p>
+<p>2. Использовалась модифицированная версия <strong>ML</strong> с отключённым счётчиком.</p>
+<p>3. Затвор заменялся, и счётчик сбросили в сервисе (редко, но бывает).</p>
+<p>В любом случае это повод проверить камеру другими методами или отказаться от покупки.</p></div></details></p>
+
+<h2 id="5-аппаратная-диагностика-когда-программные-методы-не-работают">5. Аппаратная диагностика: когда программные методы не работают</h2>
+
+<p>Если все вышеописанные способы показали противоречивые результаты (например, EXIF говорит о 50 тыс. срабатываний, а сервисное меню — о 120 тыс.), остаётся два варианта:</p>
+
+<ol>
+  <li><strong>Обратиться в сервисный центр <em>Canon</strong></strong> — они могут считать пробег через диагностическое оборудование (услуга платная, ~1–2 тыс. руб.).</li>
+  <li><strong>Визуальный осмотр затвора</em> — при большом пробеге (100+ тыс.) заметны:
+    <ul>
+      <li>🔍 Потертости на шторках затвора (видно при открытой крышке зеркала).</li>
+      <li>🎯 Неравномерный износ контактов синхронизации вспышки.</li>
+      <li>🔊 Повышенный шум при срабатывании (сравните с новой камерой).</li>
+    </ol>
+  </li>
+</ol>
+
+<p>Для визуальной проверки:</p>
+<ol>
+  <li>Снимите объектив и установите камеру в режим <code>Bulb</code> (выдержка «ручная»).</li>
+  <li>Нажмите кнопку спуска и удерживайте её — затвор откроется, и вы сможете осмотреть шторки через объективное гнездо.</li>
+  <li>Используйте фонарик и лупу для детального осмотра.</li>
+</ul>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Признак</th>
+      <th>Пробег ~50 тыс.</th>
+      <th>Пробег ~100 тыс.</th>
+      <th>Пробег ~150+ тыс.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Состояние шторок затвора</td>
+      <td>Чистые, без потёртостей</td>
+      <td>Лёгкие следы износа по краям</td>
+      <td>Видимые царапины, возможны заломы</td>
+    </tr>
+    <tr>
+      <td>Шум затвора</td>
+      <td>Ровный, без скрипов</td>
+      <td>Незначительное «хрустение»</td>
+      <td>Громкие щелчки, неравномерный ход</td>
+    </tr>
+    <tr>
+      <td>Синхронизация вспышки</td>
+      <td>Стабильная</td>
+      <td>Резкие сбои при высоких скоростях</td>
+      <td>Частые пропуски срабатывания</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Точность аппаратной диагностики: <strong>80%</em> (субъективна, зависит от опыта). Если сомневаетесь — лучше доверить осмотр профессионалу.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Сервисный центр <em>Canon</strong> — единственный способ получить 100% точный пробег, если программные методы конфликтуют. Однако услуга платная и занимает 1–3 дня.</p></aside>
+
+<h2 id="сравнение-методов-проверки-пробега-какой-выбрать">Сравнение методов проверки пробега: какой выбрать?</h2>
+
+<p>Каждый способ имеет свои плюсы и минусы. Ниже — сводная таблица для быстрого выбора:</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Метод</th>
+      <th>Точность</th>
+      <th>Сложность</th>
+      <th>Требуется</th>
+      <th>Подходит для</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>EXIF-данные</td>
+      <td>90%</td>
+      <td>⭐</td>
+      <td>Фотографии с камеры</td>
+      <td>Быстрой проверки при наличии файлов</td>
+    </tr>
+    <tr>
+      <td>Сервисное меню</td>
+      <td>99%</td>
+      <td>⭐⭐</td>
+      <td>Доступ к камере</td>
+      <td>Максимально точного результата</td>
+    </tr>
+    <tr>
+      <td>EOS Info</td>
+      <td>95%</td>
+      <td>⭐⭐</td>
+      <td>ПК + USB-кабель</td>
+      <td>Проверки без риска сброса настроек</td>
+    </tr>
+    <tr>
+      <td>Magic Lantern</td>
+      <td>85%</td>
+      <td>⭐⭐⭐</td>
+      <td>Установленный ML</td>
+      <td>Камер с альтернативной прошивкой</td>
+    </tr>
+    <tr>
+      <td>Аппаратная диагностика</td>
+      <td>80–100%</td>
+      <td>⭐⭐⭐⭐</td>
+      <td>Сервисный центр или опыт</td>
+      <td>Конфликтующих данных или подозрений на обман</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Рекомендации по выбору:</p>
+<ul>
+  <li>🔍 Если у вас есть RAW-файлы с камеры — начинайте с <strong>EXIF</strong>.</li>
+  <li>🖥️ Если камера на руках — используйте <strong>EOS Info</strong> или <strong>сервисное меню</em>.</li>
+  <li>🔧 Если данные конфликтуют — обращайтесь в сервис или откажитесь от покупки.</li>
+</ul>
+
+<h2 id="чек-лист-покупателя-бу-canon-5d-mark-iii">Чек-лист покупателя б/у Canon 5D Mark III</h2>
+
+<p>Пробег затвора — не единственный критерий при покупке б/у камеры. Вот что ещё нужно проверить:</p>
+
+
+<p>Узнать пробег затвора (2+ методами)|</p>
+<p>Проверить матрицу на битые пиксели (снимок на закрытый объектив)|</p>
+<p>Осмотреть байонет на царапины и люфт|</p>
+<p>Протестировать все режимы съёмки (P/A/S/M, видео)|</p>
+<p>Прослушать работу затвора на высоких скоростях (1/2000с и выше)|</p>
+<p>Проверить аккумулятор (ёмкость, время работы)|</p>
+<p>Осмотреть корпус на следы падений или ремонта--></p>
+
+<p>Дополнительные советы:</p>
+<ul>
+  <li>💰 Средняя цена <em>5D Mark III</em> на вторичном рынке (2026–2026 гг.):
+    <ul>
+      <li><strong>До 50 тыс. срабатываний:</strong> 80–100 тыс. руб.</li>
+      <li><strong>50–100 тыс. срабатываний:</strong> 60–80 тыс. руб.</li>
+      <li><strong>100+ тыс. срабатываний:</strong> 40–60 тыс. руб. (риск скорой замены затвора).</li>
+    </ul>
+  </li>
+  <li>📦 Попросите у продавца чек или гарантийный талон — даже если гарантия закончилась, это подтверждает легальное происхождение камеры.</li>
+  <li>🔄 Если пробег близок к 150 тыс., учитывайте стоимость замены затвора (~20–30 тыс. руб. в сервисе).</li>
+</ul>
+
+<blockquote>⚠️ <strong>Внимание:</strong> На рынке встречаются <em>5D Mark III</em> с заменёнными затворами от <em>5D Mark II</em> или неоригинальными запчастями. Такие камеры могут иметь обнуленный счётчик, но ресурс затвора у них ниже. Проверьте серийный номер затвора (если есть доступ к сервисному меню) — он должен совпадать с оригинальным для этой модели.</blockquote>
+
+<h2 id="faq-частые-вопросы-о-пробеге-canon-5d-mark-iii">FAQ: Частые вопросы о пробеге Canon 5D Mark III</h2>
+
+<details>
+  <summary>Можно ли обнулить счётчик затвора на 5D Mark III?</summary>
+  <p>Да, но только программно (через специальные утилиты вроде <strong>ShutterCount Reset Tool</strong>) или аппаратно (в сервисном центре при замене затвора). Обнуление через сервисное меню невозможно — там отображается реальное значение. Если продавец утверждает, что счётчик сброшен «официально», требуйте документы.</p>
+</details>
+
+<details>
+  <summary>Какой пробег считается критичным для 5D Mark III?</summary>
+  <p>Официальный ресурс затвора — <strong>150 тыс. срабатываний</strong>, но на практике многие камеры работают до 200–250 тыс. При пробеге свыше 100 тыс. рекомендуется:</p>
+  <ul>
+    <li>Проверять затвор на износ каждые 10 тыс. срабатываний.</li>
+    <li>Избегать длительных серийных съёмок (ускоряет износ).</li>
+    <li>Заменить затвор превентивно, если камера используется профессионально.</li>
+  </ol>
+</details>
+
+<details>
+  <summary>Показывает ли видео съёмка на счётчик затвора?</summary>
+  <p>Нет, счётчик затвора увеличивается только при съёмке фото (включая Live View). Видео записывается без срабатывания механического затвора (используется электронный затвор), поэтому не влияет на пробег. Однако длительная видео съёмка может изнашивать матрицу и систему охлаждения.</p>
+</details>
+
+<details>
+  <summary>Что делать, если пробег больше 150 тыс., но камера работает нормально?</summary>
+  <p>В этом случае:</p>
+  <ol>
+    <li>Продолжайте использовать камеру, но <strong>избегайте высоких скоростей затвора</strong> (1/4000с и выше ускоряют износ).</li>
+    <li>Регулярно проверяйте синхронизацию вспышки — при износе затвора могут появляться тёмные полосы на снимках.</li>
+    <li>Запланируйте замену затвора в ближайшие 20–30 тыс. срабатываний (стоимость ~20–30 тыс. руб.).</li>
+  </ol>
+  <p>Если камера используется редко (до 5 тыс. срабатываний в год), её можно эксплуатировать и дальше, но с осторожностью.</p>
+</details>
+
+<details>
+  <summary>Может ли Magic Lantern повредить камеру при проверке пробега?</summary>
+  <p>Нет, если прошивка уже установлена. Однако <strong>установка Magic Lantern ради проверки пробега не рекомендуется</strong> — при неправильной прошивке есть риск «окирпичить» камеру. Если <strong>ML</strong> на камере нет, используйте другие методы (EXIF, EOS Info, сервисное меню).</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ca/canon-1000d-kakogo-goda.html" class="pb-related-card">
+                <span class="pb-related-title">Canon 1000D: год выпуска, характеристики и особенности модели</span>
+                <span class="pb-related-desc">Узнайте точный год выпуска камеры Canon 1000D, её ключевые характеристики, отличия от аналогов и акт</span>
+            </a><a href="/articles/k/ka/karty-pamyati-dlya-fotoapparata-canon-kakie-luchshe.html" class="pb-related-card">
+                <span class="pb-related-title">Лучшие карты памяти для фотоаппаратов Canon: выбор формата и скорости</span>
+                <span class="pb-related-desc">Полный гид по выбору карт памяти для Canon: CFexpress, SD, CFast. Разбор скоростей UHS-II, V90 и сов</span>
+            </a><a href="/articles/c/ca/canon-60d-kakaya-karta-pamyati.html" class="pb-related-card">
+                <span class="pb-related-title">Какая карта памяти для Canon 60D: типы, скорость и выбор</span>
+                <span class="pb-related-desc">Полное руководство по выбору карты памяти для Canon 60D. Разбор стандартов SDHC, SDXC, классов скоро</span>
+            </a><a href="/articles/k/ka/kak-otformatirovat-kartu-kameroj-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как отформатировать карту памяти в камере Canon: Полный гайд</span>
+                <span class="pb-related-desc">Инструкция по форматированию SD-карт в фотоаппаратах Canon. Разбор встроенных функций, риски потери </span>
+            </a><a href="/articles/k/ka/kakuyu-sd-kartu-vybrat-dlya-fotoapparata-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Какую SD карту выбрать для Canon: рейтинг надежности и скорости</span>
+                <span class="pb-related-desc">Полный гайд по выбору карты памяти для фотоаппаратов Canon. Разбор стандартов UHS, скорости записи, </span>
+            </a><a href="/articles/k/ka/kak-uznat-probeg-kamery-canon-2000d.html" class="pb-related-card">
+                <span class="pb-related-title">Как узнать пробег Canon 2000D: 3 рабочих способа проверки</span>
+                <span class="pb-related-desc">Проверьте ресурс затвора Canon 2000D бесплатно. Узнайте реальный пробег камеры перед покупкой или дл</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

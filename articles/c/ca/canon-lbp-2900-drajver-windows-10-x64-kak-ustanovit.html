@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Установка драйвера Canon LBP 2900 на Windows 10 x64: Полная инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговое руководство по установке драйвера принтера Canon LBP 2900 на Windows 10 64-бит. Решение проблем совместимости, замена файлов INF и настройка порта.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-lbp-2900-drajver-windows-10-x64-kak-ustanovit.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Установка драйвера Canon LBP 2900 на Windows 10 x64: Полная инструкция">
+    <meta property="og:description" content="Пошаговое руководство по установке драйвера принтера Canon LBP 2900 на Windows 10 64-бит. Решение проблем совместимости, замена файлов INF и настройка порта.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Установка драйвера Canon LBP 2900 на Windows 10 x64: Полная инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#проверка-совместимости-и-подготовка-системы">Проверка совместимости и подготовка системы</a></li><li><a href="#скачивание-и-распаковка-необходимых-файлов">Скачивание и распаковка необходимых файлов</a></li><li><a href="#ручная-установка-драйвера-через-диспетчер-устройств">Ручная установка драйвера через Диспетчер устройств</a></li><li><a href="#настройка-порта-и-устранение-ошибок-capt">Настройка порта и устранение ошибок CAPT</a></li><li><a href="#таблица-совместимости-версий-драйверов">Таблица совместимости версий драйверов</a></li><li><a href="#решение-частых-проблем-при-печати">Решение частых проблем при печати</a></li><li><a href="#альтернативные-способы-подключения">Альтернативные способы подключения</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-podklyuchit-smartfon-k-printeru-cherez-wifi-canon-pixma-g3415.html">Как подключить смартфон к принтеру Canon Pixma G3415 по Wi-Fi</a></li><li><a href="/articles/k/ka/kak-otmenit-pechat-printera-canon.html">Как отменить печать на принтере Canon: 5 способов остановки</a></li><li><a href="/articles/k/ka/kak-raspechatat-dokument-s-telefona-na-printere-canon.html">Как распечатать документ с телефона на принтере Canon: Полное руководство</a></li><li><a href="/articles/k/ka/kak-ustanovit-drajver-dlya-printera-canon-mf4018-dlya-windows-10.html">Как установить драйвер Canon MF4018 на Windows 10: полная инструкция</a></li><li><a href="/articles/k/ka/kak-vklyuchit-printer-canon-na-kakuyu-knopku.html">Как включить принтер Canon: пошаговая инструкция и кнопки</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как установить драйвер Canon LBP 2900 на Windows 10 x64</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#проверка-совместимости-и-подготовка-системы">Проверка совместимости и подготовка системы</a></li><li><a href="#скачивание-и-распаковка-необходимых-файлов">Скачивание и распаковка необходимых файлов</a></li><li><a href="#ручная-установка-драйвера-через-диспетчер-устройств">Ручная установка драйвера через Диспетчер устройств</a></li><li><a href="#настройка-порта-и-устранение-ошибок-capt">Настройка порта и устранение ошибок CAPT</a></li><li><a href="#таблица-совместимости-версий-драйверов">Таблица совместимости версий драйверов</a></li><li><a href="#решение-частых-проблем-при-печати">Решение частых проблем при печати</a></li><li><a href="#альтернативные-способы-подключения">Альтернативные способы подключения</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Принтер <em>Canon LBP 2900</em> остается одним из самых надежных устройств для офисной печати, несмотря на прекращение официальной поддержки со стороны производителя для современных операционных систем. Многие пользователи сталкиваются с тем, что стандартный установщик не распознает <em>Windows 10 x64</em> и отказывается запускаться, выдавая ошибку совместимости. Это критичная проблема, так как без корректных драйверов устройство превращается в бесполезный кусок пластика.</p>
+
+<p>Ситуация осложняется тем, что на официальном сайте Canon часто отсутствуют свежие версии ПО для этой модели, а автоматическое обновление через диспетчер устройств обычно не помогает или устанавливает устаревший пакет. Вам придется прибегнуть к ручному методу установки через системные средства, что требует внимательности к деталям и понимания структуры драйверов.</p>
+
+<p>В данной инструкции мы разберем, как обойти защиту системы, адаптировать старый драйвер под новую архитектуру и заставить принтер печатать. Процесс займет немного времени, но результат обеспечит стабильную работу вашего <em>Canon LBP 2900</em> без лишних программных конфликтов.</p>
+
+<h2 id="проверка-совместимости-и-подготовка-системы">Проверка совместимости и подготовка системы</h2>
+
+<p>Прежде чем приступать к скачиванию файлов, важно убедиться, что ваша система готова к установке <em>драйвера</em>. Несмотря на то, что <em>Windows 10</em> обладает встроенными механизмами совместимости, модель <em>LBP 2900</em> имеет специфические требования к интерфейсу взаимодействия. Часто проблема кроется не в отсутствии файлов, а в том, что система пытается использовать общий порт, который не подходит для лазерных принтеров Canon.</p>
+
+<p>Вам необходимо проверить разрядность вашей операционной системы, так как установка 32-битного драйвера на 64-битную версию приведет к фатальной ошибке. Перейдите в <code>Параметры → Система → О системе</code> и убедитесь, что в строке «Тип системы» указано «64-разрядная операционная система».</p>
+
+<p>Также критически важно временно отключить антивирусное программное обеспечение, которое может блокировать изменение системных параметров драйвера. Многие антивирусы воспринимают ручное подстановку файлов INF как потенциально опасное действие. Отключение защиты следует производить только на время инсталляции, после чего ее нужно сразу вернуть.</p>
+
+<h2 id="скачивание-и-распаковка-необходимых-файлов">Скачивание и распаковка необходимых файлов</h2>
+
+<p>Официальный сайт производителя часто не предоставляет прямую ссылку на установщик для <em>Windows 10</em>, поэтому самый надежный способ — использовать универсальный драйвер для серии CAPT (Canon Advanced Printing Technology). Этот драйвер был разработан для более старых ОС, но отлично работает в современных системах при правильной конфигурации.</p>
+
+<p>Вам потребуется файл с расширением <code>.exe</code>, который является самораспаковывающимся архивом. Скачайте его из проверенных источников или с официального архива поддержки, если ссылка доступна. После загрузки файла не запускайте его двойным щелчком, так как это попытается запустить старый инсталлятор, который сразу завершит работу с ошибкой.</p>
+
+<p>Вместо этого используйте архиватор (например, 7-Zip или WinRAR) для извлечения содержимого. Кликните правой кнопкой мыши по файлу и выберите «Извлечь все» или «Распаковать» в отдельную папку. Внутри вы найдете несколько файлов, среди которых самым важным является <code>cnmp2900.inf</code> или аналогичный файл с расширением <code>.inf</code>, содержащий информацию о совместимости оборудования.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Никогда не скачивайте драйверы с сайтов-агрегаторов, предлагающих бесплатное ПО, если они требуют установки дополнительных программных баров или браузеров. Используйте только оригинальные файлы с расширением <code>.inf</code> и <code>.sys</code>, чтобы избежать заражения системы вредоносным кодом.</p>
+</blockquote>
+
+<div class="pb-poll" id="poll-0a28bb1f"><div class="pb-poll-question">📊 Какая версия Windows 10 установлена?</div><div class="pb-poll-option" data-poll="0a28bb1f" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Home (Домашняя)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0a28bb1f" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Pro (Профессиональная)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0a28bb1f" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Enterprise (Корпоративная)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0a28bb1f" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">LTSB/LTSC</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0a28bb1f" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="ручная-установка-драйвера-через-диспетчер-устройств">Ручная установка драйвера через Диспетчер устройств</h2>
+
+<p>Это самый важный этап работы, где большинство пользователей совершают ошибки. Вам нужно открыть <code>Диспетчер устройств</code>, нажав <code>Win + X</code> и выбрав соответствующий пункт в меню. В списке оборудования найдите свой принтер, который может быть обозначен как «Неизвестное устройство» или «Canon LBP 2900» с желтым восклицательным знаком.</p>
+
+<p>Кликните правой кнопкой мыши по устройству и выберите пункт «Обновить драйвер». В открывшемся окне выберите «Выполнить поиск драйверов на этом компьютере», а затем нажмите кнопку «Выбрать драйвер из списка доступных драйверов на компьютере». Здесь важно не выбрать предложенный системой вариант, если он отличается от нужного.</p>
+
+<p>Нажмите «Установка с диска», укажите путь к папке, куда вы распаковали файлы на предыдущем шаге, и выберите файл <code>cnmp2900.inf</code>. После этого система покажет модель принтера в списке, и вы сможете нажать «Далее». Процесс установки может занять несколько минут, и экран может мигнуть, что является нормой.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к ручной установке</h4><label class="check-item"><input type="checkbox"><span>Распаковать драйвер в папку</span></label><label class="check-item"><input type="checkbox"><span>Открыть Диспетчер устройств</span></label><label class="check-item"><input type="checkbox"><span>Найти неизвестное устройство</span></label><label class="check-item"><input type="checkbox"><span>Выбрать драйвер с диска</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="настройка-порта-и-устранение-ошибок-capt">Настройка порта и устранение ошибок CAPT</h2>
+
+<p>После успешной установки драйвера принтер может не появляться в списке печатающих устройств или выдавать ошибку «Принтер не отвечает». Это связано с тем, что драйвер <em>Canon CAPT</em> требует создания виртуального порта для связи с принтером. Без этого шага аппаратная часть готова, но программный интерфейс не может отправить данные на печать.</p>
+
+<p>Зайдите в <code>Панель управления → Устройства и принтеры</code>. Если принтер отображается, но не работает, кликните по нему правой кнопкой и выберите «Свойства принтера». Перейдите на вкладку «Порты» и посмотрите на текущую конфигурацию. Если там выбран порт USB001, это может быть неверно для данного драйвера.</p>
+
+<p>Вам нужно создать новый порт, выбрав тип «Local Port». В поле ввода имени порта необходимо указать путь к виртуальному порту, который создает драйвер <em>Canon</em>. Стандартное название для этой модели — <code>CAPT Port</code> или <code>LPT1:</code>, но чаще всего драйвер создает свой уникальный порт с именем, соответствующим модели устройства. Введите <code>CAPT Port</code> и нажмите ОК.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Если после создания порта печать не начинается, проверьте службу <code>Print Spooler</code>. Она должна быть запущена и находиться в автоматическом режиме запуска. Остановка этой службы блокирует работу всех принтеров в системе, независимо от корректности драйверов.</p>
+</blockquote>
+
+<details class="pb-accordion"><summary>Что делать, если порт CAPT не создается автоматически?</summary><div class="pb-accordion-body"><p>Если драйвер CAPT не создает порт самостоятельно, попробуйте удалить его и установить заново, предварительно удалив все старые копии драйвера через утилиту PNPUTIL. Иногда помогает установка драйвера в режиме совместимости с Windows 7.</p></div></details>
+
+<h2 id="таблица-совместимости-версий-драйверов">Таблица совместимости версий драйверов</h2>
+
+<p>Понимание различий между версиями драйверов поможет вам выбрать правильный файл для вашей системы. Ниже приведена таблица, описывающая основные характеристики различных пакетов драйверов, доступных для модели <em>Canon LBP 2900</em>.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Версия драйвера</th>
+<th>Поддержка ОС</th>
+<th>Тип установки</th>
+<th>Особенности</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.30</td>
+<td>Windows XP, Vista</td>
+<td>Автоматическая</td>
+<td>Не работает на Windows 10 без модификации</td>
+</tr>
+<tr>
+<td>3.30</td>
+<td>Windows 7, 8</td>
+<td>Ручная</td>
+<td>Базовая совместимость, может требовать отключение подписи</td>
+</tr>
+<tr>
+<td>3.40 (CAPT)</td>
+<td>Windows 10, 11</td>
+<td>Ручная</td>
+<td>Полная поддержка x64, требует настройки порта</td>
+</tr>
+<tr>
+<td>Universal Print</td>
+<td>Windows 10, 11</td>
+<td>Авто</td>
+<td>Ограниченный функционал, подходит для базовой печати</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Использование устаревшей версии 1.30 или 3.30 на современной операционной системе часто приводит к тому, что принтер распознается, но не может выполнять сложные задания печати. Версия 3.40 является наиболее стабильной для <em>Windows 10 x64</em>. Если вы используете версию 3.30, будьте готовы к тому, что некоторые функции управления качеством печати могут быть недоступны через стандартный интерфейс.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если принтер печатает размыто или с полосами, проверьте настройки бумаги в свойствах принтера. Убедитесь, что тип бумаги установлен как «Обычная», а не «Толстая» или «Фотобумага», так как это меняет скорость прохода и температуру лазера.</p></aside>
+
+<h2 id="решение-частых-проблем-при-печати">Решение частых проблем при печати</h2>
+
+<p>Даже после правильной установки драйвера могут возникнуть непредвиденные проблемы. Самая распространенная из них — зависание очереди печати. Это происходит, когда файл задания не может быть корректно передан через порт <code>CAPT</code>. В таком случае необходимо очистить очередь и перезапустить службу печати.</p>
+
+<p>Откройте командную строку от имени администратора и выполните последовательность команд для сброса службы:</p>
+<pre><code>net stop spooler
+<p>del %systemroot%\System32\spool\printers\* /Q</p>
+<p>net start spooler</code></pre></p>
+
+<p>Если принтер перестал определяться после обновления системы, проверьте целостность файлов драйвера. Иногда обновление Windows удаляет или блокирует файлы с цифровыми подписями. В этом случае поможет повторная деинсталляция устройства через Диспетчер устройств с галочкой «Удалить программы драйверов для этого устройства».</p>
+
+<p>Другой частой проблемой является отсутствие утилиты настройки параметров. На <em>Windows 10</em> она может не устанавливаться автоматически. Вам придется найти в распакованной папке файл <code>cnmp2900c.exe</code> или аналогичный и запустить его вручную. Эта утилита позволяет настраивать плотность печати и режим энергосбережения.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Если вы видите ошибку «Не удалось назначить порт» при попытке печати, это означает, что драйвер не может найти виртуальный канал связи. Попробуйте отключить принтер от USB-порта, нажать «Удалить устройство», перезагрузить компьютер и подключить принтер заново, чтобы система заново сканировала порты.</p>
+</blockquote>
+
+<h2 id="альтернативные-способы-подключения">Альтернативные способы подключения</h2>
+
+<p>Если ручная установка через Диспетчер устройств вызывает слишком много сложностей, можно попробовать использовать универсальный драйвер печати Microsoft. Хотя он не поддерживает все возможности <em>Canon CAPT</em>, он позволяет отправлять простые текстовые документы на печать. Для этого в списке драйверов выберите производителя «Microsoft» и модель «Microsoft IPP Class Driver».</p>
+
+<p>Еще одним вариантом является использование виртуальной машины с <em>Windows 7</em>, если принтер критически важен для работы, а настройка под Windows 10 невозможна. В этом случае принтер подключается к виртуальной машине через USB, и печать происходит через неё. Это более сложный метод, требующий установки ПО виртуализации.</p>
+
+<p>Также стоит рассмотреть возможность использования облачных сервисов печати, если ваш принтер поддерживается через <em>Google Cloud Print</em> или аналогичные шлюзы, хотя для <em>Canon LBP 2900</em> эта функция работает нестабильно и требует стороннего ПО-посредника.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Ручная установка через Диспетчер устройств с указанием файла INF — единственный надежный способ заставить Canon LBP 2900 работать на Windows 10 x64 без потери функциональности.</p></aside>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Почему установщик драйвера не запускается на Windows 10?</summary>
+<p>Установщик <em>Canon LBP 2900</em> предназначен для старых версий Windows (XP, 7) и не имеет цифровой подписи для Windows 10. Система блокирует запуск. Решение — распаковать архив вручную и установить драйвер через Диспетчер устройств.</p>
+</details>
+
+<details>
+<summary>Где скачать оригинальный драйвер для Windows 10 64-bit?</summary>
+<p>На официальном сайте Canon часто нет прямой ссылки для этой модели. Рекомендуется использовать драйвер версии 3.40 (CAPT) для Windows 8.1/10, который совместим по архитектуре и функционалу. Файлы можно найти в архивах поддержки на сайтах-зеркалах или на форуме 4PDA.</p>
+</details>
+
+<details>
+<summary>Что делать, если принтер печатает только черные полосы?</summary>
+<p>Это указывает на проблему с лазерным блоком или картриджем, а не с драйвером. Попробуйте заменить картридж или извлечь и аккуратно протереть фотобарабан. Также проверьте настройки плотности печати в утилите Canon.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать этот принтер по Wi-Fi?</summary>
+<p>Модель <em>Canon LBP 2900</em> не имеет встроенного Wi-Fi модуля. Для подключения по сети потребуется внешний Wi-Fi адаптер, подключенный к USB-порту принтера, или настройка общего доступа через другой компьютер, подключенный к роутеру.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-podklyuchit-smartfon-k-printeru-cherez-wifi-canon-pixma-g3415.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить смартфон к принтеру Canon Pixma G3415 по Wi-Fi</span>
+                <span class="pb-related-desc">Пошаговая инструкция: настройка Canon PIXMA G3415 через Wi-Fi Direct и приложение Canon PRINT Inkjet</span>
+            </a><a href="/articles/k/ka/kak-otmenit-pechat-printera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как отменить печать на принтере Canon: 5 способов остановки</span>
+                <span class="pb-related-desc">Пошаговая инструкция, как отменить задание печати на принтере Canon через очередь, панель управления</span>
+            </a><a href="/articles/k/ka/kak-raspechatat-dokument-s-telefona-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как распечатать документ с телефона на принтере Canon: Полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по печати с iOS и Android на принтеры Canon. Настройки Wi-Fi, приложение Canon </span>
+            </a><a href="/articles/k/ka/kak-ustanovit-drajver-dlya-printera-canon-mf4018-dlya-windows-10.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить драйвер Canon MF4018 на Windows 10: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по установке драйвера МФУ Canon i-SENSYS MF4018 под Windows 10. Скачивание, по</span>
+            </a><a href="/articles/k/ka/kak-vklyuchit-printer-canon-na-kakuyu-knopku.html" class="pb-related-card">
+                <span class="pb-related-title">Как включить принтер Canon: пошаговая инструкция и кнопки</span>
+                <span class="pb-related-desc">Подробный гид по включению принтеров Canon. Узнайте, какую кнопку нажать, как проверить питание и чт</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-printer-canon-2900-na-windows-10.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить Canon LBP2900 на Windows 10: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по установке драйвера Canon LBP2900 на Windows 10. Решение проблем совместимост</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

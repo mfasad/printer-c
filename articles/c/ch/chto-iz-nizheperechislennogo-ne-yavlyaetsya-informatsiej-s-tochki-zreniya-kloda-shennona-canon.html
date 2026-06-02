@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Что не является информацией по Шеннону: теория и примеры — Кэнон Инфо</title>
+    <meta name="description" content="Разбор теории информации Клода Шеннона. Узнайте, что считается шумом, а что — данными. Формальные определения энтропии и redundancy.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ch/chto-iz-nizheperechislennogo-ne-yavlyaetsya-informatsiej-s-tochki-zreniya-kloda-shennona-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Что не является информацией по Шеннону: теория и примеры">
+    <meta property="og:description" content="Разбор теории информации Клода Шеннона. Узнайте, что считается шумом, а что — данными. Формальные определения энтропии и redundancy.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Что не является информацией по Шеннону: теория и примеры</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#суть-теории-информации-и-определение-энтропии">Суть теории информации и определение энтропии</a></li><li><a href="#шум-как-главный-антагонист-информации">Шум как главный антагонист информации</a></li><li><a href="#избыточность-и-предсказуемость-данных">Избыточность и предсказуемость данных</a></li><li><a href="#математическая-формализация-отсутствия-информации">Математическая формализация отсутствия информации</a></li><li><a href="#роль-получателя-и-контекста">Роль получателя и контекста</a></li><li><a href="#практическое-применение-в-современных-системах">Практическое применение в современных системах</a></li><li><a href="#различия-между-семантической-и-статистической-информацией">Различия между семантической и статистической информацией</a></li><li><a href="#итоги-и-значение-модели-для-науки">Итоги и значение модели для науки</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ca/canon-kak-obnulit.html">Как обнулить Canon: сброс настроек камеры и принтера</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-lbp6020b.html">Как подключить принтер Canon LBP6020B: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-pechatat-s-telefona-na-printer-cherez-shnur-usb-canon.html">Печать с телефона на Canon через USB: полная инструкция</a></li><li><a href="/articles/c/ca/canon-pg-440-dlya-kakikh-printerov.html">Какой принтер Canon использует картридж PG-440: полный список моделей</a></li><li><a href="/articles/k/ka/kak-nastroit-kalkulyator-canon-as-888.html">Как настроить калькулятор Canon AS-888: полная инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Что из нижеперечисленного не является информацией с точки зрения Клода Шеннона</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#суть-теории-информации-и-определение-энтропии">Суть теории информации и определение энтропии</a></li><li><a href="#шум-как-главный-антагонист-информации">Шум как главный антагонист информации</a></li><li><a href="#избыточность-и-предсказуемость-данных">Избыточность и предсказуемость данных</a></li><li><a href="#математическая-формализация-отсутствия-информации">Математическая формализация отсутствия информации</a></li><li><a href="#роль-получателя-и-контекста">Роль получателя и контекста</a></li><li><a href="#практическое-применение-в-современных-системах">Практическое применение в современных системах</a></li><li><a href="#различия-между-семантической-и-статистической-информацией">Различия между семантической и статистической информацией</a></li><li><a href="#итоги-и-значение-модели-для-науки">Итоги и значение модели для науки</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Многие люди привыкли считать, что любой набор символов, звуков или изображений автоматически является информацией. Однако в строгом научном смысле, разработанном Клодом Шенноном в 1948 году, это утверждение ошибочно. Его математическая теория связи разграничивает само сообщение, передаваемые данные и <strong>энтропию</strong>, которая характеризует степень неопределенности системы.</p>
+
+<p>Если вы изучаете основы <em>информатики</em> или теорию связи, важно понимать фундаментальную разницу. Для Шеннона информация — это не просто «знание», а мера уменьшения неопределенности. Случайный набор символов, который не несет предсказуемости и не меняет состояние получателя, часто классифицируется не как полезная информация, а как шум или избыточность.</p>
+
+<p>В этой статье мы детально разберем, какие элементы коммуникации выпадают из определения информации в контексте модели Шеннона. Мы рассмотрим роль <strong>энтропии</strong>, понятие <em>избыточности</em> и то, как шум искажает передачу данных.</p>
+
+<h2 id="суть-теории-информации-и-определение-энтропии">Суть теории информации и определение энтропии</h2>
+
+<p>Клод Шеннон рассматривал информацию через призму вероятности. Согласно его модели, информация появляется только тогда, когда мы устраняем неопределенность. Если событие предсказуемо на 100%, его информационная ценность стремится к нулю, даже если вы его озвучили. Это ключевой момент для понимания того, <strong>что не является информацией</strong>.</p>
+
+<p>В математической модели <em>теории информации</em> основным показателем служит <strong>энтропия</strong>. Высокая энтропия означает высокую неопределенность и, следовательно, большой потенциал получения информации при получении сообщения. Напротив, низкая энтропия указывает на то, что система предсказуема и не содержит новых данных.</p>
+
+<p>Представьте, что вы читаете прогноз погоды в пустыне, где всегда солнечно. Фраза «Завтра будет солнечно» не несет информации по Шеннону, так как она не уменьшает вашу неопределенность. В то же время, сообщение «Завтра пойдет снег» в той же пустыне будет обладать колоссальной информационной емкостью, так как событие крайне маловероятно.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> В бытовом смысле мы называем «информацией» любые факты, но в теории Шеннона информация — это строго математическая величина, измеряемая в битах, зависящая от вероятности события.</p>
+</blockquote>
+
+<p>Понимание этой тонкости позволяет инженерам оптимизировать каналы связи. Если система передает данные с низкой энтропией, значит, в канале есть избыточность, которую можно сжать без потери смысла. Это основа современных алгоритмов сжатия данных, используемых в <em>мультимедиа</em> и телекоммуникациях.</p>
+
+<h2 id="шум-как-главный-антагонист-информации">Шум как главный антагонист информации</h2>
+
+<p>В канале связи всегда присутствует (помехи), которые Шеннон называл шумом. Шум — это именно то, что не является информацией. Он представляет собой случайные возмущения, добавляемые к сигналу, которые не имеют отношения к исходному сообщению и не несут полезной смысловой нагрузки для получателя.</p>
+
+<p>Если по радиоканалу передается музыка, а в эфире присутствует треск статического электричества, этот треск является шумом. Он не уменьшает неопределенность относительно мелодии, а наоборот, увеличивает её, мешая декодированию. В математической модели Шеннона <strong>шум</strong> снижает пропускную способность канала.</p>
+
+<p>Интересно, что иногда шум может быть ошибочно принят за информацию, если получатель не обладает достаточной фильтрацией. Однако с точки зрения источника, шум генерируется независимо от сообщения и является паразитным элементом. Разделение полезного сигнала и шума — одна из главных задач <em>теории кодирования</em>.</p>
+
+<h2 id="избыточность-и-предсказуемость-данных">Избыточность и предсказуемость данных</h2>
+
+<p>Еще один элемент, который формально не является «новой информацией» в строгом смысле, — это избыточность. Если вы передаете сообщение, где каждый символ повторяется трижды (например, «АААБББВВВ»), вторая и третья буквы не несут новой информации, так как они полностью предсказуемы по первой.</p>
+
+<p>В естественных языках избыточность составляет значительную часть текста. Например, в русском языке после буквы «к» вероятность появления буквы «о» очень высока. Если вы видите «кот», то буква «т» предсказуема. Хотя мы используем её для понимания, с точки зрения <strong>энтропии</strong> она добавляет меньше информации, чем редкая буква в конце слова.</p>
+
+<p>Избыточность необходима для борьбы с шумом, позволяя восстанавливать потерянные данные, но чистая избыточность сама по себе не является информацией. Это подтверждается алгоритмами сжатия, которые удаляют повторяющиеся паттерны, оставляя только уникальные данные.</p>
+
+<div class="pb-poll" id="poll-708c7758"><div class="pb-poll-question">📊 Какой тип данных вы считаете наиболее информационно емким?</div><div class="pb-poll-option" data-poll="708c7758" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Случайный набор чисел</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="708c7758" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Предсказуемая последовательность</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="708c7758" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Сжатый архив</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="708c7758" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Текст с высокой избыточностью</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="математическая-формализация-отсутствия-информации">Математическая формализация отсутствия информации</h2>
+
+<p>Чтобы точно определить, что не является информацией, Шеннон использовал формулу энтропии. Если вероятность события равна 1 (оно гарантированно произойдет), то логарифм от вероятности равен нулю, и количество информации, получаемой при наступлении этого события, также равно нулю.</p>
+
+<p>Это означает, что любые <strong>детерминированные процессы</strong>, где результат полностью известен заранее, генерируют нулевую информацию. Например, показ часов в секунду на цифровых часах, если вы знаете точное время, не несет информации о времени, так как она уже предсказана.</p>
+
+<p>Таблица ниже иллюстрирует зависимость количества информации от вероятности события в рамках модели Шеннона:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Вероятность события (P)</th>
+<th>Состояние системы</th>
+<th>Количество информации (бит)</th>
+<th>Является ли информацией?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0 (100%)</td>
+<td>Абсолютная предсказуемость</td>
+<td>0</td>
+<td>Нет (нулевая энтропия)</td>
+</tr>
+<tr>
+<td>0.5 (50%)</td>
+<td>Максимальная неопределенность</td>
+<td>1</td>
+<td>Да (максимум для бинарного выбора)</td>
+</tr>
+<tr>
+<td>0.1 (10%)</td>
+<td>Низкая вероятность</td>
+<td>~3.32</td>
+<td>Да (высокая ценность)</td>
+</tr>
+<tr>
+<td>0.0 (0%)</td>
+<td>Невозможное событие</td>
+<td>∞</td>
+<td>Теоретически бесконечно</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="роль-получателя-и-контекста">Роль получателя и контекста</h2>
+
+<p>Важно отметить, что информация в теории Шеннона объективна и не зависит от смысла, который вкладывает получатель. Это часто вызывает путаницу. Для человека, не знающего китайского языка, иероглиф может быть просто набором линий (шумом), но для модели Шеннона это символ с определенной вероятностью появления, несущий информацию.</p>
+
+<p>Тем не менее, если сигнал полностью искажен шумом до состояния белого шума, он теряет всякую корреляцию с исходным сообщением. В этом случае получатель не может извлечь ни одного бита полезной информации, так как каждый бит принятого сигнала статистически независим от отправленного.</p>
+
+<p>Поэтому, отвечая на вопрос, что не является информацией, можно сказать: <em>полностью случайный шум</em> и <strong>полностью предсказуемый сигнал</strong> находятся на полюсах, где количество информации стремится к нулю. Первое — из-за отсутствия структуры, второе — из-за отсутствия неопределенности.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> В отличие от семантической теории информации, модель Шеннона игнорирует смысл. Для неё «Ошибка» и «Победа» при одинаковой частоте появления несут одинаковое количество информации.</p>
+</blockquote>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка данных на информационную ценность</h4><label class="check-item"><input type="checkbox"><span>Снизилась ли неопределенность?</span></label><label class="check-item"><input type="checkbox"><span>Существует ли вероятность ошибки?</span></label><label class="check-item"><input type="checkbox"><span>Является ли сигнал случайным?</span></label><label class="check-item"><input type="checkbox"><span>Есть ли избыточность в коде</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="практическое-применение-в-современных-системах">Практическое применение в современных системах</h2>
+
+<p>Понимание того, что не является информацией, критически важно для разработки эффективных систем сжатия и передачи данных. Инженеры стремятся удалить избыточность перед передачей, чтобы сэкономить полосу пропускания, и добавляют помехоустойчивое кодирование для защиты от шума.</p>
+
+<p>В современных протоколах связи, таких как <em>Wi-Fi</em> или <em>5G</em>, используются сложные алгоритмы, которые отличают полезный сигнал от шума. Если система не может отличить шум от данных, она увеличивает мощность передачи или снижает скорость, чтобы восстановить баланс.</p>
+
+<p>Без четкого разграничения информации и шума современные интернет-технологии, стриминг и облачные вычисления были бы невозможны. Эффективная передача данных строится на максимизации полезной <strong>энтропии</strong> и минимизации шума в канале.</p>
+
+<details class="pb-accordion"><summary>Как Шеннон доказал существование границы пропускной способности?|Шеннон доказал, что для любого канала с шумом существует максимальная скорость передачи данных (пропускная способность), при которой можно передавать информацию с сколь угодно малой вероятностью ошибки, используя надлежащее кодирование.-->
+
+<h2 id="различия-между-семантической-и-статистической-информацией">Различия между семантической и статистической информацией</h2>
+
+<p>Часто возникает вопрос</summary><div class="pb-accordion-body"><p> если смысл не важен для Шеннона, то как мы отличаем «послание» от «мусора»? Ответ кроется в статистике. Мусор (случайный шум) имеет равномерное распределение вероятностей символов, тогда как естественный язык или структурированные данные имеют специфические статистические паттерны.</p>
+
+<p>Структурированные данные, даже если они лишены смысла для конкретного получателя, обладают информацией, так как их символы не равновероятны. Случайный же набор символов, генерируемый без алгоритма, не имеет паттернов и, следовательно, не может быть сжат, что делает его неэффективным носителем информации в теории Шеннона.</p>
+
+<p>Таким образом, ключевым критерием является не осмысленность, а <strong>статистическая зависимость</strong> элементов друг от друга. Отсутствие такой зависимости означает, что данные являются просто шумом.</p>
+
+
+
+<h2 id="итоги-и-значение-модели-для-науки">Итоги и значение модели для науки</h2>
+
+<p>Подводя итог, можно утверждать, что с точки зрения Клода Шеннона, информацией не являются ни предсказуемые (детерминированные) события, ни случайный шум. Информация существует только в «серой зоне» между полным порядком и полным хаосом, где есть элемент неопределенности, который можно устранить.</p>
+
+<p>Эта концепция стала фундаментом цифровой эпохи. Понимание того, что <em>избыточность</em> не является новой информацией, а <strong>шум</strong> — это враг передачи, позволило создать глобальную сеть коммуникаций, которая работает по всему миру.</p>
+
+<p>В современном мире, переполненном данными, умение отличать информационную ценность от шума становится критическим навыком. Модель Шеннона дает нам математический инструмент для этого различения, независимо от того, говорим ли мы о радиосигналах или текстах.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Теория Шеннона описывает передачу сигналов, но не их интерпретацию. В реальных системах важно учитывать семантику, но для расчета пропускной способности канала достаточно статистических параметров.</p>
+</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Информация по Шеннону — это мера устранения неопределенности. Случайный шум и предсказуемые данные не несут информации.</p></aside>
+
+<details>
+<summary>Что такое энтропия в теории информации?</summary>
+<p>Энтропия — это мера неопределенности или случайности системы. Чем выше энтропия, тем больше информации можно получить при получении следующего символа или события.</p>
+</details>
+
+<details>
+<summary>Почему избыточность не считается информацией?</summary>
+<p>Избыточность — это повторяющиеся или предсказуемые элементы данных. Поскольку их появление гарантировано или высоковероятно, они не уменьшают неопределенность и, следовательно, не несут новой информации.</p>
+</details>
+
+<details>
+<summary>Является ли шум информацией?</summary>
+<p>Нет, шум в теории Шеннона — это случайные помехи, которые искажают сигнал. Он не несет полезной информации от источника и мешает декодированию сообщения.</p>
+</details>
+
+<details>
+<summary>Как измеряется информация по Шеннону?</summary>
+<p>Информация измеряется в битах. Один бит информации соответствует устранению неопределенности между двумя равновероятными событиями (например, подбрасывание монеты).</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ca/canon-kak-obnulit.html" class="pb-related-card">
+                <span class="pb-related-title">Как обнулить Canon: сброс настроек камеры и принтера</span>
+                <span class="pb-related-desc">Пошаговые инструкции по сбросу настроек фотоаппаратов и принтеров Canon до заводских. Узнайте, как п</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-canon-lbp6020b.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon LBP6020B: пошаговая инструкция</span>
+                <span class="pb-related-desc">Полное руководство по установке драйверов и настройке Canon LBP6020B через USB и Wi-Fi. Решение част</span>
+            </a><a href="/articles/k/ka/kak-pechatat-s-telefona-na-printer-cherez-shnur-usb-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Печать с телефона на Canon через USB: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по печати документов и фото с Android и iPhone на принтеры Canon через кабель </span>
+            </a><a href="/articles/c/ca/canon-pg-440-dlya-kakikh-printerov.html" class="pb-related-card">
+                <span class="pb-related-title">Какой принтер Canon использует картридж PG-440: полный список моделей</span>
+                <span class="pb-related-desc">Узнайте, для каких принтеров Canon подходит картридж PG-440. Список моделей, характеристики чернил, </span>
+            </a><a href="/articles/k/ka/kak-nastroit-kalkulyator-canon-as-888.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить калькулятор Canon AS-888: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка настольного калькулятора Canon AS-888. Настройка времени, даты, валюты и индикат</span>
+            </a><a href="/articles/p/pr/printer-kenon-piksma-kak-polzovatsya.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться принтером Canon Pixma: Полное руководство по настройке и печати</span>
+                <span class="pb-related-desc">Подробная инструкция: как подключить принтер Canon Pixma к ПК и телефону, установить драйверы, настр</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

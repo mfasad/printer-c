@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Многостраничное сканирование Canon: настройка IJ Scan Utility и драйверов — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция по настройке пакетного сканирования документов на МФУ Canon. Настройка IJ Scan Utility, TWAIN-драйверов и сохранение в PDF.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-nastroit-mnogostranichnoe-skanirovanie-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Многостраничное сканирование Canon: настройка IJ Scan Utility и драйверов">
+    <meta property="og:description" content="Пошаговая инструкция по настройке пакетного сканирования документов на МФУ Canon. Настройка IJ Scan Utility, TWAIN-драйверов и сохранение в PDF.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Многостраничное сканирование Canon: настройка IJ Scan Utility и драйверов</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#выбор-программного-обеспечения-для-пакетного-сканирования">Выбор программного обеспечения для пакетного сканирования</a></li><li><a href="#настройка-параметров-в-ij-scan-utility">Настройка параметров в IJ Scan Utility</a></li><li><a href="#использование-автоматического-подавателя-документов-adf">Использование автоматического подавателя документов (ADF)</a></li><li><a href="#работа-с-драйверами-twain-и-wia">Работа с драйверами TWAIN и WIA</a></li><li><a href="#альтернативные-методы-и-мобильные-решения">Альтернативные методы и мобильные решения</a></li><li><a href="#решение-типичных-проблем-при-сканировании">Решение типичных проблем при сканировании</a></li><li><a href="#оптимизация-и-хранение-полученных-файлов">Оптимизация и хранение полученных файлов</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ca/canon-lide-210-kak-skanirovat.html">Как сканировать на Canon Lide 210: Полная инструкция по настройке и запуску</a></li><li><a href="/articles/k/ka/kak-sdelat-skanirovanie-na-canon.html">Как сделать сканирование на Canon: полное руководство по драйверам и интерфейсу</a></li><li><a href="/articles/k/ka/kak-nastroit-skaner-canon-mf3010-windows-10.html">Настройка сканера Canon MF3010 на Windows 10: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-sdelat-skan-canon-mg3540.html">Сканирование на Canon MG3540: пошаговая инструкция с фото</a></li><li><a href="/articles/k/ka/kak-otskanirovat-dokument-na-printere-canon-mp230.html">Инструкция: как отсканировать документ на принтере Canon MP230</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полное руководство по настройке многостраничного сканирования на устройствах Canon</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#выбор-программного-обеспечения-для-пакетного-сканирования">Выбор программного обеспечения для пакетного сканирования</a></li><li><a href="#настройка-параметров-в-ij-scan-utility">Настройка параметров в IJ Scan Utility</a></li><li><a href="#использование-автоматического-подавателя-документов-adf">Использование автоматического подавателя документов (ADF)</a></li><li><a href="#работа-с-драйверами-twain-и-wia">Работа с драйверами TWAIN и WIA</a></li><li><a href="#альтернативные-методы-и-мобильные-решения">Альтернативные методы и мобильные решения</a></li><li><a href="#решение-типичных-проблем-при-сканировании">Решение типичных проблем при сканировании</a></li><li><a href="#оптимизация-и-хранение-полученных-файлов">Оптимизация и хранение полученных файлов</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Современные многофункциональные устройства <em>Canon</em> предоставляют широкие возможности для работы с документами, но многие пользователи сталкиваются с трудностями при попытке объединить несколько листов в один файл. Без правильной конфигурации каждое сканирование сохраняет отдельный файл, что неудобно при обработке договоров или книг. Понимание логики работы программного обеспечения <strong>канон</strong> позволяет превратить рутинный процесс в быстрый и автоматизированный.</p>
+
+<p>Настройка многостраничного режима требует внимания к выбору правильного драйвера и параметров в утилитах, идущих в комплекте с оборудованием. Ошибки в конфигурации часто приводят к тому, что пользователь вынужден вручную склеивать файлы в графических редакторах, теряя время. В этой статье мы разберем, как настроить автоматическое создание многостраничных <strong>PDF</strong> документов через стандартные средства и специализированное ПО.</p>
+
+<h2 id="выбор-программного-обеспечения-для-пакетного-сканирования">Выбор программного обеспечения для пакетного сканирования</h2>
+<p>Первым шагом к успешной настройке является выбор правильной программы, которая будет управлять процессом захвата изображений. Компания <em>Canon</em> предоставляет несколько решений, но не все они одинаково удобны для работы с большим объемом страниц. Стандартная утилита <code>IJ Scan Utility</code> является наиболее универсальным инструментом для большинства моделей домашних и офисных МФУ.</p>
+
+<p>Альтернативой может служить профессиональный пакет <code>Canon MF Toolbox</code> или драйверы <strong>WIA</strong>, встроенные в операционную систему Windows. Однако именно <em>IJ Scan Utility</em> обладает наиболее гибкими настройками формата вывода и автоматического определения границ документов. Использование сторонних утилит часто ограничивает доступ к уникальным функциям <strong>сканера</strong>.</p>
+
+<p>Важно проверить версию установленного драйвера, так как устаревшее ПО может не поддерживать новые алгоритмы сжатия и форматы файлов. Зайдите в <code>Диспетчер устройств</code> и убедитесь, что контроллер сканера работает без предупреждений. Если система предлагает обновить драйвер через Центр обновлений, лучше сделать это заранее, чтобы избежать конфликтов при пакетной обработке.</p>
+
+<blockquote><strong>⚠️ Внимание</strong><br>Разные версии прошивки МФУ могут менять интерфейс меню на самом устройстве. Всегда сверяйте названия пунктов с текущей версией инструкции на официальном сайте, если кнопки не совпадают с картинками в руководстве.</blockquote>
+
+<h2 id="настройка-параметров-в-ij-scan-utility">Настройка параметров в IJ Scan Utility</h2>
+<p>Для начала работы запустите утилиту <code>IJ Scan Utility</code> и перейдите в раздел <code>Настройки</code> (Settings), где скрыты ключевые параметры формирования файла. Основной задачей здесь является активация режима сохранения нескольких листов в один контейнер. Найдите вкладку <code>PDF</code> и убедитесь, что выбран формат <strong>Multi-page PDF</strong>, а не одностраничный вариант.</p>
+
+<p>В этом же меню вы можете задать параметры страницы, такие как ориентация (альбомная или книжная) и разрешение (DPI). Для текстовых документов достаточно значения <code>300 DPI</code>, что обеспечит четкость шрифта без избыточного размера файла. Если вы планируете сканировать чертежи или фотографии, увеличьте разрешение до <code>600 DPI</code>, но помните, что это замедлит процесс обработки.</p>
+
+<p>Особое внимание уделите разделу <code>Получение файла</code> (File Output), где определяется поведение программы при нажатии кнопки <code>Сканировать</code>. Здесь можно настроить автоматическое сохранение в конкретную папку или выбор имени файла. Это критически важно для организации рабочего пространства, чтобы сканы не терялись в папке <code>Загрузки</code>.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте функцию "Предпросмотр" перед запуском полного сканирования, чтобы убедиться, что документ лежит ровно и не выходит за рамки автоматического обрезания краев.</p></aside>
+
+<h2 id="использование-автоматического-подавателя-документов-adf">Использование автоматического подавателя документов (ADF)</h2>
+<p>Если ваше устройство <em>Canon</em> оснащено автоматическим подавателем листов (ADF), процесс сканирования книг и пачек бумаг становится максимально быстрым. Вам необходимо загрузить документы в лоток, соблюдая направление стрелок, указывающих на ориентацию страниц. Убедитесь, что стопка не превышает максимальную емкость, указанную в паспорте устройства.</p>
+
+<p>В настройках утилиты выберите режим <code>ADF</code> вместо <code>Сканирование со стекла</code>. Это переключит алгоритм работы на захват страниц по очереди из лотка. После запуска процесса лоток будет автоматически протаскивать листы один за другим, склеивая их в один файл без участия оператора. Это идеальный вариант для оцифровки отчетов или архивов.</p>
+
+<p>Однако стоит учитывать, что ADF плохо справляется с тонкими, помятыми или скрепленными скрепками документами. Перед началом работы обязательно уберите все посторонние предметы. Если бумага застрянет в механизме, процесс прервется, и файл может оказаться незавершенным или поврежденным.</p>
+
+<p>Для работы со стеклом (плоскопанельным сканером) логика действий иная: вы кладете первый лист, нажимаете кнопку, затем переворачиваете страницу и нажимаете снова. Программа должна запомнить последнее действие и предложить сохранить файл. Если такого предложения не поступает, проверьте настройки <strong>продолжения сканирования</strong>.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к сканированию через ADF</h4><label class="check-item"><input type="checkbox"><span>Убрать скрепки и скобы</span></label><label class="check-item"><input type="checkbox"><span>Выровнять стопку бумаги</span></label><label class="check-item"><input type="checkbox"><span>Выбрать режим ADF в ПО</span></label><label class="check-item"><input type="checkbox"><span>Настроить разрешение 300 DPI</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<div class="pb-poll" id="poll-ecb31638"><div class="pb-poll-question">📊 Как вы чаще всего сканируете документы?</div><div class="pb-poll-option" data-poll="ecb31638" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Через автоматический лоток (ADF)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ecb31638" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Кладя по одному листу на стекло</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ecb31638" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Использую мобильное приложение</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ecb31638" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Сканирование не использую</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="работа-с-драйверами-twain-и-wia">Работа с драйверами TWAIN и WIA</h2>
+<p>Некоторые профессиональные программы для работы с документами, такие как Adobe Acrobat или специализированное ПО для бухгалтерии, не используют фирменные утилиты <em>Canon</em>, а обращаются напрямую к драйверам. В этом случае необходимо правильно настроить интерфейс <strong>драйвера TWAIN</strong> или <strong>WIA</strong>. TWAIN обычно обеспечивает более качественное управление цветом и детализацией.</p>
+
+<p>При открытии окна сканирования в сторонней программе выберите источник <code>Canon [Модель] TWAIN</code>. В появившемся окне настроек драйвера ищите кнопку <code>Параметры</code> или <code>Настройки</code>, где можно активировать функцию <strong>многостраничного PDF</strong>. Часто по умолчанию драйвер настроен на создание отдельного файла для каждого скана, что неудобно для массовых операций.</p>
+
+<p>В окне драйвера также можно настроить режим <code>Двойная сторона</code> (Duplex), если ваша модель поддерживает двустороннее сканирование. Это позволит автоматически переворачивать страницы в лотке и формировать файл с корректной нумерацией сторон. Не забудьте указать, какой стороной документ должен быть обращен к сканеру (лицевой или тыльной).</p>
+
+<p>Иногда требуется вручную обновить драйвер TWAIN, скачав его с сайта поддержки. Стандартный драйвер Windows WIA может не поддерживать расширенные функции, такие как удаление фона или автоматическое выравнивание текста. Используйте <code>Canon IJ Scan Utility</code> как промежуточный этап, если драйвер отказывается сохранять несколько страниц.</p>
+
+<blockquote><strong>⚠️ Внимание</strong><br>Драйверы TWAIN могут конфликтовать с антивирусным ПО, если оно блокирует доступ к портам USB. Если сканирование не запускается из сторонней программы, временно отключите защиту или добавьте драйвер в исключения.</blockquote>
+
+<h2 id="альтернативные-методы-и-мобильные-решения">Альтернативные методы и мобильные решения</h2>
+<p>Помимо ПК, современные устройства <em>Canon</em> позволяют сканировать документы напрямую со смартфона или планшета через приложение <code>Canon PRINT</code>. Этот метод удобен, если под рукой нет компьютера, но требует наличия Wi-Fi соединения. В настройках приложения также можно выбрать формат "PDF" и активировать режим многостраничности.</p>
+
+<p>При использовании мобильного приложения загрузите несколько страниц, нажимая кнопку <code>Добавить страницу</code> после каждого кадра. Приложение само объединит их в один файл и предложит отправить на почту или сохранить в облако. Это отличная альтернатива для быстрого сканирования визиток или чеков в дороге.</p>
+
+<p>Однако мобильные решения часто имеют ограничения по разрешению и качеству цветопередачи по сравнению с десктопными драйверами. Для важных юридических документов лучше использовать стационарный компьютер с полным набором функций. Мобильный вариант подходит скорее для черновых копий или быстрой передачи информации.</p>
+
+<details class="pb-accordion"><summary>Отличия драйверов TWAIN и WIA</summary><div class="pb-accordion-body"><p>TWAIN — это стандартный протокол для профессионального сканирования с широкими настройками. WIA — стандарт Windows, проще, но имеет меньше возможностей для тонкой настройки.</p></div></details>
+
+<h2 id="решение-типичных-проблем-при-сканировании">Решение типичных проблем при сканировании</h2>
+<p>Иногда процесс сканирования прерывается или файл получается пустым. Чаще всего причиной является потеря связи между компьютером и МФУ, особенно при использовании Wi-Fi. Проверьте, чтобы устройство не переходило в режим энергосбережения, так как это может разрывать соединение во время передачи большого объема данных.</p>
+
+<p>Если программа выдает ошибку "Нет ответа от сканера", попробуйте перезапустить службу <code>Класс принтера</code> в Windows или переустановить драйвер. Также убедитесь, что в <code>Брандмауэре</code> не заблокирован доступ утилите <code>IJ Scan Utility</code>. Иногда простая перезагрузка роутера решает проблему нестабильности сети.</p>
+
+<p>Еще одной частой проблемой является некорректное распознавание границ документа. Если сканер захватывает слишком много фона или обрезает текст, попробуйте изменить тип документа в настройках с <strong>Фото</strong> на <strong>Текст</strong>. Это активирует алгоритмы, которые лучше определяют контрастные края бумаги.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Проблема</th>
+<th>Возможная причина</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Пустой файл</td>
+<td>Не выбран режим сканирования</td>
+<td>Проверьте настройки в <code>IJ Scan Utility</code></td>
+</tr>
+<tr>
+<td>Обрыв связи</td>
+<td>Нестабильный Wi-Fi</td>
+<td>Подключите устройство через USB-кабель</td>
+</tr>
+<tr>
+<td>Плохое качество</td>
+<td>Низкое разрешение (DPI)</td>
+<td>Установите значение <code>300</code> или выше</td>
+</tr>
+<tr>
+<td>Ошибка драйвера</td>
+<td>Конфликт версий ПО</td>
+<td>Удалите и установите драйвер заново</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>В некоторых случаях помогает очистка кэша утилиты. Найдите временные файлы, связанные с программой сканирования, и удалите их. Это освободит место и может устранить ошибки при сохранении многостраничных документов. Если проблема сохраняется, обратитесь в техническую поддержку <em>Canon</em> с указанием модели устройства и версии ОС.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Использование кабеля USB вместо Wi-Fi — самый надежный способ избежать обрывов при сканировании больших многостраничных файлов.</p></aside>
+
+<h2 id="оптимизация-и-хранение-полученных-файлов">Оптимизация и хранение полученных файлов</h2>
+<p>После того как вы успешно создали многостраничный документ, важно правильно его сохранить и оптимизировать для дальнейшего использования. Файлы высокого разрешения могут занимать много места, поэтому стоит использовать функцию сжатия PDF. В настройках утилиты можно выбрать уровень сжатия, который уменьшит размер файла без критической потери качества текста.</p>
+
+<p>Организуйте структуру папок на компьютере, чтобы сканы не смешивались с другими файлами. Создайте отдельный каталог <code>Документы</code> с подпапками по датам или типам документов. Автоматическое сохранение в назначенную папку избавит вас от необходимости каждый раз искать только что созданный файл в системе.</p>
+
+<p>Для долгосрочного хранения рекомендуется использовать формат PDF/A, который является стандартом для архивации. Этот формат гарантирует, что документ будет отображаться одинаково на любом устройстве и в любой версии программы просмотра. Убедитесь, что ваш сканер поддерживает этот формат в настройках вывода.</p>
+
+<blockquote><strong>⚠️ Внимание</strong><br>Не храните сканированные документы только на локальном диске компьютера. Используйте облачные сервисы или внешние носители для резервного копирования, чтобы избежать потери данных при поломке оборудования.</blockquote>
+
+<p>Регулярно проверяйте целостность архивов, открывая старые файлы и убеждаясь, что они не повреждены. Если вы используете сетевое хранилище, настройте автоматическое резервное копирование папки со сканами. Это обеспечит безопасность критически важных данных и peace of mind.</p>
+
+<p>В заключение, настройка многостраничного сканирования на устройствах <em>Canon</em> — это несложная процедура, требующая лишь внимательности к деталям интерфейса. Правильно настроенный драйвер и утилита значительно экономят время и избавляют от рутинных операций по склеиванию файлов вручную.</p>
+
+<details>
+<summary>Как включить сканирование в один PDF через IJ Scan Utility?</summary>
+<p>Откройте утилиту, нажмите "Настройки", перейдите во вкладку "PDF" и выберите опцию "Создать многостраничный PDF". Убедитесь, что не стоит галочка "Создавать отдельный файл для каждого скана".</p>
+</details>
+
+<details>
+<summary>Почему сканер Canon не видит автоматический подаватель (ADF)?</summary>
+<p>Возможно, выбран режим сканирования со стекла. В настройках утилиты измените источник с "Планшет" на "Подаватель документов". Также проверьте, загружена ли бумага в лоток.</p>
+</details>
+
+<details>
+<summary>Можно ли сканировать двусторонние документы на моделях без авто-дуплекса?</summary>
+<p>Нет, аппаратно сканер не перевернет страницу сам. Вам придется вручную перевернуть лист в лотке и запустить вторую сторону, затем в программе объединить полученные файлы. Некоторые модели поддерживают программный дуплекс, но это редкость.</p>
+</details>
+
+<details>
+<summary>Где найти драйвер для сканирования, если диск утерян?</summary>
+<p>Зайдите на официальный сайт поддержки <em>Canon</em>, введите точную модель вашего МФУ и скачайте раздел "Драйверы и ПО". Выберите драйвер для вашей версии Windows и установите его.</p>
+</details>
+
+<details>
+<summary>Что делать, если сканирование зависло на середине?</summary>
+<p>Прервите процесс в программе, перезапустите утилиту и проверьте соединение. Если документ застрял в лотке, аккуратно извлеките его. Попробуйте использовать кабель USB вместо Wi-Fi для стабильности.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ca/canon-lide-210-kak-skanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на Canon Lide 210: Полная инструкция по настройке и запуску</span>
+                <span class="pb-related-desc">Пошаговое руководство: как подключить Canon Lide 210 к ПК, установить драйверы и сканировать докумен</span>
+            </a><a href="/articles/k/ka/kak-sdelat-skanirovanie-na-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать сканирование на Canon: полное руководство по драйверам и интерфейсу</span>
+                <span class="pb-related-desc">Пошаговая инструкция как сделать сканирование на устройствах Canon через IJ Scan Utility, веб-интерф</span>
+            </a><a href="/articles/k/ka/kak-nastroit-skaner-canon-mf3010-windows-10.html" class="pb-related-card">
+                <span class="pb-related-title">Настройка сканера Canon MF3010 на Windows 10: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как установить драйвер Canon MF3010 на Windows 10, настроить сканирование и ус</span>
+            </a><a href="/articles/k/ka/kak-sdelat-skan-canon-mg3540.html" class="pb-related-card">
+                <span class="pb-related-title">Сканирование на Canon MG3540: пошаговая инструкция с фото</span>
+                <span class="pb-related-desc">Как сделать скан на принтере Canon PIXMA MG3540: подключение, настройка ПО, выбор разрешения и сохра</span>
+            </a><a href="/articles/k/ka/kak-otskanirovat-dokument-na-printere-canon-mp230.html" class="pb-related-card">
+                <span class="pb-related-title">Инструкция: как отсканировать документ на принтере Canon MP230</span>
+                <span class="pb-related-desc">Пошаговое руководство по сканированию с Canon MP230 на ПК и без него. Решаем частые ошибки драйверов</span>
+            </a><a href="/articles/k/ka/kak-sdelat-skaner-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать сканер на принтере Canon: Полное руководство по настройке</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как активировать функцию сканирования на МФУ Canon через IJ Scan Utility, драй</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как полностью отключить слежение за уровнем чернил Canon Pixma — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция по отключению мониторинга картриджей в принтерах Canon Pixma. Разбор прошивок, режима обслуживания и альтернативных решений.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-otklyuchit-slezhenie-za-urovnem-chernil-canon-pixma.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как полностью отключить слежение за уровнем чернил Canon Pixma">
+    <meta property="og:description" content="Пошаговая инструкция по отключению мониторинга картриджей в принтерах Canon Pixma. Разбор прошивок, режима обслуживания и альтернативных решений.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-nav-active">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/remont-i-oshibki/">Ремонт и ошибки</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как полностью отключить слежение за уровнем чернил Canon Pixma</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#почему-принтер-блокирует-печать-и-как-это-исправить">Почему принтер блокирует печать и как это исправить</a></li><li><a href="#механизм-работы-счетчика-чернил-и-почему-он-не-сбрасывается-сам">Механизм работы счетчика чернил и почему он не сбрасывается сам</a></li><li><a href="#физическая-отклейка-чипа-радикальный-метод-для-опытных">Физическая отклейка чипа: радикальный метод для опытных</a></li><li><a href="#использование-сервисного-режима-и-программы-ssc-service-utility">Использование сервисного режима и программы SSC Service Utility</a></li><li><a href="#настройка-драйвера-для-игнорирования-статуса-чернил">Настройка драйвера для игнорирования статуса чернил</a></li><li><a href="#сравнение-методов-отключения-мониторинга">Сравнение методов отключения мониторинга</a></li><li><a href="#альтернативные-решения-снпч-и-универсальные-чипы">Альтернативные решения: СНПЧ и универсальные чипы</a></li><li><a href="#заключительные-рекомендации-и-предостережения">Заключительные рекомендации и предостережения</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-vytashchit-list-iz-printera-esli-on-zastryal-canon.html">Как вытащить застрявшую бумагу из принтера Canon: инструкция</a></li><li><a href="/articles/k/ka/kak-razobrat-canon-selphy-cp520.html">Как разобрать Canon Selphy CP520: полная инструкция по разборке</a></li><li><a href="/articles/p/pr/printer-canon-ne-vidit-kartridzhi-chto-delat.html">Canon не видит картриджи: 7 способов решить проблему</a></li><li><a href="/articles/k/ka/kak-ubrat-oshibku-na-printere-canon-mg3640.html">Ошибки принтера Canon MG3640: как устранить за 10 минут</a></li><li><a href="/articles/k/ko/kod-podderzhki-4100-canon-chto-delat.html">Код ошибки 4100 на принтерах Canon: причины, диагностика и решение</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полное руководство: как отключить слежение за уровнем чернил в Canon Pixma</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#почему-принтер-блокирует-печать-и-как-это-исправить">Почему принтер блокирует печать и как это исправить</a></li><li><a href="#механизм-работы-счетчика-чернил-и-почему-он-не-сбрасывается-сам">Механизм работы счетчика чернил и почему он не сбрасывается сам</a></li><li><a href="#физическая-отклейка-чипа-радикальный-метод-для-опытных">Физическая отклейка чипа: радикальный метод для опытных</a></li><li><a href="#использование-сервисного-режима-и-программы-ssc-service-utility">Использование сервисного режима и программы SSC Service Utility</a></li><li><a href="#настройка-драйвера-для-игнорирования-статуса-чернил">Настройка драйвера для игнорирования статуса чернил</a></li><li><a href="#сравнение-методов-отключения-мониторинга">Сравнение методов отключения мониторинга</a></li><li><a href="#альтернативные-решения-снпч-и-универсальные-чипы">Альтернативные решения: СНПЧ и универсальные чипы</a></li><li><a href="#заключительные-рекомендации-и-предостережения">Заключительные рекомендации и предостережения</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="почему-принтер-блокирует-печать-и-как-это-исправить">Почему принтер блокирует печать и как это исправить</h2>
+<p>Большинство пользователей <em>Canon Pixma</em> сталкиваются с досадной проблемой: картридж технически исправен, чернила залиты, но устройство отказывается печатать, требуя сброса счетчика или замены расходника. Виной всему встроенная система мониторинга, которая отслеживает не реальный объем жидкости, а количество пропущенных через печатающую головку капель. Когда счетчик достигает критического значения, <strong>система защиты</strong> блокирует работу принтера, игнорируя фактическое наличие чернил в резервуаре.</p>
+<p>Отключение этой функции — не просто каприз, а необходимость для тех, кто использует <strong>систему непрерывной подачи чернил</strong> (СНПЧ) или заправляет <em>картриджи</em> многократно. Официальные алгоритмы <em>Canon</em> рассчитаны на одноразовое использование, что экономически невыгодно для активного использования. Однако важно понимать, что полностью убрать <strong>программный контроль</strong> без вмешательства в прошивку невозможно, так как это основная защита производителя от использования неоригинальных "контрафактных" материалов.</p>
+
+<h2 id="механизм-работы-счетчика-чернил-и-почему-он-не-сбрасывается-сам">Механизм работы счетчика чернил и почему он не сбрасывается сам</h2>
+<p>Внутри каждого оригинального картриджа <em>Canon Pixma</em> установлен специальный чип, который взаимодействует с печатающей головкой. Этот чип не измеряет уровень жидкости лазером или датчиком веса, а ведет строгий учет <strong>прошитых страниц</strong>. Каждый раз, когда вы печатаете, процессор принтера отправляет сигнал на чип, уменьшая его внутренний счетчик. Когда значение доходит до нуля, принтер переходит в режим "защиты" и перестает подавать команду на печать.</p>
+<p>Существует два типа картриджей: с <strong>чипом на головке</strong> (как в серии PG/CLI) и с чипом на самом картридже (в некоторых новых моделях). В первом случае чип можно заменить или перепаять, во втором — требуется программа-сбрасыватель. Проблема усугубляется тем, что <strong>автоматическое обновление</strong> драйверов часто блокирует сторонние утилиты, делая процедуру сброса невозможной без специальных знаний. Принтер просто игнорирует команды сброса, если не выполнено условие "оригинальности" чипа.</p>
+
+<blockquote>⚠️ Внимание: Не пытайтесь очистить контакты чипа спиртом в надежде, что принтер "увидит" новые чернила. Это не сбрасывает программный счетчик, а лишь восстанавливает электрический контакт. Если счетчик нулевой, очистка контактов не поможет.</blockquote>
+
+<div class="pb-poll" id="poll-ab4ba2eb"><div class="pb-poll-question">📊 Какой тип картриджей используется в вашем принтере?</div><div class="pb-poll-option" data-poll="ab4ba2eb" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Оригинальные с чипом</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ab4ba2eb" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Заправленные без чипа</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ab4ba2eb" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">СНПЧ (Система непрерывной подачи)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ab4ba2eb" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, как проверить</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="физическая-отклейка-чипа-радикальный-метод-для-опытных">Физическая отклейка чипа: радикальный метод для опытных</h2>
+<p>Самый действенный способ обмануть <strong>систему мониторинга</strong> — полностью отключить связь чипа с принтером. Для этого нужно аккуратно отклеить чип с картриджа <em>Canon Pixma</em>. В моделях серии MG, TS и некоторых PIXMA (например, 1500, 2400) чип расположен на печатающей головке или непосредственно на корпусе картриджа. Его необходимо поддеть острым лезвием и отделить, предварительно заклеив контакты на самом картридже кусочком изоленты.</p>
+<p>После отклейки принтер выдаст ошибку "Не удалось определить картридж" или "Проблема с чернилами". На этом этапе нужно нажать и удерживать кнопку <code>Stop/Reset</code> (обычно треугольник в круге) в течение 5-10 секунд. Это команда принтеру: "Я знаю, что чипа нет, я беру на себя ответственность, печатай дальше". Принтер переведется в режим <strong>принудительной печати</strong>, игнорируя уровень чернил.</p>
+<p> Вам придется отслеживать его визуально, наклоняя картридж или используя <strong>полупрозрачные корпуса</strong> СНПЧ. Если вы забудете долить чернила и они закончатся, печатающая головка может перегреться и сгореть, так как система не будет предупреждать о критическом уровне.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к отклейке чипа</h4><label class="check-item"><input type="checkbox"><span>Подготовить тонкий нож или лезвие</span></label><label class="check-item"><input type="checkbox"><span>Отключить принтер от сети</span></label><label class="check-item"><input type="checkbox"><span>Найти расположение чипа на картридже</span></label><label class="check-item"><input type="checkbox"><span>Подготовить изоленту или скотч</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<blockquote>⚠️ Внимание: Отклейка чипа аннулирует официальную гарантию на принтер. Если устройство на гарантии, лучше обратитесь в авторизованный сервисный центр, хотя там могут предложить только замену картриджа.</blockquote>
+
+<h2 id="использование-сервисного-режима-и-программы-ssc-service-utility">Использование сервисного режима и программы SSC Service Utility</h2>
+<p>Для тех, кто не хочет паять или клеить изоленту, существует программный метод сброса. Специальные утилиты, такие как <em>SSC Service Utility</em> или <strong>Canon Service Tool</strong>, позволяют принудительно сбросить счетчик чернил в памяти принтера. Программы подключаются к устройству через драйверы и отправляют команду сброса на конкретный регистр памяти, отвечающий за <strong>уровень чернил</strong>. Это особенно актуально для принтеров, где чип интегрирован в головку и его замена невозможна без потери гарантии.</p>
+<p>Процедура требует точного подбора версии <strong>сервисного инструмента</strong> под конкретную модель принтера. Для <em>Canon Pixma</em> серии TS3100, TS5300 или MG2500 нужны разные версии ПО. Если использовать несовместимую версию, можно "<strong>кирпичнуть</strong>" принтер, сделав его неработоспособным. Необходимо загрузить драйверы, установить программу, выбрать модель устройства и нажать кнопку <code>Clear Ink Counter</code>.</p>
+<p>После сброса счетчика принтер перезагрузится, и ошибка исчезнет. Однако, если вы продолжите использовать оригинальные заправленные картриджи без чипов, система может снова заблокировать печать через некоторое время, так как <strong>прошивка</strong> может обновляться автоматически при подключении к интернету. Рекомендуется отключить автоматическое обновление драйверов через диспетчер устройств Windows.</p>
+
+<details class="pb-accordion"><summary>Что делать, если Service Tool не видит принтер?</summary><div class="pb-accordion-body"><p>Убедитесь, что принтер подключен по USB, а не через Wi-Fi. Временно отключите антивирус и брандмауэр, так как они могут блокировать низкоуровневый доступ к устройству. Проверьте, не установлен ли драйвер в режиме "Только чтение".</p></div></details>
+
+<h2 id="настройка-драйвера-для-игнорирования-статуса-чернил">Настройка драйвера для игнорирования статуса чернил</h2>
+<p>Если физическое вмешательство и специальные утилиты недоступны, можно попытаться настроить поведение стандартного драйвера Windows. Иногда, отключив функцию <strong>отображения уровня чернил</strong> в свойствах принтера, можно избежать частых уведомлений, хотя полная блокировка печати это не снимет. В панели управления Windows перейдите в <code>Устройства и принтеры</code>, нажмите правой кнопкой на <em>Canon Pixma</em> и выберите <code>Настройка печати</code>.</p>
+<p>В разделе <strong>Сервис</strong> или <code>Обслуживание</code> поищите опцию "Отключить мониторинг чернил" или "Игнорировать уровень чернил". В некоторых версиях драйверов эта опция скрыта, но в более старых версиях она доступна. Это не сбрасывает счетчик в прошивке, но отключает визуальные уведомления на компьютере, которые мешают работать.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед сбросом счетчика программой сделайте резервную копию настроек принтера через утилиту, если она поддерживает экспорт конфигурации. Это поможет быстро вернуть настройки в случае сбоя при прошивке.</p></aside>
+
+<h2 id="сравнение-методов-отключения-мониторинга">Сравнение методов отключения мониторинга</h2>
+<p>Выбор метода зависит от модели принтера, вашего технического опыта и желаемого результата. Некоторые методы полностью убирают контроль, другие лишь маскируют проблему. Ниже приведена таблица, сравнивающая основные способы решения задачи.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Сложность</th>
+<th>Эффективность</th>
+<th>Риск поломки</th>
+<th>Влияние на гарантию</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Отклейка чипа</td>
+<td>Средняя</td>
+<td>Высокая</td>
+<td>Низкий</td>
+<td>Аннулирует</td>
+</tr>
+<tr>
+<td>Service Tool (SSC)</td>
+<td>Высокая</td>
+<td>Средняя</td>
+<td>Средний</td>
+<td>Аннулирует</td>
+</tr>
+<tr>
+<td>Замена чипа</td>
+<td>Низкая</td>
+<td>Высокая</td>
+<td>Низкий</td>
+<td>Сохраняет (частично)</td>
+</tr>
+<tr>
+<td>Настройка драйвера</td>
+<td>Низкая</td>
+<td>Низкая</td>
+<td>Отсутствует</td>
+<td>Сохраняет</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>⚠️ Внимание: Если ваш принтер использует картриджи с чипом на головке (например, серия PG-540/CL-541), замена чипа невозможна без замены всей печатающей головки, что часто экономически нецелесообразно.</blockquote>
+
+<h2 id="альтернативные-решения-снпч-и-универсальные-чипы">Альтернативные решения: СНПЧ и универсальные чипы</h2>
+<p>Лучшим долгосрочным решением проблемы слежения за чернилами является установка <strong>Системы Непрерывной Подачи Чернил</strong> (СНПЧ). Современные СНПЧ поставляются с <em>универсальными чипами</em>, которые либо имитируют оригинальный чип, либо позволяют легко сбрасывать счетчик без открытия корпуса принтера. Это решает проблему на уровне <strong>аппаратной совместимости</strong> и значительно удешевляет печать.</p>
+<p>При выборе СНПЧ обращайте внимание на наличие <strong>сбрасываемых чипов</strong> в комплекте. Они позволяют отключать мониторинг одним нажатием кнопки на чипе или через специальную подставку. Это избавляет от необходимости каждый раз искать программный сброс или паять контакты. Для моделей <em>Canon Pixma</em> с поддержкой СНПЧ от производителя (серия G) эта проблема решается автоматически.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Установка СНПЧ с перепрошиваемыми чипами — наиболее надежный способ навсегда забыть о блокировках печати, при этом сохраняя возможность контролировать уровень чернил визуально.</p></aside>
+
+<h2 id="заключительные-рекомендации-и-предостережения">Заключительные рекомендации и предостережения</h2>
+<p>Отключение слежения за чернилами в <em>Canon Pixma</em> — это всегда компромисс между удобством и риском. Принудительная печать без контроля может привести к <strong>сухому ходу печатающей головки</strong>, что является самой дорогостоящей поломкой в принтерах. Если вы решили использовать метод отклейки чипа, обязательно установите прозрачные емкости СНПЧ, чтобы всегда видеть уровень жидкости.</p>
+<p>Помните, что <strong>прошивка</strong> принтера может обновляться автоматически при подключении к интернету, что может вернуть блокировку даже после успешного сброса. Рекомендуется отключить автоматическое обновление драйверов в Windows и использовать принтер через локальное подключение, если вы планируете использовать заправленные картриджи. Будьте готовы к тому, что некоторые функции, такие как печать с дисплея или работа через Wi-Fi Direct, могут работать нестабильно после внесения изменений в конфигурацию.</p>
+
+<details class="pb-accordion"><summary>Что делать, если после сброса счетчика печать идет, но полосы на выходе?</summary><div class="pb-accordion-body"><p>Это признак того, что чернила закончились в картридже, но счетчик еще не сработал. Прочистите печатающую головку через стандартную утилиту обслуживания, но не допускайте работы всухую.</p></div></details>
+
+<h2 id="часто-задаваемые-вопросы">Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Можно ли полностью удалить функцию слежения из прошивки принтера?</summary>
+<p>Полное удаление функции из заводской прошивки невозможно без перепрошивки устройства кастомным ПО, которого для бытовых моделей <em>Canon Pixma</em> практически не существует. Можно лишь сбрасывать счетчик или отключать чип.</p>
+</details>
+
+<details>
+<summary>Безопасно ли использовать универсальные чипы сторонних производителей?</summary>
+<p>Большинство универсальных чипов безопасны, но они могут иметь меньший ресурс перезаписи. Если чип сломается, его можно заменить. Главное — убедиться, что чип совместим с вашей конкретной ревизией прошивки принтера.</p>
+</details>
+
+<details>
+<summary>Почему принтер пишет "низкий уровень чернил", даже если они свежие?</summary>
+<p>Это сигнал, что программный счетчик достиг нуля. Это не означает, что чернила закончились физически. Чтобы убрать сообщение, необходимо сбросить счетчик через сервисное меню или отключить чип.</p>
+</details>
+
+<details>
+<summary>Может ли отключение чипа привести к поломке принтера?</summary>
+<p>Само по себе отключение чипа не ломает электронику, но лишает вас контроля над уровнем чернил. Риск заключается в том, что вы можете оставить принтер работать без чернил, что приведет к перегреву и выходу из строя печатающей головки.</p>
+</details>
+
+<details>
+<summary>Работает ли метод с кнопкой "Stop/Reset" на всех моделях Canon?</summary>
+<p>Нет, метод работает только на определенных сериях (например, MG, MP, некоторые TS). В новых моделях с закрытой системой защиты (серия G с встроенной СНПЧ или новые TS-серии) эта комбинация может не сработать или привести к ошибке.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-vytashchit-list-iz-printera-esli-on-zastryal-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как вытащить застрявшую бумагу из принтера Canon: инструкция</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как безопасно извлечь замятую бумагу из принтеров Canon, какие детали трогать </span>
+            </a><a href="/articles/k/ka/kak-razobrat-canon-selphy-cp520.html" class="pb-related-card">
+                <span class="pb-related-title">Как разобрать Canon Selphy CP520: полная инструкция по разборке</span>
+                <span class="pb-related-desc">Пошаговое руководство: как снять крышку, добраться до печатающей головки и механизма подачи в фотопр</span>
+            </a><a href="/articles/p/pr/printer-canon-ne-vidit-kartridzhi-chto-delat.html" class="pb-related-card">
+                <span class="pb-related-title">Canon не видит картриджи: 7 способов решить проблему</span>
+                <span class="pb-related-desc">Принтер Canon не распознает картриджи? Узнайте причины и пошаговые решения — от перезагрузки до сбро</span>
+            </a><a href="/articles/k/ka/kak-ubrat-oshibku-na-printere-canon-mg3640.html" class="pb-related-card">
+                <span class="pb-related-title">Ошибки принтера Canon MG3640: как устранить за 10 минут</span>
+                <span class="pb-related-desc">Пошаговая инструкция по исправлению ошибок принтера Canon MG3640: мигает оранжевая лампочка, замятие</span>
+            </a><a href="/articles/k/ko/kod-podderzhki-4100-canon-chto-delat.html" class="pb-related-card">
+                <span class="pb-related-title">Код ошибки 4100 на принтерах Canon: причины, диагностика и решение</span>
+                <span class="pb-related-desc">Устраняем ошибку 4100 на принтерах Canon. Полный разбор причин, инструкция по обходу защиты и замене</span>
+            </a><a href="/articles/k/ka/kak-vytashchit-zazhevannuyu-bumagu-iz-printera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как вытащить зажеванную бумагу из принтера Canon: пошаговая инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по удалению замятия бумаги в принтерах Canon. Разбор ошибок E03, E16, очистка </span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

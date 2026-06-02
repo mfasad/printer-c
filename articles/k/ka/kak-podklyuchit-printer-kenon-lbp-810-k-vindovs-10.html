@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Подключение Canon LBP 810 к Windows 10: драйверы и настройка — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция, как подключить старый принтер Canon LBP 810 к Windows 10. Установка драйверов, настройка очереди печати и решение частых проблем совместимости.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-podklyuchit-printer-kenon-lbp-810-k-vindovs-10.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Подключение Canon LBP 810 к Windows 10: драйверы и настройка">
+    <meta property="og:description" content="Пошаговая инструкция, как подключить старый принтер Canon LBP 810 к Windows 10. Установка драйверов, настройка очереди печати и решение частых проблем совместимости.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/podklyuchenie-k-pk/">Подключение к ПК</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Подключение Canon LBP 810 к Windows 10: драйверы и настройка</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#особенности-работы-canon-lbp-810-в-современной-среде">Особенности работы Canon LBP 810 в современной среде</a></li><li><a href="#поиск-совместимых-драйверов-и-подготовка-системы">Поиск совместимых драйверов и подготовка системы</a></li><li><a href="#процесс-ручной-установки-через-диспетчер-устройств">Процесс ручной установки через Диспетчер устройств</a></li><li><a href="#альтернативный-метод-использование-драйвера-lbp-6000">Альтернативный метод: Использование драйвера LBP 6000</a></li><li><a href="#решение-проблем-с-портами-и-очередью-печати">Решение проблем с портами и очередью печати</a></li><li><a href="#устранение-зависания-очереди-печати">Устранение зависания очереди печати</a></li><li><a href="#финальная-проверка-и-настройка-качества-печати">Финальная проверка и настройка качества печати</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-podklyuchit-k-noutbuku-printer-canon-lbp-810.html">Как подключить Canon LBP 810 к ноутбуку: Полное руководство</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-kenon-mg3640-cherez-wi-fi.html">Подключение принтера Canon MG3640 к Wi-Fi: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-skinut-video-s-fotoapparata-canon-na-kompyuter.html">Как скинуть видео с Canon на ПК: 5 способов переноса файлов</a></li><li><a href="/articles/p/pr/printer-canon-ne-v-seti-kak-ispravit.html">Принтер Canon не в сети: как исправить ошибку и восстановить печать</a></li><li><a href="/articles/k/ka/kak-ustanovit-drajver-na-printer-canon.html">Как установить драйвер на принтер Canon: пошаговая инструкция 2026</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как подключить Canon LBP 810 к Windows 10: полное руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#особенности-работы-canon-lbp-810-в-современной-среде">Особенности работы Canon LBP 810 в современной среде</a></li><li><a href="#поиск-совместимых-драйверов-и-подготовка-системы">Поиск совместимых драйверов и подготовка системы</a></li><li><a href="#процесс-ручной-установки-через-диспетчер-устройств">Процесс ручной установки через Диспетчер устройств</a></li><li><a href="#альтернативный-метод-использование-драйвера-lbp-6000">Альтернативный метод: Использование драйвера LBP 6000</a></li><li><a href="#решение-проблем-с-портами-и-очередью-печати">Решение проблем с портами и очередью печати</a></li><li><a href="#устранение-зависания-очереди-печати">Устранение зависания очереди печати</a></li><li><a href="#финальная-проверка-и-настройка-качества-печати">Финальная проверка и настройка качества печати</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Многие пользователи сталкиваются с ситуацией, когда в офисе или дома остается надежный, но устаревший лазерный аппарат <strong>Canon LBP 810</strong>. Эта модель славилась своей компактностью и скоростью печати, однако поддержка со стороны производителя давно прекращена. Операционная система <em>Windows 10</em> не всегда автоматически распознает такое устройство, что вызывает у владельцев панику и мысли о необходимости покупки новой техники.</p>
+
+<p>На самом деле, задача сводится к правильному поиску совместимого программного обеспечения и ручному указанию путей для установки. Главное требование — это наличие драйвера, адаптированного под современную архитектуру, либо использование драйвера в режиме совместимости. Ниже мы подробно разберем каждый шаг, чтобы вы могли снова запустить печать документов.</p>
+
+<h2 id="особенности-работы-canon-lbp-810-в-современной-среде">Особенности работы Canon LBP 810 в современной среде</h2>
+<p>Устройство <em>Canon LBP 810</em> было разработано в эпоху, когда операционные системы <strong>Windows XP</strong> или <strong>Windows 7</strong> были стандартом индустрии. Архитектура драйверов изменилась, и прямой перенос старых модулей на <em>Windows 10</em> часто невозможен без дополнительных манипуляций. Система безопасности ОС блокирует попытки установки неподписанных драйверов, что делает процесс подключения нетривиальным.</p>
+
+<p>Важно понимать, что речь идет о лазерном принтере, который требует четкой синхронизации с компьютером для обработки растровых данных. Если драйвер не будет корректно загружен, устройство может отображаться в диспетчере как «Неизвестное устройство» или просто не реагировать на команды. <strong>Совместимость</strong> в данном случае достигается не через официальную поддержку, а через подбор аналоговых версий программного обеспечения.</p>
+
+<p>Связь с компьютером осуществляется преимущественно через интерфейс <code>USB 2.0</code>, который является стандартом для большинства компьютеров, выпущенных после 2010 года. Несмотря на то, что протоколы передачи данных эволюционировали, физический разъем остался прежним, что гарантирует физическую возможность подключения.</p>
+
+<blockquote>⚠️ Внимание: Драйверы, разработанные для <em>Windows XP</em>, категорически не стоит пытаться установить в автоматическом режиме, так как это может привести к конфликту системных библиотек и зависанию очереди печати.</blockquote>
+
+<h2 id="поиск-совместимых-драйверов-и-подготовка-системы">Поиск совместимых драйверов и подготовка системы</h2>
+<p>Первым шагом является определение того, какой именно файл драйвера может подойти. Официальный сайт <em>Canon</em> больше не размещает прямые ссылки на ПО для серии LBP 810, поэтому приходится искать альтернативные пути. Часто пользователи используют драйверы от более новых моделей, таких как <strong>Canon LBP 6000</strong> или <strong>Canon LBP 810 II</strong>, которые имеют схожую аппаратную часть и могут корректно работать с вашим устройством.</p>
+
+<p>Для поиска файла необходимо посетить надежные репозитории драйверов или форумы технической поддержки, где сообщество делится проверенными версиями. Ищите файлы с расширением <code>.exe</code> или <code>.inf</code>, предназначенные для архитектуры <strong>x64</strong> или <strong>x86</strong>. Перед скачиванием обязательно проверьте целостность файла и его соответствие разрядности вашей системы.</p>
+
+<p>Если вы используете 64-разрядную версию <em>Windows 10</em>, убедитесь, что скачиваете именно такой драйвер, иначе система просто не увидит устройство. Часто в названии файла указано «Win10» или «Win7/8/10», что является хорошим сигналом совместимости. Не пытайтесь использовать драйверы для macOS или Linux, они физически не подойдут для архитектуры x86.</p>
+
+<ul>
+<li>🔍 Проверьте разрядность вашей системы (Правка мыши по «Мой компьютер» → Свойства)</li>
+<li>📥 Скачайте драйвер только с проверенных источников или официальных архивов</li>
+<li>🛡️ Временно отключите антивирус на время установки (иногда он блокирует старые драйверы)</li>
+<li>💾 Сохраните файл на рабочий стол для быстрого доступа к нему</li>
+</ul>
+
+<div class="pb-poll" id="poll-98bb723e"><div class="pb-poll-question">📊 Какая у вас версия Windows 10?</div><div class="pb-poll-option" data-poll="98bb723e" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">64-битная (x64)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="98bb723e" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">32-битная (x86)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="98bb723e" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="98bb723e" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Другая</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="процесс-ручной-установки-через-диспетчер-устройств">Процесс ручной установки через Диспетчер устройств</h2>
+<p>Автоматический поиск часто не срабатывает, поэтому вам придется прибегнуть к ручному методу. Это самый надежный способ заставить <em>Windows 10</em> принять устаревший принтер. Откройте меню «Пуск», введите <code>Диспетчер устройств</code> и запустите утилиту от имени администратора. В списке оборудования найдите строчку с названием <strong>Canon LBP 810</strong> или «Неизвестное устройство» с желтым восклицательным знаком.</p>
+
+<p>Кликните правой кнопкой мыши по устройству и выберите пункт «Обновить драйвер». В открывшемся окне нажмите «Выполнить поиск драйверов на этом компьютере». Здесь вам нужно будет указать путь к папке, куда вы предварительно скачали и распаковали файлы драйвера. Система просканирует папку и найдет необходимый <code>.inf</code> файл.</p>
+
+<p>Если система выдаст предупреждение о том, что драйвер не прошел проверку подписи, не пугайтесь. Это стандартная ситуация для старого оборудования. Вам нужно будет нажать кнопку «Все равно установить этот драйвер». Процесс установки может занять несколько минут, в течение которых экран может мигнуть.</p>
+
+<p>После завершения установки устройство должно исчезнуть из раздела «Другие устройства» и переместиться в раздел «Принтеры и сканеры». <strong>Порты</strong> должны быть настроены автоматически, но иногда требуется ручное указание <code>USB001</code> или <code>USB002</code> в настройках порта принтера.</p>
+
+<blockquote>⚠️ Внимание: Если установка завершается с ошибкой кода 10 или 39, попробуйте отключить принтер от USB-порта, завершить процесс установки, перезагрузить компьютер и подключить устройство только после загрузки системы.</blockquote>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к установке драйвера</h4><label class="check-item"><input type="checkbox"><span>Скачать драйвер LBP 6000/810 II</span></label><label class="check-item"><input type="checkbox"><span>Отключить антивирус</span></label><label class="check-item"><input type="checkbox"><span>Запустить установщик от администратора</span></label><label class="check-item"><input type="checkbox"><span>Подключить USB-кабель в конце</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="альтернативный-метод-использование-драйвера-lbp-6000">Альтернативный метод: Использование драйвера LBP 6000</h2>
+<p>Опытные пользователи и администраторы систем давно заметили, что аппаратная начинка <em>Canon LBP 810</em> практически идентична модели <strong>Canon LBP 6000</em>. Это позволяет использовать драйвер от «шестисотой» модели как универсальный ключ для запуска вашего устройства. Драйвер <code>Canon LBP 6000</code> отлично работает в <em>Windows 10</strong> и часто имеет цифровую подпись.</p>
+
+<p>Скачайте официальный драйвер для LBP 6000 с сайта производителя, если он еще доступен в архивах, или найдите его в надежном каталоге. Запустите установочный файл. Когда программа попросит подключить принтер, подключите его к компьютеру и включите. Если автоматическое определение не сработает, выберите пункт «Ручная установка» и укажите модель LBP 6000.</p>
+
+<p>После установки драйвер LBP 6000 создаст виртуальную очередь печати, к которой будет привязано ваше физическое устройство LBP 810. Качество печати и функционал останутся прежними, так как прошивка самого принтера не меняется, меняется только способ отправки данных. Это решение является <strong>золотым стандартом</strong> для пользователей данной модели.</p>
+
+<p>Важно отметить, что если у вас установлена версия драйвера от LBP 6000, то в списке принтеров устройство будет называться именно так. Не пытайтесь переименовать его обратно в LBP 810 через свойства, это может вызвать ошибки в некоторых специализированных программах печати.</p>
+
+<details class="pb-accordion"><summary>Почему не работает драйвер LBP 810?</summary><div class="pb-accordion-body"><p>Проблема заключается в отсутствии цифровой подписи драйвера для Windows 10. Microsoft заблокировала загрузку неподписанного кода в целях безопасности. Драйвер LBP 6000 имеет подпись, поэтому система принимает его без ошибок, а аппаратная часть идентична.</p></div></details>
+
+<h2 id="решение-проблем-с-портами-и-очередью-печати">Решение проблем с портами и очередью печати</h2>
+<p>Иногда драйвер устанавливается успешно, но печать не начинается. Чаще всего проблема кроется в неверно выбранном порте. Перейдите в «Устройства и принтеры» (через Панель управления), найдите свой <strong>Canon</strong> принтер, нажмите правой кнопкой мыши и выберите «Свойства принтера».</p>
+
+<p>Откройте вкладку «Порты». Проверьте, стоит ли галочка напротив порта <code>USB001 (Виртуальный порт принтера для USB)</code>. Если принтер подключен к другому разъему, система могла создать порт <code>USB002</code> или <code>USB003</code>. Попробуйте переключить галочку на следующий доступный порт, нажать «Применить» и отправить тестовую страницу.</p>
+
+<p>Если принтер печатает страницы с символами, которые невозможно прочитать, это означает, что данные идут в сыром виде. В этом случае нужно проверить, не конфликтуют ли драйверы. Удалите устройство полностью и установите драйвер заново, убедившись, что старый драйвер полностью удален из системы.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Симптом</th>
+<th>Вероятная причина</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Принтер не реагирует</td>
+<td>Неподписанный драйвер</td>
+<td>Установить драйвер LBP 6000</td>
+</tr>
+<tr>
+<td>Печать "мусора"</td>
+<td>Конфликт портов</td>
+<td>Сменить порт USB в свойствах</td>
+</tr>
+<tr>
+<td>Ошибка "Очередь печати"</td>
+<td>Зависший процесс spooler</td>
+<td>Перезапустить службу печати</td>
+</tr>
+<tr>
+<td>Компьютер не видит USB</td>
+<td>Неисправен кабель</td>
+<td>Заменить USB-кабель</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>⚠️ Внимание: Если принтер печатает тестовую страницу, но не может работать с документами из Word или Excel, проверьте, не заблокирован ли доступ к службе <code>Spooler</code> в настройках брандмауэра или антивируса.</blockquote>
+
+<h2 id="устранение-зависания-очереди-печати">Устранение зависания очереди печати</h2>
+<p>Одной из самых частых проблем при работе с устаревшим оборудованием на современной ОС является зависание очереди печати. Документ отправляется, но остается в статусе «В очереди» или «Приостановлено». Это происходит из-за того, что драйвер не получает подтверждения от принтера о завершении приема данных.</p>
+
+<p>Чтобы исправить это, откройте окно «Службы» (нажмите <code>Win + R</code> и введите <code>services.msc</code>). Найдите в списке службу «Диспетчер печати» (Print Spooler). Кликните по ней правой кнопкой мыши и выберите «Перезапустить». Это очистит временные файлы очереди.</p>
+
+<p>Для более глубокой очистки можно удалить папку <code>C:\Windows\System32\spool\PRINTERS</code> вручную, предварительно остановив службу. После перезагрузки службы очередь должна быть чистой. <strong>Автоматическая очистка</em> при перезагрузке также помогает, если проблема возникает систематически.</p>
+
+<p>Если проблема повторяется постоянно, возможно, скорость передачи данных по USB слишком высока для драйвера. В свойствах системы, в разделе «Диспетчер устройств» -> «Контроллеры USB», можно попробовать отключить функцию «Выборочная приостановка USB» для экономии энергии, что иногда стабилизирует работу.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перезапуск службы Диспетчер печати — это первое действие, которое нужно предпринять при зависании очереди печати на любом устройстве, включая устаревшие модели Canon.</p></aside>
+
+<h2 id="финальная-проверка-и-настройка-качества-печати">Финальная проверка и настройка качества печати</h2>
+<p>После того как принтер успешно подключен и печатает тестовую страницу, необходимо настроить параметры качества. В свойствах принтера откройте вкладку «Параметры страницы» или «Специальные настройки». Для модели <em>Canon LBP 810</em> доступно несколько режимов плотности печати, что важно для экономии тонера или повышения четкости текста.</p>
+
+<p>Установите режим <code>Экономия тонера</code>, если вам нужно печатать черновики, или выберите <code>Высокое качество</code> для важных документов. Также проверьте настройки ориентации бумаги и типа носителя. Хотя принтер старый, он поддерживает работу с различными плотностями бумаги, если правильно настроить драйвер.</p>
+
+<p>Рекомендуется регулярно очищать контактные группы и проверять уровень тонера, так как старые модели чувствительны к загрязнению сенсоров. Если печать стала бледной или появляются полосы, возможно, потребуется замена картриджа или чистка фотобарабана, но это уже вопросы обслуживания, а не ПО.</p>
+
+<p>Теперь ваш <strong>Canon LBP 810</strong> полностью готов к работе в среде <em>Windows 10</em>. Вы успешно преодолели барьер совместимости и продлили жизнь надежному устройству. Не забывайте проводить профилактику программного обеспечения и обновлять драйверы только при необходимости, чтобы не нарушить стабильность настройки.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Сохраните установочный файл драйвера на отдельном флеш-накопителе или в облаке. Если вы переустановите Windows, найти драйвер для такой старой модели может быть очень сложно.</p></aside>
+
+<details>
+<summary>Почему Windows 10 не видит принтер Canon LBP 810?</summary>
+<p>Операционная система Windows 10 не имеет встроенных драйверов для этой модели в своей базе. Это связано с прекращением официальной поддержки устройства производителем. Для работы необходимо вручную установить совместимый драйвер, например, от модели LBP 6000.</p>
+</details>
+
+<details>
+<summary>Можно ли подключить Canon LBP 810 по сети Wi-Fi?</summary>
+<p>Нет, модель Canon LBP 810 не имеет встроенного сетевого модуля и не поддерживает подключение по Wi-Fi. Для работы с сетью необходимо использовать внешний USB-сервер печати или подключать принтер напрямую к компьютеру, с которого затем осуществляется общая печать.</p>
+</details>
+
+<details>
+<summary>Что делать, если после установки драйвера принтер печатает "мусор"?</summary>
+<p>Это означает, что данные отправляются в виде сырого кода, который принтер не может интерпретировать. Попробуйте сменить порт в свойствах принтера (например, с USB001 на USB002) или переустановить драйвер, удалив старую версию через Панель управления.</p>
+</details>
+
+<details>
+<summary>Где скачать драйвер, если на сайте Canon его нет?</summary>
+<p>Поскольку официальные ссылки удалены, можно использовать драйверы от аналогичных моделей серии LBP (например, LBP 6000 или LBP 810 II), которые совместимы по аппаратной части. Также существуют специализированные репозитории драйверов, где пользователи делятся проверенными архивами.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-podklyuchit-k-noutbuku-printer-canon-lbp-810.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon LBP 810 к ноутбуку: Полное руководство</span>
+                <span class="pb-related-desc">Подробная инструкция по установке драйверов и подключению Canon LBP 810 через USB. Решение частых ош</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-kenon-mg3640-cherez-wi-fi.html" class="pb-related-card">
+                <span class="pb-related-title">Подключение принтера Canon MG3640 к Wi-Fi: Полная инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по настройке беспроводного подключения принтера Canon MG3640. Способы WPS, кно</span>
+            </a><a href="/articles/k/ka/kak-skinut-video-s-fotoapparata-canon-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как скинуть видео с Canon на ПК: 5 способов переноса файлов</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как перекинуть видео с фотоаппарата Canon на компьютер через USB, карту памяти</span>
+            </a><a href="/articles/p/pr/printer-canon-ne-v-seti-kak-ispravit.html" class="pb-related-card">
+                <span class="pb-related-title">Принтер Canon не в сети: как исправить ошибку и восстановить печать</span>
+                <span class="pb-related-desc">Узнайте, почему принтер Canon отображается как &#x27;не в сети&#x27; и как вернуть его работу. Пошаговая инстр</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-drajver-na-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить драйвер на принтер Canon: пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Полное руководство по установке драйверов Canon. Методы через сайт, автоматическую установку Windows</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-k-novoj-seti-wifi-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Настройка Wi-Fi на принтере Canon: полное руководство по подключению</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как подключить принтер Canon к новой сети Wi-Fi. Обзор методов WPS, Canon IJ N</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

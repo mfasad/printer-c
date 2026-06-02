@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как сканировать на компьютер Windows 10: Canon imageRUNNER 4018 — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция по настройке сканирования с МФУ Canon imageRUNNER 4018 на ПК с Windows 10. Настройка драйверов, UFR II, TWAIN и UFR II Scan.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-mf4018-kak-skanirovat-na-kompyuter-windows-10.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как сканировать на компьютер Windows 10: Canon imageRUNNER 4018">
+    <meta property="og:description" content="Пошаговая инструкция по настройке сканирования с МФУ Canon imageRUNNER 4018 на ПК с Windows 10. Настройка драйверов, UFR II, TWAIN и UFR II Scan.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как сканировать на компьютер Windows 10: Canon imageRUNNER 4018</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#выбор-и-настройка-необходимых-драйверов">Выбор и настройка необходимых драйверов</a></li><li><a href="#процесс-установки-программного-обеспечения">Процесс установки программного обеспечения</a></li><li><a href="#подключение-через-локальную-сеть-и-usb">Подключение через локальную сеть и USB</a></li><li><a href="#настройка-сканирования-через-панель-управления">Настройка сканирования через панель управления</a></li><li><a href="#сканирование-с-панели-управления-мфу">Сканирование с панели управления МФУ</a></li><li><a href="#решение-распространенных-проблем-и-ошибок">Решение распространенных проблем и ошибок</a></li><li><a href="#продвинутые-настройки-и-оптимизация">Продвинутые настройки и оптимизация</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-ustanovit-skaner-na-printere-canon-mf3010.html">Как настроить сканер на Canon MF3010: драйверы и ПО</a></li><li><a href="/articles/c/ca/canon-ir1133-kak-skanirovat.html">Как сканировать на Canon imageRUNNER 1133: Полная инструкция</a></li><li><a href="/articles/c/ca/canon-mf4140-kak-skanirovat.html">Как сканировать на Canon imageRUNNER 4140: Полное руководство</a></li><li><a href="/articles/p/pr/printer-kenon-2540-kak-skanirovat.html">Как сканировать с принтера Canon PIXMA 2540: полное руководство</a></li><li><a href="/articles/k/ka/kak-sdelat-kopiyu-na-mfu-canon-pixma-g3411.html">Как сделать копию на МФУ Canon Pixma G3411: Пошаговая инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полное руководство: сканирование с Canon imageRUNNER 4018 на Windows 10</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#выбор-и-настройка-необходимых-драйверов">Выбор и настройка необходимых драйверов</a></li><li><a href="#процесс-установки-программного-обеспечения">Процесс установки программного обеспечения</a></li><li><a href="#подключение-через-локальную-сеть-и-usb">Подключение через локальную сеть и USB</a></li><li><a href="#настройка-сканирования-через-панель-управления">Настройка сканирования через панель управления</a></li><li><a href="#сканирование-с-панели-управления-мфу">Сканирование с панели управления МФУ</a></li><li><a href="#решение-распространенных-проблем-и-ошибок">Решение распространенных проблем и ошибок</a></li><li><a href="#продвинутые-настройки-и-оптимизация">Продвинутые настройки и оптимизация</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Многофункциональное устройство <em>Canon imageRUNNER 4018</em> представляет собой надежное решение для офисной документооборота, однако его функционал раскрывается полностью только при правильной интеграции с компьютером. Пользователи, работающие с операционной системой <strong>Windows 10</strong>, иногда сталкиваются с трудностями при первичной настройке, поскольку современный интерфейс ОС отличается от устаревших версий, а стандартные средства автоматического обнаружения могут не срабатывать сразу.</p>
+
+<p>Для корректной работы необходимо установить специализированные драйверы, которые обеспечивают не только печать, но и полноценную передачу отсканированных документов в цифровом виде. Игнорирование официальных утилит от <em>Canon</em> часто приводит к тому, что кнопки сканирования на панели управления не реагируют, либо изображение передается с искажениями и низким качеством.</p>
+
+<p>В данной инструкции мы подробно разберем все этапы подключения, начиная от загрузки драйверов и заканчивая настройкой протоколов передачи данных, чтобы вы могли мгновенно получать отсканированные файлы на своем рабочем столе.</p>
+
+<h2 id="выбор-и-настройка-необходимых-драйверов">Выбор и настройка необходимых драйверов</h2>
+
+<p>Перед началом физического подключения устройства к компьютеру критически важно подготовить программную среду. Для модели <em>Canon imageRUNNER 4018</em> в среде <strong>Windows 10</strong> существует несколько видов драйверов, но для сканирования ключевыми являются пакеты <strong>UFR II</strong> и <strong>ScanGear</strong>. Стандартный драйвер Microsoft часто не поддерживает расширенные функции сканирования, поэтому установка родного ПО от производителя является обязательным условием.</p>
+
+<p>Скачивать программное обеспечение следует только с официального сайта <em>Canon</em>, введя точную модель устройства в поисковую строку раздела поддержки. В списке доступных файлов для вашей операционной системы нужно найти пакет «Driver & Utility», который обычно содержит все необходимые компоненты в одном установочном файле или разбит на логические части.</p>
+
+<p>Важно обратить внимание на архитектуру вашей системы: если <strong>Windows 10</strong> установлена в 64-битной версии, вам необходим соответствующий драйвер 64-bit. Установка 32-битных драйверов на современную систему приведет к тому, что сканер будет виден в диспетчере устройств, но не сможет передавать изображения.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Перед началом установки обязательно отключите кабель USB от компьютера. Инсталлятор сам попросит подключить устройство в нужный момент, и преждевременное подключение может привести к конфликту версий драйверов.</p>
+</blockquote>
+
+<p>Процесс установки требует прав администратора, поэтому при запросе системы UAC (Контроль учетных записей) необходимо подтвердить действие. В процессе инсталляции мастер предложит выбрать тип подключения: через локальную сеть (Ethernet/Wi-Fi) или напрямую через USB-кабель. Выбор зависит от вашей конфигурации офиса.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если вы не нашли полный пакет драйверов, можно установить их по отдельности: сначала драйвер принтера UFR II, а затем отдельно модуль сканирования ScanGear или UFR II Scan.</p></aside>
+
+<h2 id="процесс-установки-программного-обеспечения">Процесс установки программного обеспечения</h2>
+
+<p>Запустите скачанный установочный файл <code>Setup.exe</code> и дождитесь инициализации мастера установки. На первом этапе вам предложат принять лицензионное соглашение, после чего система проведет проверку совместимости компонентов с вашей версией <strong>Windows 10</strong>.</p>
+
+<p>В меню выбора компонентов отметьте галочками пункты, отвечающие за сканирование. Обычно это <code>UFR II Scan</code> или <code>ScanGear</code>. Если вы планируете использовать функцию сканирования в папку (Scan to Folder), обязательно выберите соответствующий модуль, так как он отвечает за сетевую передачу файлов.</p>
+
+<p>После выбора компонентов нажмите кнопку «Установить» и подождите завершения процесса. Индикатор прогресса может двигаться медленно, особенно если устанавливаются дополнительные библиотеки обработки изображений. Не прерывайте процесс и не закрывайте окно инсталляции до появления сообщения об успехе.</p>
+
+<p>Если система попросит перезагрузку, выполните её немедленно, чтобы новые драйверы корректно прописались в реестре. После перезагрузки снова подключите кабель USB или проверьте подключение по сети, если вы выбрали этот вариант.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к установке драйверов</h4><label class="check-item"><input type="checkbox"><span>Скачать полную версию драйвера с сайта Canon</span></label><label class="check-item"><input type="checkbox"><span>Отключить кабель USB от ПК</span></label><label class="check-item"><input type="checkbox"><span>Запустить файл Setup.exe от имени администратора</span></label><label class="check-item"><input type="checkbox"><span>Подключить устройство только после запроса инсталлятора</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="подключение-через-локальную-сеть-и-usb">Подключение через локальную сеть и USB</h2>
+
+<p>При подключении через кабель USB процесс детектирования устройства происходит автоматически сразу после физического соединения. Система <strong>Windows 10</strong> попытается найти уже установленный драйвер и завершит конфигурацию. Если этого не произошло, откройте «Диспетчер устройств» и проверьте, нет ли в списке «Принтеры» или «Устройства обработки изображений» маркировки с восклицательным знаком.</p>
+
+<p>Подключение по сети требует, чтобы <em>Canon imageRUNNER 4018</em> был подключен к роутеру и имел назначенный IP-адрес. В меню самого принтера перейдите в раздел <code>Система > Настройки сети > TCP/IP</code> и убедитесь, что адрес получен корректно (не 0.0.0.0).</p>
+
+<p>На компьютере в окне установки драйвера выберите опцию «Поиск устройств в сети». Мастер установки просканирует подсеть и предложит список найденных принтеров. Выберите ваш <em>Canon</em> из списка и нажмите «Далее» для завершения привязки.</p>
+
+<details class="pb-accordion"><summary>Проблемы с поиском принтера в сети</summary><div class="pb-accordion-body"><p>Если принтер не найден, проверьте, находится ли компьютер и МФУ в одной подсети. Иногда брандмауэр Windows блокирует поиск устройств, временно отключите его для настройки.</p></div></details>
+
+<p>Сетевое подключение предпочтительнее в офисах, так как позволяет использовать сканирование с любого рабочего места без необходимости прокладки кабелей. Однако при этом важно убедиться в стабильности соединения, чтобы избежать прерывания передачи больших файлов.</p>
+
+<h2 id="настройка-сканирования-через-панель-управления">Настройка сканирования через панель управления</h2>
+
+<p>После успешной установки драйверов можно приступать к настройке интерфейса сканирования. Запустите утилиту <code>Canon IJ Scan Utility</code> или <code>Canon MF Scan Utility</code>, которая должна появиться в меню «Пуск». Это основной инструмент для управления процессом оцифровки документов с панели управления МФУ.</p>
+
+<p>В настройках утилиты необходимо выбрать профиль сканирования: «Документ», «Фото» или «Изображение». Для текстовых документов чаще всего выбирают режим <strong>PDF</strong> с разрешением <code>300 dpi</code>, что обеспечивает оптимальное соотношение качества и размера файла.</p>
+
+<p>Чтобы документ попал сразу в нужную папку, настройте путь сохранения. По умолчанию файлы могут сохраняться в папку «Документы», но вы можете указать любой другой каталог, включая сетевые папки или облачные хранилища, если они смонтированы как локальные диски.</p>
+
+<div class="pb-table-wrap"><table>
+ <thead>
+ <tr>
+ <th>Тип данных</th>
+ <th>Рекомендуемое разрешение</th>
+ <th>Формат файла</th>
+ <th>Цветовое пространство</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Текстовые документы</td>
+ <td>300 dpi</td>
+ <td>PDF</td>
+ <td>Ч/Б</td>
+ </tr>
+ <tr>
+ <td>Фотографии</td>
+ <td>600 dpi</td>
+ <td>JPEG/PNG</td>
+ <td>RGB/Цветной</td>
+ </tr>
+ <tr>
+ <td>Контрактная документация</td>
+ <td>400 dpi</td>
+ <td>PDF/A</td>
+ <td>Ч/Б</td>
+ </tr>
+ <tr>
+ <td>Архивные чертежи</td>
+ <td>600 dpi</td>
+ <td>TIFF</td>
+ <td>Ч/Б</td>
+ </tr>
+ </tbody>
+</table></div>
+
+<p>Важно проверить галочку «Двустороннее сканирование» (Duplex), если в <em>Canon imageRUNNER 4018</em> установлена соответствующая опция. Это позволяет автоматически оцифровывать документ с обеих сторон, экономя время и место на диске.</p>
+
+<div class="pb-poll" id="poll-ecb31638"><div class="pb-poll-question">📊 Как вы чаще всего сканируете документы?</div><div class="pb-poll-option" data-poll="ecb31638" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Через панель принтера</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ecb31638" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Через программу на ПК</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ecb31638" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">По сети в общую папку</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ecb31638" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не использую сканирование</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="сканирование-с-панели-управления-мфу">Сканирование с панели управления МФУ</h2>
+
+<p>Самый быстрый способ получить отсканированный файл — использовать физическую панель управления самого устройства <em>Canon imageRUNNER 4018</em>. На дисплее принтера найдите кнопку «Сканирование» или «Scan». Если меню переведено на английский, ищите иконку, напоминающую лупу или документ с стрелкой.</p>
+
+<p>Вам нужно будет выбрать источник сканирования: «Автоматическая подача» (ADF) для пачки листов или «Стекло» (Platen) для книг, паспортов или хрупких документов. После выбора источника нажмите кнопку «Начать» или «Start».</p>
+
+<p>Если вы настроили профиль сканирования в программе на ПК, принтер может предложить выбрать этот профиль из списка «Избранное». Это позволит запускать сложные настройки (например, очистка фона или удаление текста) одной кнопкой.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> При сканировании через ADF убедитесь, что листы не скреплены скрепками или staples. Металлические предметы могут повредить валы подачи и оптику сканера, что потребует дорогостоящего ремонта.</p>
+</blockquote>
+
+<p>В процессе работы на экране принтера будет отображаться прогресс-бар. Не открывайте крышку и не отключайте питание до полного завершения процесса, иначе файл может быть поврежден или сохранен некорректно.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Использование панели управления принтера позволяет оцифровывать документы без участия компьютера, если настроена прямая отправка по сети или в USB-накопитель.</p></aside>
+
+<h2 id="решение-распространенных-проблем-и-ошибок">Решение распространенных проблем и ошибок</h2>
+
+<p>Иногда пользователи сталкиваются с тем, что после установки драйверов кнопка сканирования неактивна или выдает ошибку соединения. В первую очередь проверьте, запущен ли фоновый сервис <strong>Canon Scan Service</strong> в диспетчере задач Windows.</p>
+
+<p>Если принтер невидим в сети, попробуйте пропинговать его IP-адрес через командную строку <code>cmd</code>. Введите <pre><code>ping 192.168.1.XXX</code></pre> (замените на реальный адрес принтера). Если ответ не приходит, проблема на стороне сетевого оборудования, а не драйверов.</p>
+
+<p>Другая частая проблема — зависание процесса сканирования. Это может происходить из-за нехватки оперативной памяти на ПК при сканировании больших объемов. Попробуйте уменьшить разрешение или разбить длинный документ на несколько частей.</p>
+
+<p>Для диагностики состояния драйверов используйте утилиту «Состояние устройства» (Device Status), которая входит в комплект поставки. Она покажет уровень тонера, наличие замятий бумаги и статус (сетевое подключение).</p>
+
+<p>Если настройки сбиваются после обновления Windows, возможно, система заблокировала доступ к порту сканирования. Проверьте настройки брандмауэра: убедитесь, что для утилиты <code>Canon MF Scan Utility</code> разрешен входящий и исходящий трафик.</p>
+
+<h2 id="продвинутые-настройки-и-оптимизация">Продвинутые настройки и оптимизация</h2>
+
+<p>Для профессиональной работы с документами полезно настроить автоматическую очистку изображений. В настройках <em>ScanGear</em> можно включить функцию удаления фона, что делает текст более четким на пожелтевших листах.</p>
+
+<p>Также стоит настроить <strong>OCR-распознавание</strong>, если вам нужно редактировать текст после сканирования. Это превращает сканированный документ из картинки в редактируемый текст, что ускоряет работу с архивами.</p>
+
+<p>Не забывайте регулярно обновлять прошивку самого МФУ через веб-интерфейс. Новые версии прошивок часто содержат исправления ошибок протоколов сканирования и улучшают совместимость с современными версиями ОС.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> При обновлении прошивки через веб-интерфейс не прерывайте питание устройства. Неполная запись прошивки может привести к «окирпичиванию» контроллера печати.</p>
+</blockquote>
+
+<p>Используйте функцию «Преобразование в PDF/A» для юридических документов, чтобы гарантировать их долговечность и соответствие стандартам электронного документооборота. Эта опция доступна в расширенных настройках формата сохранения.</p>
+
+<details class="pb-accordion"><summary>Как настроить сканирование в облако</summary><div class="pb-accordion-body"><p>Через веб-интерфейс принтера можно настроить отправку сканов прямо в Google Drive или Dropbox, если у вас есть учетная запись и API ключи для интеграции.</p></div></details>
+
+<h2 id="часто-задаваемые-вопросы">Часто задаваемые вопросы</h2>
+
+<details>
+ <summary>Почему принтер не видит сканирование в Windows 10?</summary>
+ <p>Чаще всего это связано с отсутствием драйвера <strong>UFR II Scan</strong> или отключенным служебным процессом. Убедитесь, что установлено ПО от Canon, а не только стандартный драйвер Windows.</p>
+</details>
+
+<details>
+ <summary>Можно ли сканировать без компьютера?</summary>
+ <p>Да, если подключить USB-флешку к порту принтера или настроить отправку сканов по сети (Scan to Folder) на сетевой диск.</p>
+</details>
+
+<details>
+ <summary>Как изменить разрешение сканирования?</summary>
+ <p>Это делается в утилите <code>Canon MF Scan Utility</code> или через свойства принтера в разделе «Параметры сканирования». Выберите значение DPI перед запуском процесса.</p>
+</details>
+
+<details>
+ <summary>Что делать, если сканер зависает на 99%?</summary>
+ <p>Остановите процесс в диспетчере задач, перезапустите службу сканирования и проверьте, не закрыт ли файл на диске другими программами.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-ustanovit-skaner-na-printere-canon-mf3010.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить сканер на Canon MF3010: драйверы и ПО</span>
+                <span class="pb-related-desc">Пошаговая инструкция по установке ПО сканирования для МФУ Canon MF3010. Решение проблем с драйверами</span>
+            </a><a href="/articles/c/ca/canon-ir1133-kak-skanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на Canon imageRUNNER 1133: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство: сканирование в папку, в email и в USB. Настройка драйверов и устранение ошибо</span>
+            </a><a href="/articles/c/ca/canon-mf4140-kak-skanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на Canon imageRUNNER 4140: Полное руководство</span>
+                <span class="pb-related-desc">Подробная инструкция по сканированию на МФУ Canon MF4140. Настройка через панель, сканирование в пап</span>
+            </a><a href="/articles/p/pr/printer-kenon-2540-kak-skanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать с принтера Canon PIXMA 2540: полное руководство</span>
+                <span class="pb-related-desc">Подробная инструкция по сканированию документов и фото с Canon PIXMA 2540 через USB и Wi-Fi. Настрой</span>
+            </a><a href="/articles/k/ka/kak-sdelat-kopiyu-na-mfu-canon-pixma-g3411.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать копию на МФУ Canon Pixma G3411: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как быстро и качественно сделать копию на МФУ Canon Pixma G3411. Инструкция по настройке па</span>
+            </a><a href="/articles/k/ka/kak-vklyuchit-skanirovanie-na-printere-canon-mf3010.html" class="pb-related-card">
+                <span class="pb-related-title">Как включить сканирование на принтере Canon MF3010: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по настройке и активации функции сканирования на МФУ Canon MF3010. Решение про</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

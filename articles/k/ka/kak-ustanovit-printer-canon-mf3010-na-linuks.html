@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Установка Canon MF3010 на Linux: пошаговая инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Полная гайд по подключению МФУ Canon MF3010 к Ubuntu, Manjaro и другим дистрибутивам. Установка драйверов CUPS, настройка сканирования и устранение частых ошибок.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-ustanovit-printer-canon-mf3010-na-linuks.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Установка Canon MF3010 на Linux: пошаговая инструкция">
+    <meta property="og:description" content="Полная гайд по подключению МФУ Canon MF3010 к Ubuntu, Manjaro и другим дистрибутивам. Установка драйверов CUPS, настройка сканирования и устранение частых ошибок.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Установка Canon MF3010 на Linux: пошаговая инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-системы-и-проверка-подключений">Подготовка системы и проверка подключений</a></li><li><a href="#загрузка-и-установка-драйверов-из-официального-репозитория">Загрузка и установка драйверов из официального репозитория</a></li><li><a href="#настройка-сканирования-и-устранение-проблем-с-правами">Настройка сканирования и устранение проблем с правами</a></li><li><a href="#решение-проблем-с-зависимостями-и-библиотечными-конфликтами">Решение проблем с зависимостями и библиотечными конфликтами</a></li><li><a href="#использование-альтернативных-методов-подключения">Использование альтернативных методов подключения</a></li><li><a href="#проверка-работоспособности-и-тестовая-печать">Проверка работоспособности и тестовая печать</a></li><li><a href="#частые-ошибки-и-способы-их-устранения">Частые ошибки и способы их устранения</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-raspechatat-canon-mg2540s.html">Как распечатать документ на Canon MG2540S: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-vytashchit-kartridzh-canon.html">Как вытащить картридж Canon: Пошаговая инструкция для всех моделей</a></li><li><a href="/articles/p/pr/printer-kenon-strujnyj-kakoj-luchshe.html">Какой струйный принтер Canon лучше выбрать: обзор моделей и систем</a></li><li><a href="/articles/k/ka/kak-nastroit-tsveta-na-printere-canon-g1416.html">Настройка и калибровка цвета на принтере Canon Pixma G1416</a></li><li><a href="/articles/k/ka/kak-vklyuchit-tsvetnoj-kartridzh-na-printere-canon.html">Как включить цветной картридж на принтере Canon: 5 рабочих методов</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как установить принтер Canon MF3010 на Linux: полное руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-системы-и-проверка-подключений">Подготовка системы и проверка подключений</a></li><li><a href="#загрузка-и-установка-драйверов-из-официального-репозитория">Загрузка и установка драйверов из официального репозитория</a></li><li><a href="#настройка-сканирования-и-устранение-проблем-с-правами">Настройка сканирования и устранение проблем с правами</a></li><li><a href="#решение-проблем-с-зависимостями-и-библиотечными-конфликтами">Решение проблем с зависимостями и библиотечными конфликтами</a></li><li><a href="#использование-альтернативных-методов-подключения">Использование альтернативных методов подключения</a></li><li><a href="#проверка-работоспособности-и-тестовая-печать">Проверка работоспособности и тестовая печать</a></li><li><a href="#частые-ошибки-и-способы-их-устранения">Частые ошибки и способы их устранения</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Работа с периферийным оборудованием в среде <strong>Linux</strong> часто вызывает трудности у пользователей, привыкших к автоматическому поиску драйверов в Windows. Модель <em>Canon MF3010</em>, несмотря на свою надежность и популярность, имеет особенности драйверной поддержки, требующие ручного вмешательства для корректной работы на дистрибутивах <strong>Ubuntu</strong>, <strong>Debian</strong> или <strong>Arch</strong>. Без правильных настроек устройство может определяться системой как "неизвестное" или работать исключительно в режиме печати, игнорируя функции сканирования.</p>
+
+<p>В отличие от современных моделей, <em>MF3010</em> не всегда находит свои драйверы в стандартных репозиториях системы. Это связано с тем, что производитель выпускает пакеты специально для <strong>Debian-based</strong> систем, которые могут не подходить для <strong>RedHat</strong> или <strong>SUSE</strong> без предварительной конвертации. Если вы столкнулись с тем, что компьютер видит принтер, но не может напечатать первый тестовый лист, вам потребуется скачать и установить специализированный <strong>CUPS-драйвер</strong> и утилиту для сканирования.</p>
+
+<h2 id="подготовка-системы-и-проверка-подключений">Подготовка системы и проверка подключений</h2>
+<p>Прежде чем начинать загрузку файлов, необходимо убедиться, что физическое соединение между компьютером и МФУ established. Подключите устройство через <strong>USB-кабель</strong> к свободному порту и включите его в сеть. Система должна зафиксировать новое оборудование. Проверьте это, открыв терминал и введя команду <code>lsusb</code>. В выводе вы должны увидеть строку, содержащую название <em>Canon</em> и модель <em>MF3010</em>.</p>
+<p>Если система не видит устройство, проблема может быть в кабеле или порте. Попробуйте заменить кабель или подключить его к другому порту, желательно на задней панели системного блока, так как они подключены напрямую к материнской плате. Убедитесь, что в системе установлен пакет <strong>cups</strong> и <strong>cups-filters</strong>, так как они являются фундаментом для печати в Linux.</p>
+<p>Важно также проверить права доступа к USB-устройствам. Обычный пользователь может не иметь прав на запись в принтер. Добавьте вашего пользователя в группу <code>lp</code> с помощью команды <code>sudo usermod -aG lp $USER</code>. После выполнения этой команды потребуетсявыйти из системы и войти снова.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Драйверы для <em>Canon MF3010</em> часто имеют разные версии для 32-битных и 64-битных архитектур. Убедитесь, что вы скачиваете пакет именно для вашей разрядности системы, иначе установка завершится ошибкой зависимостей.</p>
+</blockquote>
+
+<h2 id="загрузка-и-установка-драйверов-из-официального-репозитория">Загрузка и установка драйверов из официального репозитория</h2>
+<p>Официальная страница поддержки Canon предоставляет пакеты <strong>.deb</strong> для систем семейства Debian и Ubuntu. Вам необходимо зайти на сайт производителя и найти раздел загрузки для <em>MF3010</em>. Ищите пакет с названием <code>cnijfilter2</code> для печати и <code>scangearmp2</code> для сканирования. Эти пакеты содержат все необходимые библиотеки для работы МФУ.</p>
+
+<p>После скачивания двух архивов, распакуйте их и перейдите в директорию с установочными файлами. Для установки драйвера печати выполните команду <code>sudo dpkg -i cnijfilter2-*.deb</code>. Если система выдаст ошибку о зависимостях, пропишите <code>sudo apt-get install -f</code> для автоматического исправления ситуации. Аналогично установите пакет сканера.</p>
+<p>Для дистрибутивов, не основанных на Debian (например, <em>Fedora</em> или <em>OpenSUSE</em>), процесс сложнее. Вам придется использовать утилиту <code>alien</code> для конвертации <strong>.deb</strong> в <strong>.rpm</strong> пакеты. Это надежный способ, но он требует наличия дополнительных библиотек в системе. Конвертация делается командой <code>sudo alien cnijfilter2-*.deb</code>.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Инструкция по установке драйверов</h4><label class="check-item"><input type="checkbox"><span>Скачать драйвер cnijfilter2</span></label><label class="check-item"><input type="checkbox"><span>Скачать драйвер scangearmp2</span></label><label class="check-item"><input type="checkbox"><span>Установить через dpkg</span></label><label class="check-item"><input type="checkbox"><span>Исправить зависимости apt-get install -f</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Иногда автоматическая установка не выявляет принтер. В этом случае нужно добавить устройство вручную через веб-интерфейс <strong>CUPS</strong>. Откройте браузер и перейдите по адресу <code>http://localhost:631</code>. В меню "Administration" выберите "Add Printer". Система запросит логин и пароль администратора.</p>
+
+<p>В списке устройств найдите <em>Canon MF3010</em> или устройство по его USB-идентификатору. Выберите его и нажмите "Continue". На этапе выбора драйвера в списке "Make" найдите <strong>Canon</strong>, а в "Model" выберите <em>MF3010</em> или <em>Canon MF3010 series</em>. Если точной модели нет, выберите ближайшую совместимую, например, <strong>MF3010 (CUPS+Gutenprint)</strong>.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Если в списке драйверов нет точного совпадения с <em>MF3010</em>, не выбирайте универсальный драйвер PPD без проверки. Это может привести к тому, что функция сканирования не будет работать корректно или отобразится некорректное качество печати.</p>
+</blockquote>
+
+<div class="pb-poll" id="poll-840b709b"><div class="pb-poll-question">📊 Какой дистрибутив Linux вы используете?</div><div class="pb-poll-option" data-poll="840b709b" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Ubuntu</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="840b709b" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Debian</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="840b709b" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Fedora</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="840b709b" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Arch</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="840b709b" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">OpenSUSE</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="настройка-сканирования-и-устранение-проблем-с-правами">Настройка сканирования и устранение проблем с правами</h2>
+<p>После установки драйверов печати часто возникает проблема со сканированием. Утилита <strong>Simple Scan</strong> или встроенное приложение <em>Document Scanner</em> могут не видеть МФУ. Это связано с тем, что драйвер сканирования <code>scangearmp2</code> требует запуска собственного демон-сервиса или настройки прав доступа к <strong>SANE</strong>. Убедитесь, что пакет <strong>sane</strong> установлен в системе.</p>
+<p>Для проверки работоспособности сканера откройте терминал и выполните команду <code>scanimage -L</code>. Если устройство обнаружено, вы увидите строку, начинающуюся с <em>device</em> и указывающую на <em>Canon</em>. Если сканер не виден, возможно, служба <strong>scangearmp2</strong> не запущена. В некоторых случаях требуется добавить пользователя в группу <code>scanner</code>.</p>
+
+<p>Иногда помогает перезапуск службы CUPS. Это сбрасывает очередь печати и обновляет список доступных устройств. Команда <code>sudo systemctl restart cups</code> выполнит эту задачу мгновенно. После этого попробуйте снова открыть приложение для сканирования.</p>
+
+<p>d</strong>. Если автоматическое обнаружение не сработало, проверьте файл <code>/etc/sane.d/dll.conf</code>. Убедитесь, что в нем раскомментирована строка, отвечающая за драйвер <em>cnij</em> или <em>usb</em>.</p>
+
+<details class="pb-accordion"><summary>Как проверить версию драйвера сканирования?</summary><div class="pb-accordion-body"><p>Введите в терминале команду dpkg -l | grep scangearmp2. Если пакет установлен, вы увидите его версию и дату установки. Если нет — система вернет пустой результат или ошибку.</p></div></details>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Компонент</th>
+<th>Название пакета</th>
+<th>Назначение</th>
+<th>Команда установки</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Драйвер печати</td>
+<td>cnijfilter2</td>
+<td>Обеспечивает вывод изображений на бумагу</td>
+<td>dpkg -i cnijfilter2-*.deb</td>
+</tr>
+<tr>
+<td>Драйвер сканирования</td>
+<td>scangearmp2</td>
+<td>Позволяет сканировать документы с ПК</td>
+<td>dpkg -i scangearmp2-*.deb</td>
+</tr>
+<tr>
+<td>Служба печати</td>
+<td>cups</td>
+<td>Системный сервис управления очередью</td>
+<td>apt install cups</td>
+</tr>
+<tr>
+<td>Утилита сканирования</td>
+<td>simple-scan</td>
+<td>Графический интерфейс для работы со сканером</td>
+<td>apt install simple-scan</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="решение-проблем-с-зависимостями-и-библиотечными-конфликтами">Решение проблем с зависимостями и библиотечными конфликтами</h2>
+<p>Одной из самых частых проблем при установке <em>Canon MF3010</em> на Linux является отсутствие необходимых библиотек. Драйверы Canon часто ссылаются на старые версии <strong>libusb</strong> или <strong>libpq</strong>, которые могут отсутствовать в репозиториях современных дистрибутивов. Ошибка "Package has unmet dependencies" — это сигнал к тому, что системе не хватает конкретных.so файлов.</p>
+<p>Для решения этой проблемы можно попробовать установить недостающие библиотеки вручную через <code>apt install libusb-0.1-4</code> или аналогичные пакеты. Если у вас 64-битная система, но драйвер 32-битный, потребуется включить поддержку архитектуры i386 командой <code>sudo dpkg --add-architecture i386</code> и обновить списки пакетов.</p>
+
+<p>В случае с дистрибутивами на базе <strong>Arch Linux</strong> (например, <em>Manjaro</em>), пользователи часто используют AUR (Arch User Repository). Там могут быть готовые скрипты для установки драйверов <em>MF3010</em>, которые автоматически подтягивают все зависимости. Инструмент <code>yay</code> или <code>pacaur</code> значительно упрощает этот процесс, избавляя от ручного поиска файлов.</p>
+
+<p>Если стандартные методы не помогают, попробуйте установить драйвер через <strong>WinP</strong> или эмуляцию Windows-драйверов, хотя это крайний случай. Обычно достаточно просто найти правильную версию драйвера, которая была выпущена до прекращения поддержки Windows XP, так как ядро Linux того времени совместимо с современными.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Установка недостающих библиотек через apt или pacman — ключевой этап для успешной работы драйверов Canon на Linux, так как они часто требуют специфических зависимостей.</p></aside>
+
+<h2 id="использование-альтернативных-методов-подключения">Использование альтернативных методов подключения</h2>
+<p>Если установка через <strong>dpkg</strong> вызывает слишком много сложностей, можно попробовать использовать универсальный драйвер <strong>Gutenprint</strong>. Он не всегда поддерживает все функции МФУ, но часто позволяет печатать базовые документы. Выберите его в списке "Make" как "Canon" и "Model" как "Gutenprint CUPS+Gutenprint".</p>
+<p>Для более продвинутых пользователей доступен метод сборки драйвера из исходного кода. На сайте Canon иногда выкладывают <strong>tar.gz</strong> архивы с исходниками. Компиляция требует наличия компилятора <code>gcc</code> и библиотек <strong>make</strong>. Это сложный путь, но он дает максимальную совместимость с ядром вашей системы.</p>
+
+<p>Также стоит упомянуть возможность использования <strong>OpenPrinting</strong> драйверов, которые поддерживаются сообществом. Они могут быть более стабильными в долгосрочной перспективе, так как обновляются чаще, чем проприетарные драйверы от вендора. Проверьте репозитории вашего дистрибутива на наличие пакета <code>printer-driver-cjet</code>.</p>
+
+<p>Если вы используете <em>Ubuntu</em> с оболочкой <strong>GNOME</strong>, убедитесь, что у вас установлена последняя версия <strong>GSettings</strong>. Иногда настройки принтера не сохраняются из-за конфликта версий графической среды. Перезагрузка системы после установки всех пакетов помогает сбросить эти конфликты.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед повторной попыткой установки драйверов, полностью удалите старые пакеты командой sudo apt-get remove cnijfilter2 scangearmp2, чтобы избежать конфликтов версий.</p></aside>
+
+<h2 id="проверка-работоспособности-и-тестовая-печать">Проверка работоспособности и тестовая печать</h2>
+<p>После всех манипуляций необходимо убедиться, что <em>Canon MF3010</em> работает корректно. Создайте тестовый документ в любом текстовом редакторе, например, в <strong>LibreOffice</strong>. Откройте меню печати и выберите установленный принтер. Нажмите "Свойства" и убедитесь, что качество печати установлено на стандартное значение.</p>
+<p>Запустите тестовую страницу из настроек принтера. В интерфейсе <strong>CUPS</strong> это делается через вкладку "Maintenance" -> "Print Test Page". Если печать началась и лист вышел, поздравляем, драйвер установлен успешно. Если принтер жужжит, но не печатает, проверьте, не заблокирован ли картридж.</p>
+
+<p>Для проверки сканирования создайте новый файл в <strong>Simple Scan</strong>. Нажмите кнопку "Scan". Если окно предпросмотра показывает изображение с лотка, значит, проблема решена. Попробуйте отсканировать документ в разных форматах: <strong>PDF</strong>, <strong>JPEG</strong> и <strong>TIFF</strong>, чтобы убедиться в стабильности работы.</p>
+
+<p>Если возникают проблемы с качеством сканирования (например, видны полосы или чернота), проверьте стекло сканера. Иногда достаточно протереть его салфеткой. Также в настройках драйвера можно изменить разрешение сканирования с 300 dpi на 600 dpi для более четкого текста, хотя это увеличит время обработки.</p>
+
+<h2 id="частые-ошибки-и-способы-их-устранения">Частые ошибки и способы их устранения</h2>
+<p>Одной из распространенных ошибок является сообщение "Filter failed". Это означает, что драйвер не смог обработать данные перед отправкой на принтер. Чаще всего это связано с отсутствием нужного конвертера данных. Установите пакеты <strong>filters</strong> и <strong>ghostscript</strong> через менеджер пакетов.</p>
+<p>Другая проблема — устройство пропадает после перезагрузки. Это может быть связано с тем, что служба <strong>CUPS</strong> не запускается автоматически. Проверьте это командой <code>systemctl status cups</code>. Если статус "inactive", включите автозагрузку: <code>sudo systemctl enable cups</code>.</p>
+
+<p>Иногда ошибка возникает из-за неправильного формата файла при печати PDF. Убедитесь, что вы используете современный просмотрщик PDF, такой как <strong>Okular</strong> или <strong>Evince</strong>, а не старый <strong>Xpdf</strong>. Новые версии имеют улучшенную поддержку профилей цвета и драйверов.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> При использовании драйверов от сторонних репозиториев (не официальных), существует риск нестабильной работы системы. Всегда создавайте резервную копию конфигурации перед внесением изменений в системные файлы.</p>
+</blockquote>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Почему мой Linux не видит принтер Canon MF3010 при подключении по USB?</summary>
+<p><p>Вероятно, у вас не установлены драйверы или права доступа к USB-порту. Проверьте вывод команды <code>lsusb</code>. Если устройство есть, но не работает, добавьте пользователя в группу <code>lp</code> и переустановите драйверы <strong>cnijfilter2</strong>.</p></p>
+</details>
+
+<details>
+<summary>Можно ли использовать этот принтер в сети без сервера печати?</summary>
+<p><p>Нет, <em>Canon MF3010</em> не имеет встроенного сетевого интерфейса (Ethernet или Wi-Fi). Для работы в сети вам потребуется компьютер, подключенный к принтеру по USB, и настройка общего доступа через <strong>CUPS</strong> или Samba.</p></p>
+</details>
+
+<details>
+<summary>Как обновить драйверы, если вышла новая версия?</summary>
+<p><p>Скачайте новый пакет с официального сайта, удалите старую версию через <code>dpkg -r</code> и установите новую. Автоматические обновления в репозиториях часто не содержат свежих драйверов для специфических моделей.</p></p>
+</details>
+
+<details>
+<summary>Работает ли сканирование через Wi-Fi при подключении через USB-шлюз?</summary>
+<p><p>Если вы подключили принтер к роутеру через USB-порт (если роутер поддерживает), сканирование может не работать, так как протокол <em>scangear</em> требует прямого USB-соединения или сложной настройки SANE на сетевом уровне.</p></p>
+</details>
+
+<details>
+<summary>Что делать, если печатает только черным цветом, а цветной картридж установлен?</summary>
+<p><p><em>Canon MF3010</em> — это монохромный черно-белый лазерный принтер. Цветной картридж в него не устанавливается. Если у вас цветная модель, возможно, вы перепутали модель или у вас неисправен цветной картридж. <em>MF3010</em> печатает только в оттенках серого.</p></p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-raspechatat-canon-mg2540s.html" class="pb-related-card">
+                <span class="pb-related-title">Как распечатать документ на Canon MG2540S: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство: подключение, установка драйверов, настройка печати и решение частых проблем д</span>
+            </a><a href="/articles/k/ka/kak-vytashchit-kartridzh-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как вытащить картридж Canon: Пошаговая инструкция для всех моделей</span>
+                <span class="pb-related-desc">Узнайте, как безопасно извлечь картридж Canon из принтера и МФУ. Разбор моделей, частые ошибки и сов</span>
+            </a><a href="/articles/p/pr/printer-kenon-strujnyj-kakoj-luchshe.html" class="pb-related-card">
+                <span class="pb-related-title">Какой струйный принтер Canon лучше выбрать: обзор моделей и систем</span>
+                <span class="pb-related-desc">Полный гид по выбору струйного принтера Canon. Сравнение MG, TS, G-серий и технологии Pigment. Совет</span>
+            </a><a href="/articles/k/ka/kak-nastroit-tsveta-na-printere-canon-g1416.html" class="pb-related-card">
+                <span class="pb-related-title">Настройка и калибровка цвета на принтере Canon Pixma G1416</span>
+                <span class="pb-related-desc">Пошаговая инструкция по настройке цветов на Canon G1416. Узнайте, как исправить выцветание, настроит</span>
+            </a><a href="/articles/k/ka/kak-vklyuchit-tsvetnoj-kartridzh-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как включить цветной картридж на принтере Canon: 5 рабочих методов</span>
+                <span class="pb-related-desc">Инструкция по активации цветной печати на принтерах Canon. Обзор причин отключения цвета, настройки </span>
+            </a><a href="/articles/k/ka/kak-raspechatat-proverochnyj-list-v-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как распечатать проверочный лист на принтере Canon: 4 простых способа</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как вывести на печать диагностический лист Canon для проверки сопел, выравнива</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

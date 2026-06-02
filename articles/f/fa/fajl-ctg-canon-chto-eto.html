@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Файл CTG Canon: что это и как восстановить цвет — Кэнон Инфо</title>
+    <meta name="description" content="Разбираем назначение файла CTG для принтеров Canon. Инструкция по восстановлению чернил и сбросу ошибок картриджей.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/f/fa/fajl-ctg-canon-chto-eto.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Файл CTG Canon: что это и как восстановить цвет">
+    <meta property="og:description" content="Разбираем назначение файла CTG для принтеров Canon. Инструкция по восстановлению чернил и сбросу ошибок картриджей.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-nav-active">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/zapravka-kartridzhej/">Заправка картриджей</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Файл CTG Canon: что это и как восстановить цвет</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#техническое-назначение-расширения-ctg-в-экосистеме-canon">Техническое назначение расширения CTG в экосистеме Canon</a></li><li><a href="#как-работает-механизм-подсчета-чернил-и-роль-конфигурационного-файла">Как работает механизм подсчета чернил и роль конфигурационного файла</a></li><li><a href="#синхронизация-данных-между-драйвером-и-прошивкой-устройства">Синхронизация данных между драйвером и прошивкой устройства</a></li><li><a href="#основные-ошибки-связанные-с-файлами-конфигурации-картриджей">Основные ошибки, связанные с файлами конфигурации картриджей</a></li><li><a href="#инструменты-и-утилиты-для-работы-с-конфигурацией-картриджей">Инструменты и утилиты для работы с конфигурацией картриджей</a></li><li><a href="#процедура-сброса-и-восстановления-работоспособности">Процедура сброса и восстановления работоспособности</a></li><li><a href="#предотвращение-проблем-с-конфигурацией-в-будущем">Предотвращение проблем с конфигурацией в будущем</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-zakachat-kartridzh-canon.html">Как закачать картридж Canon: пошаговая инструкция по заправке и рестарту</a></li><li><a href="/articles/k/ka/kak-pomenyat-kartridzh-v-printere-canon-mp160.html">Замена картриджа в Canon MP160: пошаговая инструкция 2026</a></li><li><a href="/articles/k/ka/kak-zapravit-kartridzh-canon-2540s.html">Как заправить картридж Canon 2540s: пошаговая инструкция и нюансы</a></li><li><a href="/articles/k/ka/kak-prognat-krasku-v-printere-canon-g3411.html">Как прогнать краску в принтере Canon G3411: Полная инструкция</a></li><li><a href="/articles/c/ca/canon-040-skolko-tonera-sypat.html">Canon 040: сколько тонера сыпать при заправке картриджа</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Файл CTG Canon: назначение, принципы работы и восстановление</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#техническое-назначение-расширения-ctg-в-экосистеме-canon">Техническое назначение расширения CTG в экосистеме Canon</a></li><li><a href="#как-работает-механизм-подсчета-чернил-и-роль-конфигурационного-файла">Как работает механизм подсчета чернил и роль конфигурационного файла</a></li><li><a href="#синхронизация-данных-между-драйвером-и-прошивкой-устройства">Синхронизация данных между драйвером и прошивкой устройства</a></li><li><a href="#основные-ошибки-связанные-с-файлами-конфигурации-картриджей">Основные ошибки, связанные с файлами конфигурации картриджей</a></li><li><a href="#инструменты-и-утилиты-для-работы-с-конфигурацией-картриджей">Инструменты и утилиты для работы с конфигурацией картриджей</a></li><li><a href="#процедура-сброса-и-восстановления-работоспособности">Процедура сброса и восстановления работоспособности</a></li><li><a href="#предотвращение-проблем-с-конфигурацией-в-будущем">Предотвращение проблем с конфигурацией в будущем</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Многие владельцы струйных принтеров <em>Canon</em> сталкиваются с непонятными файлами в папках утилит или при скачивании драйверов, которые имеют расширение <strong>ctg</strong>. Часто пользователи путают эти файлы с изображениями или текстовыми документами, пытаясь открыть их стандартными средствами системы. На самом деле, это специализированные конфигурационные файлы, играющие ключевую роль в управлении состоянием картриджей.</p>
+
+<p>Образование ошибки <strong>принудительной остановки печати</strong> или блокировка картриджа часто происходит именно из-за некорректной работы с данными, содержащимися в таких файлах. Они хранят информацию о количестве израсходованных чернил и состоянии печатающей головки. Понимание того, как работает <em>файл CTG</em>, позволяет избежать дорогостоящего ремонта или преждевременной покупки новых расходных материалов.</p>
+
+<p>В этой статье мы подробно разберем природу этих файлов, их влияние на работу принтера и способы восстановления работоспособности картриджей. Вы узнаете, как правильно интерпретировать данные, которые <strong>принтер Canon</strong> пытается записать в память картриджа, и что делать в случае сбоя.</p>
+
+<h2 id="техническое-назначение-расширения-ctg-в-экосистеме-canon">Техническое назначение расширения CTG в экосистеме Canon</h2>
+
+<p>Расширение <code>.ctg</code> является сокращением от слова "Cartridge" (картридж) и обозначает файл конфигурации, содержащий служебную информацию о расходном материале. Этот файл не является визуальным изображением или архивом, он представляет собой набор бинарных данных, которые <strong>микропроцессор принтера</strong> считывает при инициализации печати.</p>
+
+<p>Когда вы подключаете устройство <em>Canon Pixma</em> или <em>Canon MAXIFY</em> к компьютеру, специальное программное обеспечение взаимодействует с файлом <strong>CTG</strong> для синхронизации уровня чернил. Если данные в этом файле повреждены или не соответствуют физическому состоянию картриджа, система может отключить печать, даже если чернила еще есть.</p>
+
+<p>Важно понимать, что этот файл часто хранится не на самом картридже, а в памяти принтера или в локальной папке драйвера на компьютере. При заправке картриджей необходимо учитывать, что <strong>сброс счетчика</strong> часто требует обновления именно этих конфигурационных записей, а не только физического пополнения резервуара.</p>
+
+<h2 id="как-работает-механизм-подсчета-чернил-и-роль-конфигурационного-файла">Как работает механизм подсчета чернил и роль конфигурационного файла</h2>
+
+<p>Принтеры <em>Canon</em> используют два основных метода отслеживания уровня чернил: оптический датчик (в моделях с чипами на картриджах) и программный счетчик (в моделях без чипов). Файл <strong>CTG</strong> отвечает за программный учет, накапливая данные о количестве пропущенных страниц и объемах чернил, прошедших через <strong>Печатающую Головку (PH)</strong>.</p>
+
+<p>Каждый раз, когда вы отправляете документ на печать, драйвер обновляет соответствующие параметры в конфигурационном файле. Если <code>ctg</code> файл переполняется или в нем возникает ошибка записи, принтер переходит в режим защиты, блокируя дальнейшую работу. Это защита производителя от использования неоригинальных или заправленных картриджей без должного контроля.</p>
+
+<p>При использовании утилит для сброса счетчика (Reset Tool) происходит именно перезапись данных внутри этого виртуального файла. Программа сообщает принтеру, что уровень чернил <strong>полностью восстановлен</strong>, и сбрасывает флаги ошибок. Без корректной работы с этим файлом заправка картриджа будет бессмысленной, так как принтер продолжит считать его пустым.</p>
+
+<blockquote>
+<p>⚠️ Внимание: <strong>Не пытайтесь открывать файл CTG</strong> в текстовых редакторах или графических программах. Бинарный формат данных может быть поврежден при попытке некорректного редактирования, что приведет к полной потере информации о состоянии картриджа.</p>
+</blockquote>
+
+<div class="pb-poll" id="poll-bca41165"><div class="pb-poll-question">📊 Какое расширение файла вы чаще всего находите в папке с драйверами?</div><div class="pb-poll-option" data-poll="bca41165" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">.ctg</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="bca41165" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">.crd</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="bca41165" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">.bin</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="bca41165" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">.dat</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="синхронизация-данных-между-драйвером-и-прошивкой-устройства">Синхронизация данных между драйвером и прошивкой устройства</h2>
+
+<p>Для корректной работы принтера необходима постоянная синхронизация между данными, хранящимися в <strong>файле CTG</strong> на компьютере, и прошивкой самого устройства. Драйвер принтера периодически опрашивает принтер, сравнивает запрошенные данные с локальным файлом конфигурации и при необходимости обновляет их.</p>
+
+<p>Если вы переустановили драйверы или сменили операционную систему, старый файл <code>.ctg</code> может быть удален или перестать соответствовать новой версии прошивки. В таких случаях принтер может начать выдавать ложные ошибки о низком уровне чернил или невозможности печати, даже если картриджи исправны.</p>
+
+<p>Решением проблемы часто становится полное удаление старых драйверов и файлов конфигурации с последующей чистой установкой ПО. Важно убедиться, что <em>Canon IJ Scan Utility</em> и другие сопутствующие утилиты также были очищены, так как они могут кэшировать устаревшие данные о состоянии картриджей.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед переустановкой драйверов зайдите в «Управление устройствами» и удалите все записи, связанные с принтером Canon, чтобы гарантировать полное удаление старых файлов конфигурации CTG.</p></aside>
+
+<h2 id="основные-ошибки-связанные-с-файлами-конфигурации-картриджей">Основные ошибки, связанные с файлами конфигурации картриджей</h2>
+
+<p>Самой распространенной проблемой является ошибка <strong>5B00</strong> или сообщения о том, что картридж не определяется. Часто причина кроется не в физической неисправности, а в рассинхронизации данных в файле <code>.ctg</code>. Принтер видит, что счетчик превысил лимит, и блокирует работу, игнорируя реальный объем чернил.</p>
+
+<p>Другой частой проблемой является невозможность сброса счетчика через стандартные утилиты. Это происходит, если файл конфигурации поврежден на уровне файловой системы или если принтер был отключен в процессе обновления данных. В таком случае <strong>сброс через сервисное меню</strong> может не сработать без предварительного восстановления файла.</p>
+
+<p>Иногда пользователи сталкиваются с ситуацией, когда принтер <em>Canon</em> требует замены картриджа, хотя на самом деле он заправлен. Это сигнал о том, что файл CTG не получил команду о сбросе. В таких случаях необходимо вручную инициировать процесс перезаписи конфигурации через специальный софт.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Если принтер зависает на этапе инициализации картриджей, это может указывать на критическую ошибку в чтении файла <strong>CTG</strong>. В этом случае рекомендуется отключить питание на 30 секунд, чтобы сбросить кэш памяти устройства.</p>
+</blockquote>
+
+<h2 id="инструменты-и-утилиты-для-работы-с-конфигурацией-картриджей">Инструменты и утилиты для работы с конфигурацией картриджей</h2>
+
+<p>Для управления файлами <code>.ctg</code> и сброса счетчиков используются специализированные сервисные программы, которые часто называются "Resetter" или "Service Tool". Эти утилиты имеют прямой доступ к области памяти принтера, где хранятся данные о состоянии картриджей, и позволяют модифицировать их.</p>
+
+<p>Ниже приведена таблица популярных утилит для разных серий принтеров <em>Canon</em>, которые могут взаимодействовать с конфигурационными файлами:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Серия принтера</th>
+<th>Тип утилиты</th>
+<th>Функция сброса</th>
+<th>Сложность</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pixma iP / MP / MG</td>
+<td>Service Tool</td>
+<td>Сброс счетчика Waste Ink</td>
+<td>Средняя</td>
+</tr>
+<tr>
+<td>Pixma G (система СНПЧ)</td>
+<td>WIC Reset / Canon Tool</td>
+<td>Сброс счетчика чернил</td>
+<td>Низкая</td>
+</tr>
+<tr>
+<td>MAXIFY MB / GX</td>
+<td>Manual Reset Tool</td>
+<td>Сброс ошибок картриджей</td>
+<td>Высокая</td>
+</tr>
+<tr>
+<td>Серия PIXMA TR</td>
+<td>DSU / IJ Start</td>
+<td>Проверка состояния</td>
+<td>Низкая</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Использование этих инструментов требует осторожности. Неправильные действия могут привести к тому, что <strong>материнская плата принтера</strong> потеряет связь с картриджами навсегда. Перед запуском любой утилиты убедитесь, что вы скачали именно ту версию, которая соответствует вашей модели и версии прошивки.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед сбросом счетчика</h4><label class="check-item"><input type="checkbox"><span>Убедиться в наличии чернил в картриджах</span></label><label class="check-item"><input type="checkbox"><span>Закрасить чипы изолентой (при необходимости)</span></label><label class="check-item"><input type="checkbox"><span>Подключить принтер напрямую к USB</span></label><label class="check-item"><input type="checkbox"><span>Выключить другие программы печати</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="процедура-сброса-и-восстановления-работоспособности">Процедура сброса и восстановления работоспособности</h2>
+
+<p>Процесс восстановления работоспособности принтера через работу с файлами конфигурации состоит из нескольких этапов. Сначала необходимо определить точную модель устройства и версию прошивки, так как <strong>алгоритм сброса</strong> может отличаться даже для близких моделей.</p>
+
+<p>После запуска утилиты сброса следует внимательно следить за состоянием индикаторов на принтере. Обычно процесс сопровождается миганием светодиодов, которое сигнализирует о записи данных в память. До завершения процесса <strong>не отключайте кабель питания</strong> и USB-соединение.</p>
+
+<p>Если сброс прошел успешно, принтер должен автоматически перезагрузиться и начать печать тестовой страницы. В случае неудачи попробуйте повторить процедуру, предварительно выключив принтер из розетки на 5-10 минут, чтобы полностью обнулить оперативную память устройства.</p>
+
+<details class="pb-accordion"><summary>Что делать, если сброс не помог?</summary><div class="pb-accordion-body"><p>Если утилита выдает ошибку подключения или сброс не сработал, возможно, проблема в физическом контакте чипа картриджа. Попробуйте протереть контакты чипа ластиком или спиртом. Также проверьте, не заблокировал ли производитель принтер на уровне прошивки, обновив её до последней версии.</p></div></details>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Сброс счетчика чернил через сервисные утилиты — это программное решение, имитирующее установку новых картриджей, но оно не заменяет физическую очистку системы от некачественных чернил.</p></aside>
+
+<h2 id="предотвращение-проблем-с-конфигурацией-в-будущем">Предотвращение проблем с конфигурацией в будущем</h2>
+
+<p>Чтобы избежать постоянных проблем с файлами <code>.ctg</code> и блокировками принтера, рекомендуется использовать оригинальные заправочные наборы или качественные аналоги. Дешевые чернила могут засорять каналы, что приводит к ошибкам, которые программа не может исправить простым сбросом счетчика.</p>
+
+<p>Регулярное обновление драйверов и прошивки также помогает поддерживать корректную работу механизма синхронизации. Производители <em>Canon</em> часто выпускают обновления, устраняющие баги в работе счетчиков чернил и улучшающие алгоритмы определения состояния картриджей.</p>
+
+<p>Если вы часто используете принтер в интенсивном режиме, рассмотрите возможность перехода на принтеры с системой непрерывной подачи чернил (СНПЧ). В таких моделях, как <strong>Canon G-серия</strong>, механизм учета чернил упрощен, и проблема с файлами конфигурации возникает значительно реже.</p>
+
+<blockquote>
+<p>⚠️ Внимание: <strong>Сброс счетчика не восстанавливает физическое состояние Печатающей Головки.</strong> Если головка забита или повреждена, программный сброс не решит проблему с качеством печати. Регулярно выполняйте очистку головок через стандартное меню обслуживания.</p>
+</blockquote>
+
+<h2 id="часто-задаваемые-вопросы">Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Можно ли открыть файл CTG обычным блокнотом?</summary>
+<p><p>Нет, файл <code>.ctg</code> содержит бинарные данные, которые не читаются в текстовом режиме. Попытка открыть его в Блокноте приведет к отображению бессмысленного набора символов и может повредить файл.</p></p>
+</details>
+
+<details>
+<summary>Где хранится файл конфигурации картриджа?</summary>
+<p><p>Данные хранятся в двух местах: в памяти самого принтера (EEPROM) и в локальной папке драйвера на компьютере, обычно в <code>C:\ProgramData\Canon\IJPrinter</code> или аналогичном каталоге.</p></p>
+</details>
+
+<details>
+<summary>Поможет ли сброс счетчика, если картридж пуст?</summary>
+<p><p>Нет, программный сброс только обнуляет счетчик, но не добавляет чернила. Если физически картридж пуст, печать будет невозможна, даже если ошибка сброслена.</p></p>
+</details>
+
+<details>
+<summary>Опасно ли использовать сервисные утилиты для сброса?</summary>
+<p><p>Использование утилит несет риск, если выбран неверная версия программы. Неправильный сброс может привести к "окирпичиванию" принтера. Всегда сверяйте номер модели и версию ПО.</p></p>
+</details>
+
+<details>
+<summary>Можно ли отключить контроль чернил навсегда?</summary>
+<p><p>Полностью отключить контроль невозможно без перепрошивки устройства, что лишает гарантии. Однако можно использовать утилиты для периодического сброса счетчика, имитируя новые картриджи.</p></p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-zakachat-kartridzh-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как закачать картридж Canon: пошаговая инструкция по заправке и рестарту</span>
+                <span class="pb-related-desc">Подробный гид по самостоятельной заправке картриджей Canon. Разбор чипов, выбор тонера, перезапуск с</span>
+            </a><a href="/articles/k/ka/kak-pomenyat-kartridzh-v-printere-canon-mp160.html" class="pb-related-card">
+                <span class="pb-related-title">Замена картриджа в Canon MP160: пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Как правильно поменять картридж в принтере Canon PIXMA MP160: подготовка, установка, сброс ошибок и </span>
+            </a><a href="/articles/k/ka/kak-zapravit-kartridzh-canon-2540s.html" class="pb-related-card">
+                <span class="pb-related-title">Как заправить картридж Canon 2540s: пошаговая инструкция и нюансы</span>
+                <span class="pb-related-desc">Подробная инструкция по заправке картриджа Canon 2540s. Разбор конструкции, выбор тонера, чистка фот</span>
+            </a><a href="/articles/k/ka/kak-prognat-krasku-v-printere-canon-g3411.html" class="pb-related-card">
+                <span class="pb-related-title">Как прогнать краску в принтере Canon G3411: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая инструкция по инициализации и прогону чернил в Canon G3411. Решение проблем с печатью, очи</span>
+            </a><a href="/articles/c/ca/canon-040-skolko-tonera-sypat.html" class="pb-related-card">
+                <span class="pb-related-title">Canon 040: сколько тонера сыпать при заправке картриджа</span>
+                <span class="pb-related-desc">Точные нормы заправки тонера для Canon 040 (CL-446, 446XL): сколько грамм нужно, как проверить урове</span>
+            </a><a href="/articles/k/ka/kak-menyat-kraski-v-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как менять краски в принтере Canon: полная инструкция по заправке</span>
+                <span class="pb-related-desc">Пошаговое руководство, как менять краски в принтере Canon. Инструкция для моделей с СНПЧ и картриджа</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

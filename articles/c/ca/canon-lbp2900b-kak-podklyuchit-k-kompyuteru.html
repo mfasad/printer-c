@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Подключение Canon LBP2900B к ПК: драйверы, USB и Linux — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция по подключению принтера Canon LBP2900B. Установка драйверов, настройка через USB, решение проблем с обнаружением устройства.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-lbp2900b-kak-podklyuchit-k-kompyuteru.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Подключение Canon LBP2900B к ПК: драйверы, USB и Linux">
+    <meta property="og:description" content="Пошаговая инструкция по подключению принтера Canon LBP2900B. Установка драйверов, настройка через USB, решение проблем с обнаружением устройства.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/podklyuchenie-k-pk/">Подключение к ПК</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Подключение Canon LBP2900B к ПК: драйверы, USB и Linux</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-оборудования-и-проверка-комплектации">Подготовка оборудования и проверка комплектации</a></li><li><a href="#поиск-и-загрузка-совместимых-драйверов">Поиск и загрузка совместимых драйверов</a></li><li><a href="#инструкция-по-установке-драйверов-и-настройке">Инструкция по установке драйверов и настройке</a></li><li><a href="#решение-проблем-с-портами-и-обнаружением">Решение проблем с портами и обнаружением</a></li><li><a href="#особенности-работы-на-linux-и-macos">Особенности работы на Linux и macOS</a></li><li><a href="#техническое-обслуживание-и-частые-ошибки">Техническое обслуживание и частые ошибки</a></li><li><a href="#заключение-и-итоговые-рекомендации">Заключение и итоговые рекомендации</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/p/pr/printer-canon-lbp7010c-kak-podklyuchit.html">Как подключить Canon LBP7010C к компьютеру: полная инструкция</a></li><li><a href="/articles/k/ka/kak-perekinut-fotografii-s-fotoapparata-kenon-na-kompyuter.html">Как перекинуть фото с Canon на ПК: 5 способов переноса снимков</a></li><li><a href="/articles/k/ka/kak-ustanovit-skaner-kenon-mf-3110.html">Как установить сканер Canon MF3110 на Windows и Mac: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-vklyuchit-blyutuz-na-printere-canon-mg-3600.html">Подключение Canon MG3600 по Bluetooth: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-kenon-mf-3228.html">Подключение принтера Canon MF3228: пошаговая инструкция 2026</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полное руководство: как подключить Canon LBP2900B к компьютеру</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-оборудования-и-проверка-комплектации">Подготовка оборудования и проверка комплектации</a></li><li><a href="#поиск-и-загрузка-совместимых-драйверов">Поиск и загрузка совместимых драйверов</a></li><li><a href="#инструкция-по-установке-драйверов-и-настройке">Инструкция по установке драйверов и настройке</a></li><li><a href="#решение-проблем-с-портами-и-обнаружением">Решение проблем с портами и обнаружением</a></li><li><a href="#особенности-работы-на-linux-и-macos">Особенности работы на Linux и macOS</a></li><li><a href="#техническое-обслуживание-и-частые-ошибки">Техническое обслуживание и частые ошибки</a></li><li><a href="#заключение-и-итоговые-рекомендации">Заключение и итоговые рекомендации</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Принтер <em>Canon LBP2900B</em> остается одним из самых популярных устройств в сегменте бюджетной офисной печати благодаря своей надежности и простоте конструкции. Несмотря на то, что модель была выпущена довольно давно, она по-прежнему активно используется в школах, государственных учреждениях и малом бизнесе. Однако, при попытке подключить устройство к современному компьютеру, пользователи часто сталкиваются с трудностями, особенно в операционных системах Windows 10 и 11, где старые драйверы не устанавливаются автоматически.</p>
+
+<p>Процесс подключения требует не только физического соединения кабелями, но и правильного программного обеспечения. Ошибки в выборе версии драйвера или неправильный порядок действий могут привести к тому, что устройство останется невидимым для системы. В этой статье мы подробно разберем, как корректно подключить <strong>Canon LBP2900B</strong> к компьютеру, избегая распространенных ошибок и используя проверенные методы настройки.</p>
+
+<h2 id="подготовка-оборудования-и-проверка-комплектации">Подготовка оборудования и проверка комплектации</h2>
+<p>Перед началом любых манипуляций с программным обеспечением необходимо убедиться, что аппаратная часть готова к работе. <strong>Canon LBP2900B</strong> — это лазерный принтер, который не имеет встроенного модуля беспроводной связи, поэтому единственным способом соединения с ПК является кабель типа USB. Убедитесь, что кабель находится в исправном состоянии, так как повреждение экранирующей оплетки или контактов может вызывать периодические сбои в передаче данных.</p>
+
+<p>Важно проверить, что устройство подключено непосредственно к USB-порту материнской платы, а не через внешний USB-хаб. Внешние концентраторы часто не могут обеспечить достаточную силу тока для инициализации лазерного принтера, что приводит к ошибке «Устройство не опознано». Если на передней панели компьютера нет свободных портов, используйте заднюю панель системного блока.</p>
+
+<ul>
+<li>🖨️ Убедитесь, что в лотке для бумаги установлены листы формата <code>A4</code> и рычаг регулировки ширины бумаги зафиксирован.</li>
+<li>💡 Проверьте индикатор «Ready» (Готово): он должен гореть зеленым цветом, если устройство исправно.</li>
+<li>🔌 Используйте только оригинальный или сертифицированный кабель USB 2.0 типа A-B.</li>
+</ul>
+
+<p>Если индикатор мигает красным цветом, возможно, возникла проблема с тонером или открыт люк доступа к картриджу. В таком случае подключение к компьютеру бессмысленно до устранения аппаратной неисправности. Также стоит проверить, не перегревается ли блок питания, так как в старых моделях это может вызывать автоматическое отключение устройства.</p>
+
+<blockquote>⚠️ Внимание: Не подключайте устройство к компьютеру до установки драйверов, если у вас Windows 10 или новее. Система может попытаться установить стандартный драйвер, который не поддерживает функции <strong>Canon LBP2900B</strong>, что в итоге потребует сложного удаления устройства из диспетчера устройств.</blockquote>
+
+<div class="pb-poll" id="poll-1d256cbc"><div class="pb-poll-question">📊 Какая у вас версия Windows?</div><div class="pb-poll-option" data-poll="1d256cbc" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 7</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1d256cbc" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 10</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1d256cbc" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 11</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1d256cbc" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Linux</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="поиск-и-загрузка-совместимых-драйверов">Поиск и загрузка совместимых драйверов</h2>
+<p>Самая критичная часть настройки — это обеспечение совместимости программного обеспечения с операционной системой. Официальный сайт <em>Canon</em> часто не предлагает драйверов для <strong>Canon LBP2900B</strong> специально для Windows 11 или свежих сборок Windows 10, так как поддержка модели прекращена. Однако, драйверы для Windows 7 или Windows 8.1 (версия LBP2900+_v3010) отлично работают на современных системах при правильном режиме совместимости.</p>
+
+<p>Скачивать ПО необходимо только с проверенных источников. Официальный сайт производителя предоставляет архив с названием, содержащим «LBP2900+», что указывает на поддержку всех ревизий модели, включая «B». Версия драйвера должна быть актуальной, но не обязательно самой новой, так как стабильность важнее новизны. Для 64-битных систем ищите файл с пометкой <code>x64</code>, а для 32-битных — <code>x86</code>.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Операционная система</th>
+<th>Рекомендуемая версия драйвера</th>
+<th>Совместимость</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows 7 (32/64)</td>
+<td>LBP2900_1.02 / LBP2900+_v3010</td>
+<td>Официальная поддержка</td>
+</tr>
+<tr>
+<td>Windows 10 (64)</td>
+<td>LBP2900+_v3010</td>
+<td>Совместимость (требует настройки)</td>
+</tr>
+<tr>
+<td>Windows 11 (64)</td>
+<td>LBP2900+_v3010</td>
+<td>Совместимость (требует настройки)</td>
+</tr>
+<tr>
+<td>Linux (Debian/Ubuntu)</td>
+<td>cups-bjnp / драйвер CAPT</td>
+<td>Требует настройку через терминал</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>После загрузки архива его необходимо распаковать. Часто драйвер поставляется в виде самораспаковывающегося файла или ZIP-архива. Распаковка в папку, где отсутствуют пробелы и кириллица в названии, упрощает будущую отладку. Если архив не открывается, возможно, он поврежден, и загрузку следует повторить.</p>
+
+<h2 id="инструкция-по-установке-драйверов-и-настройке">Инструкция по установке драйверов и настройке</h2>
+<p>Процесс установки имеет свои тонкости, которые часто игнорируются пользователями. Сначала распакуйте архив с драйверами в отдельную папку. Запустите файл <code>setup.exe</code> от имени администратора. В появившемся окне мастера установки выберите пункт «Скачайте и установите драйвер» или «Установить драйвер», если интернет недоступен. Если система не может найти драйвер автоматически, укажите путь к распакованной папке вручную.</p>
+
+<p>Ключевой момент: не подключайте кабель USB, пока программа установки не запросит об этом. Если вы подключите устройство раньше, Windows может идентифицировать его как «Неизвестное устройство» и заблокировать корректную установку. Мастер установки сам попросит вас подключить принтер в определенном окне, когда он будет готов к приему данных.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Установка драйверов</h4><label class="check-item"><input type="checkbox"><span>Загрузить драйвер CAPT</span></label><label class="check-item"><input type="checkbox"><span>Распаковать архив</span></label><label class="check-item"><input type="checkbox"><span>Запустить setup.exe от имени администратора</span></label><label class="check-item"><input type="checkbox"><span>Подключить USB по запросу мастера</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Если автоматическое обнаружение не сработало, попробуйте метод принудительной установки через «Диспетчер устройств». Откройте <code>Диспетчер устройств</code> (через <code>Win + X</code>), найдите устройство с желтым восклицательным знаком, нажмите «Обновить драйвер» и выберите «Выполнить поиск драйверов на этом компьютере». Укажите путь к папке с драйверами, где находятся файлы с расширением <code>.inf</code>.</p>
+
+<p>Для пользователей Windows 10 и 11 часто требуется запуск установщика в режиме совместимости. Нажмите правой кнопкой мыши на <code>setup.exe</code>, выберите «Свойства», затем вкладку «Совместимость» и отметьте галочкой «Запустить программу в режиме совместимости с: Windows 7 (или 8.1)». Это критически важно, так как старые установщики не видят новые API системы без этой настройки.</p>
+
+<details class="pb-accordion"><summary>Что делать, если драйвер не устанавливается?</summary><div class="pb-accordion-body"><p>Возможно, служба спулинга печати (Print Spooler) зависла. Попробуйте перезагрузить этот сервис через «Службы» или использовать утилиту Canon Print Utility, которая автоматически находит и устраняет конфликты портов.</p></div></details>
+
+<h2 id="решение-проблем-с-портами-и-обнаружением">Решение проблем с портами и обнаружением</h2>
+<p>Частой проблемой после установки является статус «Принтер не готов» или невозможность отправить документ на печать. Это связано с тем, что драйвер <strong>Canon LBP2900B</strong> использует проприетарный протокол CAPT, который требует активного подключения USB. В отличие от сетевых принтеров, он не будет работать, если кабель вынут даже на секунду. Проверьте настройки порта в свойствах принтера.</p>
+
+<p>Зайдите в <code>Панель управления → Устройства и принтеры</code>, нажмите правой кнопкой на <em>Canon LBP2900B</em> и выберите «Настройка принтера». Перейдите на вкладку «Порты». Убедитесь, что стоит галочка напротив порта <code>LPT1</code> или, что более вероятно для USB-подключения, <code>USB001</code> (или USB002, USB003). Если порт пуст или выбран неверно, принтер не сможет печатать.</p>
+
+<ul>
+<li>🔍 Если порт <code>USB001</code> отсутствует, нажмите «Добавить порт» и выберите «Local Port», указав имя порта <code>USB001</code> вручную.</li>
+<li>🔄 Попробуйте сменить физический порт на другом разъеме материнской платы, чтобы обновить номер виртуального порта.</li>
+<li>🛠️ Используйте утилиту «Canon Printer Status Monitor» для диагностики состояния связи.</li>
+</ul>
+
+<p>Иногда система подменяет драйвер на стандартный Microsoft после обновления Windows. В этом случае снова зайдите в «Диспетчер устройств», найдите принтер, нажмите «Обновить драйвер» и выберите «Выбрать драйвер из списка доступных драйверов». В списке найдите <em>Canon LBP2900B</em> и выберите его. Если его нет в списке, нажмите «Установить с диска» и укажите путь к файлам.</p>
+
+<blockquote>⚠️ Внимание: Если при печати документ зависает в очереди, проверьте, не переполнена ли папка временных файлов. Очистите папку <code>C:\Windows\System32\spool\PRINTERS</code> и перезапустите службу «Спулитель печати».</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если принтер перестал отвечать после спящего режима, зайдите в «Управление электропитанием» в свойствах USB-порта и снимите галочку с разрешения отключения устройства для экономии энергии.</p></aside>
+
+<h2 id="особенности-работы-на-linux-и-macos">Особенности работы на Linux и macOS</h2>
+<p>Подключение <strong>Canon LBP2900B</strong> к операционным системам Linux и macOS требует значительно больше усилий, так как официальная поддержка этих платформ для данной модели отсутствует. На Linux необходимо использовать проприетарный драйвер CAPT от Canon или open-source альтернативы, такие как пакет <code>cups-bjnp</code>. Для Ubuntu и производных часто требуется ручная установка и настройка через терминал.</p>
+
+<p>Процесс на Linux начинается с установки библиотек <code>libcupdcapt</code> и <code>cups</code>. После установки драйвера необходимо добавить принтер через веб-интерфейс CUPS по адресу <code>http://localhost:631</code>. Система может не увидеть устройство автоматически из-за прав доступа к USB-порту. Необходимо добавить пользователя в группу <code>lp</code> и перезагрузить систему.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>На Linux подключение Canon LBP2900B требует ручной настройки прав доступа к USB и установки сторонних библиотек, так как официального драйвера в репозиториях нет.</p></aside>
+
+<p>На macOS ситуация еще сложнее: современные версии системы не поддерживают драйверы <em>Canon</em> для этой модели через стандартные механизмы. Пользователям часто приходится искать старые версии драйверов для Mac OS X 10.6 или использовать методы эмуляции, что не гарантирует стабильной работы. В некоторых случаях проще заменить принтер на модель с поддержкой AirPrint.</p>
+
+<h2 id="техническое-обслуживание-и-частые-ошибки">Техническое обслуживание и частые ошибки</h2>
+<p>Даже при успешной настройке, пользователь может столкнуться с аппаратными сбоями, которые имитируют проблемы с ПО. Коды ошибок на дисплее принтера (мигающий оранжевый индикатор) часто указывают на проблемы с тонером или картриджем. Например, 5 миганий означают, что чип картриджа не определяется, что может произойти после заправки некачественным тонером.</p>
+
+<p>Для устранения проблем с печатью «пустыми листами» или «артефактами» необходимо проверить фотобарабан и вал первичного заряда. Также стоит убедиться, что в настройках драйвера в разделе «Свойства принтера → Параметры устройства» выбран тип бумаги <code>Обычная бумага</code>. Если выбран «Толстый картон», принтер может греться и останавливать печать из-за перегрева.</p>
+
+<p>Регулярная очистка внутренних компонентов от пыли и остатков тонера продлевает жизнь <em>Canon LBP2900B</em>. Используйте специальную щетку или сжатый воздух для очистки области термоблока. Не пытайтесь протереть фотобарабан влажной тканью, так как это может привести к необратимым повреждениям светочувствительного слоя.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярная очистка термоблока и проверка чипов картриджей предотвращают 80% аппаратных сбоев этой модели, даже при правильном подключении к сети.</p></aside>
+
+<h2 id="заключение-и-итоговые-рекомендации">Заключение и итоговые рекомендации</h2>
+<p>Подключение <strong>Canon LBP2900B</strong> к компьютеру — задача решаемая, даже на современных операционных системах. Главное — соблюдать последовательность действий: сначала драйвер, потом кабель, и использование режима совместимости для старых установщиков. Игнорирование требований к источнику питания и типу USB-порта часто становится причиной того, что принтер не виден системой.</p>
+
+<p>Если вы столкнулись с проблемами, которые не удается решить стандартными методами, стоит проверить целостность кабеля и попробовать подключить устройство к другому компьютеру. Это поможет локализовать проблему: является ли она аппаратной неисправностью самого принтера или конфликтом программного обеспечения конкретного ПК.</p>
+
+<ul>
+<li>✅ Всегда проверяйте версию драйвера перед установкой, чтобы убедиться в совместимости с вашей ОС.</li>
+<li>✅ Не используйте USB-хабы для подключения устройства к ПК.</li>
+<li>✅ При сбое печати первым делом очищайте очередь печати и проверяйте статус службы спулинга.</li>
+</ul>
+
+<details>
+<summary>Почему принтер не определяется после установки драйвера?</summary>
+<p>Возможная причина — конфликт портов или неправильный порядок подключения. Попробуйте удалить устройство из «Диспетчера устройств», отключить кабель, перезагрузить компьютер и подключить кабель только после запуска установки драйвера.</p>
+</details>
+
+<details>
+<summary>Работает ли Canon LBP2900B на Windows 11?</summary>
+<p>Да, работает, но требует установки драйвера версии для Windows 7 или 8.1 в режиме совместимости. Официального драйвера для Windows 11 не существует, но старые версии отлично функционируют.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать этот принтер в сети?</summary>
+<p>Нет, модель Canon LBP2900B не имеет встроенного сетевого интерфейса (Ethernet или Wi-Fi). Для сетевой печати необходимо использовать «Принтер-сервер» (USB-сервер) или подключить его к одному из компьютеров и открыть общий доступ к устройству.</p>
+</details>
+
+<details>
+<summary>Что делать, если печатаются только пустые листы?</summary>
+<p>Скорее всего, закончился тонер или проблема с чипом картриджа. Попробуйте извлечь картридж, аккуратно потрясти его горизонтально и вставить обратно. Если это не помогло, проверьте чип контактов.</p>
+</details>
+
+<details>
+<summary>Как отключить мониторинг состояния принтера?</summary>
+<p>Монитор состояния (Monitor) может вызывать зависание. Его можно отключить в «Параметрах устройства» в свойствах принтера, сняв галочку «Включить мониторинг состояния принтера». Это ускорит печать, но вы не будете видеть статус картриджа.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/p/pr/printer-canon-lbp7010c-kak-podklyuchit.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon LBP7010C к компьютеру: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка принтера Canon LBP7010C по USB и сети. Установка драйверов, диагностика ошибок и</span>
+            </a><a href="/articles/k/ka/kak-perekinut-fotografii-s-fotoapparata-kenon-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как перекинуть фото с Canon на ПК: 5 способов переноса снимков</span>
+                <span class="pb-related-desc">Полная инструкция по переносу фотографий с фотоаппаратов Canon на компьютер. Обзор USB-подключения, </span>
+            </a><a href="/articles/k/ka/kak-ustanovit-skaner-kenon-mf-3110.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить сканер Canon MF3110 на Windows и Mac: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по установке драйверов и настройке сканирования для МФУ Canon imageCLASS MF311</span>
+            </a><a href="/articles/k/ka/kak-vklyuchit-blyutuz-na-printere-canon-mg-3600.html" class="pb-related-card">
+                <span class="pb-related-title">Подключение Canon MG3600 по Bluetooth: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробная инструкция по включению Bluetooth на принтере Canon MG3600. Узнайте, как настроить беспров</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-kenon-mf-3228.html" class="pb-related-card">
+                <span class="pb-related-title">Подключение принтера Canon MF3228: пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Как подключить МФУ Canon i-SENSYS MF3228 к ПК, ноутбуку или сети: USB, Wi-Fi, Ethernet. Решение ошиб</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-canon-k-kompyuteru-cherez-usb-kabel-printer.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon к компьютеру через USB кабель: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство: как правильно подключить Canon к ПК через USB, установить драйверы и проверит</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

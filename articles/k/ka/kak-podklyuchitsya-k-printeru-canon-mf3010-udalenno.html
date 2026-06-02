@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Удаленное подключение к принтеру Canon MF3010: Полное руководство — Кэнон Инфо</title>
+    <meta name="description" content="Подробная инструкция по настроке удаленного доступа к Canon MF3010. Обход ограничений, настройка сервера печати и решение проблем с сетевым соединением.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-podklyuchitsya-k-printeru-canon-mf3010-udalenno.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Удаленное подключение к принтеру Canon MF3010: Полное руководство">
+    <meta property="og:description" content="Подробная инструкция по настроке удаленного доступа к Canon MF3010. Обход ограничений, настройка сервера печати и решение проблем с сетевым соединением.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/podklyuchenie-k-pk/">Подключение к ПК</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Удаленное подключение к принтеру Canon MF3010: Полное руководство</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-в-удаленную-печать-и-особенности-модели">Введение в удаленную печать и особенности модели</a></li><li><a href="#физическая-подготовка-и-первичная-настройка-сети">Физическая подготовка и первичная настройка сети</a></li><li><a href="#настройка-общего-доступа-к-принтеру-в-windows">Настройка общего доступа к принтеру в Windows</a></li><li><a href="#проброс-портов-и-настройка-роутера">Проброс портов и настройка роутера</a></li><li><a href="#использование-облачных-туннелей-для-удаленного-доступа">Использование облачных туннелей для удаленного доступа</a></li><li><a href="#решение-проблем-с-драйверами-и-очередью-печати">Решение проблем с драйверами и очередью печати</a></li><li><a href="#альтернативные-методы-и-аппаратные-решения">Альтернативные методы и аппаратные решения</a></li><li><a href="#безопасность-и-защита-от-несанкционированного-доступа">Безопасность и защита от несанкционированного доступа</a></li><li><a href="#частые-вопросы-и-ответы">Частые вопросы и ответы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ca/canon-5d-kak-podklyuchit-k-kompu.html">Как подключить Canon 5D к компьютеру: Полное руководство по передаче фото</a></li><li><a href="/articles/c/ca/canon-laserbase-mf3228-kak-podklyuchit.html">Как подключить Canon LaserBase MF3228 к ПК: полное руководство</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-lbp2900b-k-noutbuku.html">Как подключить принтер Canon LBP2900B к ноутбуку: полная инструкция</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-pixma-mg4240.html">Как подключить принтер Canon Pixma MG4240: Полное руководство</a></li><li><a href="/articles/k/ka/kak-podklyuchit-canon-eos-1300d-k-kompyuteru-cherez-wifi.html">Как подключить Canon EOS 1300D к компьютеру через Wi-Fi: Пошаговая инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Удаленное подключение к принтеру Canon MF3010: Пошаговая настройка</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-в-удаленную-печать-и-особенности-модели">Введение в удаленную печать и особенности модели</a></li><li><a href="#физическая-подготовка-и-первичная-настройка-сети">Физическая подготовка и первичная настройка сети</a></li><li><a href="#настройка-общего-доступа-к-принтеру-в-windows">Настройка общего доступа к принтеру в Windows</a></li><li><a href="#проброс-портов-и-настройка-роутера">Проброс портов и настройка роутера</a></li><li><a href="#использование-облачных-туннелей-для-удаленного-доступа">Использование облачных туннелей для удаленного доступа</a></li><li><a href="#решение-проблем-с-драйверами-и-очередью-печати">Решение проблем с драйверами и очередью печати</a></li><li><a href="#альтернативные-методы-и-аппаратные-решения">Альтернативные методы и аппаратные решения</a></li><li><a href="#безопасность-и-защита-от-несанкционированного-доступа">Безопасность и защита от несанкционированного доступа</a></li><li><a href="#частые-вопросы-и-ответы">Частые вопросы и ответы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-в-удаленную-печать-и-особенности-модели">Введение в удаленную печать и особенности модели</h2>
+<p>Принтер <em>Canon MF3010</em> является легендарной моделью благодаря своей надежности и компактности, однако его конструктивные особенности создают серьезные препятствия для традиционного удаленного доступа. В отличие от современных устройств, эта модель не имеет встроенного сетевого модуля Wi-Fi или Ethernet-порта, что делает невозможным прямое подключение к локальной сети без дополнительного оборудования.</p>
+
+<p>Для реализации вашей цели придется обходить стандартные протоколы и использовать компьютер в качестве промежуточного шлюза. Вам потребуется настроить общий доступ к устройству через операционную систему, превратив его в сетевой ресурс, доступный извне при правильной конфигурации роутера.</p>
+
+<p>Этот процесс требует глубокого понимания сетевых протоколов и работы драйверов. Если вы планируете печатать из дома или офиса, вам нужно будет реализовать туннелирование трафика или использовать сторонние облачные сервисы, которые выступают посредниками между вашим устройством и принтером.</p>
+
+<h2 id="физическая-подготовка-и-первичная-настройка-сети">Физическая подготовка и первичная настройка сети</h2>
+<p>Первым шагом является обеспечение стабильного физического соединения между компьютером и принтером. Убедитесь, что кабель USB подключен плотно и порт на материнской плате не имеет механических повреждений. Система должна распознать устройство, и драйверы <em>Canon MF3010</em> должны быть установлены корректно без ошибок в диспетчере устройств.</p>
+
+<p>Вам необходимо назначить компьютеру статический IP-адрес в вашей локальной сети. Это критически важно, чтобы роутер всегда знал, куда перенаправлять запросы на печать, даже после перезагрузки оборудования. Зайдите в настройки сетевого адаптера и пропишите адрес вручную, исключив его из диапазона DHCP.</p>
+
+<p>Проверьте, что брандмауэр Windows не блокирует порты, необходимые для обмена данными. Без этого шага даже правильно настроенный общий доступ не позволит внешним устройствам увидеть принтер. Вам нужно будет создать правило, разрешающее входящие соединения для службы спулинга печати.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Используйте только качественные кабели USB 2.0 или выше. Дешевые удлинительные провода могут вызвать потерю пакетов данных, что приведет к зависанию очереди печати при удаленном соединении.</p>
+</blockquote>
+
+<h2 id="настройка-общего-доступа-к-принтеру-в-windows">Настройка общего доступа к принтеру в Windows</h2>
+<p>После физического подключения необходимо открыть доступ к устройству через панель управления. Перейдите в раздел <code>Устройства и принтеры</code>, найдите <em>Canon MF3010</em> и нажмите правой кнопкой мыши. Выберите пункт <code>Свойства принтера</code>, а затем вкладку <code>Доступ</code>.</p>
+
+<p>Включите опцию <strong>Общий доступ к этому принтеру</strong> и задайте понятное имя для сетевого ресурса, не содержащее кириллицы или специальных символов. Это имя будет использоваться при подключении с других компьютеров в сети. Запишите его, так как оно потребуется для маршрутизации трафика.</p>
+
+<p>Убедитесь, что в сетевых параметрах Windows включено обнаружение сети и общий доступ к файлам. Без этих настроек компьютер будет изолирован, и другие устройства не смогут найти ваш принтер даже при наличии правильного IP-адреса. Конфигурация профиля сети должна быть установлена на "Частная" или "Доменная".</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка локального доступа</h4><label class="check-item"><input type="checkbox"><span>Открыть свойства принтера</span></label><label class="check-item"><input type="checkbox"><span>Включить общий доступ</span></label><label class="check-item"><input type="checkbox"><span>Проверить настройки брандмауэра</span></label><label class="check-item"><input type="checkbox"><span>Запомнить сетевое имя</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="проброс-портов-и-настройка-роутера">Проброс портов и настройка роутера</h2>
+<p>Для доступа из интернета необходимо настроить проброс портов (Port Forwarding) на вашем маршрутизаторе. Откройте веб-интерфейс роутера и найдите раздел NAT или виртуальные серверы. Вам нужно перенаправить внешний порт на внутренний IP-адрес компьютера, к которому подключен принтер.</p>
+
+<p>Стандартный порт для службы печати — 9100, но часто используется также 515 или 631. Вам нужно добавить правило, связывающее внешний порт с портом спулинга печати на вашем ПК. Это создаст "мост" между глобальной сетью и вашим локальным устройством.</p>
+
+<p>Обратите внимание, что многие провайдеры блокируют входящие соединения на стандартные порты или используют CGNAT (общий NAT). В таких случаях вам может потребоваться арендовать отдельный IP-адрес или использовать туннелирующие сервисы для обхода ограничений.</p>
+
+<div class="pb-table-wrap"><table border="1">
+<thead>
+<tr>
+<th>Протокол</th>
+<th>Внешний порт</th>
+<th>Внутренний порт</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TCP</td>
+<td>9100</td>
+<td>9100</td>
+<td>Служба печати TCP/IP</td>
+</tr>
+<tr>
+<td>TCP</td>
+<td>515</td>
+<td>515</td>
+<td>Стандартный порт LPD</td>
+</tr>
+<tr>
+<td>TCP</td>
+<td>631</td>
+<td>631</td>
+<td>Протокол CUPS (для Linux)</td>
+</tr>
+<tr>
+<td>UDP</td>
+<td>161</td>
+<td>161</td>
+<td>SNMP мониторинг состояния</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="pb-poll" id="poll-cb300549"><div class="pb-poll-question">📊 Какую операционную систему используете?</div><div class="pb-poll-option" data-poll="cb300549" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 10</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="cb300549" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 11</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="cb300549" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">macOS</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="cb300549" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Linux</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="использование-облачных-туннелей-для-удаленного-доступа">Использование облачных туннелей для удаленного доступа</h2>
+<p>Если настройка роутера кажется вам слишком сложной или провайдер блокирует порты, отличным решением станет использование программ для туннелирования. Сервисы вроде <em>ZeroTier</em> или <em>Tailscale</em> создают виртуальную локальную сеть, объединяя устройства в разных точках мира.</p>
+
+<p>Установите клиентское ПО на компьютер с принтером и на устройство, с которого планируете печатать. После авторизации они увидят друг друга как будто находятся в одной комнате. Вам останется только добавить сетевой принтер по IP-адресу виртуальной сети.</p>
+
+<p>Этот метод обеспечивает высокий уровень безопасности, так как трафик шифруется, и не требует открытия портов на роутере. <strong>Виртуальный сетевой адаптер</strong> обходит NAT провайдера, делая подключение стабильным даже при динамических IP-адресах.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> При использовании бесплатных тарифов туннельных сервисов скорость может быть ограничена. Для печати тяжелых графических файлов это может привести к значительным задержкам или разрыву соединения.</p>
+</blockquote>
+
+<details class="pb-accordion"><summary>Технические детали шифрования</summary><div class="pb-accordion-body"><p>Туннелирование использует протоколы WireGuard или OpenVPN, обеспечивая сквозное шифрование трафика. Это гарантирует, что документы не могут быть перехвачены в пути.</p></div></details>
+
+<h2 id="решение-проблем-с-драйверами-и-очередью-печати">Решение проблем с драйверами и очередью печати</h2>
+<p>Частой проблемой при удаленном доступе является потеря связи с драйвером или зависание очереди печати. Если документы не отправляются, проверьте службу <strong>Диспетчер печати</strong> в службах Windows. Она должна быть запущена и настроена на автоматический запуск.</p>
+
+<p>Иногда требуется переустановить драйвер в режиме "Сетевой принтер", даже если он физически подключен через USB. Это заставляет систему правильно обрабатывать сетевые запросы, а не локальные. Используйте мастер добавления принтеров и выберите <code>Добавить принтер вручную</code>.</p>
+
+<p>Важно регулярно очищать папку спулинга, если в ней накапливаются ошибки. Это можно сделать через <code>services.msc</code>, остановив службу печати, очистив содержимое папки <code>C:\Windows\System32\spool\PRINTERS</code> и запустив службу заново. <mark>Обязательно используйте версию драйвера, совместимую с вашей архитектурой системы (x64 или x84).</mark></p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Периодически очищайте очередь печати через утилиту "Просмотр очереди печати", отменяя все зависшие задания, чтобы освободить ресурсы системы.</p></aside>
+
+<h2 id="альтернативные-методы-и-аппаратные-решения">Альтернативные методы и аппаратные решения</h2>
+<p>Если программные методы вызывают сложности, рассмотрите возможность приобретения адаптера USB-Ethernet. Такие устройства, как <em>USB-сервер печати</em>, подключаются к принтеру и предоставляют ему собственный IP-адрес в локальной сети.</p>
+
+<p>Это аппаратное решение полностью снимает зависимость от наличия работающего компьютера-хоста. Принтер становится независимым сетевым устройством, доступным для печати с любого устройства в сети, включая мобильные телефоны и планшеты.</p>
+
+<p>Стоимость таких адаптеров варьируется, но они часто окупаются удобством и стабильностью работы. Вы сможете настроить веб-интерфейс для мониторинга состояния картриджей и чернил прямо с телефона, что недоступно при подключении через ПК.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Аппаратный USB-сервер печати — это наиболее надежный способ сделать Canon MF3010 полноценным сетевым устройством, не зависящим от включенного компьютера.</p></aside>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> При покупке USB-сервера убедитесь, что в списке поддерживаемых устройств указан именно <em>Canon MF3010</em>. Некоторые дешевые адаптеры не поддерживают функцию сканирования, оставляя только печать.</p>
+</blockquote>
+
+<h2 id="безопасность-и-защита-от-несанкционированного-доступа">Безопасность и защита от несанкционированного доступа</h2>
+<p>Открытие доступа к принтеру из интернета несет риски безопасности. Злоумышленники могут использовать ваше устройство для атак на вашу сеть или для несанкционированной печати, что приведет к лишним затратам на бумагу и тонер.</p>
+
+<p>Обязательно установите надежный пароль на учетную запись пользователя, под которой работает принтер. В настройках общего доступа ограничьте права доступа только для авторизованных пользователей, запретив гостевой вход. Это защитит вашу локальную сеть от посторонних.</p>
+
+<p>Регулярно обновляйте прошивку роутера и операционную систему компьютера. Уязвимости в сетевых протоколах могут быть использованы для взлома устройства. <strong>Сетевая безопасность</strong> должна быть приоритетом при организации удаленного доступа.</p>
+
+<details class="pb-accordion"><summary>Как проверить безопасность</summary><div class="pb-accordion-body"><p>Используйте онлайн-сканеры портов, чтобы убедиться, что только необходимые порты открыты извне. Лишние порты увеличивают поверхность атаки.</p></div></details>
+
+<h2 id="частые-вопросы-и-ответы">Частые вопросы и ответы</h2>
+
+<details>
+<summary>Можно ли подключить Canon MF3010 к Wi-Fi напрямую?</summary>
+<p>Нет, модель <em>Canon MF3010</em> не имеет встроенного модуля Wi-Fi. Для подключения по беспроводной сети необходимо использовать компьютер-шлюз или специальный USB-сервер печати, который преобразует сигнал.</p>
+</details>
+
+<details>
+<summary>Почему принтер не виден в сети, хотя общий доступ включен?</summary>
+<p>Чаще всего проблема в настройках брандмауэра Windows или в том, что сеть определена как "Общественная". Переключите профиль сети на "Частная" и проверьте правила входящих соединений для портов 9100 и 515.</p>
+</details>
+
+<details>
+<summary>Как печатать с iPhone на Canon MF3010 удаленно?</summary>
+<p>Используйте приложение для туннелирования (например, Tailscale) на iPhone и компьютере. После подключения к виртуальной сети добавьте принтер в настройках iPhone как сетевой, указав IP-адрес компьютера в этой виртуальной сети.</p>
+</details>
+
+<details>
+<summary>Нужно ли держать компьютер включенным для печати?</summary>
+<p>Да, если вы используете метод общего доступа через ОС Windows, компьютер должен быть включен и подключен к сети. Если вы используете USB-сервер печати, компьютер не требуется.</p>
+</details>
+
+<details>
+<summary>Что делать, если печать идет медленно?</summary>
+<p>Проверьте качество интернет-соединения на upload. Для удаленной печати важна скорость отправки данных. Также попробуйте уменьшить качество печати в драйвере или использовать драйверы PCL вместо PostScript, если они доступны.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ca/canon-5d-kak-podklyuchit-k-kompu.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon 5D к компьютеру: Полное руководство по передаче фото</span>
+                <span class="pb-related-desc">Пошаговая инструкция: настройка USB-соединения, работа с EOS Utility, передача файлов без карты памя</span>
+            </a><a href="/articles/c/ca/canon-laserbase-mf3228-kak-podklyuchit.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon LaserBase MF3228 к ПК: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по установке драйверов и подключению МФУ Canon LaserBase MF3228 через USB и сет</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-canon-lbp2900b-k-noutbuku.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon LBP2900B к ноутбуку: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по установке драйверов и настройке принтера Canon LBP2900B на Windows. Решение</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-canon-pixma-mg4240.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon Pixma MG4240: Полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению Canon Pixma MG4240 к ПК и Wi-Fi. Решение ошибок драйверов, настр</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-canon-eos-1300d-k-kompyuteru-cherez-wifi.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon EOS 1300D к компьютеру через Wi-Fi: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как настроить беспроводное соединение между камерой Canon 1300D и ПК. Полная настройка чере</span>
+            </a><a href="/articles/k/ka/kak-polzovatsya-printerom-canon-i-sensys-lbp6030b.html" class="pb-related-card">
+                <span class="pb-related-title">Настройка и эксплуатация Canon i-SENSYS LBP6030b: Полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению, установке драйверов и эксплуатации принтера Canon i-SENSYS LBP6</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

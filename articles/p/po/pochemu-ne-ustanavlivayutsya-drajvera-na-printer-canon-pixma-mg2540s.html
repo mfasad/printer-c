@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Почему не устанавливаются драйвера на принтер Canon Pixma MG2540S: решения — Кэнон Инфо</title>
+    <meta name="description" content="Разбираем главные причины сбоя драйверов для Canon MG2540S. Пошаговая инструкция по удалению старых версий, настройке прав и сбросу служб печати.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/p/po/pochemu-ne-ustanavlivayutsya-drajvera-na-printer-canon-pixma-mg2540s.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Почему не устанавливаются драйвера на принтер Canon Pixma MG2540S: решения">
+    <meta property="og:description" content="Разбираем главные причины сбоя драйверов для Canon MG2540S. Пошаговая инструкция по удалению старых версий, настройке прав и сбросу служб печати.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/podklyuchenie-k-pk/">Подключение к ПК</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Почему не устанавливаются драйвера на принтер Canon Pixma MG2540S: решения</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#конфликт-версий-операционной-системы-и-драйвера">Конфликт версий операционной системы и драйвера</a></li><li><a href="#остаточные-файлы-предыдущих-драйверов">Остаточные файлы предыдущих драйверов</a></li><li><a href="#особенности-подключения-интерфейса-usb">Особенности подключения интерфейса USB</a></li><li><a href="#права-администратора-и-антивирусная-защита">Права администратора и антивирусная защита</a></li><li><a href="#сбой-службы-печати-windows">Сбой службы печати Windows</a></li><li><a href="#альтернативные-методы-установки">Альтернативные методы установки</a></li><li><a href="#таблица-совместимости-драйверов-и-ос">Таблица совместимости драйверов и ОС</a></li><li><a href="#специфические-ошибки-и-их-коды">Специфические ошибки и их коды</a></li><li><a href="#подготовка-к-чистой-установке">Подготовка к чистой установке</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-podklyuchit-kameru-canon-1300d-k-kompyuteru.html">Как подключить камеру Canon 1300D к компьютеру: полное руководство</a></li><li><a href="/articles/k/ka/kak-s-fotoapparata-kenon-skinut-fotki-na-kompyuter.html">Как перенести фото с Canon на ПК: 5 проверенных способов</a></li><li><a href="/articles/k/ka/kak-nastroit-skaner-canon.html">Как настроить сканер Canon: полное руководство по подключению и ПО</a></li><li><a href="/articles/p/po/pochemu-windows-10-ne-vidit-printer-canon.html">Почему Windows 10 не видит принтер Canon: 7 причин и решения</a></li><li><a href="/articles/k/ka/kak-ispolzovat-fotoapparat-canon-kak-veb-kameru-cherez-usb.html">Как подключить Canon к ПК: настройка веб-камеры через USB</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Решаем проблему: драйверы Canon Pixma MG2540S не устанавливаются</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#конфликт-версий-операционной-системы-и-драйвера">Конфликт версий операционной системы и драйвера</a></li><li><a href="#остаточные-файлы-предыдущих-драйверов">Остаточные файлы предыдущих драйверов</a></li><li><a href="#особенности-подключения-интерфейса-usb">Особенности подключения интерфейса USB</a></li><li><a href="#права-администратора-и-антивирусная-защита">Права администратора и антивирусная защита</a></li><li><a href="#сбой-службы-печати-windows">Сбой службы печати Windows</a></li><li><a href="#альтернативные-методы-установки">Альтернативные методы установки</a></li><li><a href="#таблица-совместимости-драйверов-и-ос">Таблица совместимости драйверов и ОС</a></li><li><a href="#специфические-ошибки-и-их-коды">Специфические ошибки и их коды</a></li><li><a href="#подготовка-к-чистой-установке">Подготовка к чистой установке</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Ситуация, когда новый или старый принтер <em>Canon Pixma MG2540S</em> отказывается определяться системой, встречается чаще, чем кажется. Это особенно досадно, когда документ нужен срочно, а компьютер выдает ошибку при попытке загрузки программного обеспечения. Проблема может скрываться в конфликте версий Windows, остатках предыдущих драйверов или банальных правах администратора.</p>
+
+<p>Модель <em>Canon MG2540S</em> относится к классу бюджетных устройств, где отсутствие дискового привода в комплекте делает загрузку ПО через интернет единственным путем. Если этот процесс прерывается или завершается неудачей, пользователь сталкивается с «мертвой» печатью. Разберем основные причины и способы решения, чтобы вернуть устройство к работе.</p>
+
+<h2 id="конфликт-версий-операционной-системы-и-драйвера">Конфликт версий операционной системы и драйвера</h2>
+<p>Самая частая причина отказа установки — несоответствие разрядности системы и загруженного файла. Многие пользователи скачивают драйвер для 64-битной версии Windows, имея при этом 32-битную систему, или наоборот. <em>Canon</em> предоставляет разные пакеты драйверов для каждой архитектуры, и автоматический установщик может не подхватить правильный файл без ручного вмешательства.</p>
+
+<p>Проверьте параметры вашей системы: нажмите правой кнопкой мыши на <code>Мой компьютер</code> и выберите <code>Свойства</code>. В разделе «Тип системы» должно быть указано то же значение, что и в названии файла драйвера (x64 или x86). Если вы используете новейшие сборки Windows 10 или 11, убедитесь, что драйвер не предназначен специально для Windows 7, так как старые версии ПО могут игнорировать новые протоколы безопасности.</p>
+
+<h2 id="остаточные-файлы-предыдущих-драйверов">Остаточные файлы предыдущих драйверов</h2>
+<p>Если вы ранее пытались установить принтер и процесс прервался, в системе могли остаться «битые» файлы. Эти остаточные данные конфликтуют с новой установкой, заставляя инсталлятор вылетать или зависать на этапе копирования файлов. Очистка реестра и временных папок часто решает проблему, когда стандартный способ не срабатывает.</p>
+
+<p>Используйте утилиту удаления драйверов принтера или выполните очистку вручную через <code>Управление устройствами</code>. Найдите список принтеров и разверните его. Если вы видите устройство с желтым восклицательным знаком или неопознанное устройство, удалите его полностью, включая драйвер. Затем очистите папку <code>C:\Windows\System32\spool\drivers</code> от файлов, связанных с <em>Canon</em>.</p>
+
+<h2 id="особенности-подключения-интерфейса-usb">Особенности подключения интерфейса USB</h2>
+<p>Инсталляция драйвера для модели <em>MG2540S</em> требует строгого порядка действий. В отличие от сетевых принтеров, этот девайс нельзя подключить к USB-порту до начала процесса установки, если вы запускаете инсталляцию с официального сайта. Программа требует, чтобы устройство было отключено, и просит подключить его только на определенном этапе.</p>
+
+<p>Если вы подключили кабель слишком рано, система может определить устройство как «Неизвестное устройство» и попытаться найти драйвер самостоятельно через Центр обновлений. Это часто приводит к тому, что специализированный драйвер от <em>Canon</em> не может перезаписать системный стандартный драйвер. Всегда следуйте подсказкам на экране инсталлятора.</p>
+
+<blockquote>⚠️ Внимание: Не пытайтесь подключить принтер к порту USB 3.0 или 3.1 напрямую, если у вас старая материнская плата. Используйте порт USB 2.0 (черный цвет разъема) для максимальной совместимости при установке драйверов.</blockquote>
+
+<div class="pb-poll" id="poll-048cf74e"><div class="pb-poll-question">📊 Сталкивались ли вы с ошибкой при установке драйверов Canon?</div><div class="pb-poll-option" data-poll="048cf74e" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Да, программа зависала</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="048cf74e" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Да, вылетала ошибка</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="048cf74e" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Нет, всё установилось сразу</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="048cf74e" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Я использую диск с драйверами</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="права-администратора-и-антивирусная-защита">Права администратора и антивирусная защита</h2>
+<p>Современные антивирусы и брандмауэры Windows могут блокировать установку драйверов, считая действия инсталлятора подозрительными. Программа установки драйвера имеет доступ к системным файлам, что триггерит защитные механизмы. Отключите антивирус на время установки и запустите файл от имени администратора.</p>
+
+<p>Для запуска от администратора нажмите правой кнопкой мыши на файл <code>mp250-s-win-en-mc-wd.exe</code> (или аналогичный для вашей версии) и выберите соответствующий пункт. Без прав администратора система не позволит записать файлы в папку <code>Program Files</code> или изменить параметры реестра, что приведет к ошибке установки.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка прав доступа</h4><label class="check-item"><input type="checkbox"><span>Запустить файл от имени администратора</span></label><label class="check-item"><input type="checkbox"><span>Отключить антивирус на 15 минут</span></label><label class="check-item"><input type="checkbox"><span>Отключить интернет</span></label><label class="check-item"><input type="checkbox"><span>Перезагрузить ПК перед установкой</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="сбой-службы-печати-windows">Сбой службы печати Windows</h2>
+<p>Иногда проблема кроется не в самом драйвере, а в службах, отвечающих за очередь печати. Если служба <em>Print Spooler</em> зависла или работает некорректно, установка драйвера может завершиться ошибкой, так как система не может инициировать проверку подключения к устройству. Перезапуск этой службы часто решает проблему.</p>
+
+<p>Чтобы перезапустить службу, откройте <code>Службы</code> через команду <code>services.msc</code>. Найдите в списке <code>Диспетчер печати</code> (или <code>Print Spooler</code>). Нажмите правой кнопкой мыши и выберите <code>Перезапустить</code>. После этого попробуйте запустить установку драйвера заново.</p>
+
+<h2 id="альтернативные-методы-установки">Альтернативные методы установки</h2>
+<p>Если официальный установщик категорически отказывается работать, можно попробовать метод ручной установки через <code>Диспетчер устройств</code>. Скачайте архив с драйвером с сайта <em>Canon</em>, распакуйте его в отдельную папку. Затем откройте Диспетчер устройств, найдите неопознанное устройство и выберите «Обновить драйвер» → «Выполнить поиск драйверов на этом компьютере».</p>
+
+<p>Укажите путь к распакованной папке. Система найдет файл <code>inf</code> и установит драйвер без использования громоздкого инсталлятора. Этот метод особенно эффективен, когда ошибка установки вызвана проблемами самого инсталлятора, а не отсутствием поддержки устройства.</p>
+
+<details class="pb-accordion"><summary>Почему инсталлятор может не видеть принтер?</summary><div class="pb-accordion-body"><p>Чаще всего это связано с тем, что драйвер пытается опросить USB-порты, но служба Spooler блокирует запросы, или кабель подключен не до конца, либо кабель неисправен. Проверьте провод на изгибы и попробуйте другой порт.</p></div></details>
+
+<h2 id="таблица-совместимости-драйверов-и-ос">Таблица совместимости драйверов и ОС</h2>
+<p>Ниже приведена таблица, показывающая, какие версии драйверов подходят для различных редакций Windows. Использование неподходящей версии — прямая причина отказа установки.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Версия Windows</th>
+<th>Разрядность</th>
+<th>Рекомендуемый драйвер</th>
+<th>Особенности</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows 10</td>
+<td>x64</td>
+<td>MP Drivers Ver. 4.000</td>
+<td>Базовая поддержка печати</td>
+</tr>
+<tr>
+<td>Windows 10</td>
+<td>x86</td>
+<td>MP Drivers Ver. 4.000</td>
+<td>Требует прав админа</td>
+</tr>
+<tr>
+<td>Windows 11</td>
+<td>x64</td>
+<td>MP Drivers Ver. 4.000</td>
+<td>Совместим через режим совместимости</td>
+</tr>
+<tr>
+<td>Windows 7</td>
+<td>x64</td>
+<td>MP Drivers Ver. 1.000</td>
+<td>Устаревшая версия</td>
+</tr>
+<tr>
+<td>Windows 8.1</td>
+<td>x64</td>
+<td>MP Drivers Ver. 3.000</td>
+<td>Оптимизирован для интерфейса</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>⚠️ Внимание: Для Windows 11 и 11 22H2 может потребоваться установка драйвера в режиме совместимости с Windows 10. Нажмите правой кнопкой на файл установки, выберите «Свойства» → «Совместимость» → «Запустить программу в режиме совместимости с: Windows 10».</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если установка идет через «Диспетчер устройств», убедитесь, что в распакованной папке есть файл с расширением .inf. Без него система не сможет найти драйвер автоматически.</p></aside>
+
+<h2 id="специфические-ошибки-и-их-коды">Специфические ошибки и их коды</h2>
+<p>В процессе установки вы можете столкнуться с конкретными кодами ошибок. Код <code>0x00000002</code> обычно означает отсутствие файла, что говорит о повреждении скачанного архива. Код <code>1310</code> или <code>1314</code> указывает на отсутствие прав на запись в системную папку. В таких случаях повторная загрузка драйвера или запуск от имени администратора обязательны.</p>
+
+<p>Особое внимание уделите ошибке «Устройство не найдено». Если вы следуете инструкции и подключаете кабель, когда программа просит, а принтер все равно не определяется, попробуйте заменить USB-кабель. Стандартные кабели от <em>Canon</em> часто имеют короткий провод (около 1,5 метров), и использование удлинителей может привести к падению напряжения и потере связи.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главный секрет успешной установки: Всегда удаляйте старые драйверы через «Программы и компоненты» и очищайте папку spool перед установкой новой версии, даже если вы меняете только версию ОС.</p></aside>
+
+<blockquote>⚠️ Внимание: Если вы используете ноутбук с переключением видеокарт (NVIDIA Optimus), установка драйвера принтера может не пройти. Отключите дискретную видеокарту через BIOS или в Диспетчере устройств на время процесса установки.</blockquote>
+
+<h2 id="подготовка-к-чистой-установке">Подготовка к чистой установке</h2>
+<p>Перед началом любых манипуляций необходимо выполнить полную подготовку. Это исключит случайные конфликты и ускорит процесс. Сделайте резервную копию важных данных, если система работает нестабильно, хотя это и не обязательно для самой установки драйвера.</p>
+
+<p>Извлеките все USB-устройства, кроме мыши и клавиатуры. Это снизит нагрузку на контроллер USB и предотвратит конфликты адресов при подключении принтера. Убедитесь, что принтер <em>Canon Pixma MG2540S</em> включен в розетку и индикатор питания горит зеленым цветом.</p>
+
+<details class="pb-accordion"><summary>Что делать, если установка застряла на 99%?</summary><div class="pb-accordion-body"><p>Это частая проблема. Не прерывайте процесс сразу. Подождите 5-10 минут. Если прогресса нет — перезагрузите компьютер и попробуйте снова, предварительно удалив временные файлы установки.</p></div></details>
+
+<p>Иногда проблема решается простой сменой порта. Попробуйте подключить принтер к другому USB-порту, желательно расположенному сзади системного блока, напрямую к материнской плате. Передние порты на некоторых корпусах могут не давать достаточного тока для инициализации устройства при установке драйвера.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте только оригинальные кабели USB от производителя или сертифицированные аналоги, так как дешевые кабели часто имеют повышенное сопротивление, что мешает передаче данных при первой инициализации.</p></aside>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Почему принтер определяется как «Неизвестное устройство»?</summary>
+<p>Это значит, что Windows видит физическое подключение, но не может найти подходящий драйвер. Часто требуется ручная установка через Диспетчер устройств и указание пути к распакованным файлам.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать драйвер от Canon MG2500 для MG2540S?</summary>
+<p>Да, драйверы для серии MG2500 и MG2540S часто идентичны, так как это модификации одной платформы. Однако для надежности лучше скачать версию, специально указанную для вашей модели.</p>
+</details>
+
+<details>
+<summary>Что делать, если инсталлятор выдает ошибку 1314?</summary>
+<p>Ошибка 1314 означает «Недостаточно прав». Запустите файл установки от имени администратора или временно отключите контроль учетных записей UAC.</p>
+</details>
+
+<details>
+<summary>Нужно ли отключать интернет при установке?</summary>
+<p>Желательно. Windows может попытаться автоматически загрузить базовый драйвер через Центр обновлений, что заблокирует установку официальной версии от <em>Canon</em>.</p>
+</details>
+
+<details>
+<summary>Можно ли установить драйвер без USB-кабеля?</summary>
+<p>Нет, для первой установки и настройки <em>MG2540S</em> требуется физическое подключение. Только после успешной установки можно пробовать настраивать Wi-Fi, если модель поддерживает беспроводную связь.</p>
+</details>
+
+<p>Соблюдение этих правил и внимательное отношение к деталям процесса установки гарантируют, что ваш принтер <em>Canon Pixma MG2540S</em> заработает в кратчайшие сроки. Если проблема сохраняется даже после всех манипуляций, возможно, имеет место аппаратная неисправность самого устройства или контроллера USB на компьютере.</p></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-podklyuchit-kameru-canon-1300d-k-kompyuteru.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить камеру Canon 1300D к компьютеру: полное руководство</span>
+                <span class="pb-related-desc">Подробная инструкция по подключению Canon 1300D к ПК через USB и Wi-Fi. Решение проблем с драйверами</span>
+            </a><a href="/articles/k/ka/kak-s-fotoapparata-kenon-skinut-fotki-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как перенести фото с Canon на ПК: 5 проверенных способов</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как скинуть фотографии с фотоаппарата Canon на компьютер через USB, картридер,</span>
+            </a><a href="/articles/k/ka/kak-nastroit-skaner-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить сканер Canon: полное руководство по подключению и ПО</span>
+                <span class="pb-related-desc">Инструкция по настройке сканеров Canon на Windows и Mac. Подключение драйверов, использование IJ Sca</span>
+            </a><a href="/articles/p/po/pochemu-windows-10-ne-vidit-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Почему Windows 10 не видит принтер Canon: 7 причин и решения</span>
+                <span class="pb-related-desc">Принтер Canon не определяется Windows 10? Разбираем причины: от драйверов до настроек службы печати.</span>
+            </a><a href="/articles/k/ka/kak-ispolzovat-fotoapparat-canon-kak-veb-kameru-cherez-usb.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon к ПК: настройка веб-камеры через USB</span>
+                <span class="pb-related-desc">Полная инструкция по использованию фотоаппарата Canon в качестве веб-камеры через кабель USB. Настро</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-printer-kenon-lbp-1120-k-vindovs-7.html" class="pb-related-card">
+                <span class="pb-related-title">Установка принтера Canon LBP-1120 на Windows 7: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка Canon LBP-1120 на Windows 7. Скачивание драйверов, решение ошибок, ручная добавк</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

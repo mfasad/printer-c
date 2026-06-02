@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Подключение принтера Canon к сети Wi-Fi и LAN: полная инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговое руководство по настройке сетевого принтера Canon. Методы WPS, прямое подключение, использование утилиты IJ Network Tool и устранение частых ошибок.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-podklyuchit-printer-canon-k-seti.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Подключение принтера Canon к сети Wi-Fi и LAN: полная инструкция">
+    <meta property="og:description" content="Пошаговое руководство по настройке сетевого принтера Canon. Методы WPS, прямое подключение, использование утилиты IJ Network Tool и устранение частых ошибок.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Подключение принтера Canon к сети Wi-Fi и LAN: полная инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-в-сетевые-технологии-печати">Введение в сетевые технологии печати</a></li><li><a href="#подготовка-оборудования-и-выбор-метода">Подготовка оборудования и выбор метода</a></li><li><a href="#настройка-через-кнопку-wps-самый-быстрый-способ">Настройка через кнопку WPS (самый быстрый способ)</a></li><li><a href="#использование-утилиты-ij-network-tool">Использование утилиты IJ Network Tool</a></li><li><a href="#подключение-принтера-с-сенсорным-дисплеем">Подключение принтера с сенсорным дисплеем</a></li><li><a href="#сравнение-методов-подключения">Сравнение методов подключения</a></li><li><a href="#альтернативный-метод-прямое-подключение-wi-fi-direct">Альтернативный метод: Прямое подключение (Wi-Fi Direct)</a></li><li><a href="#решение-частых-проблем-и-ошибок">Решение частых проблем и ошибок</a></li><li><a href="#финальные-шаги-и-проверка-работы">Финальные шаги и проверка работы</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ca/canon-pixma-kak-uznat-model.html">Как узнать модель принтера Canon Pixma: 5 проверенных способов</a></li><li><a href="/articles/k/ka/kak-vyklyuchit-ekonomnyj-rezhim-na-printere-canon-cherez-mak.html">Как отключить экономный режим на принтере Canon через Mac: инструкция</a></li><li><a href="/articles/k/ka/kak-ustanovit-printer-kenon-g1411.html">Как подключить принтер Canon G1411 к ПК: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-ustanovit-drajver-dlya-printera-canon-laserbase-mf3228.html">Установка драйвера Canon LaserBase MF3228: полное руководство</a></li><li><a href="/articles/k/ka/kak-raspechatat-s-telefona-na-printer-cherez-wifi-canon-g3411.html">Как распечатать с телефона на Canon G3411 через Wi-Fi: Полная инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как подключить принтер Canon к локальной сети: полное руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-в-сетевые-технологии-печати">Введение в сетевые технологии печати</a></li><li><a href="#подготовка-оборудования-и-выбор-метода">Подготовка оборудования и выбор метода</a></li><li><a href="#настройка-через-кнопку-wps-самый-быстрый-способ">Настройка через кнопку WPS (самый быстрый способ)</a></li><li><a href="#использование-утилиты-ij-network-tool">Использование утилиты IJ Network Tool</a></li><li><a href="#подключение-принтера-с-сенсорным-дисплеем">Подключение принтера с сенсорным дисплеем</a></li><li><a href="#сравнение-методов-подключения">Сравнение методов подключения</a></li><li><a href="#альтернативный-метод-прямое-подключение-wi-fi-direct">Альтернативный метод: Прямое подключение (Wi-Fi Direct)</a></li><li><a href="#решение-частых-проблем-и-ошибок">Решение частых проблем и ошибок</a></li><li><a href="#финальные-шаги-и-проверка-работы">Финальные шаги и проверка работы</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-в-сетевые-технологии-печати">Введение в сетевые технологии печати</h2>
+<p>Современные офисные и домашние задачи требуют высокой мобильности устройств, и принтеры <em>Canon</em> не являются исключением. Подключение к локальной сети позволяет использовать одно устройство сразу нескольким пользователям, минуя необходимость постоянной переподключения USB-кабеля.</p>
+<p>Процесс интеграции в сеть может показаться сложным на первый взгляд, особенно если вы столкнулись с новыми моделями серии <em>PIXMA</em> или <em>imageCLASS</em>. Однако, зная алгоритм действий и доступные инструменты, вы сможете настроить <strong>сетевой интерфейс</strong> за считанные минуты.</p>
+
+<h2 id="подготовка-оборудования-и-выбор-метода">Подготовка оборудования и выбор метода</h2>
+<p>Прежде чем приступать к настройке, необходимо убедиться, что ваш <em>роутер</em> работает стабильно и передает сигнал на достаточной мощности. Для беспроводной связи критически важно, чтобы сигнал не прерывался в момент передачи данных конфигурации.</p>
+<p>Существует несколько основных способов подключения: через <strong>WPS-кнопку</strong> на роутере, использование <strong>CD-диска</strong> с драйверами, мобильное приложение <em>Canon PRINT</em> или панель управления самого принтера. Каждый метод имеет свои нюансы и подходит для разных ситуаций.</p>
+<p>Если у вас нет диска с драйверами, не стоит расстраиваться, так как практически все современные модели поддерживают прямое скачивание утилит с официального сайта. Важно также проверить, поддерживает ли ваше устройство протокол <strong>TCP/IP</strong> для стабильной работы в сети.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Перед началом настройки убедитесь, что вы помните пароль от вашей Wi-Fi сети. Ввод неправильных данных может привести к блокировке доступа на некоторых роутерах.</p>
+</blockquote>
+
+<div class="pb-poll" id="poll-96469f91"><div class="pb-poll-question">📊 Какой метод настройки вы предпочитаете?</div><div class="pb-poll-option" data-poll="96469f91" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Через WPS на роутере</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="96469f91" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Через программу на ПК</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="96469f91" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Через экран принтера</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="96469f91" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Через мобильное приложение</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="настройка-через-кнопку-wps-самый-быстрый-способ">Настройка через кнопку WPS (самый быстрый способ)</h2>
+<p>Метод WPS (Wi-Fi Protected Setup) является наиболее простым и быстрым, так как исключает ручной ввод пароля. Этот способ идеально подходит для моделей, оснащенных кнопкой с символом двух стрелок или надписью WPS.</p>
+<p>Для начала вам нужно активировать режим нажатием на <code>Кнопка Wi-Fi</code> на панели управления, пока индикатор сети не загорится синим цветом. Затем, в течение двух минут, нажмите кнопку <strong>WPS</strong> на вашем <em>роутере</em>.</p>
+<p>Процесс сопряжения займет от одной до пяти минут. Индикатор на устройстве перестанет мигать и загорится постоянным светом, что означает успешное подключение к <strong>сетевой инфраструктуре</em>. Если индикатор продолжает мигать красным, соединение не установлено.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Функция WPS поддерживается не всеми роутерами. Если на вашем оборудовании нет соответствующей кнопки, этот метод вам не подойдет, и придется использовать альтернативные способы настройки.</p>
+</blockquote>
+
+<details class="pb-accordion"><summary>Что делать, если WPS не работает?</summary><div class="pb-accordion-body"><p>Попробуйте подключиться через утилиту IJ Network Tool. В некоторых случаях требуется принудительное отключение WPS на роутере и использование режима Ad-hoc для настройки.</p></div></details>
+
+<h2 id="использование-утилиты-ij-network-tool">Использование утилиты IJ Network Tool</h2>
+<p>Если автоматическое сопряжение не сработало, наиболее надежным методом станет использование специализированной утилиты <em>IJ Network Tool</em>. Эта программа позволяет управлять настройками сети, даже если принтер еще не подключен к интернету.</p>
+<p>Скачайте утилиту с официального сайта <em>Canon</em> и установите ее на компьютер, подключенный к той же сети, которую вы планируете использовать. Запустите программу, и она автоматически просканирует эфир на наличие устройств в состоянии настройки.</p>
+<p>В списке найденных устройств выберите ваш <em>принтер</strong> и нажмите кнопку <code>Настройки</code>. В открывшемся окне выберите вашу домашнюю сеть из списка доступных SSID и введите пароль в соответствующее поле. После сохранения изменений устройство перезагрузит сетевой модуль.</p>
+<p>Процесс может занять несколько минут. Не отключайте питание устройства до тех пор, пока программа не сообщит об успешном завершении операции. Успешная настройка подтверждается изменением статуса на <strong>Подключено</em>.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Чек-лист подготовки к настройке</h4><label class="check-item"><input type="checkbox"><span>Убедиться, что принтер включен</span></label><label class="check-item"><input type="checkbox"><span>Проверить уровень сигнала Wi-Fi</span></label><label class="check-item"><input type="checkbox"><span>Скачать IJ Network Tool</span></label><label class="check-item"><input type="checkbox"><span>Узнать пароль от сети</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="подключение-принтера-с-сенсорным-дисплеем">Подключение принтера с сенсорным дисплеем</h2>
+<p>Многие современные модели серии <em>imageCLASS</em> и <strong>PIXMA</strong> оснащены цветными сенсорными экранами, что значительно упрощает процесс. Вам не потребуется компьютер для первичной настройки сети.</p>
+<p>Зайдите в меню настроек, нажав на иконку <code>Настройки</code> (гаечный ключ). Перейдите в раздел <code>Настройки сети</code> и выберите пункт <strong>Настройки Wi-Fi</strong>. Система предложит выбрать метод настройки, выберите <em>Ручной выбор</em>.</p>
+<p>На экране появится список доступных беспроводных сетей. Найдите имя вашей сети (SSID) и нажмите на него. Введите пароль с помощью виртуальной клавиатуры, следя за правильностью регистра букв и цифр.</p>
+<p>После подтверждения ввода устройство попытается установить соединение. Если все сделано верно, на экране появится сообщение об успешном подключении и будет показан <strong>IP-адрес</strong>, присвоенный принтеру.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если вы забыли пароль от Wi-Fi, зайдите в настройки роутера через браузер или посмотрите наклейку на нижней панели самого роутера.</p></aside>
+
+<h2 id="сравнение-методов-подключения">Сравнение методов подключения</h2>
+<p>Выбор метода зависит от вашей ситуации и доступного оборудования. Ниже приведена таблица, помогающая сравнить основные способы интеграции принтера в сеть.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Сложность</th>
+<th>Необходимое оборудование</th>
+<th>Скорость</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WPS (кнопка)</td>
+<td>Низкая</td>
+<td>Роутер с кнопкой WPS</td>
+<td>Мгновенно</td>
+</tr>
+<tr>
+<td>IJ Network Tool</td>
+<td>Средняя</td>
+<td>ПК/Ноутбук, USB-кабель</td>
+<td>5-10 минут</td>
+</tr>
+<tr>
+<td>Мобильное приложение</td>
+<td>Низкая</td>
+<td>Смартфон, Wi-Fi</td>
+<td>3-5 минут</td>
+</tr>
+<tr>
+<td>Панель управления</td>
+<td>Средняя</td>
+<td>Сенсорный экран</td>
+<td>5 минут</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Каждый из этих методов имеет свои преимущества. WPS идеален для новичков, а панель управления удобна, если компьютер находится в другом помещении. Мобильное приложение <em>Canon PRINT</em> особенно актуально для пользователей Android и iOS.</p>
+
+<h2 id="альтернативный-метод-прямое-подключение-wi-fi-direct">Альтернативный метод: Прямое подключение (Wi-Fi Direct)</h2>
+<p>Если у вас нет роутера или вы хотите подключить устройство напрямую к смартфону, используйте функцию <strong>Wi-Fi Direct</strong>. Этот режим создает собственную точку доступа от принтера.</p>
+<p>На панели устройства выберите <code>Настройки</code> → <code>Устройство</code> → <code>Настройки Wi-Fi Direct</code>. Активируйте функцию, и на экране появится SSID и пароль для подключения.</p>
+<p>В настройках вашего смартфона найдите эту сеть и подключитесь к ней. Это позволяет печатать фото или документы без наличия интернета и основного роутера. Однако, при этом другие устройства в сети не смогут получить доступ к принтеру.</p>
+
+<h2 id="решение-частых-проблем-и-ошибок">Решение частых проблем и ошибок</h2>
+<p>Иногда подключение может не завершиться успешно из-за конфликтов IP-адресов или устаревших драйверов. Если индикатор мигает оранжевым, попробуйте сбросить сетевые настройки до заводских.</p>
+<p>Для сброса зайдите в <code>Настройки</code> → <code>Сброс настроек</code> → <code>Сброс LAN</code>. После перезагрузки попробуйте настроить сеть заново. Убедитесь, что на компьютере установлены последние версии <strong>драйверов</strong> с сайта производителя.</p>
+<p>Также проверьте, не блокирует ли <em>файрвол</em> или антивирус связь с принтером. Иногда необходимо добавить устройство в список исключений для корректной работы.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Обновление прошивки устройства может быть критически важным для устранения ошибок сети. Всегда проверяйте наличие обновлений в разделе поддержки на сайте Canon.</p>
+</blockquote>
+
+<h2 id="финальные-шаги-и-проверка-работы">Финальные шаги и проверка работы</h2>
+<p>После того как принтер успешно подключился к сети, необходимо добавить его в операционную систему компьютера. В Windows перейдите в <code>Устройства и принтеры</code> и нажмите <strong>Добавить принтер</strong>.</p>
+<p>Система должна автоматически найти устройство в сети. Если этого не произошло, нажмите «Необходимый принтер отсутствует в списке» и выберите подключение по IP-адресу, который был получен в процессе настройки.</p>
+<p>Выполните тестовую печать, чтобы убедиться, что все функции работают корректно. Теперь вы можете отправлять задания на печать с любого устройства в вашей локальной сети без лишних проводов.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Правильная настройка IP-адреса и установка актуальных драйверов — залог стабильной работы принтера в сети без сбоев и зависаний.</p></aside>
+
+<details class="pb-accordion"><summary>Что делать, если принтер не виден в сети?</summary><div class="pb-accordion-body"><p>Проверьте, находятся ли компьютер и принтер в одной подсети. Иногда проблема кроется в настройках гостевой сети роутера, которая изолирует клиентов.</p></div></details>
+
+<h2 id="часто-задаваемые-вопросы">Часто задаваемые вопросы</h2>
+<details>
+<summary>Можно ли подключить старый принтер Canon к Wi-Fi?</summary>
+<p>Зависит от модели. Если принтер не имеет встроенного Wi-Fi модуля, потребуется внешняя точка доступа или кабель Ethernet, если порт LAN предусмотрен.</p>
+</details>
+<details>
+<summary>Как узнать IP-адрес принтера после подключения?</summary>
+<p>Нажмите кнопку <code>Настройки</code> на дисплее, перейдите в раздел <code>Сеть</code> и выберите <strong>Просмотр настроек TCP/IP</strong>. Там будет указан текущий IP-адрес.</p>
+</details>
+<details>
+<summary>Почему принтер теряет сеть после перезагрузки роутера?</summary>
+<p>Это может происходить, если роутер назначает динамический IP. Рекомендуется зафиксировать статический IP-адрес для принтера в настройках маршрутизатора.</p>
+</details>
+<details>
+<summary>Нужен ли кабель при настройке через приложение?</summary>
+<p>Нет, мобильное приложение <em>Canon PRINT</em> позволяет настроить Wi-Fi подключение принтера напрямую через смартфон, используя Bluetooth или временное соединение.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ca/canon-pixma-kak-uznat-model.html" class="pb-related-card">
+                <span class="pb-related-title">Как узнать модель принтера Canon Pixma: 5 проверенных способов</span>
+                <span class="pb-related-desc">Пошаговая инструкция как найти точное название модели Canon Pixma: по наклейке, экрану, драйверам и </span>
+            </a><a href="/articles/k/ka/kak-vyklyuchit-ekonomnyj-rezhim-na-printere-canon-cherez-mak.html" class="pb-related-card">
+                <span class="pb-related-title">Как отключить экономный режим на принтере Canon через Mac: инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по отключению тонер-сейва на принтерах Canon с macOS. Рассмотрены модели MG, P</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-printer-kenon-g1411.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon G1411 к ПК: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по установке принтера Canon PIXMA G1411 на Windows и Mac. Скачивание драйверов</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-drajver-dlya-printera-canon-laserbase-mf3228.html" class="pb-related-card">
+                <span class="pb-related-title">Установка драйвера Canon LaserBase MF3228: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по установке драйвера для МФУ Canon LaserBase MF3228. Решение проблем с подключ</span>
+            </a><a href="/articles/k/ka/kak-raspechatat-s-telefona-na-printer-cherez-wifi-canon-g3411.html" class="pb-related-card">
+                <span class="pb-related-title">Как распечатать с телефона на Canon G3411 через Wi-Fi: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка печати фото и документов с iPhone и Android на Canon PIXMA G3411. Решение пробле</span>
+            </a><a href="/articles/c/ca/canon-pixma-ip4500-kak-polzovatsya.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться принтером Canon Pixma iP4500: инструкция и настройка</span>
+                <span class="pb-related-desc">Полное руководство по эксплуатации Canon Pixma iP4500. Настройка драйверов, заправка картриджей, уст</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

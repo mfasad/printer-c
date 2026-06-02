@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как устроен фотоаппарат Canon: Архитектура, датчик и механика — Кэнон Инфо</title>
+    <meta name="description" content="Подробный разбор внутреннего устройства зеркальных и беззеркальных камер Canon. Узнайте о работе датчика, затвора, процессора DIGIC и системы автофокуса.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-ustroen-fotoapparat-kenon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как устроен фотоаппарат Canon: Архитектура, датчик и механика">
+    <meta property="og:description" content="Подробный разбор внутреннего устройства зеркальных и беззеркальных камер Canon. Узнайте о работе датчика, затвора, процессора DIGIC и системы автофокуса.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/fotoapparaty-canon/">Фотоаппараты Canon</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как устроен фотоаппарат Canon: Архитектура, датчик и механика</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#оптическая-система-и-путь-света">Оптическая система и путь света</a></li><li><a href="#зеркальный-механизм-и-затвор">Зеркальный механизм и затвор</a></li><li><a href="#датчик-изображения-и-процессор-обработки">Датчик изображения и процессор обработки</a></li><li><a href="#система-автофокуса-и-видоискатель">Система автофокуса и видоискатель</a></li><li><a href="#управление-питанием-и-записью-данных">Управление питанием и записью данных</a></li><li><a href="#техническое-обслуживание-и-надежность">Техническое обслуживание и надежность</a></li><li><a href="#частые-вопросы-о-внутреннем-устройстве">Частые вопросы о внутреннем устройстве</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-proverit-kolichestvo-kadrov-na-canon-200d.html">Как проверить количество затворов на Canon 200D: 3 способа</a></li><li><a href="/articles/k/ka/kak-snyat-video-na-fotoapparat-kenon.html">Как снимать видео на фотоаппарат Canon: пошаговая инструкция</a></li><li><a href="/articles/c/ca/canon-250d-kakogo-goda-vypuska.html">Canon EOS 250D: год выпуска, дата анонса и история модели</a></li><li><a href="/articles/n/na/na-skolko-rasschitan-zatvor-fotoapparata-canon.html">Ресурс затвора Canon: сколько выдержит ваш фотоаппарат?</a></li><li><a href="/articles/k/ka/kak-posmotret-probeg-kenon-650d.html">Как посмотреть пробег Canon 650D: 3 рабочих способа</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Внутренняя архитектура фотоаппаратов Canon: от сенсора до процессора</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#оптическая-система-и-путь-света">Оптическая система и путь света</a></li><li><a href="#зеркальный-механизм-и-затвор">Зеркальный механизм и затвор</a></li><li><a href="#датчик-изображения-и-процессор-обработки">Датчик изображения и процессор обработки</a></li><li><a href="#система-автофокуса-и-видоискатель">Система автофокуса и видоискатель</a></li><li><a href="#управление-питанием-и-записью-данных">Управление питанием и записью данных</a></li><li><a href="#техническое-обслуживание-и-надежность">Техническое обслуживание и надежность</a></li><li><a href="#частые-вопросы-о-внутреннем-устройстве">Частые вопросы о внутреннем устройстве</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Многие пользователи воспринимают фотоаппарат как единый черный ящик, где нажатие кнопки спуска мгновенно рождает снимок. На деле же камера <em>Canon</em> — это сложнейший симбиоз высокоточной механики, оптики и передовых цифровых алгоритмов. Понимание того, как именно устроен этот механизм, позволяет не только глубже оценить инженерную мысль, но и эффективнее использовать функционал устройства в полевых условиях.</p>
+
+<p>В основе любой модели лежит уникальная цепочка обработки света, которую инженеры компании оттачивали десятилетиями. От момента, когда луч попадает на переднюю линзу, до момента сохранения файла на карте памяти, происходит тысячи микропроцессов. Мы разберем ключевые узлы, определяющие качество изображения и скорость работы камеры, чтобы вы могли лучше контролировать каждый этап съемки.</p>
+
+<h2 id="оптическая-система-и-путь-света">Оптическая система и путь света</h2>
+
+<p>Всё начинается с объектива, который является главным инструментом сбора света. В камерах <em>Canon</em> используется байонет <strong>EF</strong> для зеркалок или <strong>RF</strong> для беззеркальных систем, что обеспечивает надежное крепление и точную передачу данных о фокусном расстоянии. Внутри объектива находятся группы линз, управляемые встроенными моторами, которые перемещают элементы для фокусировки и изменения зумирования.</p>
+
+<p>Свет, проходя через линзы, встречает на своем пути диафрагму — механический механизм из лепестков. Именно <strong>диафрагма</strong> регулирует количество света, попадающего на сенсор, и напрямую влияет на глубину резкости изображения. Управление диафрагмой происходит автоматически через контакты байонета, но вы всегда можете переключиться в режим приоритета диафрагмы <code>Av</code> для творческих задач.</p>
+
+<blockquote>⚠️ Внимание: При смене объектива обязательно держите камеру байонетом вниз, чтобы избежать попадания пыли и мелкого мусора внутрь корпуса, так как даже микроскопические частицы могут испортить снимки.</blockquote>
+
+<p>Важным отличием зеркальных моделей является наличие зеркала, которое отражает свет на видоискатель. В беззеркальных камерах, таких как серия <em>EOS R</em>, свет идет напрямую на матрицу, что упрощает конструкцию, но требует постоянного считывания данных с сенсора.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Всегда перекрывайте объектив крышкой при снятии с камеры, чтобы защитить переднюю линзу от царапин и пыли, особенно если вы часто меняете оптику в полевых условиях.</p></aside>
+
+<h2 id="зеркальный-механизм-и-затвор">Зеркальный механизм и затвор</h2>
+
+<p>В классических зеркальных камерах <strong>зеркало</strong> играет роль главного переключателя оптического пути. Пока вы смотрите в видоискатель, зеркало находится в приподнятом положении, отражая свет в пентапризму. В момент нажатия на кнопку спуска зеркало резко поднимается вверх, освобождая путь свету к матрице. Это движение требует огромной точности и скорости, чтобы минимизировать вибрации.</p>
+
+<p>Сразу за зеркалом располагается <strong>затвор</strong> — шторки, которые открываются и закрываются, чтобы пропустить свет на сенсор на строго заданное время. В современных моделях <em>Canon</em> используются быстроходные затворы, способные работать на выдержках до <code>1/8000</code> секунды. Существуют также электронные затворы, которые полностью исключают механическое движение, позволяя снимать бесшумно.</p>
+
+<div class="pb-poll" id="poll-6a6fe0de"><div class="pb-poll-question">📊 Какой тип затвора вам ближе?</div><div class="pb-poll-option" data-poll="6a6fe0de" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Механический (классика)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6a6fe0de" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Электронный (бесшумно)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6a6fe0de" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Комбинированный</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6a6fe0de" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не имею мнения</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<p>Синхронизация работы зеркала и затвора — это критический момент. Задержка между моментом нажатия кнопки и срабатыванием затвора называется задержкой спуска. Инженеры <strong>Canon</strong> оптимизировали эту задержку до минимума, что особенно важно при съемке спорта или дикой природы.</p>
+
+<details class="pb-accordion"><summary>Что такое вибрация зеркала?</summary><div class="pb-accordion-body"><p>При подъеме зеркало вызывает микро-вибрации корпуса, которые могут смазать снимок на длинных выдержках. Для решения этой проблемы во многих камерах есть режим предварительного подъема зеркала.</p></div></details>
+
+<h2 id="датчик-изображения-и-процессор-обработки">Датчик изображения и процессор обработки</h2>
+
+<p>Сердцем любой современной камеры является <strong>светочувствительный сенсор</strong>. В моделях <em>Canon</em> чаще всего используются матрицы типа <strong>CMS</strong> (CMOS), которые обладают высокой чувствительностью и низким уровнем шума даже при высоких значениях ISO. Размер матрицы (полный кадр APS-F или кроп APS-C) определяет угол обзора и светособирающую способность.</p>
+
+<p>Сенсор преобразует световые сигналы в электрические, но сырые данные требуют сложной обработки. Этим занимается мощный процессор <strong>DIGIC</strong>. Различные поколения этого чипа (DIGIC 8, DIGIC X и новее) отвечают за вычисление баланса белого, цветовую реконструкцию, шумоподавление и работу систем автофокуса. Именно процессор определяет скорость серийной съемки и время отклика камеры.</p>
+
+<blockquote>⚠️ Внимание: Процессор генерирует значительное тепло при длительной видео- или серийной съемке в высоком разрешении. Если камера перегревается, она автоматически отключится для защиты компонентов.</blockquote>
+
+<p>Важно отметить, что <strong>байер-фильтр</strong>, расположенный поверх сенсора, разделяет свет на цветовые каналы (красный, зеленый, синий). Алгоритмы интерполяции процессора затем восстанавливают полную цветовую информацию для каждого пикселя, создавая финальное изображение с естественными оттенками.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Процессор DIGIC является "мозгом" камеры: чем новее поколение чипа, тем выше скорость обработки изображений и эффективнее работа с автофокусом в сложных условиях освещения.</p></aside>
+
+<h2 id="система-автофокуса-и-видоискатель">Система автофокуса и видоискатель</h2>
+
+<p>Система автофокуса <em>Canon</em> считается одной из лучших в индустрии благодаря технологии <strong>Dual Pixel CMOS AF</strong>. В этой технологии каждый пиксель сенсора разделен на два фотодиода, что позволяет использовать всю площадь матрицы для фазового автофокуса. Это обеспечивает мгновенную и плавную фокусировку как при съемке фото, так и при записи видео.</p>
+
+<p>В зеркальных камерах используется отдельный модуль фазового детектирования, расположенный под зеркалом. Он анализирует свет, отраженный от вторичного зеркала, и вычисляет расстояние до объекта. Количество <strong>точек фокусировки</strong> в топовых моделях достигает сотен, покрывая практически всё поле кадра и позволяя отслеживать движущиеся объекты.</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Компонент</th>
+      <th>Функция</th>
+      <th>Влияние на съемку</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Зеркало</td>
+      <td>Направление света в видоискатель</td>
+      <td>Обеспечивает оптическую видимость, но создает вибрации</td>
+    </tr>
+    <tr>
+      <td>Пентапризма</td>
+      <td>Корректировка ориентации изображения</td>
+      <td>Дает яркое и правильное изображение в видоискателе</td>
+    </tr>
+    <tr>
+      <td>Затвор</td>
+      <td>Контроль времени экспозиции</td>
+      <td>Определяет, будет ли снимок размыт или заморожен</td>
+    </tr>
+    <tr>
+      <td>Сенсор</td>
+      <td>Превращение света в сигнал</td>
+      <td>Задает разрешение и динамический диапазон кадра</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>В беззеркальных системах видоискатель становится электронным (EVF). Он показывает изображение с сенсора в реальном времени, позволяя увидеть баланс белого и экспозицию еще до нажатия кнопки спуска. Это <strong>электронное видоискание</strong> кардинально меняет подход к съемке, делая процесс более предсказуемым.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка состояния автофокуса</h4><label class="check-item"><input type="checkbox"><span>Убедиться, что переключатель на объективе в положении AF</span></label><label class="check-item"><input type="checkbox"><span>Проверить чистоту контактных групп</span></label><label class="check-item"><input type="checkbox"><span>Тестировать фокусировку на контрастном объекте</span></label><label class="check-item"><input type="checkbox"><span>Настроить приоритет лица в меню</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="управление-питанием-и-записью-данных">Управление питанием и записью данных</h2>
+
+<p>Камера <em>Canon</em> потребляет энергию от аккумулятора, который питает все узлы: от моторов объектива до мощного процессора DIGIC. Энергопотребление резко возрастает при использовании вспышки, серийной съемке и записи видео в 4K. Поэтому разумное распределение ресурсов питания напрямую влияет на время автономной работы.</p>
+
+<p>Данные с сенсора записываются на карты памяти, которые вставляются в специальный отсек. Современные камеры поддерживают скоростные форматы, такие как <strong>CFexpress Type B</strong> или <strong>UHS-II SD</strong>, что необходимо для быстрой буферизации при съемке RAW-сериалов. Скорость записи определяет, как долго камера сможет снимать без остановок на обработку.</p>
+
+<p>Интерфейсы подключения, включая USB-C и HDMI, позволяют не только передавать файлы на компьютер, но и работать в режиме удаленного управления. Это особенно актуально для студийной съемки, где такая камера может быть полностью интегрирована в рабочий процесс.</p>
+
+<h2 id="техническое-обслуживание-и-надежность">Техническое обслуживание и надежность</h2>
+
+<p>Долговечность камеры зависит от качества сборки и регулярного обслуживания. Механический затвор имеет определенный ресурс срабатываний (обычно от 150 до 400 тысяч кадров), после которого его необходимо заменять. Однако электронная часть служит значительно дольше при правильном уходе.</p>
+
+<p>Важно следить за чистотой сенсора, так как пыль на нем проявляется как темные пятна на светлых участках фото. Многие камеры Canon имеют функцию <strong>самоочистки</strong> сенсора, которая вибрирует матрицу, стряхивая частицы пыли. Также стоит периодически проверять состояние уплотнителей байонета.</p>
+
+<blockquote>⚠️ Внимание: Не пытайтесь самостоятельно почистить сенсор ватными палочками или сжатым воздухом без специальных навыков — вы можете поцарапать покрытие матрицы или повредить фильтры, что потребует дорогостоящего ремонта.</blockquote>
+
+<p>Корпуса профессиональных моделей часто имеют пыле- и влагозащиту, что позволяет снимать в сложных погодных условиях. Однако это не означает полную герметичность: при сильном дожде или погружении в воду камера может выйти из строя.</p>
+
+<h2 id="частые-вопросы-о-внутреннем-устройстве">Частые вопросы о внутреннем устройстве</h2>
+
+<details>
+  <summary>Почему зеркальные камеры Canon шумят при съемке?</summary>
+  <p>Шум вызван механическим движением зеркала и работой затвора. При подъеме зеркала происходит ударный контакт с корпусом, а затвор резко открывается и закрывается. В беззеркальных моделях этот шум минимизирован или отсутствует вовсе.</p>
+</details>
+
+<details>
+  <summary>Можно ли использовать объективы EF на беззеркальных камерах RF?</summary>
+  <p>Да, с помощью переходника <strong>EF-EOS R</strong> можно использовать практически любые объективы серии EF и EF-S на камерах с байонетом RF. При этом сохраняется работоспособность автофокуса и всех функций управления.</p>
+</details>
+
+<details>
+  <summary>Как работает система стабилизации изображения?</summary>
+  <p>Стабилизация может быть реализована либо в объективе (IS), где подвижные линзы компенсируют дрожание рук, либо в корпусе (IBIS), где сдвигается сам сенсор. В новых камерах часто используется гибридная система, объединяющая обе технологии для максимальной эффективности.</p>
+</details>
+
+<details>
+  <summary>Что такое байер-фильтр?</summary>
+  <p>Это цветной фильтр, расположенный поверх светочувствительной матрицы. Он состоит из чередующихся красных, зеленых и синих элементов, позволяющих сенсору регистрировать цветную информацию, которую затем процессор интерполирует в полноценное изображение.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-proverit-kolichestvo-kadrov-na-canon-200d.html" class="pb-related-card">
+                <span class="pb-related-title">Как проверить количество затворов на Canon 200D: 3 способа</span>
+                <span class="pb-related-desc">Узнайте, как узнать ресурс затвора камеры Canon EOS 200D. Подробная инструкция по подсчету кадров че</span>
+            </a><a href="/articles/k/ka/kak-snyat-video-na-fotoapparat-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Как снимать видео на фотоаппарат Canon: пошаговая инструкция</span>
+                <span class="pb-related-desc">Полное руководство по видеосъемке на зеркальные и беззеркальные камеры Canon. Настройки, режимы, ста</span>
+            </a><a href="/articles/c/ca/canon-250d-kakogo-goda-vypuska.html" class="pb-related-card">
+                <span class="pb-related-title">Canon EOS 250D: год выпуска, дата анонса и история модели</span>
+                <span class="pb-related-desc">Узнайте точный год выпуска Canon EOS 250D, дату анонса и ключевые особенности камеры. Полный обзор х</span>
+            </a><a href="/articles/n/na/na-skolko-rasschitan-zatvor-fotoapparata-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Ресурс затвора Canon: сколько выдержит ваш фотоаппарат?</span>
+                <span class="pb-related-desc">Изучите реальный ресурс затвора камер Canon. Таблицы по моделям, признаки износа и советы по продлен</span>
+            </a><a href="/articles/k/ka/kak-posmotret-probeg-kenon-650d.html" class="pb-related-card">
+                <span class="pb-related-title">Как посмотреть пробег Canon 650D: 3 рабочих способа</span>
+                <span class="pb-related-desc">Узнайте, как узнать пробег Canon 650D без программ. Инструкция по сервисным меню, кодам и приложения</span>
+            </a><a href="/articles/c/ca/canon-eos-60d-kak-otklyuchit-vspyshku.html" class="pb-related-card">
+                <span class="pb-related-title">Как отключить вспышку на Canon EOS 60D: 3 рабочих способа</span>
+                <span class="pb-related-desc">Подробная инструкция по отключению встроенной и внешней вспышки на зеркальной камере Canon EOS 60D. </span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

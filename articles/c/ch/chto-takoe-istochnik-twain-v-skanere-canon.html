@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Источник Twain в сканерах Canon: что это и как настроить — Кэнон Инфо</title>
+    <meta name="description" content="Разбираем, что такое источник Twain в сканерах Canon. Как выбрать драйвер, настроить параметры и устранить ошибки при сканировании документов и фото.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ch/chto-takoe-istochnik-twain-v-skanere-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Источник Twain в сканерах Canon: что это и как настроить">
+    <meta property="og:description" content="Разбираем, что такое источник Twain в сканерах Canon. Как выбрать драйвер, настроить параметры и устранить ошибки при сканировании документов и фото.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Источник Twain в сканерах Canon: что это и как настроить</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-в-технологию-сканирования">Введение в технологию сканирования</a></li><li><a href="#суть-стандарта-twain-и-его-роль-в-экосистеме-canon">Суть стандарта TWAIN и его роль в экосистеме Canon</a></li><li><a href="#различия-между-драйверами-wia-и-twain-в-устройствах-canon">Различия между драйверами WIA и TWAIN в устройствах Canon</a></li><li><a href="#настройка-параметров-сканирования-через-интерфейс-twain">Настройка параметров сканирования через интерфейс TWAIN</a></li><li><a href="#возможные-проблемы-и-методы-их-устранения">Возможные проблемы и методы их устранения</a></li><li><a href="#сравнение-производительности-и-функционала">Сравнение производительности и функционала</a></li><li><a href="#перспективы-развития-технологии-сканирования">Перспективы развития технологии сканирования</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-otkserokopirovat-na-printere-canon-bez-kompyutera.html">Как отксерокопировать на принтере Canon без компьютера: полная инструкция</a></li><li><a href="/articles/k/ka/kak-nastroit-skan-na-printere-canon-mf4410.html">Как настроить скан на принтере Canon MF4410: Полное руководство</a></li><li><a href="/articles/c/ca/canon-mf4320-4350-kak-skanirovat-fajly-na-komp.html">Сканирование на Canon MF4320/4350: подключение к ПК и настройка</a></li><li><a href="/articles/k/ka/kak-ustanovit-drajver-skanera-canon-lide-60-na-windows-10.html">Как установить драйвер Canon Lide 60 на Windows 10: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-otskanirovat-dokument-canon.html">Как отсканировать документ на Canon: полное руководство по настройке</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Источник Twain в сканерах Canon: полное руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-в-технологию-сканирования">Введение в технологию сканирования</a></li><li><a href="#суть-стандарта-twain-и-его-роль-в-экосистеме-canon">Суть стандарта TWAIN и его роль в экосистеме Canon</a></li><li><a href="#различия-между-драйверами-wia-и-twain-в-устройствах-canon">Различия между драйверами WIA и TWAIN в устройствах Canon</a></li><li><a href="#настройка-параметров-сканирования-через-интерфейс-twain">Настройка параметров сканирования через интерфейс TWAIN</a></li><li><a href="#возможные-проблемы-и-методы-их-устранения">Возможные проблемы и методы их устранения</a></li><li><a href="#сравнение-производительности-и-функционала">Сравнение производительности и функционала</a></li><li><a href="#перспективы-развития-технологии-сканирования">Перспективы развития технологии сканирования</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-в-технологию-сканирования">Введение в технологию сканирования</h2>
+
+<p>Когда вы подключаете современный сканер <em>Canon</em> к компьютеру, операционная система не видит его как готовый к работе инструмент без специального посредника. Этим посредником выступает программный интерфейс под названием <strong>TWAIN</strong>. Это стандартный протокол обмена данными, который позволяет приложениям получать изображения непосредственно с устройства ввода, минуя сложные низкоуровневые команды.</p>
+
+<p>Многие пользователи сталкиваются с термином «источник Twain» в диалоговых окнах программ для работы с графикой или в диспетчере устройств. Суть заключается в том, что <em>Canon</em> использует драйверы, совместимые с этим стандартом, чтобы вы могли сканировать документы в <code>Photoshop</code>, <code>Word</code> или специализированном ПО. Без корректной работы этого источника сканирование попросту невозможно, а устройство будет отображаться как неактивное.</p>
+
+<p>Понимание того, как именно работает <strong>источник изображения</strong> в контексте <em>Canon</em>, поможет вам избежать ошибок при настройке и выбрать правильный режим работы. Ниже мы детально разберем различия между драйверами и покажем, как управлять процессом получения цифровых копий.</p>
+
+<h2 id="суть-стандарта-twain-и-его-роль-в-экосистеме-canon">Суть стандарта TWAIN и его роль в экосистеме Canon</h2>
+
+<p>Аббревиатура <strong>TWAIN</strong> расшифровывается как «Technology Without An Interesting Name» (Технология без интересного названия), но её значение для индустрии сканирования трудно переоценить. Этот стандарт был разработан в 1992 году именно для того, чтобы унифицировать процесс передачи данных от сканера к приложению.</p>
+
+<p>В устройствах <em>Canon</em> реализация <strong>источника TWAIN</strong> означает наличие специального драйвера, который действует как мост. Когда вы запускаете команду сканирования в программе, запрос идет не напрямую к «начинке» сканера, а к этому драйверу. Драйвер запрашивает настройки, получает изображение, обрабатывает его и передает обратно в программу.</p>
+
+<p>Важно различать два типа драйверов, с которыми вы можете столкнуться: <strong>WIA</strong> (Windows Image Acquisition) и <strong>TWAIN</strong>. WIA — это стандарт Microsoft, более простой и встроенный в систему, но TWAIN обычно предлагает значительно более широкий функционал для профессиональных задач.</p>
+
+<p>Если вы используете сканер <em>Canon CanoScan</em> или серию <em>imageRUNNER</em>, лучше всего ориентироваться именно на TWAIN-драйверы для сложных операций, таких как сканирование с оптической коррекцией или работа с многостраничными документами.</p>
+
+<p><strong>Ключевые преимущества использования TWAIN:</strong></p>
+<ul>
+  <li>🏷️ Поддержка расширенных настроек цвета и разрешения</li>
+  <li>🏷️ Совместимость с огромным количеством стороннего ПО</li>
+  <li>🏷️ Возможность работы с профессиональными графическими редакторами</li>
+  <li>🏷️ Более точная калибровка цветовых профилей</li>
+</ul>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Устаревшие версии драйверов TWAIN могут конфликтовать с современными 64-битными операционными системами Windows 10 и 11. Всегда проверяйте совместимость версии драйвера с вашей ОС перед установкой, иначе сканер может не определяться как источник данных.</p>
+</blockquote>
+
+<h2 id="различия-между-драйверами-wia-и-twain-в-устройствах-canon">Различия между драйверами WIA и TWAIN в устройствах Canon</h2>
+
+<p>При подключении сканера <em>Canon</em> пользователю часто предлагают выбор между двумя типами источников. <strong>WIA</strong> (Windows Image Acquisition) — это базовый драйвер, входящий в состав Windows. Он удобен для простого сканирования, но его функционал ограничен.</p>
+
+<p><strong>TWAIN</strong> — это продвинутый интерфейс, который раскрывает весь потенциал вашего сканера. Если вы хотите использовать функции <em>Canon ScanGear</em>, такие как автоматическое удаление фона, коррекция цвета или работа с пленкой, вам необходим именно этот источник. WIA не поддерживает многие уникальные алгоритмы обработки изображений, заложенные в устройствах <em>Canon</em>.</p>
+
+<p>В некоторых случаях система может некорректно подхватывать TWAIN-драйвер, предлагая использовать WIA по умолчанию. Это приводит к тому, что в окне предпросмотра вы видите только черно-белую картинку без возможности настройки оттенка серого.</p>
+
+<p>Чтобы переключить источник, вам нужно зайти в настройки программы, с которой вы работаете, и в поле выбора устройства указать <code>Canon TWAIN Driver</code> вместо <code>WIA Canon Scanner</code>. Это критически важно для профессиональной печати и архивации.</p>
+
+<div class="pb-poll" id="poll-b428d26e"><div class="pb-poll-question">📊 Что вы используете чаще для сканирования?</div><div class="pb-poll-option" data-poll="b428d26e" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Простые документы (WIA)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b428d26e" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Фото и графика (TWAIN)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b428d26e" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Профессиональная работа</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b428d26e" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Пока не знаю разницы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="настройка-параметров-сканирования-через-интерфейс-twain">Настройка параметров сканирования через интерфейс TWAIN</h2>
+
+<p>После того как вы выбрали <strong>источник Twain</strong> в своей программе, открывается окно управления настройками сканера <em>Canon</em>. Здесь расположены ползунки и переключатели, которые недоступны в стандартном приложении «Факсы и сканеры» Windows.</p>
+
+<p>Первое, на что стоит обратить внимание — это выбор типа оригинала. Вы можете выбрать <code>Фото</code>, <code>Документ</code> или <code>Профиль</code>. В режиме <strong>Фото</strong> сканер тратит больше времени на захват, но обеспечивает высокую детализацию и плавные переходы оттенков. Режим <strong>Документ</strong> ускоряет процесс, но может потерять мелкие детали в тексте.</p>
+
+<p>Также в этом окне вы найдете настройки разрешения. Стандартное значение часто составляет <code>300 dpi</code>, что достаточно для печати документов. Однако для профессиональной печати или архивации фотографий рекомендуется выставить значение <code>600 dpi</code> или выше, если позволяет емкость памяти устройства.</p>
+
+<p>Не забудьте проверить настройки интерфейса подключения. Если сканер подключен через USB, убедитесь, что кабель надежен и порт работает стабильно. Ошибки передачи данных могут привести к тому, что <strong>источник изображения</strong> потеряет связь с приложением в процессе сканирования.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка настроек перед сканированием</h4><label class="check-item"><input type="checkbox"><span>Выбрать тип оригинала (Фото/Документ)</span></label><label class="check-item"><input type="checkbox"><span>Установить разрешение (DPI)</span></label><label class="check-item"><input type="checkbox"><span>Настроить цветовую схему (RGB/CMYK/Grayscale)</span></label><label class="check-item"><input type="checkbox"><span>Проверить наличие бумаги в лотке</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="возможные-проблемы-и-методы-их-устранения">Возможные проблемы и методы их устранения</h2>
+
+<p>Иногда при попытке запустить сканирование через <strong>источник Twain</strong> пользователи сталкиваются с ошибками. Самая частая проблема — сообщение «Устройство не найдено» или «Драйвер не отвечает». Это часто случается, если USB-кабель был отключен во время работы или если драйвер был установлен некорректно.</p>
+
+<p>Другой распространенный сценарий — зависание окна предпросмотра. В этом случае сканер <em>Canon</em> может продолжать светить лампой, но изображение не передается в программу. Это обычно означает конфликт процессов или нехватку оперативной памяти для обработки данных высокого разрешения.</p>
+
+<p>Для решения проблемы попробуйте перезапустить службу сканирования Windows. Нажмите <code>Win + R</code>, введите <code>services.msc</code> и найдите службу <em>Windows Image Acquisition (WIA)</em>. Попробуйте остановить и снова запустить её, даже если вы используете TWAIN, так как они часто взаимодействуют на уровне системы.</p>
+
+<p>Если проблема сохраняется, выполните полную переустановку драйвера. Удалите текущий драйвер через «Диспетчер устройств», отключите сканер от USB и перезагрузите компьютер. Затем скачайте актуальную версию драйвера с официального сайта <em>Canon</em> и установите её, подключив устройство только после завершения установки.</p>
+
+<details class="pb-accordion"><summary>Что делать, если сканер Canon не определяется в 64-битной системе?</summary><div class="pb-accordion-body"><p>Часто проблема в том, что вы пытаетесь загрузить 32-битный драйвер на 64-битную ОС. Зайдите на сайт производителя и убедитесь, что скачиваете драйвер именно для вашей разрядности системы (x64).</p></div></details>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> При использовании старых моделей сканеров <em>Canon</em> (выпуска до 2010 года) на Windows 10/11 может потребоваться запуск драйвера в режиме совместимости. Это не всегда гарантирует работу всех функций TWAIN, но может сделать устройство доступным для базового сканирования.</p>
+</blockquote>
+
+<h2 id="сравнение-производительности-и-функционала">Сравнение производительности и функционала</h2>
+
+<p>Чтобы наглядно понять, почему стоит отдавать предпочтение <strong>источнику Twain</strong> перед стандартными средствами, рассмотрим сравнительную таблицу возможностей.</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Параметр</th>
+      <th>WIA (Базовый)</th>
+      <th>TWAIN (Профессиональный)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Поддержка цветовых профилей</td>
+      <td>Ограничена</td>
+      <td>Полная (ICC)</td>
+    </tr>
+    <tr>
+      <td>Скорость сканирования</td>
+      <td>Выше</td>
+      <td>Ниже (из-за обработки)</td>
+    </tr>
+    <tr>
+      <td>Удаление фона текста</td>
+      <td>Нет</td>
+      <td>Да (в ScanGear)</td>
+    </tr>
+    <tr>
+      <td>Работа со стеклянными подложками</td>
+      <td>Базовая</td>
+      <td>Расширенная (коррекция бликов)</td>
+    </tr>
+    <tr>
+      <td>Совместимость с Photoshop</td>
+      <td>Частичная</td>
+      <td>Полная</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Выбор правильного драйвера напрямую влияет на качество конечного результата. Если вам нужно просто отсканировать чек для отчета, WIA подойдет идеально. Но если вы работаете с <em>архивами старых фотографий</em> или готовите материалы для печати в типографии, <strong>TWAIN</strong> станет вашим незаменимым помощником.</p>
+
+<p>Обратите внимание, что некоторые функциональные клавиши на корпусе сканера <em>Canon</em> могут быть привязаны только к драйверу TWAIN. При использовании WIA эти кнопки могут не реагировать на нажатия, так как интерфейс драйвера не перехватывает их сигналы.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Использование TWAIN-драйвера обеспечивает максимальный контроль над процессом сканирования, хотя и требует чуть больше времени на настройку параметров.</p></aside>
+
+<h2 id="перспективы-развития-технологии-сканирования">Перспективы развития технологии сканирования</h2>
+
+<p>Технология <strong>TWAIN</strong> существует уже несколько десятилетий, но она продолжает развиваться. Современные сканеры <em>Canon</em> поддерживают новые версии стандарта, которые позволяют быстрее передавать большие объемы данных и интегрировать облачные сервисы.</p>
+
+<p>В будущем мы можем ожидать полный переход на облачные протоколы сканирования, где драйвер будет работать как облачный шлюз. Однако на данный момент <strong>источник Twain</strong> остается золотым стандартом для локальных сетей и автономных рабочих станций, обеспечивая безопасность и скорость обработки данных без зависимости от интернета.</p>
+
+<p>Для пользователей важно следить за обновлениями ПО от <em>Canon</em>, так как новые версии часто содержат исправления уязвимостей и оптимизацию для новых операционных систем. Это гарантирует, что ваш сканер будет работать стабильно и эффективно.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для ускорения работы сканера с TWAIN отключите визуальные эффекты предварительного просмотра в настройках программы, если вы сканируете огромные пакеты документов без необходимости их немедленного анализа.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы">Часто задаваемые вопросы</h2>
+
+<details>
+  <summary>Что делать, если программа не видит источник TWAIN?</summary>
+  <p>Это может быть связано с тем, что драйвер не установлен или работает некорректно. Проверьте Диспетчер устройств и убедитесь, что сканер не помечен восклицательным знаком. Попробуйте переустановить драйвер с официального сайта Canon.</p>
+</details>
+
+<details>
+  <summary>Можно ли использовать TWAIN драйвер на Mac?</summary>
+  <p>Нет, стандарт TWAIN разработан преимущественно для Windows. Для macOS используются драйверы Image Capture или специализированное ПО ScanGear, которое имеет аналогичный функционал, но другую архитектуру.</p>
+</details>
+
+<details>
+  <summary>В чем разница между TWAIN и ISIS?</summary>
+  <p>TWAIN предназначен для персональных сканеров и обычных рабочих станций, тогда как ISIS ориентирован на высокоскоростные промышленные сканеры и работу в крупных корпоративных сетях.</p>
+</details>
+
+<details>
+  <summary>Нужно ли скачивать отдельный драйвер для каждой программы?</summary>
+  <p>Нет, достаточно установить один универсальный драйвер TWAIN для вашего сканера <em>Canon</em>. После этого все поддерживаемые программы будут видеть источник и смогут им управлять.</p>
+</details>
+
+<details>
+  <summary>Почему сканирование через TWAIN происходит медленнее?</summary>
+  <p>Драйвер TWAIN выполняет более сложную обработку изображения (коррекция цвета, шума, удаление фона) еще до передачи файла в программу, что требует дополнительных вычислительных ресурсов и времени.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-otkserokopirovat-na-printere-canon-bez-kompyutera.html" class="pb-related-card">
+                <span class="pb-related-title">Как отксерокопировать на принтере Canon без компьютера: полная инструкция</span>
+                <span class="pb-related-desc">Узнайте, как сделать ксерокопию на принтере Canon без ПК. Подробная инструкция по настройке, работе </span>
+            </a><a href="/articles/k/ka/kak-nastroit-skan-na-printere-canon-mf4410.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить скан на принтере Canon MF4410: Полное руководство</span>
+                <span class="pb-related-desc">Подробная инструкция по настройке сканирования на Canon MF4410. Подключение к ПК, установка драйверо</span>
+            </a><a href="/articles/c/ca/canon-mf4320-4350-kak-skanirovat-fajly-na-komp.html" class="pb-related-card">
+                <span class="pb-related-title">Сканирование на Canon MF4320/4350: подключение к ПК и настройка</span>
+                <span class="pb-related-desc">Пошаговая инструкция, как сканировать документы с принтера Canon MF4320/4350 на компьютер: драйвера,</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-drajver-skanera-canon-lide-60-na-windows-10.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить драйвер Canon Lide 60 на Windows 10: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по установке драйвера планетарного сканера Canon Lide 60 под Windows 10. Решен</span>
+            </a><a href="/articles/k/ka/kak-otskanirovat-dokument-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как отсканировать документ на Canon: полное руководство по настройке</span>
+                <span class="pb-related-desc">Пошаговая инструкция, как отсканировать документ на принтерах и МФУ Canon. Настройка драйверов, испо</span>
+            </a><a href="/articles/k/ka/kak-sdelat-skan-na-printere-canon-i-sensys-mf3010.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать скан на принтере Canon i-SENSYS MF3010: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по сканированию документов с МФУ Canon i-SENSYS MF3010. Настройка драйверов, и</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Canon LiDE 110: как подключить сканер к ПК и настроить работу — Кэнон Инфо</title>
+    <meta name="description" content="Полная инструкция по подключению Canon LiDE 110 к компьютеру. Установка драйверов, настройка через TWAIN и WIA, решение частых ошибок и тонкости работы.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-lide-110-kak-podklyuchit.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Canon LiDE 110: как подключить сканер к ПК и настроить работу">
+    <meta property="og:description" content="Полная инструкция по подключению Canon LiDE 110 к компьютеру. Установка драйверов, настройка через TWAIN и WIA, решение частых ошибок и тонкости работы.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/podklyuchenie-k-pk/">Подключение к ПК</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Canon LiDE 110: как подключить сканер к ПК и настроить работу</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-начало-работы-с-компактным-сканером">Введение: начало работы с компактным сканером</a></li><li><a href="#подготовка-оборудования-и-выбор-порта">Подготовка оборудования и выбор порта</a></li><li><a href="#процесс-установки-драйверов-и-по">Процесс установки драйверов и ПО</a></li><li><a href="#настройка-программного-обеспечения-для-сканирования">Настройка программного обеспечения для сканирования</a></li><li><a href="#использование-стандартных-средств-windows">Использование стандартных средств Windows</a></li><li><a href="#таблица-совместимости-и-требований">Таблица совместимости и требований</a></li><li><a href="#решение-типичных-проблем-при-подключении">Решение типичных проблем при подключении</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-pixma-mg2540s-k-noutbuku.html">Подключение принтера Canon PIXMA MG2540S к ноутбуку: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-ustanovit-printer-kenon-na-noutbuk-bez-diska-i-fleshki-na-kompyuter.html">Установка принтера Canon на ноутбук без диска: полное руководство</a></li><li><a href="/articles/k/ka/kak-ustanovit-drajvera-na-printer-canon-6030.html">Как установить драйвера на принтер Canon 6030: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-nastroit-printer-canon-na-noutbuke.html">Как настроить принтер Canon на ноутбуке: полное руководство по подключению</a></li><li><a href="/articles/k/ka/kak-podklyuchit-vaj-faj-na-printere-canon-g3415.html">Как подключить Wi-Fi на принтере Canon G3415: Полная инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как подключить Canon LiDE 110 к компьютеру: пошаговая настройка</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-начало-работы-с-компактным-сканером">Введение: начало работы с компактным сканером</a></li><li><a href="#подготовка-оборудования-и-выбор-порта">Подготовка оборудования и выбор порта</a></li><li><a href="#процесс-установки-драйверов-и-по">Процесс установки драйверов и ПО</a></li><li><a href="#настройка-программного-обеспечения-для-сканирования">Настройка программного обеспечения для сканирования</a></li><li><a href="#использование-стандартных-средств-windows">Использование стандартных средств Windows</a></li><li><a href="#таблица-совместимости-и-требований">Таблица совместимости и требований</a></li><li><a href="#решение-типичных-проблем-при-подключении">Решение типичных проблем при подключении</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-начало-работы-с-компактным-сканером">Введение: начало работы с компактным сканером</h2>
+<p>Подключение устройства <strong>Canon LiDE 110</strong> к персональному компьютеру — это процедурный процесс, который требует внимательности к порядку действий. Небольшой форм-фактор и отсутствие внешнего блока питания делают эту модель привлекательной для домашнего использования, однако именно эти особенности часто вызывают вопросы у новичков при первом запуске.</p>
+<p>В отличие от более габаритных офисных моделей, данный аппарат полностью запитывается от шины USB, что накладывает определенные требования к портам вашего системного блока или ноутбука. Правильная последовательность подключения драйверов и самого устройства гарантирует стабильную передачу данных и корректную работу программного обеспечения.</p>
+
+<h2 id="подготовка-оборудования-и-выбор-порта">Подготовка оборудования и выбор порта</h2>
+<p>Перед началом монтажа программного обеспечения необходимо физически подготовить рабочее место. Устройство <em>Canon LiDE 110</em> оснащено стандартным разъемом USB Type-B, который требует соответствующего кабеля, часто идущего в комплекте поставки.</p>
+<p>Критически важно выбрать правильный USB-порт на вашем компьютере. Современные материнские платы могут иметь порты разных версий, и использование старых разъемов может привести к нестабильной работе или отсутствию питания для сканера.</p>
+<p>Рекомендуется придерживаться следующих правил при выборе разъема:</p>
+<ul>
+<li>🔌 Используйте порты USB 2.0 или выше, расположенные непосредственно на задней панели системного блока, а не на передней панели корпуса.</li>
+<li>🔋 Избегайте использования USB-хабов (разветвителей), так как они могут не обеспечить необходимый ток для работы световода и матрицы.</li>
+<li>🚫 Отключите все лишние периферийные устройства, чтобы исключить конфликт прерываний при первой инициализации.</li>
+</ul>
+<p>Если вы работаете на ноутбуке, убедитесь, что адаптер питания подключен к сети, так как сканирование больших документов может потреблять значительный ресурс батареи, вызывая просадки напряжения.</p>
+<p><blockquote>⚠️ Внимание: Не подключайте кабель USB к компьютеру до момента установки драйвера, если вы не используете автоматическую установку через Центр обновлений Windows, так как это может привести к инсталляции некорректного стандартного драйвера.</blockquote></p>
+
+<div class="pb-poll" id="poll-78adbc1a"><div class="pb-poll-question">📊 Какой операционной системой вы пользуетесь?</div><div class="pb-poll-option" data-poll="78adbc1a" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 10</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="78adbc1a" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 11</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="78adbc1a" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">macOS</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="78adbc1a" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Linux</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="процесс-установки-драйверов-и-по">Процесс установки драйверов и ПО</h2>
+<p>Наиболее надежный способ получить полный функционал устройства — скачать официальное программное обеспечение с сайта производителя. <strong>Canon LiDE 110</strong> поддерживается как утилитами IJ Scan Utility, так и стандартными средствами Windows через интерфейс WIA.</p>
+<p>Загрузка дистрибутива осуществляется через раздел «Поддержка» на официальном ресурсе. Введите модель в поисковую строку и выберите вашу версию операционной системы. Обратите внимание, что для Windows 11 часто требуются драйверы, специально адаптированные под новую архитектуру безопасности.</p>
+<p>Установка осуществляется в несколько этапов:</p>
+<ol>
+<li>Запустите скачанный файл <code>setup.exe</code> от имени администратора.</li>
+<li>Примите условия лицензионного соглашения и выберите желаемые компоненты (сканер, утилита управления).</li>
+<li>Дождитесь завершения инсталляции, после чего система предложит подключить устройство.</li>
+</ol>
+<p>Важно отметить, что драйверы для <em>Canon LiDE 110</em> не всегда автоматически обновляются через Windows Update, поэтому ручная установка часто является единственным способом получить последнюю версию ПО с исправлениями ошибок.</p>
+<p><blockquote>⚠️ Внимание: Если установщик не обнаруживает устройство после подключения кабеля, попробуйте отключить кабель, перезагрузить компьютер и повторить процесс установки с подключением только в момент появления соответствующего запроса в окне мастера.</blockquote></p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед установкой драйверов</h4><label class="check-item"><input type="checkbox"><span>Очистить корзину от старых драйверов</span></label><label class="check-item"><input type="checkbox"><span>Отключить антивирус на время установки</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в наличии интернета</span></label><label class="check-item"><input type="checkbox"><span>Подготовить диск с ПО</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<details class="pb-accordion"><summary>Что делать, если драйвер не подходит?|Если автоматическая установка драйвера не удалась, попробуйте использовать режим совместимости. Нажмите правой кнопкой мыши на установочный файл, выберите «Свойства», перейдите на вкладку «Совместимость» и отметьте галочкой «Запустить программу в режиме совместимости с», выбрав Windows 7 или Windows 8. Это часто помогает обойти блокировки безопасности в новых версиях ОС.-->
+
+<h2 id="настройка-программного-обеспечения-для-сканирования">Настройка программного обеспечения для сканирования</h2>
+<p>После успешной установки драйверов необходимо настроить программный интерфейс для работы с изображениями. В комплекте с <strong>Canon LiDE 110</strong> обычно поставляется утилита IJ Scan Utility, которая предоставляет расширенные возможности по сравнению со стандартными средствами Windows.</p>
+<p>Запустите программу и перейдите в раздел «Настройки». Здесь вы можете задать параметры по умолчанию для документов или фотографий. Для бытового использования оптимально установить разрешение <code>300 dpi</code> для документов и <code>600 dpi</code> для фотографий.</p>
+<p>Кроме того, важно проверить формат сохранения файлов. Вы можете выбрать <code>PDF</code> для текстовых материалов или <code>JPEG</code> для изображений. Укажите путь к папке, куда будут сохраняться результаты сканирования, чтобы не тратить время на поиск файлов после каждого сеанса.</p>
+<p>В интерфейсе программы также доступна функция автоматического выравнивания сканируемого изображения, что особенно полезно при работе с помятыми бумагами или старыми документами.</p>
+<p><blockquote>⚠️ Внимание</summary><div class="pb-accordion-body"><p> Если при запуске программы вы видите сообщение об ошибке «Драйвер не найден», проверьте, не отключен ли сканер в «Диспетчере устройств» Windows из-за конфликта ресурсов.</blockquote></p>
+
+
+
+<h2 id="использование-стандартных-средств-windows">Использование стандартных средств Windows</h2>
+<p>Если вы не хотите устанавливать дополнительное ПО от производителя, можно воспользоваться встроенными инструментами операционной системы. В Windows 10 и 11 для этого предназначена программа <strong>Факсы и сканирование</strong> или новое приложение <strong>Сканер Windows</strong>.</p>
+<p>Для доступа к функционалу откройте меню «Пуск» и введите в поиске название приложения. В открывшемся окне выберите ваше устройство из списка доступных сканеров. Если <em>Canon LiDE 110</em> отображается как «Обнаружено», можно переходить к настройке параметров.</p>
+<p>Основные настройки в стандартных средствах включают:</p>
+<ul>
+<li>📄 Тип документа (Фотография или Документ).</li>
+<li>🎨 Цветовой режим (Цветной, Черно-белый, Оттенки серого).</li>
+<li>📏 Размер выходного файла (A4, Letter, A5).</li>
+</ul>
+
+<p><mark>Использование стандартного драйвера WIA иногда приводит к тому, что сканер не выходит из спящего режима без перезагрузки службы, поэтому рекомендуется обновлять драйверы до актуальных версий от Canon для стабильной работы.</mark></p>
+<p>Если вы используете macOS, система автоматически распознает устройство через интерфейс Image Capture, не требуя установки дополнительных драйверов, однако функционал может быть ограничен базовыми настройками.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Стандартные средства Windows удобны для быстрого сканирования, но для получения максимального качества и доступа ко всем функциям сканера лучше использовать утилиту IJ Scan Utility от производителя.</p></aside>
+
+<h2 id="таблица-совместимости-и-требований">Таблица совместимости и требований</h2>
+<p>Для удобства пользователей мы собрали основные технические требования и параметры совместимости в единую таблицу. Это поможет быстро определить, готов ли ваш компьютер к работе с устройством.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Минимальное требование</th>
+<th>Рекомендуемое значение</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Операционная система</td>
+<td>Windows 7 SP1</td>
+<td>Windows 10 / 11</td>
+<td>Поддержка старых ОС ограничена</td>
+</tr>
+<tr>
+<td>Процессор</td>
+<td>1 ГГц</td>
+<td>2 ГГц и выше</td>
+<td>Влияет на скорость обработки</td>
+</tr>
+<tr>
+<td>Оперативная память</td>
+<td>1 ГБ</td>
+<td>4 ГБ и выше</td>
+<td>Необходимо для цветных сканов</td>
+</tr>
+<tr>
+<td>Свободное место на диске</td>
+<td>500 МБ</td>
+<td>1 ГБ</td>
+<td>Для установки ПО и кэша</td>
+</tr>
+<tr>
+<td>Тип USB порта</td>
+<td>USB 1.1</td>
+<td>USB 2.0 или 3.0</td>
+<td>USB 1.1 будет очень медленным</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="решение-типичных-проблем-при-подключении">Решение типичных проблем при подключении</h2>
+<p>Иногда процесс подключения может сопровождаться ошибками, которые не всегда очевидны. Наиболее частая проблема — отсутствие реакции сканера при нажатии кнопки «Scan». В этом случае необходимо проверить, не находится ли устройство в режиме ожидания.</p>
+<p>Другой распространенной проблемой является конфликт версий драйверов. Если вы ранее использовали другие сканеры, их драйверы могут конфликтовать с новым оборудованием. Рекомендуется полностью удалить старое программное обеспечение через «Установку и удаление программ» перед установкой нового.</p>
+<p>Если компьютер видит устройство в «Диспетчере устройств», но не может с ним работать, попробуйте удалить устройство с пометкой «Неизвестное устройство» и перезагрузить систему. Это заставит Windows переинициализировать драйвер.</p>
+<p>В некоторых случаях проблема кроется в самом кабеле. Кабели USB, используемые для зарядки телефонов, часто имеют только силовые контакты и не передают данные. Убедитесь, что вы используете кабель, предназначенный именно для передачи данных.</p>
+<p><blockquote>⚠️ Внимание: Если сканер издает странные звуки или сильно нагревается при подключении к USB, немедленно отключите его и проверьте целостность кабеля, так как это может свидетельствовать о коротком замыкании.</blockquote></p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярная проверка целостности USB-кабеля и использование портов сзади системного блока решают 90% проблем с нестабильной работой сканера.</p></aside>
+
+
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Почему Canon LiDE 110 не определяется в Windows 11?</summary>
+<p>В Windows 11 часто возникают проблемы с драйверами для старых моделей, если не установлены последние обновления системы. Попробуйте скачать драйвер с сайта Canon, выбрав режим совместимости с Windows 10, или используйте универсальный драйвер WIA, который встроен в систему.</p>
+</details>
+
+<details>
+<summary>Можно ли подключить сканер через Wi-Fi?</summary>
+<p>Нет, модель <em>Canon LiDE 110</em> не имеет встроенного Wi-Fi модуля. Она подключается исключительно через проводное соединение USB. Для беспроводного доступа к сканеру потребуется использовать внешний Wi-Fi адаптер для ПК или подключать его к компьютеру, который уже имеет выход в сеть.</p>
+</details>
+
+<details>
+<summary>Что делать, если сканер сканирует, но изображение получается размытым?</summary>
+<p>Проверьте, не загрязнена ли стеклянная поверхность сканера. Используйте мягкую салфетку и спиртовой раствор для очистки. Также убедитесь, что в настройках программы выбрано правильное разрешение (минимум 300 dpi) и что документ плотно прижат к стеклу.</p>
+</details>
+
+<details>
+<summary>Как долго работает сканер без внешнего питания?</summary>
+<p>Поскольку <strong>Canon LiDE 110</strong> питается от шины USB, он может работать до тех пор, пока компьютер потребляет энергию. Однако при сканировании больших объемов данных или при работе на ноутбуке от батареи разрядка аккумулятора будет происходить быстрее.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать сканер на Mac?</summary>
+<p>Да, модель поддерживается macOS. Достаточно подключить устройство и использовать встроенное приложение «Захват изображений» (Image Capture) или скачать драйверы с официального сайта Canon для вашей версии macOS.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-podklyuchit-printer-canon-pixma-mg2540s-k-noutbuku.html" class="pb-related-card">
+                <span class="pb-related-title">Подключение принтера Canon PIXMA MG2540S к ноутбуку: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по установке драйверов и подключению Canon PIXMA MG2540S к ноутбуку через USB </span>
+            </a><a href="/articles/k/ka/kak-ustanovit-printer-kenon-na-noutbuk-bez-diska-i-fleshki-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Установка принтера Canon на ноутбук без диска: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как подключить и настроить принтер Canon без установочного диска и флешки. Ска</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-drajvera-na-printer-canon-6030.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить драйвера на принтер Canon 6030: пошаговая инструкция</span>
+                <span class="pb-related-desc">Полное руководство по установке драйверов для Canon i-SENSYS MF6030. Скачивание, настройка USB и Wi-</span>
+            </a><a href="/articles/k/ka/kak-nastroit-printer-canon-na-noutbuke.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить принтер Canon на ноутбуке: полное руководство по подключению</span>
+                <span class="pb-related-desc">Пошаговая инструкция по установке драйверов и настройке принтера Canon на Windows. Решение проблем с</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-vaj-faj-na-printere-canon-g3415.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Wi-Fi на принтере Canon G3415: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по настройке беспроводного соединения для Canon PIXMA G3415. Методы WPS, прямо</span>
+            </a><a href="/articles/p/pr/printer-canon-che-proizvodstvo.html" class="pb-related-card">
+                <span class="pb-related-title">Принтер Canon: чье производство, где собирают и в чем разница</span>
+                <span class="pb-related-desc">Узнайте, где производят принтеры Canon: Япония, Китай, Мексика или Вьетнам. Разбор стран-производите</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

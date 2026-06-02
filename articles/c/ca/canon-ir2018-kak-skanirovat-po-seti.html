@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как настроить сканирование по сети на Canon imageRUNNER 2018: Пошаговая инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговое руководство по настройке сканирования по сети на принтере Canon imageRUNNER 2018. Настройка SMB, FTP и настроек TCP/IP для стабильной работы.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-ir2018-kak-skanirovat-po-seti.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как настроить сканирование по сети на Canon imageRUNNER 2018: Пошаговая инструкция">
+    <meta property="og:description" content="Пошаговое руководство по настройке сканирования по сети на принтере Canon imageRUNNER 2018. Настройка SMB, FTP и настроек TCP/IP для стабильной работы.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как настроить сканирование по сети на Canon imageRUNNER 2018: Пошаговая инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#базовая-подготовка-и-проверка-сетевых-параметров">Базовая подготовка и проверка сетевых параметров</a></li><li><a href="#настройка-протокола-smb-для-windows-среды">Настройка протокола SMB для Windows-среды</a></li><li><a href="#создание-папки-и-назначение-прав-доступа">Создание папки и назначение прав доступа</a></li><li><a href="#регистрация-адреса-назначения-в-адресной-книге">Регистрация адреса назначения в адресной книге</a></li><li><a href="#использование-протокола-ftp-для-серверов">Использование протокола FTP для серверов</a></li><li><a href="#таблица-типовых-настроек-и-параметров">Таблица типовых настроек и параметров</a></li><li><a href="#решение-частых-ошибок-и-отладка">Решение частых ошибок и отладка</a></li><li><a href="#итоги-и-рекомендации-по-эксплуатации">Итоги и рекомендации по эксплуатации</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-sdelat-kserokopiyu-na-printere-canon-pixma-mp250.html">Как сделать ксерокопию на Canon PIXMA MP250: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-ustanovit-drajver-dlya-skanera-canon-lide-300.html">Установка драйвера Canon Lide 300: Полное руководство на Windows и Mac</a></li><li><a href="/articles/k/ka/kak-pravilno-skanirovat-dokumenty-na-skanere-kenon.html">Как правильно сканировать документы на сканере Canon: полное руководство</a></li><li><a href="/articles/c/ca/canon-mf4018-kak-skanirovat-na-kompyuter.html">Как сканировать на компьютер с Canon MF4018: полные инструкции</a></li><li><a href="/articles/k/ka/kak-skanirovat-na-kompyuter-cherez-printer-canon.html">Как сканировать на компьютер через принтер Canon: Полное руководство</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Настройка сканирования по сети на Canon imageRUNNER 2018</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#базовая-подготовка-и-проверка-сетевых-параметров">Базовая подготовка и проверка сетевых параметров</a></li><li><a href="#настройка-протокола-smb-для-windows-среды">Настройка протокола SMB для Windows-среды</a></li><li><a href="#создание-папки-и-назначение-прав-доступа">Создание папки и назначение прав доступа</a></li><li><a href="#регистрация-адреса-назначения-в-адресной-книге">Регистрация адреса назначения в адресной книге</a></li><li><a href="#использование-протокола-ftp-для-серверов">Использование протокола FTP для серверов</a></li><li><a href="#таблица-типовых-настроек-и-параметров">Таблица типовых настроек и параметров</a></li><li><a href="#решение-частых-ошибок-и-отладка">Решение частых ошибок и отладка</a></li><li><a href="#итоги-и-рекомендации-по-эксплуатации">Итоги и рекомендации по эксплуатации</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Современные офисные задачи требуют высокой скорости обмена данными между периферийным оборудованием и компьютерами. Многофункциональное устройство <em>Canon imageRUNNER 2018</em> обладает мощным функционалом, позволяющим не только печатать документы, но и эффективно управлять цифровыми потоками. Однако многие пользователи сталкиваются с трудностями при попытке настроить отправку отсканированных файлов непосредственно по локальной сети без использования USB-кабеля.</p>
+<p>Процесс конфигурации может показаться сложным из-за обилия сетевых параметров, но при соблюдении последовательности действий всё работает штатно. Ключевым моментом является правильная настройка протокола передачи данных, будь то <strong>SMB</strong> (для Windows) или <strong>FTP</strong> (для серверов). От корректности этих параметров зависит, увидит ли компьютер принтер и сможет ли принять от него файл.</p>
+
+<h2 id="базовая-подготовка-и-проверка-сетевых-параметров">Базовая подготовка и проверка сетевых параметров</h2>
+<p>Прежде чем приступать к настройке функций сканирования на <em>Canon IR 2018</em>, необходимо убедиться, что само устройство корректно подключено к локальной сети. Без стабильного IP-адреса любое взаимодействие с компьютером невозможно. Зайдите в меню управления на панели устройства и проверьте текущие сетевые настройки.</p>
+<p>Вам нужно убедиться, что IP-адрес устройства не конфликтует с другими узлами сети. Рекомендуется зафиксировать постоянный адрес, чтобы компьютер всегда знал, куда отправлять запросы на сканирование. Для этого используйте настройки <code>Device Settings</code> → <code>Network Settings</code> → <code>TCP/IP Settings</code>.</p>
+<p>Если адрес получен автоматически через DHCP, есть риск его изменения после перезагрузки роутера, что разорвет связь. Лучше всего задать статический IP-адрес, который находится в той же подсети, что и рабочие станции, но не пересекается с диапазоном автоматической выдачи.</p>
+
+<h2 id="настройка-протокола-smb-для-windows-среды">Настройка протокола SMB для Windows-среды</h2>
+<p>Наиболее распространенным сценарием является использование протокола <strong>SMB</strong> для пересылки сканов в общие папки на компьютерах под управлением Windows. Для этого на целевом компьютере необходимо создать папку, назначить ей права доступа и проверить настройки общего доступа.</p>
+<p> Это частая причина ошибок при подключении к сетевым ресурсам.</p>
+<p>На самом устройстве <em>Canon imageRUNNER 2018</em> нужно перейти в раздел <code>Management Settings</code> и найти настройки <code>Protocol Settings</code>. Убедитесь, что протокол <strong>SMB</strong> активирован, а версия SMBv1 включена только в том случае, если это действительно требуется вашей инфраструктурой безопасности.</p>
+
+<blockquote>
+<strong>⚠️ Внимание</strong><br>
+<p>Использование протокола SMBv1 в корпоративных сетях несет высокие риски безопасности из-за уязвимостей. Перед включением обязательно проконсультируйтесь с системным администратором и убедитесь, что антивирусные программы не блокируют передачу данных.</p>
+</blockquote>
+
+<h2 id="создание-папки-и-назначение-прав-доступа">Создание папки и назначение прав доступа</h2>
+<p>Для успешной работы функции сканирования на папку, куда будут сохраняться файлы, нужно выдать специальные права доступа. Просто открыть папку недостаточно — нужно явно разрешить запись от имени пользователя, под которым работает устройство или учетная запись принтера.</p>
+<p>Откройте свойства папки на компьютере, перейдите во вкладку <strong>Безопасность</strong> и добавьте пользователя, от имени которого принтер будет работать. Обычно это встроенная учетная запись или конкретный пользователь сети. Убедитесь, что галочки стоят на пунктах «Чтение» и «Запись».</p>
+<p>Если права не назначены корректно, устройство выдаст ошибку <strong>Authentication Failed</strong> или <strong>Permission Denied</strong> при попытке сохранить файл. Это самый частый сбой в цепочке настройки.</p>
+
+<div class="pb-poll" id="poll-dbe9ea88"><div class="pb-poll-question">📊 Проблемы с настройкой сканирования</div><div class="pb-poll-option" data-poll="dbe9ea88" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Сеть не видит принтер</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="dbe9ea88" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Ошибка пароля</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="dbe9ea88" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Ошибка доступа к папке</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="dbe9ea88" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Печать работает, сканирование нет</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="регистрация-адреса-назначения-в-адресной-книге">Регистрация адреса назначения в адресной книге</h2>
+<p>После того как папка подготовлена, необходимо внести её данные в адресную книгу <em>Canon IR 2018</em>. Это можно сделать через веб-интерфейс устройства (Remote UI), что значительно удобнее, чем набор данных с маленькой панели управления.</p>
+<p>В браузере введите IP-адрес принтера, войдите в систему администратора (пароль по умолчанию часто пустой или указан в документации) и перейдите в раздел <code>Address Book</code>. Создайте новый адрес, выбрав тип назначения <strong>SMB</strong>.</p>
+<p>Введите полный путь к папке в формате <code>\\ИмяКомпьютера\ИмяПапки</code> или <code>\\IP_адрес\ИмяПапки</code>. Укажите логин и пароль пользователя, который имеет права на запись в эту папку. Для надежности используйте логин в формате <code>ИмяДомена\ИмяПользователя</code>.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка настроек SMB</h4><label class="check-item"><input type="checkbox"><span>Создана папка на ПК</span></label><label class="check-item"><input type="checkbox"><span>Настроены права доступа (Запись)</span></label><label class="check-item"><input type="checkbox"><span>Включен протокол SMB на принтере</span></label><label class="check-item"><input type="checkbox"><span>Прописан логин и пароль в адресной книге</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="использование-протокола-ftp-для-серверов">Использование протокола FTP для серверов</h2>
+<p>В некоторых офисах предпочтительнее использовать протокол <strong>FTP</strong>, если данные должны отправляться на специализированный файловый сервер. Этот метод более стабилен при работе с большими объемами документов и не зависит от настроек общего доступа Windows.</p>
+<p>Для настройки FTP необходимо создать учетную запись на сервере, имеющую права на запись в целевую директорию. В настройках устройства нужно выбрать тип назначения <strong>FTP</strong> и ввести данные сервера: IP-адрес, порт (обычно <code>21</code>), логин и пароль.</p>
+<p>При использовании FTP часто требуется настройка пассивного режима (Passive Mode), особенно если между принтером и сервером стоит фаервол. Это предотвращает блокировку соединений на нестандартных портах передачи данных.</p>
+
+<details class="pb-accordion"><summary>Особенности работы FTP</summary><div class="pb-accordion-body"><p>Если сервер требует шифрование, убедитесь, что модель принтера поддерживает протокол FTPS. Стандартный FTP передает данные в открытом виде, что может быть запрещено политикой безопасности компании.</p></div></details>
+
+<h2 id="таблица-типовых-настроек-и-параметров">Таблица типовых настроек и параметров</h2>
+<p>Для наглядности приведем таблицу с основными параметрами, которые необходимо проверить при настройке разных типов соединений. Сравните ваши текущие настройки с рекомендуемыми значениями для стабильной работы.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение для SMB</th>
+<th>Значение для FTP</th>
+<th>Комментарий</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Протокол</td>
+<td>SMBv1/SMBv2</td>
+<td>FTP/FTPS</td>
+<td>Выбирается при создании адреса</td>
+</tr>
+<tr>
+<td>Порт</td>
+<td>445 (стандарт)</td>
+<td>21 (стандарт)</td>
+<td>Может быть изменен администратором</td>
+</tr>
+<tr>
+<td>Формат пути</td>
+<td>\\Server\Share</td>
+<td>ftp://server/share</td>
+<td>Требует корректного ввода слэшей</td>
+</tr>
+<tr>
+<td>Аутентификация</td>
+<td>Логин/Пароль Windows</td>
+<td>Логин/Пароль FTP</td>
+<td>Должны совпадать с правами доступа</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>
+<strong>⚠️ Внимание</strong><br>
+<p>При смене пароля учетной записи пользователя, под которой работает принтер, необходимо немедленно обновить эти данные в адресной книге устройства, иначе сканирование прекратится.</p>
+</blockquote>
+
+<h2 id="решение-частых-ошибок-и-отладка">Решение частых ошибок и отладка</h2>
+<p>Если при попытке сканирования возникает ошибка, первым делом проверьте статус подключения в журнале устройства. Ошибки часто связаны с неверным вводом пути или истечением срока действия пароля учетной записи.</p>
+<p>Используйте функцию <strong>Test Connection</strong> в веб-интерфейсе или на панели управления перед сохранением адреса. Это позволит сразу выявить проблему с сетью или правами доступа, не тратя время на реальные попытки сканирования.</p>
+<p>Частой проблемой является блокировка портов брандмауэром Windows. Если принтер видит сервер, но не может записать файл, проверьте правила входящих и исходящих подключений на компьютере-получателе.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед началом массовой настройки сканирования для нескольких пользователей создайте тестовую папку на локальном диске с именем, не содержащим кириллицу и спецсимволов, чтобы исключить ошибки кодировки путей.</p></aside>
+
+<h2 id="итоги-и-рекомендации-по-эксплуатации">Итоги и рекомендации по эксплуатации</h2>
+<p>Настройка сканирования по сети на <em>Canon imageRUNNER 2018</em> требует внимательности к деталям сетевой инфраструктуры. Правильно настроенный протокол обеспечивает быстрый и надежный доступ к отсканированным документам с любого рабочего места.</p>
+<p>Регулярно обновляйте прошивку устройства до актуальной версии, так как производители часто выпускают исправления для сетевых модулей и протоколов безопасности. Это повысит стабильность работы в сложных сетевых средах.</p>
+<p>Соблюдение правил именования папок и использования статических IP-адресов сэкономит вам часы на будущей диагностике проблем. Системный подход к настройке окупается отсутствием сбоев в повседневной работе офиса.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Самая частая причина неудачного сканирования — несоответствие пароля учетной записи в настройках принтера и текущем пароле пользователя в сети Windows.</p></aside>
+
+<details>
+<summary>Что делать, если принтер не находит папку в сети?</summary>
+<p>Начните с проверки доступности IP-адреса через команду <code>ping</code> с компьютера. Если пинг проходит, убедитесь, что имя рабочей группы на компьютере совпадает с тем, что указано в настройках принтера. Переименование папки или изменение сетевого диска может также помочь, если проблема в путях.</p>
+</details>
+
+<details>
+<summary>Можно ли сканировать напрямую на флешку через USB?</summary>
+<p>Да, устройство <em>Canon imageRUNNER 2018</em> поддерживает функцию USB Direct Copy, которая позволяет сохранять сканы прямо на носитель, подключенный к панели управления. Это удобно, если сетевая инфраструктура временно недоступна.</p>
+</details>
+
+<details>
+<summary>Как часто нужно менять пароль доступа к сканированию?</summary>
+<p>Рекомендуется менять пароли учетных записей для сканирования каждые 3-6 месяцев в соответствии с политикой безопасности организации. Не забудьте сразу обновить эти данные в адресной книге принтера после смены.</p>
+</details>
+
+<details>
+<summary>Поддерживает ли модель сканирование в облачные сервисы?</summary>
+<p>Да, при наличии соответствующей лицензии и сетевой настройки можно использовать функцию <strong>Cloud Connect</strong> для отправки сканов в облачные хранилища, такие как Google Drive или Dropbox, напрямую с панели управления.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-sdelat-kserokopiyu-na-printere-canon-pixma-mp250.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать ксерокопию на Canon PIXMA MP250: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по созданию копий на принтере Canon PIXMA MP250: подготовка, настройки, решени</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-drajver-dlya-skanera-canon-lide-300.html" class="pb-related-card">
+                <span class="pb-related-title">Установка драйвера Canon Lide 300: Полное руководство на Windows и Mac</span>
+                <span class="pb-related-desc">Подробная инструкция по установке драйверов для сканера Canon Lide 300. Решение ошибок, ручная настр</span>
+            </a><a href="/articles/k/ka/kak-pravilno-skanirovat-dokumenty-na-skanere-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Как правильно сканировать документы на сканере Canon: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по сканированию документов на МФУ и планшетных сканерах Canon. Настройка драйве</span>
+            </a><a href="/articles/c/ca/canon-mf4018-kak-skanirovat-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на компьютер с Canon MF4018: полные инструкции</span>
+                <span class="pb-related-desc">Пошаговая настройка сканирования на ПК для МФУ Canon MF4018. Обзор драйверов, программ и методов пер</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-na-kompyuter-cherez-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на компьютер через принтер Canon: Полное руководство</span>
+                <span class="pb-related-desc">Подробная инструкция: настройка сканирования с принтеров Canon на ПК через USB и Wi-Fi. Решаем ошибк</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-na-printere-canon-pixma-mg3640-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на Canon Pixma MG3640: полное руководство для ПК</span>
+                <span class="pb-related-desc">Подробная инструкция по настройке и сканированию документов с МФУ Canon Pixma MG3640 на компьютер. Р</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

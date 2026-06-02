@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как пользоваться MP Tool Canon: полное руководство по сбросу и сбросу — Кэнон Инфо</title>
+    <meta name="description" content="Подробная инструкция по работе с программой MP Tool для принтеров Canon. Сброс сервисного режима, очистка EEPROM и устранение ошибок C000, 5B00.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-polzovatsya-mptool-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как пользоваться MP Tool Canon: полное руководство по сбросу и сбросу">
+    <meta property="og:description" content="Подробная инструкция по работе с программой MP Tool для принтеров Canon. Сброс сервисного режима, очистка EEPROM и устранение ошибок C000, 5B00.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-nav-active">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/remont-i-oshibki/">Ремонт и ошибки</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как пользоваться MP Tool Canon: полное руководство по сбросу и сбросу</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-оборудования-и-выбор-версии">Подготовка оборудования и выбор версии</a></li><li><a href="#алгоритм-входа-в-сервисный-режим">Алгоритм входа в сервисный режим</a></li><li><a href="#сброс-счетчика-waste-ink-и-ошибок">Сброс счетчика Waste Ink и ошибок</a></li><li><a href="#работа-с-eeprom-и-тестирование-компонентов">Работа с EEPROM и тестирование компонентов</a></li><li><a href="#решение-частых-ошибок-и-проблем">Решение частых ошибок и проблем</a></li><li><a href="#безопасность-и-меры-предосторожности">Безопасность и меры предосторожности</a></li><li><a href="#заключение">Заключение</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ca/canon-mg3240-oshibka-e05-kak-sbrosit.html">Ошибка E05 на Canon MG3240: как сбросить и устранить причину</a></li><li><a href="/articles/c/ca/canon-mf3010-pochemu-ne-pechataet.html">Canon MF3010 не печатает: 7 причин и как исправить самостоятельно</a></li><li><a href="/articles/c/ca/canon-pixma-g3415-ne-zakhvatyvaet-bumagu-chto-delat.html">Canon Pixma G3415 не захватывает бумагу: причины и способы ремонта</a></li><li><a href="/articles/c/ch/chto-takoe-pechatayushchaya-golovka-printera-canon.html">Печатающая головка принтера Canon: виды, замена и обслуживание</a></li><li><a href="/articles/p/po/pochemu-printer-pechataet-zelenym-tsvetom-canon-g1010.html">Почему Canon G1010 печатает зеленым: причины и ремонт</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как пользоваться MP Tool Canon: полное руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-оборудования-и-выбор-версии">Подготовка оборудования и выбор версии</a></li><li><a href="#алгоритм-входа-в-сервисный-режим">Алгоритм входа в сервисный режим</a></li><li><a href="#сброс-счетчика-waste-ink-и-ошибок">Сброс счетчика Waste Ink и ошибок</a></li><li><a href="#работа-с-eeprom-и-тестирование-компонентов">Работа с EEPROM и тестирование компонентов</a></li><li><a href="#решение-частых-ошибок-и-проблем">Решение частых ошибок и проблем</a></li><li><a href="#безопасность-и-меры-предосторожности">Безопасность и меры предосторожности</a></li><li><a href="#заключение">Заключение</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Программа <strong>Service Tool</strong> или <em>MP Tool</em> представляет собой официальный утилитарный пакет, разработанный для глубокого обслуживания принтеров <em>Canon</em>. Обычным пользователям она редко нужна, так как стандартные драйверы и кнопки на панели устройства справляются с ежедневными задачами. Однако, когда аппарат сталкивается с критическими сбоями программной природы, этот инструмент становится единственным выходом.</p>
+<p>Основная функция утилиты — это доступ к служебным областям памяти принтера, которые защищены от случайного изменения. С её помощью можно сбросить счетчики отработанных страниц, очистить память об ошибках и даже изменить конфигурацию устройства на лету. Без неё принтер может навсегда остаться в состоянии «Service Mode», требуя дорогостоящего визита в сервисный центр.</p>
+<h2 id="подготовка-оборудования-и-выбор-версии">Подготовка оборудования и выбор версии</h2>
+<p>Перед началом работы необходимо убедиться, что у вас есть правильная версия программы. <strong>MP Tool</strong> не является универсальным решением для всех моделей; каждая версия утилиты привязана к конкретной серии принтеров. Использование неподходящей версии может привести к повреждению микропрограммы, после чего устройство перестанет реагировать на любые действия.</p>
+<p>Вам понадобится принтер, подключенный к компьютеру через USB-кабель. Важно, чтобы в системе был установлен стандартный драйвер устройства, но при этом сам принтер был выключен. Программа считывает аппаратные идентификаторы только при инициализации соединения с выключенным аппаратом. Если драйвер не установлен, утилита может не увидеть устройство или определить его как неизвестное.</p>
+<p>Скачивать ПО следует только из надежных источников, так как в сети много модифицированных версий с вредоносным кодом. Исходный код для конкретных моделей часто доступен в профильных форумах технических специалистов. Убедитесь, что расширение файла — это обычный архив или исполняемый файл, а не скрытый скрипт.</p>
+<blockquote>
+<p>⚠️ Внимание: Никогда не запускайте <em>MP Tool</em> как администратор, если вы не уверены в правах доступа к портам. Это может вызвать конфликт с системными драйверами USB.</p>
+</blockquote>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед запуском утилиты отключите антивирус и брандмауэр на время работы, чтобы они не заблокировали доступ к служебным портам принтера.</p></aside>
+<h2 id="алгоритм-входа-в-сервисный-режим">Алгоритм входа в сервисный режим</h2>
+<p>Самый сложный этап — это правильный вход в <strong>Service Mode</strong>. Если вы просто включите принтер, программа не сможет получить доступ к внутренним функциям. Процесс требует строгой последовательности нажатий на кнопки панели управления, которая варьируется в зависимости от модели <em>Canon</em>.</p>
+<p>Обычно процедура выглядит так: нажмите и удерживайте кнопку «Stop/Reset» (красный треугольник), не отпуская её, нажмите кнопку «Power» (вкл/выкл). Удерживайте обе кнопки, затем отпустите «Stop/Reset», но продолжайте держать «Power». После этого отпустите «Power». Если все сделано верно, индикаторы на передней панели начнут мигать зеленым цветом.</p>
+<p>В этот момент нужно запустить <em>MP Tool</em>. Программа должна автоматически определить подключенный принтер. Если в верхней части окна вы видите зеленую надпись с названием вашей модели, значит, вход в режим успешен. На этом этапе вы можете выбирать различные функции из выпадающего списка.</p>
+<details class="pb-accordion"><summary>Вход в режим для разных серий</summary><div class="pb-accordion-body"><p>Для серии iP (IP2700, IP4800) используется комбинация Stop (5 раз) + Power. Для серии MG (MG2100, MG3100) часто требуется 10 нажатий Stop до Power. Неверная последовательность сбрасывает режим.</p></div></details>
+<p>Если устройство не определяется, проверьте кабель и попробуйте другой порт USB. Иногда помогает переподключение кабеля при выключенном принтере. Также убедитесь, что не запущены другие службы печати, занимающие порт.</p>
+<div class="pb-poll" id="poll-9db4ed3d"><div class="pb-poll-question">📊 Какая серия принтера у вас?</div><div class="pb-poll-option" data-poll="9db4ed3d" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Pixma iP</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9db4ed3d" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Pixma MG</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9db4ed3d" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Pixma MX</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9db4ed3d" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Pixma G</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9db4ed3d" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другая серия</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+<h2 id="сброс-счетчика-waste-ink-и-ошибок">Сброс счетчика Waste Ink и ошибок</h2>
+<p>Чаще всего утилиту используют для сброса счетчика отработанных чернил, когда принтер выдает ошибку «Service Error 5B00» или аналогичную. Это означает, что впитывающая подушка внутри принтера достигла предельного значения. В обычном режиме устройство блокирует печать, требуя замены прокладки.</p>
+<p>В меню программы найдите раздел <code>Main</code> или <code>Clear</code>. В списке опций ищите пункт <code>Clear Ink Counter</code> или <code>Waste Ink Pad Counter</code>. При нажатии на кнопку «Set» программа отправит команду на обнуление счетчика. После этого необходимо выключить и снова включить принтер, чтобы изменения вступили в силу.</p>
+<p>Важно понимать, что сброс счетчика — это программное действие. Физически впитывающие подушки остаются загрязненными чернилами. Если они переполнены, чернила могут вытечь на стол или внутрь корпуса. <mark>Физическая очистка или замена прокладок обязательна перед сбросом счетчика, чтобы избежать поломки электроники.</mark></p>
+<blockquote>
+<p>⚠️ Внимание: Если вы сбросите счетчик, не почистив подушки, риск вытекания чернил на материнскую плату возрастает в десятки раз.</p>
+</blockquote>
+<p>Также в этом разделе можно сбросить другие параметры, такие как счетчик печатающей головки или картриджа. Это бывает полезно при использовании перезаправляемых картриджей (СНПЧ), когда принтер не хочет печатать из-за «пустых» картриджей.</p>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Чек-лист перед сбросом счетчика</h4><label class="check-item"><input type="checkbox"><span>Проверить уровень чернил в подушках</span></label><label class="check-item"><input type="checkbox"><span>Очистить прокладки физически</span></label><label class="check-item"><input type="checkbox"><span>Подключить USB-кабель</span></label><label class="check-item"><input type="checkbox"><span>Войти в Service Mode</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+<h2 id="работа-с-eeprom-и-тестирование-компонентов">Работа с EEPROM и тестирование компонентов</h2>
+<p>Раздел <strong>EEPROM</strong> в программе позволяет читать и записывать данные о конфигурации устройства. Здесь можно просмотреть версию прошивки, серийный номер и параметры настройки. Для продвинутых пользователей доступна функция перезаписи EEPROM, что позволяет восстановить заводские настройки даже в случае их повреждения.</p>
+<p>Особое внимание уделите разделу <code>Test</code> или <code>Manual Feed Test</code>. Здесь можно запустить принудительную печать тестовой страницы, чтобы проверить работу печатающей головки и механизмов подачи бумаги. Это незаменимо при диагностике механических поломок, когда нужно отделить программную ошибку от аппаратной.</p>
+<p>В некоторых версиях утилиты есть возможность управления вентиляторами, подсветкой и датчиками положения каретки. Это помогает проверить исправность электроники без запуска полноценного цикла печати. Если при тесте вентилятор не крутится, а на экране программы нет ошибок, возможно, проблема в самом моторе.</p>
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Название раздела</th>
+      <th>Основная функция</th>
+      <th>Риски</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Clear</td>
+      <td>Сброс счетчиков (чернила, страницы)</td>
+      <td>Вытекание чернил при игнорировании чистки</td>
+    </tr>
+    <tr>
+      <td>EEPROM</td>
+      <td>Чтение и запись конфигурации</td>
+      <td>Потеря серийного номера или блокировка</td>
+    </tr>
+    <tr>
+      <td>Test</td>
+      <td>Тестирование механизмов и печати</td>
+      <td>Минимальные (только диагностика)</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Дополнительные настройки (сканер, Wi-Fi)</td>
+      <td>Нарушение работы сети или сканирования</td>
+    </tr>
+  </tbody>
+</table></div>
+<p>При работе с EEPROM будьте крайне осторожны. Изменение неверных параметров может превратить принтер в «кирпич», который не включится даже после перезагрузки. Рекомендуется делать резервную копию данных перед любыми записями.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Раздел EEPROM позволяет изменить конфигурацию устройства, но некорректная запись может привести к полной неработоспособности принтера.</p></aside>
+<h2 id="решение-частых-ошибок-и-проблем">Решение частых ошибок и проблем</h2>
+<p>Иногда при работе с <em>MP Tool</em> возникают проблемы, не связанные с самим принтером. Самая частая ошибка — это сообщение «Device not found» или «Connection error». Это означает, что компьютер не видит принтер в режиме сброса. Причина часто кроется в кабеле или драйверах.</p>
+<p>Попробуйте заменить USB-кабель на заведомо исправный. Используйте кабели длиной не более 1.5 метра. Длинные кабели теряют сигнал, и принтер не успевает передать данные в нужный момент. Также убедитесь, что в диспетчере устройств принтер определяется как устройство <em>Canon</em>, а не как «Неизвестное устройство».</p>
+<p>Если после сброса ошибки 5B00 через неделю она возвращается, это признак того, что подушка действительно переполнена, а программа просто скрыла предупреждение. В таком случае необходимо физически снять и промыть впитывающие элементы или заменить их на новые.</p>
+<blockquote>
+<p>⚠️ Внимание: Если ошибка возвращается циклически, программный сброс не решит проблему, а лишь отсрочит реальную поломку.</p>
+</blockquote>
+<p>Для некоторых моделей <em>Canon</em> существуют специфические ошибки, такие как «F075» или «F076», связанные с платой контроллера. В таких случаях утилита может не помочь, и потребуется замена электроники. Не тратьте время на попытку сбросить аппаратную ошибку программно.</p>
+<details class="pb-accordion"><summary>Почему не работает сброс?</summary><div class="pb-accordion-body"><p>Часто причина в том, что утилита не имеет прав администратора или антивирус блокирует доступ к COM-порту. Попробуйте запустить от имени администратора.</p></div></details>
+<h2 id="безопасность-и-меры-предосторожности">Безопасность и меры предосторожности</h2>
+<p>Работа с сервисным ПО требует внимания. Не оставляйте принтер включенным в сервисном режиме на длительное время без присмотра. В этом режиме некоторые системы защиты отключены, и перегрев печатающей головки может произойти быстрее обычного.</p>
+<p>Никогда не пытайтесь обновить прошивку через <em>MP Tool</em> без четкого понимания процесса. Процедура прошивки через этот интерфейс отличается от стандартного обновления драйвера. Ошибка в процессе записи может привести к необратимому повреждению микросхемы памяти.</p>
+<p>Если вы не уверены в своих действиях, лучше обратитесь к специалисту. Неправильное использование утилиты может аннулировать гарантию, если устройство еще на гарантии. В большинстве случаев сервисные центры имеют доступ к этим инструментам и могут выполнить сброс быстрее и безопаснее.</p>
+<p>Помните, что <strong>MP Tool</strong> — это «хирургический» инструмент. Его применение оправдано только тогда, когда стандартные методы диагностики и ремонта исчерпаны. Регулярное использование сброса счетчиков без очистки физики устройства ведет к преждевременному выходу принтера из строя.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Сервисный режим отключает штатные системы защиты принтера, поэтому работа в нем требует особой осторожности и понимания процесса.</p></aside>
+<h2 id="заключение">Заключение</h2>
+<p>Использование <em>MP Tool</em> для принтеров <em>Canon</em> — это мощный способ восстановить работоспособность устройства в случае программных сбоев. Зная, как правильно войти в сервисный режим и какие функции использовать, можно избежать дорогостоящего ремонта. Однако важно помнить о балансе между программным сбросом и физическим состоянием принтера.</p>
+<p>Регулярный уход за устройством, своевременная замена расходников и чистка впитывающих элементов снижают необходимость в использовании сложных утилит. Программа должна быть инструментом последней надежды, а не способом игнорировать реальные проблемы техники.</p>
+<p>Если вы столкнулись с нестандартной ошибкой, которую не удается исправить, попробуйте найти специфический код ошибки в документации к вашей модели. Часто решение кроется в комбинации действий, уникальной для конкретной модификации принтера.</p>
+<details>
+  <summary>Как определить версию программы для моей модели?</summary>
+  <p>Название версии обычно указывает на модель принтера, для которой она создана (например, MP620, MP280). Проверьте маркировку на корпусе вашего устройства и скачайте точно такую же версию утилиты.</p>
+</details>
+<details>
+  <summary>Что делать, если принтер не входит в сервисный режим?</summary>
+  <p>Проверьте USB-кабель, попробуйте другой порт. Убедитесь, что вы нажимаете кнопки в правильном порядке и с правильной скоростью. Иногда помогает полное обесточивание принтера (выдернуть шнур из розетки) перед попыткой входа.</p>
+</details>
+<details>
+  <summary>Можно ли сбросить счетчик без замены картриджей?</summary>
+  <p>Да, программный сброс не требует физических картриджей. Однако, если принтер требует чипованных картриджей, он может не печатать без них, даже если счетчик сброшен.</p>
+</details>
+<details>
+  <summary>Почему ошибка 5B00 возвращается после сброса?</summary>
+  <p>Это значит, что впитывающая подушка внутри принтера физически переполнена чернилами. Сброс программы лишь сбрасывает счетчик, но не очищает подушку. Необходимо физически промыть или заменить её.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ca/canon-mg3240-oshibka-e05-kak-sbrosit.html" class="pb-related-card">
+                <span class="pb-related-title">Ошибка E05 на Canon MG3240: как сбросить и устранить причину</span>
+                <span class="pb-related-desc">Узнайте, как исправить ошибку E05 на принтере Canon MG3240. Пошаговая инструкция по замене картридже</span>
+            </a><a href="/articles/c/ca/canon-mf3010-pochemu-ne-pechataet.html" class="pb-related-card">
+                <span class="pb-related-title">Canon MF3010 не печатает: 7 причин и как исправить самостоятельно</span>
+                <span class="pb-related-desc">Принтер Canon MF3010 перестал печатать? Разбираем основные причины: от замятия бумаги до ошибок драй</span>
+            </a><a href="/articles/c/ca/canon-pixma-g3415-ne-zakhvatyvaet-bumagu-chto-delat.html" class="pb-related-card">
+                <span class="pb-related-title">Canon Pixma G3415 не захватывает бумагу: причины и способы ремонта</span>
+                <span class="pb-related-desc">Принтер Canon Pixma G3415 перестал брать бумагу? Узнайте основные причины замятия, как почистить рол</span>
+            </a><a href="/articles/c/ch/chto-takoe-pechatayushchaya-golovka-printera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Печатающая головка принтера Canon: виды, замена и обслуживание</span>
+                <span class="pb-related-desc">Подробный разбор технологии печатающих головок Canon. Узнайте о различиях FINE и Micro Piezo, призна</span>
+            </a><a href="/articles/p/po/pochemu-printer-pechataet-zelenym-tsvetom-canon-g1010.html" class="pb-related-card">
+                <span class="pb-related-title">Почему Canon G1010 печатает зеленым: причины и ремонт</span>
+                <span class="pb-related-desc">Принтер Canon G1010 печатает зеленым цветом? Узнайте точные причины, как прочистить дюз, настроить у</span>
+            </a><a href="/articles/c/ca/canon-mp280-kak-vojti-v-servisnyj-rezhim.html" class="pb-related-card">
+                <span class="pb-related-title">Как войти в сервисный режим Canon MP280: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробная инструкция по переходу в сервисный режим МФУ Canon MP280. Сброс ошибок, очистка памяти сто</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

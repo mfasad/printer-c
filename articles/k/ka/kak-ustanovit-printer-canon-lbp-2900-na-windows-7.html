@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Установка Canon LBP 2900 на Windows 7: полная инструкция и драйверы — Кэнон Инфо</title>
+    <meta name="description" content="Подробное руководство по ручной установке драйверов Canon LBP 2900 на Windows 7. Решение проблемы с отсутствием автоопределения и настройка порта LPT.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-ustanovit-printer-canon-lbp-2900-na-windows-7.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Установка Canon LBP 2900 на Windows 7: полная инструкция и драйверы">
+    <meta property="og:description" content="Подробное руководство по ручной установке драйверов Canon LBP 2900 на Windows 7. Решение проблемы с отсутствием автоопределения и настройка порта LPT.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Установка Canon LBP 2900 на Windows 7: полная инструкция и драйверы</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-оборудования-и-проверка-физического-подключения">Подготовка оборудования и проверка физического подключения</a></li><li><a href="#загрузка-и-выбор-правильной-версии-драйвера">Загрузка и выбор правильной версии драйвера</a></li><li><a href="#ручная-настройка-через-диспетчер-устройств">Ручная настройка через Диспетчер устройств</a></li><li><a href="#создание-и-настройка-lpt-порта">Создание и настройка LPT-порта</a></li><li><a href="#устранение-распространенных-проблем-и-ошибок">Устранение распространенных проблем и ошибок</a></li><li><a href="#особенности-работы-с-64-битной-системой">Особенности работы с 64-битной системой</a></li><li><a href="#поддержка-и-альтернативные-решения">Поддержка и альтернативные решения</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-na-printere-ustanovit-cherno-beluyu-pechat-canon.html">Как включить ч/б печать на принтерах Canon: Полная инструкция 2026</a></li><li><a href="/articles/k/ka/kak-pechatat-foto-na-printere-canon-g3411.html">Как печатать фото на принтере Canon G3411: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-vernut-printer-kenon-k-zavodskim-nastrojkam.html">Сброс принтера Canon к заводским настройкам — пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-perenastroit-printer-canon-na-novyj-router.html">Как перенастроить принтер Canon на новый роутер: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-napechatat-s-dvukh-storon-na-printere-canon.html">Как печатать с двух сторон на принтерах Canon: Полное руководство</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как установить принтер Canon LBP 2900 на Windows 7</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-оборудования-и-проверка-физического-подключения">Подготовка оборудования и проверка физического подключения</a></li><li><a href="#загрузка-и-выбор-правильной-версии-драйвера">Загрузка и выбор правильной версии драйвера</a></li><li><a href="#ручная-настройка-через-диспетчер-устройств">Ручная настройка через Диспетчер устройств</a></li><li><a href="#создание-и-настройка-lpt-порта">Создание и настройка LPT-порта</a></li><li><a href="#устранение-распространенных-проблем-и-ошибок">Устранение распространенных проблем и ошибок</a></li><li><a href="#особенности-работы-с-64-битной-системой">Особенности работы с 64-битной системой</a></li><li><a href="#поддержка-и-альтернативные-решения">Поддержка и альтернативные решения</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Многие пользователи до сих пор используют надежную операционную систему <strong>Windows 7</strong> для офисной работы, особенно когда критически важна совместимость со старым оборудованием. Принтер <em>Canon LBP 2900</em> остается одним из самых популярных черно-белых устройств в бюджетном сегменте благодаря своей выносливости и простоте конструкции. Однако, в отличие от современных систем, «семерка» часто не может автоматически обнаружить это устройство через стандартные средства поиска, требуя от пользователя выполнения ряда специфических манипуляций с драйверами.</p>
+
+<p>Главная сложность заключается в том, что стандартный установщик <em>Canon LBP2900</em> может не увидеть принтер, если он подключен слишком рано или если не создан правильный виртуальный порт. В этой статье мы разберем пошаговый алгоритм действий, который гарантирует корректную работу печати даже на старых конфигурациях без использования сторонних утилит. Вам предстоит вручную указать системе путь к драйверу и назначить логический порт, что является стандартной процедурой для большинства устройств серии LBP.</p>
+
+<h2 id="подготовка-оборудования-и-проверка-физического-подключения">Подготовка оборудования и проверка физического подключения</h2>
+
+<p>Прежде чем приступать к программной настройке, необходимо убедиться, что физическая связь между устройствами установлена корректно. <em>Canon LBP 2900</em> не обладает сетевым модулем, поэтому все данные передаются исключительно через кабель USB. Убедитесь, что вы используете качественный кабель стандарта USB 2.0 Type-A to Type-B, который обычно идет в комплекте с устройством. Слабый или поврежденный провод часто становится причиной того, что система видит только питание, но не распознает само периферийное устройство.</p>
+
+<p>Подключать кабель к компьютеру следует только после того, как вы скачали и распаковали драйверы, но перед запуском процесса установки. Включите сам принтер и убедитесь, что индикатор готовности горит зеленым цветом. Если индикатор мигает желтым, возможно, в устройстве отсутствует бумага или замятие, что блокирует инициализацию при подключении к ПК. Проверьте, что кабель плотно сидит в разъеме как на корпусе принтера, так и в USB-порту компьютера.</p>
+
+<p>Некоторые пользователи совершают ошибку, подключая устройство к передним портам системного блока. Это может привести к недостаточному питанию для инициализации контроллера, особенно если используется старый блок питания или удлинители. Рекомендуется подключать устройство непосредственно к задней панели материнской платы. Это обеспечит стабильную подачу напряжения и снизит риск разрыва соединения во время настройки.</p>
+
+<h2 id="загрузка-и-выбор-правильной-версии-драйвера">Загрузка и выбор правильной версии драйвера</h2>
+
+<p>Для корректной работы на <strong>Windows 7</strong> необходимо использовать специализированную версию драйвера, часто называемую CAPT (Canon Advanced Printing Technology). Обычные универсальные драйверы от Canon могут не подойти для этой модели, так как она требует уникального конвертера данных. Зайдите на официальный сайт поддержки или проверьте установочный диск, если он сохранился. Важно выбрать именно ту версию драйвера, которая помечена как совместимая с 32-разрядной или 64-разрядной версией вашей ОС.</p>
+
+<p>Если вы не знаете точную разрядность системы, нажмите правой кнопкой мыши на значок «Мой компьютер» и выберите «Свойства». В строке «Тип системы» будет указано, какой именно дистрибутив вам нужен. Скачайте архив с названием, содержащим <code>Windows 7 x86</code> или <code>x64</code> в зависимости от результата проверки. Распакуйте содержимое архива в отдельную папку на диске, например, <code>C:\Drivers\Canon_LBP2900</code>. Не запускайте установочный файл <code>setup.exe</code> сразу после скачивания, так как он может не найти сам принтер на этом этапе.</p>
+
+<p>Иногда официальный сайт предлагает только универсальный пакет, который требует ручного указания пути к драйверу в диспетчере устройств. Это не является ошибкой, а стандартной практикой для данной линейки устройств. В таком случае вам потребуется найти внутри скачанного архива папку <code>Win_64</code> или <code>Win_32</code> и указать путь к ней вручную в процессе добавления принтера. Это дает больше контроля над процессом, чем автоматический установщик.</p>
+
+<blockquote>⚠️ Внимание: Драйверы для <em>Canon LBP 2900</em> на Windows 7 часто подписаны некорректно или требуют отключения проверки подписи драйверов, если у вас установлена 64-битная версия системы. Будьте готовы к появлению предупреждений безопасности при установке.</blockquote>
+
+<div class="pb-poll" id="poll-fc48e811"><div class="pb-poll-question">📊 Какую версию Windows 7 вы используете?</div><div class="pb-poll-option" data-poll="fc48e811" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">32-bit (x86)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="fc48e811" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">64-bit (x64)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="fc48e811" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Установку только что завершил</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="fc48e811" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю версию системы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="ручная-настройка-через-диспетчер-устройств">Ручная настройка через Диспетчер устройств</h2>
+
+<p>Самый надежный способ установки, который обходит капризы автоматического мастера, — это использование <strong>Диспетчера устройств</strong>. Откройте меню «Пуск», введите в поиске <code>devmgmt.msc</code> и нажмите Enter. В открывшемся окне найдите раздел «Другие устройства» или «Принтеры», где ваш <em>Canon LBP 2900</em> должен отображаться с желтым восклицательным знаком. Это означает, что система обнаружила устройство, но не знает, как с ним работать.</p>
+
+<p>Кликните правой кнопкой мыши по устройству с ошибкой и выберите пункт «Обновить драйверы». В появившемся окне выберите опцию «Выполнить поиск драйверов на этом компьютере». Теперь вам нужно указать путь к той папке, куда вы ранее распаковали файлы драйвера. Нажмите кнопку «Обзор» и выберите папку <code>C:\Drivers\Canon_LBP2900</code>. Важно не выбрать подпапку, а именно ту, где лежат файлы с расширением <code>.inf</code>. Нажмите «Далее», и система начнет процесс установки.</p>
+
+<p>В процессе установки может потребоваться подтверждение действия от имени администратора. Согласитесь с запросом, даже если Windows предупредит о недостаточной проверке издателя. Если система спросит, какой именно драйвер установить из списка, выберите <strong>Canon LBP2900</strong>, а не универсальный <em>Canon LBP</em>. После успешной установки устройство исчезнет из раздела «Другие устройства» и появится в разделе «Принтеры» с зеленым значком готовности.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к ручной установке</h4><label class="check-item"><input type="checkbox"><span>Скачать драйвер CAPT</span></label><label class="check-item"><input type="checkbox"><span>Распаковать архив в папку</span></label><label class="check-item"><input type="checkbox"><span>Отключить интернет</span></label><label class="check-item"><input type="checkbox"><span>Найти устройство в диспетчере</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="создание-и-настройка-lpt-порта">Создание и настройка LPT-порта</h2>
+
+<p>Одной из самых частых причин, почему принтер установлен, но не печатает, является отсутствие правильного <strong>LPT-порта</strong>. Виртуальный порт <code>LPT1</code> необходим для корректной передачи данных через драйвер CAPT. Если в списке портов его нет, нужно создать его вручную. Зайдите в «Панель управления», затем «Устройства и принтеры», найдите иконку <em>Canon LBP 2900</em> и откройте «Свойства принтера».</p>
+
+<p>Перейдите на вкладку «Порты» и нажмите кнопку «Добавить порт». В списке выберите «Local Port» и нажмите «Новый порт». В появившемся поле имени порта введите <code>LPT1:</code> (обязательно с двоеточием на английском языке) и нажмите ОК. Если порт уже существует, но принтер не работает, попробуйте удалить его и создать заново. Это сбросит возможные ошибки буфера передачи данных и обновит конфигурацию соединения.</p>
+
+<p>После создания порта убедитесь, что в списке портов именно <code>LPT1:</code> отмечен галочкой напротив имени вашего принтера. Если стоит другой порт, например, <code>USB001</code>, принтер может не отвечать на команды. Сохраните изменения и попробуйте распечатать тестовую страницу. Если порт LPT1 не появился в списке доступных при добавлении, это может означать, что драйвер установлен некорректно, и процедуру нужно повторить с начала.</p>
+
+<blockquote>⚠️ Внимание: Если вы используете виртуальную машину, создание порта LPT1 внутри гостевой системы может не сработать без дополнительной настройки BIOS и проброса физических портов. В таком случае лучше использовать реальный хост-компьютер.</blockquote>
+
+<h2 id="устранение-распространенных-проблем-и-ошибок">Устранение распространенных проблем и ошибок</h2>
+
+<p>Иногда после установки пользователь видит, что принтер в очереди заданий добавляет документы, но они не отправляются на устройство. В этом случае нужно проверить статус службы печати. Нажмите <code>R</code> + <code>Win</code>, введите <code>services.msc</code> и найдите службу «Диспетчер печати» (Print Spooler). Убедитесь, что она запущена. Если она остановлена, нажмите «Запустить». Также проверьте, не стоит ли она на автоматическом запуске, чтобы проблема не повторилась после перезагрузки.</p>
+
+<p>Другая частая проблема — постоянная ошибка «Оффлайн» (Offline). Это происходит, если система не получает подтверждения от принтера о готовности. В свойствах принтера на вкладке «Общие» нажмите кнопку «Свойства» (не «Свойства принтера», а именно «Свойства» кнопки внизу). Перейдите на вкладку «Конфигурация» и снимите галочку с пункта «Работать автономно». Сохраните изменения. Также проверьте, не стоит ли принтер в режиме энергосбережения, который блокирует связь по USB.</p>
+
+<p>Если в списке принтеров появляется несколько копий <em>Canon LBP 2900</em>, удалите все дубликаты, кроме одного рабочего. Дублирование возникает при повторных попытках установки и приводит к путанице в очереди заданий. Удаляйте ненужные устройства через контекстное меню «Удалить устройство». Оставшийся принтер должен иметь статус «Готов» без дополнительных значков ошибки или восклицательных знаков.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Проблема</th>
+<th>Вероятная причина</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Принтер не определяется</td>
+<td>Неисправен USB-кабель или порт</td>
+<td>Замените кабель, подключите к другому порту</td>
+</tr>
+<tr>
+<td>Ошибка "Драйвер не найден"</td>
+<td>Неверная разрядность системы</td>
+<td>Скачайте x86 или x64 драйвер</td>
+</tr>
+<tr>
+<td>Печать не начинается</td>
+<td>Отсутствует порт LPT1</td>
+<td>Создайте локальный порт LPT1</td>
+</tr>
+<tr>
+<td>Очередь зависает</td>
+<td>Проблема со службой Spooler</td>
+<td>Перезапустите службу печати</td>
+</tr>
+<tr>
+<td>Статус "Оффлайн"</td>
+<td>Режим энергосбережения</td>
+<td>Отключите автономную работу</td>
+</tr>
+</tbody>
+</table></div>
+
+<details class="pb-accordion"><summary>Что делать, если драйвер не устанавливается в Windows 7 64-bit?</summary><div class="pb-accordion-body"><p>В 64-битных версиях Windows 7 ужесточены требования к подписи драйверов. Если установщик блокируется, необходимо временно отключить проверку подписи драйверов через меню загрузки (F8 при старте), выбрав режим "Отключение обязательной подписи драйверов". После установки можно включить защиту обратно.</p></div></details>
+
+<h2 id="особенности-работы-с-64-битной-системой">Особенности работы с 64-битной системой</h2>
+
+<p>Установка драйверов на 64-разрядную версию <strong>Windows 7</strong> имеет свои нюансы, так как архитектура процессора отличается от 32-битной. Драйвер <em>Canon LBP 2900</em> должен быть строго 64-битным, иначе система просто отклонит его. Часто пользователи скачивают старый драйвер для Windows XP или Vista, который работает в режиме совместимости, но не обеспечивает полную функциональность. Всегда проверяйте заголовок файла драйвера на наличие пометки <code>x64</code>.</p>
+
+<p>Если вы используете утилиту <code>PRNUPD</code> или другие вспомогательные программы для обновления, они также должны соответствовать архитектуре системы. Запуск 32-битной утилиты на 64-битной системе может привести к невозможности корректного изменения конфигурации портов. В некоторых случаях требуется отключение функции UAC (Контроль учетных записей) на время установки, чтобы избежать блокировки доступа к системным файлам.</p>
+
+<p>После успешной установки на 64-битной системе проверьте, правильно ли отображается разрешение. Обычно это <code>600x600</code> точек на дюйм. Если в настройках печати доступны только низкие разрешения, значит, драйвер установлен не полностью. Перейдите в «Свойства принтера» -> «Настройка печати» и убедитесь, что выбрана корректная модель и качество печати. Это критично для четкости текста в документах.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для 64-битной Windows 7 критически важно использовать именно 64-битный драйвер CAPT, так как 32-битная версия не сможет корректно взаимодействовать с системой и порт LPT1 не будет создан автоматически.</p></aside>
+
+<h2 id="поддержка-и-альтернативные-решения">Поддержка и альтернативные решения</h2>
+
+<p>Если стандартные методы не помогают и принтер все равно не работает, можно попробовать использовать универсальные драйверы от Microsoft или сторонние утилиты, такие как <em>Canon LBP2900 Patch Tool</em>. Эти программы помогают исправить ошибки реестра и принудительно подключить драйвер к нужному порту. Однако использование стороннего софта всегда несет определенные риски, поэтому делайте резервную копию системы перед манипуляциями.</p>
+
+<p>В некоторых случаях проблема кроется не в программном обеспечении, а в самом устройстве. Если принтер не реагирует на нажатия кнопок, не загорается индикатор или издает странные звуки, возможно, проблема с блоком питания или термическим элементом. В этом случае никакая переустановка драйверов не поможет. Проверьте розетку, кабель питания и попробуйте перезагрузить устройство, отключив от сети на 10 минут.</p>
+
+<p>Для тех, кто планирует переходить на более новые версии Windows, важно знать, что <em>Canon LBP 2900</em> официально не поддерживается в Windows 10 и 11 без модификаций. Поэтому настройка на «семерке» может быть единственным способом сохранить работоспособность этого устройства в долгосрочной перспективе. Если вы решите обновить ОС, заранее изучите методы установки драйверов для новых версий Windows через совместимость.</p>
+
+<blockquote>⚠️ Внимание: Официальная поддержка драйверов для <em>Canon LBP 2900</em> со стороны производителя прекращена. Все методы установки на актуальные ОС или специфические конфигурации Windows 7 выполняются на ваш страх и риск и могут требовать использования модифицированных файлов.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед переустановкой драйверов полностью удалите старую версию принтера через панель управления и очистите папку C:\Windows\System32\spool\drivers\x64\3 от остатков файлов, чтобы избежать конфликтов версий.</p></aside>
+
+<details>
+<summary>Почему принтер Canon LBP 2900 не определяется автоматически в Windows 7?</summary>
+<p>Данная модель не имеет встроенного механизма Plug and Play, как современные устройства. Она требует ручного указания драйвера и создания виртуального порта LPT1, так как использует протокол CAPT, который не поддерживается стандартными драйверами Windows по умолчанию.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать драйвер от LBP 6000 вместо LBP 2900?</summary>
+<p>Нет, это разные аппаратные платформы. Драйверы от LBP 6000 не подходят для LBP 2900 и могут привести к ошибкам печати или полному отказу устройства. Используйте только драйверы, предназначенные именно для модели LBP 2900.</p>
+</details>
+
+<details>
+<summary>Что делать, если порт LPT1 не создается?</summary>
+<p>Попробуйте создать порт через «Диспетчер устройств», обновив драйвер принтера вручную. Также проверьте, не заблокирован ли доступ к портам в настройках BIOS или антивирусного ПО. Иногда помогает перезагрузка службы Spooler.</p>
+</details>
+
+<details>
+<summary>Как проверить, правильно ли установлен драйвер?</summary>
+<p>Откройте «Устройства и принтеры». Если рядом с иконкой <em>Canon LBP 2900</em> нет желтого восклицательного знака и статус «Готов», а в свойствах на вкладке «Порты» выбран LPT1, то установка прошла успешно. Попробуйте распечатать пробную страницу.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-na-printere-ustanovit-cherno-beluyu-pechat-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как включить ч/б печать на принтерах Canon: Полная инструкция 2026</span>
+                <span class="pb-related-desc">Научитесь экономить цветной картридж, переводя печать в монохромный режим. Подробные настройки для д</span>
+            </a><a href="/articles/k/ka/kak-pechatat-foto-na-printere-canon-g3411.html" class="pb-related-card">
+                <span class="pb-related-title">Как печатать фото на принтере Canon G3411: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по печати фотографий на принтере Canon PIXMA G3411: от выбора бумаги до настро</span>
+            </a><a href="/articles/k/ka/kak-vernut-printer-kenon-k-zavodskim-nastrojkam.html" class="pb-related-card">
+                <span class="pb-related-title">Сброс принтера Canon к заводским настройкам — пошаговая инструкция</span>
+                <span class="pb-related-desc">Как сбросить принтер Canon до заводских настроек: через меню, кнопки или ПО. Подробно для струйных и</span>
+            </a><a href="/articles/k/ka/kak-perenastroit-printer-canon-na-novyj-router.html" class="pb-related-card">
+                <span class="pb-related-title">Как перенастроить принтер Canon на новый роутер: пошаговая инструкция</span>
+                <span class="pb-related-desc">Полное руководство по подключению принтера Canon к новой Wi-Fi сети. Инструкция для моделей с экрано</span>
+            </a><a href="/articles/k/ka/kak-napechatat-s-dvukh-storon-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как печатать с двух сторон на принтерах Canon: Полное руководство</span>
+                <span class="pb-related-desc">Научитесь печатать на обеих сторонах листа на принтерах Canon. Инструкция для Windows, macOS, МФУ и </span>
+            </a><a href="/articles/k/ka/kak-pechatat-tolko-chernym-tsvetom-na-printerakh-canon-2540s.html" class="pb-related-card">
+                <span class="pb-related-title">Как печатать только черным на Canon 2540s: пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как настроить принтер Canon i-SENSYS LBP2540s для печати только черным цветом — через драйв</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

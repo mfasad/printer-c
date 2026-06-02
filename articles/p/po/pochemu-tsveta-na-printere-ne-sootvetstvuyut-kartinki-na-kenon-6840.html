@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Коррекция цвета на Canon imagePROGRAF iPF6840: Почему оттенки искажаются? — Кэнон Инфо</title>
+    <meta name="description" content="Разбираем причины расхождения цвета на экране и принтере Canon iPF6840. Настройка ICC-профилей, калибровка монитора и выбор режима цвета для идеальной печати.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/p/po/pochemu-tsveta-na-printere-ne-sootvetstvuyut-kartinki-na-kenon-6840.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Коррекция цвета на Canon imagePROGRAF iPF6840: Почему оттенки искажаются?">
+    <meta property="og:description" content="Разбираем причины расхождения цвета на экране и принтере Canon iPF6840. Настройка ICC-профилей, калибровка монитора и выбор режима цвета для идеальной печати.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Коррекция цвета на Canon imagePROGRAF iPF6840: Почему оттенки искажаются?</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-в-проблему-цветопередачи">Введение в проблему цветопередачи</a></li><li><a href="#фундаментальные-различия-rgb-и-cmyk">Фундаментальные различия RGB и CMYK</a></li><li><a href="#роль-калибровки-монитора-и-профилей-icc">Роль калибровки монитора и профилей ICC</a></li><li><a href="#настройки-драйвера-и-интерфейс-ufr-ii">Настройки драйвера и интерфейс UFR II</a></li><li><a href="#влияние-типа-бумаги-и-чернил">Влияние типа бумаги и чернил</a></li><li><a href="#сравнительная-таблица-настроек-цвета">Сравнительная таблица настроек цвета</a></li><li><a href="#дополнительные-тонкости-метод-рендеринга">Дополнительные тонкости: Метод рендеринга</a></li><li><a href="#практические-советы-по-улучшению-точности">Практические советы по улучшению точности</a></li><li><a href="#faq-частые-вопросы-о-цветопередаче">FAQ: Частые вопросы о цветопередаче</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-ustanovit-drajvera-na-printer-canon-lbp-2900-dlya-windows-10.html">Установка драйверов Canon LBP 2900 на Windows 10: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-raspechatat-probnuyu-stranitsu-na-printere-canon-lbp-2900.html">Как распечатать пробную страницу на Canon LBP 2900: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-posmotret-skolko-kraski-v-printere-cherez-kompyuter-canon.html">Как проверить уровень чернил в принтере Canon через компьютер</a></li><li><a href="/articles/g/gd/gde-najti-nazvanie-printera-canon.html">Как найти название модели принтера Canon: 5 рабочих способов</a></li><li><a href="/articles/l/l1/l10891e-canon-chto-za-printer.html">Canon L10891E: что за принтер, характеристики и особенности эксплуатации</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Почему цвета на принтере Canon iPF6840 не соответствуют экрану</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-в-проблему-цветопередачи">Введение в проблему цветопередачи</a></li><li><a href="#фундаментальные-различия-rgb-и-cmyk">Фундаментальные различия RGB и CMYK</a></li><li><a href="#роль-калибровки-монитора-и-профилей-icc">Роль калибровки монитора и профилей ICC</a></li><li><a href="#настройки-драйвера-и-интерфейс-ufr-ii">Настройки драйвера и интерфейс UFR II</a></li><li><a href="#влияние-типа-бумаги-и-чернил">Влияние типа бумаги и чернил</a></li><li><a href="#сравнительная-таблица-настроек-цвета">Сравнительная таблица настроек цвета</a></li><li><a href="#дополнительные-тонкости-метод-рендеринга">Дополнительные тонкости: Метод рендеринга</a></li><li><a href="#практические-советы-по-улучшению-точности">Практические советы по улучшению точности</a></li><li><a href="#faq-частые-вопросы-о-цветопередаче">FAQ: Частые вопросы о цветопередаче</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-в-проблему-цветопередачи">Введение в проблему цветопередачи</h2>
+<p>Столкновение с ситуацией, когда распечатанный на <em>Canon imagePROGRAF iPF6840</em> макет выглядит иначе, чем на мониторе, — это классическая боль для дизайнеров и фотографов. Вы открываете файл в редакторе, видите сочные и глубокие оттенки, но после выхода из принтера <strong>цветовой профиль</strong> кажется блеклым или смещенным в другую сторону. Важно понимать, что монитор и принтер используют принципиально разные физические модели формирования изображения.</p>
+<p>Экран генерирует свет с помощью аддитивной модели RGB (красный, зеленый, синий), смешивая световые лучи для создания цвета. Принтер же работает по субтрактивной модели CMYK (голубой, пурпурный, желтый, черный), где цвет создается путем поглощения света красителями на бумаге. Эта фундаментальная разница в физике света и пигмента неизбежно создает разрыв, который необходимо компенсировать техническими средствами.</p>
+<p>Модель <em>iPF6840</em> оснащена передовой системой <strong>ColorSync</strong> и 12-цветной печатной головкой, что теоретически позволяет охватить огромный диапазон оттенков, но только при условии корректной настройки цепочки «монитор — драйвер — бумага». Если какой-то из этапов работает в автоматическом режиме без учета специфики носителя, результат будет далек от ожиданий.</p>
+
+<h2 id="фундаментальные-различия-rgb-и-cmyk">Фундаментальные различия RGB и CMYK</h2>
+<p>Первой и самой частой причиной искажения является попытка напрямую сопоставить данные RGB с данными CMYK без промежуточной конвертации. На вашем экране цвета могут быть очень яркими, но физически невозможно воспроизвести некоторые оттенки, существующие в цифровом пространстве RGB, используя только красители принтера.</p>
+<p>Когда вы отправляете файл в печать, <strong>драйвер принтера</strong> пытается интерпретировать эти данные, но если настройки конвертации заданы неверно, принтер может просто отбросить самые яркие оттенки, сделав изображение «плоским». Понимание разницы между «цветом на экране» и «цветом красителя» — это база для любой профессиональной работы.</p>
+<p>Если вы используете <em>Photoshop</em> или <em>Illustrator</em>, необходимо вручную переключать рабочее пространство в режим CMYK перед отправкой на печать, чтобы увидеть, как файл будет выглядеть в реальном мире. Это позволяет заранее скорректировать насыщенность и избегать сюрпризов после печати.</p>
+<blockquote>⚠️ Внимание: Не пытайтесь принудительно растянуть цветовой охват RGB-модели до пределов CMYK, так как это приведет к потере деталей в тенях и перенасыщению цветов, которые принтер не сможет физически отобразить.</blockquote>
+
+<h2 id="роль-калибровки-монитора-и-профилей-icc">Роль калибровки монитора и профилей ICC</h2>
+<p>Даже если принтер настроен идеально, проблема может скрываться в самом мониторе. Большинство стандартных дисплеев поставляются с заводскими настройками, которые часто завышают насыщенность и яркость для привлечения покупателя в магазине. Без профессиональной <strong>калибровки</strong> вы просто не видите реального цвета, а значит, и не можете правильно оценить результат печати.</p>
+<p>Для работы с <em>Canon iPF6840</em> критически важно использовать аппаратные калибраторы (спайдеры), которые создают уникальный ICC-профиль для вашего конкретного экрана. Этот профиль сообщает программе, какие оттенки на самом деле отображаются на вашем дисплее, и позволяет при конвертации в CMYK учитывать реальные возможности монитора.</p>
+<p>Игнорирование этапа калибровки приводит к тому, что вы печатаете «вслепую», пытаясь подогнать печать под искаженное изображение на экране. Это тупиковый путь, требующий множества переделок и потери дорогих расходных материалов.</p>
+<ul>
+<li>🎨 Используйте аппаратные калибраторы (Datacolor, X-Rite) минимум раз в месяц.</li>
+<li>🎨 Настройте стандартную яркость монитора на 120 кд/м² для соответствия печатному свету.</li>
+<li>🎨 Убедитесь, что в системе активен именно ваш пользовательский профиль, а не стандартный sRGB.</li>
+</ul>
+
+<div class="pb-poll" id="poll-80f25592"><div class="pb-poll-question">📊 Какой метод настройки цвета вы используете чаще всего?</div><div class="pb-poll-option" data-poll="80f25592" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Автоматический режим драйвера</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="80f25592" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Вручную в Photoshop</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="80f25592" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">С использованием ICC-профилей</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="80f25592" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, как это настроить</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="настройки-драйвера-и-интерфейс-ufr-ii">Настройки драйвера и интерфейс UFR II</h2>
+<p>После того как файл подготовлен, ключевую роль играют настройки в окне печати <em>Canon UFR II</em> или <code>UFRII LT</code>. Здесь часто кроется главная ошибка: пользователи оставляют галочку «Управление цветом» на «Автоматически» или выбирают не тот метод рендеринга. Драйвер пытается угадать, что нужно пользователю, и часто ошибается, особенно при работе с градиентами.</p>
+<p>Для точной печати необходимо перейти в расширенные настройки и вручную указать метод управления цветом. В большинстве случаев для фотобумаги подходит режим «Управление цветом принтера» с профилем, соответствующим типу загруженной бумаги. Если же вы работаете с ватманом или холстом, выбор профиля должен быть еще более тщательным.</p>
+<p>Особое внимание уделите параметру <strong>«Метод рендеринга»</strong>. Режим «Относительный колориметрический» сохраняет точность цветов, но может обрезать самые яркие оттенки, а «Перцептивный» старается сохранить общую гармонию изображения, сжимая весь охват, что часто предпочтительнее для фотографий.</p>
+<p>Важно также проверить, не включен ли режим «Экономия чернил» или «Высокое качество печати» без необходимости, так как эти настройки меняют плотность нанесения краски и могут сдвинуть баланс белого.</p>
+<blockquote>⚠️ Внимание: Если вы меняете тип бумаги в настройках драйвера, но физически загружаете другой носитель, принтер может применить неверный профиль, что сделает цвет несовместимым с ожиданиями.</blockquote>
+
+<h2 id="влияние-типа-бумаги-и-чернил">Влияние типа бумаги и чернил</h2>
+<p>Цветопередача на <em>Canon imagePROGRAF iPF6840</em> критически зависит от типа загруженного материала. Чернила LUCIA PRO II, установленные в этой модели, ведут себя по-разному на матовой, глянцевой и полуглянцевой бумаге. Использование профиля для глянцевой бумаги при печати на матовой приведет к тому, что цвета станут тусклыми и серыми.</p>
+<p>Производитель предоставляет специализированные ICC-профили для каждого типа бумаги, который поддерживает принтер. Эти профили учитывают впитываемость материала, текстуру и отражающую способность. Простая смена бумаги без смены профиля в настройках печати — верный способ получить брак.</p>
+<p>Кроме того, возраст чернил и состояние картриджей также влияет на итоговый цвет. Если один из цветов (например, голубой) начинает иссякать, общий баланс сместится в сторону противоположного оттенка (в данном случае — в красноватый), даже если принтер выдает нормальное количество чернил.</p>
+<p>Перед началом работы всегда выполняйте проверку сопел и выравнивание печатающих головок. Даже микроскопическое отклонение позиционирования головок может создать эффект «двоения» цвета и снизить общую насыщенность изображения.</p>
+<ul>
+<li>📄 Всегда выбирайте профиль бумаги, точно соответствующий загруженному рулону или листу.</li>
+<li>📄 Используйте оригинальные картриджи <em>Canon</em> для стабильной цветопередачи и долговечности.</li>
+<li>📄 Регулярно выполняйте проверку сопел, чтобы избежать пропусков в цвете, нарушающих градиенты.</li>
+</ul>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Чек-лист перед печатью</h4><label class="check-item"><input type="checkbox"><span>Проверить калибровку монитора</span></label><label class="check-item"><input type="checkbox"><span>Выбрать правильный ICC-профиль бумаги</span></label><label class="check-item"><input type="checkbox"><span>Настроить метод рендеринга</span></label><label class="check-item"><input type="checkbox"><span>Выполнить выравнивание головок</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="сравнительная-таблица-настроек-цвета">Сравнительная таблица настроек цвета</h2>
+<p>Для наглядности приведем сравнение основных режимов работы с цветом в драйвере <em>Canon iPF6840</em>. Понимание этих различий поможет вам быстрее находить причину проблемы, если цвет не соответствует эталону.</p>
+<div class="pb-table-wrap"><table>
+ <thead>
+ <tr>
+ <th>Режим настройки</th>
+ <th>Управление цветом</th>
+ <th>Метод рендеринга</th>
+ <th>Применение</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Автоматический</td>
+ <td>Драйвер принтера</td>
+ <td>Автоматический</td>
+ <td>Для бытовых задач, документов</td>
+ </tr>
+ <tr>
+ <td>Продвинутый (Photoshop)</td>
+ <td>Управление цветом Photoshop</td>
+ <td>Относительный колориметрический</td>
+ <td>Для точной полиграфии, логотипов</td>
+ </tr>
+ <tr>
+ <td>Фото-профиль</td>
+ <td>Управление цветом принтера</td>
+ <td>Перцептивный</td>
+ <td>Для фотографий на матовой бумаге</td>
+ </tr>
+ <tr>
+ <td>Профессиональный (ICM)</td>
+ <td>Управление цветом ICM</td>
+ <td>Абсолютный колориметрический</td>
+ <td>Для предпечатной проверки</td>
+ </tr>
+ </tbody>
+</table></div>
+
+<h2 id="дополнительные-тонкости-метод-рендеринга">Дополнительные тонкости: Метод рендеринга</h2>
+<p>Одной из самых сложных для понимания настроек является выбор метода рендеринга, когда цвета за пределами печатного охвата. Этот параметр определяет, как принтер интерпретирует цвета, которые он не может физически напечатать. Выбор неправильного метода может полностью исказить настроение изображения.</p>
+<p>Метод <strong>«Относительный колориметрический»</strong> пытается сохранить точность цветов, которые принтер может воспроизвести, а те, что не входят в охват, просто «обрезает» до ближайшего доступного. Это отлично подходит для логотипов и графики с четкими границами, где важна точность конкретного оттенка.</p>
+<p>Метод <strong>«Перцептивный»</strong> сжимает весь цветовой диапазон изображения, чтобы все цвета поместились в охват принтера, сохраняя визуальные отношения между ними. Это предпочтительный выбор для фотографий, так как он сохраняет плавность переходов и естественность изображения, даже если самые яркие тона становятся чуть менее насыщенными.</p>
+<p>Если вы видите, что цвета на печати выглядят «выцветшими» или сероватыми, попробуйте переключить метод рендеринга на «Перцептивный» и увеличить насыщенность в настройках драйвера на 5-10%.</p>
+<blockquote>⚠️ Внимание: Убедитесь, что вы используете <mark>последнюю версию драйвера IJ Printer Assistant Tool</mark>, так как старые версии могут содержать устаревшие алгоритмы обработки цвета, не учитывающие новые профили чернил LUCIA PRO II.</blockquote>
+
+<details class="pb-accordion"><summary>Что делать, если цвета все равно не совпадают?</summary><div class="pb-accordion-body"><p>Если после всех настроек цвета не совпадают, попробуйте напечатать тестовый лист с цветовой шкалой. Сравните его с эталонным образцом, который вы можете заказать у поставщика бумаги или скачать на сайте производителя. Это поможет выявить, проблема в мониторе или в самом принтере.</p></div></details>
+
+<h2 id="практические-советы-по-улучшению-точности">Практические советы по улучшению точности</h2>
+<p>Для достижения максимальной точности цвета необходимо создать замкнутый цикл контроля. Начните с того, что (окружение) должно быть стандартным. Освещение в помещении, где вы оцениваете печать, должно соответствовать стандарту D50 (5000 К), иначе даже правильная печать будет казаться вам неверной из-за желтого или синего оттенка света в комнате.</p>
+<p>Создайте «библиотеку эталонов» для ваших наиболее часто используемых типов бумаги. Распечатайте несколько проверенных изображений и храните их как образец. Если печать через неделю начинает отличаться от эталона, это сигнал о проблемах с калибровкой головок или засыхании чернил.</p>
+<p>Используйте функцию «Предпросмотр» в драйвере, если она доступна, но помните, что это лишь предположение. Лучший способ проверки — печать малого фрагмента (пробный лист) перед отправкой всей тиража. Это сэкономит вам время и материалы.</p>
+<p>Не забывайте про <strong>профилактику</strong>. Печатайте хотя бы один тестовый цветной лист раз в неделю, даже если у вас нет срочных заказов. Это предотвратит засыхание чернил в соплах и сохранит стабильность цветопередачи.</p>
+<ul>
+<li>🛠️ Работайте при освещении стандарта D50 (5000 Кельвинов).</li>
+<li>🛠️ Храните эталонные образцы печати в темном месте.</li>
+<li>🛠️ Печатайте тестовые листы еженедельно для профилактики засыхания.</li>
+</ul>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При печати на матовой бумаге всегда давайте отпечатку высохнуть не менее 24 часов перед оценкой цвета, так как матовые поверхности меняют оттенок по мере полного впитывания краски.</p></aside>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Идеальный цвет на Canon iPF6840 достигается только при сочетании калиброванного монитора, правильного ICC-профиля бумаги и выбранного метода рендеринга «Перцептивный» для фотографий.</p></aside>
+
+<h2 id="faq-частые-вопросы-о-цветопередаче">FAQ: Частые вопросы о цветопередаче</h2>
+<details>
+<summary>Почему мои черные отпечатки выглядят синими?</summary>
+<p>Это частая проблема, связанная с тем, что принтер использует комбинацию черных красителей (C, M, K) вместо чистого черного (Black). Проверьте настройки «Тип чернил» в драйвере и убедитесь, что для вашей бумаги выбран режим «Плотный черный» или аналогичный, если он доступен.</p>
+</details>
+<details>
+<summary>Можно ли использовать сторонние ICC-профили для Canon iPF6840?</summary>
+<p>Да, вы можете использовать сторонние профили, созданные производителями бумаги или независимыми лабораториями. Для этого загрузите профиль в систему и выберите его вручную в настройках драйвера, отключив автоматическое управление цветом.</p>
+</details>
+<details>
+<summary>Как часто нужно калибровать принтер?</summary>
+<p>Принтер не требует калибровки так часто, как монитор, но его свойства меняются со временем. Рекомендуется выполнять калибровку (или глубокое выравнивание) раз в 3-6 месяцев или при смене партии чернил/бумаги.</p>
+</details>
+<details>
+<summary>Почему цвета на матовой бумаге тусклее, чем на глянцевой?</summary>
+<p>Это физическое свойство материалов. Глянцевая бумага отражает свет прямо в глаз, создавая эффект насыщенности. Матовая бумага рассеивает свет, что визуально снижает насыщенность. Используйте профили, специально созданные для матовых поверхностей, чтобы компенсировать этот эффект.</p>
+</details>
+<details>
+<summary>Что такое L* значение и зачем оно нужно?</summary>
+<p>L* (L-star) — это показатель светлоты в цветовом пространстве Lab. Он определяет, насколько цвет светлый или темный. Для профессиональной печати важно, чтобы значение L* на печати соответствовало эталону, особенно в нейтральных серых тонах.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-ustanovit-drajvera-na-printer-canon-lbp-2900-dlya-windows-10.html" class="pb-related-card">
+                <span class="pb-related-title">Установка драйверов Canon LBP 2900 на Windows 10: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по установке драйверов принтера Canon LBP 2900 на Windows 10. Решаем проблему </span>
+            </a><a href="/articles/k/ka/kak-raspechatat-probnuyu-stranitsu-na-printere-canon-lbp-2900.html" class="pb-related-card">
+                <span class="pb-related-title">Как распечатать пробную страницу на Canon LBP 2900: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство: как проверить работоспособность принтера Canon LBP 2900, распечатав тестовую </span>
+            </a><a href="/articles/k/ka/kak-posmotret-skolko-kraski-v-printere-cherez-kompyuter-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как проверить уровень чернил в принтере Canon через компьютер</span>
+                <span class="pb-related-desc">Полное руководство: 5 рабочих способов узнать остаток краски в принтерах Canon. Программы, драйверы </span>
+            </a><a href="/articles/g/gd/gde-najti-nazvanie-printera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как найти название модели принтера Canon: 5 рабочих способов</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как узнать точную модель принтера Canon через наклейку, панель управления, дра</span>
+            </a><a href="/articles/l/l1/l10891e-canon-chto-za-printer.html" class="pb-related-card">
+                <span class="pb-related-title">Canon L10891E: что за принтер, характеристики и особенности эксплуатации</span>
+                <span class="pb-related-desc">Подробный разбор модели Canon L10891E: технические характеристики, совместимость картриджей, настрой</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-printer-canon-mf4018-na-noutbuke.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить принтер Canon MF4018 на ноутбук: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению и настройке МФУ Canon MF4018. Скачивание драйверов, устранение о</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Подключение Canon LBP 3010 к Windows 7: пошаговая инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Подробный гайд по установке драйверов и настройке принтера Canon LBP 3010 на Windows 7. Решаем проблемы с портом CAPT, ошибки подключения USB.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-podklyuchit-printer-canon-lbp-3010-k-kompyuteru-windows-7.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Подключение Canon LBP 3010 к Windows 7: пошаговая инструкция">
+    <meta property="og:description" content="Подробный гайд по установке драйверов и настройке принтера Canon LBP 3010 на Windows 7. Решаем проблемы с портом CAPT, ошибки подключения USB.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/podklyuchenie-k-pk/">Подключение к ПК</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Подключение Canon LBP 3010 к Windows 7: пошаговая инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-оборудования-и-проверенные-источники-драйверов">Подготовка оборудования и проверенные источники драйверов</a></li><li><a href="#процесс-инсталляции-программного-обеспечения">Процесс инсталляции программного обеспечения</a></li><li><a href="#настройка-порта-capt-устранение-главной-проблемы">Настройка порта CAPT: устранение главной проблемы</a></li><li><a href="#решение-типичных-ошибок-и-конфликтов-системы">Решение типичных ошибок и конфликтов системы</a></li><li><a href="#таблица-совместимости-и-требуемые-характеристики">Таблица совместимости и требуемые характеристики</a></li><li><a href="#дополнительные-настройки-и-обслуживание">Дополнительные настройки и обслуживание</a></li><li><a href="#частые-вопросы-пользователей-faq">Частые вопросы пользователей (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ca/canon-pixma-ts304-kak-podklyuchit-k-kompyuteru.html">Как подключить Canon PIXMA TS304 к компьютеру: USB и Wi-Fi настройка</a></li><li><a href="/articles/c/ca/canon-550d-kak-veb-kamera-cherez-hdmi.html">Canon 550D как веб-камера через HDMI: Полная инструкция по подключению</a></li><li><a href="/articles/k/ka/kak-otklyuchit-predvaritelnyj-prosmotr-canon-ij.html">Как отключить предварительный просмотр в драйвере Canon IJ: 3 рабочих способа</a></li><li><a href="/articles/c/ca/canon-pixma-mp250-kak-podklyuchit-k-noutbuku.html">Как подключить Canon Pixma MP250 к ноутбуку: Полная инструкция</a></li><li><a href="/articles/p/pr/printer-canon-mf217w-kak-nastroit-svyaz.html">Настройка Wi-Fi для принтера Canon i-SENSYS MF217w: полное руководство</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как подключить принтер Canon LBP 3010 к компьютеру на Windows 7</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-оборудования-и-проверенные-источники-драйверов">Подготовка оборудования и проверенные источники драйверов</a></li><li><a href="#процесс-инсталляции-программного-обеспечения">Процесс инсталляции программного обеспечения</a></li><li><a href="#настройка-порта-capt-устранение-главной-проблемы">Настройка порта CAPT: устранение главной проблемы</a></li><li><a href="#решение-типичных-ошибок-и-конфликтов-системы">Решение типичных ошибок и конфликтов системы</a></li><li><a href="#таблица-совместимости-и-требуемые-характеристики">Таблица совместимости и требуемые характеристики</a></li><li><a href="#дополнительные-настройки-и-обслуживание">Дополнительные настройки и обслуживание</a></li><li><a href="#частые-вопросы-пользователей-faq">Частые вопросы пользователей (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Установка лазерного принтера <em>Canon LBP 3010</em> на операционную систему <code>Windows 7</code> часто вызывает затруднения у пользователей из-за особенностей драйвера CAPT. В отличие от более современных моделей, эта техника требует ручной настройки порта, так как система не всегда автоматически определяет правильный канал связи с устройством. Если вы столкнулись с тем, что принтер установлен, но не печатает, скорее всего, проблема кроется в настройках очереди печати.</p>
+
+<p>Процесс подключения включает в себя не просто вставку кабеля в порт USB, но и корректную инсталляцию программного обеспечения <strong>Canon CAPT</strong>. Это специализированный драйвер, который переводит команды из текстового редактора в язык, понятный печатающему механизму. Без правильной конфигурации этого компонента даже новый картридж не обеспечит выход листа бумаги на выходной лоток.</p>
+
+<h2 id="подготовка-оборудования-и-проверенные-источники-драйверов">Подготовка оборудования и проверенные источники драйверов</h2>
+
+<p>Перед началом работы убедитесь, что у вас есть оригинальный кабель USB и сетевой шнур. Хотя некоторые пользователи пытаются использовать переходники или удлинители, для стабильной работы <em>Canon LBP 3010</em> рекомендуется прямое подключение к материнской плате. Важно проверить чистоту разъемов и отсутствие видимых повреждений на изоляции провода, что часто становится причиной потери сигнала.</p>
+
+<p>Критически важно скачать драйвер именно с официального ресурса или из проверенного репозитория, так как устаревшие версии могут конфликтовать с <code>Windows 7</code>. Ищите пакет, содержащий слово <strong>CAPT</em> в названии, так как это ядро коммуникации устройства. Не стоит доверять сторонним сайтам, предлагающим «волшебные» наборные драйверы, которые часто содержат рекламное ПО или вирусы.</p>
+
+<p>Перед началом установки отключите принтер от сети и извлеките кабель USB из компьютера. Это стандартная процедура, позволяющая системе корректно распознать новое оборудование только после запуска установочного файла. Если подключить устройство до старта инсталляции, Windows может попытаться найти драйвер в своих базах, что приведет к ошибке совместимости.</p>
+
+<blockquote>⚠️ Внимание: Убедитесь, что ваша версия операционной системы <code>Windows 7</code> соответствует разрядности драйвера (x86 для 32-битных систем или x64 для 64-битных). Неправильный выбор архитектуры — самая частая причина, по которой принтер не появляется в списке устройств.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед скачиванием драйвера отключите антивирус на время установки, чтобы он не заблокировал изменение системных файлов, необходимых для работы служб печати Canon.</p></aside>
+
+<h2 id="процесс-инсталляции-программного-обеспечения">Процесс инсталляции программного обеспечения</h2>
+
+<p>Запустите файл <code>setup.exe</code> от имени администратора, чтобы предоставить права на изменение реестра и системных библиотек. В открывшемся окне мастера установки выберите язык интерфейса и примите условия лицензионного соглашения. Далее следуйте подсказкам на экране, соглашаясь с типовой установкой компонентов, так как кастомный выбор часто отключает необходимые службы.</p>
+
+<p>На определенном этапе программа запросит подключение принтера. Именно в этот момент, когда на экране появится соответствующее сообщение, включите сам <em>Canon LBP 3010</strong> и вставьте USB-кабель в порт компьютера. Система должна определить новое устройство и завершить копирование файлов драйвера. Если этого не происходит, попробуйте перезагрузить компьютер и повторить попытку.</p>
+
+<p>Иногда инсталляция проходит успешно, но после перезагрузки принтер перестает отвечать. В этом случае необходимо проверить наличие службы <strong>Printer Status Monitor</strong> в диспетчере задач. Отсутствие этого процесса означает, что драйвер не был полноценно интегрирован в систему и требует переустановки.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Контроль процесса установки</h4><label class="check-item"><input type="checkbox"><span>Скачан драйвер под вашу версию ОС</span></label><label class="check-item"><input type="checkbox"><span>Принтер отключен от USB</span></label><label class="check-item"><input type="checkbox"><span>Запуск от имени администратора</span></label><label class="check-item"><input type="checkbox"><span>Подключение по команде мастера</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="настройка-порта-capt-устранение-главной-проблемы">Настройка порта CAPT: устранение главной проблемы</h2>
+
+<p>Самый критичный этап, с которым сталкиваются 80% пользователей, — это настройка порта. После установки стандартный драйвер может указывать на порт <code>USB001</code> или <code>DOT4</code>, что делает печать невозможной. Вам нужно вручную изменить адрес порта на <strong>CAPT</strong>, который специфичен для этой модели. Игнорирование этого шага приведет к тому, что документы будут висеть в очереди печати без ответа от устройства.</p>
+
+<p>Для исправления ситуации зайдите в <code>Пуск → Устройства и принтеры</code>. Найдите иконку вашего принтера, кликните правой кнопкой мыши и выберите <code>Свойства принтера</code>. Во вкладке <code>Порты</code> найдите строку, где указано <code>CAPT Port</code>, и поставьте напротив неё галочку. Если такого пункта нет, нажмите кнопку <code>Добавить порт</code> и следуйте инструкциям для создания нового порта типа CAPT.</p>
+
+<p>После смены порта необходимо перезапустить службу печати. Это обязательная процедура, так как система не всегда мгновенно применяет новые настройки маршрутизации данных. Если печать не началась, проверьте, не заблокирован ли доступ к принтеру в свойствах безопасности.</p>
+
+<blockquote>⚠️ Внимание: Если при попытке добавить порт система выдает ошибку, попробуйте отключить службу Spooler через <code>services.msc</code>, переподключить кабель и снова запустить службу перед повторной попыткой настройки.</blockquote>
+
+<div class="pb-poll" id="poll-a2e63918"><div class="pb-poll-question">📊 С какой проблемой вы столкнулись при установке?</div><div class="pb-poll-option" data-poll="a2e63918" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Драйвер не находится</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a2e63918" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Принтер не печатает</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a2e63918" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Ошибка порта CAPT</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a2e63918" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Проблемы с качеством печати</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="решение-типичных-ошибок-и-конфликтов-системы">Решение типичных ошибок и конфликтов системы</h2>
+
+<p>Одной из частых проблем является конфликт версий драйверов, когда в системе остаются следы от предыдущих попыток установки. В этом случае необходимо полностью удалить устройство через <code>Диспетчер устройств</code> и очистить скрытые файлы драйверов. Используйте утилиту <strong>Canon Driver Information Assist Service</em> для проверки целостности установленных компонентов.</p>
+
+<p>Иногда окна печати появляются, но принтер молчит. Это может означать, что выбрана неверная карта памяти или формат бумаги в настройках задачи. Убедитесь, что в свойствах принтера установлен стандартный формат <code>A4</code> и ориентация страницы соответствует вашим данным. Проверьте уровень тонера в картридже через меню управления устройством.</p>
+
+<p>Если компьютер пишет, что принтер «Не работает», проверьте физическое соединение и наличие питания. В редких случаях помогает сброс настроек самого принтера через комбинацию кнопок на панели управления. Также стоит убедиться, что кабель не поврежден и не изогнут под острым углом в месте входного разъема.</p>
+
+<h2 id="таблица-совместимости-и-требуемые-характеристики">Таблица совместимости и требуемые характеристики</h2>
+
+<p>Ниже приведена сводная информация о требованиях к системе для корректной работы <em>Canon LBP 3010</em>. Эти данные помогут вам быстро оценить возможность установки без лишних экспериментов.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Требование</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Операционная система</td>
+<td>Windows 7 (32/64 bit)</td>
+<td>Полная поддержка драйвером CAPT</td>
+</tr>
+<tr>
+<td>Интерфейс подключения</td>
+<td>USB 2.0</td>
+<td>Необходимо прямое подключение</td>
+</tr>
+<tr>
+<td>Драйвер</td>
+<td>Canon CAPT</td>
+<td>Версия 2.80 или ниже для Win7</td>
+</tr>
+<tr>
+<td>Порт по умолчанию</td>
+<td>CAPT Port</td>
+<td>Ручная настройка обязательна</td>
+</tr>
+<tr>
+<td>Разрядность системы</td>
+<td>x86 или x64</td>
+<td>Совпадение с версией драйвера</td>
+</tr>
+</tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главное правило: без ручной настройки порта на CAPT принтер Canon LBP 3010 на Windows 7 не будет отправлять данные на печать, даже если драйвер установлен.</p></aside>
+
+<h2 id="дополнительные-настройки-и-обслуживание">Дополнительные настройки и обслуживание</h2>
+
+<p>После успешной настройки порта важно оптимизировать работу принтера. В свойствах устройства можно настроить уровень затемнения печати, если текст получается бледным. Также рекомендуется периодически выполнять функцию <strong>очистки термоблока</strong> через меню драйвера, чтобы избежать смазывания текста.</p>
+
+<p>Для повышения производительности при печати больших объемов документов стоит отключить функцию <code>двусторонней печати</code>, если она не используется. Это ускорит обработку данных и снизит нагрузку на оперативную память компьютера. Не забывайте обновлять картридж своевременно, так как использование старого тонера может привести к повреждению термопленки.</p>
+
+<p>Если вы планируете использовать принтер в сетевой среде, учтите, что <em>Canon LBP 3010</em> не имеет встроенного сетевого модуля. Для подключения к другим устройствам необходимо использовать функцию <strong>общего доступа</strong> в свойствах принтера на компьютере-хосте. Однако для стабильной работы лучше оставить устройство подключенным локально.</p>
+
+<details class="pb-accordion"><summary>Что делать, если порт CAPT не создается автоматически?</summary><div class="pb-accordion-body"><p>Попробуйте скачать отдельный пакет «Canon CAPT Port Utility» или используйте мастер добавления принтеров в системе, выбрав локальный принтер с существующим портом LPT1, а затем замените его на CAPT через свойства.</p></div></details>
+
+<h2 id="частые-вопросы-пользователей-faq">Частые вопросы пользователей (FAQ)</h2>
+
+<details>
+<summary>Почему принтер видит компьютер, но не печатает?</summary>
+<p><p>Скорее всего, не настроен порт CAPT. Зайдите в <code>Свойства принтера → Порты</code> и убедитесь, что стоит галочка напротив <strong>CAPT Port</strong>. Если порт отсутствует, его нужно создать вручную через кнопку «Добавить порт».</p></p>
+</details>
+
+<details>
+<summary>Можно ли использовать этот принтер с Windows 10?</summary>
+<p><p>Официальная поддержка для Windows 10 может отсутствовать в старых версиях драйверов. Однако часто помогает режим совместимости для Windows 7 или использование универсальных драйверов от сторонних производителей.</p></p>
+</details>
+
+<details>
+<summary>Как узнать версию драйвера CAPT?</summary>
+<p><p>Зайдите в <code>Панель управления → Устройства и принтеры</code>, кликните правой кнопкой по принтеру и выберите <code>Свойства</code>. На вкладке <code>Общие</code> нажмите <code>Сведения о драйвере</code> — там будет указана версия установленного ПО.</p></p>
+</details>
+
+<details>
+<summary>Что делать, если установка прерывается с ошибкой?</summary>
+<p><p>Проверьте, не блокирует ли антивирус процесс. Попробуйте запустить установщик от имени администратора и отключить интернет на время установки, чтобы система не пыталась скачать несовместимый драйвер из центра обновлений.</p></p>
+</details>
+
+<details>
+<summary>Нужен ли диск с драйвером для работы?</summary>
+<p><p>Диск не обязателен, если у вас есть доступ к интернету. Драйвер можно скачать с официального сайта производителя. Диск часто содержит устаревшие версии ПО, которые могут не подойти для вашей сборки Windows 7.</p></p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ca/canon-pixma-ts304-kak-podklyuchit-k-kompyuteru.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon PIXMA TS304 к компьютеру: USB и Wi-Fi настройка</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению принтера Canon PIXMA TS304 к ПК через кабель и Wi-Fi. Настройка </span>
+            </a><a href="/articles/c/ca/canon-550d-kak-veb-kamera-cherez-hdmi.html" class="pb-related-card">
+                <span class="pb-related-title">Canon 550D как веб-камера через HDMI: Полная инструкция по подключению</span>
+                <span class="pb-related-desc">Научитесь использовать Canon 550D в качестве веб-камеры. Пошаговое руководство по подключению через </span>
+            </a><a href="/articles/k/ka/kak-otklyuchit-predvaritelnyj-prosmotr-canon-ij.html" class="pb-related-card">
+                <span class="pb-related-title">Как отключить предварительный просмотр в драйвере Canon IJ: 3 рабочих способа</span>
+                <span class="pb-related-desc">Полное руководство по отключению функции предварительного просмотра в утилитах Canon IJ Scan Utility</span>
+            </a><a href="/articles/c/ca/canon-pixma-mp250-kak-podklyuchit-k-noutbuku.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon Pixma MP250 к ноутбуку: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка принтера Canon MP250. Установка драйверов, подключение по USB и Wi-Fi, решение ч</span>
+            </a><a href="/articles/p/pr/printer-canon-mf217w-kak-nastroit-svyaz.html" class="pb-related-card">
+                <span class="pb-related-title">Настройка Wi-Fi для принтера Canon i-SENSYS MF217w: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению Canon MF217w к беспроводной сети. Настройка через WPS, панель уп</span>
+            </a><a href="/articles/k/ka/kak-skinut-video-s-fotoapparata-canon-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как скинуть видео с Canon на ПК: 5 способов переноса файлов</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как перекинуть видео с фотоаппарата Canon на компьютер через USB, карту памяти</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

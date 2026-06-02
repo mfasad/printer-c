@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Установка Canon LBP 810 на Windows 8 x64: Пошаговая инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Подробное руководство по установке драйверов Canon LBP 810 на 64-разрядную Windows 8. Решение ошибок совместимости, настройка порта и устранение неработоспособности принтера.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-ustanovit-printer-canon-lbp-810-na-windows-8-x64.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Установка Canon LBP 810 на Windows 8 x64: Пошаговая инструкция">
+    <meta property="og:description" content="Подробное руководство по установке драйверов Canon LBP 810 на 64-разрядную Windows 8. Решение ошибок совместимости, настройка порта и устранение неработоспособности принтера.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/podklyuchenie-k-pk/">Подключение к ПК</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Установка Canon LBP 810 на Windows 8 x64: Пошаговая инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-системы-и-проверка-совместимости">Подготовка системы и проверка совместимости</a></li><li><a href="#скачивание-правильного-пакета-драйверов">Скачивание правильного пакета драйверов</a></li><li><a href="#ручная-установка-через-диспетчер-устройств">Ручная установка через Диспетчер устройств</a></li><li><a href="#настройка-порта-lpt1-lbpl1">Настройка порта LPT1 (LBPL1)</a></li><li><a href="#решение-проблем-с-ошибкой-папка-принтера-не-найдена">Решение проблем с ошибкой «Папка принтера не найдена»</a></li><li><a href="#тестовая-печать-и-устранение-зависаний">Тестовая печать и устранение зависаний</a></li><li><a href="#альтернативные-решения-и-совместимость">Альтернативные решения и совместимость</a></li><li><a href="#частые-вопросы-пользователей">Частые вопросы пользователей</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-lbp-810.html">Как подключить Canon LBP 810 к компьютеру: полная инструкция</a></li><li><a href="/articles/c/ca/canon-mg3640-kak-podklyuchit-k-kompyuteru.html">Как подключить Canon MG3640 к компьютеру: полные инструкции по USB и Wi-Fi</a></li><li><a href="/articles/c/ca/canon-r-kak-podklyuchit-k-kompyuteru.html">Как подключить Canon R к компьютеру: USB, Wi-Fi и EOS Utility</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-k-noutbuku-lbp633cdw.html">Как подключить принтер Canon LBP633Cdw к ноутбуку: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-mf4018-k-kompyuteru-windows-10.html">Подключение Canon i-SENSYS MF4018 к Windows 10: Пошаговая инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Установка принтера Canon LBP 810 на Windows 8 x64: Полное руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-системы-и-проверка-совместимости">Подготовка системы и проверка совместимости</a></li><li><a href="#скачивание-правильного-пакета-драйверов">Скачивание правильного пакета драйверов</a></li><li><a href="#ручная-установка-через-диспетчер-устройств">Ручная установка через Диспетчер устройств</a></li><li><a href="#настройка-порта-lpt1-lbpl1">Настройка порта LPT1 (LBPL1)</a></li><li><a href="#решение-проблем-с-ошибкой-папка-принтера-не-найдена">Решение проблем с ошибкой «Папка принтера не найдена»</a></li><li><a href="#тестовая-печать-и-устранение-зависаний">Тестовая печать и устранение зависаний</a></li><li><a href="#альтернативные-решения-и-совместимость">Альтернативные решения и совместимость</a></li><li><a href="#частые-вопросы-пользователей">Частые вопросы пользователей</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Обладатели компактных черно-белых лазерных принтеров серии <em>Canon LBP 810</em> часто сталкиваются с серьезной проблемой при переходе на современные операционные системы. Модель, зарекомендовавшая себя как надежный «рабочая лошадка» в офисах десятилетней давности, не имеет официальной поддержки разработчиками для <strong>Windows 8 x64</strong> в стандартной базе данных обновлений.</p>
+
+<p>Это создает иллюзию неработоспособности оборудования, заставляя пользователей искать обходные пути или менять устройство на более свежее. Однако, грамотный подход к настройке драйверов и портов позволяет запустить печать даже на устаревшем железе без лишних финансовых затрат.</p>
+
+<p>В данной статье мы детально разберем процесс ручного подключения, который требует внимательности к деталям и понимания принципов взаимодействия операционной системы с старым периферийным оборудованием. Мы не будем использовать стандартные «волшебные» утилиты, которые часто конфликтуют с архитектурой <code>64 bit</code>, а пойдем проверенным путем административной настройки.</p>
+
+<h2 id="подготовка-системы-и-проверка-совместимости">Подготовка системы и проверка совместимости</h2>
+
+<p>Перед началом любых манипуляций необходимо убедиться, что ваша операционная система полностью обновлена и готова к принятию сторонних драйверов. Хотя <em>Canon LBP 810</em> — это старая модель, <strong>Windows 8</strong> обладает встроенными механизмами эмуляции, которые могут помочь, если правильно задать параметры совместимости.</p>
+
+<p>Важно проверить разрядность вашей системы, так как установка 32-битного драйвера на 64-битную систему приведет к фатальной ошибке при попытке печати. Откройте меню <code>Пуск → Панель управления → Система</code> и убедитесь, что в строке «Тип системы» указано «64-разрядная операционная система».</p>
+
+<blockquote>
+<p>⚠️ Внимание: Драйверы для <em>Canon LBP 810</em> официально поддерживают только Windows XP, Vista и 7 (x86). Для Windows 8 x64 потребуется ручное внедрение драйвера версии для Windows 7 x64 или использование режима совместимости, так как нативных файлов в архиве производителя нет.</p>
+</blockquote>
+
+<p>Не забудьте отключить подписанные драйверы, если система будет блокировать установку неофициального программного обеспечения. Это критический шаг, который часто упускают новички, сталкиваясь с ошибкой «Не удалось найти драйвер».</p>
+
+<p>Заранее подготовьте USB-кабель и сам принтер, но пока не подключайте его к компьютеру. Операция требует точной последовательности действий, и лишнее подключение может спровоцировать автоматическую установку некорректного драйвера из центра обновлений Microsoft.</p>
+
+<h2 id="скачивание-правильного-пакета-драйверов">Скачивание правильного пакета драйверов</h2>
+
+<p>Поиск необходимых файлов требует осторожности, так как в интернете множество устаревших ссылок. Вам необходим драйвер для модели <strong>Canon LBP 810</strong>, носящий название <em>Canon LBP810 Series PCL6</em> или аналогичный пакет для <em>Windows 7 64-bit</em>.</p>
+
+<p>Посетите официальный сайт поддержки или проверенные архивы драйверов и скачайте исполняемый файл. Обратите внимание на расширение файла: оно должно быть <code>.exe</code> или <code>.cab</code> (архив). Избегайте сомнительных утилит-оптимизаторов, обещающих «автоматический поиск».</p>
+
+<p>После загрузки распакуйте архив в отдельную папку, например, <code>C:\Drivers\CanonLBP810</code>. Если вы скачали исполняемый файл, запустите его, выберите пункт «Извлечь» (Extract) и укажите путь распаковки, не меняя структуру папок внутри архива.</p>
+
+<p>Внутри папки вы найдете множество файлов, но ключевыми для нас являются <code>cnmcrst.exe</code> (утилита настройки порта) и <code>cnmp810.exe</code> (сам драйвер). Именно эти файлы обеспечат корректную работу устройства.</p>
+
+<ul>
+<li>✅ Скачайте драйвер строго для разрядности x64 (Windows 7 x64/8 x64)
+<li>✅ Распакуйте файлы в папку с латинскими символами в названии
+<li>✅ Сохраните путь к папке с драйверами для дальнейшего использования
+</ul>
+
+<h2 id="ручная-установка-через-диспетчер-устройств">Ручная установка через Диспетчер устройств</h2>
+
+<p>Теперь переходим к самому ответственному этапу — добавлению устройства в систему вручную. Подключите принтер к USB-порту и включите его в розетку. Система попытается найти устройство, но скорее всего выдаст предупреждение о том, что драйвер не найден или работает некорректно.</p>
+
+<p>Зайдите в <code>Диспетчер устройств</code> (нажмите <code>Win + X</code> и выберите соответствующий пункт). Найдите раздел «Другие устройства» или «Принтеры», где должно отображаться устройство с желтым восклицательным знаком.</p>
+
+<p>Кликните правой кнопкой мыши по устройству и выберите «Обновить драйвер». В появившемся окне нажмите «Выполнить поиск драйверов на этом компьютере». Это откроет окно выбора пути к распакованным файлам.</p>
+
+<p>Нажмите кнопку «Обзор» и укажите путь к папке <code>C:\Drivers\CanonLBP810</code>. Обязательно поставьте галочку «Включить вложенные папки», чтобы система могла найти нужные файлы <code>.inf</code> глубоко в структуре директории.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к ручной установке</h4><label class="check-item"><input type="checkbox"><span>Убедиться в типе системы x64</span></label><label class="check-item"><input type="checkbox"><span>Скачать драйвер для Win 7 x64</span></label><label class="check-item"><input type="checkbox"><span>Распаковать в отдельную папку</span></label><label class="check-item"><input type="checkbox"><span>Отключить принтер до старта установки</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Система начнет поиск и, возможно, выдаст предупреждение о том, что драйвер не прошел проверку подписи. Не пугайтесь, это стандартная ситуация для старого оборудования. Нажмите «Да» или «Установить в любом случае».</p>
+
+<p>Процесс установки может занять несколько минут. Если все прошло успешно, устройство исчезнет из раздела «Другие устройства» и переместится в раздел «Принтеры» без значков ошибок. Однако, это еще не гарантия работы печати.</p>
+
+<details class="pb-accordion"><summary>Что делать, если драйвер не находится?</summary><div class="pb-accordion-body"><p>Если система не видит файлы.inf в папке, попробуйте открыть папку с драйверами вручную и найти файл с расширением.inf. Часто нужно указывать не корневую папку, а подпапку с названием версии ОС, например, "Win7_x64".</p></div></details>
+
+<h2 id="настройка-порта-lpt1-lbpl1">Настройка порта LPT1 (LBPL1)</h2>
+
+<p>Это самый критичный момент, который часто игнорируется. Даже при правильно установленном драйвере <em>Canon LBP 810</em> не будет печатать, если не создан специальный виртуальный порт. Стандартный USB-порт не подходит для работы с драйверами этой серии.</p>
+
+<p>Вам нужно создать порт типа <strong>Local Port</strong> с именем <code>LPT1:</code> (или иногда <code>USB001</code>, но для LBP 810 классическим является LPT). Для этого перейдите в <code>Панель управления → Устройства и принтеры</code>.</p>
+
+<p>Найдите ваш принтер, нажмите правой кнопкой мыши и выберите «Свойства принтера». Перейдите на вкладку «Порты». В списке портов будет минимум один, но нам нужно добавить новый. Нажмите кнопку «Добавить порт».</p>
+
+<p>В открывшемся окне выберите «Local Port» и нажмите «Новый порт». В поле ввода имени порта введите строго <code>LPT1:</code> (заглавными буквами, с двоеточием). Нажмите «ОК».</p>
+
+<blockquote>
+<p>⚠️ Внимание: Для корректной работы драйверов Canon LaserBeam Printers (LBP) критически важно использование порта <code>LPT1:</code>. Если вы оставите стандартный <code>USB001</code> или <code>WSD</code>, принтер может показывать статус «Готов», но документы будут уходить в никуда.</p>
+</blockquote>
+
+<p>После создания порта выберите его в списке доступных портов, поставив галочку напротив строки <code>LPT1:</code>. Нажмите «Применить» и «ОК». Теперь принтер «привязан» к виртуальному порт-параллельному интерфейсу, который эмулирует драйвер.</p>
+
+<p>На этом этапе рекомендуется перезагрузить компьютер, чтобы система окончательно применила изменения в реестре и перенастроила очереди печати.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Создание виртуального порта LPT1 является обязательным условием работы принтеров Canon серии LBP на Windows 8 и более новых системах, так как их драйверы не поддерживают нативные USB-порты напрямую.</p></aside>
+
+<h2 id="решение-проблем-с-ошибкой-папка-принтера-не-найдена">Решение проблем с ошибкой «Папка принтера не найдена»</h2>
+
+<p>Частая ошибка, с которой сталкиваются пользователи после установки — сообщение о том, что «Папка принтера не найдена» или «Не удалось инициализировать движок печати». Это связано с отсутствием необходимых служб или файлов конфигурации.</p>
+
+<p>Посмотрите в папке с драйверами наличие файла <code>cnmcrst.exe</code> (LBP Printer Utility). Этот инструмент необходим для исправления ошибок подключения и настройки портов. Запустите его от имени администратора.</p>
+
+<p>Утилита проведет диагностику и предложит исправить найденные проблемы. Если она не работает, попробуйте запустить её в режиме совместимости с <code>Windows 7</code> или <code>Windows XP</code>. Правой кнопкой по файлу → Свойства → Совместимость.</p>
+
+<p>Также проверьте, запущена ли служба <code>Print Spooler</code>. Нажмите <code>Win + R</code>, введите <code>services.msc</code> и найдите эту службу в списке. Убедитесь, что её статус «Выполняется», а тип запуска «Автоматически».</p>
+
+<ul>
+<li>✅ Запустите утилиту <code>cnmcrst.exe</code> от имени администратора
+<li>✅ Проверьте статус службы <code>Print Spooler</code> в диспетчере задач
+<li>✅ Убедитесь, что файл драйвера не заблокирован антивирусом
+</ul>
+
+<p>Если проблема сохраняется, попробуйте полностью удалить устройство через консоль и повторить установку заново, но на этот раз с отключенным интернетом, чтобы система не пыталась скачать свой вариант драйвера.</p>
+
+<h2 id="тестовая-печать-и-устранение-зависаний">Тестовая печать и устранение зависаний</h2>
+
+<p>После всех настроек необходимо проверить работоспособность устройства. Откройте любой документ (например, <code>Блокнот</code>) и попробуйте распечатать тестовую страницу. В свойствах принтера есть кнопка «Пробная печать».</p>
+
+<p>Если принтер реагирует (загорается индикатор), но бумага не выходит или получается пустой, проверьте уровень тонера и качество соединения. Иногда проблема кроется в том, что драйвер отправляет неверные команды.</p>
+
+<p>В случае зависания очереди печати, очистите её через <code>Устройства и принтеры</code>, нажав «Очистить очереди печати». Также полезно перезапустить службу <code>Print Spooler</code> через консоль управления службами.</p>
+
+<p>Следуйте таблице ниже для быстрой диагностики основных ошибок:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Проблема</th>
+<th>Возможная причина</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Принтер не отвечает</td>
+<td>Неверный порт (не LPT1)</td>
+<td>Создать порт LPT1 в свойствах принтера</td>
+</tr>
+<tr>
+<td>Ошибка драйвера</td>
+<td>Отсутствие подписи драйвера</td>
+<td>Включить режим тестирования ОС или отключить проверку</td>
+</tr>
+<tr>
+<td>Пустая страница</td>
+<td>Неправильный формат данных</td>
+<td>Проверить настройки качества печати и драйвер PCL</td>
+</tr>
+<tr>
+<td>Зависание очереди</td>
+<td>Сбой службы Spooler</td>
+<td>Перезапустить службу Print Spooler</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="альтернативные-решения-и-совместимость">Альтернативные решения и совместимость</h2>
+
+<p>Если описанный выше метод не дал результатов, или вы не хотите возиться с ручными настройками, рассмотрите возможность использования виртуальной машины. Установка <strong>Windows 7</strong> или <em>Windows XP</em> в виртуальной среде (VirtualBox) может стать спасением.</p>
+
+<p>Внутри виртуальной машины вы сможете подключить принтер напрямую, и система увидит его как родное устройство. Это полностью снимает проблему совместимости драйверов. Однако это требует больше ресурсов от основного компьютера.</p>
+
+<p>Другой вариант — использование драйверов универсальных принтеров, если они поддерживают PCL-команды, но это может ограничить функционал, например, отключить контроль уровня тонера.</p>
+
+<p> Если вы планируете масштабную модернизацию парка техники, стоит задуматься о замене <em>Canon LBP 810</em> на более современную модель с нативной поддержкой <strong>Windows 10/11</strong>.</p>
+
+<blockquote>
+<p>⚠️ Внимание: В некоторых случаях антивирусное ПО может блокировать работу служебных утилит Canon, считая их подозрительными из-за отсутствия цифровой подписи. Добавьте папку с драйверами в исключение антивируса перед запуском установки.</p>
+</blockquote>
+
+<p>Использование <code>WSD</code> порта (Web Services for Devices) для этой модели категорически не рекомендуется, так как оно работает нестабильно и часто приводит к обрыву связи с принтером при работе в сети.</p>
+
+<h2 id="частые-вопросы-пользователей">Частые вопросы пользователей</h2>
+
+<details>
+<summary>Почему принтер Canon LBP 810 не видит Windows 8 автоматически?</summary>
+<p>Операционная система Windows 8 не имеет в своей базе встроенных драйверов для этой конкретной модели, так как она была разработана до выхода данной ОС. Требуется ручная установка драйвера для Windows 7 x64 в режиме совместимости.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать драйвер для 32-битной системы на 64-битной Windows?</summary>
+<p>Нет, использование 32-битного драйвера на 64-битной системе приведет к ошибкам. Вам обязательно нужно скачивать версию драйвера с пометкой x64 или AMD64, соответствующую разрядности вашей системы.</p>
+</details>
+
+<details>
+<summary>Что делать, если утилита cnmcrst.exe не запускается?</summary>
+<p>Запустите файл с правами администратора и попробуйте включить режим совместимости с Windows 7. Если это не помогает, проблема может быть в отсутствии необходимых библиотек Visual C++ в вашей системе.</p>
+</details>
+
+<details>
+<summary>Нужна ли утилита LBP Printer Utility для печати?</summary>
+<p>Да, она критически важна для настройки порта LPT1 и диагностики ошибок. Без неё принтер может быть установлен в системе, но не сможет принимать данные для печати.</p>
+</details>
+
+<details>
+<summary>Почему принтер печатает пустые страницы?</summary>
+<p>Это может указывать на проблему с драйвером или отсутствием тонера. Проверьте правильность выбранного драйвера (PCL6) и убедитесь, что картридж установлен корректно и не имеет повреждений.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-podklyuchit-printer-canon-lbp-810.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon LBP 810 к компьютеру: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка принтера Canon LBP 810. Установка драйверов, подключение USB, исправление ошибки</span>
+            </a><a href="/articles/c/ca/canon-mg3640-kak-podklyuchit-k-kompyuteru.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon MG3640 к компьютеру: полные инструкции по USB и Wi-Fi</span>
+                <span class="pb-related-desc">Пошаговая настройка принтера Canon MG3640: драйверы, беспроводное соединение, устранение ошибок. Пол</span>
+            </a><a href="/articles/c/ca/canon-r-kak-podklyuchit-k-kompyuteru.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon R к компьютеру: USB, Wi-Fi и EOS Utility</span>
+                <span class="pb-related-desc">Полная инструкция по подключению фотоаппарата Canon R к ПК. Настройка USB, беспроводного соединения,</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-canon-k-noutbuku-lbp633cdw.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon LBP633Cdw к ноутбуку: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по подключению принтера Canon LBP633Cdw к ноутбуку через Wi-Fi, USB и Ethernet</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-canon-mf4018-k-kompyuteru-windows-10.html" class="pb-related-card">
+                <span class="pb-related-title">Подключение Canon i-SENSYS MF4018 к Windows 10: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по установке драйверов и настройке принтера Canon MF4018 на Windows 10. Решаем</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-printer-kenon-l11121e.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить принтер Canon LBP1121e: Пошаговая инструкция и драйверы</span>
+                <span class="pb-related-desc">Полное руководство по установке принтера Canon LBP1121e на Windows. Скачивание драйверов, подключени</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

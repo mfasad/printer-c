@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как посмотреть MAC-адрес на принтерах Canon: 3 рабочих способа — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция: как найти MAC-адрес на принтерах Canon через меню, веб-интерфейс и отчеты. Решаем задачи настройки сети и фильтрации.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-posmotret-mak-adres-printera-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как посмотреть MAC-адрес на принтерах Canon: 3 рабочих способа">
+    <meta property="og:description" content="Пошаговая инструкция: как найти MAC-адрес на принтерах Canon через меню, веб-интерфейс и отчеты. Решаем задачи настройки сети и фильтрации.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как посмотреть MAC-адрес на принтерах Canon: 3 рабочих способа</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#понимание-структуры-и-назначения-mac-адреса-в-экосистеме-canon">Понимание структуры и назначения MAC-адреса в экосистеме Canon</a></li><li><a href="#быстрый-способ-печать-отчета-о-конфигурации-сети">Быстрый способ: печать отчета о конфигурации сети</a></li><li><a href="#просмотр-mac-адреса-через-веб-интерфейс-remote-ui">Просмотр MAC-адреса через веб-интерфейс (Remote UI)</a></li><li><a href="#поиск-через-компьютер-утилиты-и-командная-строка">Поиск через компьютер: утилиты и командная строка</a></li><li><a href="#где-найти-адрес-на-корпусе-устройства-физический-метод">Где найти адрес на корпусе устройства (физический метод)</a></li><li><a href="#решение-частых-проблем-при-поиске-адреса">Решение частых проблем при поиске адреса</a></li><li><a href="#практическое-применение-полученных-данных">Практическое применение полученных данных</a></li><li><a href="#faq-частые-вопросы-о-mac-адресе-принтеров-canon">FAQ: Частые вопросы о MAC-адресе принтеров Canon</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-uznat-model-printera-kenon.html">Как узнать модель принтера Canon: 5 рабочих способов определения</a></li><li><a href="/articles/k/ka/kak-dobavit-printer-canon-na-makbuk.html">Как добавить принтер Canon на MacBook: пошаговая инструкция 2026</a></li><li><a href="/articles/k/ka/kak-sdelat-kalibrovku-canon-g2411.html">Как сделать калибровку Canon G2411: полная инструкция по настройке</a></li><li><a href="/articles/k/ka/kak-uznat-serijnyj-nomer-printera-canon.html">Как узнать серийный номер принтера Canon: 5 точных способов</a></li><li><a href="/articles/k/ka/kak-obnovit-drajvera-na-printere-canon.html">Как обновить драйвер Canon: Пошаговая инструкция для Windows и Mac</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полное руководство: как посмотреть MAC-адрес принтера Canon</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#понимание-структуры-и-назначения-mac-адреса-в-экосистеме-canon">Понимание структуры и назначения MAC-адреса в экосистеме Canon</a></li><li><a href="#быстрый-способ-печать-отчета-о-конфигурации-сети">Быстрый способ: печать отчета о конфигурации сети</a></li><li><a href="#просмотр-mac-адреса-через-веб-интерфейс-remote-ui">Просмотр MAC-адреса через веб-интерфейс (Remote UI)</a></li><li><a href="#поиск-через-компьютер-утилиты-и-командная-строка">Поиск через компьютер: утилиты и командная строка</a></li><li><a href="#где-найти-адрес-на-корпусе-устройства-физический-метод">Где найти адрес на корпусе устройства (физический метод)</a></li><li><a href="#решение-частых-проблем-при-поиске-адреса">Решение частых проблем при поиске адреса</a></li><li><a href="#практическое-применение-полученных-данных">Практическое применение полученных данных</a></li><li><a href="#faq-частые-вопросы-о-mac-адресе-принтеров-canon">FAQ: Частые вопросы о MAC-адресе принтеров Canon</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Подключение современного устройства к локальной сети часто требует точной идентификации оборудования. Для сетевых администраторов и продвинутых пользователей ключевым идентификатором является <strong>MAC-адрес</strong> (Media Access Control). Это уникальный 48-битный номер, присваиваемый сетевому адаптеру на заводе, который не меняется при смене IP-адреса или перезагрузке.</p>
+
+<p>Владельцы техники <em>Canon</em> часто сталкиваются с необходимостью узнать этот код при настройке роутера, создании статического IP или включении фильтрации доступа по белому списку. В отличие от динамического IP, который может измениться после сбоя сети, <strong>MAC-адрес</strong> остается константой, позволяя надежно привязывать устройство к конкретному порту или правилу безопасности.</p>
+
+<h2 id="понимание-структуры-и-назначения-mac-адреса-в-экосистеме-canon">Понимание структуры и назначения MAC-адреса в экосистеме Canon</h2>
+
+<p>Прежде чем искать код на устройстве, важно понимать, как он выглядит и где именно хранится информация о нем в прошивке <em>Canon</em>. Стандартный формат представляет собой 12 шестнадцатеричных символов, разделенных двоеточиями или дефисами, например, <code>00:1A:2B:3C:4D:5E</code>. Для моделей <em>imageRUNNER</em> и <em>imagePROGRAF</em> этот идентификатор критичен для интеграции в корпоративные сети.</p>
+
+<p>Система безопасности современных маршрутизаторов часто блокирует нежелательные устройства, основываясь именно на этом адресе. Знание <strong>MAC-адреса</strong> позволяет вам вручную добавить ваш принтер <em>Canon</em> в разрешенный список, гарантируя, что даже при сбое DHCP-сервера устройство получит доступ к интернету и сможет отправлять документы на печать.</p>
+
+<p>Иногда пользователи путают этот идентификатор с серийным номером устройства или IP-адресом. Серийный номер уникален для всей модели в целом и используется для гарантии, а IP-адреса меняются. <strong>MAC-адрес</strong> же привязан исключительно к сетевой плате вашего аппарата.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Убедитесь, что вы смотрите именно на сетевой MAC-адрес (Ethernet или Wi-Fi), а не на адрес интерфейса USB. Для настройки сетевого подключения важен только адрес сетевого адаптера.</p>
+</blockquote>
+
+<h2 id="быстрый-способ-печать-отчета-о-конфигурации-сети">Быстрый способ: печать отчета о конфигурации сети</h2>
+
+<p>Самый универсальный метод, не требующий подключения к компьютеру или знания паролей от веб-интерфейса — это печать служебного отчета. На большинстве моделей <em>Canon</em>, от компактных офисных МФУ до мощных широкоформатных принтеров, эта функция находится в одном месте. Вам нужно попасть в меню настройки сетевых параметров.</p>
+
+<p>Нажмите кнопку <code>Меню</code> или <code>Настройки</code> на сенсорном дисплее. Перейдите в раздел <code>Настройки устройства</code>, затем выберите пункт <code>Настройки сети</code> или <code>Статус сети</code>. В зависимости от версии прошивки, искомая опция может называться <code>Печать конфигурации</code> или <code>Отчет о конфигурации</code>.</p>
+
+<p>После выбора опции принтер распечатает страницу, где в верхней части или в разделе <strong>Сетевая информация</strong> будет указан запрошенный код. Ищите строку с пометкой <code>MAC Address</code> или <code>Физический адрес</code>. Этот метод особенно удобен, если у вас нет прямого доступа к веб-интерфейсу из-за проблем с сетевым подключением.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к печати отчета</h4><label class="check-item"><input type="checkbox"><span>Включить принтер и убедиться в отсутствии ошибок</span></label><label class="check-item"><input type="checkbox"><span>Найти кнопку Меню или Настройки</span></label><label class="check-item"><input type="checkbox"><span>Перейти в раздел Сеть</span></label><label class="check-item"><input type="checkbox"><span>Выбрать пункт Печать конфигурации</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Обратите внимание, что на некоторых моделях серии <em>imageRUNNER ADVANCE</em> может потребоваться ввод пароля администратора для доступа к глубоким настройкам сети. Если вы не меняли пароль, попробуйте стандартный, часто это <code>7654321</code> или <code>0000000</code>, но лучше проверить документацию к конкретной модели.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Если принтер не подключен к сети кабелем или Wi-Fi, отчет может не содержать актуального MAC-адреса или показать адрес, назначенный при последнем успешном подключении к другому роутеру.</p>
+</blockquote>
+
+<details class="pb-accordion"><summary>Что делать, если в отчете несколько MAC-адресов?</summary><div class="pb-accordion-body"><p>На современных моделях Canon часто присутствуют несколько сетевых интерфейсов: проводной Ethernet и беспроводной Wi-Fi. Отчет может содержать оба адреса. Используйте тот, который соответствует вашему способу подключения. Для проводного подключения ищите строку LAN или Ethernet, для беспроводного — WLAN или Wi-Fi.</p></div></details>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Печать отчета о конфигурации — самый надежный способ получения данных, так как он не зависит от состояния сетевого подключения компьютера к принтеру.</p></aside>
+
+<h2 id="просмотр-mac-адреса-через-веб-интерфейс-remote-ui">Просмотр MAC-адреса через веб-интерфейс (Remote UI)</h2>
+
+<p>Если ваш принтер <em>Canon</em> уже подключен к сети и вы знаете его IP-адрес, самый информативный способ — использование веб-интерфейса. Это удобный метод, позволяющий увидеть не только адрес, но и текущие настройки маршрутизации. Откройте любой браузер на компьютере, находящемся в той же сети.</p>
+
+<p>Введите в адресную строку IP-адрес принтера. Обычно он имеет вид <code>192.168.1.105</code> или подобный. Нажмите Enter, и вы увидите стартовую страницу <strong>Remote UI</strong>. Здесь потребуется авторизация, если включен режим администратора, или вы сможете просмотреть базовую информацию сразу.</p>
+
+<p>В верхнем меню найдите вкладку <code>Свойства</code> (Properties) или <code>Настройки</code> (Settings). Далее перейдите в раздел <code>Настройки сети</code> (Network Settings) и выберите <code>Настройки TCP/IP</code> или <code>Просмотр настроек</code>. В открывшемся списке вы увидите строку <strong>MAC-адрес</strong> (Ethernet Address).</p>
+
+<div class="pb-poll" id="poll-748a480e"><div class="pb-poll-question">📊 Какой способ вы предпочитаете использовать?</div><div class="pb-poll-option" data-poll="748a480e" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Печать отчета</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="748a480e" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Веб-интерфейс</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="748a480e" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Командная строка</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="748a480e" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, как найти</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<p>Интерфейс может незначительно отличаться в зависимости от серии устройства. Для моделей <em>PIXMA</em> меню может называться <code>Состояние принтера</code>, а для профессиональных <em>imagePROGRAF</em> — <code>Информация о системе</code>. Главное — искать раздел, связанный с <code>LAN</code> или <code>Network</code>.</p>
+
+<p>Этот метод особенно полезен, если вам нужно скопировать адрес без ошибок, так как вы можете просто выделить его мышкой и вставить в файл настройки роутера. Ошибки ввода в этом случае практически исключены, в отличие от ручного переписывания с бумажного отчета.</p>
+
+<h2 id="поиск-через-компьютер-утилиты-и-командная-строка">Поиск через компьютер: утилиты и командная строка</h2>
+
+<p>Иногда проще узнать адрес через компьютер, если у вас уже установлено программное обеспечение <em>Canon</em>. Установленные драйверы часто включают утилиты мониторинга, такие как <em>Canon Status Monitor</em> или <em>IJ Network Tool</em>. Запустите одну из этих программ со значка в трее или из меню Пуск.</p>
+
+<p>В окне утилиты выберите ваш принтер из списка обнаруженных устройств. Перейдите в свойства устройства или на вкладку <strong>Сетевая конфигурация</strong>. Здесь будет отображен полный путь к устройству и его <strong>MAC-адрес</strong>. Это удобно, если вам нужно обновить настройки сразу для нескольких принтеров в офисе.</p>
+
+<p>Альтернативный способ для продвинутых пользователей — использование командной строки. Если вы знаете IP-адрес принтера, откройте консоль на Windows и введите команду <code>arp -a</code>. В списке устройств найдите IP вашего принтера, и рядом с ним отобразится физический адрес.</p>
+
+<pre><code>arp -a</code></pre>
+
+<p>Эта команда показывает таблицу ARP (Address Resolution Protocol), которая сопоставляет IP-адреса с MAC-адресами в локальной сети. Обратите внимание, что если принтер находится в другом сегменте сети или выключен, он может не отобразиться в списке.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если вы используете команду arp -a, убедитесь, что перед этим вы отправили хотя бы одно задание на печать или проверили статус принтера, чтобы его адрес записался в локальный кэш ARP вашего компьютера.</p></aside>
+
+<h2 id="где-найти-адрес-на-корпусе-устройства-физический-метод">Где найти адрес на корпусе устройства (физический метод)</h2>
+
+<p>В некоторых случаях программные методы недоступны из-за сбоев. Тогда приходится искать информацию физически. На большинстве принтеров <em>Canon</em> наклейка с техническими данными находится на задней панели или под съемной крышкой картриджного отсека.</p>
+
+<p>Найдите этикетку с штрих-кодом. Рядом с серийным номером (Serial No.) часто указывается и сетевой адрес. Ищите пометку <code>MAC</code>, <code>Ethernet</code> или <code>WLAN</code>. На некоторых компактных моделях <em>PIXMA</em> эта информация может быть размещена на внутренней стороне крышки, где устанавливаются чернильницы.</p>
+
+<p>Если принтер уже установлен, добраться до задней части может быть сложно. В таком случае попробуйте отодвинуть устройство или использовать зеркало. Убедитесь, что вы читаете именно адрес сетевого адаптера, а не адрес USB-концентратора, если он есть на устройстве.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Метод поиска</th>
+<th>Необходимые условия</th>
+<th>Сложность</th>
+<th>Точность</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Печать отчета</td>
+<td>Низкий уровень бумаги, исправная печать</td>
+<td>Низкая</td>
+<td>Высокая</td>
+</tr>
+<tr>
+<td>Веб-интерфейс</td>
+<td>Подключение к сети, знание IP</td>
+<td>Средняя</td>
+<td>Максимальная</td>
+</tr>
+<tr>
+<td>Утилиты ПО</td>
+<td>Установленный драйвер, ПК в сети</td>
+<td>Низкая</td>
+<td>Высокая</td>
+</tr>
+<tr>
+<td>Физический осмотр</td>
+<td>Доступ к корпусу</td>
+<td>Высокая</td>
+<td>Средняя</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Физический метод часто используется при первоначальной настройке, когда устройство еще не подключено к сети. Это единственный способ узнать адрес до того, как вы сможете отправить его в веб-интерфейс роутера для разблокировки.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Избегайте использования агрессивных чистящих средств при осмотре наклейки, так как они могут стереть штрих-коды и адреса, что сделает невозможной идентификацию устройства в будущем.</p>
+</blockquote>
+
+<h2 id="решение-частых-проблем-при-поиске-адреса">Решение частых проблем при поиске адреса</h2>
+
+<p>Иногда пользователи не могут найти нужный раздел в меню или видят пустые поля в веб-интерфейсе. Это может быть связано с тем, что сетевой адаптер отключен в настройках. Проверьте раздел <code>Настройки системы</code> и убедитесь, что опция <strong>Сетевой интерфейс</strong> активна.</p>
+
+<p>Другая распространенная проблема — различия в отображении формата адреса. Некоторые системы показывают адрес с двоеточиями (<code>00:1A:2B...</code>), другие — с дефисами (<code>00-1A-2B...</code>). При вводе в роутер внимательно следуйте требованиям конкретного программного обеспечения, так как несоответствие формата может привести к ошибке привязки.</p>
+
+<p>Если вы видите, что MAC-адрес меняется или не сохраняется, это может указывать на аппаратную неисправность сетевой платы или конфликт прошивок. В редких случаях на некоторых старых моделях <em>Canon</em> требуется обновление прошивки для корректной работы сетевых модулей.</p>
+
+<details class="pb-accordion"><summary>Можно ли изменить MAC-адрес принтера Canon?</summary><div class="pb-accordion-body"><p>В большинстве потребительских и офисных моделей Canon изменить MAC-адрес программно невозможно, так как он "зашит" в память сетевого чипа. Это сделано для безопасности сети. Изменение возможно только на специализированном оборудовании с правами супервизора, что не рекомендуется для обычного пользователя.</p></div></details>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если стандартные методы не работают, обновление прошивки до последней версии через официальный сайт Canon часто исправляет ошибки отображения сетевых параметров.</p></aside>
+
+<h2 id="практическое-применение-полученных-данных">Практическое применение полученных данных</h2>
+
+<p>Получив <strong>MAC-адрес</strong>, вы можете решить множество административных задач. Самое популярное применение — настройка <strong>статического IP-адреса</strong> в роутере. Это гарантирует, что принтер никогда не сменит свой адрес, что критично для работы с корпоративными серверами печати.</p>
+
+<p>Также вы можете настроить <strong>фильтрацию по MAC-адресу</strong> на роутере. Это позволит вам разрешить доступ к интернету или локальной сети только вашему принтеру <em>Canon</em> и другим важным устройствам, заблокировав при этом все остальные. Это повышает безопасность офиса.</p>
+
+<p>При решении проблем с обнаружением принтера в сети, указание MAC-адреса в техподдержке провайдера или производителя принтера позволяет им быстрее диагностировать проблему на уровне сетевого оборудования, не требуя от вас глубоких технических знаний.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Сохраните распечатанный отчет о конфигурации сети или сделайте скриншот веб-страницы с MAC-адресом в папку "Документы" на компьютере. Это сэкономит время при следующей перестройке сети.</p></aside>
+
+<blockquote>
+<p>⚠️ Внимание: Если вы настраиваете статический IP на роутере, убедитесь, что выбранный вами адрес находится вне диапазона автоматической раздачи (DHCP pool), чтобы избежать конфликтов адресов.</p>
+</blockquote>
+
+<h2 id="faq-частые-вопросы-о-mac-адресе-принтеров-canon">FAQ: Частые вопросы о MAC-адресе принтеров Canon</h2>
+
+<details>
+<summary>Где именно в меню Canon искать MAC-адрес?</summary>
+<p>Обычно он находится по пути: <code>Настройки устройства</code> → <code>Настройки сети</code> → <code>Настройки TCP/IP</code> или <code>Статус сети</code>. В некоторых моделях путь может быть <code>Настройки</code> → <code>Система</code> → <code>Просмотр настроек</code>.</p>
+</details>
+
+<details>
+<summary>Может ли MAC-адрес измениться после сброса настроек?</summary>
+<p>Нет, <strong>MAC-адрес</strong> является заводским идентификатором сетевого адаптера и не меняется при сбросе настроек до заводских или перепрошивке. Он остается постоянным на протяжении всего срока службы устройства.</p>
+</details>
+
+<details>
+<summary>Что делать, если в отчете нет MAC-адреса?</summary>
+<p>Это может означать, что сетевой модуль не обнаружен или отключен. Проверьте, подключен ли сетевой кабель, включен ли Wi-Fi модуль в настройках, или попробуйте обновить прошивку устройства.</p>
+</details>
+
+<details>
+<summary>Нужен ли MAC-адрес для подключения по Wi-Fi?</summary>
+<p>Да, во многих корпоративных сетях доступ к Wi-Fi разрешен только по списку MAC-адресов. Также он используется роутером для назначения статического IP-адреса беспроводному устройству.</p>
+</details>
+
+<details>
+<summary>Как отличить MAC-адрес Wi-Fi от LAN?</summary>
+<p>В отчетах и меню они обычно подписаны как <code>WLAN MAC</code> (для беспроводного) и <code>LAN MAC</code> или <code>Ethernet MAC</code> (для проводного). Используйте тот, который соответствует вашему способу подключения.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-uznat-model-printera-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Как узнать модель принтера Canon: 5 рабочих способов определения</span>
+                <span class="pb-related-desc">Узнайте, как точно определить модель принтера Canon. Инструкция по поиску маркировки на корпусе, в н</span>
+            </a><a href="/articles/k/ka/kak-dobavit-printer-canon-na-makbuk.html" class="pb-related-card">
+                <span class="pb-related-title">Как добавить принтер Canon на MacBook: пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Полное руководство по подключению принтеров Canon к macOS. Настройка AirPrint, драйверов и Wi-Fi. Ре</span>
+            </a><a href="/articles/k/ka/kak-sdelat-kalibrovku-canon-g2411.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать калибровку Canon G2411: полная инструкция по настройке</span>
+                <span class="pb-related-desc">Пошаговое руководство по калибровке принтера Canon G2411. Настройка черт, выравнивание печатающей го</span>
+            </a><a href="/articles/k/ka/kak-uznat-serijnyj-nomer-printera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как узнать серийный номер принтера Canon: 5 точных способов</span>
+                <span class="pb-related-desc">Подробная инструкция по поиску серийного номера принтеров Canon. Проверка этикетки, меню устройства,</span>
+            </a><a href="/articles/k/ka/kak-obnovit-drajvera-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как обновить драйвер Canon: Пошаговая инструкция для Windows и Mac</span>
+                <span class="pb-related-desc">Подробное руководство по обновлению драйверов принтеров Canon. Автопоиск, ручная установка, устранен</span>
+            </a><a href="/articles/k/ka/kak-perezagruzit-printer-canon-pixma-3640.html" class="pb-related-card">
+                <span class="pb-related-title">Как перезагрузить Canon Pixma 3640: полное руководство по сбросу</span>
+                <span class="pb-related-desc">Инструкция по перезагрузке принтера Canon Pixma 3640 при зависании, ошибках печати или сбоях сети. С</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

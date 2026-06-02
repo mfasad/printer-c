@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как настроить цвета принтера Canon: полное руководство по калибровке — Кэнон Инфо</title>
+    <meta name="description" content="Подробная инструкция по настройке цвета, управлению плотностью и калибровке принтеров Canon. Исправление розовых и зеленых оттенков, работа с профилем ICC.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-nastroit-tsveta-printera-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как настроить цвета принтера Canon: полное руководство по калибровке">
+    <meta property="og:description" content="Подробная инструкция по настройке цвета, управлению плотностью и калибровке принтеров Canon. Исправление розовых и зеленых оттенков, работа с профилем ICC.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как настроить цвета принтера Canon: полное руководство по калибровке</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-в-управление-цветом-на-устройствах-canon">Введение в управление цветом на устройствах Canon</a></li><li><a href="#базовые-настройки-в-окне-драйвера-печати">Базовые настройки в окне драйвера печати</a></li><li><a href="#ручная-калибровка-и-баланс-цветов">Ручная калибровка и баланс цветов</a></li><li><a href="#проверка-и-очистка-печатающих-головок">Проверка и очистка печатающих головок</a></li><li><a href="#глубокая-настройка-через-утилиту-printer-feature-access">Глубокая настройка через утилиту Printer Feature Access</a></li><li><a href="#использование-профилей-icc-и-управление-цветом-в-ос">Использование профилей ICC и управление цветом в ОС</a></li><li><a href="#таблица-типовых-проблем-и-решений">Таблица типовых проблем и решений</a></li><li><a href="#профилактика-и-регулярное-обслуживание">Профилактика и регулярное обслуживание</a></li><li><a href="#faq-частые-вопросы-по-настройке-цвета">FAQ: Частые вопросы по настройке цвета</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-perejti-na-cherno-beluyu-pechat-v-printere-kenon.html">Как включить черно-белую печать на принтерах Canon: полные инструкции</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-kenon-lbp-3010.html">Как подключить принтер Canon LBP 3010 к компьютеру и Wi-Fi</a></li><li><a href="/articles/k/ka/kak-ustanovit-printer-canon-mf3010-dlya-windows-8.html">Как установить принтер Canon MF3010 на Windows 8: Полное руководство</a></li><li><a href="/articles/k/ka/kak-vklyuchit-printer-canon-lbp-1120.html">Как включить Canon LBP1120: пошаговая инструкция подключения</a></li><li><a href="/articles/k/ka/kak-obnovit-printer-canon-mg3640.html">Как обновить прошивку принтера Canon MG3640: полная инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полная настройка цвета принтера Canon: от драйвера до промывки</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-в-управление-цветом-на-устройствах-canon">Введение в управление цветом на устройствах Canon</a></li><li><a href="#базовые-настройки-в-окне-драйвера-печати">Базовые настройки в окне драйвера печати</a></li><li><a href="#ручная-калибровка-и-баланс-цветов">Ручная калибровка и баланс цветов</a></li><li><a href="#проверка-и-очистка-печатающих-головок">Проверка и очистка печатающих головок</a></li><li><a href="#глубокая-настройка-через-утилиту-printer-feature-access">Глубокая настройка через утилиту Printer Feature Access</a></li><li><a href="#использование-профилей-icc-и-управление-цветом-в-ос">Использование профилей ICC и управление цветом в ОС</a></li><li><a href="#таблица-типовых-проблем-и-решений">Таблица типовых проблем и решений</a></li><li><a href="#профилактика-и-регулярное-обслуживание">Профилактика и регулярное обслуживание</a></li><li><a href="#faq-частые-вопросы-по-настройке-цвета">FAQ: Частые вопросы по настройке цвета</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-в-управление-цветом-на-устройствах-canon">Введение в управление цветом на устройствах Canon</h2>
+<p>Проблема несоответствия цвета на экране и на бумаге знакома каждому владельцу печатающей техники, особенно при работе с фотоматериалами или рекламными макетами. Принтеры <em>Canon</em> отличаются высокой точностью, но заводские настройки часто оптимизированы под общие задачи, а не под профессиональную цветопередачу. Если ваши отпечатки получаются слишком темными, блеклыми или имеют неестественный оттенок, проблема кроется в настройках драйвера или состоянии печатающих головок.</p>
+<p>Качественная печать требует не только исправно работающего оборудования, но и правильной конфигурации программного обеспечения. Вам необходимо понимать разницу между управлением цветом на уровне драйвера и настройками самого устройства. <strong>Управление цветом</strong> — это сложный процесс, включающий в себя выбор цветовой модели, настройку плотности чернил и калибровку оттенков под конкретный тип бумаги.</p>
+<p>В этой статье мы разберем все этапы настройки, начиная от базовых параметров в окне печати и заканчивая тонкой настройкой через утилиту обслуживания. Мы рассмотрим, как исправить типичные ошибки, такие как появление розового или зеленого оттенка, и как добиться максимальной цветовой насыщенности. Следуйте инструкциям внимательно, чтобы получить идеальный результат.</p>
+
+<h2 id="базовые-настройки-в-окне-драйвера-печати">Базовые настройки в окне драйвера печати</h2>
+<p>Первым шагом к исправлению цветопередачи является правильная настройка параметров в окне драйвера перед отправкой задачи на печать. Откройте документ в программе, нажмите <code>Файл → Печать</code> и выберите ваш принтер <em>Canon</em>. В открывшемся окне перейдите во вкладку <code>Эффекты</code> или <code>Дополнительно</code>, в зависимости от версии драйвера. Здесь вы найдете ключевые параметры, влияющие на итоговый цвет.</p>
+<p>Обратите внимание на пункт <strong>Ориентация печати</strong> и <strong>Качество печати</strong>. Выберите режим <code>Стандартный</code> или <code>Высокое качество</code>, если вам важна точность оттенков. Режим <code>Быстрая печать</code> часто экономит чернила за счет снижения плотности, что делает цвета бледными. Убедитесь, что в поле <code>Тип бумаги</code> выбран именно тот материал, который загружен в лоток. Ошибка в этом пункте — самая частая причина того, как настроить цвета принтера canon не получается корректно.</p>
+<p>В разделе <code>Расширенные настройки</code> найдите режим управления цветом. По умолчанию он может стоять в положении <code>Автоматический цвет</code>. Для профессиональной работы переключите его на <strong>Ручной</strong>. Это откроет доступ к более тонким настройкам, позволяющим корректировать баланс красного, зеленого и синего каналов независимо друг от друга.</p>
+
+<h2 id="ручная-калибровка-и-баланс-цветов">Ручная калибровка и баланс цветов</h2>
+<p>Когда автоматический режим не справляется, необходимо прибегнуть к ручным настройкам. В окне драйвера нажмите кнопку <code>Настройка</code> рядом с опцией управления цветом. Откроется панель, где вы сможете регулировать яркость, контрастность и насыщенность. Используйте ползунки <strong>Яркость</strong> и <strong>Контрастность</strong>, чтобы сделать изображение более динамичным. Часто пользователи ошибочно повышают насыщенность, что приводит к «выжиганию» цветов и потере деталей в тенях.</p>
+<p>Для точной настройки используйте раздел <code>Цветовой баланс</code>. Здесь доступны три канала: <strong>Ред</strong> (Красный), <strong>Грин</strong> (Зеленый) и <strong>Блю</strong> (Синий). Если отпечаток кажется слишком розовым, попробуйте немного снизить значение в канале Красного или добавить немного Циана. Если же цвета выглядят зелеными, уменьшите значение Зеленого канала. Изменения применяются мгновенно, что позволяет подбирать оптимальные параметры в режиме реального времени.</p>
+<p>Особое внимание уделите параметру <strong>Серый баланс</strong>. Это критически важно для черно-белых фотографий и документов. Нарушение серого баланса приводит к тому, что белые участки бумаги приобретают желтый или голубой оттенок. В настройках Canon можно выбрать профиль (серого) или откалибровать его вручную, добившись нейтрального тона.</p>
+<p>Важно не только изменить значения, но и сохранить их для будущего использования. После подбора идеальных настроек нажмите кнопку <code>Сохранить как</code> и дайте пресету понятное имя, например, <code>Canon_PhotoMatte</code>. Это сэкономит вам время при последующей печати аналогичных материалов.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед началом ручной калибровки обязательно очистите сопла дюз, чтобы исключить искажения цвета из-за забитых каналов.</p></aside>
+
+<h2 id="проверка-и-очистка-печатающих-головок">Проверка и очистка печатающих головок</h2>
+<p>Часто проблема с цветом не в настройках, а в физическом состоянии принтера. Забитые или засохшие сопла приводят к тому, что один из цветов не печатает вовсе или печатает с перебоями. Если вы видите полоски на отпечатке или отсутствие одного из цветов, необходимо запустить процедуру <strong>Очистка дюз</strong>. Это можно сделать через утилиту обслуживания в драйвере или непосредственно через меню устройства.</p>
+<p>Перейдите в <code>Свойства принтера</code> и выберите вкладку <code>Обслуживание</code> (Maintenance). Нажмите кнопку <code>Проверка дюз</code> (Nozzle Check). Принтер распечатает тестовый шаблон с цветными полосками. Внимательно изучите результат. Если какие-то цвета прерваны или отсутствуют, нажмите кнопку <strong>Очистка</strong> (Cleaning).</p>
+<p>После очистки снова распечатайте тест. Если результат не улучшился, повторите процедуру, но не более двух раз подряд. Длительная и частая очистка может привести к перерасходу чернил и образованию воздушных пробок в системе подачи. В случае неудачи после трех попыток запустите функцию <strong>Глубокая очистка</strong> (Deep Cleaning), но помните, что она расходует значительный объем чернил.</p>
+
+<h2 id="глубокая-настройка-через-утилиту-printer-feature-access">Глубокая настройка через утилиту Printer Feature Access</h2>
+<p>Для продвинутых пользователей компания <em>Canon</em> предлагает утилиту <code>Printer Feature Access</code>. Это мощный инструмент, скрытый от глаз обычных пользователей, позволяющий менять системные параметры принтера. Чтобы открыть утилиту, перейдите в <code>Устройства и принтеры</code> в Windows, кликните правой кнопкой мыши по своему устройству и выберите <code>Настройка печати</code>. В открывшемся окне найдите значок или вкладку с названием утилиты.</p>
+<p>В утилите вы найдете раздел <code>Color Adjustment</code> (Настройка цвета), который позволяет управлять <strong>плотностью чернил</strong> для каждого канала отдельно. Это более точный метод, чем стандартные настройки драйвера. Вы можете установить значения от -100 до +100. Положительные значения увеличивают количество чернил, отрицательные — уменьшают. Это незаменимо при печати на специфических черных бумагах или при использовании нестандартных чернил.</p>
+<p>Также здесь можно настроить <strong>скорость печати</strong>. Более медленная печать позволяет чернилам лучше впитываться и смешиваться, что часто улучшает цветопередачу. Если вы печатаете важные фотоматериалы, попробуйте снизить скорость до минимума в настройках, доступных через этот интерфейс.</p>
+<blockquote>
+<p>⚠️ Внимание: Изменение системных параметров через утилиту Printer Feature Access должно производиться с осторожностью. Некорректные настройки плотности могут привести к перенасыщению бумаги чернилами и их растеканию.</p>
+</blockquote>
+<details class="pb-accordion"><summary>Как открыть утилиту через командную строку?
+<p>Вы можете запустить утилиту, введя команду в окне «Выполнить» (Win+R)</summary><div class="pb-accordion-body"><p></p>
+<pre><code>C:\Program Files\Canon\IJPrinterFeatureAccess\IJPrinterFeatureAccess.exe</code></pre>
+<p>Путь может отличаться в зависимости от версии драйвера и операционной системы.</p></div></details></p>
+
+<h2 id="использование-профилей-icc-и-управление-цветом-в-ос">Использование профилей ICC и управление цветом в ОС</h2>
+<p>Для достижения максимальной точности цветопередачи необходимо использовать цветовые профили ICC. Эти файлы содержат данные о характеристиках конкретного принтера, чернил и бумаги. Без них принтер пытается угадать, как смешать цвета, что часто приводит к ошибкам. Профили <strong>ICC</strong> можно скачать с официального сайта производителя бумаги или принтера.</p>
+<p>В настройках драйвера в разделе <code>Цвет</code> переключите управление цветом из режима <code>Canon</code> (управление драйвером) в режим <code>Приложение</code> (Application controlled) или <code>Windows ICM</code>. Это позволит программе (например, Photoshop или Lightroom) управлять цветом, используя загруженный профиль. Если вы печатаете из простого текстового редактора, выберите профиль в окне драйвера принтера вручную.</p>
+<p>Процесс настройки выглядит так: выберите профиль, соответствующий типу бумаги (например, <code>Canon Photo Paper Pro Platinum</code>), и убедитесь, что в настройках принтера стоит галочка <strong>Отключить управление цветом принтера</strong>. Это предотвратит двойную конвертацию цвета, которая часто делает изображение слишком тусклым.</p>
+
+<h2 id="таблица-типовых-проблем-и-решений">Таблица типовых проблем и решений</h2>
+<p>Ниже приведена таблица, которая поможет быстро диагностировать проблему с цветом и найти решение. Используйте её как шпаргалку при настройке устройства.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Проблема</th>
+<th>Возможная причина</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Отпечаток слишком бледный</td>
+<td>Неправильный тип бумаги или экономия чернил</td>
+<td>Выберите правильный тип бумаги в драйвере, отключите режим «Экономия чернил»</td>
+</tr>
+<tr>
+<td>Розовый оттенок на белом фоне</td>
+<td>Засорение синих или желтых дюз</td>
+<td>Запустите «Проверку дюз» и «Очистку» в утилите обслуживания</td>
+</tr>
+<tr>
+<td>Зеленые или желтые тени</td>
+<td>Нарушен баланс серого</td>
+<td>Регулировка ручного баланса цветов в драйвере</td>
+</tr>
+<tr>
+<td>Полосы на изображении</td>
+<td>Забитые сопла или смещенные головки</td>
+<td>Глубокая очистка, выравнивание печатающих головок</td>
+</tr>
+<tr>
+<td>Цвета не соответствуют экрану</td>
+<td>Отсутствие профиля ICC или неверный режим управления</td>
+<td>Установка ICC-профиля, отключение управления цветом драйвера</td>
+</tr>
+</tbody>
+</table></div>
+<div class="pb-poll" id="poll-48dac722"><div class="pb-poll-question">📊 Какой тип бумаги вы используете чаще всего?</div><div class="pb-poll-option" data-poll="48dac722" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Стандартная офисная</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="48dac722" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Фотобумага глянцевая</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="48dac722" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Фотобумага матовая</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="48dac722" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Художественная бумага</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="профилактика-и-регулярное-обслуживание">Профилактика и регулярное обслуживание</h2>
+<p>Чтобы вам не приходилось постоянно настраивать цвета, следует придерживаться правил регулярного обслуживания. Печатающие головки <em>Canon</em> склонны к засыханию, если принтером не пользоваться длительное время. Запускайте тестовую печать хотя бы раз в неделю, чтобы чернила циркулировали в системе и не пересыхали.</p>
+<p>Хранение чернил и бумаги также играет роль. Чернила должны находиться в прохладном месте, а бумага — в сухом, в закрытой упаковке. Влажность воздуха в помещении, где стоит принтер, не должна превышать 60%, иначе бумага может впитать влагу и изменить свои свойства печати, что повлияет на <strong>цветопередачу</strong>.</p>
+<p>Если вы планируете длительное отсутствие работы с принтером, используйте утилиту защиты головок (если она поддерживается моделью) или снимайте картриджи и закрывайте их колпачками. Это предотвратит образование корки на соплах, что является самой частой причиной невозможности корректной настройки цвета в будущем.</p>
+<blockquote>
+<p>⚠️ Внимание: Если вы используете совместимые чернила, убедитесь в их совместимости с вашим принтером. Некоторые неоригинальные чернила могут изменять химический состав, что приведет к невозможности достижения точного баланса цветов без сложной промывки системы.</p>
+</blockquote>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярная проверка дюз и использование правильных профилей бумаги — залог стабильной и точной цветопередачи принтера Canon.</p></aside>
+
+<h2 id="faq-частые-вопросы-по-настройке-цвета">FAQ: Частые вопросы по настройке цвета</h2>
+<details>
+<summary>Почему принтер Canon печатает розовым цветом?</summary>
+<p>Чаще всего это связано с забитыми синими или желтыми соплами, либо с нарушением баланса цветов в драйвере. Попробуйте запустить проверку дюз и очистку. Если проблема не решается, проверьте настройки ручного баланса цветов в драйвере.</p>
+</details>
+<details>
+<summary>Как отключить управление цветом в драйвере Canon?</summary>
+<p>В окне свойств принтера перейдите на вкладку «Эффекты» или «Дополнительно». В разделе «Управление цветом» выберите опцию «Выкл» или «Приложение» (в зависимости от версии драйвера), чтобы программа сама управляла цветами.</p>
+</details>
+<details>
+<summary>Что делать, если цвета слишком темные?</summary>
+<p>Снизьте значение «Яркость» в настройках драйвера. Также убедитесь, что не включен режим «Темный» в настройках бумаги или не выбран слишком плотный тип бумаги, который требует меньше чернил, чем вы используете.</p>
+</details>
+<details>
+<summary>Можно ли настроить цвета для конкретных документов?</summary>
+<p>Да, вы можете создавать собственные пресеты в драйвере. Настройте все параметры вручную, затем нажмите «Сохранить как» и дайте имя профилю. При печати конкретного документа выбирайте этот пресет.</p>
+</details>
+<details>
+<summary>Почему цвета на печати отличаются от монитора?</summary>
+<p>Это нормальное явление, так как монитор использует аддитивную модель (RGB), а принтер — субтрактивную (CMYK). Для минимизации различий используйте профили ICC и калибруйте монитор. <mark>Полное совпадение цветов невозможно без профессиональной калибровки обоих устройств.</mark></p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-perejti-na-cherno-beluyu-pechat-v-printere-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Как включить черно-белую печать на принтерах Canon: полные инструкции</span>
+                <span class="pb-related-desc">Пошаговое руководство: как настроить монохромную печать в драйверах Canon, через панель управления и</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-kenon-lbp-3010.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon LBP 3010 к компьютеру и Wi-Fi</span>
+                <span class="pb-related-desc">Пошаговая инструкция по установке драйверов и подключению монохромного лазерного принтера Canon LBP </span>
+            </a><a href="/articles/k/ka/kak-ustanovit-printer-canon-mf3010-dlya-windows-8.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить принтер Canon MF3010 на Windows 8: Полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по установке драйверов и подключению МФУ Canon MF3010 к компьютеру на Windows 8</span>
+            </a><a href="/articles/k/ka/kak-vklyuchit-printer-canon-lbp-1120.html" class="pb-related-card">
+                <span class="pb-related-title">Как включить Canon LBP1120: пошаговая инструкция подключения</span>
+                <span class="pb-related-desc">Подробное руководство, как включить принтер Canon LBP1120. Инструкция по первому запуску, установке </span>
+            </a><a href="/articles/k/ka/kak-obnovit-printer-canon-mg3640.html" class="pb-related-card">
+                <span class="pb-related-title">Как обновить прошивку принтера Canon MG3640: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по обновлению ПО принтера Canon MG3640 через веб-интерфейс и утилиту. Устранен</span>
+            </a><a href="/articles/c/ca/canon-pagecomposer-kak-otklyuchit.html" class="pb-related-card">
+                <span class="pb-related-title">Как отключить Canon PageComposer: пошаговое руководство</span>
+                <span class="pb-related-desc">Подробная инструкция по деактивации PageComposer на принтерах Canon. Разбираемся с настройками, ошиб</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

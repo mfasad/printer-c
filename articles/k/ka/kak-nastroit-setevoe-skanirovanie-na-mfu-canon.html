@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Настройка сетевого сканирования на МФУ Canon: пошаговая инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговое руководство по настройке функции Scan to Folder и Scan to Email на МФУ Canon. Узнайте, как подключить сканер к сети и настроить доступ.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-nastroit-setevoe-skanirovanie-na-mfu-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Настройка сетевого сканирования на МФУ Canon: пошаговая инструкция">
+    <meta property="og:description" content="Пошаговое руководство по настройке функции Scan to Folder и Scan to Email на МФУ Canon. Узнайте, как подключить сканер к сети и настроить доступ.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Настройка сетевого сканирования на МФУ Canon: пошаговая инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-оборудования-и-сети">Подготовка оборудования и сети</a></li><li><a href="#настройка-ip-адреса-и-сетевого-доступа">Настройка IP-адреса и сетевого доступа</a></li><li><a href="#создание-точки-доступа-на-компьютере-smb">Создание точки доступа на компьютере (SMB)</a></li><li><a href="#настройка-профиля-сканирования-через-web-интерфейс">Настройка профиля сканирования через Web-интерфейс</a></li><li><a href="#настройка-сканирования-по-электронной-почте">Настройка сканирования по электронной почте</a></li><li><a href="#тестирование-и-устранение-частых-ошибок">Тестирование и устранение частых ошибок</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ca/canon-g3010-skaner-kak-polzovatsya.html">Как пользоваться сканером Canon G3010: Полная инструкция по настройке и работе</a></li><li><a href="/articles/k/ka/kak-polzovatsya-skanerom-canon-lide-210.html">Как пользоваться сканером Canon Lide 210: Полная инструкция по настройке и сканированию</a></li><li><a href="/articles/c/ca/canon-g3411-kak-otskanirovat.html">Как отсканировать документ на Canon G3411: полное руководство</a></li><li><a href="/articles/k/ka/kak-polzovatsya-skanerom-canon.html">Как пользоваться сканером Canon: полное руководство по настройке и использованию</a></li><li><a href="/articles/k/ka/kak-zapustit-skanirovanie-na-printere-canon.html">Как запустить сканирование на принтере Canon: Пошаговая инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полное руководство по настройке сетевого сканирования на МФУ Canon</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-оборудования-и-сети">Подготовка оборудования и сети</a></li><li><a href="#настройка-ip-адреса-и-сетевого-доступа">Настройка IP-адреса и сетевого доступа</a></li><li><a href="#создание-точки-доступа-на-компьютере-smb">Создание точки доступа на компьютере (SMB)</a></li><li><a href="#настройка-профиля-сканирования-через-web-интерфейс">Настройка профиля сканирования через Web-интерфейс</a></li><li><a href="#настройка-сканирования-по-электронной-почте">Настройка сканирования по электронной почте</a></li><li><a href="#тестирование-и-устранение-частых-ошибок">Тестирование и устранение частых ошибок</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современный офис требует высокой скорости обработки документации, и ручная передача файлов через флеш-накопители давно устарела. МФУ <em>Canon</em> оснащены мощными сетевыми функциями, позволяющими мгновенно отправлять отсканированные документы прямо в папку на компьютере или на электронную почту.</p>
+
+<p>Процесс настройки может показаться сложным для новичка, так как требует работы с сетевыми протоколами и адресами. Однако, если вы последуете нашей инструкции, то сможете освоить функцию <strong>сетевое сканирование</strong> за несколько минут и забыть о лишних проводах.</p>
+
+<h2 id="подготовка-оборудования-и-сети">Подготовка оборудования и сети</h2>
+
+<p>Первым шагом является проверка физического подключения устройства к локальной сети. МФУ <em>Canon</em> может работать как через проводное соединение Ethernet, так и через беспроводной модуль Wi-Fi, что обеспечивает гибкость размещения.</p>
+
+<p>Убедитесь, что адресация в вашей сети статична или вы зафиксировали IP-адрес за принтером в настройках роутера. Динамическая смена адреса может привести к потере связи между компьютером и устройством при перезагрузке.</p>
+
+<p>Для успешной работы необходим стабильный сигнал. Если вы используете Wi-Fi, проверьте уровень сигнала на дисплее устройства в разделе настроек сети.</p>
+
+<p>Необходимо также убедиться, что компьютер, на который вы планируете сохранять файлы, находится в той же подсети, что и сканер. Это фундаментальное требование для обмен данными по протоколу SMB.</p>
+
+<blockquote>⚠️ Внимание: Если интерфейс вашей модели имеет вид старого меню с кнопками, а не сенсорный экран, навигация может отличаться. Сверьтесь с точным названием вашей модели в <em>Canon</em> для уточнения иконок.</blockquote>
+
+<h2 id="настройка-ip-адреса-и-сетевого-доступа">Настройка IP-адреса и сетевого доступа</h2>
+
+<p>Чтобы компьютер мог найти сканер, у него должен быть корректный IP-адрес. Самый простой способ его узнать — распечатать отчет о конфигурации сети через меню устройства.</p>
+
+<p>Перейдите в раздел <code>Настройки → Сеть → Отчет о конфигурации</code> и нажмите кнопку "Печать". В полученном документе вы увидите строчку "IPv4 Address" — это и есть адрес вашего МФУ.</p>
+
+<p>Если адрес начинается на 169.254, значит, роутер не выдал корректные настройки, и устройство работает в автономном режиме. Вам нужно переподключить кабель или проверить настройки DHCP на маршрутизаторе.</p>
+
+<blockquote>⚠️ Внимание: Протокол SMBv1, используемый в старых версиях Windows, по умолчанию отключен в Windows 10 и 11 из соображений безопасности. Возможно, потребуется включить его вручную или установить драйвер <strong>Canon IJ Network Scan Utility</strong>.</blockquote>
+
+<div class="pb-poll" id="poll-0edd4847"><div class="pb-poll-question">📊 Какой тип подключения используете?</div><div class="pb-poll-option" data-poll="0edd4847" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Проводной Ethernet</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0edd4847" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Беспроводной Wi-Fi</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0edd4847" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Не подключено</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0edd4847" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="создание-точки-доступа-на-компьютере-smb">Создание точки доступа на компьютере (SMB)</h2>
+
+<p>Самая частая проблема при настройке — это права доступа к общей папке. Вам нужно создать папку на диске компьютера и открыть к ней общий доступ для всех пользователей сети.</p>
+
+<p>Нажмите правой кнопкой мыши на созданную папку, выберите "Свойства", перейдите во вкладку "Доступ" и нажмите "Общий доступ". В списке пользователей добавьте "Все" и предоставьте права на изменение файлов.</p>
+
+<p>Не забудьте прописать точный путь к папке, чтобы устройство могло прочитать его. Формат пути обычно выглядит как <code>\\ИмяКомпьютера\ИмяПапки</code> или <code>\\IP_Адрес\ИмяПапки</code>.</p>
+
+<details class="pb-accordion"><summary>Проверка доступа к папке</summary><div class="pb-accordion-body"><p>Попробуйте открыть путь к папке с другого компьютера в сети. Если папка запрашивает логин и пароль, убедитесь, что вы вводите учетные данные пользователя, под которым работает основной ПК.</p></div></details>
+
+<p>Важно, чтобы учетная запись пользователя, под которой вы работаете на ПК, имела пароль. На системах без пароля доступ по сети часто блокируется политиками безопасности Windows.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Настройка папки создания</h4><label class="check-item"><input type="checkbox"><span>Создать новую папку на диске C</span></label><label class="check-item"><input type="checkbox"><span>Открыть свойства папки</span></label><label class="check-item"><input type="checkbox"><span>Вкладка "Безопасность" или "Доступ"</span></label><label class="check-item"><input type="checkbox"><span>Добавить пользователя "Все" с правами на запись</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="настройка-профиля-сканирования-через-web-интерфейс">Настройка профиля сканирования через Web-интерфейс</h2>
+
+<p>Самый удобный способ настройки — использование встроенного веб-сервера устройства. Откройте браузер на компьютере и введите IP-адрес МФУ в адресную строку.</p>
+
+<p>Вам потребуется войти в систему администратора. По умолчанию логин — <code>admin</code>, а пароль часто пустой или совпадает с серийным номером устройства, если вы не меняли его ранее.</p>
+
+<p>В меню <em>Canon</em> перейдите в раздел "Сканирование" (Scan) или "Профиль сканирования" (Registration). Здесь вы создаете новый профиль, указывая его название, например, "Скан в Office".</p>
+
+<p>Выберите протокол передачи данных: SMB для папки или E-mail для отправки на адрес. Укажите логин и пароль от учетной записи Windows, чтобы устройство могло аутентифицироваться на сервере.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Запишите логин и пароль от учетной записи Windows на бумажку, если вы их не используете часто. Сканер потребует их для успешной передачи данных в папку.</p></aside>
+
+<p>Для протокола SMB в поле "Имя хоста" введите IP-адрес вашего компьютера, а в поле "Путь" — имя папки. Это критически важный шаг для корректной маршрутизации файлов.</p>
+
+<h2 id="настройка-сканирования-по-электронной-почте">Настройка сканирования по электронной почте</h2>
+
+<p>Альтернативный метод — отправка сканов на e-mail, что удобно для мобильных сотрудников. В настройках профиля выберите протокол SMTP.</p>
+
+<p>Вам необходимо ввести данные вашего почтового сервера: адрес SMTP-сервера, порт (обычно 587 или 465) и данные для авторизации.</p>
+
+<p>Современные почтовые сервисы требуют использования "паролей приложений" для внешних устройств. Создайте такой пароль в настройках вашего почтового аккаунта и вставьте его в поле пароля на устройстве.</p>
+
+<p>Не забудьте указать адрес отправителя (адрес самого МФУ) и адрес получателя. Если сканер не будет авторизован на почтовом сервере, письмо будет отклонено.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр настройки</th>
+<th>Значение для SMB (Папка)</th>
+<th>Значение для E-mail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Протокол</strong></td>
+<td>SMB (Windows)</td>
+<td>SMTP / SMTPS</td>
+</tr>
+<tr>
+<td><strong>Адрес</strong></td>
+<td>IP-адрес компьютера</td>
+<td>SMTP-сервер (smtp.mail.ru)</td>
+</tr>
+<tr>
+<td><strong>Аутентификация</strong></td>
+<td>Логин/пароль пользователя ПК</td>
+<td>Логин/пароль почты или App Password</td>
+</tr>
+<tr>
+<td><strong>Целевое место</strong></td>
+<td>Путь к общей папке</td>
+<td>E-mail получателя</td>
+</tr>
+<tr>
+<td><strong>Сложность</strong></td>
+<td>Высокая (требует прав сети)</td>
+<td>Средняя (требует настройки SMTP)</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="тестирование-и-устранение-частых-ошибок">Тестирование и устранение частых ошибок</h2>
+
+<p>После сохранения настроек обязательно выполните тестовое сканирование. Нажмите кнопку "Сканирование" на панели управления и выберите созданный вами профиль.</p>
+
+<p>Если сканер выдает ошибку "Не удалось связаться с хостом" или "Проверьте путь", проверьте брандмауэр Windows. Он может блокировать входящие подключения от устройства.</p>
+
+<p>Добавьте исключение для протокола SMB в настройках брандмауэра или временно отключите его для проверки. Часто антивирусное ПО также блокирует сетевые порты.</p>
+
+<p>Убедитесь, что формат файла и разрешение соответствуют требованиям. Иногда попытка отправить слишком большой файл на почту с ограниченным лимитом приводит к тайм-ауту соединения.</p>
+
+<blockquote>⚠️ Внимание: После обновления Windows 10/11 настройки безопасности сети могут сброситься. Если сканирование перестало работать, проверьте настройки брандмауэра заново.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главная задача при настройке — обеспечить постоянный IP-адрес устройства и корректную аутентификацию доступа к целевой папке или почтовому серверу.</p></aside>
+
+<p>Если проблема сохраняется, попробуйте использовать утилиту "Canon IJ Network Scan Utility". Она автоматически находит устройство в сети и упрощает настройку путей.</p>
+
+<details class="pb-accordion"><summary>Как сбросить настройки сети</summary><div class="pb-accordion-body"><p>Если ничего не помогает, можно выполнить сброс сетевых настроек через меню "Сеть" → "Сброс настроек". Это вернет устройство к заводским параметрам, но не удалит другие данные.</p></div></details>
+
+<p>Регулярная проверка работоспособности сканера поможет избежать простоев в работе офиса. Убедитесь, что все компоненты системы обновлены и работают в связке.</p>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Почему принтер не видит общую папку на Windows 11?</summary>
+<p>В Windows 11 включены строгие настройки безопасности. Вам нужно проверить, включен ли протокол SMB 1.0 (хотя это не рекомендуется) или, что лучше, используйте правильные учетные данные с паролем и убедитесь, что сеть определена как "Частная", а не "Общественная".</p>
+</details>
+
+<details>
+<summary>Можно ли сканировать в облачный сервис типа Google Drive?</summary>
+<p>Большинство моделей Canon поддерживают функцию "Cloud Scan" или "Canon Cloud Connect". Для этого необходимо настроить аккаунт Canon через веб-интерфейс устройства и привязать облачный сервис в разделе "Облачное сканирование".</p>
+</details>
+
+<details>
+<summary>Как изменить разрешение сканирования для сети?</summary>
+<p>Разрешение настраивается внутри каждого профиля сканирования при его создании в веб-интерфейсе. Вы можете указать от 75 до 600 dpi в зависимости от нужд и размера итогового файла.</p>
+</details>
+
+<details>
+<summary>Что делать, если сканер отправляет пустые файлы?</summary>
+<p>Проверьте, правильно ли вы указали формат файла (PDF или JPEG). Также убедитесь, что сканируемая область на стекле не пуста и датчики сканера чисты. Иногда проблема кроется в драйвере на принимающем компьютере.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ca/canon-g3010-skaner-kak-polzovatsya.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться сканером Canon G3010: Полная инструкция по настройке и работе</span>
+                <span class="pb-related-desc">Пошаговое руководство по использованию сканера Canon G3010. Настройка драйверов, работа через IJ Sca</span>
+            </a><a href="/articles/k/ka/kak-polzovatsya-skanerom-canon-lide-210.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться сканером Canon Lide 210: Полная инструкция по настройке и сканированию</span>
+                <span class="pb-related-desc">Пошаговое руководство по работе со сканером Canon Lide 210. Установка драйверов, использование ПО IJ</span>
+            </a><a href="/articles/c/ca/canon-g3411-kak-otskanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как отсканировать документ на Canon G3411: полное руководство</span>
+                <span class="pb-related-desc">Подробная инструкция по сканированию с Canon G3411 через USB и Wi-Fi. Настройка драйверов, использов</span>
+            </a><a href="/articles/k/ka/kak-polzovatsya-skanerom-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться сканером Canon: полное руководство по настройке и использованию</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как подключить, установить драйверы и сканировать документы с устройств Canon.</span>
+            </a><a href="/articles/k/ka/kak-zapustit-skanirovanie-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как запустить сканирование на принтере Canon: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Полное руководство по сканированию документов на принтерах Canon. Методы через панель управления, пр</span>
+            </a><a href="/articles/c/ca/canon-mf3010-kak-sdelat-setevoj-skaner.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать Canon MF3010 сетевым сканером: полное руководство</span>
+                <span class="pb-related-desc">Подробная инструкция по настройке сканирования по сети для Canon MF3010. Обход ограничений драйверов</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

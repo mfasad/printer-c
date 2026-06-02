@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как узнать количество кадров на Canon 70D: 5 проверенных способов — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция, как проверить счетчик спусков затвора на Canon EOS 70D через EXIF, Magic Lantern, EOSInfo и другие методы. Актуально для б/у камер.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-posmotret-kolichestvo-kadrov-na-canon-70d.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как узнать количество кадров на Canon 70D: 5 проверенных способов">
+    <meta property="og:description" content="Пошаговая инструкция, как проверить счетчик спусков затвора на Canon EOS 70D через EXIF, Magic Lantern, EOSInfo и другие методы. Актуально для б/у камер.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/fotoapparaty-canon/">Фотоаппараты Canon</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как узнать количество кадров на Canon 70D: 5 проверенных способов</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#почему-canon-70d-не-показывает-количество-кадров-напрямую">Почему Canon 70D не показывает количество кадров напрямую</a></li><li><a href="#метод-1-программа-eosinfo-самый-надёжный-способ">Метод 1: Программа EOSInfo (самый надёжный способ)</a></li><li><a href="#метод-2-exif-данные-неточный-но-быстрый">Метод 2: EXIF-данные (неточный, но быстрый)</a></li><li><a href="#метод-3-прошивка-magic-lantern-для-продвинутых">Метод 3: Прошивка Magic Lantern (для продвинутых)</a></li><li><a href="#метод-4-сервисное-меню-только-для-опытных">Метод 4: Сервисное меню (только для опытных)</a></li><li><a href="#метод-5-обращение-в-сервисный-центр-canon">Метод 5: Обращение в сервисный центр Canon</a></li><li><a href="#как-оценить-износ-canon-70d-по-количеству-кадров">Как оценить износ Canon 70D по количеству кадров</a></li><li><a href="#частые-вопросы-faq">Частые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ca/canon-650d-kak-posmotret-probeg.html">Как посмотреть пробег Canon 650D: 3 проверенных способа</a></li><li><a href="/articles/k/ka/kakaya-vspyshka-podojdet-dlya-canon-600d.html">Лучшие вспышки для Canon 600D: обзор, подбор и настройка</a></li><li><a href="/articles/c/ca/canon-a2200-kak-zaryadit.html">Как зарядить Canon A2200: инструкция, типы аккумуляторов и советы</a></li><li><a href="/articles/c/ca/canon-600d-matritsa-kakaya-kropp.html">Какой кроп-фактор у матрицы Canon 600D: размеры и характеристики</a></li><li><a href="/articles/k/ka/kak-pravilno-nastroit-balans-belogo-na-canon.html">Как настроить баланс белого на Canon: полный гайд для фотографов</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как посмотреть количество кадров на Canon 70D: все рабочие методы</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#почему-canon-70d-не-показывает-количество-кадров-напрямую">Почему Canon 70D не показывает количество кадров напрямую</a></li><li><a href="#метод-1-программа-eosinfo-самый-надёжный-способ">Метод 1: Программа EOSInfo (самый надёжный способ)</a></li><li><a href="#метод-2-exif-данные-неточный-но-быстрый">Метод 2: EXIF-данные (неточный, но быстрый)</a></li><li><a href="#метод-3-прошивка-magic-lantern-для-продвинутых">Метод 3: Прошивка Magic Lantern (для продвинутых)</a></li><li><a href="#метод-4-сервисное-меню-только-для-опытных">Метод 4: Сервисное меню (только для опытных)</a></li><li><a href="#метод-5-обращение-в-сервисный-центр-canon">Метод 5: Обращение в сервисный центр Canon</a></li><li><a href="#как-оценить-износ-canon-70d-по-количеству-кадров">Как оценить износ Canon 70D по количеству кадров</a></li><li><a href="#частые-вопросы-faq">Частые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Покупка б/у <em>Canon EOS 70D</em> — отличный способ сэкономить, но как убедиться, что камера не «убита» сотнями тысяч спусков затвора? Количество сделанных снимков (shutter count) — ключевой показатель износа зеркалки. Увы, <strong>Canon официально не сохраняет эту информацию в EXIF</strong> (в отличие от Nikon или Sony), поэтому владельцам 70D приходится использовать обходные пути.</p>
+
+<p>В этой статье — <mark>все актуальные способы проверки счетчика спусков для Canon 70D</mark>, включая программные решения, анализ EXIF-данных и даже аппаратные методы. Мы разберём плюсы и минусы каждого варианта, а также объясним, почему некоторые «народные» советы (вроде подсчёта по номеру последнего файла) дают ложные результаты. Если вы планируете купить или продать 70D — эта инструкция поможет избежать обмана.</p>
+
+<h2 id="почему-canon-70d-не-показывает-количество-кадров-напрямую">Почему Canon 70D не показывает количество кадров напрямую</h2>
+
+<p>В отличие от конкурентов, <em>Canon</em> принципиально не сохраняет <strong>shutter count</strong> в метаданных снимков. Это связано с:</p>
+<ul>
+ <li>🔧 <strong>Маркетинговой политикой</strong>: компания не хочет, чтобы пользователи отслеживали износ камеры и продавали её «по остаточному ресурсу».</li>
+ <li>🛠️ <strong>Техническими особенностями</strong>: в прошивке 70D просто нет команды для чтения счетчика через стандартное меню.</li>
+ <li>📊 <strong>Юридическими нюансами</strong>: в некоторых странах данные об износе техники могут влиять на гарантийные обязательства.</li>
+</ul>
+
+<p>Однако это не значит, что информацию невозможно получить. Счётчик спусков хранится в <code>сервисном меню</code> камеры, но доступ к нему заблокирован для обычных пользователей. Обойти ограничение помогают сторонние утилиты и прошивки.</p>
+
+<blockquote>⚠️ <strong>Внимание</strong>: Некоторые методы (например, использование <em>Magic Lantern</em>) могут аннулировать гарантию или привести к сбоям камеры. Перед экспериментами проверьте, не истёк ли гарантийный срок.</blockquote>
+
+<h2 id="метод-1-программа-eosinfo-самый-надёжный-способ">Метод 1: Программа EOSInfo (самый надёжный способ)</h2>
+
+<p><strong>EOSInfo</strong> — бесплатная утилита для Windows, которая считывает <strong>shutter count</strong> из памяти камеры через USB. Работает с большинством моделей <em>Canon</em>, включая 70D, и не требует установки дополнительных драйверов.</p>
+
+<p>Инструкция:</p>
+<ol>
+ <li>Скачайте <a href="https://pel.hu/eosinfo/" target="_blank" rel="nofollow noopener">EOSInfo</a> с официального сайта (версия 4.5+ поддерживает 70D).</li>
+ <li>Подключите камеру к ПК через <code>USB-кабель</code> (режим <code>PTP</code>, не <code>Mass Storage</code>!).</li>
+ <li>Запустите программу и выберите вашу камеру в списке устройств.</li>
+ <li>В окне появится строка <code>Shutter count</code> с точным количеством спусков.</li>
+</ol>
+
+<p>Преимущества метода:</p>
+<ul>
+ <li>✅ Точность 100% (данные берутся из внутренней памяти камеры).</li>
+ <li>✅ Не требует установки прошивок или взлома.</li>
+ <li>✅ Работает даже если камера не делала снимков (счётчик обнулять нельзя).</li>
+</ul>
+
+
+<p>Включите камеру в режим съёмки (не просмотра)</p>
+<p>Используйте оригинальный USB-кабель Canon</p>
+<p>Отключите другие программы (Lightroom, EOS Utility)</p>
+<p>Убедитесь, что аккумулятор заряжен хотя бы на 30%--></p>
+
+<h2 id="метод-2-exif-данные-неточный-но-быстрый">Метод 2: EXIF-данные (неточный, но быстрый)</h2>
+
+<p>Если у вас нет доступа к камере, но есть фотографии с неё, можно попробовать проанализировать EXIF. К сожалению, <em>Canon 70D</em> не сохраняет <strong>shutter count</strong> в метаданных, но некоторые программы умеют <strong>приблизительно</strong> рассчитывать количество кадров по косвенным признакам.</p>
+
+<p>Способы:</p>
+<ul>
+ <li>🖼️ <strong>Opanda IExif</strong>: показывает номер последнего файла (например, <code>IMG_1234.CR2</code>). Если камера не сбрасывалась, это число примерно равно количеству снимков. <em>Но:</em> при форматировании карты счётчик обнуляется!</li>
+ <li>📅 <strong>ExifTool</strong>: анализирует дату первого и последнего снимка, а также серийные номера файлов. Точность — ±10-15%.</li>
+ <li>🔍 <strong>Online EXIF Viewer</strong> (например, <a href="https://exif.viewer/" target="_blank" rel="nofollow noopener">exif.viewer</a>): загрузите фото и проверьте поля <code>File Number</code> и <code>Image Number</code>.</li>
+</ul>
+
+<p>Пример команды для <strong>ExifTool</strong> (установите её через <a href="https://exiftool.org/" target="_blank" rel="nofollow noopener">официальный сайт</a>):</p>
+<pre><code>exiftool -FileNumber -ImageNumber -DateTimeOriginal IMG_1234.CR2</code></pre>
+
+<blockquote>⚠️ <strong>Внимание</strong>: Если продавец предоставил только JPG, а не RAW (<code>.CR2</code>), данные могли быть очищены при конвертации. Всегда просите оригинальные файлы!</blockquote>
+
+<div class="pb-table-wrap"><table>
+ <thead>
+ <tr>
+ <th>Метод</th>
+ <th>Точность</th>
+ <th>Сложность</th>
+ <th>Нужно ли подключать камеру</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>EOSInfo</td>
+ <td>100%</td>
+ <td>Низкая</td>
+ <td>Да</td>
+ </tr>
+ <tr>
+ <td>EXIF (Opanda IExif)</td>
+ <td>30-50%</td>
+ <td>Низкая</td>
+ <td>Нет</td>
+ </tr>
+ <tr>
+ <td>Magic Lantern</td>
+ <td>99%</td>
+ <td>Высокая</td>
+ <td>Да</td>
+ </tr>
+ <tr>
+ <td>Сервисный центр</td>
+ <td>100%</td>
+ <td>Средняя</td>
+ <td>Да</td>
+ </tr>
+ </tbody>
+</table></div>
+
+<h2 id="метод-3-прошивка-magic-lantern-для-продвинутых">Метод 3: Прошивка Magic Lantern (для продвинутых)</h2>
+
+<p><em>Magic Lantern</em> — альтернативная прошивка для камер <em>Canon</em>, которая раскрывает скрытые функции, включая чтение <strong>shutter count</strong>. Однако её установка сопряжена с рисками:</p>
+<ul>
+ <li>⚡ Может привести к <strong>зависанию камеры</strong> (решается перепрошивкой).</li>
+ <li>🔒 Аннулирует гарантию (если она ещё действует).</li>
+ <li>🛠️ Требует технических навыков (ошибка при установке ="кирпич").</li>
+</ul>
+
+<p>Если вы готовы к экспериментам, следуйте инструкции:</p>
+<ol>
+ <li>Скачайте <a href="https://magiclantern.fm/" target="_blank" rel="nofollow noopener">Magic Lantern</a> для 70D (версия <code>Nightly Build</code> от 2023 года).</li>
+ <li>Распакуйте файлы на отформатированную карту памяти (<code>FAT32</code>).</li>
+ <li>Вставьте карту в камеру, включите режим <code>Photo</code> и запустите прошивку через меню.</li>
+ <li>Перейдите в <code>Debug → Shutter count</code>.</li>
+</ol>
+
+<details class="pb-accordion"><summary>Что делать если Magic Lantern не показывает счетчик?</summary><div class="pb-accordion-body"><p>
+<p>Если после установки <em>Magic Lantern</em> поле <code>Shutter count</code> пустое, попробуйте:</p>
+<p>1. Обновить прошивку до последней <code>Nightly</code>-версии.</p>
+<p>2. Перезагрузить камеру с зажатой кнопкой <code>SET</code>.</p>
+<p>3. Проверить совместимость вашей версии <em>firmware</em> (для 70D актуальна 1.1.3).</p>
+<p>Если ничего не помогает — прошивка не поддерживает вашу ревизию камеры.</p></div></details></p>
+
+<p>Преимущество метода: помимо счётчика, вы получите массу полезных функций (интервальная съёмка, фокусировочные пики, HDR). Но если камера нужна только для проверки — лучше использовать <strong>EOSInfo</strong>.</p>
+
+
+<p>Да, постоянно shootю с ней|Пробовал, но вернулся на сток|Нет, боюсь сломать камеру|Что это?--></p>
+
+<h2 id="метод-4-сервисное-меню-только-для-опытных">Метод 4: Сервисное меню (только для опытных)</h2>
+
+<p>В <em>Canon 70D</em> есть скрытое <strong>сервисное меню</strong>, где хранится реальный <strong>shutter count</strong>. Доступ к нему открывается через секретную комбинацию кнопок, но:</p>
+<ul>
+ <li>🔐 Комбинация отличается для разных регионов и версий прошивки.</li>
+ <li>⚠️ Неправильные действия могут сбросить настройки или заблокировать камеру.</li>
+ <li>📋 Данные в меню отображаются в <code>шестнадцатеричном формате</code> (нужно конвертировать).</li>
+</ul>
+
+<p>Алгоритм (для прошивки <code>1.1.3</code>):</p>
+<ol>
+ <li>Выключите камеру.</li>
+ <li>Зажмите кнопки <code>Menu</code> + <code>Info</code> + <code>SET</code>.</li>
+ <li>Включите камеру, удерживая кнопки.</li>
+ <li>В меню найдите пункт <code>CSM</code> (Custom Functions) → <code>Shutter</code>.</li>
+</ol>
+
+<p>Пример: если в меню указано <code>0x0001A4F2</code>, конвертируйте в десятичную систему (здесь ~<strong>108 274 спуска</strong>). Для конвертации используйте <a href="https://www.rapidtables.com/convert/number/hex-to-decimal.html" target="_blank" rel="nofollow noopener">онлайн-калькулятор</a>.</p>
+
+<blockquote>⚠️ <strong>Внимание</strong>: Вход в сервисное меню может активировать <strong>тестовый режим</strong>, который блокирует съёмку до перезагрузки. Не изменяйте другие параметры!</blockquote>
+
+<h2 id="метод-5-обращение-в-сервисный-центр-canon">Метод 5: Обращение в сервисный центр Canon</h2>
+
+<p>Если все вышеперечисленные способы не сработали (или вы боитесь что-то сломать), остаётся официальный путь — обратиться в <strong>авторизованный сервисный центр Canon</strong>. Там:</p>
+<ul>
+ <li>🔧 Проведут полную диагностику (включая счётчик спусков).</li>
+ <li>📋 Дадут официальный акт с данными (пригодится при продаже).</li>
+ <li>🛠️ Оценят состояние затвора и зеркала (износ, люфт, пыль).</li>
+</ul>
+
+<p>Минусы:</p>
+<ul>
+ <li>⏳ Ожидание 2-5 дней.</li>
+ <li>💰 Стоимость диагностики — от 1 500 до 3 000 ₽ (в зависимости от региона).</li>
+ <li>📍 Нужно везти камеру лично (почта не подходит).</li>
+</ul>
+
+<p>Адреса сервисных центров можно найти на <a href="https://www.canon.ru/support/" target="_blank" rel="nofollow noopener">официальном сайте Canon</a> (раздел «Поддержка»). Уточните по телефону, предоставляют ли они данные о <strong>shutter count</strong> — некоторые центры отказываются выдавать эту информацию «по политике компании».</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед визитом в сервис сфотографируйте камеру со всех сторон (особенно корпус и башмак) — это поможет доказать отсутствие механических повреждений, если вдруг возникнут споры.</p></aside>
+
+<h2 id="как-оценить-износ-canon-70d-по-количеству-кадров">Как оценить износ Canon 70D по количеству кадров</h2>
+
+<p>Знать <strong>shutter count</strong> мало — нужно понимать, что он означает. Затвор <em>Canon 70D</em> рассчитан на <strong>150 000 спусков</strong> (по данным производителя). Однако на практике:</p>
+
+<ul>
+ <li>🟢 <strong>0–50 000</strong>: камера в отличном состоянии (ресурс затвора ~90%).</li>
+ <li>🟡 <strong>50 000–100 000</strong>: средний износ, возможны мелкие люфты зеркала.</li>
+ <li>🔴 <strong>100 000–150 000</strong>: высокий риск поломки затвора в ближайшие 1-2 года.</li>
+ <li>⚫ <strong>150 000+</strong>: затвор работает «на износ», требуется замена (~15 000 ₽ в сервисе).</li>
+</ul>
+
+<p>Дополнительные факторы, влияющие на ресурс:</p>
+<ul>
+ <li>🔋 <strong>Режим съёмки</strong>: серийная съёмка (6 fps) изнашивает затвор быстрее, чем одиночные кадры.</li>
+ <li>🌡️ <strong>Условия эксплуатации</strong>: пыль, влажность, перепады температур сокращают срок службы.</li>
+ <li>🔄 <strong>Обслуживание</strong>: регулярная чистка зеркала и затвора продлевает ресурс.</li>
+</ul>
+
+<p>При покупке б/у <em>70D</em> ориентируйтесь на соотношение цены и счётчика:</p>
+<div class="pb-table-wrap"><table>
+ <thead>
+ <tr>
+ <th>Shutter count</th>
+ <th>Рекомендуемая цена (б/у), ₽</th>
+ <th>Что проверить дополнительно</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>0–30 000</td>
+ <td>35 000–45 000</td>
+ <td>Состояние матрицы, аккумулятор</td>
+ </tr>
+ <tr>
+ <td>30 000–80 000</td>
+ <td>25 000–35 000</td>
+ <td>Затвор (люфт), зеркало (пыль)</td>
+ </tr>
+ <tr>
+ <td>80 000–120 000</td>
+ <td>18 000–25 000</td>
+ <td>Работоспособность автофокуса</td>
+ </tr>
+ <tr>
+ <td>120 000+</td>
+ <td>До 15 000</td>
+ <td>Тест на длительную съёмку</td>
+ </tr>
+ </tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если продавец отказывается предоставить данные о shutter count или даёт расплывчатые ответы («камера почти новая»), это повод насторожиться. Скорее всего, счётчик превышает 100 000 спусков.</p></aside>
+
+<h2 id="частые-вопросы-faq">Частые вопросы (FAQ)</h2>
+
+<details>
+ <summary>Можно ли обнулить счётчик спусков на Canon 70D?</summary>
+ <p>Нет, <strong>shutter count</strong> хранится в <code>EEPROM</code> камеры и не сбрасывается ни программно, ни аппаратно. Любые обещания «обнулить» счётчик — мошенничество. Единственный способ «скрыть» реальное количество кадров — физическая замена затвора (что стоит ~15 000 ₽ и оставляет следы в сервисных записях).</p>
+</details>
+
+<details>
+ <summary>Правда ли, что видеосъёмка тоже считается в shutter count?</summary>
+ <p>Нет, <strong>shutter count</strong> увеличивается только при <strong>фотосъёмке</strong>. При записи видео затвор открывается один раз (в начале) и закрывается в конце, поэтому на износ это почти не влияет. Однако длительная видеосъёмка нагревает матрицу, что может сократить её ресурс.</p>
+</details>
+
+<details>
+ <summary>Как проверить shutter count на Canon 70D через смартфон?</summary>
+ <p>Прямых мобильных приложений для чтения счётчика нет, но можно:</p>
+ <ol>
+ <li>Подключить камеру к смартфону через <em>Canon Camera Connect</em> и скачать фото.</li>
+ <li>Загрузить снимок в <a href="https://exif.viewer/" target="_blank" rel="nofollow noopener">EXIF Viewer</a> (см. <strong>Метод 2</strong>).</li>
+ <li>Использовать <em>OTG-адаптер</em> + <em>EOSInfo</em> на Android (требуется ROOT).</li>
+ </ol>
+ <p>Точность будет ниже, чем при подключении к ПК.</p>
+</details>
+
+<details>
+ <summary>Что делать, если счётчик показывает 0 или ошибку?</summary>
+ <p>Вероятные причины:</p>
+ <ul>
+ <li><strong>Камера новая</strong> (маловероятно для б/у 70D, выпущенной в 2013 году).</li>
+ <li><strong>Затвор заменён</strong> (проверьте сервисные наклейки на корпусе).</li>
+ <li><strong>Сбой программы</strong> (попробуйте другой метод, например, <em>Magic Lantern</em>).</li>
+ <li><strong>Неоригинальная прошивка</strong> (некоторые «кастомные» версии сбрасывают счётчик).</li>
+ </ul>
+ <p>Если камера явно б/у, а счётчик показывает 0 — это повод усомниться в честности продавца.</p>
+</details>
+
+<details>
+ <summary>Сколько стоит замена затвора на Canon 70D?</summary>
+ <p>Стоимость зависит от сервиса:</p>
+ <ul>
+ <li><strong>Официальный сервис Canon</strong>: 12 000–18 000 ₽ (с гарантией 6 месяцев).</li>
+ <li><strong>Неофициальные мастерские</strong>: 8 000–12 000 ₽ (гарантия 1–3 месяца).</li>
+ <li><strong>Самостоятельная замена</strong>: 5 000–7 000 ₽ (запчасть) + риск повредить зеркало.</li>
+ </ul>
+ <p>Срок ремонта — от 3 дней до 2 недель. После замены счётчик обуляется, но в сервисных записях останется отметка.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ca/canon-650d-kak-posmotret-probeg.html" class="pb-related-card">
+                <span class="pb-related-title">Как посмотреть пробег Canon 650D: 3 проверенных способа</span>
+                <span class="pb-related-desc">Узнайте точно пробег затвора Canon 650D через онлайн-сервисы, софт для ПК или встроенное меню. Полна</span>
+            </a><a href="/articles/k/ka/kakaya-vspyshka-podojdet-dlya-canon-600d.html" class="pb-related-card">
+                <span class="pb-related-title">Лучшие вспышки для Canon 600D: обзор, подбор и настройка</span>
+                <span class="pb-related-desc">Подробный гид по выбору внешней вспышки для Canon 600D. Сравнение моделей, сравнение режима E-TTL II</span>
+            </a><a href="/articles/c/ca/canon-a2200-kak-zaryadit.html" class="pb-related-card">
+                <span class="pb-related-title">Как зарядить Canon A2200: инструкция, типы аккумуляторов и советы</span>
+                <span class="pb-related-desc">Полное руководство по зарядке камеры Canon PowerShot A2200. Обзор штатных зарядных устройств, замена</span>
+            </a><a href="/articles/c/ca/canon-600d-matritsa-kakaya-kropp.html" class="pb-related-card">
+                <span class="pb-related-title">Какой кроп-фактор у матрицы Canon 600D: размеры и характеристики</span>
+                <span class="pb-related-desc">Узнайте размер матрицы Canon 600D, кроп-фактор 1.6x и как это влияет на фокусное расстояние. Подробн</span>
+            </a><a href="/articles/k/ka/kak-pravilno-nastroit-balans-belogo-na-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить баланс белого на Canon: полный гайд для фотографов</span>
+                <span class="pb-related-desc">Полная инструкция по настройке баланса белого на камерах Canon. Разбираем режимы, температуру Кельви</span>
+            </a><a href="/articles/k/ka/kak-perenesti-foto-s-fotoapparata-na-telefon-bez-kompyutera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как перенести фото с фотоаппарата Canon на телефон без компьютера</span>
+                <span class="pb-related-desc">Пошаговая инструкция: передача снимков с Canon на смартфон через Wi-Fi, Bluetooth и приложение Camer</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

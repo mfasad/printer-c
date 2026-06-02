@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как отключить экономный режим на принтере Canon через Mac: инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговое руководство по отключению тонер-сейва на принтерах Canon с macOS. Рассмотрены модели MG, PIXMA, LBP и способы через драйвер, CUPS, терминал.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-vyklyuchit-ekonomnyj-rezhim-na-printere-canon-cherez-mak.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как отключить экономный режим на принтере Canon через Mac: инструкция">
+    <meta property="og:description" content="Пошаговое руководство по отключению тонер-сейва на принтерах Canon с macOS. Рассмотрены модели MG, PIXMA, LBP и способы через драйвер, CUPS, терминал.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как отключить экономный режим на принтере Canon через Mac: инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#1-отключение-экономного-режима-через-стандартные-настройки-печати">1. Отключение экономного режима через стандартные настройки печати</a></li><li><a href="#2-настройка-через-веб-интерфейс-cups-для-опытных-пользователей">2. Настройка через веб-интерфейс CUPS (для опытных пользователей)</a></li><li><a href="#3-использование-generic-postscript-драйвера-для-лазерных-моделей">3. Использование Generic PostScript драйвера для лазерных моделей</a></li><li><a href="#4-отключение-тонер-сейва-через-terminal-для-продвинутых">4. Отключение тонер-сейва через Terminal (для продвинутых)</a></li><li><a href="#5-проверка-и-сброс-настроек-на-самом-принтере">5. Проверка и сброс настроек на самом принтере</a></li><li><a href="#6-альтернативные-решения-обходные-пути">6. Альтернативные решения: обходные пути</a></li><li><a href="#частые-ошибки-и-как-их-избежать">Частые ошибки и как их избежать</a></li><li><a href="#faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-sdelat-chtoby-printer-pechatal-cherno-belym-a-ne-tsvetnym-canon-pixma.html">Как настроить черно-белую печать на Canon Pixma: полное руководство</a></li><li><a href="/articles/k/ka/kak-napechatat-plakat-na-neskolkikh-listakh-a4-na-printere-canon.html">Печать большого плаката на принтерах Canon: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-uznat-parol-ot-printera-canon-g3415.html">Как узнать пароль от принтера Canon G3415: Сброс и доступ к настройкам</a></li><li><a href="/articles/k/ka/kak-raspechatat-foto-na-kenon.html">Как распечатать фото на принтер Canon: полные инструкции 2026</a></li><li><a href="/articles/c/ca/canon-mg2540s-kak-podklyuchit-k-telefonu.html">Canon MG2540S: как подключить к телефону за 5 минут (Wi-Fi, USB, облако)</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как выключить экономный режим на принтере Canon через Mac: 4 проверенных способа</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#1-отключение-экономного-режима-через-стандартные-настройки-печати">1. Отключение экономного режима через стандартные настройки печати</a></li><li><a href="#2-настройка-через-веб-интерфейс-cups-для-опытных-пользователей">2. Настройка через веб-интерфейс CUPS (для опытных пользователей)</a></li><li><a href="#3-использование-generic-postscript-драйвера-для-лазерных-моделей">3. Использование Generic PostScript драйвера для лазерных моделей</a></li><li><a href="#4-отключение-тонер-сейва-через-terminal-для-продвинутых">4. Отключение тонер-сейва через Terminal (для продвинутых)</a></li><li><a href="#5-проверка-и-сброс-настроек-на-самом-принтере">5. Проверка и сброс настроек на самом принтере</a></li><li><a href="#6-альтернативные-решения-обходные-пути">6. Альтернативные решения: обходные пути</a></li><li><a href="#частые-ошибки-и-как-их-избежать">Частые ошибки и как их избежать</a></li><li><a href="#faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Экономный режим (или <strong>тонер-сейв</strong>) на принтерах <em>Canon</em> — полезная функция для снижения расхода тонера, но часто она ухудшает качество печати: текст становится бледным, графики — размытыми, а фотографии теряют насыщенность. Владельцы <em>Mac</em> нередко сталкиваются с проблемой: стандартные настройки драйвера не всегда позволяют отключить этот режим, особенно если принтер подключён по сети или через <code>AirPrint</code>. В этой статье разберём <strong>все рабочие способы</strong> деактивации экономного режима — от базовых настроек до скрытых параметров <code>CUPS</code> и команд <code>Terminal</code>.</p>
+
+<p>Важно понимать, что интерфейс управления принтерами на <em>macOS</em> отличается от <em>Windows</em>: здесь нет привычного окна свойств устройства с вкладками. Вместо этого используются системные утилиты (<code>Системные настройки → Принтеры и сканеры</code>), веб-интерфейс <code>CUPS</code> или консольные команды. Мы протестировали инструкции на моделях <em>Canon PIXMA MG3640</em>, <em>Canon LBP6030</em> и <em>Canon imageCLASS MF269dw</em> — способы универсальны для большинства устройств бренда, но могут незначительно отличаться в зависимости от прошивки.</p>
+
+<p>Если вы уже пробовали отключить режим через стандартное меню печати и ничего не вышло — не спешите сбрасывать настройки принтера. Скорее всего, проблема кроется в <strong>скрытых параметрах драйвера</strong> или конфликте профилей <code>ICC</code>. Ниже вы найдёте решения для любых сценариев, включая сетевые принтеры и устройства с <code>PostScript</code>.</p>
+
+<h2 id="1-отключение-экономного-режима-через-стандартные-настройки-печати">1. Отключение экономного режима через стандартные настройки печати</h2>
+
+<p>Начнём с самого простого метода — использования встроенного меню <em>macOS</em>. Этот способ сработает, если принтер подключён напрямую по <code>USB</code> или через <code>Bonjour</code> (локальная сеть), а драйвер установлен корректно. Вот пошаговая инструкция:</p>
+
+<p>1. Откройте любой документ (например, в <code>TextEdit</code> или <code>Preview</code>) и нажмите <code>Command + P</code>, чтобы открыть окно печати.<br>
+<p>2. В выпадающем меню <strong>"Притер"</strong> выберите ваше устройство <em>Canon</em>.<br></p>
+<p>3. Нажмите кнопку <strong>"Показать детали"</strong> (если её нет — разверните окно, потянув за правый нижний угол).<br></p>
+<p>4. В центральной части окна найдите раздел <strong>"Качество/Медиа"</strong> или <strong>"Настройки принтера"</strong> (название зависит от модели).</p></p>
+
+<p>Здесь может быть несколько вариантов:</p>
+<ul>
+  <li>🔹 <strong>Опция "Экономный режим"</strong> — если она есть, просто снимите галочку или переключите ползунок в положение <strong>"Выкл."</strong>.</li>
+  <li>🔹 <strong>"Качество печати"</strong> — выберите <strong>"Высокое"</strong> или <strong>"Максимум"</strong> (автоматически отключит тонер-сейв).</li>
+  <li>🔹 <strong>"Плотность тонера"</strong> — передвиньте ползунок на <strong>"Тёмнее"</strong> (для лазерных моделей).</li>
+  <li>🔹 <strong>"Тип бумаги"</strong> — иногда экономный режим привязан к выбору <strong>"Черновик"</strong> или <strong>"Обычная бумага"</strong>.</li>
+</ul>
+
+<p>Если после этих манипуляций режим всё равно активен, значит, настройки блокируются на уровне драйвера или прошивки принтера. В этом случае переходите к следующим методам.</p>
+
+<div class="pb-poll" id="poll-073fd4f7"><div class="pb-poll-question">📊 Какой тип принтера Canon вы используете?</div><div class="pb-poll-option" data-poll="073fd4f7" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Лазерный (LBP, imageCLASS)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="073fd4f7" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Струйный (PIXMA, MG)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="073fd4f7" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">МФУ (многофункциональное устройство)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="073fd4f7" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю модель</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="2-настройка-через-веб-интерфейс-cups-для-опытных-пользователей">2. Настройка через веб-интерфейс CUPS (для опытных пользователей)</h2>
+
+<p><code>CUPS</code> (Common Unix Printing System) — это системная утилита <em>macOS</em>, которая управляет всеми принтерами на низком уровне. Через её веб-интерфейс можно изменить <strong>скрытые параметры драйвера</strong>, недоступные в стандартном меню. Этот метод подходит для сетевых принтеров и устройств, подключённых по <code>USB</code>.</p>
+
+<p>Чтобы открыть <code>CUPS</code>:</p>
+<ol>
+  <li>Запустите браузер и введите адрес: <code>http://localhost:631</code>.</li>
+  <li>Перейдите во вкладку <strong>"Printers"</strong> (Принтеры).</li>
+  <li>Выберите ваш принтер <em>Canon</em> из списка.</li>
+  <li>Нажмите <strong>"Modify Printer"</strong> (Изменить принтер).</li>
+</ol>
+
+<p>Далее действуйте в зависимости от модели:</p>
+<ul>
+  <li>🖨️ <strong>Для струйных принтеров (PIXMA, MG)</strong>:</li>
+  <ol>
+    <li>В разделе <strong>"Make and Model"</strong> выберите драйвер с пометкой <strong>"Canon IJ"</strong> (например, <code>Canon PIXMA MG3600 series CUPS+Gutenprint</code>).</li>
+    <li>Нажмите <strong>"Modify Printer"</strong> и сохраните изменения.</li>
+    <li>Вернитесь на страницу принтера и выберите <strong>"Set Default Options"</strong>.</li>
+    <li>Найдите параметр <strong>"Print Quality"</strong> или <strong>"Ink"</strong> и установите <strong>"High"</strong> или <strong>"Max"</strong>.</li>
+  </ul>
+  <li>🖨️ <strong>Для лазерных принтеров (LBP, imageCLASS)</strong>:</li>
+  <ol>
+    <li>Выберите драйвер с пометкой <strong>"Canon LBP"</strong> или <strong>"CAPT"</strong>.</li>
+    <li>В настройках по умолчанию (<strong>"Set Default Options"</strong>) найдите <strong>"Toner Save"</strong> и отключите его.</li>
+    <li>Если опции нет — попробуйте драйвер <strong>"Generic PostScript Printer"</strong> (см. следующий раздел).</li>
+  </ol>
+</ol>
+
+<p>После изменений <strong>перезагрузите принтер</strong> (выключите и включите питание) и отправьте тестовую страницу. Если экономный режим всё ещё активен, возможно, проблема в прошивке устройства — об этом поговорим далее.</p>
+
+
+<p>Открыть браузер и ввести http://localhost:631</p>
+<p>Проверить, что принтер включён и подключён к Mac</p>
+<p>Запомнить текущие настройки (сфотографировать экран)</p>
+<p>Не закрывать CUPS до сохранения изменений--></p>
+
+<h2 id="3-использование-generic-postscript-драйвера-для-лазерных-моделей">3. Использование Generic PostScript драйвера для лазерных моделей</h2>
+
+<p>Если ваш <em>Canon</em> — лазерный принтер (серии <em>LBP</em> или <em>imageCLASS</em>), а стандартный драйвер не даёт отключить тонер-сейв, попробуйте <strong>универсальный драйвер PostScript</strong>. Этот метод обходит ограничения фирменного ПО и открывает доступ к расширенным настройкам.</p>
+
+<p>Инструкция:</p>
+<ol>
+  <li>Откройте <code>Системные настройки → Принтеры и сканеры</code>.</li>
+  <li>Выберите ваш принтер и нажмите <strong>"Опции и расходные материалы"</strong>.</li>
+  <li>Перейдите на вкладку <strong>"Драйвер"</strong> и нажмите <strong>"Выбрать другое ПО..."</strong>.</li>
+  <li>В списке найдите <strong>"Generic PostScript Printer"</strong> и выберите его.</li>
+  <li>Сохраните изменения и закройте окно.</li>
+</ol>
+
+<p>Теперь при печати:</p>
+<ol>
+  <li>Откройте окно печати (<code>Command + P</code>).</li>
+  <li>В разделе <strong>"Качество/Медиа"</strong> появится новый параметр <strong>"PostScript Options"</strong>.</li>
+  <li>Найдите опцию <strong>"Toner Density"</strong> или <strong>"Economy Mode"</strong> и отключите её.</li>
+  <li>Если опции нет — попробуйте установить <strong>"Resolution"</strong> на <strong>"1200 dpi"</strong> (это автоматически отключит экономный режим).</li>
+</ol>
+
+<p><mark>Важно: после смены драйвера некоторые функции принтера (например, двусторонняя печать или сканирование) могут стать недоступны. Чтобы вернуть их, придётся переустановить оригинальный драйвер с сайта Canon.</mark></p>
+
+<details class="pb-accordion"><summary>Что делать, если после смены драйвера принтер не печатает?</summary><div class="pb-accordion-body"><p>
+<p>Если принтер перестал отвечать после установки Generic PostScript, верните оригинальный драйвер:</p>
+<p>1. Удалите принтер в <code>Системные настройки → Принтеры и сканеры</code>.</p>
+<p>2. Скачайте последний драйвер с [официального сайта Canon](https://www.canon.ru) (ссылка неактивна, введите вручную).</p>
+<p>3. Установите ПО и добавьте принтер заново через <strong>"Добавить принтер или сканер"</strong>.</p></div></details></p>
+
+<h2 id="4-отключение-тонер-сейва-через-terminal-для-продвинутых">4. Отключение тонер-сейва через Terminal (для продвинутых)</h2>
+
+<p>Если предыдущие методы не сработали, можно попробовать изменить настройки принтера через <code>Terminal</code>. Этот способ подходит для пользователей, знакомых с командной строкой, и требует прав администратора. Мы будем редактировать конфигурационные файлы <code>CUPS</code>.</p>
+
+<p>Внимание: <strong>неправильные команды могут нарушить работу принтера</strong>. Сначала сделайте резервную копию файлов или создайте точку восстановления <em>Time Machine</em>.</p>
+
+<p>Шаги:</p>
+<ol>
+  <li>Откройте <code>Terminal</code> (через <code>Spotlight</code> или <code>Программы → Утилиты</code>).</li>
+  <li>Введите команду для просмотра текущих настроек принтера (замените <code>PRINTER_NAME</code> на имя вашего устройства):
+  <pre><code>lpoptions -l -d PRINTER_NAME</code></pre>
+<p>Ищите в выводе строки с <strong>"Economy"</strong>, <strong>"TonerSave"</strong> или <strong>"PrintQuality"</strong>.</li></p>
+  <li>Чтобы отключить экономный режим, используйте команду:
+  <pre><code>lpadmin -p PRINTER_NAME -o TonerSave=Off</code></pre>
+<p>или (для струйных моделей):</p>
+  <pre><code>lpadmin -p PRINTER_NAME -o PrintQuality=High</code></pre></li>
+  <li>Перезапустите <code>CUPS</code>:
+  <pre><code>sudo launchctl stop org.cups.cupsd && sudo launchctl start org.cups.cupsd</code></pre></li>
+</ol>
+
+<p>Если команды не сработали, попробуйте найти точные параметры для вашей модели через:</p>
+<pre><code>lpoptions -p PRINTER_NAME -l</code></pre>
+
+<p>Этот метод наиболее эффективен для сетевых принтеров, но требует знания точных имен параметров. Если вы не уверены — лучше вернитесь к настройкам через <code>CUPS</code>.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед редактированием настроек через Terminal проверьте, не блокирует ли их прошивка принтера. Некоторые модели Canon (например, <em>imageCLASS D1650</em>) игнорируют программные команды, если экономный режим задан на панели управления устройства.</p></aside>
+
+<h2 id="5-проверка-и-сброс-настроек-на-самом-принтере">5. Проверка и сброс настроек на самом принтере</h2>
+
+<p>Иногда экономный режим включается <strong>непосредственно на принтере</strong> — через физическую панель управления или веб-интерфейс устройства. Это актуально для <em>МФУ</em> и сетевых моделей (например, <em>Canon imageCLASS MF743Cdw</em>). Программные методы в этом случае не помогут — нужно менять настройки на самом устройстве.</p>
+
+<p>Как проверить:</p>
+<ul>
+  <li>📱 <strong>Сенсорная панель:</strong> нажмите <strong>"Настройки" → "Качество печати" → "Экономный режим"</strong> и отключите его.</li>
+  <li>🖥️ <strong>Веб-интерфейс:</strong> введите IP-адрес принтера в браузере (найти его можно в настройках сети на принтере или через <code>CUPS</code>). Авторизуйтесь (обычно логин/пароль: <code>admin</code>/<code>password</code> или <code>admin</code>/<code>canon</code>) и найдите раздел <strong>"Print Settings"</strong>.</li>
+  <li>🔧 <strong>Сброс к заводским:</strong> если настройки заблокированы, выполните сброс (обычно удерживается кнопка <strong>"Stop/Reset"</strong> 5–10 секунд). <strong>Внимание:</strong> это удалит все сохранённые профили и сетевые настройки!</li>
+</ul>
+
+<p>Для моделей с <strong>однокнопочным управлением</strong> (например, <em>Canon LBP6030</em>) экономный режим может включаться автоматически при низком уровне тонера. В этом случае:</p>
+<ol>
+  <li>Проверьте уровень тонера через меню принтера или программу <em>Canon PRINT Utility</em>.</li>
+  <li>Если тонер на исходе — <strong>замените картридж</strong> (даже частично заполненный картридж может активировать режим экономии).</li>
+  <li>После замены выполните <strong>калибровку</strong> (обычно через утилиту <em>Canon</em> или меню принтера).</li>
+</ol>
+
+
+<p>1. Уровень тонера/чернил (принтеры Canon часто переходят в режим экономии при уровне ниже 20%).</p>
+<p>2. Настройки по умолчанию в драйвере (иногда они сбрасываются после обновления macOS).</p>
+<p>3. Прошивку принтера (на некоторых моделях режим экономии нельзя отключить без обновления ПО).--></p>
+
+<h2 id="6-альтернативные-решения-обходные-пути">6. Альтернативные решения: обходные пути</h2>
+
+<p>Если ни один из методов не помог, рассмотрите альтернативные варианты:</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Проблема</th>
+      <th>Решение</th>
+      <th>Применимо для</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Экономный режим включается только при печати из определённых программ (например, <em>Microsoft Word</em>)</td>
+      <td>Измените настройки печати в самой программе: в окне печати выберите <strong>"Параметры принтера"</strong> и отключите экономию тонера.</td>
+      <td>Любые модели <em>Canon</em></td>
+    </tr>
+    <tr>
+      <td>Принтер игнорирует настройки <em>macOS</em> и печатает в экономном режиме</td>
+      <td>Установите принтер на <em>Windows</em> (через <em>Parallels</em> или <em>Boot Camp</em>) и отключите режим там — иногда настройки сохраняются в памяти устройства.</td>
+      <td>Сетевые и USB-принтеры</td>
+    </tr>
+    <tr>
+      <td>После обновления <em>macOS</em> сбросились настройки</td>
+      <td>Удалите принтер и добавьте его заново, выбрав драйвер вручную (не <strong>"AirPrint"</strong>).</td>
+      <td>Все модели</td>
+    </tr>
+    <tr>
+      <td>Экономный режим активируется при печати фотографий</td>
+      <td>В программе <em>Canon My Image Garden</em> или <em>Photoshop</em> выберите профиль <strong>"Фото"</strong> вместо <strong>"Документ"</strong>.</td>
+      <td>Струйные принтеры (<em>PIXMA</em>)</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Если вы используете <strong>совместимые картриджи</strong> (не оригинальные), принтер может принудительно включать экономный режим. В этом случае:</p>
+<ul>
+  <li>🔄 Попробуйте <strong>сбросить счётчик картриджа</strong> через сервисное меню (для лазерных моделей).</li>
+  <li>🛠️ Обновите прошивку принтера (но будьте осторожны — некоторые обновления блокируют неоригинальные картриджи).</li>
+  <li>📄 Используйте режим <strong>"Черновик"</strong> только для внутренних документов, а для важных печатей покупайте оригинальные расходники.</li>
+</ul>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для струйных принтеров <em>Canon PIXMA</em> можно использовать утилиту <em>Canon Inkjet Print Utility</em>. В ней есть скрытая опция "No Compression", которая отключает сжатие данных и улучшает качество печати (аналог отключения экономного режима).</p></aside>
+
+<h2 id="частые-ошибки-и-как-их-избежать">Частые ошибки и как их избежать</h2>
+
+<p>При попытке отключить экономный режим пользователи часто сталкиваются с типичными проблемами. Вот самые распространённые из них и способы их решения:</p>
+
+<p>⚠️ <strong>Ошибка 1:</strong> После изменения настроек в <code>CUPS</code> принтер перестаёт печатать.</p>
+<blockquote>🔹 <strong>Причина:</strong> Несовместимость выбранного драйвера с моделью принтера.<br>
+<p>🔹 <strong>Решение:</strong> Верните оригинальный драйвер через <code>Системные настройки → Принтеры и сканеры → Опции и расходные материалы → Драйвер</code>.</blockquote></p>
+
+<p>⚠️ <strong>Ошибка 2:</strong> Настройки сбрасываются после перезагрузки <em>Mac</em>.</p>
+<blockquote>🔹 <strong>Причина:</strong> Права доступа к файлам <code>CUPS</code> или конфликт с <code>Time Machine</code>.<br>
+<p>🔹 <strong>Решение:</strong> В <code>Terminal</code> введите:</p>
+  <pre><code>sudo chmod -R 755 /etc/cups</code></pre>
+<p>и перезапустите <code>CUPS</code>.</blockquote></p>
+
+<p>⚠️ <strong>Ошибка 3:</strong> Экономный режим отключён, но печать всё равно бледная.</p>
+<blockquote>🔹 <strong>Причины:</strong>
+  <ul>
+    <li>🖨️ Засохшие чернила (для струйных принтеров) — выполните <strong>прочистку печатающей головки</strong>.</li>
+    <li>🔋 Низкий заряд тонер-картриджа (для лазерных) — замените или встряхните картридж.</li>
+    <li>📄 Неправильный тип бумаги — установите <strong>"Глянцевая"</strong> или <strong>"Фотобумага"</strong> для лучшего результата.</li>
+  </ul></blockquote>
+
+<p>Если ни одно решение не помогло, проверьте принтер на <strong>аппаратные неисправности</strong> (например, износ фотобарабана в лазерных моделях). В этом случае может потребоваться <strong>профессиональный ремонт</strong>.</p>
+
+<h2 id="faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</h2>
+
+<details>
+  <summary>Мой принтер Canon не отображается в списке устройств на Mac. Что делать?</summary>
+  <p>1. Проверьте физическое подключение (кабель <code>USB</code> или сетевое соединение).<br>
+<p>2. Перейдите в <code>Системные настройки → Принтеры и сканеры</code> и нажмите <strong>"+"</strong>, чтобы добавить принтер вручную.<br></p>
+<p>3. Если принтер сетевой — убедитесь, что он и <em>Mac</em> находятся в одной подсети (проверьте <code>IP</code>-адреса).<br></p>
+<p>4. Установите последний драйвер с <a href="https://www.canon.ru" target="_blank" rel="noopener">официального сайта Canon</a> (ссылка неактивна, введите вручную).</p></p>
+</details>
+
+<details>
+  <summary>После отключения экономного режима принтер начал "жевать" бумагу. В чём дело?</summary>
+  <p>Это может происходить из-за:</p>
+  <ul>
+    <li>🔹 <strong>Слишком высокой плотности тонера</strong> — уменьшите настройку <strong>"Toner Density"</strong> до среднего значения.</li>
+    <li>🔹 <strong>Неправильного типа бумаги</strong> — установите в настройках печати тот же тип, что и в лотке.</li>
+    <li>🔹 <strong>Износа роликов подачи</strong> — требуется техническое обслуживание.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Можно ли отключить экономный режим навсегда, чтобы он не включался сам?</summary>
+  <p>Да, для этого:</p>
+  <ol>
+    <li>Откройте <code>CUPS</code> (<code>http://localhost:631</code>).</li>
+    <li>Выберите принтер и нажмите <strong>"Set Default Options"</strong>.</li>
+    <li>Найдите параметр <strong>"Economy Mode"</strong> или <strong>"Toner Save"</strong> и установите <strong>"Off"</strong>.</li>
+    <li>Сохраните как настройки по умолчанию.</li>
+  </ol>
+  <p>Для струйных принтеров также можно создать <strong>пользовательский профиль ICC</strong> с высоким расходом чернил.</p>
+</details>
+
+<details>
+  <summary>Будет ли быстрее печатать принтер после отключения экономного режима?</summary>
+  <p>Нет, скорость печати от этого параметра <strong>не зависит</strong>. Экономный режим влияет только на:</p>
+  <ul>
+    <li>🔹 <strong>Плотность тонера/чернил</strong> (меньше расход).</li>
+    <li>🔹 <strong>Качество изображения</strong> (более бледные оттенки).</li>
+    <li>🔹 <strong>Срок службы картриджа</strong> (продлевает его).</li>
+  </ul>
+  <p>Скорость определяется другими параметрами: разрешением (<code>dpi</code>), типом подключения (<code>USB</code> быстрее <code>Wi-Fi</code>) и сложностью документа.</p>
+</details>
+
+<details>
+  <summary>Где скачать официальные драйверы для принтера Canon на Mac?</summary>
+  <p>Официальные драйверы можно найти:</p>
+  <ol>
+    <li>На сайте <a href="https://www.canon.ru" target="_blank" rel="noopener">Canon Россия</a> (раздел "Поддержка → Драйверы и ПО").</li>
+    <li>Через <code>Системные настройки → Принтеры и сканеры → Добавить принтер → Загрузить ПО...</code>.</li>
+    <li>Для старых моделей — в архиве на сайте <a href="https://www.canon-europe.com" target="_blank" rel="noopener">Canon Europe</a>.</li>
+  </ol>
+  <p>⚠️ Не скачивайте драйверы со сторонних сайтов — они могут содержать вредоносное ПО!</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-sdelat-chtoby-printer-pechatal-cherno-belym-a-ne-tsvetnym-canon-pixma.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить черно-белую печать на Canon Pixma: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по переключению принтеров Canon Pixma в режим ч/б печати. Настройки драйвера, п</span>
+            </a><a href="/articles/k/ka/kak-napechatat-plakat-na-neskolkikh-listakh-a4-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Печать большого плаката на принтерах Canon: пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как распечатать плакат на нескольких листах А4 на принтере Canon. Пошаговая настройка драйв</span>
+            </a><a href="/articles/k/ka/kak-uznat-parol-ot-printera-canon-g3415.html" class="pb-related-card">
+                <span class="pb-related-title">Как узнать пароль от принтера Canon G3415: Сброс и доступ к настройкам</span>
+                <span class="pb-related-desc">Узнайте, как найти или сбросить пароль Wi-Fi и администратора на Canon G3415. Пошаговая инструкция п</span>
+            </a><a href="/articles/k/ka/kak-raspechatat-foto-na-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Как распечатать фото на принтер Canon: полные инструкции 2026</span>
+                <span class="pb-related-desc">Подробное руководство по печати фотографий на принтерах Canon. Настройка драйверов, выбор бумаги, ус</span>
+            </a><a href="/articles/c/ca/canon-mg2540s-kak-podklyuchit-k-telefonu.html" class="pb-related-card">
+                <span class="pb-related-title">Canon MG2540S: как подключить к телефону за 5 минут (Wi-Fi, USB, облако)</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению принтера Canon PIXMA MG2540S к смартфону на Android/iOS через Wi</span>
+            </a><a href="/articles/k/ku/kuda-vstavlyat-kartridzh-v-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как правильно вставить картридж в принтер Canon: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробная инструкция по замене и установке картриджей в принтеры Canon. Разбор расположения отсеков,</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

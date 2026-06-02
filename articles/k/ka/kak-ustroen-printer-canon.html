@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Устройство принтеров Canon: принцип работы, компоненты и типы — Кэнон Инфо</title>
+    <meta name="description" content="Подробный разбор внутреннего устройства принтеров Canon. Изучите механизм печати, картриджи, систему подачи бумаги и особенности лазерных и струйных моделей.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-ustroen-printer-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Устройство принтеров Canon: принцип работы, компоненты и типы">
+    <meta property="og:description" content="Подробный разбор внутреннего устройства принтеров Canon. Изучите механизм печати, картриджи, систему подачи бумаги и особенности лазерных и струйных моделей.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Устройство принтеров Canon: принцип работы, компоненты и типы</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-в-архитектуру-печатной-техники-canon">Введение в архитектуру печатной техники Canon</a></li><li><a href="#сердце-системы-механика-подачи-и-транспортировки-бумаги">Сердце системы: механика подачи и транспортировки бумаги</a></li><li><a href="#лазерная-печать-от-лазера-до-термопленки">Лазерная печать: от лазера до термопленки</a></li><li><a href="#струйная-печать-технология-canon-fine-и-гипер-точность">Струйная печать: технология Canon FINE и гипер-точность</a></li><li><a href="#электронный-мозг-управление-и-интерфейсы">Электронный мозг: управление и интерфейсы</a></li><li><a href="#расходные-материалы-и-их-взаимодействие-с-механизмом">Расходные материалы и их взаимодействие с механизмом</a></li><li><a href="#типичные-неисправности-и-профилактическое-обслуживание">Типичные неисправности и профилактическое обслуживание</a></li><li><a href="#faq-частые-вопросы-об-устройстве-принтеров-canon">FAQ: Частые вопросы об устройстве принтеров Canon</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-ustanovit-canon.html">Как установить Canon: драйверы и настройка принтера или камеры</a></li><li><a href="/articles/k/ka/kak-otklyuchit-kontrol-kraski-v-printere-canon.html">Как отключить контроль краски в принтере Canon: 5 проверенных способов</a></li><li><a href="/articles/k/ka/kak-podklyuchit-vajfaj-k-printeru-kenon-piksma.html">Как подключить Wi-Fi к принтеру Canon Pixma: Подробная инструкция</a></li><li><a href="/articles/c/ca/canon-printer-strujnyj-kak-polzovatsya.html">Как пользоваться струйным принтером Canon: Полное руководство</a></li><li><a href="/articles/k/ka/kak-polzovatsya-printerom-canon-lbp-6020.html">Как пользоваться принтером Canon LBP 6020: Установка, драйверы и эксплуатация</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как устроен принтер Canon: полный разбор внутренней архитектуры</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-в-архитектуру-печатной-техники-canon">Введение в архитектуру печатной техники Canon</a></li><li><a href="#сердце-системы-механика-подачи-и-транспортировки-бумаги">Сердце системы: механика подачи и транспортировки бумаги</a></li><li><a href="#лазерная-печать-от-лазера-до-термопленки">Лазерная печать: от лазера до термопленки</a></li><li><a href="#струйная-печать-технология-canon-fine-и-гипер-точность">Струйная печать: технология Canon FINE и гипер-точность</a></li><li><a href="#электронный-мозг-управление-и-интерфейсы">Электронный мозг: управление и интерфейсы</a></li><li><a href="#расходные-материалы-и-их-взаимодействие-с-механизмом">Расходные материалы и их взаимодействие с механизмом</a></li><li><a href="#типичные-неисправности-и-профилактическое-обслуживание">Типичные неисправности и профилактическое обслуживание</a></li><li><a href="#faq-частые-вопросы-об-устройстве-принтеров-canon">FAQ: Частые вопросы об устройстве принтеров Canon</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-в-архитектуру-печатной-техники-canon">Введение в архитектуру печатной техники Canon</h2>
+
+<p>Принтеры <em>Canon</em> давно стали синонимом качества и надежности в мире офисной и домашней печати. Понимание того, как устроена эта техника, помогает не только быстрее устранять мелкие неисправности, но и бережнее относиться к оборудованию, продлевая его срок службы. В отличие от дешевых аналогов, архитектура устройств бренда продумана до мелочей, обеспечивая высокую точность нанесения изображения и стабильность работы.</p>
+
+<p>В основе работы любой модели лежит сложный механизм, где электроника, механика и химия (в случае струйной печати) работают в идеальной синхронизации. Независимо от того, рассматриваете ли вы компактный домашний <em>Canon PIXMA</em> или мощный офисный <em>imageRUNNER</em>, базовые принципы остаются схожими, хотя и имеют существенные различия в реализации. Знание внутреннего устройства позволяет вам осознанно подходить к выбору расходных материалов и пониманию логики работы устройства.</p>
+
+<p>В этой статье мы детально разберем ключевые узлы, отвечающие за формирование изображения, подачу бумаги и управление процессом. Мы посмотрим, как световые лучи или чернильные капли превращаются в текст на листе, и почему некоторые модели требуют особого внимания к обслуживанию. Это знание станет фундаментом для грамотной эксплуатации вашего оборудования.</p>
+
+<h2 id="сердце-системы-механика-подачи-и-транспортировки-бумаги">Сердце системы: механика подачи и транспортировки бумаги</h2>
+
+<p>Первым этапом работы принтера является подача листа из лотка. Этот процесс кажется простым, но внутри него происходит сложная механическая работа, которая часто становится причиной замятий. Механизм подачи в <em>Canon</em> работает за счет системы роликов: ведущий вал захватывает лист, а ролик отрыва (separation roller) следит за тем, чтобы одновременно не поднималось сразу несколько листов.</p>
+
+<p>Важно понимать, что состояние этих роликов напрямую влияет на качество печати. Со временем резина на них истирается или покрывается пылью, что приводит к проскальзыванию и сбитым полям. Современные модели оснащаются сенсорами, которые отслеживают положение бумаги в реальном времени. Если лист застревает или идет криво, система мгновенно останавливает печать и выводит код ошибки на дисплей.</p>
+
+<p>Транспортировка бумаги осуществляется по строго заданному пути, который минимизирует риск касания листа с другими деталями. В лазерных моделях этот путь часто изогнут, чтобы выровнять лист перед попаданием в печку. В струйных принтерах бумага движется под печатающей головкой, которая может перемещаться влево и вправо или оставаться неподвижной в зависимости от модели.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Использование бумаги с повышенной влажностью или нестандартной плотности может привести к деформации роликов подачи и их преждевременному выходу из строя.</p>
+</blockquote>
+
+<h2 id="лазерная-печать-от-лазера-до-термопленки">Лазерная печать: от лазера до термопленки</h2>
+
+<p>Лазерные принтеры <em>Canon</em>, такие как популярные серии <em>LBP</em> или <em>imageCLASS</em>, используют принцип электрографии. Центральным элементом здесь является фотобарабан (фотовал), покрытый светочувствительным слоем. Процесс начинается с заряда барабана, после чего лазерный луч «рисует» на нем скрытое изображение, меняя заряд в определенных точках.</p>
+
+<p>Затем на барабан наносится тонер — мелкий порошкообразный краситель. Частицы тонера прилипают только к тем участкам, где лазер изменил заряд. Это изображение переносится на бумагу, которая проходит через барабан, и затем попадает в узел фиксации. Именно здесь происходит магия превращения порошка в неразрушимый текст.</p>
+
+<p>Узел фиксации (Fuser) состоит из нагревательного элемента и прижимного вала. При высокой температуре и давлении тонер плавится и вдавливается в волокна бумаги. Качество фиксации напрямую зависит от стабильности температуры в этом узле. Если термостойкая пленка повреждена, на печати могут появляться пятна или полосы, а тонер будет осыпаться при касании.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Компонент</th>
+<th>Функция</th>
+<th>Типичная проблема</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Фотобарабан</td>
+<td>Формирование скрытого изображения</td>
+<td>Появление повторяющихся пятен</td>
+</tr>
+<tr>
+<td>Лазерный модуль</td>
+<td>Считывание данных с чипа и засветка</td>
+<td>Полосы, отсутствие изображения</td>
+</tr>
+<tr>
+<td>Тонер-картридж</td>
+<td>Хранение и подача порошка</td>
+<td>Пустой картридж, утечка тонера</td>
+</tr>
+<tr>
+<td>Узел фиксации</td>
+<td>Приваривание тонера к бумаге</td>
+<td>Листы не прогреваются, тонер осыпается</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="pb-poll" id="poll-2f34f329"><div class="pb-poll-question">📊 Какой тип принтера вы используете чаще всего?</div><div class="pb-poll-option" data-poll="2f34f329" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Лазерный</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="2f34f329" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Струйный</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="2f34f329" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">МФУ</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="2f34f329" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Плоттер</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="струйная-печать-технология-canon-fine-и-гипер-точность">Струйная печать: технология Canon FINE и гипер-точность</h2>
+
+<p>В струйных принтерах <em>Canon</em> используется уникальная технология <em>FINE</em> (Full-photolithography Inkjet Nozzle Engineering). В отличие от многих конкурентов, здесь печатающая головка часто интегрирована непосредственно в сам картридж, что позволяет каждый раз устанавливать новые, идеально калиброванные сопла для печати. Это обеспечивает стабильно высокое качество даже при интенсивном использовании.</p>
+
+<p>Внутри головки находятся сотни микроскопических сопел, через которые под давлением выстреливаются капли чернил. Управление этим процессом осуществляется пьезоэлементами или нагревателями, которые создают давление, выталкивающее каплю. Размер капли в современных моделях может быть меньше 1 пиколитра, что позволяет создавать плавные градиенты и четкие линии.</p>
+
+<p>Система подачи чернил может быть устроена по-разному. В бюджетных моделях чернила находятся в картридже, а в профессиональных <em>imagePROGRAF</em> используется система непрерывной подачи чернил (СНПЧ) с большими внешними емкостями. Это позволяет печатать огромные тиражи без постоянной замены картриджей, но требует более аккуратного обращения с трубками и помпой.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Если принтер долго простаивает без работы, чернила в соплах могут высохнуть и затвердеть, что приведет к их засору и невозможности печати без сервисного обслуживания.</p>
+</blockquote>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к печати на струйном принтере</h4><label class="check-item"><input type="checkbox"><span>Проверить уровень чернил в емкостях</span></label><label class="check-item"><input type="checkbox"><span>Очистить головки через меню</span></label><label class="check-item"><input type="checkbox"><span>Убедиться, что бумага сухая</span></label><label class="check-item"><input type="checkbox"><span>Проверить наличие пробок на СНПЧ</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="электронный-мозг-управление-и-интерфейсы">Электронный мозг: управление и интерфейсы</h2>
+
+<p>Современный принтер <em>Canon</em> — это не просто механика, а полноценный вычислительный узел. Внутренняя электроника, состоящая из материнской платы и блоков управления моторами, обрабатывает данные, поступающие от компьютера или сети. Именно здесь происходит рендеринг страницы: сложные векторные изображения превращаются в растровое поле, понятное печатающей головке или лазерному модулю.</p>
+
+<p>Для управления процессом используются различные интерфейсы связи. Традиционные порты USB уступают место сетевым интерфейсам Ethernet и беспроводным модулям Wi-Fi. В топовых моделях также реализована поддержка Apple AirPrint и Google Cloud Print, что позволяет печатать без установки дополнительных драйверов. Настройка этих параметров осуществляется через встроенный веб-интерфейс или панель управления на корпусе.</p>
+
+<p>Память устройства играет критическую роль при печати сложных документов. Если оперативной памяти недостаточно, принтер может начать сбрасывать данные или печатать очень медленно, разбивая документ на мелкие куски. В офисных моделях часто предусмотрен слот для расширения памяти, что позволяет обрабатывать объемные файлы с высокой скоростью.</p>
+
+<details class="pb-accordion"><summary>Что скрыто в меню обслуживания?</summary><div class="pb-accordion-body"><p>В меню обслуживания (Maintenance) скрыты функции глубокой очистки, калибровки цветности, проверки дюз и сброса счетчиков обслуживания, доступные только для продвинутых пользователей.</p></div></details>
+
+<h2 id="расходные-материалы-и-их-взаимодействие-с-механизмом">Расходные материалы и их взаимодействие с механизмом</h2>
+
+<p>Качество печати на 90% зависит от правильности работы расходных материалов. В лазерных принтерах это не просто порошок, а сложный комплекс: фотобарабан, ракель, магнитный вал и дозирующее лезвие. В струйных моделях критическим элементом является печатающая головка, которая должна быть идеально чистой и свободной от воздушных пробок.</p>
+
+<p>Оригинальные картриджи <em>Canon</em> оснащены чипами, которые передают данные об уровне чернил или тонера на материнскую плату. Это позволяет системе заранее предупреждать пользователя о необходимости замены. Использование неоригинальных аналогов без чипов или с измененной прошивкой может привести к блокировке работы принтера или некорректной работе механизмов подачи.</p>
+
+<p>Важно учитывать, что каждый картридж имеет свой ресурс, который рассчитывается исходя из стандартной площади покрытия страницы. Однако реальный ресурс может отличаться в зависимости от типа печатаемых документов. Плотные графики и фотографии расходуют краситель гораздо быстрее, чем простой текстовый документ.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При замене картриджа не оставляйте его на свету более чем на 2-3 минуты, так как фотобарабан может деградировать под воздействием ультрафиолета, что приведет к появлению полос на отпечатках.</p></aside>
+
+<h2 id="типичные-неисправности-и-профилактическое-обслуживание">Типичные неисправности и профилактическое обслуживание</h2>
+
+<p>Несмотря на надежность техники <em>Canon</em>, со временем могут возникать механические и электронные сбои. Самая частая причина проблем — накопление пыли и тонера внутри корпуса. Пыль забивает вентиляционные отверстия, вызывая перегрев электроники, а тонер может попасть на оптические датчики, заставляя их выдавать ложные сигналы об отсутствии бумаги или замятии.</p>
+
+<p>Для профилактики рекомендуется регулярно проводить очистку внутренних каналов и роликов. В лазерных моделях часто можно снять блок фотобарабана и аккуратно протереть его мягкой безворсовой тканью. В струйных принтерах следует использовать функцию очистки головок через программное обеспечение, но делать это умеренно, чтобы не выводить из строя помпу.</p>
+
+<p>Если принтер начал издавать необычные звуки (скрип, стук, гудение), это верный признак проблемы с механикой или мотором. Игнорирование таких симптомов может привести к серьезной поломке, ремонт которой обойдется дороже, чем покупка нового устройства. В таких случаях лучше немедленно прекратить работу и обратиться к специалисту.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярная чистка внутренних узлов от пыли и тонера — это самый эффективный способ продлить жизнь вашему принтеру Canon и избежать дорогостоящего ремонта.</p></aside>
+
+<blockquote>
+<p>⚠️ Внимание: При возникновении сложных ошибок с кодами, начинающимися с «E» или «C», не пытайтесь сбросить их самостоятельно без диагностического оборудования, так как это может привести к блокировке логики работы принтера.</p>
+</blockquote>
+
+<h2 id="faq-частые-вопросы-об-устройстве-принтеров-canon">FAQ: Частые вопросы об устройстве принтеров Canon</h2>
+
+<details>
+<summary>Почему принтер Canon печатает черные полосы?</summary>
+<p>Это может быть связано с повреждением фотобарабана (в лазерных моделях) или засорением сопел печатающей головки (в струйных). Также причиной может стать загрязнение роликов фиксации или наличие посторонних предметов внутри печки.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать заправленные картриджи в принтерах Canon?</summary>
+<p>Технически это возможно, но не рекомендуется. Чипы в оригинальных картриджах могут блокировать работу после нескольких заправок, а качество чернил или тонера низкого уровня может повредить печатающую головку или узел фиксации.</p>
+</details>
+
+<details>
+<summary>Как понять, что закончился ресурс печатающей головки?</summary>
+<p>Если после многократной очистки и выравнивания головок качество печати не улучшается, и на странице остаются белые полосы или пятна, скорее всего, ресурс головки исчерпан. В моделях с выносной головкой это решается заменой картриджа.</p>
+</details>
+
+<details>
+<summary>Почему принтер Canon долго готовится к печати?</summary>
+<p>Длительная подготовка может быть вызвана нагревом узла фиксации в лазерных моделях, а также сложностью рендеринга страницы. Если процесс длится аномально долго, возможно, проблема в оперативной памяти или драйверах.</p>
+</details>
+
+<details>
+<summary>Как правильно хранить запасные картриджи?</summary>
+<p>Храните картриджи в оригинальной упаковке при комнатной температуре, вдали от прямых солнечных лучей и влаги. Избегайте резких перепадов температур, которые могут вызвать конденсат внутри картриджа.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-ustanovit-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить Canon: драйверы и настройка принтера или камеры</span>
+                <span class="pb-related-desc">Полная инструкция: как установить Canon на компьютер. Скачивание драйверов, подключение по USB и Wi-</span>
+            </a><a href="/articles/k/ka/kak-otklyuchit-kontrol-kraski-v-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как отключить контроль краски в принтере Canon: 5 проверенных способов</span>
+                <span class="pb-related-desc">Пошаговая инструкция по отключению контроля уровня чернил в принтерах Canon (MG, PIXMA, G-серия). Сб</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-vajfaj-k-printeru-kenon-piksma.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Wi-Fi к принтеру Canon Pixma: Подробная инструкция</span>
+                <span class="pb-related-desc">Узнайте, как настроить беспроводное подключение принтера Canon Pixma к роутеру. Пошаговые методы чер</span>
+            </a><a href="/articles/c/ca/canon-printer-strujnyj-kak-polzovatsya.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться струйным принтером Canon: Полное руководство</span>
+                <span class="pb-related-desc">Подробная инструкция по настройке, установке картриджей, подключению к ПК и устранению частых пробле</span>
+            </a><a href="/articles/k/ka/kak-polzovatsya-printerom-canon-lbp-6020.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться принтером Canon LBP 6020: Установка, драйверы и эксплуатация</span>
+                <span class="pb-related-desc">Полная инструкция по настройке и применению лазерного принтера Canon LBP 6020. Установка ПО, подключ</span>
+            </a><a href="/articles/k/ka/kak-otkryt-printer-canon-pixma-ts3140.html" class="pb-related-card">
+                <span class="pb-related-title">Как открыть принтер Canon PIXMA TS3140: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по разборке принтера Canon TS3140 для замены картриджей, чистки и ремонта. Схе</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

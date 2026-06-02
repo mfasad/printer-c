@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как подключить Canon LBP 3200 к Windows 7 x64: драйверы и настройка — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция по установке драйверов Canon LBP 3200 на 64-битную Windows 7. Решение проблем с установкой, настройка порта и устранение ошибок печати.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-lbp-3200-kak-podklyuchit-windows-7-x64.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как подключить Canon LBP 3200 к Windows 7 x64: драйверы и настройка">
+    <meta property="og:description" content="Пошаговая инструкция по установке драйверов Canon LBP 3200 на 64-битную Windows 7. Решение проблем с установкой, настройка порта и устранение ошибок печати.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как подключить Canon LBP 3200 к Windows 7 x64: драйверы и настройка</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-системы-и-поиск-необходимого-по">Подготовка системы и поиск необходимого ПО</a></li><li><a href="#пошаговая-процедура-установки-драйвера">Пошаговая процедура установки драйвера</a></li><li><a href="#настройка-порта-и-проверка-работоспособности">Настройка порта и проверка работоспособности</a></li><li><a href="#решение-типичных-проблем-и-ошибок">Решение типичных проблем и ошибок</a></li><li><a href="#установка-через-диспетчер-устройств-вручную">Установка через Диспетчер устройств вручную</a></li><li><a href="#поддержка-и-обслуживание-оборудования">Поддержка и обслуживание оборудования</a></li><li><a href="#заключение">Заключение</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-nastroit-tsvet-na-printere-canon-g2415.html">Как настроить цвет на принтере Canon PIXMA G2415: Инструкция</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-k-vaj-faj-canon-pixma-g3410.html">Как подключить принтер Canon Pixma G3410 к Wi-Fi: полная инструкция</a></li><li><a href="/articles/c/ca/canon-mf3110-kak-ustanovit-na-windows-10-64-bit.html">Установка Canon MF3110 на Windows 10 64 bit: Пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-polzovatsya-printerom-canon-pixma-mp250.html">Как пользоваться принтером Canon Pixma MP250: Полная инструкция</a></li><li><a href="/articles/a/ai/airprint-chto-eto-v-printere-canon.html">AirPrint в принтерах Canon: что это и как работает в 2026 году</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полное руководство: подключение Canon LBP 3200 к Windows 7 x64</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-системы-и-поиск-необходимого-по">Подготовка системы и поиск необходимого ПО</a></li><li><a href="#пошаговая-процедура-установки-драйвера">Пошаговая процедура установки драйвера</a></li><li><a href="#настройка-порта-и-проверка-работоспособности">Настройка порта и проверка работоспособности</a></li><li><a href="#решение-типичных-проблем-и-ошибок">Решение типичных проблем и ошибок</a></li><li><a href="#установка-через-диспетчер-устройств-вручную">Установка через Диспетчер устройств вручную</a></li><li><a href="#поддержка-и-обслуживание-оборудования">Поддержка и обслуживание оборудования</a></li><li><a href="#заключение">Заключение</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Установка лазерного принтера <em>Canon LBP 3200</em> на современную операционную систему часто вызывает трудности, особенно если речь идет о Windows 7 с 64-битной архитектурой. Официальная поддержка этой модели со стороны производителя была прекращена довольно давно, что приводит к отсутствию нативных драйверов в стандартных средствах ОС. Однако отсутствие "родного" ПО не означает невозможность работы оборудования — существуют проверенные методы адаптации драйверов для корректной печати.</p>
+
+<p>Система <em>Windows 7 x64</em> требует строгого соответствия разрядности устанавливаемого программного обеспечения. Если вы попытаетесь запустить 32-битный драйвер на 64-битной системе, процесс установки либо завершится ошибкой, либо принтер будет виден как неактивный девайс. Для успешной интеграции <em>Canon LBP 3200</em> необходимо вручную подобрать совместимый драйвер, часто используя версии от более новых моделей серии LBP, такие как <em>Canon LBP 3250</em> или <em>LBP 2900+</em>, которые имеют идентичный механизм работы с драйвером CAPT.</p>
+
+<h2 id="подготовка-системы-и-поиск-необходимого-по">Подготовка системы и поиск необходимого ПО</h2>
+
+<p>Первым этапом работы является проверка конфигурации вашего компьютера. Убедитесь, что операционная система полностью обновлена через сервис <code>Центр обновлений Windows</code>, так как отсутствие последних патчей безопасности может блокировать установку старых драйверов. Вам потребуется доступ к архивам драйверов, так как официальный сайт Canon может не предлагать прямую ссылку на старую модель для вашей версии ОС.</p>
+
+<p>Существует несколько стратегий поиска совместимого драйвера. Наиболее надежным вариантом является использование драйвера от модели <em>Canon LBP 3250</em> или <em>LBP 3360</em> для Windows 7 x64. Эти устройства построены на той же аппаратной базе, что и LBP 3200, и используют идентичный движок печати. Не пытайтесь устанавливать ПО от модели LBP 2900 без предварительной проверки, так как архитектура драйверов может различаться и вызывать конфликты в системе.</p>
+
+<p>Если вы предпочитаете использовать утилиты автоматической установки, такие как <code>CAPT Status Window</code>, убедитесь, что версия утилиты поддерживает 64-битную архитектуру. В некоторых случаях помогает запуск установщика в режиме совместимости с Windows XP или Vista, что позволяет преодолеть проверку цифровых подписей драйверов.</p>
+
+<h3>Список необходимых действий перед установкой:</h3>
+
+<ul>
+<li>🛠️ Отключите принтер от USB-порта, чтобы система не пыталась найти его автоматически.</li>
+<li>📥 Скачайте драйвер <em>Canon CAPT Printer Driver</em> версии 3.90 или новее для x64.</li>
+<li>📂 Распакуйте архив в отдельную папку, например <code>C:\Drivers\Canon_LBP</code>.</li>
+<li>🚫 Отключите антивирусное ПО на время установки, чтобы оно не блокировало процесс.</li>
+</ul>
+
+<blockquote>⚠️ Внимание: Не подключайте USB-кабель к компьютеру до тех пор, пока установщик драйвера не запросит это действие явно. Раннее подключение может привести к тому, что Windows установит базовый драйвер Microsoft, который не поддерживает функционал <em>Canon CAPT</em>.</blockquote>
+
+<blockquote>⚠️ Внимание: Если система запрашивает подтверждение установки неподписанного драйвера, нажмите "Все равно установить". Это стандартная процедура для оборудования, выпущенного до 2010 года, и не несет угрозы безопасности, если источник файла достоверен.</blockquote>
+
+<div class="pb-poll" id="poll-a298caef"><div class="pb-poll-question">📊 Используете ли вы Windows 7?</div><div class="pb-poll-option" data-poll="a298caef" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Да, дома</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a298caef" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Да, на работе</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a298caef" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Нет, уже обновился</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a298caef" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю версию</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="пошаговая-процедура-установки-драйвера">Пошаговая процедура установки драйвера</h2>
+
+<p>Процесс инсталляции драйвера <em>CAPT</em> (Canon Advanced Printing Technology) имеет свои особенности, отличные от стандартной установки принтеров HP или Epson. Запустите файл <code>setup.exe</code> из распакованной папки. Если установщик не запускается, кликните правой кнопкой мыши и выберите "Запуск от имени администратора". Следуйте инструкциям мастера установки, принимая лицензионное соглашение.</p>
+
+<p>На этапе выбора типа подключения выберите вариант <code>Локальное подключение (LPT)</code> или <code>USB</code>. Система автоматически просканирует порты. Если принтер еще не подключен, мастер установки предложит дождаться соединения. В этот момент подключите USB-кабель к принтеру и включите его в сеть. Индикатор "Go" на передней панели должен загореться зеленым или мигнуть.</p>
+
+<p>Иногда автоматическое обнаружение порта не срабатывает. В таком случае необходимо вручную создать виртуальный порт. Перейдите в <code>Панель управления → Принтеры и устройства</code>, выберите ваш принтер, нажмите "Свойства принтера" и перейдите на вкладку "Порты". Создайте новый порт типа <code>LPT1</code> или выберите существующий <code>USB001</code> (Виртуальный принтер для USB). Это критический шаг, так как без правильного порта <em>Canon LBP 3200</em> не сможет отправлять данные на печать.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Контроль процесса установки</h4><label class="check-item"><input type="checkbox"><span>Запуск от имени администратора</span></label><label class="check-item"><input type="checkbox"><span>Отключение USB-кабеля</span></label><label class="check-item"><input type="checkbox"><span>Выбор модели LBP 3250</span></label><label class="check-item"><input type="checkbox"><span>Подключение кабеля по запросу</span></label><label class="check-item"><input type="checkbox"><span>Проверка статуса LPT-порта</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="настройка-порта-и-проверка-работоспособности">Настройка порта и проверка работоспособности</h2>
+
+<p>После завершения установки драйвера необходимо убедиться, что принтер доступен системе. Откройте <code>Устройства и принтеры</code> в меню Пуск. Вы должны увидеть значок <em>Canon LBP 3200</em>. Если значок серого цвета, это означает, что порт выбран неверно или кабель не распознан. Кликните правой кнопкой мыши по иконке и выберите "Настройка печати".</p>
+
+<p>Проверьте, чтобы в разделе "Порт" был отмечен порт, соответствующий физическому подключению. Для USB-кабеля это обычно <code>USB00x</code> (где x — номер порта). Если порт <code>USB001</code> занят другим устройством или неактивен, создайте новый стандартный порт TCP/IP или LPT, хотя для USB-подключения предпочтительнее использовать виртуальный USB-порт.</p>
+
+<p>Для тестирования отправьте документ на печать, используя функцию "Пробная страница" в свойствах принтера. Если страница не выходит, проверьте статус службы печати. Введите команду <code>services.msc</code> в строке поиска Пуска и убедитесь, что служба <code>Диспетчер печати</code> (Print Spooler) запущена и имеет статус "Выполняется".</p>
+
+<details class="pb-accordion"><summary>Что делать, если порт USB не определяется?</summary><div class="pb-accordion-body"><p>Попробуйте переподключить кабель в другой USB-разъем, желательно USB 2.0 (черный), а не USB 3.0 (синий). Иногда старые драйверы конфликтовать с контроллерами USB 3.0. Также попробуйте обновить драйверы USB-контроллера в Диспетчере устройств.</p></div></details>
+
+<h3>Таблица совместимости драйверов и моделей:</h3>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Модель принтера</th>
+<th>Рекомендуемый драйвер</th>
+<th>Версия ОС</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Canon LBP 3200</em></td>
+<td>Canon CAPT 3.90</td>
+<td>Windows 7 x64</td>
+<td>Основная модель</td>
+</tr>
+<tr>
+<td><em>Canon LBP 3250</em></td>
+<td>Canon CAPT 3.90</td>
+<td>Windows 7 x64</td>
+<td>Полная совместимость</td>
+</tr>
+<tr>
+<td><em>Canon LBP 2900+</em></td>
+<td>Canon CAPT 3.80</td>
+<td>Windows 7 x64</td>
+<td>Риск конфликта версий</td>
+</tr>
+<tr>
+<td><em>Canon LBP 6000</em></td>
+<td>Canon CAPT 3.60</td>
+<td>Windows 7 x64</td>
+<td>Не рекомендуется</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>⚠️ Внимание: Если драйвер устанавливается, но принтер не печатает, проверьте, не заблокирован ли порт <code>LPT1</code> в BIOS. В некоторых случаях старые платы требуют отключения параллельного порта в настройках BIOS для корректной работы USB-эмуляции.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для ускорения печати и снижения нагрузки на процессор установите в свойствах принтера режим "Прямая печать" (Direct Print), если он доступен в разделе "Дополнительно". Это отключает очередь печати и отправляет данные напрямую в драйвер.</p></aside>
+
+<h2 id="решение-типичных-проблем-и-ошибок">Решение типичных проблем и ошибок</h2>
+
+<p>Частой проблемой при работе с <em>Canon LBP 3200</em> на Windows 7 является ошибка "Ожидание" или "Пауза" в статусе печати. Это может происходить из-за сбоя в работе службы <code>Print Spooler</code>. Попробуйте перезапустить службу через командную строку, введя <code>net stop spooler</code> и затем <code>net start spooler</code>. Это очистит очередь и перезапустит процесс обработки данных.</p>
+
+<p>Иногда пользователи сталкиваются с тем, что принтер печатает "кракозябры" или нечитаемые символы. Это верный признак того, что выбран неверный драйвер или порт. Убедитесь, что в настройках портов указан именно тот порт, к которому физически подключен кабель. Также проверьте, не установлен ли драйвер как "Generic / Text Only" по ошибке.</p>
+
+<p>Если принтер определяется как "Неизвестное устройство" в Диспетчере устройств, попробуйте удалить его оттуда, обновить конфигурацию оборудования и заново запустить мастер установки драйвера. В некоторых случаях помогает отключение фильтрации драйверов в реестре, но это требует навыков работы с системными настройками.</p>
+
+<h2 id="установка-через-диспетчер-устройств-вручную">Установка через Диспетчер устройств вручную</h2>
+
+<p>Альтернативный способ установки — через <code>Диспетчер устройств</code>. Если автоматический установщик не сработал, подключите принтер и дождитесь появления значка "Неизвестное устройство" в списке. Кликните по нему правой кнопкой мыши и выберите "Обновить драйверы".</p>
+
+<p>Выберите опцию "Выполнить поиск драйверов на этом компьютере", затем укажите путь к папке с распакованными файлами драйвера. Система просканирует файлы и предложит установить совместимый драйвер. Если система запросит подтверждение установки неподписанного драйвера, согласитесь с этим.</p>
+
+<p>После ручной установки принтер должен появиться в списке устройств. Проверьте его работоспособность, отправив тестовую страницу. Если процесс проходит успешно, можно переходить к настройке качества печати и разрешений в свойствах принтера.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Ручная установка драйвера через Диспетчер устройств часто эффективнее автоматического, если система не может корректно определить тип подключения.</p></aside>
+
+<h2 id="поддержка-и-обслуживание-оборудования">Поддержка и обслуживание оборудования</h2>
+
+<p>Для обеспечения стабильной работы <em>Canon LBP 3200</em> регулярно очищайте его от пыли и проверяйте состояние картриджа. Лазерные принтеры чувствительны к качеству бумаги и условиям эксплуатации. Используйте только сухую и чистую бумагу, чтобы избежать замятий и загрязнения термоузла.</p>
+
+<p>Если принтер используется редко, рекомендуется запускать его хотя бы раз в неделю на печать тестовой страницы. Это предотвратит засыхание фотобарабана и застревание тонера в механизме. Храните устройство в сухом месте, защищенном от прямых солнечных лучей.</p>
+
+<p>В случае серьезных неисправностей, таких как невозможность загрузки страницы или постоянные ошибки сенсоров, может потребоваться профессиональный ремонт. Не пытайтесь разбирать принтер самостоятельно, если не имеете соответствующего опыта, так как это может привести к повреждению чувствительных компонентов.</p>
+
+<h2 id="заключение">Заключение</h2>
+
+<p>Подключение <em>Canon LBP 3200</em> к Windows 7 x64 — задача выполнимая, несмотря на прекращение официальной поддержки. Ключ к успеху заключается в правильном выборе совместимого драйвера и ручной настройке порта. При соблюдении всех инструкций принтер будет работать стабильно и эффективно.</p>
+
+<p>Помните, что автоматические драйверы Windows не всегда подходят для специфических моделей Canon. Использование драйверов от близких моделей, таких как <em>LBP 3250</em>, часто является единственным решением. Тщательно проверяйте настройки портов и статус службы печати для избежания проблем.</p>
+
+<p>Следуйте рекомендациям по обслуживанию и регулярно проверяйте состояние оборудования. Это продлит срок службы принтера и обеспечит качественную печать документов в течение многих лет.</p>
+
+<details>
+<summary>Как узнать, какая версия драйвера установлена?</summary>
+<p>Откройте "Устройства и принтеры", кликните правой кнопкой на принтере, выберите "Свойства принтера" и перейдите на вкладку "Драйвер". Там будет указана версия и дата выпуска установленного драйвера.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать драйвер от Windows 10 на Windows 7?</summary>
+<p>Нет, это не рекомендуется. Драйверы для Windows 10 могут не поддерживать ядро Windows 7 и вызвать конфликты системы. Используйте драйверы, предназначенные именно для Windows 7 x64.</p>
+</details>
+
+<details>
+<summary>Что делать, если принтер печатает пустые страницы?</summary>
+<p>Проверьте наличие тонера в картридже и правильность его установки. Также убедитесь, что фотобарабан не заблокирован защитной лентой. Возможно, требуется замена картриджа.</p>
+</details>
+
+<details>
+<summary>Как очистить очередь печати, если документ завис?</summary>
+<p>Откройте "Устройства и принтеры", дважды кликните на принтере, выберите "Конструктор" в меню и нажмите "Очистить очередь печати". Если не помогло, перезапустите службу "Диспетчер печати".</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-nastroit-tsvet-na-printere-canon-g2415.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить цвет на принтере Canon PIXMA G2415: Инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по калибровке и настройке цвета на Canon G2415. Настройка через драйвер, панел</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-k-vaj-faj-canon-pixma-g3410.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon Pixma G3410 к Wi-Fi: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка беспроводной сети для Canon Pixma G3410. Методы WPS, кнопка и через программу. Р</span>
+            </a><a href="/articles/c/ca/canon-mf3110-kak-ustanovit-na-windows-10-64-bit.html" class="pb-related-card">
+                <span class="pb-related-title">Установка Canon MF3110 на Windows 10 64 bit: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Полное руководство по драйверу Canon MF3110 для Windows 10. Решаем проблемы совместимости, скачиваем</span>
+            </a><a href="/articles/k/ka/kak-polzovatsya-printerom-canon-pixma-mp250.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться принтером Canon Pixma MP250: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по эксплуатации МФУ Canon Pixma MP250. Настройка печати, сканирования, копиров</span>
+            </a><a href="/articles/a/ai/airprint-chto-eto-v-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">AirPrint в принтерах Canon: что это и как работает в 2026 году</span>
+                <span class="pb-related-desc">Разбираемся, что такое AirPrint в принтерах Canon: принцип работы, совместимые модели, настройка с i</span>
+            </a><a href="/articles/g/gd/gde-nakhodyatsya-kartridzhi-v-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Где находятся картриджи в принтере Canon: точное расположение и замена</span>
+                <span class="pb-related-desc">Узнайте, где находятся картриджи в принтерах Canon. Пошаговая инструкция по доступу, замене и устран</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Подключение принтера Canon к программе Гелиос: Полная инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговое руководство по настройке принтеров Canon в системе Гелиос-ЭДО и Гелиос-АРМ. Настройка драйверов, портов и устранение ошибок печати.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-podklyuchit-gelios-k-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Подключение принтера Canon к программе Гелиос: Полная инструкция">
+    <meta property="og:description" content="Пошаговое руководство по настройке принтеров Canon в системе Гелиос-ЭДО и Гелиос-АРМ. Настройка драйверов, портов и устранение ошибок печати.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Подключение принтера Canon к программе Гелиос: Полная инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-операционной-системы-и-драйверов">Подготовка операционной системы и драйверов</a></li><li><a href="#настройка-портов-и-сетевых-подключений">Настройка портов и сетевых подключений</a></li><li><a href="#интеграция-в-модуль-гелиос-арм">Интеграция в модуль Гелиос-АРМ</a></li><li><a href="#специфика-печати-документов-эдо">Специфика печати документов ЭДО</a></li><li><a href="#устранение-распространенных-ошибок">Устранение распространенных ошибок</a></li><li><a href="#таблица-совместимости-драйверов">Таблица совместимости драйверов</a></li><li><a href="#дополнительные-настройки-безопасности">Дополнительные настройки безопасности</a></li><li><a href="#итоговые-рекомендации">Итоговые рекомендации</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-klast-fotobumagu-v-printer-canon.html">Как правильно класть фотобумагу в принтер Canon: пошаговая инструкция</a></li><li><a href="/articles/k/ku/kuda-v-printer-vstavlyaetsya-bumaga-canon.html">Куда вставляется бумага в принтер Canon: полная инструкция по лоткам</a></li><li><a href="/articles/k/ka/kak-ustanovit-drajver-na-printer-canon-pixma-mg2540s.html">Как установить драйвер на принтер Canon Pixma MG2540s: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-raspechatat-testovuyu-stranitsu-na-printere-canon-lbp-2900.html">Как распечатать тестовую страницу на Canon LBP 2900: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-napechatat-s-telefona-na-printer-canon.html">Как печатать с телефона на принтер Canon: 5 способов (Wi-Fi, USB, облако)</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как подключить принтер Canon к системе Гелиос: Пошаговая настройка</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-операционной-системы-и-драйверов">Подготовка операционной системы и драйверов</a></li><li><a href="#настройка-портов-и-сетевых-подключений">Настройка портов и сетевых подключений</a></li><li><a href="#интеграция-в-модуль-гелиос-арм">Интеграция в модуль Гелиос-АРМ</a></li><li><a href="#специфика-печати-документов-эдо">Специфика печати документов ЭДО</a></li><li><a href="#устранение-распространенных-ошибок">Устранение распространенных ошибок</a></li><li><a href="#таблица-совместимости-драйверов">Таблица совместимости драйверов</a></li><li><a href="#дополнительные-настройки-безопасности">Дополнительные настройки безопасности</a></li><li><a href="#итоговые-рекомендации">Итоговые рекомендации</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Интеграция офисной периферии в сложные учетные системы часто вызывает вопросы у администраторов и бухгалтеров. Принтеры марки <em>Canon</em> пользуются большой популярностью благодаря надежности, но их корректная работа в среде <strong>Гелиос</strong> требует специфических манипуляций.</p>
+
+<p>Системы <em>Гелиос-АРМ</em> и <em>Гелиос-ЭДО</em> выступают надстройкой над операционной системой, поэтому прямой связи между программой и устройством не существует — весь трафик идет через стандартный драйвер печати Windows (или Linux). Если печать не запускается, проблема почти всегда кроется в настройке очереди печати или выборе правильного драйвера.</p>
+
+<p>Необходимо понимать, что <strong>Гелиос</strong> не имеет собственных драйверов для оборудования. Он лишь отправляет команду на печать, которую перехватывает стандартный интерфейс ОС. Именно поэтому первостепенной задачей является проверка работоспособности устройства вне интерфейса бухгалтерской программы.</p>
+
+<h2 id="подготовка-операционной-системы-и-драйверов">Подготовка операционной системы и драйверов</h2>
+
+<p>Первый этап настройки — обеспечение стабильного взаимодействия между <strong>Windows</strong> и аппаратной частью устройства. Убедитесь, что на компьютере установлены последние версии ПО для вашей модели. Официальный сайт <em>Canon</em> предоставляет специализированные драйверы, которые лучше, чем универсальные версии из Центра обновлений.</p>
+
+<p>Для принтеров серии <code>imageRUNNER</code> или <code>PIXMA</code> скачайте пакет <strong>UFRII LT</strong> — это наиболее совместимый драйвер для корпоративной среды. Если вы используете устаревшие модели, проверьте наличие поддержки <strong>PCL6</strong>, так как некоторые версии <em>Гелиос</em> генерируют данные именно в этом формате.</p>
+
+<p>Важно проверить статус <strong>очереди печати</strong> в системе. Зайдите в <code>Панель управления → Устройства и принтеры</code> и убедитесь, что устройство не переведено в режим «Работать автономно». Также проверьте, нет ли зависших заданий, которые блокируют доступ для новых файлов из системы.</p>
+
+<h2 id="настройка-портов-и-сетевых-подключений">Настройка портов и сетевых подключений</h2>
+
+<p>Если принтер подключен по сети (Wi-Fi или Ethernet), критически важно правильно настроить <strong>стандартный TCP/IP порт</strong>. Ошибки в IP-адресе или выбор порта LPT вместо сетевого — частые причины сбоя при отправке чеков или накладных из <em>Гелиос</em>.</p>
+
+<p>Зайдите в свойства принтера и перейдите на вкладку «Порты». Вы должны увидеть галочку напротив адреса, совпадающего с реальным IP вашего устройства <em>Canon</em>. Если порт не найден, нажмите «Добавить порт» и выберите <strong>Standard TCP/IP Port</strong>.</p>
+
+<ul>
+<li>Нажмите кнопку <code>Добавить порт</code> в списке доступных портов.</li>
+<li>Введите статический <strong>IP-адрес</strong> устройства, чтобы избежать переподключения при перезагрузке.</li>
+<li>Убедитесь, что <strong>SNMP-статус</strong> включен, если вы хотите видеть уровень тонера в системе.</li>
+</ul>
+
+<blockquote>⚠️ Внимание: Неправильно настроенный SNMP-порт может привести к тому, что система <em>Гелиос</em> будет считать принтер «недоступным», даже если он физически исправен и печатает тестовые страницы из Windows.</blockquote>
+
+<h2 id="интеграция-в-модуль-гелиос-арм">Интеграция в модуль Гелиос-АРМ</h2>
+
+<p>После настройки драйвера в Windows необходимо проверить, видит ли модуль <em>Гелиос-АРМ</em> принтер. Для этого откройте программу и перейдите в раздел настроек <strong>печати документов</strong>. Здесь можно выбрать устройство по умолчанию или задать индивидуальную привязку для конкретных типов отчетов.</p>
+
+<p>В некоторых конфигурациях <strong>Гелиос</strong> требует явного указания имени принтера, которое должно в точности совпадать с именем в Windows. Проверьте регистр букв и наличие пробелов, так как скрипты печати чувствительны к этим параметрам. Несоответствие имени приведет к ошибке «Устройство не найдено».</p>
+
+<p>Для многосерверных конфигураций, где печать идет через терминальный сервер, настройка осуществляется на сервере. Локальный терминал пользователя лишь отображает интерфейс, но физическая печать происходит на сервере. Убедитесь, что <strong>перенаправление принтеров</strong> включено в настройках RDP-сессии.</p>
+
+<div class="pb-poll" id="poll-10df0264"><div class="pb-poll-question">📊 Как вы обычно подключаете принтер?</div><div class="pb-poll-option" data-poll="10df0264" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">USB-кабель</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="10df0264" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Сетевое подключение (Ethernet)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="10df0264" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Wi-Fi</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="10df0264" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Через терминальный сервер</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="специфика-печати-документов-эдо">Специфика печати документов ЭДО</h2>
+
+<p>При работе с <em>Гелиос-ЭДО</em> часто возникают требования к печати в определенном масштабе или на конкретных типах бумаги. Документ, отправленный на <strong>Canon</strong>, может содержать сложные шрифты или графические элементы, которые требуют рендеринга драйвером в высоком разрешении.</p>
+
+<p>В настройках драйвера <em>Canon</em> рекомендуется отключить функцию <strong>экономии тонера</strong> для официальных счетов-фактур. Это обеспечит четкость текста и штрих-кодов, необходимых для автоматического считывания контрагентами. Также проверьте ориентацию страницы, если формат документа отличается от А4.</p>
+
+<p>Иногда система <strong>Гелиос</strong> генерирует PDF-файл, который передается на печать через встроенный просмотрщик. В этом случае настройка происходит не в драйвере принтера, а в настройках самого PDF-просмотрщика, который используется в конфигурации <em>Гелиос</em>.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Чек-лист перед печатью первички</h4><label class="check-item"><input type="checkbox"><span>Проверить наличие бумаги</span></label><label class="check-item"><input type="checkbox"><span>Убедиться, что драйвер UFRII установлен</span></label><label class="check-item"><input type="checkbox"><span>Проверить статус сети</span></label><label class="check-item"><input type="checkbox"><span>Отключить экономию тонера</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="устранение-распространенных-ошибок">Устранение распространенных ошибок</h2>
+
+<p>Самая частая проблема — сообщение об ошибке при отправке документа. В этом случае проверьте лог очереди печати. Если задание застревает на этапе «Ожидание печати», проблема скорее всего в драйвере или драйверном фильтре, который не может обработать данные из <em>Гелиос</em>.</p>
+
+<p>Попробуйте переустановить принтер, удалив его полностью и добавив заново. Иногда помогает смена драйвера на совместимый (например, с <strong>UFRII</strong> на <strong>PostScript</strong>), если текущий вызывает конфликты с библиотеками печати системы.</p>
+
+<details class="pb-accordion"><summary>Что делать, если печать зависла?</summary><div class="pb-accordion-body"><p>Очистите очередь печати в Windows, перезапустите службу «Диспетчер печати» и попробуйте отправить документ снова. Если проблема повторяется — удалите принтер и добавьте его заново, используя другой порт.</p></div></details>
+
+<p>Убедитесь, что у текущего пользователя есть права на <strong>управление очередями печати</strong>. В корпоративных сетях это часто ограничено групповыми политиками, и простое добавление устройства в Windows не гарантирует возможности печати из специализированного ПО.</p>
+
+<h2 id="таблица-совместимости-драйверов">Таблица совместимости драйверов</h2>
+
+<p>Ниже приведена сводная таблица рекомендуемых драйверов для основных серий устройств <em>Canon</em>, используемых в связке с <strong>Гелиос</strong>.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Серия устройств</th>
+<th>Рекомендуемый драйвер</th>
+<th>Тип подключения</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>imageRUNNER</td>
+<td>UFRII LT</td>
+<td>Сеть / USB</td>
+<td>Оптимально для офисной печати</td>
+</tr>
+<tr>
+<td>imagePRESS</td>
+<td>UFRII II</td>
+<td>Сеть</td>
+<td>Высокая скорость обработки</td>
+</tr>
+<tr>
+<td>PIXMA</td>
+<td>IJ Printer Driver</td>
+<td>USB / Wi-Fi</td>
+<td>Для печати чеков и этикеток</td>
+</tr>
+<tr>
+<td>imageRUNNER ADVANCE</td>
+<td>UFRII LT / PCL6</td>
+<td>Сеть</td>
+<td>Поддержка сложных форматов</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="дополнительные-настройки-безопасности">Дополнительные настройки безопасности</h2>
+
+<p>В корпоративной среде <strong>Гелиос</strong> часто требует аутентификации перед печатью. Настройте <strong>карты доступа</strong> или ввод PIN-кода на панели управления <em>Canon</em>. Это позволит убедиться, что конфиденциальные отчеты не будут напечатаны посторонними лицами, если вы отошли от устройства.</p>
+
+<p>Проверьте настройки <strong>шифрования</strong> данных при передаче по сети. Если вы используете защищенные каналы связи, убедитесь, что драйвер принтера поддерживает протокол SSL/TLS для передачи заданий, иначе соединение может быть заблокировано межсетевым экраном.</p>
+
+<blockquote>⚠️ Внимание: Если вы обновляете систему <em>Гелиос</em> до новой версии, проверьте совместимость драйверов <strong>Canon</strong> с обновленным ядром системы перед запуском процесса, чтобы избежать сбоев печати в критический момент.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед настройкой печати в Гелиос выполните тестовую печать из «Блокнота» или «Браузера» — если страница не печатается из простых программ, проблема не в бухгалтерской системе, а в настройках ОС или самого принтера.</p></aside>
+
+<blockquote>⚠️ Внимание: Параметры сетевых интерфейсов и версии драйверов могут меняться вендором. Всегда сверяйте актуальные требования к ПО на официальном портале поддержки <em>Canon</em> или в документации вашей версии <strong>Гелиос</strong>.</blockquote>
+
+<h2 id="итоговые-рекомендации">Итоговые рекомендации</h2>
+
+<p>Правильная настройка <strong>Canon</strong> в <em>Гелиос</em> — это последовательный процесс проверки каждого звена цепи: от физического кабеля до настроек драйвера и прав доступа. Не пытайтесь сразу настраивать параметры внутри бухгалтерской программы, если устройство не печатает даже простые тестовые страницы из Windows.</p>
+
+<p>Используйте <strong>статические IP-адреса</strong> для сетевых принтеров, чтобы избежать проблем при переподключении. Это особенно важно для серверных версий <em>Гелиос</em>, где сеть может быть сложной и многоуровневой.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главная задача при настройке — обеспечить стабильное взаимодействие драйвера Windows и сети. Гелиос лишь отправляет команду, а физическую печать выполняет ОС через корректно настроенный порт.</p></aside>
+
+<details>
+<summary>Почему принтер Canon не печатает документы из Гелиос, но печатает тестовую страницу?</summary>
+<p>Скорее всего, в системе <strong>Гелиос</strong> выбран неверный принтер по умолчанию или у пользователя нет прав на отправку заданий в конкретную очередь. Проверьте настройки в разделе «Параметры печати» внутри программы.</p>
+</details>
+
+<details>
+<summary>Какой драйвер лучше выбрать: UFRII или PCL6?</summary>
+<p>Для большинства задач в <em>Гелиос</em> лучше подходит драйвер <strong>UFRII</strong>, так как он оптимизирован для быстрой обработки текстовых данных и таблиц. PCL6 может потребоваться, если вы печатаете сложные графики или специфические формы.</p>
+</details>
+
+<details>
+<summary>Как настроить печать по сети для нескольких компьютеров?</summary>
+<p>Необходимо подключить принтер к сети по <strong>Ethernet</strong> и назначить ему статический IP. На каждом компьютере добавьте этот принтер через «Добавить порт TCP/IP». Это позволит всем пользователям видеть одно устройство в системе.</p>
+</details>
+
+<details>
+<summary>Что делать, если Гелиос пишет «Ошибка печати» при отправке?</summary>
+<p>Проверьте очередь печати на наличие зависших заданий. Если они есть — очистите очередь. Затем убедитесь, что служба «Диспетчер печати» запущена в Windows и драйвер не требует перезапуска.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-klast-fotobumagu-v-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как правильно класть фотобумагу в принтер Canon: пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как загрузить глянцевую и матовую фотоборму в принтеры Canon. Инструкция по настройке драйв</span>
+            </a><a href="/articles/k/ku/kuda-v-printer-vstavlyaetsya-bumaga-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Куда вставляется бумага в принтер Canon: полная инструкция по лоткам</span>
+                <span class="pb-related-desc">Подробное руководство: куда вставлять бумагу в принтеры Canon. Разбор лотков, настройки размеров, ус</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-drajver-na-printer-canon-pixma-mg2540s.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить драйвер на принтер Canon Pixma MG2540s: пошаговая инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по установке драйвера для Canon Pixma MG2540s. Скачивание с официального сайта</span>
+            </a><a href="/articles/k/ka/kak-raspechatat-testovuyu-stranitsu-na-printere-canon-lbp-2900.html" class="pb-related-card">
+                <span class="pb-related-title">Как распечатать тестовую страницу на Canon LBP 2900: пошаговая инструкция</span>
+                <span class="pb-related-desc">Полное руководство по проверке печати на Canon LBP 2900. Узнайте, как вывести тестовый лист через Wi</span>
+            </a><a href="/articles/k/ka/kak-napechatat-s-telefona-na-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как печатать с телефона на принтер Canon: 5 способов (Wi-Fi, USB, облако)</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению принтера Canon к смартфону на Android/iOS. Настройка Wi-Fi, Dire</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-canon-pixma-k-telefonu.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon Pixma к телефону: Полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению принтеров Canon Pixma к смартфонам через Wi-Fi, Cloud и прямое с</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

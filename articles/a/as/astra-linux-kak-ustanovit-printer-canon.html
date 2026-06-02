@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как установить принтер Canon на Astra Linux: пошаговая инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Подробное руководство по установке принтеров Canon в Astra Linux: драйвера, настройки CUPS, решение проблем. Подходит для моделей MF, LBP, PIXMA.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/a/as/astra-linux-kak-ustanovit-printer-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как установить принтер Canon на Astra Linux: пошаговая инструкция">
+    <meta property="og:description" content="Подробное руководство по установке принтеров Canon в Astra Linux: драйвера, настройки CUPS, решение проблем. Подходит для моделей MF, LBP, PIXMA.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как установить принтер Canon на Astra Linux: пошаговая инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#1-подготовка-системы-что-нужно-сделать-до-установки-принтера">1. Подготовка системы: что нужно сделать до установки принтера</a></li><li><a href="#2-поиск-и-установка-драйверов-для-canon">2. Поиск и установка драйверов для Canon</a></li><li><a href="#3-настройка-принтера-через-cups">3. Настройка принтера через CUPS</a></li><li><a href="#4-решение-типичных-ошибок-при-установке">4. Решение типичных ошибок при установке</a></li><li><a href="#5-настройка-сканера-для-мфу-canon">5. Настройка сканера (для МФУ Canon)</a></li><li><a href="#6-оптимизация-печати-настройки-качества-и-экономии">6. Оптимизация печати: настройки качества и экономии</a></li><li><a href="#7-альтернативные-способы-подключения">7. Альтернативные способы подключения</a></li><li><a href="#8-обновление-прошивки-принтера">8. Обновление прошивки принтера</a></li><li><a href="#faq-частые-вопросы-по-установке-canon-в-astra-linux">FAQ: Частые вопросы по установке Canon в Astra Linux</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ca/canon-bjc-50-kak-podklyuchit.html">Canon BJC-50: как подключить и настроить принтер к ПК</a></li><li><a href="/articles/k/ka/kak-ustanovit-drajver-na-printer-canon-lbp-1120-dlya-windows-7-64-bit.html">Установка драйвера Canon LBP 1120 на Windows 7 64 bit: Пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-mg3640-k-wifi-telefonu.html">Подключение Canon MG3640 к WiFi и телефону: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-vklyuchit-wifi-na-printere-canon-mg3640.html">Как подключить Canon MG3640 к Wi-Fi: 3 рабочих способа</a></li><li><a href="/articles/k/ka/kak-nastroit-tsvetovoj-profil-na-printere-canon.html">Настройка цветового профиля на принтере Canon: пошаговая инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Установка принтера Canon в Astra Linux: от драйверов до печати</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#1-подготовка-системы-что-нужно-сделать-до-установки-принтера">1. Подготовка системы: что нужно сделать до установки принтера</a></li><li><a href="#2-поиск-и-установка-драйверов-для-canon">2. Поиск и установка драйверов для Canon</a></li><li><a href="#3-настройка-принтера-через-cups">3. Настройка принтера через CUPS</a></li><li><a href="#4-решение-типичных-ошибок-при-установке">4. Решение типичных ошибок при установке</a></li><li><a href="#5-настройка-сканера-для-мфу-canon">5. Настройка сканера (для МФУ Canon)</a></li><li><a href="#6-оптимизация-печати-настройки-качества-и-экономии">6. Оптимизация печати: настройки качества и экономии</a></li><li><a href="#7-альтернативные-способы-подключения">7. Альтернативные способы подключения</a></li><li><a href="#8-обновление-прошивки-принтера">8. Обновление прошивки принтера</a></li><li><a href="#faq-частые-вопросы-по-установке-canon-в-astra-linux">FAQ: Частые вопросы по установке Canon в Astra Linux</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p><em>Astra Linux</em> — отечественная операционная система на базе ядра <strong>Linux</strong>, широко используемая в госсекторе, образовании и бизнесе. Однако ее специфика часто вызывает вопросы у пользователей, особенно когда речь идет о подключении периферийных устройств. Принтеры <em>Canon</em> — одни из самых популярных на рынке, но их установка в <em>Astra Linux</em> может превратиться в настоящий квест: от поиска совместимых драйверов до ручной настройки <code>CUPS</code>.</p>
+
+<p>В этой статье мы разберем все этапы — от подготовки системы до тестовой печати, включая решения типичных ошибок. Особое внимание уделим моделям <em>Canon LBP</em> (лазерные), <em>PIXMA</em> (струйные) и <em>imageCLASS MF</em> (многофункциональные), так как их настройка имеет ключевые различия. Если вы столкнулись с сообщением <code>"Притер не найден"</code> или <code>"Фильтр failed"</code> — здесь вы найдете ответы.</p>
+
+<p>Важно: процесс может отличаться в зависимости от версии <em>Astra Linux</em> (например, <em>Common Edition</em> vs <em>Special Edition</em>) и модели принтера. Мы ориентируемся на актуальные версии систем (2023–2026 гг.), но для критичных задач уточняйте детали в <a href="https://wiki.astralinux.ru/" target="_blank">официальной документации</a>.</p>
+
+<h2 id="1-подготовка-системы-что-нужно-сделать-до-установки-принтера">1. Подготовка системы: что нужно сделать до установки принтера</h2>
+
+<p>Перед подключением принтера <em>Canon</em> необходимо убедиться, что система готова к работе с периферией. Пропуск этого этапа часто приводит к ошибкам вроде <code>"lpadmin: Unable to copy PPD file"</code> или отсутствию устройства в списке <code>CUPS</code>.</p>
+
+<p>Первое — проверьте подключение принтера к компьютеру или сети:</p>
+<ul>
+  <li>🖨️ Для <strong>USB-подключения</strong>: используйте оригинальный кабель (дешевые аналоги могут не передавать данные корректно). Порт USB должен быть исправен — попробуйте подключить другое устройство (например, флешку) для проверки.</li>
+  <li>🌐 Для <strong>сетевого принтера</strong>: убедитесь, что устройство и компьютер находятся в одной подсети. Проверьте IP-адрес принтера (обычно печатается на тестовой странице или отображается на дисплее).</li>
+  <li>🔌 Для <strong>Wi-Fi</strong>: принтер должен быть подключен к той же сети, что и компьютер. На некоторых моделях <em>Canon PIXMA</em> для этого требуется нажать кнопку <code>WPS</code> на роутере и принтере одновременно.</li>
+</ul>
+
+<p>Второе — обновите систему и установите необходимые пакеты. В <em>Astra Linux</em> это делается через терминал:</p>
+<pre><code>sudo apt update && sudo apt upgrade -y
+<p>sudo apt install cups printer-driver-all hplip</code></pre></p>
+
+<p>Третье — добавьте пользователя в группу <code>lpadmin</code>, чтобы он мог управлять принтерами:</p>
+<pre><code>sudo usermod -aG lpadmin $USER</code></pre>
+
+<blockquote>⚠️ <strong>Внимание:</strong> После добавления в группу <code>lpadmin</code> требуется перезагрузка системы или выход/вход из текущей сессии. Иначе права не применятся.</blockquote>
+
+<div class="pb-poll" id="poll-d769ff24"><div class="pb-poll-question">📊 Какой тип подключения принтера вы используете?</div><div class="pb-poll-option" data-poll="d769ff24" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">USB</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d769ff24" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Сетевой (Ethernet)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d769ff24" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Wi-Fi</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d769ff24" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Другой</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="2-поиск-и-установка-драйверов-для-canon">2. Поиск и установка драйверов для Canon</h2>
+
+<p>Основная проблема при установке принтеров <em>Canon</em> в <em>Astra Linux</em> — отсутствие официальных драйверов для Linux. Компания <em>Canon</em> предоставляет ПО только для <em>Windows</em> и <em>macOS</em>, поэтому приходится использовать альтернативные решения:</p>
+
+<ul>
+  <li>📦 <strong>Драйвера из репозиториев</strong>: пакеты <code>printer-driver-gutenprint</code> и <code>printer-driver-foo2zjs</code> покрывают многие модели струйных и лазерных принтеров. Установите их командой:
+    <pre><code>sudo apt install printer-driver-gutenprint printer-driver-foo2zjs</code></pre>
+  </li>
+  <li>🖼️ <strong>PPD-файлы от Canon</strong>: для некоторых моделей (например, <em>LBP6030</em> или <em>MF4410</em>) можно скачать <code>.ppd</code>-файлы с сайта <a href="https://www.canon.ru/" target="_blank">Canon</a> (раздел "Поддержка") и загрузить их вручную через <code>CUPS</code>.</li>
+  <li>🐧 <strong>Драйвера от сообщества</strong>: проекты вроде <a href="https://github.com/pdewacht/capt-driver" target="_blank">CAPT</a> (для лазерных принтеров) или <a href="https://github.com/michaelrsweet/pappl" target="_blank">PAPPL</a> (универсальный бэкенд) могут помочь с поддержкой новых моделей.</li>
+</ul>
+
+<p>Для моделей <em>Canon LBP</em> (например, <em>LBP6020</em>, <em>LBP6230</em>) часто требуется драйвер <code>cndrvcups</code>, который можно найти в репозиториях или собрать из исходников. Установка:</p>
+<pre><code>sudo apt install libglade2-0 libcapt4
+<p>wget https://gdlp01.c-wss.com/gds/7/0100006377/01/cnljfilter2-5.60-1-rpm.tar.gz</p>
+<p>tar -xzf cnljfilter2-5.60-1-rpm.tar.gz</p>
+<p>cd cnljfilter2-5.60-1-rpm/64-bit_Driver/RPM/</p>
+<p>sudo alien --scripts cndrvcups*.rpm</p>
+<p>sudo dpkg -i cndrvcups*.deb</code></pre></p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Драйвера от <em>Canon</em> для Linux часто поставляются в формате <code>.rpm</code>. Для их установки в <em>Astra Linux</em> (Debian-основа) используйте утилиту <code>alien</code>. Если ее нет, установите командой <code>sudo apt install alien</code>.</blockquote>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Модель принтера</th>
+      <th>Рекомендуемый драйвер</th>
+      <th>Примечания</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>Canon PIXMA MG2540</em>, <em>MG3640</em></td>
+      <td><code>gutenprint</code> или <code>cnijfilter2</code></td>
+      <td>Для сканера потребуется <code>sane</code> + <code>sane-airscan</code></td>
+    </tr>
+    <tr>
+      <td><em>Canon LBP6030</em>, <em>LBP6230</em></td>
+      <td><code>cndrvcups</code> + <code>capt</code></td>
+      <td>Требуется ручная установка <code>.ppd</code>-файла</td>
+    </tr>
+    <tr>
+      <td><em>Canon imageCLASS MF244dw</em></td>
+      <td><code>foo2zjs</code> или <code>pappl</code></td>
+      <td>Поддержка сети через <code>dnssd</code> или статический IP</td>
+    </tr>
+    <tr>
+      <td><em>Canon SELPHY CP1300</em></td>
+      <td><code>gutenprint</code> + <code>libusb</code></td>
+      <td>Требуется режим <code>PTP</code> (как фотоаппарат)</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если ваша модель принтера не поддерживается ни одним из перечисленных драйверов, попробуйте использовать универсальный драйвер <code>PostScript</code> (выбирается в <code>CUPS</code> как "Generic PostScript Printer"). Это может дать базовую функциональность, но без поддержки всех возможностей устройства.</p></aside>
+
+<h2 id="3-настройка-принтера-через-cups">3. Настройка принтера через CUPS</h2>
+
+<p><code>CUPS</code> (Common Unix Printing System) — стандартная система печати в Linux, включая <em>Astra Linux</em>. Она предоставляет веб-интерфейс для управления принтерами, что упрощает настройку. Вот как добавить принтер <em>Canon</em>:</p>
+
+<ol>
+  <li>Откройте браузер и перейдите по адресу:
+    <pre><code>http://localhost:631</code></pre>
+<p>Если <code>CUPS</code> не запущен, активируйте его командой:</p>
+    <pre><code>sudo systemctl start cups</code></pre>
+  </li>
+  <li>Перейдите в раздел <code>Administration → Add Printer</code>. Система запросит логин/пароль — используйте данные вашего пользователя с правами <code>lpadmin</code>.</li>
+  <li>Выберите ваш принтер из списка обнаруженных устройств. Если принтер не отображается:
+    <ul>
+      <li>Для <strong>USB</strong>: проверьте вывод команды <code>lsusb</code> (должно отобразиться устройство <em>Canon</em>).</li>
+      <li>Для <strong>сети</strong>: введите IP-адрес принтера вручную (формат <code>socket://192.168.1.100</code>).</li>
+    </ol>
+  </li>
+  <li>Укажите модель принтера. Если вашей модели нет в списке, выберите <code>Provide PPD file</code> и загрузите файл, скачанный ранее.</li>
+  <li>Настройте параметры по умолчанию (разрешение, дуплекс, цветной режим) и сохраните.</li>
+</ul>
+
+<p>После добавления принтера рекомендуется распечатать тестовую страницу (<code>Maintenance → Print Test Page</code>). Если страница не печатается, проверьте:</p>
+<ul>
+  <li>🔌 Состояние очереди печати (<code>http://localhost:631/printers</code>): ошибки будут отмечены красным.</li>
+  <li>📄 Права на файл <code>/etc/cups/printers.conf</code> (должны быть <code>rw-r--r--</code>).</li>
+  <li>🔄 Логи <code>CUPS</code> (<code>/var/log/cups/error_log</code>) на предмет ошибок вроде <code>"Unable to locate printer"</code>.</li>
+</ul>
+
+
+<p>Подключен ли принтер к питанию и компьютеру/сети?|Установлены ли драйвера для конкретной модели?|Принтер отображается в <code>http://localhost:631</code>?|Пользователь добавлен в группу <code>lpadmin</code>?|Очередь печати не содержит зависших задач?--></p>
+
+<h2 id="4-решение-типичных-ошибок-при-установке">4. Решение типичных ошибок при установке</h2>
+
+<p>Даже при правильной настройке принтеры <em>Canon</em> в <em>Astra Linux</em> могут выдавать ошибки. Рассмотрим самые распространенные и способы их устранения:</p>
+
+<h3>Ошибка: "Filter failed" или "Unable to locate printer"</h3>
+<p>Причина: <code>CUPS</code> не может найти фильтр для обработки задания печати. Это происходит, если:</p>
+<ul>
+  <li>Драйвер установлен не полностью (отсутствуют зависимости).</li>
+  <li>Неправильно указан <code>PPD</code>-файл.</li>
+  <li>Принтер подключен по USB, но система его не видит (<code>lsusb</code> не показывает устройство).</li>
+</ul>
+<p>Решение:</p>
+<ol>
+  <li>Переустановите драйвер с зависимостями:
+    <pre><code>sudo apt --reinstall install printer-driver-gutenprint</code></pre>
+  </li>
+  <li>Проверьте, что принтер определяется системой:
+    <pre><code>lsusb | grep -i canon</code></pre>
+<p>Если вывод пустой — проблема в USB-подключении (кабель, порт, питание).</p>
+  </li>
+  <li>Удалите и добавьте принтер заново через <code>CUPS</code>, выбрав другой <code>PPD</code>-файл.</li>
+</ol>
+
+<h3>Ошибка: "Client-Error-Not-Found" при сетевой печати</h3>
+<p>Причина: <code>CUPS</code> не может подключиться к сетевому принтеру. Чаще всего это связано с:</p>
+<ul>
+  <li>Неправильным IP-адресом (принтер переподключился к сети).</li>
+  <li>Блокировкой портов брандмауэром (<code>ufw</code> или <code>iptables</code>).</li>
+  <li>Отключенным протоколом <code>LPD</code>/<code>IPP</code> на принтере.</li>
+</ul>
+<p>Решение:</p>
+<ol>
+  <li>Проверьте IP-адрес принтера (распечатайте страницу настроек с панели управления).</li>
+  <li>Откройте порты для печати:
+    <pre><code>sudo ufw allow 631/tcp  # CUPS
+<p>sudo ufw allow 515/tcp  # LPD</code></pre></p>
+  </li>
+  <li>На принтере включите протоколы <code>LPD</code> или <code>IPP</code> (в меню <code>Network Settings</code>).</li>
+</ol>
+
+<h3>Ошибка: "Unable to copy PPD file"</h3>
+<p>Причина: недостаточно прав для копирования файла <code>.ppd</code> в директорию <code>/etc/cups/ppd/</code>.</p>
+<p>Решение:</p>
+<pre><code>sudo chown -R root:lpadmin /etc/cups/
+<p>sudo chmod -R 755 /etc/cups/</code></pre></p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Если принтер <em>Canon</em> подключен по Wi-Fi и периодически "исчезает" из системы, проверьте настройки энергосбережения на роутере. Некоторые модели отключают порт USB или снижают мощность передачи данных для экономии энергии, что приводит к разрыву соединения.</blockquote>
+
+<details class="pb-accordion"><summary>Как сбросить настройки принтера Canon к заводским?</summary><div class="pb-accordion-body"><p>
+<p>Для большинства моделей <em>Canon</em> сброс выполняется так:</p>
+<p>1. Выключите принтер.</p>
+<p>2. Зажмите кнопку <code>Stop/Reset</code> (или <code>Menu</code> для МФУ) и удерживайте 10–15 секунд, затем включите питание.</p>
+<p>3. Отпустите кнопку после мигания индикаторов.</p>
+<p>Для сетевых принтеров после сброса потребуется повторная настройка IP-адреса.</p>
+<p></p></div></details></p>
+
+<h2 id="5-настройка-сканера-для-мфу-canon">5. Настройка сканера (для МФУ Canon)</h2>
+
+<p>Если ваш принтер <em>Canon</em> — многофункциональное устройство (например, <em>PIXMA MG3640</em> или <em>imageCLASS MF244dw</em>), для работы сканера потребуется дополнительная настройка. В <em>Astra Linux</em> это делается через пакет <code>SANE</code> (Scanner Access Now Easy).</p>
+
+<p>Установите необходимые пакеты:</p>
+<pre><code>sudo apt install sane sane-utils libsane-extras</code></pre>
+
+<p>Проверьте, обнаруживает ли система сканер:</p>
+<pre><code>scanimage -L</code></pre>
+<p>Если устройство не найдено, но принтер подключен по USB, добавьте правила для <code>udev</code>:</p>
+<pre><code>sudo nano /etc/udev/rules.d/55-libsane.rules</code></pre>
+<p>Добавьте строку (замените <code>ID_MODEL</code> на вашу модель, найденную через <code>lsusb -v</code>):</p>
+<pre><code>ATTRS{idVendor}=="04a9", ATTRS{idProduct}=="17*", ENV{libsane_matched}="yes"</code></pre>
+<p>Перезагрузите правила:</p>
+<pre><code>sudo udevadm control --reload-rules
+<p>sudo udevadm trigger</code></pre></p>
+
+<p>Для сетевых сканеров (например, в <em>Canon MF</em>) используйте <code>sane-airscan</code>:</p>
+<pre><code>sudo apt install sane-airscan
+<p>export SANE_DEBUG_DLL=128  # Для отладки</code></pre></p>
+
+<p>Тестируйте сканирование командой:</p>
+<pre><code>scanimage --format=png > test.png</code></pre>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Модель МФУ</th>
+      <th>Драйвер сканера</th>
+      <th>Протокол</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>Canon PIXMA MG3600</em></td>
+      <td><code>pixma</code> (входит в <code>sane</code>)</td>
+      <td>USB</td>
+    </tr>
+    <tr>
+      <td><em>Canon imageCLASS MF247dw</em></td>
+      <td><code>airscan</code> или <code>escl</code></td>
+      <td>Wi-Fi/Ethernet</td>
+    </tr>
+    <tr>
+      <td><em>Canon LiDE 400</em></td>
+      <td><code>genesys</code></td>
+      <td>USB</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h2 id="6-оптимизация-печати-настройки-качества-и-экономии">6. Оптимизация печати: настройки качества и экономии</h2>
+
+<p>После успешной установки принтера <em>Canon</em> в <em>Astra Linux</em> можно настроить параметры печати для улучшения качества или экономии расходников. Это особенно актуально для струйных принтеров (<em>PIXMA</em>), где стоимость чернил часто превышает цену устройства.</p>
+
+<p>Основные настройки доступны:</p>
+<ul>
+  <li>🖼️ <strong>Через <code>CUPS</code>:</strong> перейдите в <code>http://localhost:631/printers</code>, выберите принтер → <code>Maintenance → Printer Options</code>. Здесь можно задать:
+    <ul>
+      <li>Разрешение печати (например, <code>600x600 dpi</code> или <code>1200x1200 dpi</code>).</li>
+      <li>Режим дуплекса (двусторонняя печать).</li>
+      <li>Цветной или черно-белый режим по умолчанию.</li>
+    </ul>
+  </li>
+  <li>📄 <strong>В приложениях:</strong> при печати из <em>LibreOffice</em>, <em>GIMP</em> или браузера выберите <code>Свойства принтера</code> → <code>Дополнительно</code>. Здесь доступны:
+    <ul>
+      <li>Тип бумаги (обычная, глянцевая, матовая).</li>
+      <li>Качество печати (черновик, стандарт, высокое).</li>
+      <li>Масштабирование и ориентация.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Для экономии чернил на струйных принтерах:</p>
+<ul>
+  <li>Используйте режим <code>"Черновик"</code> или <code>"Быстрая печать"</code>.</li>
+  <li>Установите параметр <code>"Экономия тонера"</code> (для лазерных принтеров).</li>
+  <li>Печатайте в масштабе <code>90%</code> или используйте режим <code>"2 страницы на листе"</code>.</li>
+</ul>
+
+<p><mark>Важно: принтеры Canon PIXMA с системой непрерывной подачи чернил (CIS) требуют регулярной прочистки печатающей головки. В Astra Linux это делается через утилиту escputil (установите пакет escpr):</mark></p>
+<pre><code>sudo apt install escpr
+<p>escputil -i -r</code></pre></p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для лазерных принтеров Canon (например, LBP-серии) экономия тонера включается через веб-интерфейс принтера (обычно по адресу http://[IP_принтера]). В разделе "Настройки печати" найдите опцию "Тонер Save Mode" и активируйте ее.</p></aside>
+
+<h2 id="7-альтернативные-способы-подключения">7. Альтернативные способы подключения</h2>
+
+<p>Если стандартные методы не сработали, рассмотрите альтернативные варианты подключения принтера <em>Canon</em> к <em>Astra Linux</em>:</p>
+
+<h3>1. Подключение через Windows-машину (Samba)</h3>
+<p>Если в вашей сети есть компьютер с <em>Windows</em>, к которому уже подключен принтер <em>Canon</em>, вы можете использовать его как сетевой принтер:</p>
+<ol>
+  <li>На <em>Windows</em>-машине включите общий доступ к принтеру (<code>Панель управления → Устройства и принтеры → Свойства принтера → Доступ</code>).</li>
+  <li>В <em>Astra Linux</em> установите <code>samba</code>:
+    <pre><code>sudo apt install samba smbclient</code></pre>
+  </li>
+  <li>Добавьте принтер через <code>CUPS</code>, выбрав <code>Windows Printer via SAMBA</code> и указав путь вида:
+    <pre><code>smb://[IP_Windows_PC]/[имя_принтера]</code></pre>
+  </li>
+</ol>
+
+<h3>2. Использование IPP Everywhere</h3>
+<p>Современные принтеры <em>Canon</em> (например, <em>PIXMA TR8620</em>) поддерживают протокол <code>IPP Everywhere</code>, который упрощает сетевую печать. Чтобы подключиться:</p>
+<ol>
+  <li>Убедитесь, что принтер включен и подключен к сети.</li>
+  <li>В <code>CUPS</code> выберите <code>Add Printer → Internet Printing Protocol (ipp)</code>.</li>
+  <li>Введите адрес в формате:
+    <pre><code>ipp://[IP_принтера]/ipp/print</code></pre>
+  </li>
+  <li>Выберите драйвер <code>Everywhere</code> или <code>AirPrint</code> (если доступен).</li>
+</ol>
+
+<h3>3. Печать через Google Cloud Print (для старых моделей)</h3>
+<p>Если ваш принтер поддерживает <em>Google Cloud Print</em> (например, <em>Canon PIXMA MG7720</em>), вы можете печатать через него даже из <em>Astra Linux</em>:</p>
+<ol>
+  <li>Подключите принтер к аккаунту Google через веб-интерфейс принтера.</li>
+  <li>В <em>Astra Linux</em> установите <code>cloudprint</code>:
+    <pre><code>sudo apt install python3-cups python3-googlecloudprint</code></pre>
+  </li>
+  <li>Зарегистрируйте принтер в <code>CUPS</code> как <code>Google Cloud Print</code>.</li>
+</ol>
+
+<blockquote>⚠️ <strong>Внимание:</strong> С 2021 года Google закрыл сервис <em>Cloud Print</em>, но некоторые принтеры <em>Canon</em> до сих пор поддерживают его через сторонние решения (например, <code>PaperCut Mobility Print</code>). Для новых устройств используйте <code>IPP Everywhere</code> или <code>Canon PRINT Business</code> (через Wine).</blockquote>
+
+<h2 id="8-обновление-прошивки-принтера">8. Обновление прошивки принтера</h2>
+
+<p>Если принтер <em>Canon</em> работает нестабильно (например, застревают задания печати или устройство "зависает"), проблема может быть в устаревшей прошивке. Обновление прошивки в <em>Astra Linux</em> возможно, но требует осторожности:</p>
+
+<p>Способы обновления:</p>
+<ul>
+  <li>🖥️ <strong>Через Windows:</strong> самый надежный метод. Подключите принтер к машине с <em>Windows</em>, скачайте прошивку с сайта <em>Canon</em> и следуйте инструкциям производителя.</li>
+  <li>🐧 <strong>Через Linux (для опытных пользователей):</strong>
+    <ol>
+      <li>Скачайте прошивку с сайта <em>Canon</em> (обычно файл с расширением <code>.firm</code> или <code>.bin</code>).</li>
+      <li>Подключите принтер по USB и определите его идентификатор:
+        <pre><code>lsusb | grep -i canon</code></pre>
+      </li>
+      <li>Используйте утилиту <code>usb_modeswitch</code> или <code>dfu-programmer</code> для загрузки прошивки. Пример для <em>Canon LBP</em>:
+        <pre><code>sudo dfu-programmer at32uc3b1256 flash --download firmware.bin</code></pre>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p>Предупреждения:</p>
+<ul>
+  <li>Обновление прошивки может сбросить настройки принтера (включая сетевые параметры).</li>
+  <li>Не прерывайте процесс обновления — это может привести к "окирпичиванию" устройства.</li>
+  <li>Некоторые модели <em>Canon</em> (например, <em>SELPHY</em>) требуют специального ПО для прошивки, которое работает только в <em>Windows</em>.</li>
+</ol>
+
+<p>После обновления прошивки рекомендуется:</p>
+<ol>
+  <li>Перезагрузить принтер.</li>
+  <li>Удалить и заново добавить его в <code>CUPS</code>.</li>
+  <li>Распечатать тестовую страницу для проверки.</li>
+</ol>
+
+<h2 id="faq-частые-вопросы-по-установке-canon-в-astra-linux">FAQ: Частые вопросы по установке Canon в Astra Linux</h2>
+
+<details>
+  <summary>Мой принтер Canon не определяется по USB. Что делать?</summary>
+  <p>Проверьте следующее:</p>
+  <ol>
+    <li>Подключите принтер к другому USB-порту (желательно <code>USB 2.0</code>, так как некоторые модели несовместимы с <code>USB 3.0</code>).</li>
+    <li>Выполните команду <code>dmesg | tail</code> после подключения — если есть ошибки вроде <code>"usb 1-1: device descriptor read/64, error -110"</code>, проблема в питании или кабеле.</li>
+    <li>Отключите другие USB-устройства (возможно, не хватает питания).</li>
+    <li>Попробуйте подключить принтер к другому компьютеру, чтобы исключить аппаратную неисправность.</li>
+  </ol>
+  <p>Если принтер по-прежнему не определяется, проверьте, не блокирует ли его ядро. Для этого временно отключите модуль <code>usb</code> (только для теста!):</p>
+  <pre><code>sudo modprobe -r usb-storage</code></pre>
+</details>
+
+<details>
+  <summary>Как печатать с двух сторон (дуплекс) на принтере Canon?</summary>
+  <p>Дуплексная печать настраивается либо в драйвере принтера, либо в приложении:</p>
+  <ul>
+    <li>В <code>CUPS</code>:
+      <ol>
+        <li>Перейдите в <code>http://localhost:631/printers</code>.</li>
+        <li>Выберите ваш принтер → <code>Maintenance → Printer Options</code>.</li>
+        <li>Найдите опцию <code>Duplex</code> или <code>Two-Sided Printing</code> и включите ее.</li>
+      </ul>
+    </li>
+    <li>В приложениях (например, <em>LibreOffice</em>):
+      <ol>
+        <li>При печати выберите <code>Свойства</code>.</li>
+        <li>Вкладка <code>Дополнительно</code> → <code>Печать на обеих сторонах</code>.</li>
+      </ul>
+    </li>
+  </ul>
+  <p>Если опция дуплекса неактивна, ваша модель принтера не поддерживает автоматическую двустороннюю печать. В этом случае можно печатать вручную: сначала нечетные страницы, затем перевернуть стопку и напечатать четные.</p>
+</details>
+
+<details>
+  <summary>Можно ли использовать оригинальные драйвера Canon для Windows в Astra Linux через Wine?</summary>
+  <p>Технически да, но это <strong>не рекомендуется</strong> по следующим причинам:</p>
+  <ul>
+    <li>Драйвера для <em>Windows</em> не оптимизированы для <code>CUPS</code> и могут конфликтовать с системой печати.</li>
+    <li><code>Wine</code> не поддерживает прямую работу с USB-устройствами, поэтому принтер не будет обнаружен.</li>
+    <li>Производительность печати будет крайне низкой из-за эмуляции.</li>
+  </ol>
+  <p>Альтернатива: если вам нужен именно оригинальный драйвер, используйте виртуальную машину с <em>Windows</em> и пробросьте USB-устройство в нее. Например, через <em>VirtualBox</em>:</p>
+  <pre><code>sudo usermod -aG vboxusers $USER</code></pre>
+  <p>Затем в настройках виртуальной машины добавьте USB-устройство принтера в список пробрасываемых.</p>
+</details>
+
+<details>
+  <summary>Как настроить печать на Canon PIXMA через Wi-Fi Direct?</summary>
+  <p><em>Wi-Fi Direct</em> позволяет подключаться к принтеру напрямую, без роутера. Для этого:</p>
+  <ol>
+    <li>На принтере активируйте режим <code>Wi-Fi Direct</code> (обычно в меню <code>Network Settings</code>). Запомните имя сети (SSID) и пароль.</li>
+    <li>В <em>Astra Linux</em> подключитесь к этой сети через <code>nmcli</code>:
+      <pre><code>nmcli dev wifi connect "DIRECT-xx-Canon_P</div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ca/canon-bjc-50-kak-podklyuchit.html" class="pb-related-card">
+                <span class="pb-related-title">Canon BJC-50: как подключить и настроить принтер к ПК</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как подключить Canon BJC-50 к компьютеру, установить драйверы и обеспечить ста</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-drajver-na-printer-canon-lbp-1120-dlya-windows-7-64-bit.html" class="pb-related-card">
+                <span class="pb-related-title">Установка драйвера Canon LBP 1120 на Windows 7 64 bit: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по установке драйвера принтера Canon LBP 1120 на Windows 7 64 bit. Решение про</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-canon-mg3640-k-wifi-telefonu.html" class="pb-related-card">
+                <span class="pb-related-title">Подключение Canon MG3640 к WiFi и телефону: пошаговая инструкция</span>
+                <span class="pb-related-desc">Как настроить Canon MG3640 для печати с мобильного. Инструкция по WPS и прямой печати. Решение часты</span>
+            </a><a href="/articles/k/ka/kak-vklyuchit-wifi-na-printere-canon-mg3640.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon MG3640 к Wi-Fi: 3 рабочих способа</span>
+                <span class="pb-related-desc">Пошаговая инструкция по настройке беспроводной сети на принтере Canon MG3640. Сброс настроек, режим </span>
+            </a><a href="/articles/k/ka/kak-nastroit-tsvetovoj-profil-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Настройка цветового профиля на принтере Canon: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробный гайд по калибровке и настройке цветового профиля на принтерах Canon. Узнайте, как добиться</span>
+            </a><a href="/articles/k/ka/kak-uskorit-rabotu-printera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как ускорить работу принтера Canon: 7 проверенных способов</span>
+                <span class="pb-related-desc">Практическое руководство по увеличению скорости печати устройств Canon. Настройка драйверов, выбор р</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

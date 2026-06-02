@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как остановить и очистить очередь печати на принтерах Canon — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция: как убрать зависший документ, остановить службу печати и сбросить очередь на принтерах Canon. Решаем проблемы с застреванием заданий.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-ostanovit-ochered-pechati-na-printere-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как остановить и очистить очередь печати на принтерах Canon">
+    <meta property="og:description" content="Пошаговая инструкция: как убрать зависший документ, остановить службу печати и сбросить очередь на принтерах Canon. Решаем проблемы с застреванием заданий.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как остановить и очистить очередь печати на принтерах Canon</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#быстрое-удаление-зависших-заданий-через-интерфейс-windows">Быстрое удаление зависших заданий через интерфейс Windows</a></li><li><a href="#полная-очистка-буфера-через-командную-строку">Полная очистка буфера через командную строку</a></li><li><a href="#работа-с-диспетчером-устройств-и-драйверами">Работа с диспетчером устройств и драйверами</a></li><li><a href="#проверка-настроек-режима-офлайн-и-паузы">Проверка настроек режима офлайн и паузы</a></li><li><a href="#очистка-очереди-на-самом-устройстве">Очистка очереди на самом устройстве</a></li><li><a href="#аппаратный-сброс-и-физическое-отключение">Аппаратный сброс и физическое отключение</a></li><li><a href="#профилактика-зависания-очереди-печати">Профилактика зависания очереди печати</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-ustanovit-printer-canon-mp270.html">Как установить принтер Canon MP270: полное руководство по настройке</a></li><li><a href="/articles/k/ka/kak-dobavit-printer-na-kompyuter-windows-canon.html">Как подключить Canon к Windows: Полная инструкция по установке</a></li><li><a href="/articles/k/ka/kak-ustanovit-drajvera-na-printer-canon-pixma-mg2545s.html">Как установить драйвера на принтер Canon Pixma MG2545S: полная инструкция</a></li><li><a href="/articles/c/ch/chto-takoe-monokhromnaya-pechat-na-printere-canon.html">Монохромная печать Canon: Настройка, Экономия и Особенности</a></li><li><a href="/articles/k/ka/kak-nastroit-yarkost-na-printere-canon-g3411.html">Настройка яркости на Canon G3411: фотокопирование и сканирование</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как полностью остановить и очистить очередь печати на принтере Canon</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#быстрое-удаление-зависших-заданий-через-интерфейс-windows">Быстрое удаление зависших заданий через интерфейс Windows</a></li><li><a href="#полная-очистка-буфера-через-командную-строку">Полная очистка буфера через командную строку</a></li><li><a href="#работа-с-диспетчером-устройств-и-драйверами">Работа с диспетчером устройств и драйверами</a></li><li><a href="#проверка-настроек-режима-офлайн-и-паузы">Проверка настроек режима офлайн и паузы</a></li><li><a href="#очистка-очереди-на-самом-устройстве">Очистка очереди на самом устройстве</a></li><li><a href="#аппаратный-сброс-и-физическое-отключение">Аппаратный сброс и физическое отключение</a></li><li><a href="#профилактика-зависания-очереди-печати">Профилактика зависания очереди печати</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Ситуация, когда принтер <em>Canon</em> перестает реагировать на новые команды, а на дисплее мигает индикатор ошибки, знакома многим пользователям. Чаще всего проблема кроется не в аппаратной неисправности самого устройства, а в зависшем задании, которое заблокировало буфер обмена и не дает обработать последующие документы.</p>
+
+<p>Вам необходимо срочно освободить линию передачи данных, чтобы техника снова стала работоспособной. Игнорирование зависших файлов может привести к тому, что очередь печати <strong>Canon</strong> разрастется до критических размеров, а работа офиса или домашнего рабочего места встанет.</p>
+
+<p>Существует несколько эффективных методов решения этой проблемы, от простого удаления файла через интерфейс Windows до полной перезагрузки системной службы. Мы разберем каждый способ, чтобы вы могли выбрать наиболее подходящий для вашей версии операционной системы.</p>
+
+<h2 id="быстрое-удаление-зависших-заданий-через-интерфейс-windows">Быстрое удаление зависших заданий через интерфейс Windows</h2>
+
+<p>Первым и самым очевидным шагом является проверка статуса очереди печати через стандартные средства операционной системы. В большинстве случаев достаточно просто открыть окно управления принтером и удалить проблемный файл вручную.</p>
+
+<p>Для этого нажмите комбинацию клавиш <code>Win + R</code>, введите команду <code>control printers</code> и нажмите <strong>Enter</strong>. Найдите в списке ваше устройство <em>Canon</em> (например, <em>Canon imageRUNNER</em> или <em>Canon PIXMA</em>) и дважды кликните по нему левой кнопкой мыши.</p>
+
+<p>В открывшемся окне вы увидите список всех отправленных на печать документов. Если там есть файлы со статусом "Пауза" или "Печать", выделите их и нажмите <strong>Удалить</strong> в контекстном меню. Однако, если система сообщает об ошибке "Доступ запрещен" или файл не удаляется, придется использовать более радикальные методы.</p>
+
+<h2 id="полная-очистка-буфера-через-командную-строку">Полная очистка буфера через командную строку</h2>
+
+<p>Если стандартный интерфейс отказывается удалять файлы, необходимо воспользоваться правами администратора и системными командами. Этот метод принудительно останавливает службу печати и очищает временные файлы, что гарантирует разблокировку устройства.</p>
+
+<p>Откройте меню <strong>Пуск</strong>, введите <code>cmd</code>, нажмите правой кнопкой мыши на "Командная строка" и выберите "Запуск от имени администратора". В черном окне терминала необходимо ввести последовательность команд, которые остановят службу и очистят папку спула.</p>
+
+<p>Введите следующие команды по очереди, нажимая <strong>Enter</strong> после каждой из них:</p>
+
+<pre><code>net stop spooler</code></pre>
+<pre><code>del /Q /F /S "%systemroot%\System32\spool\printers\<em>.</em>"</code></pre>
+<pre><code>net start spooler</code></pre>
+
+<p>Первая команда <code>net stop spooler</code> полностью останавливает службу диспетчера печати. Вторая команда безвозвратно удаляет все файлы из папки, где хранятся очереди. Третья команда перезапускает службу, и принтер <em>Canon</em> должен снова стать доступен для печати.</p>
+
+<blockquote>⚠️ Внимание: Использование команды <code>del</code> без параметров безопасно только в указанном пути, но вы должны убедиться, что вводите путь точно. Ошибка в пути может привести к удалению системных файлов.</blockquote>
+
+<div class="pb-poll" id="poll-21043c1d"><div class="pb-poll-question">📊 Как часто у вас зависает очередь печати?</div><div class="pb-poll-option" data-poll="21043c1d" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Никогда</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="21043c1d" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Редко, раз в месяц</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="21043c1d" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Часто, при больших объемах</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="21043c1d" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Постоянно, это проблема</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="работа-с-диспетчером-устройств-и-драйверами">Работа с диспетчером устройств и драйверами</h2>
+
+<p>Иногда проблема кроется не в самих файлах, а в некорректном состоянии драйвера или самого оборудования. В таких случаях перезагрузка службы может не помочь, и потребуется сброс драйверов через диспетчер устройств.</p>
+
+<ul>
+<li>🖥️ Нажмите <code>Win + X</code> и выберите "Диспетчер устройств" из выпадающего списка.</li>
+<li>🖨️ Раскройте раздел "Принтеры" и найдите ваше устройство <em>Canon</em>.</li>
+<li>🔄 Нажмите правой кнопкой мыши и выберите "Удалить устройство", затем подтвердите действие.</li>
+</ul>
+
+<p>После удаления драйвера необходимо перезагрузить компьютер. При включении система попытается автоматически найти и установить свежий драйвер. Если этого не произошло, загрузите актуальную версию с официального сайта производителя.</p>
+
+<p>Установка драйвера может занять несколько минут, все это время не рекомендуется выключать компьютер. После перезагрузки проверьте, исчезла ли ошибка и готова ли очередь печати к приему новых заданий.</p>
+
+<details class="pb-accordion"><summary>Что делать, если драйвер не устанавливается?</summary><div class="pb-accordion-body"><p>Попробуйте отключить интернет и использовать установочный диск или скачанный ранее offline-установщик. Иногда антивирус блокирует процесс установки драйверов устройств, временно отключите его.</p></div></details>
+
+<h2 id="проверка-настроек-режима-офлайн-и-паузы">Проверка настроек режима офлайн и паузы</h2>
+
+<p>Часто пользователи случайно включают режим "Офлайн" или "Приостановить печать", после чего принтер перестает реагировать на команды, хотя физически исправен. Это может произойти при обновлении системы или случайном нажатии клавиш.</p>
+
+<p>Зайдите в <code>Панель управления</code> -> <code>Устройства и принтеры</code>. Нажмите правой кнопкой мыши на иконку вашего <em>Canon</em> и выберите пункт "Смотреть, что печатает". В верхнем меню окна_менеджера найдите вкладку <strong>Принтер</strong>.</p>
+
+<p>Убедитесь, что галочки напротив пунктов "Использовать принтер в автономном режиме" и "Приостановить печать" сняты. Если они стояли, снимите их, и очередь печати должна возобновиться автоматически.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка статуса принтера</h4><label class="check-item"><input type="checkbox"><span>Галочка "Автономный режим" снята</span></label><label class="check-item"><input type="checkbox"><span>Галочка "Пауза" снята</span></label><label class="check-item"><input type="checkbox"><span>Драйвер установлен корректно</span></label><label class="check-item"><input type="checkbox"><span>Кабель подключен плотно</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="очистка-очереди-на-самом-устройстве">Очистка очереди на самом устройстве</h2>
+
+<p>Для некоторых моделей <em>Canon</em>, особенно коммерческих серий <em>imageRUNNER</em> или <em>imagePROGRAF</em>, очередь может быть заблокирована на уровне прошивки самого устройства. В этом случае действия на компьютере будут неэффективны.</p>
+
+<p>Подойдите к принтеру и нажмите кнопку <strong>Меню</strong> или иконку с изображением шестеренки. Перейдите в раздел <code>Настройки устройства</code> -> <code>Печать</code> -> <code>Управление заданиями</code>.</p>
+
+<p>Здесь вы увидите список активных и зависших заданий. Выберите опцию <strong>Удалить все задания</strong> или <strong>Очистить очередь</strong>. Подтвердите действие кнопкой <strong>OK</strong>. Это действие сбрасывает внутренний буфер памяти принтера.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Модель Canon</th>
+<th>Раздел меню</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canon PIXMA сер. G</td>
+<td>Настройки устройства</td>
+<td>Сброс всех заданий</td>
+</tr>
+<tr>
+<td>Canon imageRUNNER</td>
+<td>Печать / Управление заданиями</td>
+<td>Удалить выбранные</td>
+</tr>
+<tr>
+<td>Canon i-SENSYS</td>
+<td>Системные настройки</td>
+<td>Очистить буфер печати</td>
+</tr>
+<tr>
+<td>Canon MAXIFY</td>
+<td>Меню / Поддержка</td>
+<td>Стереть все данные</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>⚠️ Внимание: При очистке очереди на самом устройстве через меню, некоторые защищенные документы могут быть удалены безвозвратно. Убедитесь, что это действительно необходимо.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Очистка очереди на самом принтере эффективна, когда проблема лежит в прошивке устройства, а не в драйвере компьютера.</p></aside>
+
+<h2 id="аппаратный-сброс-и-физическое-отключение">Аппаратный сброс и физическое отключение</h2>
+
+<p>Если программные методы не помогают, а принтер продолжает выводить ошибку "Очередь печати заблокирована", необходимо выполнить полный энергетический сброс. Это позволяет сбросить временные ошибки контроллера.</p>
+
+<p>Выключите принтер кнопкой на передней панели. Затем <strong>обязательно</strong> отключите шнур питания из розетки. Подождите не менее одной минуты, чтобы полностью разрядить конденсаторы внутри устройства.</p>
+
+<p>Подключите кабель обратно и включите устройство. Дайте принтеру время на инициализацию (обычно 2-3 минуты), когда он будет совершать шумные операции проверки механизмов. После этого попробуйте отправить тестовый документ на печать.</p>
+
+<p>Иногда проблема может быть связана с USB-портом или сетевым кабелем. Попробуйте подключить устройство к другому порту или, если используется Wi-Fi, перезагрузить роутер для сброса сетевого соединения.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед полным сбросом попробуйте отключить принтер от сети только на 10 секунд, если проблема не решается, увеличьте время до 60 секунд для глубокой разрядки.</p></aside>
+
+<h2 id="профилактика-зависания-очереди-печати">Профилактика зависания очереди печати</h2>
+
+<p>Чтобы избежать повторения ситуации с зависшими заданиями, важно соблюдать несколько простых правил эксплуатации оборудования. Регулярное обслуживание драйверов и проверка настроек сети помогут сохранить стабильную работу.</p>
+
+<ul>
+<li>🔄 Обновляйте драйверы <em>Canon</em> до последней версии, доступной на официальном сайте.</li>
+<li>🚫 Не отключайте принтер во время процесса печати или обновления прошивки.</li>
+<li>📄 Избегайте отправки на печать огромных объемов данных (тысячи страниц) без разбивки на части.</li>
+</ul>
+
+<p>Установка антивирусного ПО и регулярная очистка кэша системы также положительно влияют на скорость обработки заданий. Если вы используете сетевой принтер, убедитесь, что статический IP-адрес настроен корректно и не конфликтует с другими устройствами в сети.</p>
+
+<p>Помните, что своевременная очистка очереди печати продлевает жизнь механизмам принтера, так как они не работают вхолостую, пытаясь обработать некорректные данные.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярное обновление драйверов и правильный статический IP-адрес — залог стабильной работы сетевого принтера Canon без зависаний.</p></aside>
+
+<details>
+<summary>Что делать, если очередь печати удаляется, но сразу возвращается?</summary>
+<p>Это может означать, что файл, который вы пытаетесь отправить, содержит ошибку формата или повредился при передаче. Попробуйте распечатать другой, более простой документ (например, текстовый файл). Если проблема повторяется, проверьте целостность драйвера и переустановите его.</p>
+</details>
+
+<details>
+<summary>Можно ли очистить очередь печати на Mac?</summary>
+<p>Да, на macOS процесс аналогичен. Откройте "Системные настройки" -> "Принтеры и сканеры". Выберите принтер, нажмите "Открыть очередь печати", а затем в меню "Очередь" выберите "Удалить все задания". При необходимости можно перезапустить службу <code>CUPS</code> через терминал.</p>
+</details>
+
+<details>
+<summary>Почему принтер Canon пишет "Автономный режим"?</summary>
+<p>Обычно это происходит из-за потери соединения с компьютером или сети. Проверьте кабель USB, убедитесь, что принтер включен в розетку, и что IP-адрес устройства не изменился. Также проверьте настройки брандмауэра на компьютере.</p>
+</details>
+
+<details>
+<summary>Как сбросить счетчик заданий на Canon?</summary>
+<p>Счетчик заданий является частью внутренней памяти принтера и сбрасывается только при инициализации или полной очистке буфера. В некоторых моделях это делается через инженерное меню, но это может привести к потере гарантийных обязательств, если устройство еще на гарантии.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-ustanovit-printer-canon-mp270.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить принтер Canon MP270: полное руководство по настройке</span>
+                <span class="pb-related-desc">Пошаговая инструкция, как установить драйвер и подключить принтер Canon MP270 к компьютеру через USB</span>
+            </a><a href="/articles/k/ka/kak-dobavit-printer-na-kompyuter-windows-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon к Windows: Полная инструкция по установке</span>
+                <span class="pb-related-desc">Пошаговое руководство: как добавить принтер Canon на компьютер с Windows. Установка драйверов, настр</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-drajvera-na-printer-canon-pixma-mg2545s.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить драйвера на принтер Canon Pixma MG2545S: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по установке драйверов для Canon Pixma MG2545S на Windows и macOS. Решение час</span>
+            </a><a href="/articles/c/ch/chto-takoe-monokhromnaya-pechat-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Монохромная печать Canon: Настройка, Экономия и Особенности</span>
+                <span class="pb-related-desc">Узнайте, как работает монохромная печать на принтерах Canon. Полный гайд по настройке драйверов, нас</span>
+            </a><a href="/articles/k/ka/kak-nastroit-yarkost-na-printere-canon-g3411.html" class="pb-related-card">
+                <span class="pb-related-title">Настройка яркости на Canon G3411: фотокопирование и сканирование</span>
+                <span class="pb-related-desc">Подробная инструкция по настройке яркости копий на МФУ Canon G3411 через панель и ПО. Исправление тё</span>
+            </a><a href="/articles/k/ka/kak-sdelat-test-printera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать тест принтера Canon: пошаговая инструкция и диагностика ошибок</span>
+                <span class="pb-related-desc">Подробное руководство по запуску тестовой печати на принтерах Canon. Диагностика головок, проверка к</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

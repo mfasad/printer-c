@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Сбор данных о состоянии принтера Canon: что это и как читать логи — Кэнон Инфо</title>
+    <meta name="description" content="Разбираем, что такое сбор данных о состоянии принтера Canon. Инструкция по чтению логов, диагностике ошибок и анализу износостойкости узлов.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/s/sb/sbor-dannykh-o-sostoyanii-printera-canon-chto.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Сбор данных о состоянии принтера Canon: что это и как читать логи">
+    <meta property="og:description" content="Разбираем, что такое сбор данных о состоянии принтера Canon. Инструкция по чтению логов, диагностике ошибок и анализу износостойкости узлов.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-nav-active">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/remont-i-oshibki/">Ремонт и ошибки</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Сбор данных о состоянии принтера Canon: что это и как читать логи</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#суть-процесса-диагностики-и-техническая-база">Суть процесса диагностики и техническая база</a></li><li><a href="#почему-возникают-запросы-на-сбор-информации">Почему возникают запросы на сбор информации</a></li><li><a href="#как-инициировать-сбор-данных-пошаговый-алгоритм">Как инициировать сбор данных: пошаговый алгоритм</a></li><li><a href="#анализ-полученных-логов-что-искать-в-файле">Анализ полученных логов: что искать в файле</a></li><li><a href="#интерпретация-кодов-ошибок-и-их-значение">Интерпретация кодов ошибок и их значение</a></li><li><a href="#программные-средства-для-автоматического-анализа">Программные средства для автоматического анализа</a></li><li><a href="#когда-сбор-данных-бесполезен-и-что-делать-дальше">Когда сбор данных бесполезен и что делать дальше</a></li><li><a href="#частые-вопросы-пользователей">Частые вопросы пользователей</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ke/kenon-mx360-kak-obnulit.html">Как обнулить счетчик Waste Ink на Canon Pixma MX360</a></li><li><a href="/articles/c/ca/canon-mp210-oshibka-5100-kak-ustranit.html">Ошибка 5100 Canon MP210: 5 проверенных способов устранения</a></li><li><a href="/articles/k/ko/kod-podderzhki-1300-canon-chto-delat.html">Ошибка 1300 на Canon: причины, решение и сброс кода поддержки</a></li><li><a href="/articles/k/ka/kak-ubrat-oshibku-na-printere-canon.html">Ошибка на принтере Canon: как убрать быстро и без сервиса</a></li><li><a href="/articles/p/pr/printer-kenon-2900-ne-zakhvatyvaet-bumagu-chto-delat.html">Принтер Canon 2900 не захватывает бумагу: причины и ремонт</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Что такое сбор данных о состоянии принтера Canon и зачем это нужно</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#суть-процесса-диагностики-и-техническая-база">Суть процесса диагностики и техническая база</a></li><li><a href="#почему-возникают-запросы-на-сбор-информации">Почему возникают запросы на сбор информации</a></li><li><a href="#как-инициировать-сбор-данных-пошаговый-алгоритм">Как инициировать сбор данных: пошаговый алгоритм</a></li><li><a href="#анализ-полученных-логов-что-искать-в-файле">Анализ полученных логов: что искать в файле</a></li><li><a href="#интерпретация-кодов-ошибок-и-их-значение">Интерпретация кодов ошибок и их значение</a></li><li><a href="#программные-средства-для-автоматического-анализа">Программные средства для автоматического анализа</a></li><li><a href="#когда-сбор-данных-бесполезен-и-что-делать-дальше">Когда сбор данных бесполезен и что делать дальше</a></li><li><a href="#частые-вопросы-пользователей">Частые вопросы пользователей</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Многие пользователи сталкиваются с ситуацией, когда принтер <em>Canon</em> начинает выдавать странные коды ошибок или отказывается печатать, не показывая конкретной причины. В этот момент на экране или в журнале событий появляется запрос на выполнение «сбора данных о состоянии». Для неподготовленного человека это звучит как сложная техническая процедура, но на деле это встроенный механизм самодиагностики.</p>
+
+<p>Сбор данных о состоянии — это процесс, при котором прошивка устройства считывает текущие значения датчиков, счетчики износа и логи последних ошибок, упаковывая их в специальный файл. Именно этот файл служит «медицинской картой» вашего устройства, позволяя мастеру понять, почему произошел сбой, и не требуется ли замена ключевых узлов, таких как <strong>термопленка</strong> или <strong>печатающая головка</strong>.</p>
+
+<h2 id="суть-процесса-диагностики-и-техническая-база">Суть процесса диагностики и техническая база</h2>
+
+<p>Корпорация <em>Canon</em> внедрила алгоритмы непрерывного мониторинга состояния аппаратуры. Когда вы запускаете процедуру сбора данных, система сканирует сотни параметров: от температурных показателей <strong>термоузла</strong> до уровня остаточных чернил в картриджах. Это не просто проверка «работает/не работает», а глубокий анализ каждого компонента.</p>
+
+<p>Главная цель этой операции — предотвращение катастрофических отказов. Если датчик фиксирует аномальный нагрев, система может не просто остановить печать, но и записать в лог точное значение температуры в момент сбоя. Эти данные критически важны для <strong>сервисного центра</strong>, так как позволяют отличить аппаратную неисправность от программного сбоя.</p>
+
+<p>Часто пользователи путают сбор данных с обычной перезагрузкой. Это разные вещи. Перезагрузка очищает оперативную память, а сбор данных сохраняет историю критических событий в энергонезависимую память. Без этих записей мастер будет вынужден гадать, что произошло, вместо того чтобы видеть точную причину.</p>
+
+<blockquote>⚠️ Внимание: Сбор данных о состоянии не исправляет ошибки автоматически. Это диагностический инструмент, который лишь фиксирует текущее положение дел и создает базу для дальнейшего анализа специалистом.</blockquote>
+
+<h2 id="почему-возникают-запросы-на-сбор-информации">Почему возникают запросы на сбор информации</h2>
+
+<p>Вам может показаться странным, что принтер сам требует от вас действий. Обычно это происходит, когда устройство переходит в режим блокировки. Например, если произошел сбой в <strong>системе подачи бумаги</strong>, а автоматическая перезагрузка не помогла, аппарат требует сохранения логов перед следующим циклом запуска.</p>
+
+<p>Иногда запрос появляется после скачка напряжения или некорректного отключения кабеля питания. В таких случаях контроллер фиксирует нарушение целостности данных и предлагает сохранить текущие показатели для анализа. Это защитная мера, чтобы не потерять информацию о том, в каком состоянии находилась <strong>материнская плата</strong> в момент аварии.</p>
+
+<p>Еще одна причина — истощение ресурса определенных узлов. Если <strong>счетчик печатающей головки</strong> приближается к критическому значению, система может инициировать сбор данных для подтверждения необходимости замены или чистки. В этом случае лог будет содержать информацию о количестве принятых страниц и пропущенных проходов.</p>
+
+<div class="pb-poll" id="poll-d60842d5"><div class="pb-poll-question">📊 Какая проблема чаще всего возникает с вашим принтером Canon?</div><div class="pb-poll-option" data-poll="d60842d5" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Принтер не включается</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d60842d5" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Зависает на экране ошибки</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d60842d5" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Качество печати ухудшилось</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d60842d5" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не видит компьютер</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="как-инициировать-сбор-данных-пошаговый-алгоритм">Как инициировать сбор данных: пошаговый алгоритм</h2>
+
+<p>Процедура запускается через сервисное меню, доступ к которому скрыт от обычного пользователя. Сначала необходимо включить принтер, затем, удерживая кнопку <code>Stop/Reset</code> (треугольник в круге), нажать кнопку <code>Power</code> (включения) и удерживать обе кнопки, пока индикатор не загорится зеленым.</p>
+
+<p>После входа в сервисное меню необходимо нажать кнопку <code>Stop/Reset</code> определенное количество раз (обычно 4 или 5 раз, в зависимости от модели), чтобы выбрать пункт диагностики. На экране дисплея или в утилите на компьютере появится название функции. Ищите строчку <code>Service Mode → Test Mode → Printer Info</code> или аналогичную.</p>
+
+<p>Важно не перепутать пункт сброса ошибок с пунктом сбора информации. Если вы случайно сбросите счетчики, вы потеряете данные о накопленном износе, что может затруднить дальнейшую диагностику. Всегда внимательно читайте название пункта в меню перед подтверждением действия.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Порядок действий для входа в сервисное меню</h4><label class="check-item"><input type="checkbox"><span>Удерживать Stop/Reset</span></label><label class="check-item"><input type="checkbox"><span>Нажать Power не отпуская Stop</span></label><label class="check-item"><input type="checkbox"><span>Дождаться зеленого индикатора</span></label><label class="check-item"><input type="checkbox"><span>Выбрать режим диагностики в списке</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<blockquote>⚠️ Внимание: Неправильный вход в сервисное меню может привести к сбросу настроек сети или калибровки. Если вы не уверены в номерах нажатий для вашей модели, лучше обратитесь к производителю.</blockquote>
+
+<details class="pb-accordion"><summary>Секретные коды для разных серий принтеров Canon</summary><div class="pb-accordion-body"><p>Для серии iP часто требуется 4 нажатия на Stop/Reset, для серии MG — комбинация с кнопкой Wi-Fi. Точные коды зависят от ревизии материнской платы, поэтому лучше сверяться с технической документацией конкретной модели перед манипуляциями.</p></div></details>
+
+<h2 id="анализ-полученных-логов-что-искать-в-файле">Анализ полученных логов: что искать в файле</h2>
+
+<p>После завершения процедуры на компьютер или в память принтера загружается текстовый или XML-файл. Открыв его, вы увидите множество строк с техническими параметрами. Вам не нужно знать все из них, но есть ключевые параметры, на которые стоит обратить внимание при анализе <strong>журнала ошибок</strong>.</p>
+
+<p>Особое внимание уделите секции <code>Thermistor</code> (термистор). Здесь указаны значения температуры в градусах Цельсия в момент сбоя. Если значение превышает <code>200°C</code> для пассивного режима, это явный признак неисправности термореле или засорения тракта. Также проверьте секцию <code>Head Voltage</code> — напряжение на печатающей головке.</p>
+
+<p>В таблице ниже представлены основные параметры, которые чаще всего указывают на проблемы, и их допустимые значения для большинства моделей серии <em>Pixma</em>:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр в логе</th>
+<th>Нормальное значение</th>
+<th>Значение при ошибке</th>
+<th>Возможная причина</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temp_Fuser</td>
+<td>160-190°C</td>
+<td>140°C или >220°C</td>
+<td>Неисправность термопленки</td>
+</tr>
+<tr>
+<td>Head_Resistance</td>
+<td>10-15 Ом</td>
+<td>0 Ом или >50 Ом</td>
+<td>Обрыв цепи головки</td>
+</tr>
+<tr>
+<td>Carriage_Position</td>
+<td>0-3000 (единиц)</td>
+<td>Ошибка позиционирования</td>
+<td>Засор шестерен или шлейфа</td>
+</tr>
+<tr>
+<td>Waste_Ink_Level</td>
+<td>0-90%</td>
+<td>100%</td>
+<td>Требуется очистка помпы</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Не пугайтесь, если увидите значения, выходящие за пределы нормы. Иногда это временный сбой при запуске. Однако, если ошибка повторяется при каждом цикле печати, это верный сигнал для замены узла. <strong>Коды ошибок</strong> в логе часто сложнее расшифровать, чем просто цифры, поэтому используйте таблицы соответствия для вашей модели.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Сохраняйте логи принтера в отдельную папку на компьютере с пометкой даты проблемы. Это поможет мастеру отследить динамику развития неисправности, если принтер «умирает» постепенно.</p></aside>
+
+<h2 id="интерпретация-кодов-ошибок-и-их-значение">Интерпретация кодов ошибок и их значение</h2>
+
+<p>В файле сборки данных вы часто встретите коды вида <code>E000</code>, <code>E001</code>, <code>E002</code>. Это стандартные ошибки Canon, связанные с нагревом. <code>E000</code> означает, что температура термоузла не достигла рабочей за отведенное время, а <code>E001</code> — что температура превысила допустимый предел.</p>
+
+<p>Другие коды, такие как <code>5C00</code> или <code>5C10</code>, указывают на проблемы с положением каретки. В логе они будут сопровождаться данными о токе, потребляемом двигателем каретки. Если ток повышен, значит, движению что-то мешает — возможно, посторонний предмет или высохшая смазка.</p>
+
+<p>Понимание этих кодов позволяет избежать лишних замен. Например, при ошибке <code>5B00</code> (заполнена система сбора чернил) лог покажет точный процент заполнения. Иногда это позволяет просто сбросить счетчик, если вы уверены, что абсорбер очищен или заменен, не меняя саму помпу.</p>
+
+<blockquote>⚠️ Внимание: Коды ошибок могут меняться в зависимости от прошивки. Ошибка, которая в одной версии ПО означала сбой двигателя, в обновленной версии может трактоваться иначе. Всегда сверяйте код с актуальной инструкцией.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Правильная интерпретация логов позволяет избежать замены исправных деталей, экономя время и деньги. Основной упор делайте на анализ динамики изменения температур и токов, а не только на статичные коды ошибок.</p></aside>
+
+<h2 id="программные-средства-для-автоматического-анализа">Программные средства для автоматического анализа</h2>
+
+<p>Вручную читать логи долго и сложно. Для упрощения задачи существуют специальные утилиты, которые умеют парсить файлы диагностики <em>Canon</em> и выдавать понятный отчет. Одной из таких программ является <strong>Service Tool</strong>, которая часто поставляется вместе с драйверами для инженерных целей.</p>
+
+<p>Эти программы не просто показывают цифры, но и строят графики изменения параметров. Например, вы сможете увидеть, как падало напряжение на головке перед тем, как она перестала печатать. Это позволяет выявить «плавающие» неисправности, которые не фиксируются при разовом подключении.</p>
+
+<p>Использование стороннего софта требует осторожности. Некоторые программы пытаются не только прочитать данные, но и принудительно сбросить счетчики, что может привести к блокировке устройства, если процедура выполнена некорректно. Всегда делайте резервную копию текущих настроек перед запуском утилиты.</p>
+
+<p>На современных моделях с Wi-Fi функциями логин может быть отправлен напрямую на сервер поддержки при наличии согласия пользователя. Это упрощает процесс, так как не нужно скачивать файлы вручную, но требует наличия активного интернет-соединения.</p>
+
+<h2 id="когда-сбор-данных-бесполезен-и-что-делать-дальше">Когда сбор данных бесполезен и что делать дальше</h2>
+
+<p>Иногда сбор данных не дает результата. Это случается, если память контроллера повреждена физически или если ошибка произошла на этапе, когда система еще не успела инициализировать запись логов. В таких случаях единственным выходом является <strong>перепрошивка</strong> устройства или замена материнской платы.</p>
+
+<p>Если вы получили лог, но не можете его расшифровать, не пытайтесь гадать. Отправьте файл в специализированный сервис. Профессионалы используют базы данных, где сопоставляют комбинации параметров с известными неисправностями. Это значительно ускоряет ремонт.</p>
+
+<p>Помните, что сбор данных — это лишь первый шаг. Даже если лог покажет, что проблема в головке, это не гарантирует, что замена головки решит проблему. Возможно, дело в шлейфе или блоке питания, который не выдает нужное напряжение.</p>
+
+<h2 id="частые-вопросы-пользователей">Частые вопросы пользователей</h2>
+
+<details>
+<summary>Сколько времени занимает процесс сбора данных?</summary>
+<p>Обычно процесс занимает от 1 до 5 минут. Это зависит от объема накопленной информации и скорости записи в память устройства. Не выключайте принтер в этот момент.</p>
+</details>
+
+<details>
+<summary>Можно ли собрать данные по принтеру, который не включается вообще?</summary>
+<p>Нет, для сбора данных устройство должно быть включено и пройти хотя бы часть процедуры POST (самотестирования). Если питание не подается совсем, диагностика невозможна без ремонта платы питания.</p>
+</details>
+
+<details>
+<summary>Где хранится файл с данными о состоянии?</summary>
+<p>Файл обычно сохраняется в папке с драйверами на компьютере или в памяти принтера. В сервисных утилитах путь часто выглядит как <code>C:\Canon\Log\Printer_Info.txt</code>.</p>
+</details>
+
+<details>
+<summary>Что делать, если после сбора данных принтер перестал печатать?</summary>
+<p>Скорее всего, процедура сбора данных завершилась некорректно или была прервана. Попробуйте выключить принтер из розетки на 10 минут, затем включите снова. Если ошибка сохраняется, потребуется сброс через сервисное меню.</p>
+</details>
+
+<details>
+<summary>Нужно ли удалять старые логи из памяти принтера?</summary>
+<p>Нет, старые логи могут быть полезны для анализа повторяющихся проблем. Они занимают очень мало места. Удалять их стоит только если память переполнена и это мешает работе, но это редкость для современных моделей.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ke/kenon-mx360-kak-obnulit.html" class="pb-related-card">
+                <span class="pb-related-title">Как обнулить счетчик Waste Ink на Canon Pixma MX360</span>
+                <span class="pb-related-desc">Полная инструкция по сбросу затекшего чернильного абсорбера на принтере Canon MX360. Программные и а</span>
+            </a><a href="/articles/c/ca/canon-mp210-oshibka-5100-kak-ustranit.html" class="pb-related-card">
+                <span class="pb-related-title">Ошибка 5100 Canon MP210: 5 проверенных способов устранения</span>
+                <span class="pb-related-desc">Принтер Canon MP210 показывает ошибку 5100 (каретка)? Узнайте, как почистить шестеренки, смазать вал</span>
+            </a><a href="/articles/k/ko/kod-podderzhki-1300-canon-chto-delat.html" class="pb-related-card">
+                <span class="pb-related-title">Ошибка 1300 на Canon: причины, решение и сброс кода поддержки</span>
+                <span class="pb-related-desc">Код поддержки 1300 Canon указывает на замятие бумаги или сбой датчика. Узнайте, как безопасно устран</span>
+            </a><a href="/articles/k/ka/kak-ubrat-oshibku-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Ошибка на принтере Canon: как убрать быстро и без сервиса</span>
+                <span class="pb-related-desc">Пошаговые инструкции по устранению ошибок принтеров Canon (E02, E03, E05, 5B00 и др.). Диагностика, </span>
+            </a><a href="/articles/p/pr/printer-kenon-2900-ne-zakhvatyvaet-bumagu-chto-delat.html" class="pb-related-card">
+                <span class="pb-related-title">Принтер Canon 2900 не захватывает бумагу: причины и ремонт</span>
+                <span class="pb-related-desc">Пошаговая инструкция по устранению замятия и незахвата бумаги в принтерах Canon LBP2900. Чистка роли</span>
+            </a><a href="/articles/p/po/pochemu-net-krasnogo-tsveta-v-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Почему нет красного цвета при печати на принтерах Canon: причины и решение</span>
+                <span class="pb-related-desc">Разбираем, почему отсутствует красный цвет в печати принтеров Canon. Основные причины, настройки дра</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

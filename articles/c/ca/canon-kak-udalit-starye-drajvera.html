@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как удалить старые драйвера Canon: Полное руководство по очистке — Кэнон Инфо</title>
+    <meta name="description" content="Узнайте, как полностью удалить старые драйвера принтеров Canon. Пошаговая инструкция: через Диспетчер устройств, Панель управления и утилиту PrintFleet.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-kak-udalit-starye-drajvera.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как удалить старые драйвера Canon: Полное руководство по очистке">
+    <meta property="og:description" content="Узнайте, как полностью удалить старые драйвера принтеров Canon. Пошаговая инструкция: через Диспетчер устройств, Панель управления и утилиту PrintFleet.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/podklyuchenie-k-pk/">Подключение к ПК</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как удалить старые драйвера Canon: Полное руководство по очистке</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#почему-происходит-конфликт-старых-драйверов-с-новым-оборудованием">Почему происходит конфликт старых драйверов с новым оборудованием</a></li><li><a href="#базовый-метод-удаления-через-панель-управления-и-диспетчер-устройств">Базовый метод удаления через Панель управления и Диспетчер устройств</a></li><li><a href="#глубокая-очистка-хранилища-драйверов-через-командную-строку">Глубокая очистка хранилища драйверов через командную строку</a></li><li><a href="#использование-утилиты-printfleet-и-других-специализированных-средств">Использование утилиты PrintFleet и других специализированных средств</a></li><li><a href="#очистка-реестра-и-временных-файлов-после-удаления">Очистка реестра и временных файлов после удаления</a></li><li><a href="#корректная-установка-свежего-драйвера-после-очистки">Корректная установка свежего драйвера после очистки</a></li><li><a href="#частые-проблемы-и-способы-их-решения">Частые проблемы и способы их решения</a></li><li><a href="#профилактика-накопления-лишних-драйверов">Профилактика накопления лишних драйверов</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-ustanovit-printer-na-kompyuter-bez-ustanovochnogo-diska-canon-g2415.html">Установка принтера Canon G2415 без диска: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-podklyuchit-kameru-canon-eos-600d-k-kompyuteru.html">Как подключить камеру Canon EOS 600D к компьютеру: Полное руководство</a></li><li><a href="/articles/k/ka/kak-podklyuchit-zerkalnuyu-kameru-kak-vebku-canon.html">Как подключить зеркальную камеру Canon как веб-камеру: Полное руководство</a></li><li><a href="/articles/k/ka/kak-skidyvat-foto-s-fotoapparata-na-kompyuter-canon.html">Как перенести фото с фотоаппарата Canon на ПК: 5 способов</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-lbp-810-k-kompyuteru-windows-7-x64.html">Как подключить принтер Canon i-SENSYS LBP810 к Windows 7 x64: пошаговая инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полная очистка драйверов Canon: от диспетчера устройств до реестра</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#почему-происходит-конфликт-старых-драйверов-с-новым-оборудованием">Почему происходит конфликт старых драйверов с новым оборудованием</a></li><li><a href="#базовый-метод-удаления-через-панель-управления-и-диспетчер-устройств">Базовый метод удаления через Панель управления и Диспетчер устройств</a></li><li><a href="#глубокая-очистка-хранилища-драйверов-через-командную-строку">Глубокая очистка хранилища драйверов через командную строку</a></li><li><a href="#использование-утилиты-printfleet-и-других-специализированных-средств">Использование утилиты PrintFleet и других специализированных средств</a></li><li><a href="#очистка-реестра-и-временных-файлов-после-удаления">Очистка реестра и временных файлов после удаления</a></li><li><a href="#корректная-установка-свежего-драйвера-после-очистки">Корректная установка свежего драйвера после очистки</a></li><li><a href="#частые-проблемы-и-способы-их-решения">Частые проблемы и способы их решения</a></li><li><a href="#профилактика-накопления-лишних-драйверов">Профилактика накопления лишних драйверов</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>С течением времени в системе накапливаются десятки версий программного обеспечения для периферийной техники, что часто приводит к конфликтам при установке новых версий.</p>
+<p>Если вы столкнулись с тем, что принтер <em>Canon</em> определяется некорректно или не может подключиться к сети, проблема может скрываться именно в остатках устаревших драйверов.</p>
+<p>Процесс удаления требует внимательности, так как необходимо очистить не только видимые программы, но и скрытые службы печати, хранящиеся в системных папках.</p>
+
+<h2 id="почему-происходит-конфликт-старых-драйверов-с-новым-оборудованием">Почему происходит конфликт старых драйверов с новым оборудованием</h2>
+<p>Современные операционные системы, такие как Windows 10 и 11, имеют тенденцию к автоматическому сохранению всех установленных версий драйверов, чтобы обеспечить обратную совместимость.</p>
+<p>Однако при подключении нового устройства, особенно если это модель <em>Canon imageRUNNER</em> или <em>Canon PIXMA</em> с обновленным протоколом связи, старые библиотеки могут блокировать корректную работу новых компонентов.</p>
+<p>Это проявляется в ошибках очереди печати, когда задача зависает на 0%, или в невозможности выбрать устройство в списке доступных.</p>
+<p>Частая причина ошибок — несоответствие версий <strong>DRIVERSTORE</strong> (хранилища драйверов) текущим требованиям системы безопасности и стабильности.</p>
+
+<h2 id="базовый-метод-удаления-через-панель-управления-и-диспетчер-устройств">Базовый метод удаления через Панель управления и Диспетчер устройств</h2>
+<p>Первым шагом всегда должна быть стандартная деинсталляция через системные настройки, что позволит убрать основные интерфейсы взаимодействия.</p>
+<p>Откройте меню <code>Пуск → Параметры → Приложения</code>, найдите в списке софт <em>Canon</em> и нажмите кнопку удаления. Сделайте это для всех версий, связанных с вашей моделью.</p>
+<p>После этого необходимо зайти в <code>Диспетчер устройств</code>, где часто остаются "призрачные" устройства с желтыми восклицательными знаками.</p>
+<p>В разделе <code>Очереди печати</code> или <code>Принтеры и сканеры</code> найдите устройство, нажмите правой кнопкой мыши и выберите <code>Удалить устройство</code>.</p>
+<p>Обязательно отметьте галочку "Удалить программы драйверов для этого устройства", если такая опция доступна в вашем диалоговом окне.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к удалению</h4><label class="check-item"><input type="checkbox"><span>Отключить принтер от USB</span></label><label class="check-item"><input type="checkbox"><span>Закрыть все программы печати</span></label><label class="check-item"><input type="checkbox"><span>Создать точку восстановления</span></label><label class="check-item"><input type="checkbox"><span>Отключить интернет</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Важно понимать, что стандартные инструменты Windows не всегда удаляют файлы драйверов из системного хранилища, поэтому этот этап лишь частично решает проблему.</p>
+<p>Если после простого удаления проблема сохраняется, переходите к более глубоким методам очистки системы.</p>
+<blockquote>⚠️ Внимание: Удаление драйверов через Диспетчер устройств без очистки хранилища часто приводит к тому, что система сразу же скачивает их обратно из облака обновлений.</blockquote>
+
+<div class="pb-poll" id="poll-0d955a65"><div class="pb-poll-question">📊 Какой метод очистки вы используете чаще всего?</div><div class="pb-poll-option" data-poll="0d955a65" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Стандартное удаление</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0d955a65" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Командная строка</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0d955a65" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Сторонние утилиты</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0d955a65" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю как</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="глубокая-очистка-хранилища-драйверов-через-командную-строку">Глубокая очистка хранилища драйверов через командную строку</h2>
+<p>Для полного удаления пакетов драйверов необходимо использовать утилиту <strong>pnputil</strong>, которая работает напрямую с базой данных драйверов.</p>
+<p>Запустите командную строку от имени администратора, введя в поиске <code>cmd</code> и выбрав соответствующий пункт в меню.</p>
+<p>Введите команду <code>pnputil /enum-drivers</code>, чтобы получить список всех установленных драйверов. Ищите пакеты с именем <em>Canon</em> или <em>Canon UFR II</em>.</p>
+<p>Запомните или скопируйте опубликованное имя пакета (например, <code>oem12.inf</code>), которое выдала утилита.</p>
+<p>Далее используйте команду <code>pnputil /delete-driver oemXX.inf /uninstall /force</code>, заменив <code>oemXX.inf</code> на реальный номер вашего пакета.</p>
+
+<p>Этот метод позволяет выбросить драйвер из системного репозитория, предотвращая его автоматическую подгрузку при перезагрузке.</p>
+<p>Повторяйте процедуру для каждого найденного пакета <em>Canon</em>, пока список не очистится от старых версий.</p>
+<p>Если вы не уверены в том, какой именно пакет является драйвером принтера, лучше сначала создать точку восстановления системы.</p>
+
+<details class="pb-accordion"><summary>Что такое oem.inf файлы?</summary><div class="pb-accordion-body"><p>Это файлы информации о драйверах, которые Windows создает при установке любого устройства. Они хранят ключи к системным библиотекам и настройкам конкретного оборудования.</p></div></details>
+
+<h2 id="использование-утилиты-printfleet-и-других-специализированных-средств">Использование утилиты PrintFleet и других специализированных средств</h2>
+<p>Для пользователей, не желающих вручную искать пакеты в консоли, существуют специализированные инструменты, такие как <em>PrintFleet</em> или <strong>DriverStore Explorer</strong>.</p>
+<p>Эти программы предоставляют графический интерфейс, где можно выбрать все драйверы бренда <em>Canon</em> и удалить их одним кликом.</p>
+<p>Они автоматически находят зависимости и предлагают удалить связанные службы, что значительно упрощает процесс.</p>
+
+<p>Однако при использовании стороннего ПО важно скачивать его только с официальных сайтов разработчиков, чтобы избежать установки вредоносного кода.</p>
+<p>После очистки с помощью утилит обязательно перезагрузите компьютер для применения всех системных изменений.</p>
+<blockquote>⚠️ Внимание: Некоторые утилиты могут удалить драйверы других периферийных устройств, если они используют общие библиотеки печати, поэтому проверяйте список перед подтверждением.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед запуском утилиты закройте все окна печати и программы, работающие с документами, чтобы файлы драйверов не были заблокированы системой.</p></aside>
+
+<h2 id="очистка-реестра-и-временных-файлов-после-удаления">Очистка реестра и временных файлов после удаления</h2>
+<p>Даже после удаления драйверов в реестре Windows могут оставаться ключи, которые указывают системе на несуществующие устройства.</p>
+<p>Откройте редактор реестра через команду <code>regedit</code> и перейдите по пути <code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows x64\Drivers\Version-3</code>.</p>
+<p>Здесь вы можете увидеть список драйверов, которые продолжают отображаться в системе. Удалите папки, связанные с <em>Canon</em>, но будьте крайне осторожны.</p>
+<p>Не удаляйте системные папки с неизвестными именами, чтобы не нарушить работу других компонентов Windows.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Метод очистки</th>
+<th>Сложность</th>
+<th>Эффективность</th>
+<th>Риск</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Панель управления</td>
+<td>Низкая</td>
+<td>Средняя</td>
+<td>Низкий</td>
+</tr>
+<tr>
+<td>Командная строка (pnputil)</td>
+<td>Средняя</td>
+<td>Высокая</td>
+<td>Средний</td>
+</tr>
+<tr>
+<td>Утилиты (PrintFleet)</td>
+<td>Низкая</td>
+<td>Максимальная</td>
+<td>Средний</td>
+</tr>
+<tr>
+<td>Ручная очистка реестра</td>
+<td>Высокая</td>
+<td>Максимальная</td>
+<td>Высокий</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>После очистки реестра рекомендуется удалить временные файлы, нажав <code>Win + R</code> и введя команду <code>%temp%</code>.</p>
+<p>Удалите все файлы в открывшейся папке, которые могут содержать старые логи или кэш драйверов.</p>
+<p>Этот шаг часто освобождает место на диске и убирает конфликты конфигурационных файлов.</p>
+
+<h2 id="корректная-установка-свежего-драйвера-после-очистки">Корректная установка свежего драйвера после очистки</h2>
+<p>После того как старое ПО полностью удалено, необходимо установить актуальную версию драйвера, скачанную с официального сайта <em>Canon</em>.</p>
+<p>Не подключайте USB-кабель принтера до момента, пока программа установки не попросит об этом.</p>
+<p>Запустите установочный файл от имени администратора и следуйте инструкциям мастера настройки.</p>
+<p>Система должна распознать устройство как новое, а не как обновленное, что гарантирует отсутствие конфликтов версий.</p>
+
+<p>Если используется сетевой принтер, убедитесь, что IP-адрес устройства статический или зафиксирован в роутере.</p>
+<p>Иногда требуется ручное добавление порта в настройках принтера через <code>Свойства принтера → Порты</code>.</p>
+<blockquote>⚠️ Внимание: Если после установки драйвер снова не работает, проверьте службу "Диспетчер печати" в <code>services.msc</code> — она должна быть запущена и иметь тип запуска "Автоматически".</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Чистая установка драйвера возможна только после полного удаления старых версий из хранилища Windows, иначе ошибки будут повторяться циклически.</p></aside>
+
+<h2 id="частые-проблемы-и-способы-их-решения">Частые проблемы и способы их решения</h2>
+<p>Иногда система выдает ошибку "Драйвер не найден" даже после удаления старых версий. Это может означать, что поврежден системный образ.</p>
+<p>В таком случае попробуйте запустить проверку системных файлов командой <code>sfc /scannow</code> в командной строке.</p>
+<p>Другая проблема — отсутствие прав администратора для удаления определенных пакетов драйверов.</p>
+<p>Для решения этой задачи может потребоваться использование утилиты <strong>PowerShell</strong> с правами суперпользователя.</p>
+
+<p>Если ничего не помогает, проверьте, не заблокирован ли доступ к сайту <em>Canon</em> антивирусом или фаерволом.</p>
+<p>Иногда антивирусные программы ошибочно блокируют установочные файлы драйверов, считая их подозрительными.</p>
+<p>Временно отключите защиту и попробуйте загрузить драйвер заново, убедившись в целостности скачанного файла.</p>
+
+<details class="pb-accordion"><summary>Почему драйвер может не удаляться?</summary><div class="pb-accordion-body"><p>Файл может быть заблокирован процессом службы печати или антивирусом. Попробуйте перезагрузить компьютер в безопасном режиме и повторить удаление.</p></div></details>
+
+<h2 id="профилактика-накопления-лишних-драйверов">Профилактика накопления лишних драйверов</h2>
+<p>Чтобы избежать проблемы в будущем, отключите автоматическую установку драйверов через Центр обновления Windows.</p>
+<p>Зайдите в <code>Параметры → Обновление и безопасность → Дополнительно → Дополнительные параметры → Опциональные обновления</code> и снимите галочку с автозагрузки драйверов.</p>
+<p>При замене принтера на новую модель сразу удаляйте старый драйвер перед подключением нового устройства.</p>
+<p>Регулярная очистка системы от неиспользуемых программ и файлов поддерживает ее стабильную работу.</p>
+
+<p>Используйте только проверенные источники для загрузки ПО, чтобы избежать установки модифицированных версий драйверов.</p>
+<p>Соблюдение этих простых правил позволит вам никогда не сталкиваться с ошибками совместимости.</p>
+<blockquote>⚠️ Внимание: Официальные обновления Windows иногда могут автоматически переустановить удаленный драйвер, если вы не отключили соответствующую опцию в параметрах системы.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Стабильность работы принтера напрямую зависит от чистоты системы и отсутствия конфликтов между версиями драйверов.</p></aside>
+
+<details>
+<summary>Как узнать, какой именно драйвер Canon установлен в системе?</summary>
+<p>Чтобы узнать версию, откройте <code>Панель управления → Устройства и принтеры</code>, нажмите правой кнопкой на принтер, выберите <code>Свойства принтера</code> и перейдите на вкладку <code>Драйвер</code>. Там указан точный номер версии и дата выпуска.</p>
+</details>
+
+<details>
+<summary>Можно ли удалить драйвер, если принтер сейчас не подключен?</summary>
+<p>Да, драйверы хранятся в системном хранилище независимо от физического наличия устройства. Вы можете удалить их через Диспетчер устройств, выбрав "Показать скрытые устройства" и удалив все серые значки Canon.</p>
+</details>
+
+<details>
+<summary>Что делать, если система не дает удалить драйвер?</summary>
+<p>Если система блокирует удаление, попробуйте остановить службу <code>Диспетчер печати</code> через <code>services.msc</code>, удалите файл драйвера вручную или используйте утилиту <em>DriverStore Explorer</em> с правами администратора.</p>
+</details>
+
+<details>
+<summary>Нужно ли перезагружать компьютер после удаления драйверов?</summary>
+<p>Однозначно да. Перезагрузка необходима для того, чтобы система освободила заблокированные файлы и перестроила кэш драйверов. Без этого новые драйверы могут не установиться корректно.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-ustanovit-printer-na-kompyuter-bez-ustanovochnogo-diska-canon-g2415.html" class="pb-related-card">
+                <span class="pb-related-title">Установка принтера Canon G2415 без диска: пошаговая инструкция</span>
+                <span class="pb-related-desc">Как подключить принтер Canon PIXMA G2415 к компьютеру без установочного диска: драйвера, Wi-Fi, USB,</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-kameru-canon-eos-600d-k-kompyuteru.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить камеру Canon EOS 600D к компьютеру: Полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению Canon EOS 600D к ПК через USB и Wi-Fi. Решение проблем с драйвер</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-zerkalnuyu-kameru-kak-vebku-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить зеркальную камеру Canon как веб-камеру: Полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по превращению зеркалки Canon в вебку. Обзор методов: EOS Utility, Zoom, OBS и </span>
+            </a><a href="/articles/k/ka/kak-skidyvat-foto-s-fotoapparata-na-kompyuter-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как перенести фото с фотоаппарата Canon на ПК: 5 способов</span>
+                <span class="pb-related-desc">Пошаговые инструкции по передаче фотографий с камер Canon на компьютер через USB, Wi-Fi, картридер и</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-canon-lbp-810-k-kompyuteru-windows-7-x64.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon i-SENSYS LBP810 к Windows 7 x64: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробный гайд по установке драйверов и настройке принтера Canon LBP810 на 64-битной Windows 7. Реше</span>
+            </a><a href="/articles/k/ka/kak-nachat-pechat-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как начать печать на принтере Canon: пошаговая инструкция</span>
+                <span class="pb-related-desc">Полное руководство по первому запуску принтера Canon Canon. Установка драйверов, подключение к Wi-Fi</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

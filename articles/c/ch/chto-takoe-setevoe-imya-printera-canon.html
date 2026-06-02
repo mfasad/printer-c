@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Сетевое имя принтера Canon: что это и как настроить — Кэнон Инфо</title>
+    <meta name="description" content="Разбираем, что такое сетевое имя принтера Canon, как его найти в настройках и изменить для корректной работы в локальной сети. Пошаговая инструкция.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ch/chto-takoe-setevoe-imya-printera-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Сетевое имя принтера Canon: что это и как настроить">
+    <meta property="og:description" content="Разбираем, что такое сетевое имя принтера Canon, как его найти в настройках и изменить для корректной работы в локальной сети. Пошаговая инструкция.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/podklyuchenie-k-pk/">Подключение к ПК</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Сетевое имя принтера Canon: что это и как настроить</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение">Введение</a></li><li><a href="#что-такое-сетевое-имя-и-чем-оно-отличается-от-ip-адреса">Что такое сетевое имя и чем оно отличается от IP-адреса</a></li><li><a href="#как-найти-текущее-сетевое-имя-на-принтере-canon">Как найти текущее сетевое имя на принтере Canon</a></li><li><a href="#конфликты-имен-и-как-их-избежать-в-локальной-сети">Конфликты имен и как их избежать в локальной сети</a></li><li><a href="#инструкция-по-изменению-сетевого-имени-через-remote-ui">Инструкция по изменению сетевого имени через Remote UI</a></li><li><a href="#специфика-именования-для-моделей-с-поддержкой-cloud-и-airprint">Специфика именования для моделей с поддержкой Cloud и AirPrint</a></li><li><a href="#частые-ошибки-при-настройке-имени-хоста">Частые ошибки при настройке имени хоста</a></li><li><a href="#таблица-соответствия-типов-имен-и-их-назначения">Таблица соответствия типов имен и их назначения</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-podklyuchit-printer-k-noutbuku-cherez-vaj-faj-canon-g3411.html">Как подключить Canon G3411 к ноутбуку через Wi-Fi: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-podklyuchit-mfu-canon-ts-5040-k-kompyuteru-cherez-wifi.html">Подключение МФУ Canon TS5040 к компьютеру через Wi-Fi: Полное руководство</a></li><li><a href="/articles/k/ka/kak-pechatat-s-telefona-na-printer-canon-g3411.html">Как печатать с телефона на Canon G3411: Полная инструкция</a></li><li><a href="/articles/k/ka/kakoj-port-vybrat-dlya-printera-canon-i-sensys.html">Какой порт выбрать для принтера Canon i-SENSYS: USB, TCP/IP или WSD</a></li><li><a href="/articles/k/ka/kak-nastroit-printer-canon-dlya-pechati-s-telefona.html">Как настроить принтер Canon для печати с телефона: полное руководство</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Сетевое имя принтера Canon: полное руководство по настройке и идентификации</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение">Введение</a></li><li><a href="#что-такое-сетевое-имя-и-чем-оно-отличается-от-ip-адреса">Что такое сетевое имя и чем оно отличается от IP-адреса</a></li><li><a href="#как-найти-текущее-сетевое-имя-на-принтере-canon">Как найти текущее сетевое имя на принтере Canon</a></li><li><a href="#конфликты-имен-и-как-их-избежать-в-локальной-сети">Конфликты имен и как их избежать в локальной сети</a></li><li><a href="#инструкция-по-изменению-сетевого-имени-через-remote-ui">Инструкция по изменению сетевого имени через Remote UI</a></li><li><a href="#специфика-именования-для-моделей-с-поддержкой-cloud-и-airprint">Специфика именования для моделей с поддержкой Cloud и AirPrint</a></li><li><a href="#частые-ошибки-при-настройке-имени-хоста">Частые ошибки при настройке имени хоста</a></li><li><a href="#таблица-соответствия-типов-имен-и-их-назначения">Таблица соответствия типов имен и их назначения</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение">Введение</h2>
+<p>Когда вы подключаете современный <em>Canon</em> к локальной сети, компьютеры видят его не просто как «Принтер», а по уникальному идентификатору, который называется <strong>сетевое имя</strong> (или <strong>Hostname</strong>). Это техническая метка, позволяющая устройствам в одной сети находить друг друга без необходимости запоминать сложные цифровые IP-адреса. Без правильного сетевого имени автоматическая подстановка драйверов и печать с мобильных устройств могут работать некорректно.</p>
+<p>Часто пользователи сталкиваются с проблемой, когда в списке доступных устройств отображается странная комбинация символов вроде «CANON-1A2B» вместо понятного названия модели. Это сбивает с толку, особенно если в офисе работает несколько идентичных устройств. Понимание того, как формируется и где хранится это имя, критично для быстрой диагностики проблем с подключением.</p>
+<p>В этой статье мы разберем, как работает протокол обнаружения, почему имя может конфликтовать с другими устройствами и как самостоятельно изменить его через веб-интерфейс или утилиту настройки. Вы узнаете, зачем нужен <strong>DNS</strong> и как избежать дублирования идентификаторов в корпоративной среде.</p>
+
+<h2 id="что-такое-сетевое-имя-и-чем-оно-отличается-от-ip-адреса">Что такое сетевое имя и чем оно отличается от IP-адреса</h2>
+<p>Многие путают <strong>сетевое имя</strong> и <strong>IP-адрес</strong>, считая их синонимами. На самом деле это два разных параметра. IP-адрес — это цифровой идентификатор устройства в сети (например, <code>192.168.1.105</code>), который может меняться при перезагрузке роутера, если не настроена статика. Сетевое имя — это текстовая метка, присвоенная устройству производителем или администратором, которая остается неизменной, пока вы её не смените.</p>
+<p>Для устройства <em>Canon</em> сетевое имя часто формируется автоматически на основе модели и последних цифр MAC-адреса. Например, для принтера <em>Canon imageRUNNER</em> имя может выглядеть как <code>IR-ADV-C5235-001</code>. Именно это имя используется протоколами <strong>NetBIOS</strong> и <strong>mDNS</strong> для быстрого поиска устройства в локальной группе.</p>
+<p>С точки зрения пользователя, сетевое имя — это «имя» устройства, которое вы видите в окне «Устройства и принтеры» в Windows или в свойствах сети macOS. Если имя содержит кириллицу или спецсимволы, старые драйверы могут не распознать принтер, поэтому важно соблюдать стандарты латиницы и цифр.</p>
+<blockquote>⚠️ Внимание: Изменение сетевого имени может привести к временной потере связи с принтером, если в системе уже настроены очереди печати, привязанные к старому имени. Рекомендуется менять его только перед окончательной настройкой сети.</blockquote>
+
+<h2 id="как-найти-текущее-сетевое-имя-на-принтере-canon">Как найти текущее сетевое имя на принтере Canon</h2>
+<p>Самый быстрый способ узнать текущее имя — посмотреть на экран управления самого устройства. Большинство современных моделей <em>Canon</em> отображают эту информацию на главном экране или в меню состояния сети. Вам нужно найти раздел <code>Настройки → Сеть → Настройки TCP/IP</code> и посмотреть на графу «Имя хоста» (Hostname).</p>
+<p>Если экран не показывает нужную информацию, распечатайте <strong>отчет о конфигурации сети</strong>. Для этого зайдите в меню <code>Настройки устройства</code>, выберите <code>Системное обслуживание</code> и найдите пункт «Печать отчета о сети». В распечатанном документе будет четко указано <strong>Network Name</strong> и <strong>IP-адрес</strong>. Именно эта бумага станет вашим главным документом при настройке.</p>
+<p>Также имя можно увидеть через веб-интерфейс. Просто введите IP-адрес принтера в адресную строку браузера. На открывшейся странице <strong>Remote UI</strong> в разделе «Сеть» всегда отображается текущий <strong>Hostname</strong>. Это самый надежный метод, так как веб-интерфейс показывает актуальные данные в реальном времени.</p>
+<div class="pb-poll" id="poll-434558c4"><div class="pb-poll-question">📊 Каким способом вы обычно подключаете принтер?</div><div class="pb-poll-option" data-poll="434558c4" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Через USB-кабель</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="434558c4" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">По Wi-Fi сети</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="434558c4" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">По проводу Ethernet (LAN)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="434558c4" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Через облачный сервис</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="конфликты-имен-и-как-их-избежать-в-локальной-сети">Конфликты имен и как их избежать в локальной сети</h2>
+<p>В корпоративных сетях часто возникает ситуация, когда два принтера <em>Canon</em> имеют одинаковое сетевое имя. Это происходит, если приборы были поставлены из одной партии или если вы восстановили настройки после сброса, не изменив заводские параметры. Система Windows в таком случае может «теряться» и отправлять задания не туда, либо выдавать ошибку «Принтер недоступен».</p>
+<p>Чтобы избежать хаоса, администраторы сети должны присваивать уникальные имена, соответствующие стандартам <strong>DNS</strong>. Хорошая практика — включать в название модель, этаж или отдел, где стоит оборудование. Например, вместо стандартного <code>CANON-001</code> лучше использовать <code>OFFICE-2F-PRINT-01</code>.</p>
+<ul>
+<li>✅ Всегда проверяйте уникальность имени перед подключением нового устройства к сети.</li>
+<li>✅ Избегайте использования кириллицы и символов, отличных от латинских букв и цифр.</li>
+<li>✅ Используйте дефисы (-) вместо пробелов для совместимости с старыми протоколами.</li>
+</ul>
+<p>Если вы заметили, что принтер пропадает из сети периодически, возможно, его имя конфликтует с другим устройством. В этом случае нужно либо изменить имя на одном из них, либо использовать статический <strong>IP-адрес</strong> и подключаться через него, игнорируя имя хоста.</p>
+<blockquote>⚠️ Внимание: Убедитесь, что имя хоста не совпадает с именем другого активного устройства в подсети, иначе оба устройства могут перестать отвечать на запросы сети.</blockquote>
+
+<h2 id="инструкция-по-изменению-сетевого-имени-через-remote-ui">Инструкция по изменению сетевого имени через Remote UI</h2>
+<p>Чтобы изменить имя, вам понадобится доступ к веб-интерфейсу устройства. Откройте браузер и введите IP-адрес принтера. Если вы не знаете адрес, распечатайте отчет о конфигурации. Авторизуйтесь в системе, используя имя администратора (по умолчанию часто <code>admin</code>) и пароль, который может быть указан в документации к модели <em>Canon</em>.</p>
+<p>В меню перейдите в раздел <code>Настройки/Регистрация</code>, затем выберите <code>Настройки сети</code> и подпункт <code>Настройки TCP/IP</code>. Найдите поле «Имя хоста» (Hostname). Здесь вы увидите текущее значение. Сотрите его и введите новое имя, используя только латинские буквы. Не забывайте, что длина имени ограничена, обычно это до 15-63 символов.</p>
+<p>После ввода нового имени нажмите кнопку <code>Применить</code> или <code>OK</code>. Принтер может запросить перезагрузку сетевого модуля или всего устройства. Исследуйте экран внимательно: если кнопка неактивна, проверьте уровень прав доступа. Иногда требуется войти как <strong>System Manager</strong>.</p>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к смене имени</h4><label class="check-item"><input type="checkbox"><span>Узнать текущий IP-адрес</span></label><label class="check-item"><input type="checkbox"><span>Войти в веб-интерфейс</span></label><label class="check-item"><input type="checkbox"><span>Придумать уникальное имя</span></label><label class="check-item"><input type="checkbox"><span>Сохранить новые настройки</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>После перезагрузки принтер будет виден в сети под новым именем. Если вы используете Windows, возможно, придется удалить старое устройство из очереди печати и добавить его заново, указав уже новое имя хоста или IP-адрес. Драйвер автоматически подхватит обновленные данные.</p>
+<details class="pb-accordion"><summary>Что делать, если забыли пароль от Remote UI?</summary><div class="pb-accordion-body"><p>Если вы не помните пароль администратора, его можно сбросить, выполнив процедуру сброса настроек сети через меню устройства. Это вернет настройки к заводским, включая стандартное имя хоста. Будьте осторожны, это удалит и другие сетевые настройки.</p></div></details>
+
+<h2 id="специфика-именования-для-моделей-с-поддержкой-cloud-и-airprint">Специфика именования для моделей с поддержкой Cloud и AirPrint</h2>
+<p>Для устройств, поддерживающих <strong>Apple AirPrint</strong> и облачные сервисы <em>Canon</em> (например, <em>Canon PRINT</em>), сетевое имя играет двойную роль. Оно используется не только для локального обнаружения, но и для регистрации в облаке. Если имя слишком сложное или содержит спецсимволы, мобильное приложение может не найти принтер при попытке печати.</p>
+<p>В таких случаях лучше использовать короткие и понятные названия. Например, для модели <em>Canon MAXIFY</em> подойдет имя <code>MAXIFY-MB5400</code>. Это упростит поиск с телефона или планшета. Протокол <strong>mDNS</strong>, используемый для AirPrint, чувствителен к регистру символов, поэтому лучше писать всё строчными буквами, если это возможно.</p>
+<p>При подключении к облаку <em>Canon</em> система может потребовать подтверждения имени. Убедитесь, что оно не совпадает с именами других принтеров в вашей организации, чтобы сервис корректно распределил задания. Если вы используете <strong>Canon ImageWARE</strong>, имя хоста должно соответствовать правилам именования в доменной сети.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для лучших результатов с AirPrint и Google Cloud Print используйте имя хоста, состоящее только из латинских букв и цифр, без пробелов. Это гарантирует 100% совместимость со всеми мобильными устройствами.</p></aside>
+
+<h2 id="частые-ошибки-при-настройке-имени-хоста">Частые ошибки при настройке имени хоста</h2>
+<p>Самая распространенная ошибка — попытка вписать русские буквы в поле имени хоста. Хотя современные версии прошивок <em>Canon</em> могут поддерживать UTF-8, большинство операционных систем (особенно Windows XP, 7 или старые версии Linux) не смогут распознать такое имя, и принтер будет недоступен.</p>
+<p>Вторая проблема — превышение допустимой длины. Стандарты <strong>DNS</strong> ограничивают длину имени, и если вы введете слишком длинное описание (например, «Принтер для отдела бухгалтерии на третьем этаже»), система обрежет его или выдаст ошибку. Это приведет к тому, что имя будет обрезано и станет непонятным.</p>
+<p>Также стоит избегать использования дефисов в начале или конце строки. Некоторые маршрутизаторы могут интерпретировать такие знаки некорректно, что приведет к проблемам с маршрутизацией пакетов. Идеальный формат: <code>Canon-Laser-01</code>.</p>
+<ul>
+<li>❌ Не используйте русские буквы и символы (., ,, !, ?).</li>
+<li>❌ Не используйте пробелы, заменяйте их на дефисы или нижнее подчеркивание.</li>
+<li>❌ Не превышайте 63 символа в длине имени.</li>
+</ul>
+<p>Если после смены имени принтер перестал отвечать, проверьте файл <code>hosts</code> на вашем компьютере. Иногда старые записи там конфликтуют с новыми настройками. Удалите старую строку с IP-адресом и именем, чтобы система могла обновить кэш.</p>
+
+<h2 id="таблица-соответствия-типов-имен-и-их-назначения">Таблица соответствия типов имен и их назначения</h2>
+<p>Для наглядности приведем таблицу, которая поможет вам правильно выбрать формат имени в зависимости от типа сети и задач.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип имени</th>
+<th>Пример</th>
+<th>Применение</th>
+<th>Особенности</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Заводское имя</td>
+<td>CANON-1A2B</td>
+<td>Первичная настройка</td>
+<td>Уникально, но сложно запоминается</td>
+</tr>
+<tr>
+<td>Офисное имя</td>
+<td>HR-PRINT-01</td>
+<td>Корпоративная сеть</td>
+<td>Указывает на отдел и номер устройства</td>
+</tr>
+<tr>
+<td>Минималистичное</td>
+<td>MFP-Lab</td>
+<td>Малый офис / Дом</td>
+<td>Короткое, легко вводится с телефона</td>
+</tr>
+<tr>
+<td>IP-привязанное</td>
+<td>192.168.1.50</td>
+<td>Статическая конфигурация</td>
+<td>Не зависит от имени хоста, надежнее</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+<details>
+<summary>Можно ли изменить сетевое имя без доступа к веб-интерфейсу?</summary>
+<p>Да, это можно сделать через меню самого устройства (LCD-экран). Зайдите в <code>Настройки</code> → <code>Сеть</code> → <code>TCP/IP</code> и измените поле «Имя хоста». Однако веб-интерфейс более удобен и наглядно показывает текущие ошибки.</p>
+</details>
+<details>
+<summary>Что делать, если принтер Canon не виден в сети после смены имени?</summary>
+<p>Попробуйте перезагрузить роутер и само устройство. Также очистите кэш DNS на компьютере командой <code>ipconfig /flushdns</code> в командной строке Windows. Убедитесь, что имя не конфликтует с другим устройством.</p>
+</details>
+<details>
+<summary>Влияет ли смена имени на печать с мобильных устройств?</summary>
+<p>Да. После смены имени устройства могут перестать находить принтер автоматически. Вам нужно будет заново добавить его в настройки принтера на смартфоне или планшете, выбрав новое имя из списка.</p>
+</details>
+<details>
+<summary>Можно ли использовать цифры в имени принтера?</summary>
+<p>Да, использование цифр разрешено и даже рекомендуется для дифференциации устройств (например, <code>Canon-300</code>). Главное, чтобы имя начиналось с буквы, а не с цифры, согласно стандартам DNS.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-podklyuchit-printer-k-noutbuku-cherez-vaj-faj-canon-g3411.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon G3411 к ноутбуку через Wi-Fi: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка беспроводного подключения принтера Canon Pixma G3411 к ноутбуку. Решение проблем</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-mfu-canon-ts-5040-k-kompyuteru-cherez-wifi.html" class="pb-related-card">
+                <span class="pb-related-title">Подключение МФУ Canon TS5040 к компьютеру через Wi-Fi: Полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по настройке беспроводного подключения принтера Canon TS5040 к ПК. Решаем пробл</span>
+            </a><a href="/articles/k/ka/kak-pechatat-s-telefona-na-printer-canon-g3411.html" class="pb-related-card">
+                <span class="pb-related-title">Как печатать с телефона на Canon G3411: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по настройке печати с iPhone и Android на принтер Canon G3411. Решаем проблемы</span>
+            </a><a href="/articles/k/ka/kakoj-port-vybrat-dlya-printera-canon-i-sensys.html" class="pb-related-card">
+                <span class="pb-related-title">Какой порт выбрать для принтера Canon i-SENSYS: USB, TCP/IP или WSD</span>
+                <span class="pb-related-desc">Полное руководство по выбору типа подключения для МФУ и принтеров Canon i-SENSYS. Разбор портов TCP/</span>
+            </a><a href="/articles/k/ka/kak-nastroit-printer-canon-dlya-pechati-s-telefona.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить принтер Canon для печати с телефона: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по настройке печати с iPhone и Android на принтеры Canon. Поддержка AirPrint, M</span>
+            </a><a href="/articles/c/ca/canon-pixma-mg3040-kak-podklyuchit-k-noutbuku.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon Pixma MG3040 к ноутбуку: полное руководство</span>
+                <span class="pb-related-desc">Подробная инструкция по подключению принтера Canon Pixma MG3040 к ноутбуку через USB и Wi-Fi. Решени</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

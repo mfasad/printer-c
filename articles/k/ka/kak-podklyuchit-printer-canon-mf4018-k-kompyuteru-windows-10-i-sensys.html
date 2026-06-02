@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Подключение Canon i-SENSYS MF4018 к Windows 10: Полная инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговое руководство по установке драйверов и настройке принтера Canon MF4018 на Windows 10. Устранение проблем с USB и сетевым подключением.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-podklyuchit-printer-canon-mf4018-k-kompyuteru-windows-10-i-sensys.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Подключение Canon i-SENSYS MF4018 к Windows 10: Полная инструкция">
+    <meta property="og:description" content="Пошаговое руководство по установке драйверов и настройке принтера Canon MF4018 на Windows 10. Устранение проблем с USB и сетевым подключением.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/podklyuchenie-k-pk/">Подключение к ПК</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Подключение Canon i-SENSYS MF4018 к Windows 10: Полная инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-устройства-и-проверка-интерфейсов-подключения">Подготовка устройства и проверка интерфейсов подключения</a></li><li><a href="#установка-драйверов-через-официальный-пакет-ufr-ii-lt">Установка драйверов через официальный пакет UFR II LT</a></li><li><a href="#автоматическое-обнаружение-и-настройка-через-параметры-windows">Автоматическое обнаружение и настройка через «Параметры» Windows</a></li><li><a href="#ручное-добавление-принтера-через-диспетчер-устройств">Ручное добавление принтера через Диспетчер устройств</a></li><li><a href="#настройка-сетевого-подключения-и-сканирования-по-сети">Настройка сетевого подключения и сканирования по сети</a></li><li><a href="#таблица-совместимости-драйверов-и-интерфейсов">Таблица совместимости драйверов и интерфейсов</a></li><li><a href="#устранение-распространенных-ошибок-при-подключении">Устранение распространенных ошибок при подключении</a></li><li><a href="#оптимизация-производительности-для-офисных-задач">Оптимизация производительности для офисных задач</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/p/pr/printer-canon-ne-v-seti-kak-ispravit.html">Принтер Canon не в сети: как исправить ошибку и восстановить печать</a></li><li><a href="/articles/c/ca/canon-capt-usb-device-kak-postavit-printer-po-umolchaniyu.html">Как сделать Canon CAPT USB устройство принтером по умолчанию</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-k-noutbuku-canon-pixma-mp280.html">Подключение принтера Canon Pixma MP280 к ноутбуку: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-mg2540-k-noutbuku.html">Как подключить Canon MG2540 к ноутбуку: USB и Wi-Fi настройка</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-pixma-2440-k-kompyuteru.html">Как подключить Canon PIXMA MG2440 к ПК: пошаговая инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как подключить принтер Canon i-SENSYS MF4018 к компьютеру с Windows 10</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-устройства-и-проверка-интерфейсов-подключения">Подготовка устройства и проверка интерфейсов подключения</a></li><li><a href="#установка-драйверов-через-официальный-пакет-ufr-ii-lt">Установка драйверов через официальный пакет UFR II LT</a></li><li><a href="#автоматическое-обнаружение-и-настройка-через-параметры-windows">Автоматическое обнаружение и настройка через «Параметры» Windows</a></li><li><a href="#ручное-добавление-принтера-через-диспетчер-устройств">Ручное добавление принтера через Диспетчер устройств</a></li><li><a href="#настройка-сетевого-подключения-и-сканирования-по-сети">Настройка сетевого подключения и сканирования по сети</a></li><li><a href="#таблица-совместимости-драйверов-и-интерфейсов">Таблица совместимости драйверов и интерфейсов</a></li><li><a href="#устранение-распространенных-ошибок-при-подключении">Устранение распространенных ошибок при подключении</a></li><li><a href="#оптимизация-производительности-для-офисных-задач">Оптимизация производительности для офисных задач</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Подключение офисного устройства <em>Canon i-SENSYS MF4018</em> к современной операционной системе <strong>Windows 10</strong> часто вызывает вопросы у пользователей, привыкших к более старым версиям ПО. Это устройство, несмотря на свою компактность, требует корректной настройки драйверов для полноценной работы в режиме принтера, сканера и копировального аппарата. Неправильная установка может привести к тому, что система увидит только принтер, игнорируя функции сканирования.</p>
+
+<p>Процесс интеграции оборудования в локальную сеть или прямое подключение через <strong>USB-кабель</strong> имеет свои нюансы, которые зависят от версии прошивки и наличия необходимых библиотек. В этой статье мы разберем все способы подключения, от автоматического обнаружения до ручного выбора порта, чтобы вы могли без задержек начать работу с документами.</p>
+
+<p>Многие пользователи сталкиваются с тем, что стандартные драйверы Windows 10 не распознают специфические функции МФУ <em>Canon MF4018</em>. Использование официального пакета <strong>UFR II</strong> или <strong>SCN</strong> является обязательным условием для корректной передачи данных. Игнорирование этого требования часто приводит к ограничению функциональности устройства.</p>
+
+<h2 id="подготовка-устройства-и-проверка-интерфейсов-подключения">Подготовка устройства и проверка интерфейсов подключения</h2>
+
+<p>Перед началом любой процедуры установки необходимо убедиться в физической исправности всех компонентов системы. Проверьте целостность кабеля, который будет использоваться для соединения, так как поврежденные контакты часто становятся причиной нестабильной работы. Для модели <em>Canon i-SENSYS MF4018</strong> идеально подходит кабель стандарта <strong>USB 2.0</em> типа A-B.</p>
+
+<p>Убедитесь, что блок питания устройства надежно зафиксирован в розетке, а на передней панели горит индикатор готовности. Если индикатор мигает или не загорается вовсе, проблема может быть в электросети или внутреннем блоке питания принтера. В этом случае не пытайтесь запускать программную часть установки до устранения аппаратных неисправностей.</p>
+
+<p>Помимо USB-соединения, устройство поддерживает сетевое подключение через порт <strong>Ethernet</em>, что позволяет организовать работу в локальной сети офиса. Для этого потребуется подключить патч-корд к соответствующему разъему на задней панели и настроить IP-адрес в меню устройства. Это особенно актуально, если компьютер и принтер находятся в разных пунктах офиса.</p>
+
+<h2 id="установка-драйверов-через-официальный-пакет-ufr-ii-lt">Установка драйверов через официальный пакет UFR II LT</h2>
+
+<p>Самый надежный способ получить полный функционал <em>Canon i-SENSYS MF4018</strong> — скачать официальный пакет драйверов с сайта производителя. Автоматические установщики Windows часто предлагают устаревшие или ограниченные решения, которые не поддерживают сканирование в сетевом режиме. Вам необходимо зайти на страницу поддержки Canon и выбрать именно вашу модель и операционную систему.</p>
+
+<p>После загрузки файла <strong>MF4018 Series UFR II LT Printer Driver</strong> запустите его от имени администратора. Процесс распаковки файлов может занять несколько минут в зависимости от скорости жесткого диска. Не прерывайте процесс и не закрывайте окно установщика до полного завершения работы мастера настройки.</p>
+
+<p>В окне выбора типа подключения мастер предложит варианты: <strong>USB</strong>, <strong>Сеть</strong> или <strong>Порт</strong>. Если вы используете кабель, выберите автоматический поиск. Если устройство не находится сразу, попробуйте переподключить кабель к другому порту USB 3.0 или 2.0 на материнской плате. Иногда система требует перезагрузки после распаковки файлов перед этапом настройки.</p>
+
+<p>Критически важно отметить, что для работы сканера необходимо установить отдельный компонент <strong>MF Scan Utility</strong>, который часто идет в комплекте с драйвером принтера. Без этого программного обеспечения вы сможете только печатать, но не сможете отправлять документы на компьютер.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к установке драйверов</h4><label class="check-item"><input type="checkbox"><span>Скачать драйвер с официального сайта</span></label><label class="check-item"><input type="checkbox"><span>Закрыть все лишние программы</span></label><label class="check-item"><input type="checkbox"><span>Отключить антивирус на время установки</span></label><label class="check-item"><input type="checkbox"><span>Подготовить кабель USB</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="автоматическое-обнаружение-и-настройка-через-параметры-windows">Автоматическое обнаружение и настройка через «Параметры» Windows</h2>
+
+<p>Операционная система <strong>Windows 10</em> обладает встроенными механизмами для поиска периферийных устройств, хотя они не всегда работают идеально с офисной техникой Canon. Чтобы запустить поиск, откройте меню <code>Пуск → Параметры → Устройства → Принтеры и сканеры</code>. Нажмите кнопку <code>Добавить принтер или сканер</code> и подождите, пока система просканирует порты.</p>
+
+<p>Если устройство <em>Canon MF4018</em> появится в списке, нажмите на него и выберите <code>Добавить устройство</code>. Система попытается автоматически подобрать подходящий драйвер из своей базы данных. Это быстрый способ, но он часто приводит к установке базового драйвера без поддержки расширенных функций сканирования.</p>
+
+<p>В случае если поиск не дал результатов, нажмите ссылку <code>Необходимый принтер отсутствует в списке</code> и выберите ручной вариант добавления. Здесь можно задать конкретный порт, если вы знаете его адрес, или выбрать устройство из списка по имени. Это требует более глубокого понимания сетевых настроек.</p>
+
+<div class="pb-poll" id="poll-10df0264"><div class="pb-poll-question">📊 Как вы обычно подключаете принтер?</div><div class="pb-poll-option" data-poll="10df0264" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">USB-кабель</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="10df0264" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Через Wi-Fi</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="10df0264" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Через локальную сеть (Ethernet)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="10df0264" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Всегда возникают проблемы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="ручное-добавление-принтера-через-диспетчер-устройств">Ручное добавление принтера через Диспетчер устройств</h2>
+
+<p>Если автоматические методы не сработали, придется прибегнуть к более сложной процедуре через <strong>Диспетчер устройств</strong>. Нажмите правой кнопкой мыши на меню <code>Пуск</code> и выберите соответствующий пункт в списке. Найдите раздел <code>Другие устройства</code> или <code>Принтеры</code>, где ваше устройство может отображаться с желтым восклицательным знаком.</p>
+
+<p>Кликните правой кнопкой мыши по имени устройства и выберите <code>Обновить драйвер</code>. В открывшемся окне нажмите <code>Выполнить поиск драйверов на этом компьютере</code>, а затем укажите путь к папке, куда вы ранее распаковали файлы драйвера Canon. Это позволит системе найти нужные файлы вручную, минуя автоматический поиск.</p>
+
+<p>Иногда система предлагает выбрать модель из списка установленных драйверов. В этом случае нажмите кнопку <code>Установить с диска</code> и укажите путь к файлу <code>inf</code> в папке с драйверами. Это гарантирует, что будет установлен именно тот драйвер, который соответствует вашей ревизии платы устройства.</p>
+
+<blockquote>⚠️ Внимание: При ручном выборе драйвера убедитесь, что вы не перепутали модель <em>MF4018</em> с другими устройствами серии MF4000, так как прошивки могут незначительно отличаться и вызывать конфликты.</blockquote>
+
+<details class="pb-accordion"><summary>Что делать, если драйвер не находится?</summary><div class="pb-accordion-body"><p>Если система не видит файл inf, проверьте расширенные настройки папки и убедитесь, что файл не поврежден. Попробуйте распаковать архив драйвера заново, используя другой архиватор, например 7-Zip, так как стандартные архиваторы Windows могут иногда искажать структуру файлов при распаковке.</p></div></details>
+
+<h2 id="настройка-сетевого-подключения-и-сканирования-по-сети">Настройка сетевого подключения и сканирования по сети</h2>
+
+<p>Для использования функции сканирования в локальной сети необходимо, чтобы IP-адрес принтера был статическим или зарезервированным в DHCP-сервере роутера. Зайдите в панель управления принтера, используя кнопки на лицевой панели, и перейдите в раздел настроек сети <code>Network Settings</code>. Запишите текущий IP-адрес, маску подсети и шлюз.</p>
+
+<p>Установите утилиту <strong>MF Scan Utility</strong> и запустите её. В настройках утилиты укажите IP-адрес вашего устройства, если оно не определилось автоматически. Без корректной настройки адреса сканирование по сети работать не будет, даже если печать функционирует нормально.</p>
+
+<p>Проверьте настройки брандмауэра Windows, чтобы убедиться, что он не блокирует входящие соединения для утилиты сканирования. Добавьте исключения для процессов <code>MFSceUtil.exe</code> и <code>MFScan.exe</code> в правилах файрвола. Это часто упускается из виду, что приводит к невозможности инициировать сканирование с компьютера.</p>
+
+<h2 id="таблица-совместимости-драйверов-и-интерфейсов">Таблица совместимости драйверов и интерфейсов</h2>
+
+<p>Ниже приведена сводная таблица, помогающая выбрать правильный тип драйвера в зависимости от способа подключения и требуемого функционала. Это поможет избежать ошибок при выборе версии ПО.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Интерфейс подключения</th>
+<th>Тип драйвера</th>
+<th>Функция печати</th>
+<th>Функция сканирования</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USB 2.0</td>
+<td>UFR II LT</td>
+<td>Полная</td>
+<td>Полная (через MF Scan Utility)</td>
+</tr>
+<tr>
+<td>Ethernet (LAN)</td>
+<td>UFR II Network</td>
+<td>Полная</td>
+<td>Полная (через MF Scan Utility)</td>
+</tr>
+<tr>
+<td>Wi-Fi (через адаптер)</td>
+<td>UFR II LT</td>
+<td>Полная</td>
+<td>Ограниченная (зависит от роутера)</td>
+</tr>
+<tr>
+<td>Базовый драйвер Windows</td>
+<td>Microsoft IPP Class Driver</td>
+<td>Базовая</td>
+<td>Отсутствует</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>⚠️ Внимание: Использование универсального драйвера Windows <strong>IPP Class Driver</strong> возможно для печати, но он полностью отключает возможность сканирования документов в компьютер.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для полноценной работы сканера по сети обязательно используйте официальную утилиту MF Scan Utility и статический IP-адрес устройства.</p></aside>
+
+<h2 id="устранение-распространенных-ошибок-при-подключении">Устранение распространенных ошибок при подключении</h2>
+
+<p>Частой проблемой является сообщение об ошибке при отправке задания на печать или невозможность подключения к сканеру. В первую очередь проверьте, не находится ли принтер в режиме <code>Пауза</code> или <code>Очередь</code>. Зайдите в <code>Устройства и принтеры</code>, откройте очередь печати и убедитесь, что нет зависших документов.</p>
+
+<p>Если устройство не определяется через USB, попробуйте сменить порт на компьютере, желательно подключив его напрямую к материнской плате, минуя USB-хабы. Дешевые хабы часто не обеспечивают достаточной мощности для стабильной работы принтера, что приводит к сбоям в передаче данных.</p>
+
+<p>В некоторых случаях помогает полное удаление драйверов и их повторная установка. Используйте утилиту <code>Print Spooler</code> в службах Windows, чтобы остановить службу печати, удалить файлы из папки <code>C:\Windows\System32\spool\drivers</code> и запустить службу заново. Это очистит кэш и позволит системе начать работу с чистого листа.</p>
+
+<p>Если вы используете стороннее антивирусное ПО, временно отключите его на время установки и настройки. Иногда агрессивные фильтры безопасности блокируют попытки драйвера установиться или получить доступ к портам ввода-вывода.</p>
+
+<blockquote>⚠️ Внимание: Перед удалением драйверов через Диспетчер устройств обязательно снимите галочку «Удалить программы драйверов для этого устройства», если вы планируете переустанавливать их позже, чтобы избежать потери настроек порта.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если принтер перестал работать после обновления Windows 10, проверьте, не отключилась ли опция «Использовать принтер по умолчанию» в настройках, так как обновления иногда сбрасывают выбор устройства.</p></aside>
+
+<h2 id="оптимизация-производительности-для-офисных-задач">Оптимизация производительности для офисных задач</h2>
+
+<p>После успешного подключения рекомендуется настроить параметры печати для повышения скорости работы. В свойствах принтера перейдите на вкладку <code>Дополнительно</code> и убедитесь, что стоит галочка <code>Печатать сразу</code>. Это уменьшит время ожидания перед началом вывода изображения на бумагу.</p>
+
+<p>Для экономии чернил и тонера можно включить режим <code>Экономия тонера</code> в настройках драйвера, если это допустимо для ваших текущих задач. Это особенно полезно при печати черновиков и внутренних документов, где высокое качество изображения не критично.</p>
+
+<p>Регулярно обновляйте прошивку устройства через утилиту <strong>Canon Firmware Update</strong>. Производители часто выпускают обновления, которые улучшают совместимость с новыми версиями <strong>Windows 10</strong> и устраняют баги в работе сетевых протоколов. Это простая процедура, но она значительно повышает надежность работы оборудования.</p>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Можно ли подключить Canon MF4018 по Wi-Fi напрямую?</summary>
+<p>Модель MF4018 не имеет встроенного Wi-Fi модуля. Для подключения по беспроводной сети необходимо приобрести специальный сетевой адаптер Canon или подключить принтер к роутеру через Ethernet-кабель.</p>
+</details>
+
+<details>
+<summary>Почему компьютер видит принтер, но не видит сканер?</summary>
+<p>Скорее всего, не установлен компонент <strong>MF Scan Utility</strong> или драйвер сканера. Убедитесь, что вы установили полный пакет драйверов, а не только базовый драйвер печати. Также проверьте настройки брандмауэра.</p>
+</details>
+
+<details>
+<summary>Что делать, если ошибка «Нет ответа от принтера»?</summary>
+<p>Проверьте физическое соединение кабеля и правильность выбранного порта (USB или TCP/IP). Убедитесь, что IP-адрес принтера не изменился в сети, если используется сетевое подключение.</p>
+</details>
+
+<details>
+<summary>Как настроить сканирование в папку (Scan to Folder)?</summary>
+<p>Для функции <code>Scan to Folder</code> необходимо настроить SMB-доступ к папке на компьютере. Зайдите в настройки принтера через веб-интерфейс (IP-адрес устройства) и укажите путь к сетевой папке и учетные данные.</p>
+</details>
+
+<details>
+<summary>Можно ли печатать с мобильного телефона?</summary>
+<p>Да, если вы подключили принтер к роутеру через Ethernet. Используйте мобильное приложение <strong>Canon PRINT</strong> или функцию AirPrint (если поддерживается роутером), чтобы отправлять задания на печать со смартфона.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/p/pr/printer-canon-ne-v-seti-kak-ispravit.html" class="pb-related-card">
+                <span class="pb-related-title">Принтер Canon не в сети: как исправить ошибку и восстановить печать</span>
+                <span class="pb-related-desc">Узнайте, почему принтер Canon отображается как &#x27;не в сети&#x27; и как вернуть его работу. Пошаговая инстр</span>
+            </a><a href="/articles/c/ca/canon-capt-usb-device-kak-postavit-printer-po-umolchaniyu.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать Canon CAPT USB устройство принтером по умолчанию</span>
+                <span class="pb-related-desc">Пошаговая инструкция: настройка Canon CAPT USB принтера по умолчанию в Windows. Решение проблем с др</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-k-noutbuku-canon-pixma-mp280.html" class="pb-related-card">
+                <span class="pb-related-title">Подключение принтера Canon Pixma MP280 к ноутбуку: пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как быстро подключить Canon Pixma MP280 к ноутбуку через USB или Wi-Fi. Полная установка др</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-canon-mg2540-k-noutbuku.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon MG2540 к ноутбуку: USB и Wi-Fi настройка</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как установить драйверы, подключить Canon MG2540 к Windows и Mac. Решение ошиб</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-canon-pixma-2440-k-kompyuteru.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon PIXMA MG2440 к ПК: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по подключению принтера Canon PIXMA MG2440 к компьютеру через USB и Wi-Fi. Реш</span>
+            </a><a href="/articles/c/ca/canon-pixma-kak-podklyuchit-k-kompyuteru.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon Pixma к компьютеру: пошаговая инструкция</span>
+                <span class="pb-related-desc">Полное руководство по подключению принтеров Canon Pixma к ПК через USB и Wi-Fi. Установка драйверов,</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

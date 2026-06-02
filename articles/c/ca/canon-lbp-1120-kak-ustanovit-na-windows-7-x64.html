@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Установка драйвера Canon LBP 1120 на Windows 7 x64: Полная инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговое руководство по установке принтера Canon LBP 1120 на 64-битную версию Windows 7. Обход проблем с совместимостью и настройка печати.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-lbp-1120-kak-ustanovit-na-windows-7-x64.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Установка драйвера Canon LBP 1120 на Windows 7 x64: Полная инструкция">
+    <meta property="og:description" content="Пошаговое руководство по установке принтера Canon LBP 1120 на 64-битную версию Windows 7. Обход проблем с совместимостью и настройка печати.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Установка драйвера Canon LBP 1120 на Windows 7 x64: Полная инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-драйверов-и-проверка-совместимости">Подготовка драйверов и проверка совместимости</a></li><li><a href="#алгоритм-установки-через-диспетчер-устройств">Алгоритм установки через Диспетчер устройств</a></li><li><a href="#настройка-службы-локатора-портов-capt">Настройка службы локатора портов CAPT</a></li><li><a href="#устранение-конфликта-версий-lpt-и-usb">Устранение конфликта версий LPT и USB</a></li><li><a href="#проверка-печати-и-настройка-параметров-качества">Проверка печати и настройка параметров качества</a></li><li><a href="#решение-проблем-с-драйверами-в-режиме-совместимости">Решение проблем с драйверами в режиме совместимости</a></li><li><a href="#альтернативные-способы-и-универсальные-драйверы">Альтернативные способы и универсальные драйверы</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-podklyuchit-printera-canon-mf4410.html">Как подключить принтер Canon MF4410 к компьютеру: USB и сеть</a></li><li><a href="/articles/k/ka/kak-podklyuchit-mfu-canon-mf645cx.html">Как подключить МФУ Canon MF645Cx: Полная инструкция по настройке</a></li><li><a href="/articles/p/pr/printer-kenon-ne-v-seti-chto-delat.html">Принтер Canon не в сети: 7 рабочих способов исправить ошибку</a></li><li><a href="/articles/k/ka/kak-ustanovit-canon-mf3228-na-windows-10-64-bit.html">Как установить Canon MF3228 на Windows 10 64 bit: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-ustanovit-printer-canon-lbp6020.html">Как установить принтер Canon LBP6020: драйверы и подключение к ПК</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Установка драйвера Canon LBP 1120 на Windows 7 x64</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-драйверов-и-проверка-совместимости">Подготовка драйверов и проверка совместимости</a></li><li><a href="#алгоритм-установки-через-диспетчер-устройств">Алгоритм установки через Диспетчер устройств</a></li><li><a href="#настройка-службы-локатора-портов-capt">Настройка службы локатора портов CAPT</a></li><li><a href="#устранение-конфликта-версий-lpt-и-usb">Устранение конфликта версий LPT и USB</a></li><li><a href="#проверка-печати-и-настройка-параметров-качества">Проверка печати и настройка параметров качества</a></li><li><a href="#решение-проблем-с-драйверами-в-режиме-совместимости">Решение проблем с драйверами в режиме совместимости</a></li><li><a href="#альтернативные-способы-и-универсальные-драйверы">Альтернативные способы и универсальные драйверы</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Принтер <em>Canon LBP 1120</em> остается популярным выбором для домашнего использования благодаря своей компактности и экономичности. Однако пользователи часто сталкиваются с трудностями при попытке подключить это устройство к операционной системе <strong>Windows 7</strong> с архитектурой <strong>x64</strong>. Официальные драйверы для данной модели часто ориентированы на более новые версии ОС, что создает необходимость в использовании альтернативных методов установки. В этой статье мы разберем надежные способы решения этой проблемы, чтобы вы могли без труда начать печать документов.</p>
+
+<p>Сложность заключается в том, что стандартный установщик может не распознать систему или выдавать ошибку несовместимости. Важно понимать, что <em>Canon LBP 1120</em> использует технологию <strong>CAPT</strong> (Canon Advanced Printing Technology), которая требует специфического драйвера для корректной работы. Если вы просто подключите кабель и попытаетесь дождаться автоматической настройки, система скорее всего не найдет подходящее программное обеспечение. Поэтому ручная настройка станет единственно верным решением.</p>
+
+<h2 id="подготовка-драйверов-и-проверка-совместимости">Подготовка драйверов и проверка совместимости</h2>
+
+<p>Первым шагом является получение правильного программного обеспечения. На официальном сайте производителя поддержка <em>Windows 7</em> для этой модели может быть скрыта или отсутствовать в явном виде для 64-битных систем. Вам необходимо найти драйвер, который поддерживает <strong>CAPT</strong> и предназначен именно для вашей архитектуры. Часто драйвер от модели <em>Canon LBP 6000</em> или <em>LBP 6018</em> отлично подходит для <em>LBP 1120</em>, так как они имеют идентичную аппаратную начинку.</p>
+
+<p>Скачивая файлы, обратите внимание на расширение и размер. Файл драйвера обычно имеет размер около 15-20 МБ. Если вы скачиваете архив <code>.zip</code>, обязательно извлеките его содержимое в отдельную папку перед началом установки. Запуск установщика из архива часто приводит к ошибкам распаковки временных файлов. Убедитесь, что вы скачали версию <strong>x64</strong>, а не <strong>x86</strong> (32-бит), иначе система откажется принимать драйвер.</p>
+
+<p>Если официальный драйвер найти не удается, можно воспользоваться универсальным методом через диспетчер устройств. Этот способ позволяет указать системе путь к файлам драйвера вручную. Для этого вам понадобится знать точное расположение архива или папки с извлеченными файлами. Не пытайтесь использовать драйверы от принтеров других брендов, так как технология <strong>CAPT</strong> уникальна для <em>Canon</em> и требует специфических библиотек.</p>
+
+<blockquote>⚠️ Внимание: Драйверы для 32-битных систем (x86) категорически не подходят для установки на Windows 7 x64. Попытка принудительной установки приведет к сбою процесса и может заблокировать службы печати.</blockquote>
+
+<div class="pb-poll" id="poll-c34cd622"><div class="pb-poll-question">📊 Установили ли вы принтер Canon ранее?</div><div class="pb-poll-option" data-poll="c34cd622" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Да, без проблем</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c34cd622" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Нет, впервые сталкиваюсь</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c34cd622" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Пытался, но не вышло</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c34cd622" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Использую другой бренд</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="алгоритм-установки-через-диспетчер-устройств">Алгоритм установки через Диспетчер устройств</h2>
+
+<p>Самый надежный метод — это ручная установка через <code>Диспетчер устройств</code>. Сначала подключите принтер к компьютеру через USB-кабель и включите его. Дождитесь, пока система определит новое оборудование, даже если она выдаст сообщение об ошибке драйвера. Перейдите в <code>Панель управления → Система → Диспетчер устройств</code> и найдите устройство с желтым восклицательным знаком, обычно оно называется <em>Canon LBP1120</em> или <em>Неизвестное устройство</em>.</p>
+
+<p>Кликните правой кнопкой мыши по устройству и выберите <code>Обновить драйверы</code>. В появившемся окне выберите опцию <code>Выполнить поиск драйверов на этом компьютере</code>. Далее нажмите <em>Выбрать драйвер из списка доступных драйверов на компьютере</em>. В этом списке может не быть вашей модели, поэтому нажмите кнопку <em>С диска</em> и укажите путь к файлу <code>.inf</code> из папки с извлеченным драйвером. Файл обычно называется <code>cnatsrv.inf</code> или имеет похожее название.</p>
+
+<p>После выбора файла система начнет процесс копирования файлов драйвера. Это может занять несколько минут. Если появится окно с предупреждением о том, что драйвер не прошел проверку подписи, нажмите <em>Всё равно установить этот драйвер</em>. Без этого шага установка будет прервана. После завершения процесса принтер должен появиться в списке распечатчиков без значков ошибок.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к ручному подключению</h4><label class="check-item"><input type="checkbox"><span>Скачать драйвер CAPT x64</span></label><label class="check-item"><input type="checkbox"><span>Распаковать архив в папку</span></label><label class="check-item"><input type="checkbox"><span>Отключить интернет на время установки</span></label><label class="check-item"><input type="checkbox"><span>Подключить USB-кабель и включить принтер</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="настройка-службы-локатора-портов-capt">Настройка службы локатора портов CAPT</h2>
+
+<p>Для корректной работы технологии <strong>CAPT</strong> необходима работающая служба локатора портов. Иногда после установки драйвера принтер не печатает, потому что эта служба не запущена. Нажмите <code>Win + R</code> и введите команду <code>services.msc</code>. В открывшемся окне найдите службу <em>Canon CAPT Printer Port Locator</em>.</p>
+
+<p>Дважды кликните по службе и убедитесь, что тип запуска установлен в <strong>Автоматически</strong>. Если служба остановлена, нажмите кнопку <strong>Запустить</strong>. Иногда название службы может отличаться, например, <em>Canon MF Port Monitor</em> в более новых моделях, но для <em>LBP 1120</em> это именно локатор портов. Проверьте также, чтобы служба <em>Диспетчер печати</em> была запущена, так как она отвечает за передачу заданий на устройство.</p>
+
+<p>Если служба не запускается или сразу останавливается, это может указывать на конфликт с антивирусом или повреждение системных файлов. В таком случае попробуйте временно отключить антивирусное ПО и повторить попытку запуска. После успешного запуска службы можно попробовать отправить тестовую страницу. Это критически важный этап, без которого печать невозможна. <strong>Canon LBP 1120</strong> не будет работать без активного локатора портов.</p>
+
+<details class="pb-accordion"><summary>Что делать, если служба не запускается?</summary><div class="pb-accordion-body"><p>Попробуйте перезагрузить компьютер в безопасном режиме и запустить службу оттуда. Также проверьте зависимости службы в свойствах — они должны быть запущены.</p></div></details>
+
+<h2 id="устранение-конфликта-версий-lpt-и-usb">Устранение конфликта версий LPT и USB</h2>
+
+<p>Одной из частых проблем при работе с <em>Canon LBP 1120</em> является неправильное определение порта. В свойствах принтера может быть выбран порт <code>LPT1</code>, хотя устройство подключено через USB. Зайдите в <code>Панель управления → Принтеры</code>, нажмите правой кнопкой на <em>Canon LBP 1120</em> и выберите <code>Свойства принтера</code>. Перейдите на вкладку <strong>Порты</strong>.</p>
+
+<p>Найдите в списке порт, начинающийся с <code>USB001</code> (или <code>USB002</code>, <code>USB003</code>). Поставьте галочку напротив него и нажмите <strong>Применить</strong>. Если в списке нет портов USB, значит, драйвер порт-монитора не установился. В этом случае вернитесь к установке драйвера через <code>Установка и удаление программ</code> или переустановите драйвер, выбрав опцию полного удаления перед новой установкой. Порт <code>USB001</code> — это виртуальный порт, созданный драйвером <strong>CAPT</strong> для связи с принтером.</p>
+
+<p>Иногда полезно отключить принтер, удалить его из списка устройств, перезагрузить компьютер и только потом подключить заново. Это заставляет систему переинициализировать USB-контроллер и корректно определить порт. Если проблема сохраняется, попробуйте подключить кабель в другой USB-порт, желательно расположенный сзади системного блока, чтобы исключить проблемы с питанием портов на передней панели.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Проблема</th>
+<th>Вероятная причина</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Принтер не видит компьютер</td>
+<td>Не установлен драйвер CAPT</td>
+<td>Установить драйвер x64 вручную</td>
+</tr>
+<tr>
+<td>Задание висит в очереди</td>
+<td>Служба локатора портов остановлена</td>
+<td>Запустить Canon CAPT Printer Port Locator</td>
+</tr>
+<tr>
+<td>Ошибка при печати</td>
+<td>Неверный порт выбран</td>
+<td>Переключить на USB00x в свойствах</td>
+</tr>
+<tr>
+<td>Принтер в офлайн</td>
+<td>Конфликт USB-соединения</td>
+<td>Переподключить кабель или сменить порт</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="проверка-печати-и-настройка-параметров-качества">Проверка печати и настройка параметров качества</h2>
+
+<p>После того как все технические настройки выполнены, необходимо проверить работоспособность устройства. Откройте любое текстовое или графическое изображение и нажмите <code>Файл → Печать</code>. Выберите принтер <em>Canon LBP 1120</em> и нажмите кнопку <strong>Свойства</strong> или <strong>Настройки</strong>. Здесь можно выбрать качество печати и тип бумаги. По умолчанию стоит режим <strong>Стандартный</strong>, который обеспечивает баланс между скоростью и четкостью.</p>
+
+<p>Для экономии чернил можно переключиться в режим <strong>Экономный</strong>. Это особенно актуально, если вы печатаете много черновиков. Учтите, что <em>LBP 1120</em> использует лазерную технологию, и качество отпечатка сильно зависит от состояния картриджа и барабана. Если текст печатается бледно или появляются полосы, возможно, картридж нужно встряхнуть или заменить. В свойствах принтера также доступен режим <strong>Высокое качество</strong> для важных документов.</p>
+
+<p>Запустите тестовую страницу. В Windows 7 это делается через <code>Свойства принтера → вкладка Общие → Печать тестовой страницы</code>. Если страница распечаталась корректно, поздравляем, установка прошла успешно. Если вы видите ошибку, проверьте, не забит ли буфер печати. Очистить очередь можно через <code>Панель управления → Принтеры → Открыть очередь печати</code> и выбрав <code>Очистить очередь печати</code>. <mark>Очистка очереди печати обязательна после каждого сбоя, иначе новые задания не будут обработаны.</mark></p>
+
+
+
+<blockquote>⚠️ Внимание: Не используйте принтер для печати фотографий или глянцевых материалов без специальной настройки. Лазерный принтер <em>Canon LBP 1120</em> предназначен исключительно для обычной офисной бумаги, так как нагрев при фиксации может испортить фотобумагу.</blockquote>
+
+<h2 id="решение-проблем-с-драйверами-в-режиме-совместимости">Решение проблем с драйверами в режиме совместимости</h2>
+
+<p>Если стандартная установка не сработала, можно попробовать запустить установочный файл в режиме совместимости. Найдите файл <code>setup.exe</code> или <code>install.exe</code> в папке с драйвером. Нажмите на него правой кнопкой мыши, выберите <strong>Свойства</strong> и перейдите на вкладку <strong>Совместимость</strong>.</p>
+
+<p>Отметьте галочку <strong>Запустить программу в режиме совместимости с</strong> и выберите из выпадающего списка <em>Windows 7</em> или <em>Windows Vista</em>. Также рекомендуется включить опцию <strong>Запускать эту программу от имени администратора</strong>. Это даст установщику необходимые права для записи в системные реестры и папки <code>System32</code>. После настройки нажмите <strong>ОК</strong> и запустите установку заново.</p>
+
+<p>Иногда помогает отключение контроля учетных записей (UAC) на время установки. Нажмите <code>Пуск</code>, введите <code>UAC</code> и выберите <strong>Изменение параметров контроля учетных записей</strong>. Переместите ползунок в самое нижнее положение. После успешной установки не забудьте вернуть настройки обратно для безопасности системы. Этот метод часто решает проблемы с установкой старых драйверов на современные (на тот момент) системы.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Использование режима совместимости и прав администратора часто является ключом к успешной установке драйверов, не имеющих официальной поддержки для вашей версии ОС.</p></aside>
+
+<h2 id="альтернативные-способы-и-универсальные-драйверы">Альтернативные способы и универсальные драйверы</h2>
+
+<p>В крайнем случае, если родной драйвер не работает, можно попробовать установить универсальный драйвер от <em>Canon LBP 6000</em>. Эти модели имеют одинаковую печатную головку и механизм подачи бумаги. Драйвер от <em>LBP 6000</em> часто устанавливается на <em>LBP 1120</em> без проблем. В диспетчере устройств при обновлении драйвера выберите вручную модель <em>Canon LBP 6000</em> из списка.</p>
+
+<p>Это не всегда идеальный вариант, так как утилиты обслуживания могут не подойти, но печать будет работать. Также стоит проверить наличие обновлений Windows через <code>Центр обновлений</code>. Иногда Microsoft выкладывает совместимые драйверы в своих репозиториях, которые не видны на сайте производителя. Попробуйте найти обновление для принтера в разделе <strong>Опциональные обновления</strong>.</p>
+
+<p>Если ничего не помогает, рассмотрите возможность использования принтера в сети через другой компьютер, где он настроен корректно. Это обходной путь, который позволяет использовать устройство, даже если на локальной машине возникают непреодолимые программные конфликты. Главное — обеспечить стабильное соединение и корректную настройку общих папок и принтеров.</p>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Подойдет ли драйвер от Canon LBP 6000 для LBP 1120?</summary>
+<p>Да, в большинстве случаев драйверы от моделей серии LBP 6000 полностью совместимы с LBP 1120, так как они используют одинаковую печатную платформу CAPT.</p>
+</details>
+
+<details>
+<summary>Что делать, если установка драйвера выдает ошибку 0x00000002?</summary>
+<p>Эта ошибка обычно означает отсутствие необходимых файлов или конфликт версий. Попробуйте запустить установщик от имени администратора и отключить антивирус на время установки.</p>
+</details>
+
+<details>
+<summary>Можно ли установить LBP 1120 на Windows 10 или 11?</summary>
+<p>Для Windows 10 и 11 официальный драйвер может не подойти, но часто работает драйвер для Windows 7 x64 в режиме совместимости или через установку драйвера от аналогичной модели.</p>
+</details>
+
+<details>
+<summary>Где скачать драйвер, если он не работает на сайте Canon?</summary>
+<p>Можно воспользоваться проверенными репозиториями драйверов или найти архив с драйвером для аналогичной модели (например, LBP 6000) на специализированных форумах технической поддержки.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-podklyuchit-printera-canon-mf4410.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon MF4410 к компьютеру: USB и сеть</span>
+                <span class="pb-related-desc">Подробная инструкция по подключению Canon MF4410. Установка драйверов, настройка USB и Ethernet, реш</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-mfu-canon-mf645cx.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить МФУ Canon MF645Cx: Полная инструкция по настройке</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению МФУ Canon MF645Cx к компьютеру и сети. Обзор методов USB, Wi-Fi </span>
+            </a><a href="/articles/p/pr/printer-kenon-ne-v-seti-chto-delat.html" class="pb-related-card">
+                <span class="pb-related-title">Принтер Canon не в сети: 7 рабочих способов исправить ошибку</span>
+                <span class="pb-related-desc">Решение проблемы, когда принтер Canon отображается как &#x27;не в сети&#x27;. Пошаговая инструкция: проверка д</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-canon-mf3228-na-windows-10-64-bit.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить Canon MF3228 на Windows 10 64 bit: Полная инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по установке драйверов принтера Canon MF3228 на Windows 10 64 bit. Решение про</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-printer-canon-lbp6020.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить принтер Canon LBP6020: драйверы и подключение к ПК</span>
+                <span class="pb-related-desc">Пошаговая инструкция по установке драйверов и настройке Canon LBP6020. Решение проблем с подключение</span>
+            </a><a href="/articles/3/34/3460-canon-kak-podklyuchit-k-wifi.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon PIXMA TS3460 к Wi-Fi: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по настройке беспроводной сети для принтера Canon TS3460. Методы WPS, кнопка и</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

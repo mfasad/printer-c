@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как убрать поля при печати на Canon: полное руководство по настройке — Кэнон Инфо</title>
+    <meta name="description" content="Узнайте, как убрать поля на принтерах Canon. Пошаговая инструкция по настройке драйвера, режиму печати без полей и устранению проблем с обрезкой.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-kak-ubrat-polya.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как убрать поля при печати на Canon: полное руководство по настройке">
+    <meta property="og:description" content="Узнайте, как убрать поля на принтерах Canon. Пошаговая инструкция по настройке драйвера, режиму печати без полей и устранению проблем с обрезкой.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как убрать поля при печати на Canon: полное руководство по настройке</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#понимание-механизма-печати-без-полей-в-canon">Понимание механизма печати без полей в Canon</a></li><li><a href="#настройка-драйвера-через-стандартный-интерфейс-windows">Настройка драйвера через стандартный интерфейс Windows</a></li><li><a href="#работа-в-профессиональном-по-и-драйверах-canon-ij-printer-utility">Работа в профессиональном ПО и драйверах Canon IJ Printer Utility</a></li><li><a href="#устранение-проблем-с-обрезкой-изображения">Устранение проблем с обрезкой изображения</a></li><li><a href="#специфика-работы-с-фотобумагой-и-наклейками">Специфика работы с фотобумагой и наклейками</a></li><li><a href="#таблица-совместимости-режимов-и-типов-бумаги">Таблица совместимости режимов и типов бумаги</a></li><li><a href="#альтернативные-методы-и-работа-с-pdf">Альтернативные методы и работа с PDF</a></li><li><a href="#технические-нюансы-и-обслуживание">Технические нюансы и обслуживание</a></li><li><a href="#решение-частых-ошибок-и-ошибок-калибровки">Решение частых ошибок и ошибок калибровки</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-vyrovnyat-golovki-na-printere-canon-pixma-3640s.html">Как выровнять головки на принтере Canon Pixma 3640s: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-pechatat-na-printere-canon-pixma-mg2540s-s-kompyutera.html">Как печатать на принтере Canon Pixma MG2540s с компьютера: полная инструкция</a></li><li><a href="/articles/k/ka/kakoj-printer-luchshe-canon-ili-xerox.html">Canon или Xerox: какой принтер выбрать для офиса и дома в 2026 году</a></li><li><a href="/articles/k/ka/kak-uznat-parol-printera-canon-3415.html">Как узнать пароль администратора принтера Canon 3415: сброс и настройка</a></li><li><a href="/articles/k/ka/kak-nastroit-wifi-na-printere-canon-pixma-g3411.html">Как настроить Wi-Fi на принтере Canon PIXMA G3411: подробная инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полное руководство: как убрать поля при печати на принтерах Canon</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#понимание-механизма-печати-без-полей-в-canon">Понимание механизма печати без полей в Canon</a></li><li><a href="#настройка-драйвера-через-стандартный-интерфейс-windows">Настройка драйвера через стандартный интерфейс Windows</a></li><li><a href="#работа-в-профессиональном-по-и-драйверах-canon-ij-printer-utility">Работа в профессиональном ПО и драйверах Canon IJ Printer Utility</a></li><li><a href="#устранение-проблем-с-обрезкой-изображения">Устранение проблем с обрезкой изображения</a></li><li><a href="#специфика-работы-с-фотобумагой-и-наклейками">Специфика работы с фотобумагой и наклейками</a></li><li><a href="#таблица-совместимости-режимов-и-типов-бумаги">Таблица совместимости режимов и типов бумаги</a></li><li><a href="#альтернативные-методы-и-работа-с-pdf">Альтернативные методы и работа с PDF</a></li><li><a href="#технические-нюансы-и-обслуживание">Технические нюансы и обслуживание</a></li><li><a href="#решение-частых-ошибок-и-ошибок-калибровки">Решение частых ошибок и ошибок калибровки</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Белые поля по краям печати на принтерах Canon возникают из-за некорректной настройки драйвера или попытки вывода изображения с полями на принтер, поддерживающем лишь безпограничную печать. Чтобы устранить эту проблему, необходимо проверить совпадение типа бумаги в настройках печати с реальным форматом загруженного листа и активировать функцию «Без полей» в свойствах устройства перед отправкой задания.</p>
+<p>Важно понимать, что не все принтеры <em>Canon</em> поддерживают функцию печати без полей на всех типах носителей. Техническая конструкция печатающей головки и механизма подачи бумаги накладывает физические ограничения. Однако в большинстве случаев правильная настройка программного обеспечения позволяет добиться желаемого результата.</p>
+
+<h2 id="понимание-механизма-печати-без-полей-в-canon">Понимание механизма печати без полей в Canon</h2>
+<p>Режим печати <strong>без полей</strong> (Borderless) позволяет принтеру немного увеличивать изображение, чтобы перекрыть край листа. Для этого механизм подачи бумаги должен иметь возможность захватывать лист чуть дальше, чем его физическая длина, а головка должна перемещаться за пределы печатной зоны. Это не просто программная настройка, а комплексное взаимодействие железа и софта.</p>
+<p>Если вы пытаетесь включить эту функцию для документа с текстом, результат может быть непредсказуемым. Текст у края может обрезаться или расплываться. Данная опция оптимизирована именно для <strong>фотографи</strong>й и графических изображений. Обязательно убедитесь, что выбранный вами тип бумаги поддерживает режим без полей.</p>
+<p>Принтеры серии <em>Canon PIXMA</em> часто имеют специальные лотки для фотобумаги, которые активируют соответствующие режимы. Игнорирование этого факта приводит к тому, что кнопка «Без полей» остается неактивной в меню настроек печати.</p>
+
+<h2 id="настройка-драйвера-через-стандартный-интерфейс-windows">Настройка драйвера через стандартный интерфейс Windows</h2>
+<p>Первый шаг к решению проблемы — вход в свойства принтера непосредственно из программы, из которой вы печатаете. В большинстве приложений, таких как <em>Microsoft Word</em> или <em>Photoshop</em>, нужно нажать «Файл» и выбрать «Печать». Далее необходимо нажать кнопку «Свойства» или «Настройки» рядом с названием вашего устройства.</p>
+<p>В открывшемся окне драйвера <strong>Canon</strong> переключитесь на вкладку «Основное» (Main). Именно здесь находится ключевой переключатель. Найдите выпадающий список, отвечающий за размер бумаги. Если вы выберите «А4», система предложит режим <strong>без полей</strong>, но только если тип бумаги тоже выбран правильно.</p>
+<p>Обратите внимание на выпадающее меню «Тип бумаги». Если там стоит «Обычная бумага», опция без полей будет недоступна. Вам необходимо выбрать <em>Фотобумага</em> или специфический тип, например, <strong>Canon Glossy</strong> или <em>Matte</em>. После изменения типа бумаги кнопка «Без полей» должна стать активной.</p>
+<p>Иногда требуется вручную установить галочку в чекбоксе <strong>«Печать без полей»</strong>. Если галочка не ставится, значит, выбранная комбинация размера и типа бумаги не поддерживается устройством для данного режима.</p>
+
+<blockquote>⚠️ <strong>Внимание!</strong> Печать без полей увеличивает расход чернил, так как часть изображения выходит за границы листа и попадает на механизм лотка. Не используйте этот режим для текстовых документов, если это не является критически необходимым.</blockquote>
+
+<div class="pb-poll" id="poll-a185f25d"><div class="pb-poll-question">📊 Поддерживает ли ваш принтер печать без полей?</div><div class="pb-poll-option" data-poll="a185f25d" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Да, точно поддерживает</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a185f25d" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, нужно проверить</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a185f25d" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Нет, только с рамками</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a185f25d" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Печатает, но с ошибками</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="работа-в-профессиональном-по-и-драйверах-canon-ij-printer-utility">Работа в профессиональном ПО и драйверах Canon IJ Printer Utility</h2>
+<p>Для продвинутых пользователей, использующих <em>Adobe Photoshop</em> или специализированные программы для цветокоррекции, настройки драйвера могут быть недостаточно. В таких случаях лучше использовать утилиту <strong>IJ Printer Utility</strong> или настройки самого приложения. Здесь важно соблюдать иерархию настроек: сначала в программе, потом в драйвере.</p>
+<p>В драйвере необходимо перейти на вкладку «Дополнительно» или «Настройка страницы». Здесь часто можно найти более тонкие настройки, такие как <strong>масштабирование</strong> изображения. Иногда автоматическое масштабирование работает некорректно, и изображение обрезается не там, где нужно.</p>
+<p>Если вы работаете с макетами, убедитесь, что размер холста в графическом редакторе точно совпадает с размером бумаги (например, <code>210x297 мм</code>). Разница даже в 1 миллиметр может заставить принтер добавить техническую рамку для фиксации листа.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка файла к печати без полей</h4><label class="check-item"><input type="checkbox"><span>Проверить размер холста в редакторе</span></label><label class="check-item"><input type="checkbox"><span>Выбрать правильный тип бумаги</span></label><label class="check-item"><input type="checkbox"><span>Включить опцию «Без полей» в драйвере</span></label><label class="check-item"><input type="checkbox"><span>Сохранить файл в высоком разрешении</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="устранение-проблем-с-обрезкой-изображения">Устранение проблем с обрезкой изображения</h2>
+<p>Распространенная ошибка — когда после активации режима без полей важные элементы изображения (например, лица на фото или текст в футере) оказываются обрезанными. Это происходит из-за того, что принтер увеличивает изображение на 3-5% для перекрытия краев. Вам необходимо заранее оставить запас в макете.</p>
+<p>Если вы видите, что изображение не помещается полностью, проверьте настройку <strong>«Масштаб»</strong>. Иногда стоит переключить его с «По размеру бумаги» на «По размеру изображения» и вручную уменьшить масштаб на 1-2%. Это позволит сохранить все детали, но оставит микроскопическую рамку.</p>
+<p>Также стоит проверить, не включена ли функция <em>«Уменьшение/Увеличение»</em> в свойствах драйвера. Если установлено значение 100%, а физический размер бумаги отличается от напечатанного, могут возникнуть проблемы с позиционированием.</p>
+
+<blockquote>⚠️ <strong>Внимание!</strong> Если вы печатаете документы с важными данными в самом краю листа, режим без полей категорически не рекомендуется. Существует высокий риск потери информации из-за механического сдвига при подаче.</blockquote>
+
+<h2 id="специфика-работы-с-фотобумагой-и-наклейками">Специфика работы с фотобумагой и наклейками</h2>
+<p>Для печати на фотобумаге, наклейках или конвертах процедура имеет свои нюансы. Некоторые модели <em>Canon</em> требуют использования <strong>специального лотка</strong> для тонкой бумаги. Если вы загружаете фотобумагу в основной лоток, принтер может не переключиться в режим печати без полей из-за риска замятия.</p>
+<p>При работе с наклейками Режим без полей может привести к тому, что чернила попадут на саму подложку или на ролики подачи, что впоследствии испортит печать на следующих листах. Внимательно читайте инструкцию к конкретному типу бумаги.</p>
+<p>Используйте только оригинальные расходные материалы <strong>Canon</strong> или сертифицированные аналоги. Дешевая фотобумага часто имеет неточные размеры, что приводит к тому, что принтер не может захватить край листа для печати без полей.</p>
+
+<details class="pb-accordion"><summary>Почему чернила пачкают лоток?</summary><div class="pb-accordion-body"><p>При печати без полей часть изображения выходит за границы листа и оседает на внутренних поверхностях лотка. Это нормально для фотопечати, но не рекомендуется для офисных документов.</p></div></details>
+
+<h2 id="таблица-совместимости-режимов-и-типов-бумаги">Таблица совместимости режимов и типов бумаги</h2>
+<p>Ниже приведена таблица, показывающая типичные комбинации настроек для популярных моделей серии <em>PIXMA</em>. Обратите внимание, что не все типы бумаги поддерживают режим без полей.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип бумаги</th>
+<th>Размер листа</th>
+<th>Поддержка «Без полей»</th>
+<th>Рекомендуемый режим</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Фотобумага Glossy</td>
+<td>A4, 10x15</td>
+<td>Да</td>
+<td>Высокое качество</td>
+</tr>
+<tr>
+<td>Обычная бумага</td>
+<td>A4, Letter</td>
+<td>Нет</td>
+<td>Стандартный</td>
+</tr>
+<tr>
+<td>Фотобумага Matte</td>
+<td>A4, 10x15</td>
+<td>Да</td>
+<td>Матовый фоторежим</td>
+</tr>
+<tr>
+<td>Наклейки</td>
+<td>A4</td>
+<td>Ограничено</td>
+<td>С осторожностью</td>
+</tr>
+<tr>
+<td>Конверты</td>
+<td>DL, C6</td>
+<td>Нет</td>
+<td>Специфический</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="альтернативные-методы-и-работа-с-pdf">Альтернативные методы и работа с PDF</h2>
+<p>Если стандартный драйвер не дает нужного результата, можно попробовать отправить файл на печать через виртуальный PDF-принтер. В настройках <strong>Adobe Acrobat Reader</strong> есть функция «Выбрать размер страницы» или «Уменьшить до области печати». Иногда это помогает обойти ограничения драйвера.</p>
+<p>В некоторых случаях помогает ручная настройка полей в самом тексте документа. Вы можете установить поля на 0 см в редакторе, а затем в настройках принтера выбрать масштаб 102-103%. Это создаст эффект печати без полей, хотя технически это будет небольшое увеличение.</p>
+<p>Важно не переусердствовать: если масштаб будет слишком большим, качество печати может снизиться, или изображение потеряет часть краев. Оптимальное значение — <code>101-102%</code>.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед печатью большого тиража всегда делайте тестовый образец на обычной бумаге, чтобы проверить, не обрезается ли нужный вам контент в углах.</p></aside>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главная причина невозможности печати без полей — неверный выбор типа бумаги в драйвере. Всегда начинайте диагностику с проверки параметра «Тип бумаги».</p></aside>
+
+<h2 id="технические-нюансы-и-обслуживание">Технические нюансы и обслуживание</h2>
+<p>Иногда функция без полей недоступна не из-за настроек, а из-за физического загрязнения датчиков или роликов подачи. Если принтер не может точно определить край бумаги, он по умолчанию добавляет безопасную зону. Регулярная чистка <strong>роликов захвата</strong> может решить эту проблему.</p>
+<p>Для моделей с Continuous Ink Supply System (CISS) — системой непрерывной подачи чернил — убедитесь, что картриджи не слишком тяжелые. Это может влиять на балансировку каретки и точность позиционирования при печати за пределами листа.</p>
+<p>Если вы используете сторонние драйверы или устаревшую версию ПО, обновите их до последней версии с официального сайта <em>Canon</em>. Старые драйверы часто некорректно работают с новыми форматами бумаги и режимами печати.</p>
+
+<blockquote>⚠️ <strong>Внимание!</strong> После длительной работы в режиме без полей может потребоваться очистка лотка от остатков чернил. Используйте специальную влажную салфетку, не касаясь печатающей головки.</blockquote>
+
+<h2 id="решение-частых-ошибок-и-ошибок-калибровки">Решение частых ошибок и ошибок калибровки</h2>
+<p>Если после всех настроек печать все равно имеет рамку, попробуйте выполнить <strong>калибровку</strong> головки. В утилите обслуживания принтера найдите пункт «Совмещение печатающей головки» или «Калибровка». Это поможет устройству точнее позиционировать изображение.</p>
+<p>Также стоит проверить, не включен ли режим <strong>«Экономия чернил»</strong>. В некоторых моделях он блокирует режимы высокой насыщенности, которые часто необходимы для качественной печати без полей. Отключите эту функцию в свойствах принтера для теста.</p>
+<p>Если проблема сохраняется, возможно, ваша модель принтера физически не поддерживает печать без полей на выбранном размере. Внимательно изучите спецификацию устройства в руководстве пользователя.</p>
+
+<details class="pb-accordion"><summary>Что делать, если кнопка неактивна?</summary><div class="pb-accordion-body"><p>Это означает, что выбранная комбинация «Тип бумаги» и «Размер» не поддерживается для режима без полей. Поменяйте тип бумаги на фотобумагу или выберите другой размер.</p></div></details>
+
+<blockquote>⚠️ <strong>Внимание!</strong> Интерфейс драйверов может различаться в зависимости от версии ОС и конкретного устройства. Всегда сверяйте названия вкладок с официальным руководством для вашей модели.</blockquote>
+
+<details>
+<summary>Почему кнопка «Печать без полей» серая и неактивная?</summary>
+<p>Это происходит, когда выбран тип бумаги, который не поддерживает эту функцию (например, обычная офисная бумага), или когда выбранный размер бумаги не соответствует физическим возможностям вашего принтера для режима без полей.</p>
+</details>
+
+<details>
+<summary>Можно ли печатать без полей на обычной офисной бумаге?</summary>
+<p>Большинство принтеров <em>Canon</em> не позволяют печатать без полей на обычной бумаге из-за риска размазывания чернил на механизме подачи. Для этого режима требуется специальная фотобумага с быстросохнущим покрытием.</p>
+</details>
+
+<details>
+<summary>Как избежать обрезки текста при печати без полей?</summary>
+<p>Лучший способ — не использовать режим без полей для текстовых документов. Если это необходимо, увеличьте масштаб изображения на 1-2% вручную, но оставьте небольшой запас в самом макете документа, чтобы критичная информация не попала в зону риска.</p>
+</details>
+
+<details>
+<summary>Влияет ли толщина бумаги на печать без полей?</summary>
+<p>Да, слишком толстая бумага может не пройти через механизм подачи в режиме без полей, так как требуются большие зазоры и усилие захвата. Всегда проверяйте допустимую плотность бумаги (г/м²) в руководстве пользователя.</p>
+</details>
+
+<details>
+<summary>Как часто нужно чистить лоток после печати без полей?</summary>
+<p>Рекомендуется очищать лоток после каждого сеанса печати фотографий без полей, так как чернила попадают на внутренние пластиковые поверхности. Это предотвратит пачкание следующих листов и ухудшение качества печати.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-vyrovnyat-golovki-na-printere-canon-pixma-3640s.html" class="pb-related-card">
+                <span class="pb-related-title">Как выровнять головки на принтере Canon Pixma 3640s: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробная инструкция по калибровке дюз для Canon Pixma 3640s. Устранение полос, смещения цветов и ра</span>
+            </a><a href="/articles/k/ka/kak-pechatat-na-printere-canon-pixma-mg2540s-s-kompyutera.html" class="pb-related-card">
+                <span class="pb-related-title">Как печатать на принтере Canon Pixma MG2540s с компьютера: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка и печать документов на Canon Pixma MG2540s через Windows и macOS. Решение пробле</span>
+            </a><a href="/articles/k/ka/kakoj-printer-luchshe-canon-ili-xerox.html" class="pb-related-card">
+                <span class="pb-related-title">Canon или Xerox: какой принтер выбрать для офиса и дома в 2026 году</span>
+                <span class="pb-related-desc">Сравнение принтеров Canon и Xerox по качеству печати, стоимости владения и надежности. Экспертный ра</span>
+            </a><a href="/articles/k/ka/kak-uznat-parol-printera-canon-3415.html" class="pb-related-card">
+                <span class="pb-related-title">Как узнать пароль администратора принтера Canon 3415: сброс и настройка</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как найти стандартный пароль администратора Canon i-SENSYS MF3415, сбросить ег</span>
+            </a><a href="/articles/k/ka/kak-nastroit-wifi-na-printere-canon-pixma-g3411.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить Wi-Fi на принтере Canon PIXMA G3411: подробная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по подключению принтера Canon PIXMA G3411 к беспроводной сети. Методы настройк</span>
+            </a><a href="/articles/k/ka/kak-pomenyat-vaj-faj-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как поменять Wi-Fi на принтере Canon: полное руководство 2026</span>
+                <span class="pb-related-desc">Пошаговая инструкция по смене Wi-Fi сети на принтерах Canon. Методы через экран, WPS и программу Can</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

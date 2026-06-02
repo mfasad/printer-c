@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Принтер Canon не в сети: причины и способы решения проблемы — Кэнон Инфо</title>
+    <meta name="description" content="Узнайте, почему принтер Canon отображается как не в сети. Пошаговая инструкция по диагностике сети, драйверам и настройке очереди печати.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/p/pr/printer-ne-v-seti-canon-chto-delat.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Принтер Canon не в сети: причины и способы решения проблемы">
+    <meta property="og:description" content="Узнайте, почему принтер Canon отображается как не в сети. Пошаговая инструкция по диагностике сети, драйверам и настройке очереди печати.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Принтер Canon не в сети: причины и способы решения проблемы</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#диагностика-физического-подключения-и-состояния-сети">Диагностика физического подключения и состояния сети</a></li><li><a href="#проверка-и-настройка-состояния-очереди-печати-на-windows">Проверка и настройка состояния очереди печати на Windows</a></li><li><a href="#обновление-драйверов-и-проверка-портов">Обновление драйверов и проверка портов</a></li><li><a href="#сброс-сетевого-модуля-и-настройка-ip-адреса">Сброс сетевого модуля и настройка IP-адреса</a></li><li><a href="#анализ-причин-через-веб-интерфейс-принтера">Анализ причин через веб-интерфейс принтера</a></li><li><a href="#подключение-через-usb-как-временное-решение">Подключение через USB как временное решение</a></li><li><a href="#частые-вопросы-и-ответы">Частые вопросы и ответы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-pechatat-po-vajfayu-na-printer-canon.html">Как печатать по вайфаю на принтер Canon: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-zagruzhat-fotobumagu-v-printer-canon.html">Как правильно загружать фотобумагу в принтер Canon: пошаговое руководство</a></li><li><a href="/articles/k/ka/kak-napechatat-fotografiyu-10kh15-na-printere-canon-pixma.html">Как напечатать фото 10х15 на принтере Canon Pixma: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-pechatat-na-printere-canon-i-sensys-mf4018.html">Как печатать на Canon i-SENSYS MF4018: полное руководство</a></li><li><a href="/articles/c/ch/chto-oznachayut-bukvy-na-printere-canon.html">Расшифровка букв на принтерах Canon: значение серий и индикаторов</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Почему принтер Canon не в сети: полная инструкция по устранению ошибки</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#диагностика-физического-подключения-и-состояния-сети">Диагностика физического подключения и состояния сети</a></li><li><a href="#проверка-и-настройка-состояния-очереди-печати-на-windows">Проверка и настройка состояния очереди печати на Windows</a></li><li><a href="#обновление-драйверов-и-проверка-портов">Обновление драйверов и проверка портов</a></li><li><a href="#сброс-сетевого-модуля-и-настройка-ip-адреса">Сброс сетевого модуля и настройка IP-адреса</a></li><li><a href="#анализ-причин-через-веб-интерфейс-принтера">Анализ причин через веб-интерфейс принтера</a></li><li><a href="#подключение-через-usb-как-временное-решение">Подключение через USB как временное решение</a></li><li><a href="#частые-вопросы-и-ответы">Частые вопросы и ответы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Ситуация, когда компьютер видит принтер, но статус устройства показывает «Не в сети» (Offline), является одной из самых распространенных и раздражающих проблем в офисной и домашней среде. Особенно часто это случается с популярными моделями от компании <em>Canon</em>, где система может ошибочно считать устройство недоступным даже при физически исправном соединении.</p>
+
+<p>Для многих пользователей эта ошибка означает полную остановку рабочих процессов, так как любые попытки отправить документ на печать заканчиваются неудачей. Однако в большинстве случаев проблема кроется не в поломке <em>hardware</em>, а в сбоях программного обеспечения, настройках сетевого взаимодействия или некорректном состоянии очереди печати.</p>
+
+<p>Разобраться в причинах и вернуть работоспособность <strong>принтера Canon</strong> можно самостоятельно, не прибегая к услугам сервисных центров. Ниже мы рассмотрим основные сценарии возникновения ошибки и предоставим пошаговые алгоритмы действий для их устранения.</p>
+
+<h2 id="диагностика-физического-подключения-и-состояния-сети">Диагностика физического подключения и состояния сети</h2>
+
+<p>Первым шагом в решении любой технической проблемы, связанной с отсутствием связи, является проверка физических соединений. Даже если устройство подключено через <strong>Wi-Fi</strong>, необходимо убедиться, что сам роутер работает корректно и не имеет проблем с передачей данных.</p>
+
+<p>Если используется проводное подключение, проверьте целостность кабеля <strong>LAN</strong>. Попробуйте переподключить его в другой порт на роутере или в другой разъем на корпусе принтера. Иногда окисление контактов или механическое повреждение жилы приводят к тому, что устройство теряет связь с локальной сетью, хотя индикаторы питания горят ярко.</p>
+
+<p>Для беспроводных моделей <em>Canon</em> критически важно, чтобы роутер и принтер находились в одной подсети. Если вы недавно меняли пароль от Wi-Fi или устанавливали новый маршрутизатор, устройство могло «забыть» параметры доступа. В таком случае индикатор беспроводной связи может мигать оранжевым цветом или вовсе гаснуть.</p>
+
+<p>Внимание! Если вы используете двухдиапазонный роутер (2.4 ГГц и 5 ГГц), убедитесь, что принтер подключен именно к тому диапазону, который поддерживается его сетевым модулем, так как многие бюджетные модели не видят частоту 5 ГГц.</p>
+
+<p>Попробуйте распечатать пробную страницу непосредственно с панели управления принтера, минуя компьютер. Это поможет локализовать проблему: если печать с панели успешна, значит, аппаратная часть исправна, и проблема исключительно в программном взаимодействии с ПК.</p>
+
+<h2 id="проверка-и-настройка-состояния-очереди-печати-на-windows">Проверка и настройка состояния очереди печати на Windows</h2>
+
+<p>Одной из частых причин статуса «Не в сети» является настройка самой операционной системы, которая принудительно переводит устройство в режим ожидания. В меню управления принтером Windows существует опция, которая может быть активирована случайно или после обновления ОС.</p>
+
+<p>Зайдите в <code>Панель управления → Устройства и принтеры</code> (или <code>Параметры → Устройства → Принтеры и сканеры</code> в Windows 10/11). Найдите ваш принтер <em>Canon</em> в списке и кликните по нему правой кнопкой мыши. В контекстном меню выберите пункт <code>Просмотр очереди печати</code>.</p>
+
+<p>В открывшемся окне перейдите в меню <code>Принтер</code>. Если напротив пункта <strong>«Использовать принтер автономно»</strong> стоит галочка, это и есть причина проблемы. Снимите эту галочку, и система немедленно попытается восстановить соединение с устройством.</p>
+
+<p>Иногда помогает перезапуск службы диспетчера печати. Нажмите комбинацию клавиш <code>Win + R</code>, введите команду <code>services.msc</code> и нажмите Enter. В открывшемся списке найдите службу <strong>Диспетчер печати</strong> (Print Spooler).</p>
+
+<p>Щелкните по ней правой кнопкой мыши и выберите <code>Перезапустить</code>. Это действие очистит временный буфер и сбросит все зависшие задачи, которые могли блокировать статус устройства. После перезапуска службы подождите минуту и проверьте статус принтера.</p>
+
+<blockquote>⚠️ Внимание: Если вы часто работаете с большими объемами печати, отключение опции «Использовать принтер автономно» должно быть постоянным правилом, иначе система будет игнорировать ваши команды на отправку документов.</blockquote>
+
+<div class="pb-poll" id="poll-853c3c2b"><div class="pb-poll-question">📊 Какая операционная система установлена на вашем компьютере?</div><div class="pb-poll-option" data-poll="853c3c2b" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 10</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="853c3c2b" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 11</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="853c3c2b" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">macOS</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="853c3c2b" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Linux</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="853c3c2b" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другая</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="обновление-драйверов-и-проверка-портов">Обновление драйверов и проверка портов</h2>
+
+<p>Драйверы являются мостом между операционной системой и аппаратной частью принтера. Устаревшие или поврежденные драйверы часто приводят к тому, что Windows перестает корректно определять адрес устройства в сети. В этом случае даже исправный <strong>IP-адрес</strong> не будет использоваться системой.</p>
+
+<p>Откройте <code>Диспетчер устройств</code> (через поиск Windows или <code>Win + X</code>). Найдите раздел <strong>Очереди печати</strong> или <strong>Устройства обработки изображений</strong>. Если рядом с названием вашего принтера <em>Canon</em> стоит желтый восклицательный знак, драйвер требует переустановки.</p>
+
+<p>Лучшим решением будет удаление текущего драйвера и установка свежей версии с официального сайта производителя. Зайдите в раздел поддержки, введите модель вашего устройства и скачайте пакет драйверов, соответствующий вашей версии Windows.</p>
+
+<p>Также стоит проверить настройки порта. В свойствах принтера перейдите на вкладку <strong>Порты</strong>. Убедитесь, что стоит галочка напротив порта, который соответствует IP-адресу вашего устройства. Если адрес изменился (например, после перезагрузки роутера), а порт остался старым, принтер будет работать некорректно.</p>
+
+<p>Для динамических IP-адресов (DHCP) рекомендуется зафиксировать статический адрес в настройках роутера. Это гарантирует, что после перезагрузки оборудования принтер всегда будет доступен по одному и тому же адресу, что предотвратит потерю связи.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка драйверов</h4><label class="check-item"><input type="checkbox"><span>Скачать актуальную версию с сайта Canon</span></label><label class="check-item"><input type="checkbox"><span>Удалить старый драйвер через диспетчер устройств</span></label><label class="check-item"><input type="checkbox"><span>Установить новый драйвер</span></label><label class="check-item"><input type="checkbox"><span>Перезагрузить компьютер</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="сброс-сетевого-модуля-и-настройка-ip-адреса">Сброс сетевого модуля и настройка IP-адреса</h2>
+
+<p>Сетевой модуль принтера может накапливать ошибки кэширования, из-за чего он теряет связь с роутером даже при стабильном сигнале Wi-Fi. В этом случае требуется выполнить мягкий или жесткий сброс настроек сети на самом устройстве.</p>
+
+<p>На панели управления принтера <em>Canon</em> найдите меню <code>Настройки</code> (значок гаечного ключа или шестеренки). Перейдите в раздел <strong>Настройки сети</strong> (Network Settings) или <strong>Подключения</strong> (Connections). Выберите опцию <strong>Сброс настроек сети</strong> (Reset Network Settings).</p>
+
+<p>После сброса заново настройте подключение к вашей беспроводной сети. Введите пароль от Wi-Fi и дождитесь подтверждения успешного соединения. Индикатор сети должен загореться постоянным синим или зеленым цветом в зависимости от модели.</p>
+
+<p>Важно проверить, не конфликтует ли IP-адрес принтера с адресами других устройств. Если в сети много гаджетов, роутер может выдать адрес, который уже занят. Статичный IP решает эту проблему, но требует ручного ввода в настройках принтера через веб-интерфейс или панель управления.</p>
+
+<p>Для проверки доступности принтера в сети используйте командную строку. Введите команду <code>ping IP_АДРЕС_ПРИНТЕРА</code>. Если вы получаете ответ «Ответ от...», значит, физическая и сетевая связь есть, и проблема точно в программном обеспечении Windows.</p>
+
+<p>Если при пинге вы видите «Превышен интервал ожидания» (Request timed out), значит, принтер не видит сеть или роутер отбрасывает пакеты. В этом случае стоит проверить настройки брандмауэра на роутере, который может блокировать протоколы печати.</p>
+
+<details class="pb-accordion"><summary>Что делать, если статический IP не помогает?</summary><div class="pb-accordion-body"><p>Попробуйте временно отключить брандмауэр Windows и антивирусное ПО, чтобы исключить их влияние на сетевой трафик. Если это поможет, настройте исключения для принтера в настройках безопасности.</p></div></details>
+
+<h2 id="анализ-причин-через-веб-интерфейс-принтера">Анализ причин через веб-интерфейс принтера</h2>
+
+<p>Многие современные модели <em>Canon</em> имеют встроенный веб-сервер, который позволяет управлять устройством через браузер. Это мощный инструмент диагностики, позволяющий увидеть состояние системы изнутри.</p>
+
+<p>Узнайте IP-адрес вашего принтера (он распечатывается на странице конфигурации или отображается на дисплее устройства). Введите этот адрес в адресную строку любого браузера на компьютере, подключенном к той же сети.</p>
+
+<p>Откроется страница <strong>Remote UI</strong> или <strong>Web Config</strong>. Здесь вы можете увидеть детальные отчеты о статусе сети, уровне сигнала Wi-Fi, версиях прошивок и истории ошибок. Часто именно здесь можно увидеть, что устройство находится в режиме энергосбережения, который блокирует входящие подключения.</p>
+
+<p>В разделе <strong>System Settings</strong> (Настройки системы) проверьте параметры <strong>Power Management</strong> (Энергосбережение). Установите режим, при котором принтер не переходит в глубокий сон, или отключите функцию быстрого пробуждения, если она вызывает сбои.</p>
+
+<p>Также в веб-интерфейсе можно обновить прошивку устройства. Производители часто выпускают патчи, исправляющие баги сетевой совместимости. Если доступ к веб-интерфейсу закрыт паролем, попробуйте стандартные сочетания (admin/admin или admin/пусто), указанные в инструкции к модели.</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Симптом</th>
+      <th>Возможная причина</th>
+      <th>Рекомендуемое действие</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Принтер работает, но не печатает</td>
+      <td>Настройки автономного режима</td>
+      <td>Снять галочку «Использовать автономно»</td>
+    </tr>
+    <tr>
+      <td>Непостоянная связь по Wi-Fi</td>
+      <td>Слабый сигнал или помехи</td>
+      <td>Переместить роутер ближе к принтеру</td>
+    </tr>
+    <tr>
+      <td>Ошибка «Не в сети» после обновления</td>
+      <td>Неверный порт или драйвер</td>
+      <td>Проверить порт и переустановить драйвер</td>
+    </tr>
+    <tr>
+      <td>Компьютер не видит принтер</td>
+      <td>Брандмауэр блокирует подключение</td>
+      <td>Добавить принтер в исключения брандмауэра</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<blockquote>⚠️ Внимание: При обновлении прошивки через веб-интерфейс категорически запрещено отключать питание устройства или прерывать соединение, так как это может привести к необратимой поломке программного модуля.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Сделайте скриншот страницы конфигурации сети из веб-интерфейса перед любыми изменениями — это поможет быстро вернуть настройки в случае сбоя.</p></aside>
+
+<h2 id="подключение-через-usb-как-временное-решение">Подключение через USB как временное решение</h2>
+
+<p>Если проблема с сетевым подключением не решается в течение длительного времени, а печать требуется срочно, самым надежным способом является прямое подключение через кабель USB. Это исключает все сетевые факторы риска.</p>
+
+<p>Подключите принтер к USB-порту компьютера. Система должна автоматически обнаружить новое устройство и предложить установить драйвер. Если автоматическая установка не сработала, используйте диск или скачанный пакет драйверов.</p>
+
+<p>В настройках принтера вы можете добавить новый порт <strong>Standard TCP/IP Port</strong> или выбрать уже существующий локальный порт (LPT или USB). Windows создаст новый логический принтер, который будет работать стабильно, так как не зависит от настроек роутера.</p>
+
+<p>Хотя этот способ менее удобен для многопользовательской среды, он идеально подходит для домашнего использования или экстренных случаев в офисе. После устранения сетевой проблемы вы сможете снова переключиться на беспроводную связь.</p>
+
+<p>Не забудьте после восстановления сетевого подключения проверить, не осталось ли в системе дубликатов принтера. Удалите лишние очереди печати, которые могут путать систему и вызывать конфликты приоритетов.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Прямое подключение через USB — это самый надежный способ печати, если сетевые настройки принтера невозможно восстановить стандартными методами.</p></aside>
+
+<h2 id="частые-вопросы-и-ответы">Частые вопросы и ответы</h2>
+
+<details>
+  <summary>Почему статус меняется с «Готов» на «Не в сети» после перезагрузки компьютера?</summary>
+  <p>Это часто происходит из-за того, что служба диспетчера печати запускается до того, как сетевая карта ПК полностью инициализирует подключение к роутеру. Принтер еще не готов принимать запросы, а Windows уже отправляет их, фиксируя ошибку. Решение: настройте автоматический перезапуск службы диспетчера печати или увеличьте задержку запуска системных служб.</p>
+</details>
+
+<details>
+  <summary>Может ли антивирус блокировать принтер Canon?</summary>
+  <p>Да, многие антивирусные комплексы имеют встроенные сетевые экраны, которые могут блокировать порты, используемые принтерами (обычно 9100, 631 или 515). Если вы недавно установили новый антивирус, попробуйте временно отключить его защиту сети и проверить работу устройства.</p>
+</details>
+
+<details>
+  <summary>Как исправить ошибку на macOS, если принтер не в сети?</summary>
+  <p>На macOS перейдите в <code>Системные настройки → Принтеры и сканеры</code>. Удалите текущий принтер из списка и добавьте его заново. Убедитесь, что в протоколе подключения выбран <strong>Bonjour</strong> или <strong>IPP</strong>, а не <strong>LPD</strong>, так как Bonjour лучше работает с современными моделями.</p>
+</details>
+
+<details>
+  <summary>Поможет ли смена канала Wi-Fi на роутере?</summary>
+  <p>Да, если роутер работает на перегруженном канале, это может вызывать потерю пакетов данных, что интерпретируется ОС как отсутствие связи. Попробуйте вручную сменить канал на менее загруженный (например, 1, 6 или 11 для диапазона 2.4 ГГц) через настройки роутера.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-pechatat-po-vajfayu-na-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как печатать по вайфаю на принтер Canon: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по настройке беспроводной печати на принтерах Canon. Настройка Wi-Fi Direct, п</span>
+            </a><a href="/articles/k/ka/kak-zagruzhat-fotobumagu-v-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как правильно загружать фотобумагу в принтер Canon: пошаговое руководство</span>
+                <span class="pb-related-desc">Подробная инструкция по загрузке фотобумаги в принтеры Canon: выбор типа бумаги, настройка лотков, п</span>
+            </a><a href="/articles/k/ka/kak-napechatat-fotografiyu-10kh15-na-printere-canon-pixma.html" class="pb-related-card">
+                <span class="pb-related-title">Как напечатать фото 10х15 на принтере Canon Pixma: пошаговая инструкция</span>
+                <span class="pb-related-desc">Полное руководство по печати фотографий формата 10х15 см на принтерах Canon Pixma. Настройка драйвер</span>
+            </a><a href="/articles/k/ka/kak-pechatat-na-printere-canon-i-sensys-mf4018.html" class="pb-related-card">
+                <span class="pb-related-title">Как печатать на Canon i-SENSYS MF4018: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая настройка печати на МФУ Canon i-SENSYS MF4018. Установка драйверов, подключение по USB, ис</span>
+            </a><a href="/articles/c/ch/chto-oznachayut-bukvy-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Расшифровка букв на принтерах Canon: значение серий и индикаторов</span>
+                <span class="pb-related-desc">Полный гайд по буквенным обозначениям в названиях моделей и ошибках Canon. Узнайте, что значат серии</span>
+            </a><a href="/articles/c/ch/chto-oznachayut-knopki-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Что означают кнопки на принтере Canon: полное руководство</span>
+                <span class="pb-related-desc">Разбор функций кнопок на панели управления Canon. Как расшифровать индикаторы, выполнить сброс ошибо</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как настроить сканер Canon MP280: драйверы и подключение — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция по настройке сканирования на Canon MP280. Установка ПО, решение проблем с подключением и использование IJ Scan Utility.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-nastroit-skaner-canon-mp280.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как настроить сканер Canon MP280: драйверы и подключение">
+    <meta property="og:description" content="Пошаговая инструкция по настройке сканирования на Canon MP280. Установка ПО, решение проблем с подключением и использование IJ Scan Utility.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как настроить сканер Canon MP280: драйверы и подключение</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-оборудования-и-диагностика-подключения">Подготовка оборудования и диагностика подключения</a></li><li><a href="#загрузка-и-установка-драйверов-ij-scan-utility">Загрузка и установка драйверов IJ Scan Utility</a></li><li><a href="#первичная-настройка-параметров-сканирования">Первичная настройка параметров сканирования</a></li><li><a href="#особенности-работы-на-macos-и-linux">Особенности работы на macOS и Linux</a></li><li><a href="#решение-типовых-ошибок-и-сбоев">Решение типовых ошибок и сбоев</a></li><li><a href="#использование-альтернативных-программ-для-сканирования">Использование альтернативных программ для сканирования</a></li><li><a href="#меры-профилактики-и-обслуживание-сканера">Меры профилактики и обслуживание сканера</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-skanirovat-na-plottere-canon.html">Как сканировать на плоттере Canon: Полное руководство</a></li><li><a href="/articles/k/ka/kak-skanirovat-na-vindovs-10-s-printera-canon-mf3010.html">Как сканировать с Canon MF3010 на Windows 10: 3 рабочих способа</a></li><li><a href="/articles/k/ka/kak-skanirovat-dokument-v-pdf-na-kompyuter-cherez-skaner-canon-v-mnogostranichnom-formate.html">Как сканировать многостраничный документ в PDF через сканер Canon</a></li><li><a href="/articles/k/ka/kak-delat-skaner-s-printera-na-kompyuter-canon.html">Как сканировать документы с принтера Canon на компьютер: Полное руководство</a></li><li><a href="/articles/k/ka/kak-skanirovat-na-kompyuter-cherez-printer-canon-ts5040.html">Как сканировать документы с принтера Canon TS5040 на компьютер: полные инструкции</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полный гайд: настройка сканера Canon MP280 для Windows и macOS</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-оборудования-и-диагностика-подключения">Подготовка оборудования и диагностика подключения</a></li><li><a href="#загрузка-и-установка-драйверов-ij-scan-utility">Загрузка и установка драйверов IJ Scan Utility</a></li><li><a href="#первичная-настройка-параметров-сканирования">Первичная настройка параметров сканирования</a></li><li><a href="#особенности-работы-на-macos-и-linux">Особенности работы на macOS и Linux</a></li><li><a href="#решение-типовых-ошибок-и-сбоев">Решение типовых ошибок и сбоев</a></li><li><a href="#использование-альтернативных-программ-для-сканирования">Использование альтернативных программ для сканирования</a></li><li><a href="#меры-профилактики-и-обслуживание-сканера">Меры профилактики и обслуживание сканера</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Ошибка функции сканирования на устройстве Canon MP280 при сохранении работоспособности печати чаще всего вызвана отсутствием специализированных драйверов, которые стандартный пакет Windows не устанавливает автоматически. В результате модуль оцифровки изображений не инициализируется или выдает сообщение о несоответствии оборудования, требуя ручной подгрузки ПО с официального ресурса производителя.</p>
+
+<p>Для корректной работы устройства необходимо установить специализированный софт от производителя, который обеспечивает связь между операционной системой и аппаратной частью. <mark>Без установки драйвера IJ Scan Utility сканирование на моделях серии MP невозможно</mark>, даже если само устройство определяется системой как принтер.</p>
+
+<p>В данном руководстве мы разберем все этапы настройки: от скачивания правильного программного обеспечения до решения типовых ошибок. Мы также рассмотрим нюансы работы с различными версиями операционных систем и способы ручной настройки параметров сканирования для получения качественных цифровых копий.</p>
+
+<h2 id="подготовка-оборудования-и-диагностика-подключения">Подготовка оборудования и диагностика подключения</h2>
+
+<p>Перед началом установки программного обеспечения крайне важно убедиться в физической исправности соединения. Убедитесь, что кабель USB надежно вставлен в порт компьютера и в заднюю панель устройства <em>Canon PIXMA MP280</em>. Ослабленный контакт часто приводит к тому, что система видит принтер, но не может инициализировать сканер.</p>
+
+<p>Включите устройство и проверьте индикаторы на панели управления. Если горит красный светодиод с символом ошибки или мигает индикатор уровня чернил, предварительно устраните эти неисправности. Сканирование не запустится, если в лотке отсутствует бумага или обнаружена замятая стружка.</p>
+
+<p>Иногда проблема кроется в выборе порта. Попробуйте подключить устройство к другому USB-порту, желательно расположенному непосредственно на материнской плате, а не через USB-хаб. Это исключит проблемы с недостатком питания.</p>
+
+<blockquote>⚠️ Внимание: Использование удлинителей USB или передних портов системного блока может приводить к нестабильной работе сканера, так как сигнал может быть недостаточно сильным для корректной передачи данных.</blockquote>
+
+<h2 id="загрузка-и-установка-драйверов-ij-scan-utility">Загрузка и установка драйверов IJ Scan Utility</h2>
+
+<p>Для полноценной работы сканирования вам потребуется скачать пакет драйверов с официального сайта поддержки <em>Canon</em>. Перейдите в раздел загрузок, введите в поиске модель <code>MP280</code> и выберите вашу операционную систему. Важно скачать именно полный пакет драйверов, а не только базовый драйвер принтера.</p>
+
+<p>После загрузки файла с расширением <code>.exe</code> запустите его от имени администратора. Установка начнется с распаковки файлов. Дождитесь окончания процесса, не прерывая его. В окне мастера установки выберите пункт <code>IJ Scan Utility</code>, если вам предлагается выбор компонентов. Это основная утилита, через которую происходит управление сканером.</p>
+
+<p>Следуйте инструкциям на экране, соглашаясь с лицензионным соглашением. После завершения установки система может запросить перезагрузку компьютера — это обязательное условие для регистрации драйвера в системе. Не игнорируйте этот шаг, иначе служба сканирования может не запуститься.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед установкой</h4><label class="check-item"><input type="checkbox"><span>Отключить старый драйвер</span></label><label class="check-item"><input type="checkbox"><span>Подключить USB-кабель</span></label><label class="check-item"><input type="checkbox"><span>Включить устройство</span></label><label class="check-item"><input type="checkbox"><span>Скачать ПО с официального сайта</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="первичная-настройка-параметров-сканирования">Первичная настройка параметров сканирования</h2>
+
+<p>После установки ПО на рабочем столе появится ярлык <code>IJ Scan Utility</code>. Запустите его, чтобы открыть главное окно управления. Здесь вы можете задать основные параметры для будущих сканирований. Настройка <strong>разрешения</strong> зависит от цели: для веб-документов достаточно 150 dpi, а для печати фотографий потребуется 300-600 dpi.</p>
+
+<p>В разделе <code>Настройки</code> (Settings) вы можете выбрать формат выходного файла. Для документов лучше всего подходит <code>PDF</code>, так как он сохраняет текст доступным для поиска и занимает мало места. Для изображений используйте <code>JPEG</code>. Также не забудьте указать папку, куда будут сохраняться готовые файлы, чтобы не терять их в системных каталогах.</p>
+
+<p>Убедитесь, что в поле выбора устройства указано именно <em>Canon MP280 series</em>. Если там написано "Generic Scanner" или устройство не выбрано, значит драйвер установлен некорректно или служба не запущена. Перезапустите утилиту после перезагрузки компьютера.</p>
+
+<div class="pb-poll" id="poll-69fa8b8d"><div class="pb-poll-question">📊 Какую функцию чаще всего используете?</div><div class="pb-poll-option" data-poll="69fa8b8d" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Сканирование документов</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="69fa8b8d" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Сканирование фото</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="69fa8b8d" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Копирование</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="69fa8b8d" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Ничего не работает</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="особенности-работы-на-macos-и-linux">Особенности работы на macOS и Linux</h2>
+
+<p>Пользователи компьютеров Apple часто сталкиваются с тем, что стандартные драйверы Windows не подходят. Для <em>macOS</em> необходимо загружать версию ПО, соответствующую вашей версии операционной системы (например, macOS 10.14 или новее). В некоторых случаях утилита IJ Scan Utility для Mac интегрируется в стандартное приложение <code>Image Capture</code>.</p>
+
+<p>Если вы используете Linux, процесс может быть сложнее, так как <em>Canon</em> не всегда предоставляет нативные драйверы для всех дистрибутивов. Часто требуется установка пакетов <code>scangearmp</code> вручную через терминал. Проверьте наличие драйвера в репозитории вашего дистрибутива или загрузите его в формате <code>.deb</code> или <code>.rpm</code> с сайта производителя.</p>
+
+<p> Вам потребуется разрешить установку в разделе <code>Настройки безопасности</code>, выбрав пункт "Разрешить" рядом с именем <em>Canon</em>.</p>
+
+<details class="pb-accordion"><summary>Проблемы совместимости с новыми ОС</summary><div class="pb-accordion-body"><p>Если у вас установлена новейшая версия Windows или macOS, а драйвер для MP280 не обновлялся годами, попробуйте запустить установщик в режиме совместимости с Windows 7. Это часто помогает обогнуть проверку цифровых подписей.</p></div></details>
+
+<h2 id="решение-типовых-ошибок-и-сбоев">Решение типовых ошибок и сбоев</h2>
+
+<p>Самая частая ошибка — сообщение "Сканер не найден" или "Ошибка связи". Обычно это означает, что служба <strong>Canon IJ Scan Utility</strong> остановилась. Откройте "Диспетчер служб" (services.msc) и найдите службу, связанную с Canon. Перезапустите ее, если она не работает.</p>
+
+<p>Иногда антивирусное программное обеспечение блокирует доступ сканера к сети или локальным ресурсам. Проверьте список исключений в вашем антивирусе и добавьте туда папку с утилитой IJ Scan Utility. Это особенно актуально для устройств, работающих по Wi-Fi, хотя <em>MP280</em> чаще используется через кабель.</p>
+
+<p>Если сканирование прерывается на полпути, значит не хватает оперативной памяти или проблема с жестким диском. Попробуйте уменьшить разрешение сканирования или отключить другие тяжелые программы. Также проверьте диск C: на наличие свободного места.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Ошибочное сообщение</th>
+<th>Возможная причина</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Сканер не найден</td>
+<td>Отключен кабель или выключено питание</td>
+<td>Проверьте подключение и включите устройство</td>
+</tr>
+<tr>
+<td>Ошибка 1303</td>
+<td>Недостаточно прав администратора</td>
+<td>Запустите установщик от имени администратора</td>
+</tr>
+<tr>
+<td>Ошибка 1300</td>
+<td>Прервано соединение</td>
+<td>Перепроверьте настройки брандмауэра</td>
+</tr>
+<tr>
+<td>Белое изображение</td>
+<td>Закрыта крышка сканера</td>
+<td>Плотно закройте крышку перед сканированием</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>⚠️ Внимание: При установке драйверов на старых компьютерах система может выдавать предупреждение о цифровом подписи. Не отменяйте установку, а выберите "Всё равно продолжить", так как драйверы для этой модели часто не имеют новой подписи.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если сканер не определяется, попробуйте отключить кабель USB, перезагрузить компьютер и только после загрузки Windows снова подключить устройство к порту. Это сбрасывает буфер обмена USB контроллера.</p></aside>
+
+<h2 id="использование-альтернативных-программ-для-сканирования">Использование альтернативных программ для сканирования</h2>
+
+<p>Если штатная утилита <em>IJ Scan Utility</em> вызывает сложности или вас не устраивает её интерфейс, можно использовать сторонний софт. Популярные программы типа <strong>VueScan</strong> или <code>NAPS2</code> (Not Another PDF Scanner 2) часто работают стабильнее на старых моделях.</p>
+
+<p>Для работы стороннего ПО может потребоваться установка библиотеки TWAIN или WIA драйверов. Убедитесь, что в диспетчере устройств в разделе "Сканеры" выбран драйвер WIA. В Windows 10 и 11 есть встроенное приложение "Факсы и сканирование Windows", которое также может управлять <em>Canon MP280</em>.</p>
+
+<p>Иногда переход на более простой драйвер WIA вместо специализированного IJ помогает решить проблемы с медленной работой. Попробуйте в диспетчере устройств обновить драйвер и выбрать "Стандартный драйвер WIA-совместимого сканера".</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Сторонние программы типа NAPS2 — отличная альтернатива, если официальный софт Canon перестал поддерживаться или работает нестабильно на вашей версии ОС.</p></aside>
+
+<h2 id="меры-профилактики-и-обслуживание-сканера">Меры профилактики и обслуживание сканера</h2>
+
+<p>Чтобы избежать проблем с качеством отсканированных изображений, регулярно протирайте стекло сканера. Грязь и отпечатки пальцев могут создавать черные полосы на документах. Используйте мягкую безворсовую ткань и небольшое количество спирта или специального средства для оптики.</p>
+
+<p>Не ставьте тяжелые предметы на крышку сканера, так как это может деформировать стекло или повредить механизм подсветки. Механические повреждения часто приводят к поломке лампы или сенсора, что требует дорогостоящего ремонта.</p>
+
+<p>Важно также следить за состоянием программного обеспечения. Хотя для <em>MP280</em> новые драйверы выходят редко, периодически проверяйте наличие обновлений безопасности для операционной системы, которые могут влиять на работу периферийных устройств.</p>
+
+<blockquote>⚠️ Внимание: Чистка стекла сканера абразивными материалами или агрессивной химией может привести к появлению царапин, которые будут видны на каждом отсканированном документе в виде постоянных дефектов.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярная чистка стекла сканера — это не только гигиена, но и залог чистоты ваших цифровых архивов. Протирайте поверхность после каждого использования, если работаете с пыльными документами.</p></aside>
+
+<details>
+<summary>Что делать, если компьютер не видит сканер Canon MP280 после установки драйвера?</summary>
+<p>Проверьте, включено ли устройство и подключен ли кабель USB. Попробуйте заменить кабель или использовать другой USB-порт. Убедитесь, что в диспетчере устройств нет устройства с желтым восклицательным знаком. Перезагрузите компьютер и заново запустите утилиту IJ Scan Utility.</p>
+</details>
+
+<details>
+<summary>Можно ли сканировать на Canon MP280 без установки драйверов?</summary>
+<p>Нет, для полноценной работы сканирования на этой модели необходимы драйверы. Стандартные драйверы Windows могут не поддерживать все функции сканера. Вам нужно скачать и установить пакет IJ Scan Utility с официального сайта Canon.</p>
+</details>
+
+<details>
+<summary>Как изменить формат файла при сканировании?</summary>
+<p>В утилите IJ Scan Utility нажмите кнопку "Настройки" (Settings). В открывшемся окне выберите вкладку "Документ" или "Фото". В разделе "Формат файла" выберите нужный вариант: PDF, JPEG или TIFF. Подтвердите выбор кнопкой OK.</p>
+</details>
+
+<details>
+<summary>Почему сканирование происходит слишком медленно?</summary>
+<p>Скорость зависит от выбранного разрешения (DPI) и типа документа. Высокое разрешение (600 dpi и выше) и формат цветных изображений требуют больше времени на обработку. Попробуйте уменьшить разрешение до 150-300 dpi для текстовых документов.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-skanirovat-na-plottere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на плоттере Canon: Полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по сканированию широкоформатных документов на принтерах Canon. Настройки драйве</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-na-vindovs-10-s-printera-canon-mf3010.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать с Canon MF3010 на Windows 10: 3 рабочих способа</span>
+                <span class="pb-related-desc">Полная инструкция по настройке сканирования с МФУ Canon MF3010 на Windows 10. Решаем проблемы драйве</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-dokument-v-pdf-na-kompyuter-cherez-skaner-canon-v-mnogostranichnom-formate.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать многостраничный документ в PDF через сканер Canon</span>
+                <span class="pb-related-desc">Пошаговая инструкция: создайте единый PDF файл из множества страниц. Настройки драйверов Canon, режи</span>
+            </a><a href="/articles/k/ka/kak-delat-skaner-s-printera-na-kompyuter-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы с принтера Canon на компьютер: Полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по настройке сканирования с МФУ Canon на ПК. Методы через драйверы, IJ Scan Uti</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-na-kompyuter-cherez-printer-canon-ts5040.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы с принтера Canon TS5040 на компьютер: полные инструкции</span>
+                <span class="pb-related-desc">Подробное руководство по сканированию с Canon TS5040 на ПК. Методы через IJ Scan Utility, приложение</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-skaner-canon-k-kompyuteru-windows-10.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить сканер Canon к компьютеру Windows 10: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по подключению и настройке сканера Canon на Windows 10. Установка драйверов, у</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Прошивка Canon Pixma G3400: инструкция по обновлению и сбросу — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция по обновлению прошивки и сбросу счетчика Waste Ink на принтере Canon Pixma G3400. Советы по диагностике и устранению ошибок.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-proshit-printer-canon-pixma-g3400.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Прошивка Canon Pixma G3400: инструкция по обновлению и сбросу">
+    <meta property="og:description" content="Пошаговая инструкция по обновлению прошивки и сбросу счетчика Waste Ink на принтере Canon Pixma G3400. Советы по диагностике и устранению ошибок.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Прошивка Canon Pixma G3400: инструкция по обновлению и сбросу</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-оборудования-и-проверка-версии-по">Подготовка оборудования и проверка версии ПО</a></li><li><a href="#официальное-обновление-firmware-через-ij-start-center">Официальное обновление Firmware через IJ Start Center</a></li><li><a href="#вход-в-сервисный-режим-для-сброса-счетчика">Вход в сервисный режим для сброса счетчика</a></li><li><a href="#использование-утилиты-service-tool-4909">Использование утилиты Service Tool 4909</a></li><li><a href="#таблица-кодов-ошибок-и-действий">Таблица кодов ошибок и действий</a></li><li><a href="#возможные-риски-и-последствия-вмешательства">Возможные риски и последствия вмешательства</a></li><li><a href="#частые-вопросы-и-ответы-пользователей">Частые вопросы и ответы пользователей</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-perenastroit-vaj-faj-na-printere-kenon.html">Как перенастроить Wi-Fi на принтере Canon: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-k-noutbuku-cherez-vaj-faj-canon-ts5040.html">Подключение Canon TS5040 к ноутбуку по Wi-Fi: Полная инструкция</a></li><li><a href="/articles/k/ka/kakoj-kartridzh-podkhodit-k-printeru-kenon.html">Какой картридж подходит к принтеру Canon: полная таблица совместимости</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-cherez-wifi-k-noutbuku.html">Как подключить принтер Canon к ноутбуку через Wi-Fi: полная инструкция</a></li><li><a href="/articles/i/id/id-printera-kak-uznat-canon.html">Как узнать ID и серийный номер принтера Canon: 3 рабочих способа</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полное руководство по прошивке и сбросу Canon Pixma G3400</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-оборудования-и-проверка-версии-по">Подготовка оборудования и проверка версии ПО</a></li><li><a href="#официальное-обновление-firmware-через-ij-start-center">Официальное обновление Firmware через IJ Start Center</a></li><li><a href="#вход-в-сервисный-режим-для-сброса-счетчика">Вход в сервисный режим для сброса счетчика</a></li><li><a href="#использование-утилиты-service-tool-4909">Использование утилиты Service Tool 4909</a></li><li><a href="#таблица-кодов-ошибок-и-действий">Таблица кодов ошибок и действий</a></li><li><a href="#возможные-риски-и-последствия-вмешательства">Возможные риски и последствия вмешательства</a></li><li><a href="#частые-вопросы-и-ответы-пользователей">Частые вопросы и ответы пользователей</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Обладатели системы непрерывной подачи чернил (СНПЧ) от <em>Canon</em> часто сталкиваются с необходимостью обновления программного обеспечения или сброса внутренних счетчиков. Модель <em>Canon Pixma G3400</em> отличается высокой надежностью, но как и любая сложная техника, она требует периодического обслуживания на программном уровне. Запрос на «прошивку» обычно подразумевает два разных процесса: официальное обновление микрокода для исправления ошибок или процедуру сброса счетчика отработанных чернил (Service Mode).</p>
+
+<p>Важно понимать, что эти операции имеют разную природу. Первое делается через стандартные утилиты для улучшения работы, второе — часто требуется при появлении ошибки «09» (закончился абсорбер). Неправильные действия могут привести к полному отказу устройства, поэтому перед началом работ необходимо тщательно изучить описанные ниже шаги и требования к оборудованию.</p>
+
+<h2 id="подготовка-оборудования-и-проверка-версии-по">Подготовка оборудования и проверка версии ПО</h2>
+
+<p>Прежде чем приступать к любым манипуляциям с <strong>прошивкой</strong>, необходимо убедиться в стабильности подключения. Прерывание процесса обновления может превратить <em>принтер</em> в кирпич, который потребует сложного аппаратного ремонта. Лучший способ — использовать проводное подключение через USB-кабель, так как беспроводные соединения могут быть нестабильны при передаче больших объемов данных.</p>
+
+<p>Для начала проверьте текущую версию микрокода устройства. Это можно сделать через меню дисплея или через компьютерную утилиту. Если версия устарела, производитель мог выпустить патч, устраняющий баги с драйверами или улучшающий качество печати. Скачивайте софт только с официального ресурса <em>Canon</em>, избегая сторонних архивов, которые могут содержать вредоносный код.</p>
+
+<ul>
+<li>✅ Используйте только оригинальный USB-кабель для подключения к компьютеру.</li>
+<li>✅ Убедитесь, что в принтере установлены черные и цветные картриджи.</li>
+<li>✅ Закройте все сторонние программы, которые могут перехватывать управление устройством.</li>
+</ul>
+
+<h2 id="официальное-обновление-firmware-через-ij-start-center">Официальное обновление Firmware через IJ Start Center</h2>
+
+<p>Самый безопасный метод обновления — использование официальной утилиты <em>IJ Start Center</em> или <em>Canon IJ Scan Utility</em>. Этот софт автоматически определяет версию <strong>микрокода</strong> и предлагает загрузить актуальный пакет, если таковой доступен. Процесс полностью автоматизирован и требует минимального участия пользователя, что снижает риск ошибки.</p>
+
+<p>Запустите программу и перейдите в раздел настроек устройства. Нажмите на пункт <code>Обновление прошивки</code> (Firmware Update). Система проверит сервер и, если найдется новая версия, предложит начать загрузку. В этот момент ни в коем случае не отключайте питание и не вынимайте кабель, даже если процесс завис на несколько секунд. Это нормальное поведение при перепрошивке контроллера.</p>
+
+<p>После завершения загрузки принтер перезагрузится самостоятельно. Дисплей покажет сообщение об успешном обновлении. Если процесс прервался, устройство может войти в аварийный режим. В этом случае не пытайтесь повторить процедуру немедленно, дайте технике остыть и попробуйте снова, предварительно перезапустив компьютер.</p>
+
+<blockquote>⚠️ Внимание: В зависимости от региона продажи и даты выпуска, некоторые блоки <em>Canon Pixma G3400</em> могут блокировать установку неофициального ПО. Это защита производителя от использования неоригинальных картриджей.</blockquote>
+
+<div class="pb-poll" id="poll-24be12a9"><div class="pb-poll-question">📊 Как вы обычно обновляете принтер?</div><div class="pb-poll-option" data-poll="24be12a9" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Через официальный сайт</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="24be12a9" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">С помощью драйверов при установке</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="24be12a9" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Никогда не обновляю</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="24be12a9" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Использую сервисные утилиты</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="вход-в-сервисный-режим-для-сброса-счетчика">Вход в сервисный режим для сброса счетчика</h2>
+
+<p>Когда индикатор мигает оранжевым цветом, а на экране появляется ошибка «Абсорбер почти полон» (код 09), простая очистка физического бака не поможет. <strong>Счетчик отработанных чернил</strong> — это программный параметр, который ведет учет количества выброшенных чернил. Для его обнуления требуется вход в <em>Service Mode</em>, который скрыт от обычных пользователей.</p>
+
+<p>Чтобы войти в этот режим, необходимо выполнить последовательность нажатий на кнопки панели управления. Сначала принтер должен быть выключен кнопкой питания. Затем, удерживая кнопку <code>Stop/Reset</code> (красный треугольник), нажмите кнопку <code>Power</code> (зеленая). Не отпуская кнопку питания, отпустите кнопку сброса, а затем снова нажмите её 5 раз. После этого отпустите обе кнопки и дождитесь, пока индикатор перестанет мигать.</p>
+
+<p>Если все сделано верно, принтер включится, но дисплей останется пустым или покажет специфический код. Это означает, что вы перешли в режим обслуживания. Теперь необходимо подключить устройство к ПК, где запущена специальная программа <strong>Service Tool</strong>. Без этого программного обеспечения сбросить счетчик вручную невозможно.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к сбросу счетчика</h4><label class="check-item"><input type="checkbox"><span>Выключить принтер</span></label><label class="check-item"><input type="checkbox"><span>Зажать кнопку Reset</span></label><label class="check-item"><input type="checkbox"><span>Нажать кнопку Power</span></label><label class="check-item"><input type="checkbox"><span>Подключить к ПК</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="использование-утилиты-service-tool-4909">Использование утилиты Service Tool 4909</h2>
+
+<p>Для сброса абсорбера на моделях серии G чаще всего используется сервисная утилита версии <em>4909</em>. Это специализированный софт, предназначенный для инженеров сервисных центров. Интерфейс программы минималистичен и содержит поля для ввода данных и кнопки управления режимами. Важно загружать именно ту версию, которая соответствует ревизии вашей платы, иначе сброс не сработает или приведет к ошибке.</p>
+
+<p>Запустите утилиту от имени администратора. В поле <code>Device</code> выберите ваш принтер из списка подключенных устройств. После идентификации нажмите кнопку <code>Clear Ink Counter</code> (или аналогичную в зависимости от версии утилиты). В открывшемся окне выберите режим сброса: <code>Partial Clear</code> (частичный сброс) или <code>Full Clear</code> (полный сброс). Рекомендуется сначала попробовать частичный сброс.</p>
+
+<p>Нажмите кнопку <code>OK</code> и дождитесь сообщения об успехе. После этого принтер нужно выключить кнопкой питания, подождать 10 секунд и включить снова. Если мигание оранжевым индикатором прекратилось — процедура прошла успешно. Если ошибка осталась, возможно, требуется полная очистка или замена абсорбера.</p>
+
+<details class="pb-accordion"><summary>Что такое Service Tool?Это профессиональная утилита, которая дает доступ к внутренним регистрам управления принтером. Она позволяет не только сбрасывать счетчики, но и тестировать головки, калибровать цвета и считывать ошибки. Использование этой программы без необходимости может привести к непредсказуемым последствиям, поэтому используйте её только при подтвержденной ошибке счетчика абсорбера.-->
+
+<h2 id="таблица-кодов-ошибок-и-действий">Таблица кодов ошибок и действий</h2>
+
+<p>Понимание значений мигания индикаторов поможет вам быстрее диагностировать проблему. Разные паттерны мигания указывают на различные неисправности</summary><div class="pb-accordion-body"><p> от простого отсутствия бумаги до критических сбоев системы. Ниже приведена таблица наиболее распространенных ошибок для модели <em>Canon Pixma G3400</em>.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Количество миганий</th>
+<th>Код ошибки</th>
+<th>Описание проблемы</th>
+<th>Рекомендуемое действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 раз</td>
+<td>01</td>
+<td>Крышка принтера открыта</td>
+<td>Плотно закройте крышку</td>
+</tr>
+<tr>
+<td>5 раз</td>
+<td>05</td>
+<td>Проблема с картриджем</td>
+<td>Переподключите картриджи</td>
+</tr>
+<tr>
+<td>7 раз</td>
+<td>07</td>
+<td>Переполнение абсорбера</td>
+<td>Сброс счетчика (Service Mode)</td>
+</tr>
+<tr>
+<td>8 раз</td>
+<td>08</td>
+<td>Проблема с памятью</td>
+<td>Перезагрузка или сброс</td>
+</tr>
+<tr>
+<td>12 раз</td>
+<td>12</td>
+<td>Открыта передняя крышка</td>
+<td>Закрыть крышку подачи бумаги</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Обратите внимание, что ошибка 7 (абсорбер) требует физической очистки бака перед программным сбросом. Если бак переполнен жидкостью, она может попасть на материнскую плату и вызвать короткое замыкание. <strong>Прошивка</strong> в данном случае лишь отключает тревогу, но не устраняет физическую проблему.</p>
+
+
+
+<h2 id="возможные-риски-и-последствия-вмешательства">Возможные риски и последствия вмешательства</h2>
+
+<p>Вмешательство в программное обеспечение <em>Canon</em> всегда несет определенный риск. Неправильный выбор версии утилиты может привести к тому, что принтер перестанет определяться компьютером или выдаст ошибку «I/O Error». В худшем случае может потребоваться перепрошивка контроллера через JTAG-интерфейс, что доступно только в специализированных мастерских.</p>
+
+<p>Особенно внимательно следите за тем, чтобы не нажимать лишние кнопки во время процесса сброса. Некоторые версии сервисного софта чувствительны к состоянию кнопок. Если вы случайно нажмете комбинацию, которая активирует режим диагностики, вы можете случайно считать или изменить критичные параметры, такие как серийный номер или регион устройства.</p>
+
+<p><mark>Официальная гарантия на принтер Canon Pixma G3400 аннулируется при обнаружении следов использования сервисного программного обеспечения не в авторизованном центре.</mark> Если ваше устройство еще на гарантии, лучше обратиться в сервисный центр, даже если это стоит денег, чтобы избежать полной потери прав на бесплатное обслуживание.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Процедура сброса счетчика абсорбера требует точности: правильная последовательность кнопок и совместимая версия утилиты — залог успеха.</p></aside>
+
+<blockquote>⚠️ Внимание: Версии сервисных утилит (например, 4909, 5100) могут различаться в зависимости от ревизии платы. Использование неподходящей версии может привести к необратимому сбою контроллера.</blockquote>
+
+<h2 id="частые-вопросы-и-ответы-пользователей">Частые вопросы и ответы пользователей</h2>
+
+<p>Многие пользователи задают вопросы о том, как часто нужно сбрасывать счетчик и можно ли избежать этой процедуры. Ниже собраны ответы на самые популярные вопросы, возникающие при эксплуатации модели <em>G3400</em>.</p>
+
+<details>
+<summary>Сколько раз можно сбрасывать счетчик абсорбера?</summary>
+<p>Физически абсорбер имеет ограниченный объем. В сервисном меню можно сбрасывать счетчик многократно, но без физической очистки или замены губки это бессмысленно. Рекомендуется сбрасывать счетчик только после полной замены или очистки абсорбера. Теоретически лимит программных сбросов отсутствует, но злоупотребление может привести к переполнению и протечке.</p>
+</details>
+
+<details>
+<summary>Можно ли обновить прошивку через Wi-Fi?</summary>
+<p>Да, в некоторых версиях драйверов доступна функция обновления по сети. Однако для критически важных обновлений и, тем более, для входа в сервисный режим, настоятельно рекомендуется использовать прямое USB-подключение. Это гарантирует стабильность передачи данных и исключает риск потери связи в середине процесса.</p>
+</details>
+
+<details>
+<summary>Что делать, если утилита Service Tool не видит принтер?</summary>
+<p>Проверьте, установлены ли драйверы принтера и подключен ли он через USB. Попробуйте сменить USB-порт, лучше всего использовать порт на задней панели системного блока. Также убедитесь, что принтер находится в режиме Service Mode (выключен, затем включена последовательность кнопок, индикатор горит зеленым, а дисплей пуст).</p>
+</details>
+
+<details>
+<summary>Принтер после сброса выдает ошибку 09 снова через неделю?</summary>
+<p>Это означает, что вы провели лишь частичный сброс (<code>Partial Clear</code>) или абсорбер все еще переполнен. Попробуйте выполнить полный сброс (<code>Full Clear</code>) при наличии такой опции в утилите, либо проверьте физическое состояние бака для отработанных чернил.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-perenastroit-vaj-faj-na-printere-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Как перенастроить Wi-Fi на принтере Canon: пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как изменить настройки беспроводной сети на принтере Canon. Полная инструкция по сбросу, по</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-k-noutbuku-cherez-vaj-faj-canon-ts5040.html" class="pb-related-card">
+                <span class="pb-related-title">Подключение Canon TS5040 к ноутбуку по Wi-Fi: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка беспроводного соединения для Canon TS5040. Решаем проблемы драйверов, подключим </span>
+            </a><a href="/articles/k/ka/kakoj-kartridzh-podkhodit-k-printeru-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Какой картридж подходит к принтеру Canon: полная таблица совместимости</span>
+                <span class="pb-related-desc">Узнайте, какой картридж выбрать для вашего принтера Canon. Таблица моделей, разбор совместимости, со</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-canon-cherez-wifi-k-noutbuku.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon к ноутбуку через Wi-Fi: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка беспроводного подключения Canon к ноутбуку. Методы WPS, через утилиту и приложен</span>
+            </a><a href="/articles/i/id/id-printera-kak-uznat-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как узнать ID и серийный номер принтера Canon: 3 рабочих способа</span>
+                <span class="pb-related-desc">Узнайте, как найти уникальный идентификатор и серийный номер на принтерах Canon. Подробная инструкци</span>
+            </a><a href="/articles/k/ka/kakie-printery-canon-podderzhivaet-windows-10.html" class="pb-related-card">
+                <span class="pb-related-title">Совместимость принтеров Canon с Windows 10: полный список моделей и драйверов</span>
+                <span class="pb-related-desc">Узнайте, какие принтеры Canon официально поддерживают Windows 10. Инструкция по драйверам, утилитам </span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

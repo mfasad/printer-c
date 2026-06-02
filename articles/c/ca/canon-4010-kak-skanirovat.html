@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как сканировать на Canon i-SENSYS MF4010: Инструкция по настройке и использованию — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция: как настроить сканирование на принтере Canon MF4010 через USB и сеть. Решаем проблемы драйверов, используем MF Toolbox и WIA.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-4010-kak-skanirovat.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как сканировать на Canon i-SENSYS MF4010: Инструкция по настройке и использованию">
+    <meta property="og:description" content="Пошаговая инструкция: как настроить сканирование на принтере Canon MF4010 через USB и сеть. Решаем проблемы драйверов, используем MF Toolbox и WIA.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как сканировать на Canon i-SENSYS MF4010: Инструкция по настройке и использованию</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-оборудования-и-установка-драйверов">Подготовка оборудования и установка драйверов</a></li><li><a href="#использование-встроенной-утилиты-mf-toolbox">Использование встроенной утилиты MF Toolbox</a></li><li><a href="#настройка-параметров-качества-изображения">Настройка параметров качества изображения</a></li><li><a href="#сканирование-через-стандартные-средства-windows">Сканирование через стандартные средства Windows</a></li><li><a href="#работа-с-сетевым-подключением">Работа с сетевым подключением</a></li><li><a href="#частые-проблемы-и-способы-их-решения">Частые проблемы и способы их решения</a></li><li><a href="#оптимизация-процесса-для-больших-объемов">Оптимизация процесса для больших объемов</a></li><li><a href="#альтернативные-способы-сканирования">Альтернативные способы сканирования</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-delat-skaner-s-printera-canon.html">Как сделать сканер из принтера Canon: Настройка и подключение</a></li><li><a href="/articles/k/ka/kak-sdelat-skanirovanie-na-printere-canon-pixma.html">Как сканировать документы на принтере Canon PIXMA: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-nastroit-skanirovanie-s-printera-na-kompyuter-canon.html">Настройка сканирования с принтера Canon на компьютер: Полное руководство</a></li><li><a href="/articles/k/ka/kak-skanirovat-dokumenty-s-printera-na-kompyuter-canon-mg-2540s.html">Как сканировать документы с принтера Canon MG2540S на компьютер: Полная инструкция</a></li><li><a href="/articles/c/ca/canon-pixma-mg2545s-skaner-kak-ispolzovat.html">Как использовать сканер Canon Pixma MG2545S: Пошаговая инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полное руководство по сканированию документов на Canon i-SENSYS MF4010</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-оборудования-и-установка-драйверов">Подготовка оборудования и установка драйверов</a></li><li><a href="#использование-встроенной-утилиты-mf-toolbox">Использование встроенной утилиты MF Toolbox</a></li><li><a href="#настройка-параметров-качества-изображения">Настройка параметров качества изображения</a></li><li><a href="#сканирование-через-стандартные-средства-windows">Сканирование через стандартные средства Windows</a></li><li><a href="#работа-с-сетевым-подключением">Работа с сетевым подключением</a></li><li><a href="#частые-проблемы-и-способы-их-решения">Частые проблемы и способы их решения</a></li><li><a href="#оптимизация-процесса-для-больших-объемов">Оптимизация процесса для больших объемов</a></li><li><a href="#альтернативные-способы-сканирования">Альтернативные способы сканирования</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Многие владельцы офисной техники сталкиваются с вопросом, как эффективно использовать функции сканирования на модели <em>Canon i-SENSYS MF4010</em>. Это компактное устройство, несмотря на свой возраст, остается надежным помощником для оцифровки документов в малых офисах и домашних кабинетах. Понимание механизмов работы <strong>драйверов сканирования</strong> и правильного подключения к операционной системе является ключом к бесперебойной работе.</p>
+<p>Процесс получения цифровых копий с бумаги может варьироваться в зависимости от выбранного способа связи устройства с компьютером. Иногда стандартные утилиты не загружаются автоматически, что требует ручной настройки параметров. В этой статье мы разберем все доступные методы передачи данных от сканера до жесткого диска, а также рассмотрим нюансы работы с устаревшими версиями Windows.</p>
+
+<h2 id="подготовка-оборудования-и-установка-драйверов">Подготовка оборудования и установка драйверов</h2>
+<p>Прежде чем приступать к непосредственному сканированию, необходимо убедиться, что аппаратная часть готова к работе. Убедитесь, что устройство <em>Canon MF4010</em> подключено к электросети и включено кнопкой на передней панели. Светодиодный индикатор должен гореть зеленым цветом, сигнализируя о готовности к приему команд.</p>
+<p>Критически важно наличие корректно установленных <strong>драйверов сканера</strong>. Без них компьютер не увидит устройство или будет определять его как неизвестное оборудование. Скачивайте ПО только с официального сайта производителя, выбирая версию, соответствующую вашей операционной системе (Windows 10, 11 или более ранние версии).</p>
+<p>После установки драйверов перезагрузите компьютер. Это действие необходимо для того, чтобы система корректно зарегистрировала новые службы и оборудование в реестре. Если вы используете USB-кабель, проверьте надежность соединения с обоими портами — на устройстве и на компьютере.</p>
+<p>В некоторых случаях, особенно при использовании старых версий Windows, требуется ручное указание порта подключения. Зайдите в <code>Диспетчер устройств</code> и проверьте, не стоит ли восклицательный знак напротив строки с именем сканера. Если проблема сохраняется, попробуйте переустановить <strong>пакет MF Toolbox</strong>.</p>
+
+<h2 id="использование-встроенной-утилиты-mf-toolbox">Использование встроенной утилиты MF Toolbox</h2>
+<p>Основным инструментом для работы с устройством является программа <em>MF Toolbox</em>, входящая в комплект поставки драйверов. Эта утилита позволяет настраивать параметры изображения, выбирать целевой формат файла и управлять процессом оцифровки. Интерфейс программы интуитивно понятен, но требует внимательного изучения ключевых вкладок.</p>
+<p>Для начала работы запустите <code>MF Toolbox</code> из меню «Пуск». В главном окне вы увидите несколько кнопок, отвечающих за разные типы операций. Нажмите на кнопку <strong>«Сканирование»</strong> (Scan), чтобы открыть настройки процесса. Здесь можно выбрать профиль сканирования, который сохранит ваши предпочтения для будущих задач.</p>
+<p>Важно настроить разрешение сканирования в зависимости от типа документа. Для обычного текста достаточно <code>300 dpi</code>, что обеспечит четкость без излишнего увеличения размера файла. Если же вы сканируете фотографии или чертежи, рекомендуется увеличить значение до <code>600 dpi</code> или выше.</p>
+<p>Выберите желаемый формат выходного файла. Для текстовых документов оптимален <code>PDF</code> или <code>TIFF</code>. Для изображений лучше использовать <code>JPEG</code> или <code>PNG</code>. Не забудьте указать папку сохранения, чтобы не потерять полученные файлы в недрах временных директорий.</p>
+<p>После настройки всех параметров нажмите кнопку <strong>«Сканировать»</strong> в интерфейсе программы. Аппарат начнет работу, и вы услышите характерный звук движения сканера. Дождитесь окончания процесса, прежде чем открывать крышку или вынимать документ.</p>
+<blockquote>
+<p>⚠️ Внимание: Если программа MF Toolbox выдает ошибку «Устройство не найдено», проверьте, не блокирует ли брандмауэр Windows доступ к локальной сети, особенно если сканирование осуществляется по Wi-Fi.</p>
+</blockquote>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед запуском сканирования</h4><label class="check-item"><input type="checkbox"><span>Установлен ли драйвер MF Toolbox?Подключен ли USB-кабель или настроена сеть?Зарегистрирован ли документ на стекле?Выбран ли нужный формат файла в настройках?</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 1</div></div>
+
+<h2 id="настройка-параметров-качества-изображения">Настройка параметров качества изображения</h2>
+<p>Качество получаемых копий напрямую зависит от правильности настроек в программном обеспечении. Параметр <strong>разрешения</strong> определяет детализацию изображения и объем занимаемого места. Высокое разрешение необходимо для архивирования важных документов, но оно замедляет процесс обработки.</p>
+<p>Параметр <strong>цветовой модели</strong> также играет важную роль. Режим «Черно-белый» (Binary) идеально подходит для текстовых документов, значительно уменьшая размер файла. Режим «Оттенки серого» (Grayscale) позволяет сохранять нюансы теней, что важно для старых печатей или рукописных заметок.</p>
+<p>Режим «Цветной» (Color) сохраняет полную палитру оригинала. Используйте его только при сканировании фотографий, цветных графиков или документов с яркой печатью. Помните, что цветные файлы занимают в разы больше места на диске.</p>
+<p>Не забывайте о <strong>плотности</strong> изображения. Если оригинал слишком светлый или темный, скорректируйте этот параметр в настройках утилиты. Автоматическая коррекция часто справляется хорошо, но ручной контроль дает более точный результат для специфических документов.</p>
+
+<h2 id="сканирование-через-стандартные-средства-windows">Сканирование через стандартные средства Windows</h2>
+<p>Если утилита от производителя вызывает сложности или вы предпочитаете системные инструменты, используйте встроенные возможности Windows. Это надежный способ, который работает даже без установки дополнительного ПО, если драйверы базовой функциональности уже загружены.</p>
+<p>Для этого откройте меню «Пуск» и введите в поиске <code>Факсы и сканирование Windows</code>. В открывшемся окне нажмите кнопку <strong>«Новое сканирование»</strong> в верхней части интерфейса. Система предложит выбрать профиль сканирования, если их несколько.</p>
+<p>В окне настроек выберите источник: «Сканер» или «Плоттер». Убедитесь, что в выпадающем списке выбрано ваше устройство <em>Canon MF4010</em>. Настройте тип файла, разрешение и цветовой режим, как описано в предыдущем разделе.</p>
+<p>Нажмите кнопку <strong>«Сканировать»</strong>. Процесс будет аналогичен работе в стороннем ПО. После завершения вы увидите предпросмотр изображения и сможете сохранить его в указанную папку. Этот метод особенно удобен для быстрых операций без лишних настроек.</p>
+<p>Альтернативный вариант в современных версиях Windows — приложение <code>Факс и сканирование Windows</code> или <code>Сканер Windows</code> из Microsoft Store. Интерфейс здесь более современный и адаптирован для сенсорных экранов.</p>
+
+<div class="pb-poll" id="poll-5d32b779"><div class="pb-poll-question">📊 Какой способ сканирования вы используете чаще?</div><div class="pb-poll-option" data-poll="5d32b779" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Через утилиту MF Toolbox:Через стандартные средства Windows:Через панель управления устройством:Другой способ</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<details class="pb-accordion"><summary>Что делать, если сканер не определяется в Windows?</summary><div class="pb-accordion-body"><p>1. Проверьте подключение кабеля. 2. Переустановите драйверы. 3. Попробуйте другой USB-порт. 4. Убедитесь, что служба «Диспетчер печати» запущена.</p></div></details>
+
+<h2 id="работа-с-сетевым-подключением">Работа с сетевым подключением</h2>
+<p>Для использования функции сканирования по сети <em>Canon MF4010</em> должен быть подключен к роутеру через кабель Ethernet или Wi-Fi (если модель поддерживает). В этом случае компьютер и принтер должны находиться в одной локальной сети. Это позволяет сканировать документы с любого устройства в офисе.</p>
+<p>Настройте IP-адрес устройства через панель управления самого принтера. Используйте меню <code>Настройки</code> → <code>Сеть</code> → <code>Настройки TCP/IP</code>. Убедитесь, что адрес статический или выдан DHCP-сервером корректно. Запишите полученный IP-адрес.</p>
+<p>В утилите <em>MF Toolbox</em> перейдите в настройки устройства и добавьте новый сканер, указав его IP-адрес. Программа найдет устройство в сети и подключится к нему. Теперь вы можете запускать сканирование удаленно.</p>
+<p>Помните, что сетевое сканирование может работать медленнее прямого USB-подключения. Скорость зависит от загрузки сети и качества беспроводного сигнала. Для стабильной работы рекомендуется использовать кабельное соединение.</p>
+
+<h2 id="частые-проблемы-и-способы-их-решения">Частые проблемы и способы их решения</h2>
+<p>Иногда процесс сканирования может прерваться или выдать ошибку. Одной из частых причин является <strong>заблокированный порт</strong> или конфликт драйверов. Попробуйте отключить антивирус на время работы, так как он может блокировать доступ к сканеру.</p>
+<p>Если устройство издает странные звуки или загорается ошибка на дисплее, проверьте наличие посторонних предметов под стеклом сканера. Даже мелкая скрепка может помешать движению головки сканера и вызвать сбой механизма.</p>
+<p>При возникновении ошибок «Сканер не отвечает» попробуйте перезапустить службу «Диспетчер печати» (Print Spooler) в службах Windows. Это часто решает проблемы с зависанием очереди печати и сканирования.</p>
+<p>В таблице ниже приведены основные ошибки и способы их устранения:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Ошибка</th>
+<th>Возможная причина</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Устройство не найдено</td>
+<td>Нет драйверов или кабеля</td>
+<td>Проверьте подключение и переустановите ПО</td>
+</tr>
+<tr>
+<td>Сбой памяти</td>
+<td>Слишком высокое разрешение</td>
+<td>Уменьшите DPI в настройках сканирования</td>
+</tr>
+<tr>
+<td>Ошибка диска</td>
+<td>Нет места на диске</td>
+<td>Очистите папку сохранения или выберите другой диск</td>
+</tr>
+<tr>
+<td>Заблокировано</td>
+<td>Антивирус или брандмауэр</td>
+<td>Добавьте исключение в настройках безопасности</td>
+</tr>
+</tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если сканирование происходит медленно, попробуйте отключить предварительный просмотр изображения в настройках утилиты — это ускорит процесс обработки.</p></aside>
+
+<h2 id="оптимизация-процесса-для-больших-объемов">Оптимизация процесса для больших объемов</h2>
+<p>При работе с большими массивами документов важно оптимизировать процесс, чтобы не терять время. Используйте функцию <strong>дуплексного сканирования</strong>, если модель поддерживает автоматическую подачу листов. Это позволяет обрабатывать документы с двух сторон за один проход.</p>
+<p>Настройте автоматическое именование файлов. В утилите <em>MF Toolbox</em> можно задать шаблон именования, включающий дату и время. Это избавит вас от ручного переименования сотен файлов после завершения работы.</p>
+<p>Для архивирования документов используйте формат PDF с возможностью поиска текста (OCR). Это позволит искать информацию внутри сканов, что критически важно для бухгалтерии и делопроизводства. Убедитесь, что опция распознавания текста включена в настройках.</p>
+<p>Регулярно очищайте стекло сканера от пыли и следов пальцев. Грязь на стекле приводит к появлению черных полос на копиях, что требует повторного сканирования и тратит время. Используйте мягкую безворсовую салфетку и специализированный очиститель.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Драйверы для старых моделей могут перестать обновляться. Если вы переходите на новую версию Windows, убедитесь в совместимости ПО в разделе «Поддержка» на сайте производителя.</p>
+</blockquote>
+
+<h2 id="альтернативные-способы-сканирования">Альтернативные способы сканирования</h2>
+<p>Если стандартные утилиты не подходят, можно использовать стороннее программное обеспечение. Программы вроде <em>NAPS2</em> или <em>VueScan</em> часто поддерживают широкий спектр устройств, включая устаревшие модели <em>Canon</em>.</p>
+<p>Эти программы предоставляют расширенные возможности настройки, такие как конвертация в разные форматы, удаление фона и коррекция цвета. Они могут быть полезны, если встроенное ПО работает нестабильно.</p>
+<p>Также можно использовать мобильные приложения, если устройство поддерживает функцию «Сканер по сети». В этом случае телефон подключается к принтеру через Wi-Fi, и вы можете сканировать документы прямо со смартфона.</p>
+<p>Главное преимущество стороннего ПО — это независимость от драйверов производителя. Однако перед установкой проверьте поддержку вашей модели в списке совместимости на сайте разработчика программы.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярное обслуживание и правильная настройка ПО — залог долгой и бесперебойной работы сканера Canon MF4010 в условиях активного использования.</p></aside>
+
+<details>
+<summary>Как сбросить настройки сканера до заводских?</summary>
+<p>Для сброса настроек перейдите в меню устройства, выберите пункт «Настройки» и нажмите «Сброс». Это вернет все параметры к исходному состоянию, что может помочь при решении программных сбоев.</p>
+</details>
+
+<details>
+<summary>Можно ли сканировать без установки драйверов?</summary>
+<p>В большинстве случаев без драйверов сканирование невозможно. Однако Windows 10 и 11 иногда поддерживают базовый функционал через протокол WIA, если устройство подключено по USB, но возможности будут ограничены.</p>
+</details>
+
+<details>
+<summary>Почему сканер не видит документы в цвете?</summary>
+<p>Проверьте настройки в утилите сканирования. Возможно, выбран режим «Черно-белый» или «Оттенки серого». Переключите режим на «Цветной» в настройках профиля сканирования.</p>
+</details>
+
+<details>
+<summary>Как найти IP-адрес сканера в сети?</summary>
+<p>Нажмите кнопку «Меню» на устройстве, перейдите в раздел «Сеть» или «Настройки сети», затем выберите «Состояние сети» или «TCP/IP». Там будет отображен текущий IP-адрес устройства.</p>
+</details>
+
+<details>
+<summary>Что делать, если сканер зажевал бумагу?</summary>
+<p>Откройте крышку автоподатчика и аккуратно извлеките застрявший лист. Проводите процедуру медленно, чтобы не порвать бумагу. Если фрагменты остались внутри, обратитесь в сервисный центр.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-delat-skaner-s-printera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать сканер из принтера Canon: Настройка и подключение</span>
+                <span class="pb-related-desc">Полная инструкция по активации сканирования на принтерах Canon. Настройка драйверов, использование I</span>
+            </a><a href="/articles/k/ka/kak-sdelat-skanirovanie-na-printere-canon-pixma.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы на принтере Canon PIXMA: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по настройке и запуску сканирования на принтерах Canon PIXMA через программу I</span>
+            </a><a href="/articles/k/ka/kak-nastroit-skanirovanie-s-printera-na-kompyuter-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Настройка сканирования с принтера Canon на компьютер: Полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция как подключить сканер Canon к ПК, установить драйверы и настроить передачу файл</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-dokumenty-s-printera-na-kompyuter-canon-mg-2540s.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы с принтера Canon MG2540S на компьютер: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по сканированию с Canon MG2540S через USB и Wi-Fi. Решаем проблемы с драйверам</span>
+            </a><a href="/articles/c/ca/canon-pixma-mg2545s-skaner-kak-ispolzovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как использовать сканер Canon Pixma MG2545S: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Полное руководство по работе со сканером Canon Pixma MG2545S. Настройка ПО, настройки драйверов, ска</span>
+            </a><a href="/articles/c/ca/canon-4400f-kak-skanirovat-plenku.html" class="pb-related-card">
+                <span class="pb-related-title">Canon CanoScan 4400F: Как сканировать пленку — пошаговая инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по сканированию негативов и слайдов на Canon 4400F. Настройка драйверов, работ</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

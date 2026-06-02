@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как подключить принтер Canon к компьютеру через сетевой кабель напрямую — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция: настройка прямого подключения принтера Canon к ПК через Ethernet-кабель. Настройка статических IP, драйверов и устранение ошибок соединения.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-podklyuchit-printer-canon-k-kompyuteru-cherez-setevoj-kabel-napryamuyu.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как подключить принтер Canon к компьютеру через сетевой кабель напрямую">
+    <meta property="og:description" content="Пошаговая инструкция: настройка прямого подключения принтера Canon к ПК через Ethernet-кабель. Настройка статических IP, драйверов и устранение ошибок соединения.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как подключить принтер Canon к компьютеру через сетевой кабель напрямую</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#технические-требования-и-необходимые-компоненты">Технические требования и необходимые компоненты</a></li><li><a href="#физическое-подключение-и-базовая-инициализация">Физическое подключение и базовая инициализация</a></li><li><a href="#настройка-статического-ip-адреса-на-принтере">Настройка статического IP-адреса на принтере</a></li><li><a href="#настройка-сетевого-адаптера-компьютера">Настройка сетевого адаптера компьютера</a></li><li><a href="#установка-и-конфигурация-драйверов">Установка и конфигурация драйверов</a></li><li><a href="#тестирование-соединения-и-устранение-неполадок">Тестирование соединения и устранение неполадок</a></li><li><a href="#особенности-работы-с-разными-моделями-canon">Особенности работы с разными моделями Canon</a></li><li><a href="#сравнение-методов-подключения">Сравнение методов подключения</a></li><li><a href="#faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ca/canon-pixma-ts704-kak-podklyuchit.html">Как подключить Canon PIXMA TS704: Wi-Fi, USB и сеть</a></li><li><a href="/articles/k/ka/kak-nastroit-printer-skaner-kenon.html">Как настроить принтер-сканер Canon: полное руководство по подключению</a></li><li><a href="/articles/k/ka/kartridzhi-40-i-41-dlya-kakogo-printera-canon.html">Картриджи Canon 40 и 41: для каких принтеров подходят и как выбрать</a></li><li><a href="/articles/c/ca/canon-fc-128-kak-podklyuchit-k-kompyuteru.html">Как подключить Canon FC-128 к компьютеру: драйверы и настройки</a></li><li><a href="/articles/k/ka/kak-postavit-kartridzh-v-printer-canon.html">Как поставить картридж в принтер Canon: пошаговая инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Подключение принтера Canon к ПК через сетевой кабель напрямую</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#технические-требования-и-необходимые-компоненты">Технические требования и необходимые компоненты</a></li><li><a href="#физическое-подключение-и-базовая-инициализация">Физическое подключение и базовая инициализация</a></li><li><a href="#настройка-статического-ip-адреса-на-принтере">Настройка статического IP-адреса на принтере</a></li><li><a href="#настройка-сетевого-адаптера-компьютера">Настройка сетевого адаптера компьютера</a></li><li><a href="#установка-и-конфигурация-драйверов">Установка и конфигурация драйверов</a></li><li><a href="#тестирование-соединения-и-устранение-неполадок">Тестирование соединения и устранение неполадок</a></li><li><a href="#особенности-работы-с-разными-моделями-canon">Особенности работы с разными моделями Canon</a></li><li><a href="#сравнение-методов-подключения">Сравнение методов подключения</a></li><li><a href="#faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Прямое подключение принтера <em>Canon</em> к персональному компьютеру посредством сетевого кабеля (Ethernet) — это решение, которое часто недооценивают пользователи, привыкшие к Wi-Fi или USB-кабелям. Такой метод обеспечивает максимальную стабильность соединения, исключая задержки и разрывы, характерные для беспроводных сетей, а также позволяет избежать конфликтов драйверов при работе с USB-портами в условиях ограниченного количества разъемов на системном блоке.</p>
+
+<p>Реализация данного сценария требует соблюдения определенной логики настройки сетевых интерфейсов как на стороне периферийного устройства, так и на рабочем компьютере. В отличие от автоматического получения IP-адреса через DHCP, при прямом подключении через кабель часто необходимо вручную назначить уникальный адрес, чтобы операционная система корректно обнаружила принтер и сформировала с ним устойчивый канал передачи данных.</p>
+
+<h2 id="технические-требования-и-необходимые-компоненты">Технические требования и необходимые компоненты</h2>
+
+<p>Перед началом работ убедитесь, что у вас в наличии есть все требуемые элементы для создания физического соединения. Критически важным является наличие качественного сетевого кабеля стандарта <strong>Cat 5e</strong> или выше, который способен обеспечить требуемую пропускную способность для передачи объемных графических данных без потерь пакетов.</p>
+
+<p>Важно проверить совместимость сетевых портов: компьютер должен иметь встроенный сетевой адаптер или внешнюю <code>PCI-E</code> карту, а принтер <em>Canon</em> обладать портом <strong>LAN</strong> (RJ-45). Модели из серий <em>imageRUNNER</em> или офисные мультифункциональные устройства <em>Canon imageCLASS</em> почти всегда оснащены таким интерфейсом, в то время как компактные домашние модели могут требовать покупки отдельного сетевого адаптера.</p>
+
+<ul>
+<li>🛠 Сетевой кабель (патч-корд) необходимой длины с исправными коннекторами.</li>
+<li>💻 Компьютер с работающим сетевым адаптером и установленной ОС Windows 10/11.</li>
+<li>🖨 Офисный принтер <em>Canon</em> с активным портом Ethernet и готовностью к работе.</li>
+</ul>
+
+<p>Не стоит пытаться соединить устройства кабелем, если индикаторы на сетевой карте компьютера не реагируют на подключение. Отсутствие сигнала при физически исправном кабеле часто указывает на отключенный сетевой адаптер в настройках BIOS или драйверную проблему.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Убедитесь, что сетевой кабель не поврежден и имеет целостную оплетку. Даже микротрещины в проводах внутри коннектора могут привести к нестабильной работе и постоянным ошибкам печати больших документов.</p>
+</blockquote>
+
+<h2 id="физическое-подключение-и-базовая-инициализация">Физическое подключение и базовая инициализация</h2>
+
+<p>Процесс начинается с физического объединения устройств. Возьмите сетевой кабель и плотно вставьте один конец в разъем <code>LAN</code> на задней панели принтера <em>Canon</em>, а второй — в свободный порт Ethernet на системном блоке компьютера. Вы должны услышать характерный щелчок фиксатора, подтверждающий надежное крепление.</p>
+
+<p>После физического соединения включите принтер и подождите полной загрузки системы. На дисплее устройства должен появиться значок сети, а на компьютере в трее (нижняя панель) иконка сетевого подключения должна отобразить статус <strong>«Подключение по локальной сети»</strong> или <em>«Ethernet»</em> без значка запрета.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка физического соединения</h4><label class="check-item"><input type="checkbox"><span>Кабель вставлен в принтер</span></label><label class="check-item"><input type="checkbox"><span>Кабель вставлен в ПК</span></label><label class="check-item"><input type="checkbox"><span>Индикаторы на портах горят</span></label><label class="check-item"><input type="checkbox"><span>Принтер включен в сеть</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Если индикаторы мигают зеленым или оранжевым цветом, это свидетельствует о наличии активности и попытке установления связи. В некоторых случаях, особенно при первом подключении, компьютер может предложить выбрать тип сети — выберите <strong>«Частная»</strong>, чтобы разрешить обнаружение устройств, если это требуется для дальнейшего шага.</p>
+
+<details class="pb-accordion"><summary>Что делать, если индикатор не горит?</summary><div class="pb-accordion-body"><p>Если после подключения кабеля индикатор на сетевой карте или принтере не загорается, попробуйте заменить кабель на заведомо исправный. Также проверьте, не отключен ли сетевой адаптер в «Диспетчере устройств» Windows.</p></div></details>
+
+<h2 id="настройка-статического-ip-адреса-на-принтере">Настройка статического IP-адреса на принтере</h2>
+
+<p>Для стабильной работы при прямом подключении крайне желательно задать принтеру фиксированный IP-адрес, чтобы избежать конфликтов при перезагрузке. Зайдите в меню устройства, используя панель управления, и перейдите в раздел <code>Настройки → Сеть → TCP/IP</code>. Здесь вам потребуется отключить автоматическое получение адреса (DHCP) и ввести значения вручную.</p>
+
+<p>Выберите IP-адрес, который не используется другими устройствами в вашей локальной сети. Например, если ваш компьютер имеет адрес <code>192.168.1.10</code>, то принтеру можно присвоить <code>192.168.1.200</code>. Маска подсети обычно остается стандартной — <code>255.255.255.0</code>, а шлюз можно указать как IP компьютера или оставить пустым, если нет выхода в интернет.</p>
+
+<ul>
+<li>🔢 IP-адрес: Уникальный адрес в диапазоне локальной сети (например, <code>192.168.1.200</code>).</li>
+<li>🎭 Маска подсети: Стандартное значение <code>255.255.255.0</code> для домашних сетей.</li>
+<li>🌐 Шлюз: Указывается IP-адрес вашего компьютера или роутера, если он есть в цепи.</li>
+</ul>
+
+<p>Запомните или запишите введенные данные, так как они понадобятся для настройки драйвера на компьютере. Ошибка в одной цифре при вводе адреса сделает устройство невидимым для системы, и печать станет невозможной.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед изменением IP-адреса на принтере проверьте текущие настройки сети через меню «Отчеты» → «Отчет о конфигурации». Это поможет быстро восстановить настройки в случае ошибки ввода.</p></aside>
+
+<h2 id="настройка-сетевого-адаптера-компьютера">Настройка сетевого адаптера компьютера</h2>
+
+<p>Теперь необходимо настроить сетевой интерфейс самого компьютера так, чтобы он находился в одной подсети с принтером. Откройте <code>Панель управления → Сеть и Интернет → Центр управления сетями и общим доступом</code>, затем нажмите на <strong>«Изменение параметров адаптера»</strong>.</p>
+
+<p>Найдите ваш Ethernet-адаптер, кликните правой кнопкой мыши и выберите <strong>«Свойства»</strong>. В списке компонентов найдите <code>Протокол Интернета версии 4 (TCP/IPv4)</code> и откройте его свойства. Здесь нужно выбрать «Использовать следующий IP-адрес» и прописать значения, соответствующие настройкам принтера.</p>
+
+<p>Если вы задали принтеру адрес <code>192.168.1.200</code>, то компьютеру нужно задать адрес в той же подсети, например <code>192.168.1.100</code>. Важно, чтобы первые три сегмента адреса совпадали, а четвертый отличался. Шлюз и DNS при прямом подключении без роутера можно оставить пустыми.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Неправильная настройка IP-адреса на компьютере может привести к потере доступа к интернету, если этот же адаптер используется для выхода во всемирную сеть. При прямом подключении принтера к ПК используйте отдельный сетевой порт, если он есть.</p>
+</blockquote>
+
+<div class="pb-poll" id="poll-f0adde43"><div class="pb-poll-question">📊 Используете ли вы статический IP для принтеров?</div><div class="pb-poll-option" data-poll="f0adde43" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Да, всегда</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f0adde43" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Нет, только DHCP</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f0adde43" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Иногда</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f0adde43" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, как настроить</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="установка-и-конфигурация-драйверов">Установка и конфигурация драйверов</h2>
+
+<p>После того как физические связи и сетевые адреса настроены, можно приступать к установке программного обеспечения. Скачайте актуальный драйвер для вашей модели <em>Canon</em> с официального сайта, выбрав вашу операционную систему. Запустите установщик и выберите тип подключения — <strong>«Сетевое»</strong> или <code>Network Connection</code>.</p>
+
+<p>Мастер установки должен автоматически найти устройство в сети. Если поиск не дал результатов, выберите опцию ручной настройки и введите IP-адрес, который вы присвоили принтеру ранее. Система создаст виртуальный порт, связывающий компьютер с устройством.</p>
+
+<p>В процессе установки может потребоваться подтверждение согласия на использование программного обеспечения. После завершения инсталляции обязательно проверьте статус принтера в разделе <code>Устройства и принтеры</code>. Статус должен быть <strong>«Готов»</strong>, а не «Ожидание» или «Оффлайн».</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Правильно настроенный сетевой порт в драйвере — залог стабильной работы. Если принтер работает нестабильно, проверьте, не сбился ли IP-адрес в настройках порта после перезагрузки.</p></aside>
+
+<h2 id="тестирование-соединения-и-устранение-неполадок">Тестирование соединения и устранение неполадок</h2>
+
+<p>Первый тест должен включать отправку пробной страницы. В свойствах принтера нажмите кнопку <strong>«Свойства принтера»</strong> и выберите <code>«Напечатать пробную страницу»</code>. Если страница выходит корректно, настройка завершена успешно. Если возникла ошибка, необходимо проверить доступность устройства через командную строку.</p>
+
+<p>Откройте <code>cmd</code> и введите команду <code>ping 192.168.1.200</code> (подставьте свой IP принтера). Если вы увидите ответ с временем отклика (<strong>Reply from...</strong>), значит связь есть, и проблема кроется в драйверах или брандмауэре. Если же запрос не выполняется (<strong>Request timed out</strong>), проверьте настройки IP снова.</p>
+
+<p>Иногда брандмауэр Windows блокирует сетевое взаимодействие. Попробуйте временно отключить брандмауэр и антивирус для проверки. Если это помогло, добавьте принтер в исключения списка разрешенных программ и подключений.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Проблема</th>
+<th>Возможная причина</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Принтер не найден</td>
+<td>Разные подсети IP</td>
+<td>Проверьте первые три сегмента адресов</td>
+</tr>
+<tr>
+<td>Ошибки при печати</td>
+<td>Брандмауэр блокирует порт</td>
+<td>Добавьте принтер в исключения</td>
+</tr>
+<tr>
+<td>Без звука при подключении</td>
+<td>Неисправный кабель</td>
+<td>Замените патч-корд на новый</td>
+</tr>
+<tr>
+<td>Статус «Оффлайн»</td>
+<td>Сбой драйвера</td>
+<td>Переустановите драйвер с админ-прав</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>
+<p>⚠️ Внимание: Если после настройки статического IP вы не можете получить доступ к интернету через этот порт, убедитесь, что вы не смешиваете настройки локальной сети и глобальной сети на одном физическом интерфейсе без роутера.</p>
+</blockquote>
+
+<h2 id="особенности-работы-с-разными-моделями-canon">Особенности работы с разными моделями Canon</h2>
+
+<p>Интерфейс настройки сетевых параметров может отличаться в зависимости от серии устройства. Например, в моделях серии <em>PIXMA</em> настройки часто скрыты в разделе <code>Настройки устройства → LAN</code>, тогда как в профессиональных сериях <em>imageRUNNER</em> это меню находится в <code>Установка системы → Сеть</code>.</p>
+
+<p>Для некоторых старых моделей может потребоваться использование утилиты <em>Canon LAN Configuration Tool</em>, которая позволяет менять IP-адрес, если вы забыли текущий. Это программное обеспечение скачивается отдельно и работает через протокол SNMP, сканируя сеть в поисках устройств <em>Canon</em>.</p>
+
+<p>Современные устройства часто поддерживают функцию <strong>WPS</strong> или автоматическую конфигурацию, но при прямом подключении без роутера эти функции могут быть неактивны. В таком случае ручной ввод данных остается единственным надежным способом настройки.</p>
+
+<details class="pb-accordion"><summary>Как сбросить сетевые настройки?</summary><div class="pb-accordion-body"><p>Если вы забыли IP-адрес, попробуйте сбросить настройки сети на принтере до заводских. Обычно это делается через меню «Настройки» → «Обслуживание» → «Сброс настроек», но это удалит все сохраненные Wi-Fi пароли и настройки.</p></div></details>
+
+<h2 id="сравнение-методов-подключения">Сравнение методов подключения</h2>
+
+<p>Подбор оптимального способа подключения зависит от ваших задач. Прямое соединение по кабелю обеспечивает наилучшую скорость и надежность, но ограничивает мобильность устройства. Wi-Fi удобен для печати со смартфонов, но может страдать от помех.</p>
+
+<p>USB-подключение универсально, но ограничивает использование принтера одним компьютером. Сетевой же кабель позволяет (при наличии роутера) подключить устройство к сети сразу для всех пользователей офиса, но в сценарии «прямое подключение» оно доступно только одному ПК.</p>
+
+<ul>
+<li>🚀 Скорость: Кабель обеспечивает стабильную скорость без потерь пакетов.</li>
+<li>🔒 Безопасность: Физическое соединение исключает перехват данных по воздуху.</li>
+<li>📏 Мобильность: Ограничена длиной кабеля и отсутствием беспроводного доступа.</li>
+</ul>
+
+<p>Выбор конкретного метода должен базироваться на потребностях пользователя: если вы печатаете большие объемы документов с одного компьютера, кабель — идеальный вариант. Если же вам нужно печатать с разных устройств в разное время, лучше рассмотреть настройку через роутер.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Прямое подключение кабелем — это профессиональное решение для стационарных рабочих мест, где важна стабильность, а не мобильность.</p></aside>
+
+<h2 id="faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</h2>
+
+<details>
+<summary>Можно ли подключить принтер Canon напрямую к компьютеру без роутера?</summary>
+<p>Да, это возможно. Вам нужно настроить статические IP-адреса на обоих устройствах так, чтобы они находились в одной подсети, и соединить их сетевым кабелем напрямую.</p>
+</details>
+
+<details>
+<summary>Какой кабель нужен для прямого подключения?</summary>
+<p>Обычный патч-корд (Ethernet cable) стандарта Cat 5e или выше. Современные сетевые карты поддерживают технологию Auto-MDIX, поэтому перекрестный кабель не требуется.</p>
+</details>
+
+<details>
+<summary>Почему компьютер не видит принтер при подключении кабелем?</summary>
+<p>Чаще всего причина в несовпадении подсетей IP-адресов или в том, что на компьютере не установлен драйвер, позволяющий создать виртуальный порт для этого IP.</p>
+</details>
+
+<details>
+<summary>Нужно ли устанавливать драйвер для сетевого подключения?</summary>
+<p>Да, драйвер необходим. При установке выберите тип подключения «Сеть» и укажите IP-адрес принтера, чтобы система создала соответствующий порт.</p>
+</details>
+
+<details>
+<summary>Можно ли печатать с телефона при прямом подключении к ПК?</summary>
+<p>Нет, при прямом подключении кабеля только к одному компьютеру, мобильные устройства не увидят принтер, пока компьютер не настроит общий доступ к принтеру в сети.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ca/canon-pixma-ts704-kak-podklyuchit.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon PIXMA TS704: Wi-Fi, USB и сеть</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как подключить принтер Canon PIXMA TS704 к компьютеру и Wi-Fi. Настройка драйв</span>
+            </a><a href="/articles/k/ka/kak-nastroit-printer-skaner-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить принтер-сканер Canon: полное руководство по подключению</span>
+                <span class="pb-related-desc">Пошаговая инструкция по установке драйверов и настройке Canon. Подключение по USB и Wi-Fi, устранени</span>
+            </a><a href="/articles/k/ka/kartridzhi-40-i-41-dlya-kakogo-printera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Картриджи Canon 40 и 41: для каких принтеров подходят и как выбрать</span>
+                <span class="pb-related-desc">Полный список моделей принтеров Canon, использующих картриджи серии 40 и 41. Разбор различий между ч</span>
+            </a><a href="/articles/c/ca/canon-fc-128-kak-podklyuchit-k-kompyuteru.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon FC-128 к компьютеру: драйверы и настройки</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению принтера Canon FC-128 к ПК. Установка драйверов, настройка печат</span>
+            </a><a href="/articles/k/ka/kak-postavit-kartridzh-v-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как поставить картридж в принтер Canon: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробный гайд по замене картриджа в принтерах Canon. Узнайте, как правильно установить чернила, изб</span>
+            </a><a href="/articles/k/ka/kakoj-mfu-luchshe-kupit-canon-ili-hp.html" class="pb-related-card">
+                <span class="pb-related-title">Canon или HP: как выбрать лучшее МФУ для дома и офиса в 2026 году</span>
+                <span class="pb-related-desc">Сравниваем МФУ Canon и HP по качеству печати, надежности и стоимости владения. Подробный разбор моде</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Canon Log: что это и как настроить профиль для видео — Кэнон Инфо</title>
+    <meta name="description" content="Разбираем технологию Canon Log: зачем нужен логарифмический профиль, как настроить камеру и правильно монтировать материал в постпродакшене.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/p/po/podderzhka-canon-log-chto-eto.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Canon Log: что это и как настроить профиль для видео">
+    <meta property="og:description" content="Разбираем технологию Canon Log: зачем нужен логарифмический профиль, как настроить камеру и правильно монтировать материал в постпродакшене.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/fotoapparaty-canon/">Фотоаппараты Canon</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Canon Log: что это и как настроить профиль для видео</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#суть-технологии-и-принцип-работы-кривой">Суть технологии и принцип работы кривой</a></li><li><a href="#версии-профиля-и-совместимость-моделей">Версии профиля и совместимость моделей</a></li><li><a href="#преимущества-использования-логарифмического-режима">Преимущества использования логарифмического режима</a></li><li><a href="#специфика-экспонирования-и-работа-с-iso">Специфика экспонирования и работа с ISO</a></li><li><a href="#постобработка-и-использование-lut">Постобработка и использование LUT</a></li><li><a href="#технические-требования-и-сравнение-профилей">Технические требования и сравнение профилей</a></li><li><a href="#частые-ошибки-и-как-их-избежать">Частые ошибки и как их избежать</a></li><li><a href="#заключение-и-перспективы-развития">Заключение и перспективы развития</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ca/canon-600d-kakaya-karta-pamyati.html">Какая карта памяти подходит для Canon 600D: типы, объемы и скорость</a></li><li><a href="/articles/c/ch/chem-zaryazhat-fotoapparat-canon.html">Чем заряжать фотоаппарат Canon: способы, адаптеры и аккумуляторы</a></li><li><a href="/articles/k/ka/kakoj-mikrofon-kupit-dlya-fotoapparata-canon-m50.html">Микрофон для Canon M50: 7 лучших моделей 2026 года</a></li><li><a href="/articles/k/ka/kak-vklyuchit-tajmer-na-fotoapparate-canon-600d.html">Как включить таймер на Canon 600D: полная инструкция по настройке</a></li><li><a href="/articles/c/ch/chto-luchshe-zerkalka-ili-bezzerkalka-kenon.html">Зеркалка или беззеркалка Canon: что выбрать в 2026 году?</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Canon Log что это: полный разбор логарифмического профиля</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#суть-технологии-и-принцип-работы-кривой">Суть технологии и принцип работы кривой</a></li><li><a href="#версии-профиля-и-совместимость-моделей">Версии профиля и совместимость моделей</a></li><li><a href="#преимущества-использования-логарифмического-режима">Преимущества использования логарифмического режима</a></li><li><a href="#специфика-экспонирования-и-работа-с-iso">Специфика экспонирования и работа с ISO</a></li><li><a href="#постобработка-и-использование-lut">Постобработка и использование LUT</a></li><li><a href="#технические-требования-и-сравнение-профилей">Технические требования и сравнение профилей</a></li><li><a href="#частые-ошибки-и-как-их-избежать">Частые ошибки и как их избежать</a></li><li><a href="#заключение-и-перспективы-развития">Заключение и перспективы развития</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Многие начинающие видеографы, впервые сталкиваясь с настройками видеосъемки, задаются вопросом: <em>Canon Log</em> что это за режим и почему он так важен? Простой ответ заключается в том, что это специальный логарифмический профиль экспонирования, разработанный компанией <strong>Canon</strong> для расширения динамического диапазона вашей камеры.</p>
+
+<p>Если вы снимаете в стандартном игровом режиме, камера уже на этапе записи применяет жесткое сжатие, выбрасывая детали из теней и светов. При использовании <em>Canon Log</em> вы получаете плоское, сероватое изображение с низкой контрастностью, которое на первый взгляд кажется «испорченным». Однако именно эта «серость» позволяет сохранить максимум информации в кадре, давая вам свободу для профессиональной цветокоррекции.</p>
+
+<p>В современном видеопроизводстве <strong>динамический диапазон</strong> играет решающую роль. Стандартные профили ограничивают ваши возможности постобработки, тогда как логарифмическая кривая сохраняет градации яркости, которые человеческий глаз воспринимает, но обычный видеоформат часто отбрасывает.</p>
+
+<h2 id="суть-технологии-и-принцип-работы-кривой">Суть технологии и принцип работы кривой</h2>
+<p>Технология <em>Canon Log</em> (сокращенно C-Log) использует математическую логарифмическую функцию для распределения информации о яркости. В отличие от линейного преобразования, которое применяет стандартный профиль, логарифмический подход «сжимает» яркие участки и «растягивает» темные, позволяя записать больше ступеней яркости на ограниченный битрейт носителя.</p>
+
+<p>Когда вы активируете этот режим, камера перестает обрабатывать картинку «красиво» для просмотра на экране. Вместо этого она записывает сырые данные (Raw-like data) в видеосигнал. Это критически важно для сцен с высоким контрастом, например, съемка на природе, где солнце ярко светит в кадр, а в тени находится объект.</p>
+
+<p>Без использования <strong>логарифмической кривой</strong> вы рискуете получить либо полностью черные тени без деталей, либо «выбитое» белое небо, которое невозможно восстановить. C-Log предотвращает эти потери, сохраняя информацию в обоих экстремальных диапазонах.</p>
+
+<p>Важно понимать, что для правильного воспроизведения такого материала необходим специальный монитор с поддержкой LUT (Look Up Table), иначе оператор будет видеть неконтрастную картинку и может ошибиться с экспозицией.</p>
+
+<h2 id="версии-профиля-и-совместимость-моделей">Версии профиля и совместимость моделей</h2>
+<p>Важно различать, какая версия профиля реализована в вашей камере. Первая итерация <em>Canon Log</em> появилась в камерах серии <strong>Cinema EOS</strong> (например, C300 Mark II) и требовала 10-битного вывода для полноценной работы.</p>
+
+<p>Позже, с выходом гибридных камер начального и среднего уровня, была разработана облегченная версия — <em>Canon Log 2</em> и <em>Canon Log 3</em>. Эти профили оптимизированы для работы с 8-битным сигналом, что позволяет использовать их даже на камерах, которые не поддерживают 10-битную запись, например, в серии <strong>R5</strong> или <strong>R6</strong>.</p>
+
+<p>Различия между версиями заключаются в точке черного и характере кривой. C-Log 3, например, более близок к стандарту Sony S-Log3, что облегчает его использование в гибридных рабочих процессах, где смешиваются материалы от разных брендов.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Активность профиля зависит от версии прошивки камеры. В некоторых моделях начального уровня (например, старые EOS M серии) функция может быть заблокирована программно или требовать платного апгрейда, даже если «железо» теоретически способно на это.</p>
+</blockquote>
+
+<p>При выборе камеры для серьезной работы всегда проверяйте спецификации. Поддержка <strong>10-бит 4:2:2</strong> является желательным стандартом, так как 8-битное видео в логарифмическом режиме может быстро привести к «бандингу» (послойному появлению полос) при сильной цветокоррекции.</p>
+
+<h2 id="преимущества-использования-логарифмического-режима">Преимущества использования логарифмического режима</h2>
+<p>Главное преимущество, ради которого все и затевается — это возможность сохранить детали в светах. Если вы снимаете интерьер с окном, выходящим на яркий день, стандартный режим заставит вас выбрать: либо нормально экспонировать комнату (окно будет белым), либо правильно выставить окно (комната станет темной).</p>
+
+<p>С применением <em>Canon Log</em> вы можете экспонировать кадр так, чтобы сохранить текстуру в облаках за окном, а в постпродакшене поднять яркость интерьера. Это дает вам свободу творчества, недоступную при съемке в стандартном профиле.</p>
+
+<p>Второй ключевой плюс — это унификация цвета. Логарифмический профиль работает с цветом более линейно, что позволяет использовать стандартные LUT (цветовые таблицы) для получения кинематографичного изображения, вместо того чтобы пытаться «вытянуть» цвета из уже сжатого игрового профиля.</p>
+
+<ul>
+<li>🎥 Максимальное сохранение деталей в тенях при низкой освещенности.</li>
+<li>🎨 Упрощенный процесс цветокоррекции с использованием стандартных LUT.</li>
+<li>🌍 Возможность смешивать кадры с разных камер в одном проекте без перекраски.</li>
+</ul>
+
+<p>Однако стоит помнить, что это не панацея. Если вы снимаете простой репортаж или свадебное видео, где нужен быстрый результат и минимальная постобработка, логарифмический режим может только усложнить вашу жизнь.</p>
+
+<div class="pb-poll" id="poll-7d6df5c7"><div class="pb-poll-question">📊 Используете ли вы LUT-профили при съемке?</div><div class="pb-poll-option" data-poll="7d6df5c7" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Да, всегда</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="7d6df5c7" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Иногда, для красоты</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="7d6df5c7" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Нет, снимаю в стандартном режиме</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="7d6df5c7" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, что это такое</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="специфика-экспонирования-и-работа-с-iso">Специфика экспонирования и работа с ISO</h2>
+<p>Съемка в <em>Canon Log</em> требует пересмотра подхода к экспозиции. В отличие от стандартного режима, где вы можете полагаться на автоматический замер, здесь необходимо вручную контролировать гистограмму. Недоэкспонированный кадр будет выглядеть нормально, но при попытке поднять тени в редакторе появится много цифрового шума.</p>
+
+<p>Рекомендуется экспонировать кадр чуть светлее (overexpose), но не допускать перекрытия света. Для этого многие операторы используют функцию <code>Zebra</code>, выставляя её на 90-94%, чтобы видеть, где начинаются критические пересветы. Это помогает сохранить детали, которые не подлежат восстановлению.</p>
+
+<p>Также критически важно следить за значением <strong>ISO</strong>. Логарифмические профили часто имеют «двойную нативную чувствительность» (Dual Native ISO). Например, одна точка может быть ISO 400, а вторая — ISO 3200. Переход через эту границу требует особого внимания, так как шумоподавление может работать по-разному.</p>
+
+<p>Использование внешних мониторов с гистограммой и волновым формой (Waveform Monitor) становится практически обязательным условием для профессиональной работы в этом режиме.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Не пытайтесь компенсировать плохое освещение за счет резкого повышения ISO в логарифмическом режиме. Шум в тенях будет выглядеть гораздо хуже, чем в стандартном профиле, и убрать его программно будет практически невозможно без потери детализации.</p>
+</blockquote>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Контроль экспозиции в Canon Log</h4><label class="check-item"><input type="checkbox"><span>Включить гистограмму на мониторе</span></label><label class="check-item"><input type="checkbox"><span>Настроить зебру на 94%</span></label><label class="check-item"><input type="checkbox"><span>Проверить пиковую фокусировку</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в отсутствии пересветов в «ярких» участках</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="постобработка-и-использование-lut">Постобработка и использование LUT</h2>
+<p>После съемки материал в <em>Canon Log</em> выглядит плоским и неконтрастным. Чтобы вернуть картинке нормальный вид, необходимо применить LUT (Look Up Table). Это готовый пресет, который математически преобразует логарифмические данные обратно в стандартный цветовой пространство, например Rec.709.</p>
+
+<p>Существует два типа LUT, которые часто путают. Первый — конверсионный LUT, который просто переводит C-Log в стандартный вид. Второй — творческий LUT, который добавляет определенную стилизацию (киношность, винтаж, холодный тон) уже после конвертации.</p>
+
+<p>Процесс цветокоррекции начинается именно с наложения конверсионного LUT. Только после этого можно приступать к тонкой настройке баланса белого, контраста и насыщенности. Если наложить творческий LUT сразу на логарифмический материал без конверсии, цвета исказятся.</p>
+
+<ul>
+<li>🎬 Всегда применяйте базовый LUT конвертации перед началом монтажа.</li>
+<li>🛠 Используйте профессиональные программы: DaVinci Resolve, Adobe Premiere Pro или Final Cut Pro.</li>
+<li>⚙️ Проверяйте гистограмму после применения LUT, чтобы убедиться, что черные и белые точки не перекрыты.</li>
+</ul>
+
+<p> Если исходный кадр был снят с ошибками (например, пересвечен), даже самая лучшая LUT не спасет ситуацию. Качество исходника всегда определяет качество финального результата.</p>
+
+<details class="pb-accordion"><summary>Что такое 10-бит 4</summary><div class="pb-accordion-body"><p>2:2 и почему это важно?:10-бит означает, что в каждом канале цвета (красный, зеленый, синий) используется 1024 оттенка вместо 256 в 8-битном режиме. 4:2:2 описывает сжатие цветоразностного сигнала. Вместе это дает возможность плавно градирувать цвета без появления полос (бандинга), что критично при работе с логарифмическими профилями, где цвета растягиваются.</p></div></details>
+
+<h2 id="технические-требования-и-сравнение-профилей">Технические требования и сравнение профилей</h2>
+<p>Для эффективной работы с логарифмическими профилями необходим компьютер с достаточным запасом производительности. Обработка <strong>RAW</strong>-видео или сжатого C-Log требует мощного процессора и видеокарты, особенно если вы работаете с разрешением 4K.</p>
+
+<p>Сравнение профилей показывает, что C-Log 3 является наиболее сбалансированным решением для современных камер. Он предлагает баланс между динамическим диапазоном и удобством работы с 8-битным сигналом, в отличие от более требовательного C-Log 2.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Профиль</th>
+<th>Динамический диапазон</th>
+<th>Битность</th>
+<th>Сложность работы</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard (Rec.709)</td>
+<td>До 8 ступеней</td>
+<td>8-бит</td>
+<td>Низкая</td>
+</tr>
+<tr>
+<td>Canon Log 2</td>
+<td>До 13 ступеней</td>
+<td>10-бит</td>
+<td>Высокая</td>
+</tr>
+<tr>
+<td>Canon Log 3</td>
+<td>До 13+ ступеней</td>
+<td>8/10-бит</td>
+<td>Средняя</td>
+</tr>
+<tr>
+<td>Cinema Gamut</td>
+<td>Максимальный</td>
+<td>10-бит</td>
+<td>Очень высокая</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Выбор конкретного профиля зависит от вашей камеры и целей проекта. Для съемки YouTube-блоков часто достаточно C-Log 3, тогда для полнометражного кино может потребоваться работа с Cinema Gamut и RAW-форматом.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Логарифмический профиль не улучшает картинку «на снимке», он сохраняет информацию для последующей обработки. Без навыков цветокоррекции использование C-Log может дать худший результат, чем стандартный режим.</p></aside>
+
+<h2 id="частые-ошибки-и-как-их-избежать">Частые ошибки и как их избежать</h2>
+<p>Одной из самых распространенных ошибок является неправильная экспозиция. Многие новички думают, что логарифмический профиль прощает ошибки, но на самом деле он менее прощает недоэкспонирование. Темные участки, записанные в C-Log, при подъеме яркости превращаются в цветной шум.</p>
+
+<p>Другая ошибка — использование цветовых таблиц (LUT) без понимания их сути. Наложение «киношного» LUT на недоэкспонированный кадр часто приводит к появлению неестественных цветовых сдвигов и потере детализации в тенях.</p>
+
+<p>Также стоит избегать использования автоматического баланса белого при съемке в C-Log, если вы планируете серьезную цветокоррекцию. Лучше сразу выставить баланс вручную, чтобы избежать «прыгающих» цветовых температур в кадре.</p>
+
+<ul>
+<li>🚫 Не снимайте в C-Log, если у вас нет времени на цветокоррекцию.</li>
+<li>🚫 Избегайте использования LUT с экстремальными настройками контраста на уже «плоском» материале.</li>
+<li>🚫 Не полагайтесь только на LCD-экран камеры для оценки экспозиции в логарифмическом режиме.</li>
+</ul>
+
+<p>Постоянная практика и тестовые съемки помогут вам понять, как камера реагирует на свет в разных условиях. Только экспериментально вы сможете найти свой идеальный баланс экспозиции для конкретного профиля.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед началом съемки ответственного проекта обязательно сделайте пробный тестовый ролик в C-Log, проверьте его на мониторе и оцените возможности восстановления теней и света. Это сэкономит вам часы работы на монтаже.</p></aside>
+
+<h2 id="заключение-и-перспективы-развития">Заключение и перспективы развития</h2>
+<p>Технология <em>Canon Log</em> является ключевым инструментом в арсенале современного видеографа. Она позволяет выжать максимум из сенсора камеры, предоставляя свободу для творческой реализации идей в постпродакшене.</p>
+
+<p>С развитием технологий обработки и появлением 12-битных форматов, логарифмические профили станут еще более доступными и удобными. Однако базовые принципы работы с динамическим диапазоном останутся неизменными: сохранение информации важнее мгновенной красоты.</p>
+
+<p>Если вы планируете двигаться в сторону профессионального видеопроизводства, освоение C-Log — это обязательный шаг. Понимание того, как работают кривые экспонирования, даст вам преимущество перед конкурентами, которые снимают только в стандартных режимах.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главный вывод: Canon Log — это способ сохранить информацию, а не получить красивую картинку сразу. Успех зависит от вашей способности правильно настроить экспозицию и грамотно применить LUT при монтаже.</p></aside>
+
+<details>
+<summary>В чем главное отличие Canon Log от стандартного профиля?</summary>
+<p>Главное отличие заключается в динамическом диапазоне. Стандартный профиль (Rec.709) сразу применяет сжатие цвета и контраста, предназначенное для прямого просмотра. Canon Log сохраняет больше информации в тенях и светах, создавая плоское изображение, которое требует последующей цветокоррекции для получения финального вида.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать Canon Log на камерах без 10-битной записи?</summary>
+<p>Да, начиная с версии Canon Log 3, профиль можно использовать на камерах с 8-битной записью. Однако следует учитывать, что при сильной цветокоррекции на 8-битном материале могут появиться цветовые полосы (бандинг), поэтому для сложных проектов рекомендуется использовать камеры с поддержкой 10-бит 4:2:2.</p>
+</details>
+
+<details>
+<summary>Нужен ли специальный монитор для работы с Canon Log?</summary>
+<p>Для профессиональной работы желателен монитор, поддерживающий вывод LUT или имеющий встроенные профили C-Log. Это позволяет видеть, как будет выглядеть финальная картинка в процессе съемки. Однако, для оценки экспозиции можно использовать гистограмму и зебру, которые доступны на большинстве камер.</p>
+</details>
+
+<details>
+<summary>Что такое LUT и зачем он нужен?</summary>
+<p>LUT (Look Up Table) — это таблица преобразования цветов. В контексте Canon Log конверсионный LUT используется для перевода плоского логарифмического изображения обратно в стандартный цветовой диапазон (Rec.709), делая его контрастным и цветным. Творческие LUT накладываются после конверсии для придания определенного стиля.</p>
+</details>
+
+<details>
+<summary>Как правильно экспонировать кадр в Canon Log?</summary>
+<p>Рекомендуется экспонировать кадр чуть светлее, чтобы избежать шума в тенях, но следить за гистограммой, чтобы не пересветить самые яркие участки. Используйте функцию Zebra, настроив её на 90-94%, чтобы контролировать пересветы. Избегайте автоматического баланса белого и полагайтесь на ручной контроль.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ca/canon-600d-kakaya-karta-pamyati.html" class="pb-related-card">
+                <span class="pb-related-title">Какая карта памяти подходит для Canon 600D: типы, объемы и скорость</span>
+                <span class="pb-related-desc">Полное руководство по выбору карты памяти для Canon 600D. Разбор стандартов SDHC/SDXC, скорости запи</span>
+            </a><a href="/articles/c/ch/chem-zaryazhat-fotoapparat-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Чем заряжать фотоаппарат Canon: способы, адаптеры и аккумуляторы</span>
+                <span class="pb-related-desc">Полное руководство по зарядке аккумуляторов Canon: штатные зарядные устройства, питание от USB, авто</span>
+            </a><a href="/articles/k/ka/kakoj-mikrofon-kupit-dlya-fotoapparata-canon-m50.html" class="pb-related-card">
+                <span class="pb-related-title">Микрофон для Canon M50: 7 лучших моделей 2026 года</span>
+                <span class="pb-related-desc">Как выбрать внешний микрофон для Canon EOS M50: сравнение петличных, направленных и пушечных моделей</span>
+            </a><a href="/articles/k/ka/kak-vklyuchit-tajmer-na-fotoapparate-canon-600d.html" class="pb-related-card">
+                <span class="pb-related-title">Как включить таймер на Canon 600D: полная инструкция по настройке</span>
+                <span class="pb-related-desc">Подробная пошаговая инструкция: как настроить автоспуск на зеркальном фотоаппарате Canon 600D. Настр</span>
+            </a><a href="/articles/c/ch/chto-luchshe-zerkalka-ili-bezzerkalka-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Зеркалка или беззеркалка Canon: что выбрать в 2026 году?</span>
+                <span class="pb-related-desc">Полное сравнение зеркальных и беззеркальных камер Canon. Разбор систем EOS R и EOS DSLR, плюсы и мин</span>
+            </a><a href="/articles/c/ca/canon-eos-1100d-kakaya-karta-pamyati-podojdet.html" class="pb-related-card">
+                <span class="pb-related-title">Какая карта памяти для Canon EOS 1100D: выбор, скорость, формат</span>
+                <span class="pb-related-desc">Полный гайд по выбору карты памяти для Canon EOS 1100D. Разбор стандартов SD/SDHC, классов скорости,</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

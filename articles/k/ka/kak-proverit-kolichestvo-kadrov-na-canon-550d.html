@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как проверить счётчик кадров на Canon 550D: 5 способов — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция по проверке количества срабатываний затвора на Canon EOS 550D. Способы через EXIF, Magic Lantern, сервисное меню и программы.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-proverit-kolichestvo-kadrov-na-canon-550d.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как проверить счётчик кадров на Canon 550D: 5 способов">
+    <meta property="og:description" content="Пошаговая инструкция по проверке количества срабатываний затвора на Canon EOS 550D. Способы через EXIF, Magic Lantern, сервисное меню и программы.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/fotoapparaty-canon/">Фотоаппараты Canon</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как проверить счётчик кадров на Canon 550D: 5 способов</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#почему-важно-знать-счётчик-срабатываний-затвора">Почему важно знать счётчик срабатываний затвора</a></li><li><a href="#способ-1-проверка-через-exif-данные-самый-простой-метод">Способ 1: Проверка через EXIF-данные (самый простой метод)</a></li><li><a href="#способ-2-использование-magic-lantern-для-продвинутых-пользователей">Способ 2: Использование Magic Lantern (для продвинутых пользователей)</a></li><li><a href="#способ-3-сервисное-меню-canon-скрытый-режим">Способ 3: Сервисное меню Canon (скрытый режим)</a></li><li><a href="#способ-4-программы-для-компьютера-eosinfo-40d-shutter-count">Способ 4: Программы для компьютера (EOSInfo, 40D Shutter Count)</a></li><li><a href="#способ-5-обращение-в-сервисный-центр-canon">Способ 5: Обращение в сервисный центр Canon</a></li><li><a href="#что-делать-если-счётчик-сброшен-или-недоступен">Что делать, если счётчик сброшен или недоступен</a></li><li><a href="#faq-частые-вопросы-о-счётчике-затвора-на-canon-550d">FAQ: Частые вопросы о счётчике затвора на Canon 550D</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-snimat-tajmlaps-na-fotoapparat-canon.html">Как снимать таймлапс на Canon: Полное руководство по настройке</a></li><li><a href="/articles/k/ka/kak-proverit-bitye-pikseli-na-fotoapparate-canon-1100d.html">Как проверить битые пиксели на Canon 1100D: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-ustanovit-tajmer-na-fotoapparate-canon.html">Как установить таймер на фотоаппарате Canon: Полная инструкция по настройке</a></li><li><a href="/articles/k/ka/kak-proverit-probeg-kamery-kenon.html">Как проверить пробег камеры Canon: 5 рабочих способов</a></li><li><a href="/articles/p/po/pochemu-na-fotoapparate-kenon-razmytoe-izobrazhenie.html">Почему на фотоаппарате Canon размытое изображение: причины и решение</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как узнать количество сделанных снимков на Canon 550D: все рабочие методы</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#почему-важно-знать-счётчик-срабатываний-затвора">Почему важно знать счётчик срабатываний затвора</a></li><li><a href="#способ-1-проверка-через-exif-данные-самый-простой-метод">Способ 1: Проверка через EXIF-данные (самый простой метод)</a></li><li><a href="#способ-2-использование-magic-lantern-для-продвинутых-пользователей">Способ 2: Использование Magic Lantern (для продвинутых пользователей)</a></li><li><a href="#способ-3-сервисное-меню-canon-скрытый-режим">Способ 3: Сервисное меню Canon (скрытый режим)</a></li><li><a href="#способ-4-программы-для-компьютера-eosinfo-40d-shutter-count">Способ 4: Программы для компьютера (EOSInfo, 40D Shutter Count)</a></li><li><a href="#способ-5-обращение-в-сервисный-центр-canon">Способ 5: Обращение в сервисный центр Canon</a></li><li><a href="#что-делать-если-счётчик-сброшен-или-недоступен">Что делать, если счётчик сброшен или недоступен</a></li><li><a href="#faq-частые-вопросы-о-счётчике-затвора-на-canon-550d">FAQ: Частые вопросы о счётчике затвора на Canon 550D</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Фотокамера <em>Canon EOS 550D</em> — популярная зеркалка среди любителей и полупрофессионалов, но с годами её механический затвор изнашивается. Чтобы оценить остаточный ресурс аппарата или проверить честность продавца на вторичном рынке, нужно знать <strong>точный счётчик срабатываний затвора</strong> (shutter count). В отличие от новых моделей Canon, где эту информацию можно увидеть прямо в меню, у <em>550D</em> данные скрыты — их придётся извлекать обходными путями.</p>
+
+<p>В этой статье мы разберём <strong>5 проверенных способов</strong> — от просмотра EXIF-данных до использования сервисного ПО. Вы узнаете, какие программы подходят для <em>Windows/macOS/Linux</em>, как обойти ограничения Canon без риска повредить камеру, и что делать, если счётчик сброшен или недоступен. Особое внимание уделим <mark>уникальной особенности 550D: её счётчик хранится в двух разных местах — в файле изображения и в служебной памяти камеры</mark>, что иногда даёт противоречивые результаты.</p>
+
+<h2 id="почему-важно-знать-счётчик-срабатываний-затвора">Почему важно знать счётчик срабатываний затвора</h2>
+
+<p>Механический затвор <em>Canon 550D</em> рассчитан на <strong>100–150 тысяч срабатываний</strong> (по данным Canon). После этого риск поломки резко возрастает: могут появиться артефакты на снимках, заклинивание затвора или ошибки типа <code>Err 30</code>. Проверка счётчика помогает:</p>
+
+<ul>
+  <li>🔍 <strong>Оценить износ камеры</strong> перед покупкой б/у — продавцы часто скрывают реальный пробег.</li>
+  <li>💰 <strong>Спрогнозировать расходы</strong> на ремонт: замена затвора обходится в 5–15 тыс. рублей.</li>
+  <li>📸 <strong>Контролировать нагрузку</strong> при интенсивной съёмке (например, на мероприятиях).</li>
+  <li>🔧 <strong>Диагностировать неисправности</strong> — если счётчик равен 0, это может указывать на сброс или подмену данных.</li>
+</ul>
+
+<p>Важно: счётчик показывает <strong>только количество срабатываний затвора</strong>, а не общий «пробег» камеры. Он не учитывает время работы в режиме Live View, запись видео или использование электронного затвора (если таковой поддерживается).</p>
+
+<div class="pb-poll" id="poll-48ea22b4"><div class="pb-poll-question">📊 Вы покупаете б/у фотоаппараты?</div><div class="pb-poll-option" data-poll="48ea22b4" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Да, часто</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="48ea22b4" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Только если дешево</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="48ea22b4" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Нет, только новые</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="48ea22b4" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Предпочитаю аренду</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="способ-1-проверка-через-exif-данные-самый-простой-метод">Способ 1: Проверка через EXIF-данные (самый простой метод)</h2>
+
+<p>Самый быстрый способ — извлечь счётчик из <strong>EXIF-меток</strong> любого снимка, сделанного на эту камеру. Данные хранятся в служебном поле <code>ShutterCount</code>, но не все программы их показывают. Подойдут:</p>
+
+<ul>
+  <li>🖥️ <strong>ExifTool</strong> (кроссплатформенная утилита для командной строки).</li>
+  <li>📱 <strong>Exif Viewer</strong> (мобильные приложения для iOS/Android).</li>
+  <li>🌐 <strong>Онлайн-сервисы</strong> вроде <em>Exif.info</em> или <em>Metadata2Go.com</em>.</li>
+</ul>
+
+<p>Пошаговая инструкция для <strong>ExifTool</strong>:</p>
+<ol>
+  <li>Скачайте <a href="https://exiftool.org/" target="_blank" rel="nofollow">ExifTool</a> и распакуйте архив.</li>
+  <li>Поместите файл изображения (например, <code>IMG_1234.CR2</code>) в папку с утилитой.</li>
+  <li>Откройте командную строку (<code>Win + R → cmd</code>) и перейдите в папку с ExifTool:</li>
+</ol>
+<pre><code>cd C:\путь\к\папке\с\ExifTool</code></pre>
+<ol start="4">
+  <li>Выполните команду:</li>
+</ol>
+<pre><code>exiftool -ShutterCount -n IMG_1234.CR2</code></pre>
+
+<p>Если счётчик доступен, вы увидите строку вроде:</p>
+<pre><code>Shutter Count                    : 12543</code></pre>
+
+
+<p>Попробовать другой файл (не все форматы хранят ShutterCount)</p>
+<p>Использовать RAW (CR2), а не JPEG</p>
+<p>Проверить камеру другим способом (см. ниже)</p>
+<p>Обновить ExifTool до последней версии--></p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> На <em>Canon 550D</em> счётчик в EXIF может обнуляться после прошивки или сброса настроек. Если вы видите значение <code>0</code>, это не всегда означает новую камеру — возможно, данные были удалены.</blockquote>
+
+<h2 id="способ-2-использование-magic-lantern-для-продвинутых-пользователей">Способ 2: Использование Magic Lantern (для продвинутых пользователей)</h2>
+
+<p><em>Magic Lantern</em> — неофициальная прошивка, которая раскрывает скрытые функции Canon. Она умеет показывать счётчик затвора прямо на экране камеры, но имеет риски:</p>
+
+<ul>
+  <li>⚠️ <strong>Потеря гарантии</strong> (если она ещё действует).</li>
+  <li>🔄 <strong>Возможные глюки</strong> при несовместимости версий.</li>
+  <li>🛠️ <strong>Сложность отката</strong> на стоковую прошивку.</li>
+</ul>
+
+<p>Инструкция по установке и проверке:</p>
+<ol>
+  <li>Скачайте последнюю версию Magic Lantern для <em>550D</em> с <a href="https://www.magiclantern.fm/" target="_blank" rel="nofollow">официального сайта</a>.</li>
+  <li>Распакуйте архив и скопируйте файлы на отформатированную карту памяти (FAT32).</li>
+  <li>Вставьте карту в камеру, включите режим <code>Firmware Update</code> в меню.</li>
+  <li>После установки перейдите в меню Magic Lantern: <code>Debug → Shutter count</code>.</li>
+</ol>
+
+<p>Преимущество этого метода — <strong>точные данные прямо из памяти камеры</strong>, а не из EXIF. Однако:</p>
+
+<details class="pb-accordion"><summary>Что будет если прервать установку Magic Lantern?</summary><div class="pb-accordion-body"><p>
+<p>Если камера выключится во время прошивки, она может перестать включаться ("кирпич"). Восстановление возможно через сервисный режим, но требует паяльных работ или обращения в мастерскую.</p></div></details></p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Метод</th>
+      <th>Точность</th>
+      <th>Сложность</th>
+      <th>Риски</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>EXIF (JPEG/CR2)</td>
+      <td>Средняя</td>
+      <td>Низкая</td>
+      <td>Может обнуляться</td>
+    </tr>
+    <tr>
+      <td>Magic Lantern</td>
+      <td>Высокая</td>
+      <td>Высокая</td>
+      <td>Потеря гарантии, "кирпич"</td>
+    </tr>
+    <tr>
+      <td>Сервисное меню</td>
+      <td>Высокая</td>
+      <td>Средняя</td>
+      <td>Требует аккуратности</td>
+    </tr>
+    <tr>
+      <td>Программы (EOSInfo)</td>
+      <td>Высокая</td>
+      <td>Низкая</td>
+      <td>Нужно подключение по USB</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h2 id="способ-3-сервисное-меню-canon-скрытый-режим">Способ 3: Сервисное меню Canon (скрытый режим)</h2>
+
+<p>В <em>Canon 550D</em> есть скрытое сервисное меню, где можно увидеть счётчик затвора. Чтобы туда попасть:</p>
+
+<ol>
+  <li>Включите камеру в режиме <code>P/Av/Tv/M</code> (не в <code>Auto</code>).</li>
+  <li>Нажмите кнопки в такой последовательности:
+    <pre><code>Menu → Info → Display (кнопка с лупой) → Set</code></pre>
+  </li>
+  <li>В появившемся меню выберите <code>Counter</code> или <code>Shutter</code> (название может отличаться).</li>
+</ol>
+
+<p>Вы увидите два числа:</p>
+<ul>
+  <li><strong>Первое</strong> — счётчик срабатываний затвора.</li>
+  <li><strong>Второе</strong> — количество включений камеры (power-on count).</li>
+</ul>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если сервисное меню не открывается, попробуйте другой порядок кнопок: <code>Menu → Info → Q (кнопка быстрого доступа) → Set</code>. На некоторых прошивках комбинация отличается.</p></aside>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Не изменяйте другие параметры в сервисном меню! Это может привести к сбоям в работе автофокуса, экспозамера или баланса белого. Для выхода нажмите <code>Menu</code> и выключите камеру.</blockquote>
+
+<h2 id="способ-4-программы-для-компьютера-eosinfo-40d-shutter-count">Способ 4: Программы для компьютера (EOSInfo, 40D Shutter Count)</h2>
+
+<p>Если вам неудобно работать с EXIF или сервисным меню, используйте специализированное ПО:</p>
+
+<ul>
+  <li>🖥️ <strong>EOSInfo</strong> (Windows) — показывает счётчик при подключении камеры по USB.</li>
+  <li>🍎 <strong>40D Shutter Count</strong> (macOS) — аналог для пользователей Mac.</li>
+  <li>🐧 <strong>gPhoto2</strong> (Linux) — консольная утилита с поддержкой Canon.</li>
+</ul>
+
+<p>Инструкция для <strong>EOSInfo</strong>:</p>
+<ol>
+  <li>Скачайте программу с <a href="https://www.astrojargon.net/EOSInfo.aspx" target="_blank" rel="nofollow">сайта разработчика</a>.</li>
+  <li>Подключите <em>550D</em> к компьютеру по USB в режиме <code>PTP</code> (не как накопитель!).</li>
+  <li>Запустите EOSInfo и нажмите <code>Connect</code>.</li>
+  <li>Вкладка <code>Shutter Count</code> покажет текущее значение.</li>
+</ol>
+
+<p>Если программа выдаёт ошибку <code>Unsupported camera</code>, обновите её до последней версии или попробуйте другой софт.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>EOSInfo считывает данные напрямую из памяти камеры, поэтому его показания точнее, чем EXIF. Однако для работы требуется оригинальный USB-кабель Canon (не все сторонние кабели поддерживают PTP-режим).</p></aside>
+
+<h2 id="способ-5-обращение-в-сервисный-центр-canon">Способ 5: Обращение в сервисный центр Canon</h2>
+
+<p>Если все вышеперечисленные методы не сработали (например, счётчик обнулён или камера глючит), остаётся официальная диагностика. В сервисном центре Canon могут:</p>
+
+<ul>
+  <li>🔧 Проверить счётчик через <strong>сервисное ПО</strong> (доступно только авторизованным мастерским).</li>
+  <li>🔍 Оценить <strong>физическое состояние затвора</strong> — износ лент, пружин, магнитов.</li>
+  <li>📊 Предоставить <strong>отчёт о техническом состоянии</strong> (платно, ~1–2 тыс. рублей).</li>
+</ul>
+
+<p>Адреса официальных сервисных центров Canon в России можно найти на сайте <a href="https://www.canon.ru/" target="_blank" rel="nofollow">canon.ru</a> (раздел «Поддержка»). Перед визитом уточните по телефону, оказывают ли они услугу проверки счётчика — не все центры это делают.</p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> В неофициальных мастерских могут использовать те же методы, что и вы (EXIF или Magic Lantern), но брать за это деньги. Всегда уточняйте, каким способом будет проводиться проверка.</blockquote>
+
+<h2 id="что-делать-если-счётчик-сброшен-или-недоступен">Что делать, если счётчик сброшен или недоступен</h2>
+
+<p>Иногда счётчик на <em>Canon 550D</em> показывает <code>0</code> или отсутствует в EXIF. Причины и решения:</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Проблема</th>
+      <th>Возможная причина</th>
+      <th>Решение</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Счётчик = 0</td>
+      <td>Сброс настроек, прошивка, подмена данных</td>
+      <td>Проверьте через сервисное меню или Magic Lantern</td>
+    </tr>
+    <tr>
+      <td>Нет поля ShutterCount в EXIF</td>
+      <td>Файл обработан в Lightroom/Photoshop</td>
+      <td>Используйте оригинальный CR2, не JPEG</td>
+    </tr>
+    <tr>
+      <td>Разные значения в EXIF и сервисном меню</td>
+      <td>Глюк прошивки или двухканальная запись счётчика</td>
+      <td>Ориентируйтесь на большее значение</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Если вы подозреваете, что продавец сбросил счётчик, обратите внимание на:</p>
+<ul>
+  <li>🕰️ <strong>Дату первых снимков</strong> в EXIF (если камере 5 лет, а файлы от 2023 года — это подозрительно).</li>
+  <li>🔍 <strong>Состояние корпуса</strong> (потертости на дисплее, люфты кнопок говорят о долгой эксплуатации).</li>
+  <li>📦 <strong>Комплектацию</strong> (отсутствие оригинальной коробки или аккумулятора — признак перепродажи).</li>
+</ul>
+
+<h2 id="faq-частые-вопросы-о-счётчике-затвора-на-canon-550d">FAQ: Частые вопросы о счётчике затвора на Canon 550D</h2>
+
+<details>
+  <summary>Можно ли обнулить счётчик затвора на 550D?</summary>
+  <p>Технически да, но это требует <strong>вмешательства в прошивку</strong> или использования сервисного ПО Canon (доступно только в авторизованных центрах). Обнуление счётчика часто используется мошенниками для продажи изношенных камер. Проверяйте камеру комплексными методами (EXIF + сервисное меню + визуальный осмотр).</p>
+</details>
+
+<details>
+  <summary>Сколько стоит замена затвора на Canon 550D?</summary>
+  <p>Стоимость зависит от региона и мастерской:</p>
+  <ul>
+    <li>🔧 <strong>Официальный сервис Canon</strong>: 10–15 тыс. рублей (с запчастями).</li>
+    <li>🛠️ <strong>Неофициальные мастерские</strong>: 5–8 тыс. рублей (риск некачественных деталей).</li>
+  </ul>
+  <p>Срок ремонта — от 3 дней до 2 недель. Рекомендуем использовать оригинальные запчасти, так как китайские аналоги часто выходят из строя через 20–30 тыс. срабатываний.</p>
+</details>
+
+<details>
+  <summary>Влияет ли съёмка видео на счётчик затвора?</summary>
+  <p>Нет, <strong>счётчик учитывает только срабатывания механического затвора</strong>. При записи видео затвор открывается один раз (в начале) и закрывается в конце, поэтому на счётчик добавляется <code>+1</code> за весь ролик, независимо от его длины. Исключение — если вы делаете фото во время видео (на некоторых камерах это увеличивает счётчик).</p>
+</details>
+
+<details>
+  <summary>Какой счётчик считается нормальным для б/у Canon 550D?</summary>
+  <p>Ориентируйтесь на такие значения:</p>
+  <ul>
+    <li>🆕 <strong>0–20 тыс.</strong>: почти новая камера.</li>
+    <li>📸 <strong>20–50 тыс.</strong>: умеренная эксплуатация (хороший вариант для покупки).</li>
+    <li>⚠️ <strong>50–80 тыс.</strong>: приближается к ресурсу, возможны первые признаки износа.</li>
+    <li>❌ <strong>80+ тыс.</strong>: высокий риск поломки затвора, нужна диагностика.</li>
+  </ul>
+  <p>Учтите, что <strong>условия эксплуатации</strong> важнее счётчика: камера с 30 тыс. срабатываний, хранившаяся в пыли, может быть в худшем состоянии, чем аппарат с 60 тыс., но с регулярной чисткой.</p>
+</details>
+
+<details>
+  <summary>Можно ли проверить счётчик без компьютера?</summary>
+  <p>Да, есть два способа:</p>
+  <ol>
+    <li><strong>Сервисное меню</strong> (см. Способ 3 выше).</li>
+    <li><strong>Magic Lantern</strong> (показывает счётчик прямо на экране камеры).</li>
+  </ol>
+  <p>Также можно использовать мобильные приложения для чтения EXIF (например, <em>Exif Viewer by Fluntro</em> для iOS), но они показывают счётчик только если он сохранён в файле.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-snimat-tajmlaps-na-fotoapparat-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как снимать таймлапс на Canon: Полное руководство по настройке</span>
+                <span class="pb-related-desc">Пошаговая инструкция по созданию таймлапсов на камеры Canon. Настройки экспозиции, интервалометр, по</span>
+            </a><a href="/articles/k/ka/kak-proverit-bitye-pikseli-na-fotoapparate-canon-1100d.html" class="pb-related-card">
+                <span class="pb-related-title">Как проверить битые пиксели на Canon 1100D: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по диагностике матрицы Canon EOS 1100D. Узнайте, как выявить горячие, застрявш</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-tajmer-na-fotoapparate-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить таймер на фотоаппарате Canon: Полная инструкция по настройке</span>
+                <span class="pb-related-desc">Пошаговое руководство по активации таймера автоспуска на камерах Canon. Настройка 2, 10 и 5 секунд, </span>
+            </a><a href="/articles/k/ka/kak-proverit-probeg-kamery-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Как проверить пробег камеры Canon: 5 рабочих способов</span>
+                <span class="pb-related-desc">Узнайте, как узнать ресурс затвора Canon. Пошаговые инструкции для EOS, бесплатные сервисы и програм</span>
+            </a><a href="/articles/p/po/pochemu-na-fotoapparate-kenon-razmytoe-izobrazhenie.html" class="pb-related-card">
+                <span class="pb-related-title">Почему на фотоаппарате Canon размытое изображение: причины и решение</span>
+                <span class="pb-related-desc">Узнайте, почему снимки с камеры Canon получаются нечеткими. Разбор ошибок фокусировки, дрожания рук,</span>
+            </a><a href="/articles/k/ka/kak-vklyuchaetsya-fotoapparat-canon-eos-4000d.html" class="pb-related-card">
+                <span class="pb-related-title">Как включить Canon EOS 4000D: простая инструкция включения</span>
+                <span class="pb-related-desc">Подробное руководство по включению фотоаппарата Canon EOS 4000D. Узнайте как использовать переключат</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

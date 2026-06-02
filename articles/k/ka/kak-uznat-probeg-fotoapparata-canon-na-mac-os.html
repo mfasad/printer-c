@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как проверить пробег фотоаппарата Canon на Mac OS: 5 способов — Кэнон Инфо</title>
+    <meta name="description" content="Узнайте реальный пробег (количество срабатываний затвора) камеры Canon на Mac через EXIF, EOS Utility, терминал и онлайн-сервисы. Пошаговые инструкции + FAQ.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-uznat-probeg-fotoapparata-canon-na-mac-os.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как проверить пробег фотоаппарата Canon на Mac OS: 5 способов">
+    <meta property="og:description" content="Узнайте реальный пробег (количество срабатываний затвора) камеры Canon на Mac через EXIF, EOS Utility, терминал и онлайн-сервисы. Пошаговые инструкции + FAQ.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/fotoapparaty-canon/">Фотоаппараты Canon</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как проверить пробег фотоаппарата Canon на Mac OS: 5 способов</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#почему-важно-знать-пробег-затвора-canon">Почему важно знать пробег затвора Canon</a></li><li><a href="#способ-1-проверка-пробега-через-exif-данные-фотографий">Способ 1: Проверка пробега через EXIF-данные фотографий</a></li><li><a href="#способ-2-фирменная-утилита-eos-utility">Способ 2: Фирменная утилита EOS Utility</a></li><li><a href="#способ-3-онлайн-сервисы-для-проверки-пробега">Способ 3: Онлайн-сервисы для проверки пробега</a></li><li><a href="#способ-4-чтение-пробега-через-терминал-для-продвинутых">Способ 4: Чтение пробега через терминал (для продвинутых)</a></li><li><a href="#способ-5-специализированное-по-для-mac">Способ 5: Специализированное ПО для Mac</a></li><li><a href="#частые-проблемы-и-решения">Частые проблемы и решения</a></li><li><a href="#faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-snimat-na-kenon-700d.html">Как снимать на Canon 700D: Полное руководство по настройкам и режимам</a></li><li><a href="/articles/k/ka/kak-proverit-probeg-zatvora-na-canon-600d.html">Как проверить пробег затвора Canon 600D: онлайн и офлайн методы</a></li><li><a href="/articles/k/ka/kak-na-fotoapparate-canon-pomenyat-format-foto-na-jpg.html">Как на Canon поменять формат фото на JPG: полная инструкция</a></li><li><a href="/articles/k/ka/kak-nastroit-vspyshku-canon-580-ex-ii.html">Как настроить вспышку Canon 580EX II: полное руководство по режимам и синхронизации</a></li><li><a href="/articles/k/ka/kak-na-fotoapparate-canon-posmotret-fotografii.html">Как посмотреть фото на Canon: 5 способов просмотра снимков</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как узнать пробег фотоаппарата Canon на Mac OS: все рабочие методы</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#почему-важно-знать-пробег-затвора-canon">Почему важно знать пробег затвора Canon</a></li><li><a href="#способ-1-проверка-пробега-через-exif-данные-фотографий">Способ 1: Проверка пробега через EXIF-данные фотографий</a></li><li><a href="#способ-2-фирменная-утилита-eos-utility">Способ 2: Фирменная утилита EOS Utility</a></li><li><a href="#способ-3-онлайн-сервисы-для-проверки-пробега">Способ 3: Онлайн-сервисы для проверки пробега</a></li><li><a href="#способ-4-чтение-пробега-через-терминал-для-продвинутых">Способ 4: Чтение пробега через терминал (для продвинутых)</a></li><li><a href="#способ-5-специализированное-по-для-mac">Способ 5: Специализированное ПО для Mac</a></li><li><a href="#частые-проблемы-и-решения">Частые проблемы и решения</a></li><li><a href="#faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Покупка б/у фотоаппарата <em>Canon</em> всегда связана с рисками: продавец может скрыть реальный износ техники, завышая её стоимость. Одним из ключевых показателей состояния камеры является <strong>пробег затвора</strong> — количество сделанных снимков. Для зеркальных и беззеркальных моделей <em>Canon EOS</em> этот параметр записывается в метаданные файлов или хранится в служебной информации матрицы. Владельцам <em>Mac OS</em> доступно несколько способов его проверки — от встроенных инструментов до специализированного ПО.</p>
+
+<p>В этой статье вы найдёте <mark>актуальные методы определения пробега для камер Canon на Mac в 2026 году</mark>, включая работу с <code>EXIF</code>-данными, фирменной утилитой <em>EOS Utility</em>, терминалом и онлайн-сервисами. Мы также разберём нюансы чтения служебной информации для разных серий камер (<em>EOS R, 5D, 6D, 90D</em> и др.) и объясним, почему некоторые методы могут не сработать на новых моделях. Если вы планируете покупку или просто хотите оценить износ своей техники — эта инструкция поможет избежать обмана и принять взвешенное решение.</p>
+
+<h2 id="почему-важно-знать-пробег-затвора-canon">Почему важно знать пробег затвора Canon</h2>
+
+<p>Затвор фотоаппарата — это механический узел с ограниченным ресурсом. Для большинства моделей <em>Canon</em> производитель заявляет <strong>средний ресурс</strong> в диапазоне от 100 000 до 500 000 срабатываний, в зависимости от серии:</p>
+
+<ul>
+  <li>📷 <em>Canon EOS R5/R6</em> — до 500 000 срабатываний (по данным Canon)</li>
+  <li>📷 <em>Canon EOS 5D Mark IV</em> — около 150 000–300 000</li>
+  <li>📷 <em>Canon EOS 80D/90D</em> — 100 000–150 000</li>
+  <li>📷 <em>Canon EOS 2000D/4000D</em> — 50 000–100 000</li>
+</ul>
+
+<p>Превышение этого лимита не означает, что камера сразу сломается, но риск поломки затвора возрастает экспоненциально. Например, при пробеге в 300 000 снимков на <em>EOS 6D</em> вероятность необходимости ремонта (стоимость которого может достигать 50–70% от цены б/у камеры) превышает 60%. Помимо этого, пробег косвенно указывает на:</p>
+
+<ul>
+  <li>🔋 <strong>Износ матрицы</strong> — даже если затвор в порядке, длительная эксплуатация может приводить к появлению битых пикселей.</li>
+  <li>🔄 <strong>Состояние механики</strong> — зеркало, привод автофокуса и другие движущиеся части также имеют ресурс.</li>
+  <li>💰 <strong>Рыночную стоимость</strong> — разница в цене между камерами с пробегом 10 000 и 100 000 снимков может достигать 30–40%.</li>
+</ul>
+
+<blockquote>⚠️ Внимание: Некоторые продавцы сбрасывают счётчик срабатываний программно (например, через <em>Magic Lantern</em> или сторонние утилиты). Такой пробег нельзя считать достоверным — всегда проверяйте камеру на наличие следов вскрытия или неоригинальных деталей.</blockquote>
+
+<h2 id="способ-1-проверка-пробега-через-exif-данные-фотографий">Способ 1: Проверка пробега через EXIF-данные фотографий</h2>
+
+<p>Самый простой метод — прочитать информацию о количестве снимков из метаданных файлов, сделанных на камеру. <strong>EXIF</strong> (Exchangeable Image File Format) содержит служебные данные, включая серийный номер камеры и счётчик затвора. На <em>Mac OS</em> для этого подойдут как встроенные инструменты, так и сторонние приложения.</p>
+
+<h3>Шаг 1: Используем встроенный просмотрщик «Фото»</h3>
+<p>Если у вас установлена стандартная программа <code>Фото</code> (Photos.app):</p>
+<ol>
+  <li>Подключите карту памяти от камеры к Mac или скопируйте файлы <code>.CR2</code>/<code>.JPG</code> на компьютер.</li>
+  <li>Откройте фотографию в приложении <code>Фото</code>.</li>
+  <li>Нажмите <code>Command + I</code> или выберите <code>Файл → Показать информацию</code>.</li>
+  <li>В разделе <code>Дополнительно</code> найдите строку <code>Total Number of Shutter Releases</code> или <code>Shutter Count</code>.</li>
+</ol>
+
+<p>К сожалению, в новых версиях <em>Mac OS</em> (Sonoma и новее) эта информация может не отображаться — Apple урезала поддержку некоторых <code>EXIF</code>-тегов. В таком случае переходите к следующему шагу.</p>
+
+<h3>Шаг 2: Утилита ExifTool (бесплатный терминал)</h3>
+<p><em>ExifTool</em> — мощный инструмент для работы с метаданными, который устанавливается через <code>Homebrew</code>:</p>
+<pre><code>brew install exiftool</code></pre>
+<p>После установки выполните команду в <code>Терминале</code>:</p>
+<pre><code>exiftool -ShutterCount /путь/к/файлу.CR2</code></pre>
+<p>Пример вывода для <em>Canon EOS R6</em>:</p>
+<pre><code>Shutter Count                     : 12456</code></pre>
+
+<blockquote>⚠️ Внимание: Некоторые модели <em>Canon</em> (например, <em>EOS M50</em> или <em>EOS RP</em>) не сохраняют пробег в <code>EXIF</code> фотографий. В этом случае используйте методы из следующих разделов.</blockquote>
+
+
+<p>Снять тестовый кадр на камеру (желательно в RAW)</p>
+<p>Подключить карту памяти к Mac или скопировать файлы</p>
+<p>Установить ExifTool (если не работает встроенный просмотрщик)</p>
+<p>Проверить вывод на наличие строки Shutter Count--></p>
+
+<h2 id="способ-2-фирменная-утилита-eos-utility">Способ 2: Фирменная утилита EOS Utility</h2>
+
+<p>Официальное ПО от <em>Canon</em> — <em>EOS Utility</em> — позволяет не только управлять камерой с компьютера, но и считывать служебную информацию, включая пробег затвора. Этот метод работает для большинства моделей, кроме самых новых (выпущенных после 2023 года), где Canon ограничила доступ к некоторым данным.</p>
+
+<h3>Шаг 1: Установка и подключение</h3>
+<ol>
+  <li>Скачайте <em>EOS Utility</em> с <a href="https://www.canon.ru/support/" target="_blank">официального сайта Canon</a> (выберите свою модель камеры).</li>
+  <li>Подключите камеру к Mac через USB-кабель (используйте оригинальный кабель или сертифицированный <code>USB-C</code>/<code>Micro-USB</code>).</li>
+  <li>Запустите <em>EOS Utility</em> и дождитесь распознавания устройства.</li>
+</ol>
+
+<h3>Шаг 2: Чтение пробега</h3>
+<p>В главном окне утилиты:</p>
+<ol>
+  <li>Перейдите в раздел <code>Camera settings/Remote shooting</code>.</li>
+  <li>Нажмите на иконку 📊 <code>Camera information</code> (или <code>Show camera information</code>).</li>
+  <li>Найдите строку <code>Shutter count</code> или <code>Total shutter releases</code>.</li>
+</ol>
+
+<p>Если строка отсутствует, попробуйте:</p>
+<ul>
+  <li>🔄 Переподключить камеру.</li>
+  <li>🔄 Обновить <em>EOS Utility</em> до последней версии.</li>
+  <li>🔄 Использовать другой USB-порт (желательно <code>USB 3.0</code>).</li>
+</ul>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Модель Canon</th>
+      <th>Поддержка пробега в EOS Utility</th>
+      <th>Примечания</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>EOS R5, R6, R3</em></td>
+      <td>✅ Да</td>
+      <td>Требуется версия утилиты не ниже 3.15</td>
+    </tr>
+    <tr>
+      <td><em>EOS 5D Mark IV, 6D Mark II</em></td>
+      <td>✅ Да</td>
+      <td>Пробег отображается в разделе <code>Shooting info</code></td>
+    </tr>
+    <tr>
+      <td><em>EOS 80D, 90D</em></td>
+      <td>✅ Да</td>
+      <td>Может потребоваться перезагрузка камеры</td>
+    </tr>
+    <tr>
+      <td><em>EOS 200D, 250D</em></td>
+      <td>❌ Нет</td>
+      <td>Используйте <code>ExifTool</code> или онлайн-сервисы</td>
+    </tr>
+    <tr>
+      <td><em>EOS M6 Mark II, M50 Mark II</em></td>
+      <td>⚠️ Частично</td>
+      <td>Пробег может не отображаться в новых прошивках</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если EOS Utility не видит камеру, попробуйте отключить режим <code>Only charge</code> в настройках USB на самой камере (меню <code>Настройки → USB-соединение</code>).</p></aside>
+
+<h2 id="способ-3-онлайн-сервисы-для-проверки-пробега">Способ 3: Онлайн-сервисы для проверки пробега</h2>
+
+<p>Если у вас нет возможности установить ПО или работать с терминалом, можно воспользоваться онлайн-инструментами. Они анализируют загруженные фотографии и извлекают из них <code>EXIF</code>-данные, включая счётчик затвора. Важно: загружайте файлы только на проверенные сервисы, чтобы избежать утечки личных данных.</p>
+
+<h3>Топ-3 надёжных сервиса</h3>
+<ol>
+  <li>
+    <strong>Camera Shutter Count</strong> (<a href="https://www.camerashuttercount.com/" target="_blank">camerashuttercount.com</a>)
+    <ul>
+      <li>📤 Поддерживает форматы <code>JPG</code>, <code>CR2</code>, <code>CR3</code>.</li>
+      <li>🔍 Показывает пробег, серийный номер и модель камеры.</li>
+      <li>⚠️ Ограничение: до 5 файлов в день без регистрации.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>EXIF Viewer by Verexif</strong> (<a href="https://www.verexif.com/" target="_blank">verexif.com</a>)
+    <ul>
+      <li>🛡️ Не сохраняет загруженные файлы на сервере.</li>
+      <li>📊 Отображает полные <code>EXIF</code>-данные, включая настройки съёмки.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>MyShutterCount</strong> (<a href="https://www.myshuttercount.com/" target="_blank">myshuttercount.com</a>)
+    <ul>
+      <li>📱 Оптимизирован для мобильных устройств.</li>
+      <li>🔄 Поддерживает пакетную загрузку (до 10 файлов).</li>
+    </ol>
+  </li>
+</ol>
+
+<h3>Как пользоваться онлайн-сервисами</h3>
+<p>Алгоритм простой:</p>
+<ol>
+  <li>Сделайте тестовый снимок на камеру (желательно в <code>RAW</code>).</li>
+  <li>Скопируйте файл на Mac.</li>
+  <li>Перейдите на выбранный сервис и загрузите фотографию.</li>
+  <li>Дождитесь анализа — пробег будет отображён в разделе <code>Shutter Count</code> или <code>Total Shutter Actuations</code>.</li>
+</ol>
+
+<blockquote>⚠️ Внимание: Некоторые сервисы могут показывать пробег <code>0</code> для файлов, обработанных в <em>Lightroom</em> или <em>Photoshop</em>, так как эти программы перезаписывают <code>EXIF</code>. Всегда используйте оригинальные файлы прямо с камеры.</blockquote>
+
+
+<p>EXIF через ExifTool</p>
+<p>Фирменная утилита EOS Utility</p>
+<p>Онлайн-сервисы</p>
+<p>Другой способ--></p>
+
+<h2 id="способ-4-чтение-пробега-через-терминал-для-продвинутых">Способ 4: Чтение пробега через терминал (для продвинутых)</h2>
+
+<p>Если вы предпочитаете работать с командной строкой, можно извлечь пробег затвора напрямую из служебных данных камеры через <code>gphoto2</code> — утилиту для управления фотоаппаратами. Этот метод подходит для моделей, которые не отдают пробег через <code>EXIF</code> или <em>EOS Utility</em>.</p>
+
+<h3>Шаг 1: Установка gphoto2</h3>
+<p>Установите утилиту через <code>Homebrew</code>:</p>
+<pre><code>brew install gphoto2</code></pre>
+
+<h3>Шаг 2: Подключение камеры</h3>
+<p>Соедините камеру с Mac по USB и выполните команду:</p>
+<pre><code>gphoto2 --summary</code></pre>
+<p>В выводе найдите строку:</p>
+<pre><code>Shutter release count: 24567</code></pre>
+
+<h3>Альтернативная команда для новых моделей</h3>
+<p>Если <code>--summary</code> не показывает пробег, попробуйте:</p>
+<pre><code>gphoto2 --get-config shuttercounter</code></pre>
+<p>Или для камер серии <em>EOS R</em>:</p>
+<pre><code>gphoto2 --get-config /main/status/shuttercounter</code></pre>
+
+<p>Если команда возвращает ошибку <code>PTP Device Busy</code>, откройте <code>Image Capture</code> на Mac, выберите камеру и нажмите <code>Отключить</code> перед повторным запуском <code>gphoto2</code>.</p>
+
+<details class="pb-accordion"><summary>Что делать, если gphoto2 не видит камеру?</summary><div class="pb-accordion-body"><p>
+<p>1. Проверьте, что камера включена и находится в режиме <code>PTP</code> (меню <code>Настройки → USB-соединение</code>).</p>
+<p>2. Попробуйте другой USB-кабель (оригинальный или с поддержкой передачи данных).</p>
+<p>3. Отключите все другие программы, которые могут блокировать камеру (например, <em>Lightroom</em> или <em>Capture One</em>).</p>
+<p>4. Перезагрузите камеру и Mac.</p>
+<p>5. Обновите <code>gphoto2</code> до последней версии: <code>brew upgrade gphoto2</code>.</p></div></details></p>
+
+<h2 id="способ-5-специализированное-по-для-mac">Способ 5: Специализированное ПО для Mac</h2>
+
+<p>Если вам нужно регулярно проверять пробег (например, при покупке/продаже техники), удобнее использовать десктопные программы. Они предлагают расширенные функции, такие как сохранение истории проверок или анализ нескольких камер.</p>
+
+<h3>Топ-3 программы для Mac</h3>
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Программа</th>
+      <th>Стоимость</th>
+      <th>Особенности</th>
+      <th>Ссылка</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>ShutterCount</strong></td>
+      <td>Бесплатно</td>
+      <td>
+        <ul>
+          <li>📷 Поддерживает <em>Canon</em>, <em>Nikon</em>, <em>Sony</em>.</li>
+          <li>🔍 Показывает пробег, серийный номер, модель.</li>
+          <li>⚠️ Не работает с <em>EOS R50</em> и <em>R100</em>.</li>
+        </ul>
+      </td>
+      <td><a href="https://www.digicamsoft.com/softshuttercount.html" target="_blank">Скачать</a></td>
+    </tr>
+    <tr>
+      <td><strong>EOS Info</strong></td>
+      <td>$9.99</td>
+      <td>
+        <ul>
+          <li>📊 Подробная информация о камере (включая время работы).</li>
+          <li>🔄 Совместима с <em>Mac OS 12+</em>.</li>
+          <li>📤 Экспорт отчётов в <code>PDF</code>.</li>
+        </ul>
+      </td>
+      <td><a href="https://apps.apple.com/us/app/eos-info/id1446727670" target="_blank">App Store</a></td>
+    </tr>
+    <tr>
+      <td><strong>PhotoME</strong></td>
+      <td>Бесплатно</td>
+      <td>
+        <ul>
+          <li>🛠️ Редактор <code>EXIF</code>/<code>IPTC</code>.</li>
+          <li>🔍 Чтение пробега из <code>CR2</code>/<code>JPG</code>.</li>
+          <li>⚠️ Интерфейс может показаться сложным.</li>
+        </ul>
+      </td>
+      <td><a href="https://www.photome.de/" target="_blank">Скачать</a></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h3>Как пользоваться ShutterCount</h3>
+<ol>
+  <li>Скачайте и установите программу.</li>
+  <li>Подключите камеру к Mac по USB.</li>
+  <li>Запустите <em>ShutterCount</em> — пробег отобразится автоматически.</li>
+  <li>Для сохранения отчёта нажмите <code>File → Save Report</code>.</li>
+</ol>
+
+<blockquote>⚠️ Внимание: Некоторые программы (например, <em>EOS Info</em>) требуют разблокировки в <code>Системных настройках → Защита и безопасность</code> (разрешение на доступ к камере).</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для максимальной точности используйте комбинацию методов: проверьте пробег через EXIF, EOS Utility и терминал. Если все три источника показывают одинаковое значение — данные достоверны.</p></aside>
+
+<h2 id="частые-проблемы-и-решения">Частые проблемы и решения</h2>
+
+<p>При проверке пробега на <em>Mac OS</em> пользователи сталкиваются с типичными ошибками. Рассмотрим самые распространённые и способы их устранения.</p>
+
+<h3>Проблема 1: Камера не определяется в EOS Utility</h3>
+<p>Возможные причины и решения:</p>
+<ul>
+  <li>🔌 <strong>Неоригинальный кабель</strong> — используйте кабель из комплекта или сертифицированный <code>USB-C</code>.</li>
+  <li>🔄 <strong>Режим только зарядки</strong> — переключите в меню камеры <code>Настройки → USB-соединение → PTP</code>.</li>
+  <li>🖥️ <strong>Конфликт с другими программами</strong> — закройте <em>Lightroom</em>, <em>Capture One</em> или <code>Image Capture</code>.</li>
+  <li>🔄 <strong>Устаревшая прошивка</strong> — обновите прошивку камеры через <a href="https://www.canon.ru/support/" target="_blank">официальный сайт Canon</a>.</li>
+</ul>
+
+<h3>Проблема 2: ExifTool или gphoto2 показывают пробег 0</h3>
+<p>Это типично для:</p>
+<ul>
+  <li>📷 Камер серии <em>EOS M</em> (например, <em>M50</em>, <em>M200</em>).</li>
+  <li>📷 Новых моделей (<em>EOS R50</em>, <em>EOS R8</em>).</li>
+  <li>📷 Файлов, обработанных в графических редакторах.</li>
+</ul>
+<p>Решения:</p>
+<ul>
+  <li>🔄 Сделайте новый снимок в <code>RAW</code> и проверьте его.</li>
+  <li>🔧 Используйте <em>EOS Utility</em> или специализированное ПО.</li>
+  <li>📧 Обратитесь в сервисный центр <em>Canon</em> с запросом о диагностике (потребуется серийный номер).</li>
+</ul>
+
+<h3>Проблема 3: Онлайн-сервис не принимает файлы CR3</h3>
+<p>Формат <code>CR3</code> (используется в новых камерах) поддерживается не всеми сервисами. Альтернативы:</p>
+<ul>
+  <li>🖼️ Конвертируйте <code>CR3</code> в <code>DNG</code> через <em>Adobe DNG Converter</em>.</li>
+  <li>🔧 Используйте <em>ExifTool</em> локально.</li>
+  <li>📱 Загрузите файл через мобильное приложение сервиса (если доступно).</li>
+</ul>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если ни один метод не сработал, попробуйте снять видео на камеру (даже 1 секунду) и проанализировать его метаданные через <code>ExifTool</code>. Некоторые модели <em>Canon</em> записывают пробег в видео-файлы.</p></aside>
+
+<h2 id="faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</h2>
+
+<details>
+  <summary>Можно ли обнулить счётчик затвора на Canon?</summary>
+  <p>Технически да, но это требует специализированного оборудования или прошивки (например, через <em>Magic Lantern</em>). Однако:</p>
+  <ul>
+    <li>🔧 <strong>Официально</strong> Canon не предоставляет такой функции.</li>
+    <li>⚠️ Обнуление счётчика считается мошенничеством при продаже и может быть основанием для возврата товара.</li>
+    <li>🔍 Следы вмешательства видны при диагностике в сервисном центре.</li>
+  </ul>
+  <p>Если продавец утверждает, что пробег обнулен "по ошибке", требуйте предоставления чека из авторизованного сервиса <em>Canon</em>.</p>
+</details>
+
+<details>
+  <summary>Какой пробег считается нормальным для б/у камеры Canon?</summary>
+  <p>Ориентируйтесь на следующие показатели:</p>
+  <ul>
+    <li>🆕 <strong>До 10 000</strong> — почти новая камера (ценник близок к новому).</li>
+    <li>🟢 <strong>10 000–50 000</strong> — умеренный износ, хороший вариант для покупки.</li>
+    <li>🟡 <strong>50 000–100 000</strong> — требует проверки состояния затвора и матрицы.</li>
+    <li>🔴 <strong>Свыше 150 000</strong> — высокий риск скорого ремонта (стоимость камеры должна быть ниже 40% от новой).</li>
+  </ul>
+  <p>Для профессиональных моделей (<em>EOS 1D X</em>, <em>EOS R3</em>) допустим пробег до 300 000, но цена должна учитывать потенциальные затраты на замену затвора (~$200–$400).</p>
+</details>
+
+<details>
+  <summary>Почему пробег в EXIF и EOS Utility отличается?</summary>
+  <p>Разница может возникать по следующим причинам:</p>
+  <ul>
+    <li>📷 <strong>Live View и видео</strong> — некоторые модели считают срабатывания затвора только при съёмке фото, а не видео.</li>
+    <li>🔄 <strong>Сброс счётчика</strong> — если пробег в <code>EXIF</code> меньше, чем в <em>EOS Utility</em>, возможно, файлы были обработаны.</li>
+    <li>🖥️ <strong>Ошибка ПО</strong> — переподключите камеру или используйте другой метод проверки.</li>
+  </ul>
+  <p>Для точности сверьте оба показателя с данными из <code>gphoto2</code>.</p>
+</details>
+
+<details>
+  <summary>Можно ли узнать пробег без компьютера?</summary>
+  <p>Да, есть несколько способов:</p>
+  <ul>
+    <li>📱 <strong>Мобильные приложения</strong>:
+      <ul>
+        <li><em>Shutter Count</em> (iOS/Android) — считывает <code>EXIF</code> с фотографий.</li>
+        <li><em>EXIF Viewer</em> (Android) — работает с файлами на телефоне.</li>
+      </ul>
+    </li>
+    <li>📷 <strong>Сервисный центр Canon</strong> — по серийному номеру могут предоставить информацию (платно).</li>
+    <li>🔧 <strong>Magic Lantern</strong> — альтернативная прошивка, показывающая пробег на экране камеры (риск потери гарантии).</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Влияет ли съёмка видео на пробег затвора?</summary>
+  <p>Зависит от модели:</p>
+  <ul>
+    <li>🎥 <strong>Зеркальные камеры</strong> (<em>EOS 5D Mark IV</em>, <em>6D Mark II</em>) — затвор срабатывает при старте/остановке записи, но не во время неё. Каждый час видео может добавлять 2–5 "лишних" срабатываний.</li>
+    <li>🎥 <strong>Беззеркальные камеры</strong> (<em>EOS R5</em>, <em>R6</em>) — затвор не задействован при видео (используется электронный затвор), поэтому пробег не увеличивается.</li>
+  </ul>
+  <p>Исключение: если вы используете <strong>механический затвор</strong> при съёмке видео (настраивается в меню камеры), каждое нажатие кнопки записи будет учитываться.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-snimat-na-kenon-700d.html" class="pb-related-card">
+                <span class="pb-related-title">Как снимать на Canon 700D: Полное руководство по настройкам и режимам</span>
+                <span class="pb-related-desc">Полное руководство по съемке на Canon 700D. Настройка экспозиции, работа с объективами, создание вид</span>
+            </a><a href="/articles/k/ka/kak-proverit-probeg-zatvora-na-canon-600d.html" class="pb-related-card">
+                <span class="pb-related-title">Как проверить пробег затвора Canon 600D: онлайн и офлайн методы</span>
+                <span class="pb-related-desc">Полная инструкция по определению ресурса затвора Canon 600D. Узнайте, как узнать количество срабатыв</span>
+            </a><a href="/articles/k/ka/kak-na-fotoapparate-canon-pomenyat-format-foto-na-jpg.html" class="pb-related-card">
+                <span class="pb-related-title">Как на Canon поменять формат фото на JPG: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка качества и формата файлов на камерах Canon. Как сохранить снимки в JPG вместо RA</span>
+            </a><a href="/articles/k/ka/kak-nastroit-vspyshku-canon-580-ex-ii.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить вспышку Canon 580EX II: полное руководство по режимам и синхронизации</span>
+                <span class="pb-related-desc">Подробная инструкция по настройке внешней вспышки Canon 580EX II. Разбор режимов E-TTL, ручной мощно</span>
+            </a><a href="/articles/k/ka/kak-na-fotoapparate-canon-posmotret-fotografii.html" class="pb-related-card">
+                <span class="pb-related-title">Как посмотреть фото на Canon: 5 способов просмотра снимков</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как просматривать фотографии на экране фотоаппарата Canon, переключать режимы </span>
+            </a><a href="/articles/k/ka/kak-posmotret-probeg-obektiva-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как проверить пробег объектива Canon: 3 рабочих способа</span>
+                <span class="pb-related-desc">Узнайте, как узнать количество срабатываний затвора и пробег объектива Canon. Инструкция для сервисн</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

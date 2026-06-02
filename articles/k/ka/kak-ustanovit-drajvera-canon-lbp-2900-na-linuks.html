@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Установка драйверов Canon LBP 2900 на Linux: полная инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговое руководство по установке драйверов Canon LBP 2900 на Linux (Debian, Ubuntu, Mint). Обход лицензионных ограничений и настройка печати.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-ustanovit-drajvera-canon-lbp-2900-na-linuks.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Установка драйверов Canon LBP 2900 на Linux: полная инструкция">
+    <meta property="og:description" content="Пошаговое руководство по установке драйверов Canon LBP 2900 на Linux (Debian, Ubuntu, Mint). Обход лицензионных ограничений и настройка печати.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Установка драйверов Canon LBP 2900 на Linux: полная инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-окружения-и-установка-базовых-утилит">Подготовка окружения и установка базовых утилит</a></li><li><a href="#поиск-и-скачивание-исходного-кода-драйвера">Поиск и скачивание исходного кода драйвера</a></li><li><a href="#процесс-установки-и-переименования-файлов">Процесс установки и переименования файлов</a></li><li><a href="#регистрация-принтера-в-системе-cups">Регистрация принтера в системе CUPS</a></li><li><a href="#настройка-параметров-печати-и-тестирование">Настройка параметров печати и тестирование</a></li><li><a href="#решение-частых-проблем-и-конфликтов">Решение частых проблем и конфликтов</a></li><li><a href="#альтернативные-методы-и-сообщества">Альтернативные методы и сообщества</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-prinyat-faks-kenon.html">Как принять факс на принтере Canon: настройка, режимы и устранение сбоев</a></li><li><a href="/articles/k/ka/kak-vklyuchit-vaj-faj-na-printere-canon-mg3040.html">Как подключить Canon MG3040 к Wi-Fi: полная инструкция</a></li><li><a href="/articles/k/ka/kak-vklyuchit-wifi-na-printere-canon-mg3640.html">Как подключить Canon MG3640 к Wi-Fi: 3 рабочих способа</a></li><li><a href="/articles/k/ka/kak-printer-zapravit-bumagoj-canon.html">Как заправить бумагу в принтер Canon: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-proizvesti-vyravnivanie-pechatayushchikh-golovok-canon.html">Выравнивание печатающих головок Canon: пошаговая настройка качества</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как установить драйвера Canon LBP 2900 на Linux</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-окружения-и-установка-базовых-утилит">Подготовка окружения и установка базовых утилит</a></li><li><a href="#поиск-и-скачивание-исходного-кода-драйвера">Поиск и скачивание исходного кода драйвера</a></li><li><a href="#процесс-установки-и-переименования-файлов">Процесс установки и переименования файлов</a></li><li><a href="#регистрация-принтера-в-системе-cups">Регистрация принтера в системе CUPS</a></li><li><a href="#настройка-параметров-печати-и-тестирование">Настройка параметров печати и тестирование</a></li><li><a href="#решение-частых-проблем-и-конфликтов">Решение частых проблем и конфликтов</a></li><li><a href="#альтернативные-методы-и-сообщества">Альтернативные методы и сообщества</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Поиск совместимых драйверов для легендарного принтера <em>Canon LBP 2900</em> в среде <strong>Linux</strong> часто становится настоящим испытанием для пользователя. Несмотря на высокую надежность оборудования, производитель долгое время отказывался предоставлять нативную поддержку для этой операционной системы, оставляя администраторов в тупике.</p>
+
+<p>Современные дистрибутивы, такие как <em>Ubuntu</em>, <em>Debian</em> или <em>Linux Mint</em>, обладают мощными инструментами управления очередями печати, но им не хватает специфических фильтров обработки данных для этой модели. К счастью, сообщество разработчиков создало рабочие решения, позволяющие запустить устройство без покупки нового оборудования.</p>
+
+<p>Процесс требует внимательности, так как стандартные репозитории не содержат нужных файлов. Вам предстоит вручную загрузить утилиты, переименовать их для обхода лицензионной проверки и подключить к системе через интерфейс <code>CUPS</code>. Давайте разберем каждый этап детально, чтобы вы получили полностью рабочий принтер.</p>
+
+<h2 id="подготовка-окружения-и-установка-базовых-утилит">Подготовка окружения и установка базовых утилит</h2>
+
+<p>Первым шагом любой процедуры установки драйверов является обеспечение базы. Система должна иметь установленные пакеты, отвечающие за коммуникацию с принтерами и обработку графиков. Без них даже корректно скачанный софт не сможет функционировать.</p>
+
+<p>Откройте терминал и обновите список пакетов, а затем установите необходимые зависимости. В большинстве дистрибутивов на базе Debian это делается одной командой, но лучше проверить наличие каждого компонента по отдельности.</p>
+
+<p>Вам понадобятся следующие пакеты: <strong>libcups2</strong> для взаимодействия с сервером печати, <strong>libcupmsg</strong> для сообщений системы, а также <strong>libstdc++6</strong> для поддержки библиотек C++. Если у вас 64-битная система, не забудьте установить версии для 32-битной среды, так как драйверы <em>Canon</em> часто были скомпилированы под старую архитектуру.</p>
+
+<p><pre><code>sudo apt update && sudo apt install libcups2 libcupmsg libstdc++6</code></pre></p>
+
+<p>Убедитесь, что сервис CUPS активен и запущен. Это критически важно, так как ошибка в работе фоновой службы печати приведет к тому, что подключение устройства не удастся, даже если драйверы будут установлены верно.</p>
+
+<p><pre><code>sudo systemctl status cups</code></pre></p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Проверьте, что ваш пользователь добавлен в группу <code>lpadmin</code>. Без прав администратора на управление принтерами система выдаст ошибку доступа при попытке настройки.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если вы используете Mint или Ubuntu, убедитесь, что у вас установлены права root (sudo), иначе установка пакетов завершится отказом в доступе.</p></aside>
+
+<h2 id="поиск-и-скачивание-исходного-кода-драйвера">Поиск и скачивание исходного кода драйвера</h2>
+
+<p>Официальный сайт <em>Canon</em> предлагает только драйверы для Windows или macOS. Для Linux пользователь вынужден искать альтернативные источники, где энтузиасты разбирают официальные дистрибутивы. Обычно речь идет о пакете <code>cnijfilter2</code> или портированной версии драйвера <strong>LBP 2900</strong>.</p>
+
+<p>Самый надежный способ — использовать репозитории сторонних разработчиков или архивы пакетов, доступные в интернете. Вам нужно найти файл с расширением <code>.deb</code> или исходный код, который нужно будет скомпилировать. Ищите пакеты, в названии которых фигурирует <em>lbp2900</em> или <em>canon-lbp</em>.</p>
+
+<p>Часто требуется скачать два файла: сам драйвер и утилиту конфигурации. Обратите внимание на архитектуру: если у вас 64-битная система, ищите пакеты, помеченные как <code>amd64</code>, либо готовые сборки, адаптированные сообществом.</p>
+
+<p>Ни в коем случае не используйте сомнительные сайты с сомнительными репутациями. Лучше всего искать пакеты на GitHub или проверенных форумах Linux-сообщества. Ошибочная версия драйвера может привести к зависанию службы печати.</p>
+
+<h2 id="процесс-установки-и-переименования-файлов">Процесс установки и переименования файлов</h2>
+
+<p>После загрузки архива необходимо распаковать его и подготовить файлы для установки. Здесь кроется главная сложность: лицензионное соглашение <em>Canon</em> запрещает использование драйверов на Linux, поэтому в официальных файлах часто содержатся проверки системы.</p>
+
+<p>Вам придется переименовать исполняемые файлы или использовать специальные скрипты-обертки. Например, часто требуется изменить имя файла с <code>lg3200</code> на <code>lbp2900</code>, чтобы система приняла его как совместимый. Это стандартная практика для запуска проприетарного ПО на открытых платформах.</p>
+
+<p>Используйте команду установки <code>dpkg</code> для инсталляции пакета. Если система выдаст ошибку о зависимостях, используйте флаг <code>--fix-broken</code>, чтобы автоматически исправить ситуацию. Не игнорируйте предупреждения о зависимости, так как это может привести к неработоспособности принтера.</p>
+
+<p><pre><code>sudo dpkg -i lbp2900-driver.deb</code></pre></p>
+
+<p>Если установка прошла успешно, вы увидите сообщение об успешной инсталляции пакета. Однако это еще не значит, что принтер готов к работе. Следующим шагом станет регистрация устройства в системе CUPS.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка драйвера к установке</h4><label class="check-item"><input type="checkbox"><span>Скачать пакет .deb</span></label><label class="check-item"><input type="checkbox"><span>Распаковать архив</span></label><label class="check-item"><input type="checkbox"><span>Переименовать файлы (если нужно)</span></label><label class="check-item"><input type="checkbox"><span>Проверить зависимости</span></label><label class="check-item"><input type="checkbox"><span>--WIDGET:checklist</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<div class="pb-poll" id="poll-840b709b"><div class="pb-poll-question">📊 Какой дистрибутив Linux вы используете?</div><div class="pb-poll-option" data-poll="840b709b" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Ubuntu</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="840b709b" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Debian</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="840b709b" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Linux Mint</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="840b709b" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Fedora</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="840b709b" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Arch Linux</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="регистрация-принтера-в-системе-cups">Регистрация принтера в системе CUPS</h2>
+
+<p>Служба <strong>CUPS</strong> (Common Unix Printing System) является стандартом де-факто для печати в Linux. Именно она управляет очередями и переводит данные в понятный для <em>Canon LBP 2900</em> формат. Для регистрации устройства нужно использовать утилиту <code>lbp2900-cc</code> или аналогичную.</p>
+
+<p>Запустите команду регистрации, указав порт подключения. Если принтер подключен через USB, система обычно определяет его автоматически, но иногда требуется указать путь вручную, например, <code>usb://Canon/LBP2900</code>. Ошибка в указании адреса приведет к тому, что устройство не появится в списке доступных принтеров.</p>
+
+<p>После регистрации драйвер должен появиться в интерфейсе управления печатью. Вы можете проверить это через веб-интерфейс CUPS, открыв в браузере адрес <code>http://localhost:631</code>. Там вы увидите список установленных принтеров и их статус.</p>
+
+<p><pre><code>sudo lptool add Canon LBP2900</code></pre></p>
+
+<p>Если команда выдает ошибку, проверьте, что служба <code>cups</code> действительно запущена. Иногда после установки драйверов требуется перезагрузка системы или перезапуск службы печати, чтобы изменения вступили в силу.</p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Если вы используете USB-удлинитель, убедитесь, что он качественный. Дешевые кабели могут приводить к потере связи с принтером, и система будет считать его отключенным.</p>
+
+<details class="pb-accordion"><summary>Почему принтер не определяется?</summary><div class="pb-accordion-body"><p>Часто проблема кроется в конфликте портов. Если к компьютеру подключено несколько USB-устройств, попробуйте переподключить кабель в другой порт или временно отключить другие устройства.</p></div></details>
+
+<h2 id="настройка-параметров-печати-и-тестирование">Настройка параметров печати и тестирование</h2>
+
+<p>После того как устройство зарегистрировано, необходимо настроить его параметры. Откройте системные настройки печати и выберите принтер <em>Canon LBP 2900</em>. Здесь вы можете задать разрешение, тип бумаги и режим экономии тонера.</p>
+
+<p>Важно проверить, что тип драйвера указан верно. Система может предложить использовать универсальный драйвер, но для этой модели лучше выбрать специфический <strong>Canon LBP2900</strong>. Неправильный выбор приведет к тому, что текст будет печататься некорректно или с ошибками.</p>
+
+<p>Создайте тестовую страницу, чтобы убедиться, что печать работает. Проверьте качество отпечатка на разных типах бумаги. Если текст размыт или есть полосы, возможно, потребуется калибровка или проверка картриджа.</p>
+
+<ul>
+<li>Проверьте уровень тонера через утилиту управления принтером.</li>
+<li>Убедитесь, что выбран правильный формат бумаги (А4 или Letter).</li>
+<li>Попробуйте распечатать страницу с графикой, чтобы проверить точность воспроизведения.</li>
+</ul>
+
+<p>Если тестовая страница не печатается, проверьте логи системы. Ошибки обычно записываются в <code>/var/log/cups/error_log</code>. Это поможет найти причину проблемы, будь то ошибка драйвера или аппаратная неисправность.</p>
+
+<h2 id="решение-частых-проблем-и-конфликтов">Решение частых проблем и конфликтов</h2>
+
+<p>Даже при правильной установке могут возникнуть проблемы. Одной из самых частых является ошибка "Driver not found". Это означает, что система не может найти нужный файл драйвера. В этом случае проверьте путь к файлу и убедитесь, что он указан корректно.</p>
+
+<p>Еще одна проблема — зависание принтера после первой печати. Это может быть связано с перегревом или проблемами с питанием. В таких случаях рекомендуется выключить принтер и подождать несколько минут перед повторным включением.</p>
+
+<p>Если вы столкнулись с ошибкой "Permission denied", проверьте права доступа к файлам драйвера. Убедитесь, что у пользователя есть права на чтение и выполнение необходимых файлов.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярная проверка логов системы CUPS помогает выявлять проблемы на ранней стадии и предотвращать сбои в работе принтера.</p></aside>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Проблема</th>
+<th>Причина</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Принтер не определяется</td>
+<td>Неверный порт USB</td>
+<td>Переподключить кабель или сменить порт</td>
+</tr>
+<tr>
+<td>Ошибка драйвера</td>
+<td>Конфликт версий</td>
+<td>Удалить старый драйвер и установить новый</td>
+</tr>
+<tr>
+<td>Плохое качество печати</td>
+<td>Низкий уровень тонера</td>
+<td>Заменить картридж или потрясти его</td>
+</tr>
+<tr>
+<td>Печать не начинается</td>
+<td>Ошибка службы CUPS</td>
+<td>Перезапустить службу печати</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="альтернативные-методы-и-сообщества">Альтернативные методы и сообщества</h2>
+
+<p>Если стандартный метод не сработал, стоит обратиться к сообществу. На форумах Linux часто можно найти готовые решения для конкретных дистрибутивов. Например, для <em>Arch Linux</em> существуют готовые пакеты в AUR, которые автоматически решают все проблемы с зависимостями.</p>
+
+<p>Также можно рассмотреть использование виртуальных машин с Windows, если критически важно использовать оригинальный драйвер. Это потребует дополнительных ресурсов, но гарантирует полную совместимость.</p>
+
+<p>Не забывайте обновлять систему и драйверы. Сообщество постоянно работает над улучшением поддержки <em>Canon</em> в Linux, и новые версии могут решить старые проблемы.</p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> При использовании сторонних репозиториев всегда проверяйте целостность файлов и их подлинность. Непроверенные пакеты могут содержать вредоносное ПО.</p>
+
+<details class="pb-accordion"><summary>Где найти помощь?</summary><div class="pb-accordion-body"><p>Официальные форумы Ubuntu, GitHub репозитории с драйверами, локальные сообщества Linux-пользователей.</p></div></details>
+
+<details>
+<summary>Почему Canon LBP 2900 не имеет официального драйвера для Linux?</summary>
+<p>Canon не выпустила официальный драйвер для Linux, так как считала, что спрос на эту модель в среде открытых ОС недостаточен. Однако сообщество разработчиков портировало драйверы, сделав устройство популярным выбором для Linux-пользователей.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать этот драйвер на других версиях Linux?</summary>
+<p>Драйверы, разработанные для <em>Debian</em> и <em>Ubuntu</em>, часто работают и на других дистрибутивах, таких как <em>Mint</em> или <em>Zorin OS</em>. Однако для <em>Fedora</em> или <em>Arch</em> могут потребоваться дополнительные настройки или использование AUR.</p>
+</details>
+
+<details>
+<summary>Что делать, если принтер не печатает после установки?</summary>
+<p>Проверьте, что служба CUPS запущена, а драйвер корректно зарегистрирован. Также убедитесь, что кабель USB подключен плотно и не поврежден. Перезагрузка системы часто решает временные сбои.</p>
+</details>
+
+<details>
+<summary>Нужен ли root-доступ для установки драйвера?</summary>
+<p>Да, для установки системных пакетов и настройки служб печати требуется доступ администратора (root). Это необходимо для изменения системных файлов и прав доступа.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-prinyat-faks-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Как принять факс на принтере Canon: настройка, режимы и устранение сбоев</span>
+                <span class="pb-related-desc">Полное руководство по настройке приема факсов на МФУ Canon. Разбор режимов автоматического/ручного п</span>
+            </a><a href="/articles/k/ka/kak-vklyuchit-vaj-faj-na-printere-canon-mg3040.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon MG3040 к Wi-Fi: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по настройке беспроводной сети на принтере Canon MG3040. Методы подключения, у</span>
+            </a><a href="/articles/k/ka/kak-vklyuchit-wifi-na-printere-canon-mg3640.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon MG3640 к Wi-Fi: 3 рабочих способа</span>
+                <span class="pb-related-desc">Пошаговая инструкция по настройке беспроводной сети на принтере Canon MG3640. Сброс настроек, режим </span>
+            </a><a href="/articles/k/ka/kak-printer-zapravit-bumagoj-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как заправить бумагу в принтер Canon: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по правильной загрузке бумаги в принтеры Canon. Раскрытие причин замятия, наст</span>
+            </a><a href="/articles/k/ka/kak-proizvesti-vyravnivanie-pechatayushchikh-golovok-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Выравнивание печатающих головок Canon: пошаговая настройка качества</span>
+                <span class="pb-related-desc">Инструкция по выравниванию печатающих головок принтеров Canon. Автоматический и ручной способы, устр</span>
+            </a><a href="/articles/k/ka/kak-otklyuchit-kontrol-chernil-canon-mg3040.html" class="pb-related-card">
+                <span class="pb-related-title">Как отключить контроль чернил Canon MG3040: полное руководство</span>
+                <span class="pb-related-desc">Инструкция по отключению функции контроля чернил на принтере Canon MG3040. Узнайте, как обходить бло</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

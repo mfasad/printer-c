@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как прошить принтер Canon Pixma: инструкция, утилита и риски — Кэнон Инфо</title>
+    <meta name="description" content="Полное руководство по обновлению прошивки Canon Pixma. Узнайте, как использовать Service Tool, когда это необходимо и какие ошибки могут возникнуть при перепрошивке.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-proshit-printer-canon-pixma.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как прошить принтер Canon Pixma: инструкция, утилита и риски">
+    <meta property="og:description" content="Полное руководство по обновлению прошивки Canon Pixma. Узнайте, как использовать Service Tool, когда это необходимо и какие ошибки могут возникнуть при перепрошивке.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-nav-active">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/remont-i-oshibki/">Ремонт и ошибки</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как прошить принтер Canon Pixma: инструкция, утилита и риски</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#официальное-обновление-через-драйверы-и-утилиту">Официальное обновление через драйверы и утилиту</a></li><li><a href="#использование-service-tool-для-продвинутых-операций">Использование Service Tool для продвинутых операций</a></li><li><a href="#частые-ошибки-и-способы-их-устранения">Частые ошибки и способы их устранения</a></li><li><a href="#специфика-работы-с-чипами-и-картриджами">Специфика работы с чипами и картриджами</a></li><li><a href="#альтернативные-методы-и-аппаратные-решения">Альтернативные методы и аппаратные решения</a></li><li><a href="#faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ch/chernila-zakonchilis-canon-kak-sbrosit.html">Как сбросить счетчик чернил Canon: полные инструкции и нюансы</a></li><li><a href="/articles/p/po/pochemu-printer-kenon-ne-vidit-kartridzh.html">Почему принтер Canon не видит картридж: диагностика и ремонт</a></li><li><a href="/articles/c/co/code-9-244-3-canon-kak-ispravit.html">Ошибка 9 244 3 Canon: как исправить ошибку бумаги и перезагрузить принтер</a></li><li><a href="/articles/k/ke/kenon-zastryala-bumaga-kak-vytashchit.html">Кэнон застряла бумага: как вытащить без повреждений за 5 минут</a></li><li><a href="/articles/c/ca/canon-oshibka-u052-kak-ispravit.html">Ошибка U052 на принтере Canon: причины и способы устранения</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Прошивка принтеров Canon Pixma: полный гайд по обновлению прошивки</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#официальное-обновление-через-драйверы-и-утилиту">Официальное обновление через драйверы и утилиту</a></li><li><a href="#использование-service-tool-для-продвинутых-операций">Использование Service Tool для продвинутых операций</a></li><li><a href="#частые-ошибки-и-способы-их-устранения">Частые ошибки и способы их устранения</a></li><li><a href="#специфика-работы-с-чипами-и-картриджами">Специфика работы с чипами и картриджами</a></li><li><a href="#альтернативные-методы-и-аппаратные-решения">Альтернативные методы и аппаратные решения</a></li><li><a href="#faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Многие владельцы устройств <em>Canon Pixma</em> сталкиваются с необходимостью обновить программное обеспечение, чтобы устранить ошибки или добавить поддержку новых картриджей. Процесс обновления прошивки, или «прошивки», часто вызывает опасения, так как некорректные действия могут превратить принтер в нерабочий кирпич. Однако, если понимать логику работы <strong>Service Tool</strong> и официальных утилит, процедура становится вполне выполнимой даже для новичка.</p>
+
+<p>Существует два основных пути обновления: через официальный сайт производителя и с помощью специализированного сервисного инструмента. Первый метод безопасен и предназначен для рядовых пользователей, тогда как второй чаще используется в сервисных центрах для сброса счетчиков или исправления критических сбоев логики платы. Выбор метода напрямую зависит от вашей цели и текущей версии <strong>микропрограммы</strong> устройства.</p>
+
+<p>Важно понимать, что Canon периодически блокирует старые версии картриджей через обновления прошивки, что заставляет пользователей искать способы отката или замены ПО. В статье мы разберем нюансы работы с <strong>IP-адресом</strong> принтера, особенности подключения по USB и тонкости использования <em>Service Tool</em> для моделей серии Pixma.</p>
+
+<h2 id="официальное-обновление-через-драйверы-и-утилиту">Официальное обновление через драйверы и утилиту</h2>
+
+<p>Самый безопасный способ обновить прошивку — использовать официальный <strong>драйвер</strong> или утилиту обновления, установленную в операционную систему. Этот метод минимизирует риски повреждения платы, так как процесс контролируется проверенным программным обеспечением от <em>Canon</em>. Обычно система сама предлагает обновить прошивку при установке нового драйвера или при обнаружении устаревшей версии.</p>
+
+<p>Для ручного запуска процесса необходимо зайти на сайт поддержки, ввести модель вашего принтера и скачать последнюю версию драйвера. В процессе установки мастер может запросить подтверждение на обновление прошивки. Не прерывайте этот процесс, даже если компьютер кажется зависшим на несколько минут. Индикатор на корпусе устройства будет мигать, указывая на запись данных в <strong>EEPROM</strong>.</p>
+
+<p>Если автоматическое обновление не сработало, можно воспользоваться утилитой <code>Canon IJ Network Tool</code> или аналогичным ПО, которое позволяет управлять настройками через сеть. Подключите принтер по <code>Wi-Fi</code> или кабелю, запустите сканирование сети и выберите устройство в списке. В меню управления часто есть вкладка «Обновление прошивки», где можно выбрать источник загрузки.</p>
+
+<blockquote>⚠️ Внимание: Если принтер находится на гарантии, самостоятельное использование неофициальных инструментов прошивки может стать основанием для отказа в гарантийном обслуживании.</blockquote>
+
+<p>Иногда процесс прерывается из-за нестабильного интернет-соединения или плохого качества USB-кабеля. В таких случаях необходимо проверить физическое подключение и перезапустить процедуру. Используйте только кабели стандарта USB 2.0, заведомо исправные и без повреждений экранирования.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Официальное обновление драйвером — самый безопасный метод, исключающий риск «окирпичивания» устройства при условии стабильного питания.</p></aside>
+
+<h2 id="использование-service-tool-для-продвинутых-операций">Использование Service Tool для продвинутых операций</h2>
+
+<p>Сервисная утилита <em>Service Tool</em> предназначена для инженеров, но часто используется владельцами для сброса <strong>памяти waste ink</strong> (сбитых счетчиков) или откатывания прошивки после блокировки чипов. Эта программа позволяет менять параметры в <strong>EEPROM</strong> принтера напрямую, обходя защиту, установленную производителем. Для работы требуется запустить утилиту с правами администратора.</p>
+
+<p>Перед запуском <code>Service Tool</code> необходимо перевести принтер в сервисный режим. Обычно это делается путем удержания кнопки <code>Stop/Reset</code> при включении питания, пока не загорится оранжевый индикатор, после чего кнопку отпускают и нажимают <code>Power</code> несколько раз. Точная комбинация зависит от модели, например, для <em>Pixma MG2545</em> или <em>Pixma iP2700</em> процедуры могут отличаться.</p>
+
+<p>После входа в сервисный режим утилита должна распознать устройство через COM-порт или USB. Если принтер не определяется, проверьте настройки диспетчера устройств Windows и убедитесь, что установлен <strong>драйвер</strong> для сервисного соединения. В окне программы выбирается пункт «EEPROM Update» или «Main» для записи новой прошивки.</p>
+
+<blockquote>⚠️ Внимание: Неправильный выбор версии прошивки в <em>Service Tool</em> может привести к несоответствию ревизии платы и ПО, что сделает принтер полностью неработоспособным.</blockquote>
+
+<p>Важно не путать утилиту <em>Service Tool</em> с обычным драйвером печати. Первая имеет доступ к низкоуровневым функциям платы, поэтому любые ошибки в выборе параметров могут быть фатальны. Всегда сверяйте номер ревизии платы (обычно на наклейке под крышкой или на плате) с версией прошивки, которую вы планируете установить.</p>
+
+<details class="pb-accordion"><summary>Что такое EEPROM и почему он важен?</summary><div class="pb-accordion-body"><p>EEPROM — это энергонезависимая память, в которой хранятся счетчики, настройки и ключи доступа. Сброс или перезапись этой памяти позволяет «обнулить» состояние принтера, но требует точности, так как там же хранятся данные о производителе картриджей.</p></div></details>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к прошивке через Service Tool</h4><label class="check-item"><input type="checkbox"><span>Закрыть все стандартные программы управления принтером</span></label><label class="check-item"><input type="checkbox"><span>Установить драйвер Service Tool</span></label><label class="check-item"><input type="checkbox"><span>Найти комбинацию кнопок для сервисного режима</span></label><label class="check-item"><input type="checkbox"><span>Проверить соответствие версии ПО и ревизии платы</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="частые-ошибки-и-способы-их-устранения">Частые ошибки и способы их устранения</h2>
+
+<p>При прошивке пользователи часто сталкиваются с ошибкой «Error: Cannot connect» или «Connection failed». Это означает, что программа не может найти устройство в сети или по кабелю. Причина может крыться в том, что драйвер принтера в системе перехватывает управление портом. Необходимо отключить принтер от стандартного драйвера в диспетчере устройств, чтобы освободить USB-канал для <em>Service Tool</em>.</p>
+
+<p>Другая распространенная проблема — зависание процесса обновления на определенном проценте. В этом случае принтер может войти в режим «защиты» и перестать реагировать на команды. Если индикаторы мигают в аварийном режиме (через 2 раза оранжевым, 1 раз зеленым, например), это указывает на критическую ошибку прошивки. В таком случае потребуется повторная попытка прошивки или замена платы управления.</p>
+
+<p>Иногда после обновления перестают работать некоторые функции, например, копирование или сканирование. Это случается, если новая прошивка отключает устаревшие функции или требует обновления драйверов на ПК. Проверьте версию установленного ПО и при необходимости обновите <strong>драйверы</strong> через официальный сайт.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Ошибка</th>
+<th>Причина</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ошибка соединения</td>
+<td>Драйвер перехватывает порт</td>
+<td>Отключить принтер в диспетчере устройств</td>
+</tr>
+<tr>
+<td>Принтер не включается</td>
+<td>Несовместимость версий</td>
+<td>Попробовать прошивку другой ревизии</td>
+</tr>
+<tr>
+<td>Мигают индикаторы</td>
+<td>Сбой записи в память</td>
+<td>Полный сброс питания (вынуть из розетки)</td>
+</tr>
+<tr>
+<td>Не работает сканер</td>
+<td>Устаревший драйвер ПО</td>
+<td>Обновить драйвер сканера</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="pb-poll" id="poll-199c35bc"><div class="pb-poll-question">📊 Как вы планируете прошивать принтер?</div><div class="pb-poll-option" data-poll="199c35bc" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Через официальный сайт</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="199c35bc" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Через Service Tool</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="199c35bc" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Попросить мастера</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="199c35bc" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не буду прошивать, рискну с чипами</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="специфика-работы-с-чипами-и-картриджами">Специфика работы с чипами и картриджами</h2>
+
+<p>Одной из главных причин для перепрошивки является блокировка совместимых картриджей после обновления фирменным ПО. <em>Canon</em> внедряет алгоритмы, которые проверяют чип на картридже и блокируют печать, если версия прошивки принтера новее, чем чип. В этом случае пользователи часто ищут способы отката прошивки до более ранней версии.</p>
+
+<p>Откат прошивки — процедура рискованная. Не во всех моделях <em>Pixma</em> это возможно, так как блокировка может быть зашита в аппаратном уровне. Однако для многих бюджетных серий существуют сервисные утилиты, позволяющие загрузить старую версию <strong>микропрограммы</strong>. Это позволяет вернуть работоспособность неоригинальным картриджам.</p>
+
+<p>При поиске файлов прошивки обращайте внимание на ревизию платы. Файл для ревизии A может не подойти для ревизии B, даже если модели принтеров одинаковые. Неправильный файл прошивки может привести к тому, что принтер перестанет определяться компьютером или не будет подавать признаков жизни при включении.</p>
+
+<blockquote>⚠️ Внимание: Использование чипов без обновления прошивки может привести к их быстрому выходу из строя, если система принтера начнет блокировать запись данных.</blockquote>
+
+<p>Если вы не уверены в совместимости, лучше использовать программные чипы, которые эмулируют поведение оригинальных картриджей и менее чувствительны к версии прошивки. Они дороже, но обеспечивают стабильную работу без необходимости постоянных манипуляций с ПО.</p>
+
+<h2 id="альтернативные-методы-и-аппаратные-решения">Альтернативные методы и аппаратные решения</h2>
+
+<p>Если программная прошивка невозможна или не дает результата, существуют аппаратные методы вмешательства. Например, использование программатора для перепрошивки чипа непосредственно на печатной плате. Это требует навыков пайки и наличия специального оборудования, поэтому подходит только для профессионалов.</p>
+
+<p>Еще один способ — использование внешних модулей, которые устанавливаются между принтером и картриджем. Эти устройства перехватывают сигналы и обманывают принтер, заставляя его думать, что установлен оригинальный картридж. Это позволяет избежать необходимости перепрошивки самого принтера.</p>
+
+<p>В некоторых случаях помогает полная перепрошивка всех компонентов, включая модуль Wi-Fi и плату сканера. Это сложная процедура, требующая разборки устройства и доступа к разным разъемам на плате. Не рекомендуется выполнять такие действия без должного опыта.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Всегда делайте резервную копию текущей прошивки, если утилита позволяет это сделать, перед началом любых манипуляций.</p></aside>
+
+<h2 id="faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</h2>
+
+<details>
+<summary>Можно ли прошить Canon Pixma через Wi-Fi?</summary>
+<p>В большинстве случаев официальное обновление возможно через сеть, если принтер подключен к роутеру. Однако для сервисных утилит (Service Tool) требуется прямое подключение по USB, так как протокол передачи данных требует низкой задержки и стабильности.</p>
+</details>
+
+<details>
+<summary>Что будет, если прервать процесс прошивки?</summary>
+<p>Прерывание процесса прошивки почти гарантированно приводит к выходу принтера из строя. Плата управления останется в промежуточном состоянии, и устройство не сможет загрузиться. Восстановление потребует перепрошивки через программатор в сервисном центре.</p>
+</details>
+
+<details>
+<summary>Где скачать Service Tool для моей модели?</summary>
+<p>Официально утилита не распространяется для конечных пользователей. Ее можно найти на специализированных форумах по ремонту оргтехники или в базах данных сервисных центров. Ищите файл по названию модели и ревизии платы.</p>
+</details>
+
+<details>
+<summary>Нужно ли менять картридж после прошивки?</summary>
+<p>Нет, замена картриджа не требуется. Прошивка обновляет программное обеспечение принтера, а не физическое состояние картриджей. Однако, если прошивка была обновлена с целью блокировки чипов, старые чипы могут перестать работать.</p>
+</details>
+
+<details>
+<summary>Как проверить версию прошивки на принтере?</summary>
+<p>Версию прошивки можно узнать через меню самого принтера (Информация об устройстве) или через компьютер, зайдя в свойства принтера и выбрав вкладку «Об устройстве». Там будет указан номер версии ПО.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ch/chernila-zakonchilis-canon-kak-sbrosit.html" class="pb-related-card">
+                <span class="pb-related-title">Как сбросить счетчик чернил Canon: полные инструкции и нюансы</span>
+                <span class="pb-related-desc">Инструкция по сбросу чернил на принтерах Canon. Узнайте, как обойти ошибку Ink Absorber, сбросить пр</span>
+            </a><a href="/articles/p/po/pochemu-printer-kenon-ne-vidit-kartridzh.html" class="pb-related-card">
+                <span class="pb-related-title">Почему принтер Canon не видит картридж: диагностика и ремонт</span>
+                <span class="pb-related-desc">Принтер Canon не видит картридж? Узнайте основные причины, способы чистки чипов, сброс счетчика и пр</span>
+            </a><a href="/articles/c/co/code-9-244-3-canon-kak-ispravit.html" class="pb-related-card">
+                <span class="pb-related-title">Ошибка 9 244 3 Canon: как исправить ошибку бумаги и перезагрузить принтер</span>
+                <span class="pb-related-desc">Пошаговая инструкция по устранению кода ошибки 9 244 3 на принтерах Canon. Разбор причин, сброс ошиб</span>
+            </a><a href="/articles/k/ke/kenon-zastryala-bumaga-kak-vytashchit.html" class="pb-related-card">
+                <span class="pb-related-title">Кэнон застряла бумага: как вытащить без повреждений за 5 минут</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как безопасно удалить замятую бумагу из принтеров Canon. Разбор ошибок, чистка</span>
+            </a><a href="/articles/c/ca/canon-oshibka-u052-kak-ispravit.html" class="pb-related-card">
+                <span class="pb-related-title">Ошибка U052 на принтере Canon: причины и способы устранения</span>
+                <span class="pb-related-desc">Принтер Canon показывает ошибку U052? Узнайте, как диагностировать проблему с донором чернил и самос</span>
+            </a><a href="/articles/a/ab/absorber-chernil-polon-chto-delat-canon-mp210.html" class="pb-related-card">
+                <span class="pb-related-title">Абсорбер чернил полон в Canon MP210: что делать? Пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как сбросить ошибку «абсорбер чернил полон» на принтере Canon MP210. Пошаговые инструкции, </span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

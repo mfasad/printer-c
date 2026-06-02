@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как сканировать в один файл несколько страниц на Canon MP230 — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция: как объединить сканирование нескольких листов в один PDF на МФУ Canon MP230. Советы по настройке драйверов и форматов.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-skanirovat-odnim-fajlom-neskolko-stranits-canon-mp230.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как сканировать в один файл несколько страниц на Canon MP230">
+    <meta property="og:description" content="Пошаговая инструкция: как объединить сканирование нескольких листов в один PDF на МФУ Canon MP230. Советы по настройке драйверов и форматов.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как сканировать в один файл несколько страниц на Canon MP230</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-драйверов-и-выбор-правильного-по">Подготовка драйверов и выбор правильного ПО</a></li><li><a href="#настройка-параметров-сканирования-в-утилите-ij-scan-utility">Настройка параметров сканирования в утилите IJ Scan Utility</a></li><li><a href="#процесс-последовательного-сканирования-страниц">Процесс последовательного сканирования страниц</a></li><li><a href="#популярные-проблемы-и-способы-их-устранения">Популярные проблемы и способы их устранения</a></li><li><a href="#альтернативные-способы-получения-многостраничного-pdf">Альтернативные способы получения многостраничного PDF</a></li><li><a href="#сравнение-режимов-работы-сканирования">Сравнение режимов работы сканирования</a></li><li><a href="#оптимизация-качества-и-размера-итогового-файла">Оптимизация качества и размера итогового файла</a></li><li><a href="#faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/p/po/pochemu-ne-skaniruet-mfu-canon.html">Почему МФУ Canon не сканирует: 5 главных причин и способы ремонта</a></li><li><a href="/articles/k/ka/kak-skanirovat-na-kenon-3010-odnim-fajlom.html">Как сканировать все страницы в один файл на Canon 3010</a></li><li><a href="/articles/k/ka/kak-skanirovat-na-printere-canon-mf3228.html">Как сканировать на принтере Canon MF3228: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-skanirovat-na-canon-pixma.html">Как сканировать документы на принтере Canon Pixma: полные инструкции</a></li><li><a href="/articles/k/ka/kak-nastroit-skaner-v-mfu-canon.html">Как настроить сканер в МФУ Canon: полное руководство по драйверам и софту</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Объединение нескольких страниц в один файл при сканировании Canon MP230</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-драйверов-и-выбор-правильного-по">Подготовка драйверов и выбор правильного ПО</a></li><li><a href="#настройка-параметров-сканирования-в-утилите-ij-scan-utility">Настройка параметров сканирования в утилите IJ Scan Utility</a></li><li><a href="#процесс-последовательного-сканирования-страниц">Процесс последовательного сканирования страниц</a></li><li><a href="#популярные-проблемы-и-способы-их-устранения">Популярные проблемы и способы их устранения</a></li><li><a href="#альтернативные-способы-получения-многостраничного-pdf">Альтернативные способы получения многостраничного PDF</a></li><li><a href="#сравнение-режимов-работы-сканирования">Сравнение режимов работы сканирования</a></li><li><a href="#оптимизация-качества-и-размера-итогового-файла">Оптимизация качества и размера итогового файла</a></li><li><a href="#faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Многие пользователи сталкиваются с ситуацией, когда необходимо отсканировать многостраничный документ, но результат приходит в виде десятка разрозненных изображений. Это особенно неудобно при работе с договорами, инструкциями или отчетами, где важен целостный контекст. Владельцы многофункциональных устройств серии <em>Canon MP230</em> часто задаются вопросом, как обойти это ограничение стандартного интерфейса.</p>
+
+<p>Секрет кроется не в аппаратной части принтера, а в программном обеспечении, которое управляет процессом передачи данных. Стандартные кнопки на корпусе устройства обычно предназначены для быстрого копирования или однократного сканирования, не предлагая сложных функций объединения. Однако, используя компьютер и правильные настройки ПО, вы можете легко решить эту задачу.</p>
+
+<p>В этой инструкции мы разберем, как заставить программу <em>Canon IJ Scan Utility</em> ждать окончания сканирования всех страниц перед сохранением файла. Это позволит вам получить один аккуратный PDF-документ вместо кучи картинок. Мы также рассмотрим альтернативные методы, если стандартный софт по каким-то причинам не устраивает.</p>
+
+<h2 id="подготовка-драйверов-и-выбор-правильного-по">Подготовка драйверов и выбор правильного ПО</h2>
+
+<p>Первым шагом является проверка того, какое программное обеспечение установлено на вашем компьютере. Часто пользователи пытаются сканировать через встроенные средства Windows, такие как <code>Факсы и сканирование</code>, которые по умолчанию ведут себя иначе. Для модели <em>Canon MP230</em> критически важно использовать фирменную утилиту <em>Canon IJ Scan Utility</em>, так как именно она содержит логический механизм буферизации страниц.</p>
+
+<p>Если вы видите на рабочем столе иконку <em>Canon IJ Scan Utility</em>, значит, у вас все в порядке. В противном случае необходимо зайти на официальный сайт производителя и скачать пакет драйверов для серии <em>MP230</em>. Установите его, следуя подсказкам мастера, и перезагрузите компьютер для применения изменений в реестре системы.</p>
+
+<p>Важно отметить, что в драйверах должен быть выбран режим работы <em>Scanner</em>, а не только <em>Printer</em>. Иногда при установке по умолчанию отключаются функции сканирования для экономии места, поэтому проверьте компоненты в панели управления.</p>
+
+<blockquote>⚠️ Внимание: Если вы используете сторонние драйверы с кнопок WSD, функция сохранения в единый PDF может быть недоступна. Всегда подключайте устройство через стандартный USB-драйвер от Canon.</blockquote>
+
+<h2 id="настройка-параметров-сканирования-в-утилите-ij-scan-utility">Настройка параметров сканирования в утилите IJ Scan Utility</h2>
+
+<p>Запустите утилиту <em>Canon IJ Scan Utility</em> и нажмите кнопку <code>Настройки</code> (Settings). Откроется окно, где можно детально прописать параметры будущего документа. Обратите внимание на раздел <code>Разрешение</code> (Resolution). Для текстовых документов оптимальным выбором будет значение <code>200 dpi</code> или <code>300 dpi</code>. Это обеспечит четкость шрифта без чрезмерного увеличения размера файла.</p>
+
+<p>Ключевой момент находится во вкладке <code>Тип данных</code> (Data Type). Здесь вам нужно выбрать <strong>PDF</strong>. Но просто выбрать формат недостаточно. Необходимо найти опцию, отвечающую за поведение при сохранении. В зависимости от версии драйвера, эта настройка может называться <code>Сохранить как</code> или <code>Формат файла</code>. Убедитесь, что выбран вариант <strong>PDF (для печати)</strong> или <strong>PDF (для поиска)</strong>, так как они поддерживают мультистраничность.</p>
+
+<p>Самая важная настройка скрывается в выпадающем списке или чекбоксе с названием <code>Сканировать несколько страниц</code> (Scan multiple pages). Если этот параметр не активирован, программа будет сохранять каждую страницу отдельно сразу после её завершения. Активируйте эту опцию, чтобы программа накапливала данные в памяти перед записью на диск.</p>
+
+<p>Проверьте также настройки <code>Размера</code> (Size). Оставьте значение <code>Auto</code> или выберите <code>A4</code>, если ваши документы стандартного формата. Неправильный выбор размера может привести к обрезке краев текста или появлению пустых полей, что испортит вид итогового файла. После всех манипуляций нажмите <code>ОК</code>, чтобы сохранить изменения.</p>
+
+<h2 id="процесс-последовательного-сканирования-страниц">Процесс последовательного сканирования страниц</h2>
+
+<p>Теперь, когда параметры заданы, вернитесь в главное окно утилиты и нажмите кнопку <code>Документ</code> (Document). Откроется новое окно предпросмотра, где вы увидите первую страницу, лежащую на стекле сканера. Убедитесь, что лист лежит лицевой стороной вниз и прижат к углу, чтобы избежать перекосов.</p>
+
+<p>Нажмите кнопку <code>Сканировать</code> (Scan). После того как сканер завершит работу с первым листом, на экране появится сообщение с вопросом: <strong>«Отсканировать еще одну страницу?»</strong> (Scan another page?). Это критический момент, который отличает процесс сканирования в один файл от одиночного сканирования.</p>
+
+<p>Не закрывайте окно и не нажимайте кнопку <code>Завершить</code>. Вместо этого откройте лоток подачи документов (если он есть, хотя для MP230 это ручной режим) или просто переверните/замените лист на стекле сканера. Нажмите кнопку <code>Да</code> или <code>Далее</code> в появившемся диалоговом окне, чтобы инициировать сканирование следующей страницы.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Чек-лист сканирования</h4><label class="check-item"><input type="checkbox"><span>Подготовить все листы в нужном порядке</span></label><label class="check-item"><input type="checkbox"><span>Отсканировать первый лист</span></label><label class="check-item"><input type="checkbox"><span>Нажать «Далее» при запросе</span></label><label class="check-item"><input type="checkbox"><span>Заменить лист на стекле</span></label><label class="check-item"><input type="checkbox"><span>Повторить до конца документа</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<p>Повторяйте этот цикл до тех пор, пока все страницы документа не будут помещены в виртуальный буфер программы. Только после сканирования последнего листа вы нажмете кнопку <code>Нет</code> или <code>Завершить сканирование</code>. Именно в этот момент программа сгенерирует единый PDF-файл, объединив все отсканированные изображения в одну структуру.</p>
+
+<blockquote>⚠️ Внимание: Если вы случайно нажмете «Завершить» после первой страницы, процесс объединения прервется, и вы получите один файл. Придется начинать сканирование заново, так как буфер очистить не получится.</blockquote>
+
+<h2 id="популярные-проблемы-и-способы-их-устранения">Популярные проблемы и способы их устранения</h2>
+
+<p>Иногда пользователи сталкиваются с тем, что диалоговое окно «Отсканировать еще одну страницу?» не появляется. Это может означать, что в настройках утилиты выбрана опция <strong>Сканировать одну страницу</strong>. Зайдите снова в <code>Настройки</code> и перепроверьте галочку напротив <code>Сканировать несколько страниц</code>. Без этой опции программа по умолчанию считает задачу выполненной после первого прохода.</p>
+
+<p>Другой распространенной проблемой является формат сохранения. Если вместо PDF программа предлагает сохранить как <strong>JPEG</strong>, то объединение в один файл невозможно в рамках одной функции. JPEG по своей природе является форматом для одного изображения. Вам необходимо сменить настройки на <code>PDF</code> в разделе <code>Тип данных</code>, иначе результат будет набором картинок.</p>
+
+<p>Если устройство <em>Canon MP230</em> не отвечает или выдает ошибку при попытке сканирования второй страницы, проверьте соединение. Отключите USB-кабель на пару секунд и подключите снова. Также убедитесь, что на сканере нет посторонних предметов, которые могут помешать механизму подсветки.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если диалоговое окно «Далее» пропадает слишком быстро, попробуйте изменить настройки автозапуска Windows, чтобы утилита не сворачивалась в трей во время ожидания следующей страницы.</p></aside>
+
+<p>Иногда причиной сбоя становится неправильный драйвер. Если вы обновили Windows, старые драйверы могут работать некорректно. Зайдите в Диспетчер устройств, найдите <em>Canon MP230</em> и выберите «Обновить драйвер» или переустановите его с официального сайта, выбрав версию для вашей конкретной операционной системы.</p>
+
+<details class="pb-accordion"><summary>Что делать, если окно не появляется?
+<p>Если окно запроса не появляется, проверьте, не стоит ли в настройках галочка «Сканировать на экран» или «Отправить по электронной почте». В этих режимах программа сразу отправляет данные и закрывает окно, не давая возможности добавить страницы. Переключите режим на «Сохранить в файл».--></p>
+
+<h2 id="альтернативные-способы-получения-многостраничного-pdf">Альтернативные способы получения многостраничного PDF</h2>
+
+<p>Если стандартная утилита <em>Canon IJ Scan Utility</em> по каким-то причинам не подходит или вызывает ошибки, можно использовать встроенные средства Windows, такие как <code>Факсы и сканирование</code> или <code>Печать в PDF</code>. Однако эти методы требуют немного другого подхода к объединению файлов.</p>
+
+<p>В программе <code>Факсы и сканирование</code> можно создать новый документ, сканируя страницы по очереди, но система часто сохраняет их как отдельные файлы в папке. Чтобы получить один файл, вам придется использовать функцию печати</summary><div class="pb-accordion-body"><p> выберите все отсканированные страницы, нажмите <code>Печать</code> и в списке принтеров выберите <strong>Microsoft Print to PDF</strong>.</p>
+
+<p>Этот метод позволяет виртуально «распечатать» набор картинок в единый PDF-документ. Вы сможете задать порядок страниц перед печатью, что удобно, если вы пропустили лист в процессе сканирования. Главное преимущество — отсутствие необходимости устанавливать дополнительное ПО, так как все инструменты уже есть в системе.</p>
+
+
+
+<p>Также можно использовать специализированные программы для работы с документами, например, <em>Adobe Acrobat</em> или бесплатные аналоги вроде <em>NAPS2</em>. Они предлагают более продвинутый интерфейс для Drag-and-Drop страниц и их автоматического объединения. Это решение стоит рассмотреть, если вам часто приходится работать с большими архивами документов.</p>
+
+<h2 id="сравнение-режимов-работы-сканирования">Сравнение режимов работы сканирования</h2>
+
+<p>Чтобы лучше понять разницу между методами, полезно рассмотреть таблицу сравнения основных параметров. Это поможет выбрать оптимальный способ для ваших текущих задач и избежать лишних действий.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Canon IJ Scan Utility</th>
+<th>Факсы и сканирование (Windows)</th>
+<th>Виртуальный PDF-принтер</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Объединение страниц</td>
+<td>Автоматическое</td>
+<td>Требует ручной печати</td>
+<td>Автоматическое при печати</td>
+</tr>
+<tr>
+<td>Скорость работы</td>
+<td>Высокая</td>
+<td>Средняя</td>
+<td>Низкая (зависит от конвертации)</td>
+</tr>
+<tr>
+<td>Качество текста</td>
+<td>Высокое (настраиваемое)</td>
+<td>Среднее</td>
+<td>Зависит от исходника</td>
+</tr>
+<tr>
+<td>Необходимость ПО</td>
+<td>Фирменный драйвер</td>
+<td>Встроено в ОС</td>
+<td>Встроено в ОС</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Как видно из таблицы, <em>Canon IJ Scan Utility</em> остается самым эффективным инструментом для непосредственной работы с устройством <em>Canon MP230</em>, так как она заточена под взаимодействие с конкретной моделью сканера. Остальные методы являются скорее обходными путями, если основной софт не работает корректно.</p>
+
+<p>Выбор режима также зависит от того, нужен ли вам текст для поиска (OCR) или просто картинка. Фирменная утилита позволяет сразу выбрать режим <strong>PDF с распознаванием текста</strong>, что делает документ доступным для поиска внутри файла. Виртуальные принтеры часто сохраняют только графическую копию, превращая текст в набор пикселей.</p>
+
+<div class="pb-poll" id="poll-a853be86"><div class="pb-poll-question">📊 Какой метод сканирования вы используете чаще?</div><div class="pb-poll-option" data-poll="a853be86" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Фирменная утилита Canon</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a853be86" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Средства Windows</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a853be86" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Другое ПО</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a853be86" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Вручную через копирование</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="оптимизация-качества-и-размера-итогового-файла">Оптимизация качества и размера итогового файла</h2>
+
+<p>После того как файл создан, вы можете заметить, что он занимает слишком много места на диске. Это происходит, если вы сканировали в максимальном разрешении или выбрали формат с большим запасом качества. Для текстовых документов достаточно <code>200 dpi</code> и формата <strong>PDF (сжатый)</strong>, который использует алгоритмы сжатия изображений без видимой потери качества.</p>
+
+<p>Если файл необходимо отправить по электронной почте, можно использовать онлайн-компрессоры PDF или встроенные функции редактора. Однако, правильнее настроить это на этапе сканирования. В утилите <em>Canon IJ Scan Utility</em> в настройках типа данных есть опция выбора качества: <strong>Низкое</strong>, <strong>Среднее</strong>, <strong>Высокое</strong>. Для переписки и черновиков выбирайте <strong>Среднее</strong>.</p>
+
+<p>Также стоит учитывать, что сканирование цветных страниц значительно увеличивает размер файла по сравнению с черно-белым режимом. Если документ содержит только текст, переключите режим сканирования в <strong>Черно-белый</strong> (Black & White). Это не только уменьшит размер файла в разы, но и улучшит контрастность текста.</p>
+
+<blockquote>⚠️ Внимание: Сжатие файла может повлиять на читаемость мелких шрифтов или тонких линий в графиках. Всегда просматривайте результат перед отправкой или архивированием.</blockquote>
+
+<p>Иногда полезно сохранить копию в высоком качестве для архива, а вторую версию — оптимизированную для отправки. Это хорошая практика, которая сохранит исходные данные на случай необходимости их повторной обработки или увеличения.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Оптимальное разрешение для текстовых документов — 200-300 dpi. Для фотографий требуется 600 dpi и выше, что существенно увеличивает размер файла.</p></aside>
+
+<h2 id="faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</h2>
+
+<details>
+<summary>Почему после сканирования первой страницы программа не спрашивает о следующей?</summary>
+<p>Вероятно, в настройках <code>Canon IJ Scan Utility</code> отключена функция «Сканировать несколько страниц». Зайдите в настройки утилиты и активируйте эту опцию, либо проверьте, не выбран ли режим «Отправить по почте», который не поддерживает добавление страниц.</p>
+</details>
+
+<details>
+<summary>Можно ли сканировать в один файл, не используя компьютер?</summary>
+<p>Нет, модель <em>Canon MP230</em> не имеет встроенной памяти для создания многостраничных PDF-файлов без подключения к ПК. Кнопки на корпусе предназначены только для копирования или однократного сканирования в память или на флешку (если поддерживается), но не для объединения.</p>
+</details>
+
+<details>
+<summary>Как исправить порядок страниц, если я перепутал их при сканировании?</summary>
+<p>Если программа спросила «Далее», но вы положили не тот лист, можно отменить сканирование текущей страницы в окне предпросмотра или отсканировать страницы заново. В некоторых версиях ПО есть возможность переупорядочить страницы перед сохранением финального файла.</p>
+</details>
+
+<details>
+<summary>Почему файл получается слишком большим?</summary>
+<p>Часто это связано с высоким разрешением (например, 600 dpi) или сканированием в цветном режиме, когда документ черно-белый. Попробуйте уменьшить разрешение до 300 dpi и переключить тип данных на «Черно-белый» в настройках утилиты.</p>
+</details>
+
+<details>
+<summary>Работает ли этот метод для сканирования через Wi-Fi?</summary>
+<p>Да, если драйвер <em>Canon IJ Scan Utility</em> установлен и устройство подключено по Wi-Fi, процесс сканирования в один файл ничем не отличается от проводного подключения. Главное — стабильность соединения, чтобы не прервать передачу данных.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/p/po/pochemu-ne-skaniruet-mfu-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Почему МФУ Canon не сканирует: 5 главных причин и способы ремонта</span>
+                <span class="pb-related-desc">МФУ Canon не сканирует? Разбираем ошибки драйверов, настройки сети и проблемы с TWAIN. Полное руково</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-na-kenon-3010-odnim-fajlom.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать все страницы в один файл на Canon 3010</span>
+                <span class="pb-related-desc">Пошаговая инструкция: настройка сканирования Canon 3010 в PDF одним файлом. Работа с драйверами, мно</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-na-printere-canon-mf3228.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на принтере Canon MF3228: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по сканированию с Canon i-SENSYS MF3228. Настройка драйверов, использование па</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-na-canon-pixma.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы на принтере Canon Pixma: полные инструкции</span>
+                <span class="pb-related-desc">Пошаговая инструкция по сканированию на принтерах Canon Pixma через IJ Scan Utility, мобильное прило</span>
+            </a><a href="/articles/k/ka/kak-nastroit-skaner-v-mfu-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить сканер в МФУ Canon: полное руководство по драйверам и софту</span>
+                <span class="pb-related-desc">Пошаговая инструкция по настройке сканирования на МФУ Canon. Установка драйверов, выбор ПО, настройк</span>
+            </a><a href="/articles/p/pr/printer-kenon-mg-3640-kak-skanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать с принтера Canon MG3640: полные инструкции</span>
+                <span class="pb-related-desc">Пошаговая инструкция по сканированию документов и фото с принтера Canon MG3640 через панель управлен</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

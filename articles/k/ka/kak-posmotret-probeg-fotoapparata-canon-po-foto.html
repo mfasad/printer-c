@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как узнать пробег Canon по фото: EXIF и онлайн-сервисы — Кэнон Инфо</title>
+    <meta name="description" content="Узнайте, как проверить количество сделанных снимков на фотоаппарате Canon. Инструкция по чтению EXIF-данных и использованию бесплатных сервисов.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-posmotret-probeg-fotoapparata-canon-po-foto.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как узнать пробег Canon по фото: EXIF и онлайн-сервисы">
+    <meta property="og:description" content="Узнайте, как проверить количество сделанных снимков на фотоаппарате Canon. Инструкция по чтению EXIF-данных и использованию бесплатных сервисов.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/fotoapparaty-canon/">Фотоаппараты Canon</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как узнать пробег Canon по фото: EXIF и онлайн-сервисы</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#что-такое-exif-данные-и-где-хранится-пробег">Что такое EXIF-данные и где хранится пробег</a></li><li><a href="#способы-проверки-пробega-без-установки-программ">Способы проверки пробega без установки программ</a></li><li><a href="#классические-утилиты-для-детального-анализа-файлов">Классические утилиты для детального анализа файлов</a></li><li><a href="#особенности-чтения-данных-для-разных-серий-canon">Особенности чтения данных для разных серий Canon</a></li><li><a href="#влияние-качества-файлов-на-точность-данных">Влияние качества файлов на точность данных</a></li><li><a href="#что-делать-если-пробег-не-определяется">Что делать, если пробег не определяется</a></li><li><a href="#интерпретация-полученных-результатов">Интерпретация полученных результатов</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-uznat-probeg-fotoapparata-canon-po-foto.html">Как узнать пробег фотоаппарата Canon по фото: 3 рабочих способа</a></li><li><a href="/articles/k/ka/kak-polzovatsya-kenon-d600.html">Как пользоваться Canon EOS 60D: Полное руководство и настройки</a></li><li><a href="/articles/o/ob/obektivy-canon-chto-oznachaet-stm.html">Объективы Canon: что означает маркировка STM и как это влияет на съемку</a></li><li><a href="/articles/k/ke/kenon-mark-2-skolko-megapikselej.html">Canon EOS 5D Mark II: сколько мегапикселей и особенности матрицы</a></li><li><a href="/articles/c/ca/canon-ixus-kakoj-luchshe-fotoapparat.html">Какой Canon IXUS лучше выбрать в 2026 году: Рейтинг и советы</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как посмотреть пробег фотоаппарата Canon по фото</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#что-такое-exif-данные-и-где-хранится-пробег">Что такое EXIF-данные и где хранится пробег</a></li><li><a href="#способы-проверки-пробega-без-установки-программ">Способы проверки пробega без установки программ</a></li><li><a href="#классические-утилиты-для-детального-анализа-файлов">Классические утилиты для детального анализа файлов</a></li><li><a href="#особенности-чтения-данных-для-разных-серий-canon">Особенности чтения данных для разных серий Canon</a></li><li><a href="#влияние-качества-файлов-на-точность-данных">Влияние качества файлов на точность данных</a></li><li><a href="#что-делать-если-пробег-не-определяется">Что делать, если пробег не определяется</a></li><li><a href="#интерпретация-полученных-результатов">Интерпретация полученных результатов</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Покупка подержанной техники всегда сопряжена с определенными рисками, особенно когда речь заходит о фотосъемке. Для владельцев зеркальных и беззеркальных камер Canon ключевым показателем ресурса является количество сделанных кадров, часто называемое «пробегом».</p>
+<p>Узнать эту цифру можно без обращения в сервисный центр, используя всего один файл со сделанного снимка. Современные цифровые устройства автоматически записывают множество технических параметров прямо в изображение, что позволяет легко получить доступ к скрытой информации.</p>
+
+<h2 id="что-такое-exif-данные-и-где-хранится-пробег">Что такое EXIF-данные и где хранится пробег</h2>
+<p>Любое цифровое изображение содержит в себе массив метаданных, известный как <strong>EXIF</strong> (Exchangeable Image File Format). Эта информация включает в себя настройки экспозиции, тип объектива, дату съемки и, что самое важное, серийный номер камеры и счетчик срабатывания затвора.</p>
+<p>Именно этот счетчик, или <em>Shutter Actuation Count</em>, и есть ваш «пробег». Он показывает, сколько раз механизм затвора <em>Canon</em> совершил полный цикл открытия и закрытия. В большинстве моделей <code>Canon EOS</code> эта цифра записывается в теге MakerNotes и не удаляется при стандартных манипуляциях с файлом.</p>
+<p>Стоит понимать, что не все форматы файлов хранят эти данные одинаково надежно. Наиболее полную информацию обычно содержит исходный RAW-файл или несжатый JPEG, созданный непосредственно камерой без последующей обработки в стороннем софте.</p>
+
+<blockquote>⚠️ Внимание: Обработка изображения в социальных сетях, мессенджерах или некоторых графических редакторах часто приводит к полному удалению метаданных, включая пробег камеры.</blockquote>
+
+<h2 id="способы-проверки-пробega-без-установки-программ">Способы проверки пробega без установки программ</h2>
+<p>Самый быстрый путь к информации лежит через специализированные онлайн-сервисы. Вам не нужно устанавливать тяжелое программное обеспечение, достаточно загрузить свежий снимок на один из ресурсов, поддерживающих анализ <strong>MakerNotes</strong> для брендов <em>Canon</em>.</p>
+<p>После загрузки файла скрипт сайта автоматически парсит заголовок изображения и ищет конкретные байты, отвечающие за количество срабатываний. Результат выводится на экран в виде четкого числа, которое можно сразу сверить с заявленным продавцом.</p>
+<p>Этот метод идеален, если вы находитесь в гостях у продавца или находитесь в пути и не можете подключить компьютер к камере. Однако помните, что для корректной работы сайт должен поддерживать именно вашу модель камеры, так как структура данных может отличаться.</p>
+
+<div class="pb-poll" id="poll-cb3a7dcf"><div class="pb-poll-question">📊 Какой способ проверки пробегов вы считаете надежнее?</div><div class="pb-poll-option" data-poll="cb3a7dcf" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Онлайн-сервисы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="cb3a7dcf" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Сторонние программы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="cb3a7dcf" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Официальный сервис</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="cb3a7dcf" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, как проверить</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="классические-утилиты-для-детального-анализа-файлов">Классические утилиты для детального анализа файлов</h2>
+<p>Если вы предпочитаете работать в офлайн-режиме или у вас нет доступа к интернету, на помощь придут десктопные программы. Самым популярным инструментом является <strong>ExifTool</strong>, который является стандартом де-факто для работы с метаданными.</p>
+<p>Также существуют более дружелюбные графические оболочки, такие как <em>EOSInfo</em> или <em>Camera Shutter Count</em>. Эти программы позволяют не только узнать текущий пробег, но и увидеть историю изменений настроек, если камера поддерживает такую функцию.</p>
+<p>Для пользователей Windows и macOS доступно множество бесплатных решений, которые показывают всю структуру файла. Просто перетащите изображение в окно программы, и вы увидите дерево тегов, где нужно найти параметр <code>ShutterCount</code> или <code>ImageNumber</code>.</p>
+
+<details class="pb-accordion"><summary>Почему некоторые программы не видят пробег?</summary><div class="pb-accordion-body"><p>Некоторые утилиты не могут распознать структуру MakerNotes для новейших моделей камер, таких как EOS R5 или R6. В таких случаях требуется обновление базы данных программы или использование более специализированных инструментов, поддерживающих последние прошивки производителей.</p></div></details>
+
+<h2 id="особенности-чтения-данных-для-разных-серий-canon">Особенности чтения данных для разных серий Canon</h2>
+<p>Важно учитывать, что алгоритм записи счетчика не одинаков для всех линеек продукции. В любительских моделях серии <em>Rebel</em> (например, <code>Canon 2000D</code>) счетчик часто совпадает с просто номером изображения, который сбрасывается при форматировании карты памяти.</p>
+<p>В профессиональных и полупрофессиональных корпусах серий <strong>5D</strong>, <strong>7D</strong> и беззеркальных <em>EOS R</em> счетчик затвора является независимым и хранится в энергонезависимой памяти самого корпуса. Он не сбрасывается при форматировании карты, замене батареи или перепрошивке.</p>
+<p>Поэтому при проверке <em>Canon EOS M</em> или младших зеркалок нужно быть особенно внимательным: цифры могут быть ложными. Всегда запрашивайте у продавца серию снимков, сделанных в начале съемочного дня, чтобы убедиться в отсутствии манипуляций.</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Серия камеры</th>
+      <th>Тип счетчика</th>
+      <th>Сбрасывается ли при форматировании</th>
+      <th>Сложность проверки</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>Canon EOS 5D Mark IV</em></td>
+      <td>Аппаратный</td>
+      <td>Нет</td>
+      <td>Низкая</td>
+    </tr>
+    <tr>
+      <td><em>Canon EOS 3000D</em></td>
+      <td>Логический (номер файла)</td>
+      <td>Да</td>
+      <td>Высокая (требует анализа)</td>
+    </tr>
+    <tr>
+      <td><em>Canon EOS R5</em></td>
+      <td>Аппаратный</td>
+      <td>Нет</td>
+      <td>Низкая</td>
+    </tr>
+    <tr>
+      <td><em>Canon EOS 7D Mark II</em></td>
+      <td>Аппаратный</td>
+      <td>Нет</td>
+      <td>Средняя</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<blockquote>⚠️ Внимание: На камерах начального уровня номер файла может быть сброшен продавцом специально для маскировки реального ресурса затвора, поэтому доверяйте только проверенным сервисам анализа.</blockquote>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Чек-лист перед проверкой пробегов</h4><label class="check-item"><input type="checkbox"><span>Сделайте свежий снимок в формате RAW</span></label><label class="check-item"><input type="checkbox"><span>Не редактируйте фото перед проверкой</span></label><label class="check-item"><input type="checkbox"><span>Загрузите файл в сервис</span></label><label class="check-item"><input type="checkbox"><span>Сверьте серийный номер с корпусом</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="влияние-качества-файлов-на-точность-данных">Влияние качества файлов на точность данных</h2>
+<p>Точность определения пробегов напрямую зависит от качества исходного файла. Если вы получаете изображение, которое было отправлено через мессенджер (например, Telegram или WhatsApp), оно прошло агрессивную компрессию.</p>
+<p>Такая компрессия уничтожает метаданные, поэтому проверить пробег по такому файлу <strong>невозможно</strong>. Вам необходимо получить оригинальный файл напрямую с карты памяти или через Wi-Fi передачу в оригинальном качестве.</p>
+<p>Даже если файл выглядит хорошо визуально, отсутствие EXIF-данных означает, что информация о счетчике затвора была удалена на этапе экспорта или обработки. Всегда просите продавца скинуть исходник.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если продавец прислал фото в WhatsApp, попросите его отправить файл как документ, а не как изображение — это сохранит метаданные.</p></aside>
+
+<h2 id="что-делать-если-пробег-не-определяется">Что делать, если пробег не определяется</h2>
+<p>Иногда случается так, что ни один из популярных онлайн-сервисов не видит счетчик. Это может означать, что камера относится к модели, для которой еще не обновлена база данных парсеров.</p>
+<p>В такой ситуации единственным надежным способом остается использование фирменной утилиты <em>EOS Utility</em> от <strong>Canon</strong>. Подключив камеру к компьютеру через USB-кабель, вы сможете считать данные напрямую с модуля затвора.</p>
+<p>Если даже фирменное ПО не показывает цифру, возможно, в камере были проведены манипуляции с прошивкой или заменен затвор на неоригинальный, что стирает корректные данные из памяти.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если онлайн-сервисы не видят пробег, используйте прямое подключение к ПК через USB и фирменное ПО Canon EOS Utility для считывания данных напрямую с аппарата.</p></aside>
+
+<h2 id="интерпретация-полученных-результатов">Интерпретация полученных результатов</h2>
+<p>Получив число, не спешите делать выводы. Ресурс затвора у разных моделей <em>Canon</em> отличается. Например, у любительских камер он составляет около 100-150 тысяч срабатываний, а у профессиональных <code>EOS-1D</code> — более 300 тысяч.</p>
+<p>Если пробег составляет 80% от заявленного ресурса, это еще не повод отклонять сделку, но повод торговаться. Затвор — это расходный механизм, и его замена — процедура недешевая, которую нужно учитывать в итоговой стоимости.</p>
+<p>Также обратите внимание на равномерность износа. Если пробег высокий, но камера выглядит новой, возможно, она использовалась в студийных условиях без пыли и влаги, что значительно продлевает срок службы электроники.</p>
+
+<blockquote>⚠️ Внимание: Ресурс затвора является ориентировочным показателем; механический износ может наступить раньше или позже заявленных цифр в зависимости от условий эксплуатации и качества обслуживания.</blockquote>
+
+<details>
+  <summary>Можно ли сбросить пробег программно?</summary>
+  <p>В отличие от автомобилей, где скручивание пробега — распространенная практика, на камерах Canon сброс счетчика затвора невозможен штатными методами. Для этого требуется специальное сервисное оборудование, которое есть только в авторизованных центрах, и даже там это делается только при замене механизма затвора.</p>
+</details>
+
+<details>
+  <summary>Влияет ли режим Live View на пробег?</summary>
+  <p>Нет, режим Live View (съемка с экрана) не увеличивает механический счетчик срабатываний затвора, так как затвор остается открытым. Однако это влияет на износ матрицы и нагрев камеры, что учитывается при оценке общего ресурса устройства.</p>
+</details>
+
+<details>
+  <summary>Нужно ли проверять пробег на каждом объективе?</summary>
+  <p>Нет, счетчик затвора хранится в корпусе камеры, а не в объективе. Даже если вы меняли объективы, пробег камеры остается тем же. Проверять нужно именно сам корпус.</p>
+</details>
+
+<details>
+  <summary>Что делать, если счетчик показывает ноль на б/у камере?</summary>
+  <p>Это явный признак того, что продавец пытается ввести вас в заблуждение. На камерах начального уровня это может означать сброс номера файла, а на профессиональных — вмешательство в прошивку или замену платы управления. Лучше отказаться от покупки.</p>
+</details>
+
+<details>
+  <summary>Можно ли узнать пробег по серийному номеру?</summary>
+  <p>Нет, серийный номер камеры не содержит информации о пробеге. Он используется только для проверки гарантийного статуса и года выпуска устройства. Пробег можно узнать только считав данные из памяти самой камеры.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-uznat-probeg-fotoapparata-canon-po-foto.html" class="pb-related-card">
+                <span class="pb-related-title">Как узнать пробег фотоаппарата Canon по фото: 3 рабочих способа</span>
+                <span class="pb-related-desc">Узнайте точный счетчик срабатываний затвора Canon по RAW-файлу или JPEG. Пошаговая инструкция, совме</span>
+            </a><a href="/articles/k/ka/kak-polzovatsya-kenon-d600.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться Canon EOS 60D: Полное руководство и настройки</span>
+                <span class="pb-related-desc">Подробная инструкция по работе с камерой Canon EOS 60D. Настройка экспозиции, режимы съемки, обслужи</span>
+            </a><a href="/articles/o/ob/obektivy-canon-chto-oznachaet-stm.html" class="pb-related-card">
+                <span class="pb-related-title">Объективы Canon: что означает маркировка STM и как это влияет на съемку</span>
+                <span class="pb-related-desc">Разбираем технологию Stepping Motor в объективах Canon. Узнайте, почему STM идеален для видео, как в</span>
+            </a><a href="/articles/k/ke/kenon-mark-2-skolko-megapikselej.html" class="pb-related-card">
+                <span class="pb-related-title">Canon EOS 5D Mark II: сколько мегапикселей и особенности матрицы</span>
+                <span class="pb-related-desc">Точное количество мегапикселей Canon EOS 5D Mark II, разрешение снимков, особенности полнокадровой м</span>
+            </a><a href="/articles/c/ca/canon-ixus-kakoj-luchshe-fotoapparat.html" class="pb-related-card">
+                <span class="pb-related-title">Какой Canon IXUS лучше выбрать в 2026 году: Рейтинг и советы</span>
+                <span class="pb-related-desc">Полный разбор линейки Canon IXUS: от компактных моделей до продвинутых версий. Узнайте, какой фотоап</span>
+            </a><a href="/articles/p/po/pochemu-fotografii-ne-rezkie-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Почему фотографии нерезкие на Canon: 12 причин и решений</span>
+                <span class="pb-related-desc">Размытые снимки на Canon? Узнайте основные причины нерезкости (от настройки объектива до ошибок фоку</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

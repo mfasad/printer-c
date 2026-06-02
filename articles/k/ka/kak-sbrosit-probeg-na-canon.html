@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Сброс пробега (счетчика страниц) на принтерах Canon: методы и нюансы — Кэнон Инфо</title>
+    <meta name="description" content="Как сбросить счетчик страниц и пробег на принтерах Canon. Обзор сервисных режимов, программных утилит и рисков обнуления чипов картриджей.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-sbrosit-probeg-na-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Сброс пробега (счетчика страниц) на принтерах Canon: методы и нюансы">
+    <meta property="og:description" content="Как сбросить счетчик страниц и пробег на принтерах Canon. Обзор сервисных режимов, программных утилит и рисков обнуления чипов картриджей.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-nav-active">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/remont-i-oshibki/">Ремонт и ошибки</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Сброс пробега (счетчика страниц) на принтерах Canon: методы и нюансы</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#понимание-архитектуры-счетчиков-в-технике-canon">Понимание архитектуры счетчиков в технике Canon</a></li><li><a href="#аппаратный-сброс-через-сервисное-меню-пошаговая-инструкция">Аппаратный сброс через сервисное меню: пошаговая инструкция</a></li><li><a href="#программные-утилиты-для-сброса-счетчиков">Программные утилиты для сброса счетчиков</a></li><li><a href="#особенности-сброса-для-разных-серий-принтеров">Особенности сброса для разных серий принтеров</a></li><li><a href="#риски-и-возможные-последствия-сброса">Риски и возможные последствия сброса</a></li><li><a href="#таблица-популярных-моделей-и-методов-сброса">Таблица популярных моделей и методов сброса</a></li><li><a href="#когда-сброс-пробег-не-поможет">Когда сброс пробег не поможет</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ca/canon-mf4018-zastryala-bumaga-kak-vytashchit.html">Застряла бумага в Canon MF4018: как вытащить и устранить ошибку</a></li><li><a href="/articles/k/ka/kak-sbrosit-absorber-na-canon-mp230.html">Сброс абсорбера Canon MP230: пошаговая инструкция и сервисное меню</a></li><li><a href="/articles/k/kr/krasnaya-knopka-na-printere-canon-chto-oznachaet.html">Красная кнопка на принтере Canon: значение, ошибки и способы сброса</a></li><li><a href="/articles/p/pr/printer-canon-pechataet-so-smeshcheniem-po-vertikali-kak-ispravit.html">Принтер Canon печатает со смещением: как исправить вертикальный сдвиг</a></li><li><a href="/articles/k/ko/kod-podderzhki-2900-canon-chto-delat.html">Ошибка E2900 (2900) Canon: причины, сброс и решение проблемы</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полное руководство: как сбросить пробег и счетчик страниц на принтерах Canon</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#понимание-архитектуры-счетчиков-в-технике-canon">Понимание архитектуры счетчиков в технике Canon</a></li><li><a href="#аппаратный-сброс-через-сервисное-меню-пошаговая-инструкция">Аппаратный сброс через сервисное меню: пошаговая инструкция</a></li><li><a href="#программные-утилиты-для-сброса-счетчиков">Программные утилиты для сброса счетчиков</a></li><li><a href="#особенности-сброса-для-разных-серий-принтеров">Особенности сброса для разных серий принтеров</a></li><li><a href="#риски-и-возможные-последствия-сброса">Риски и возможные последствия сброса</a></li><li><a href="#таблица-популярных-моделей-и-методов-сброса">Таблица популярных моделей и методов сброса</a></li><li><a href="#когда-сброс-пробег-не-поможет">Когда сброс пробег не поможет</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Многие пользователи офисной и домашней техники сталкиваются с ситуацией, когда принтер <em>Canon</em> внезапно отказывается печатать, требуя сброса счетчика отработанных листов или замены расходных материалов. Это не всегда означает физическую поломку оборудования; чаще всего система просто фиксирует достигнутый лимит по <strong>пробегу</strong> или количеству напечатанных страниц. Понимание того, как работает внутренняя логика подсчета страниц, является ключом к успешному восстановлению работоспособности устройства без лишних затрат на новый аппарат.</p>
+
+<p>Процедура обнуления счетчиков варьируется в зависимости от серии принтера, будь то бюджетные модели серии <em>Pixma</em> или мощные офисные решения <em>imageRUNNER</em>. Важно понимать, что сброс пробега — это не универсальная кнопка, а сложный процесс,ющий взаимодействие с <strong>сервисным меню</strong> или специализированным программным обеспечением. Неправильные действия могут привести к блокировке платы управления, поэтому к вопросу необходимо подходить с максимальной внимательностью и точностью.</p>
+
+<h2 id="понимание-архитектуры-счетчиков-в-технике-canon">Понимание архитектуры счетчиков в технике Canon</h2>
+
+<p>Внутри любого современного принтера <em>Canon</em> существует несколько независимых счетчиков, каждый из которых отслеживает определенный параметр износа. Самый важный из них — это общий <strong>счетчик страниц</strong>, который накапливается с момента первого включения устройства и не сбрасывается при стандартной замене картриджа. Именно этот параметр часто становится причиной отключения печати, когда достигнут заводской лимит ресурса.</p>
+
+<p>Помимо общего пробега, существуют специализированные счетчики для конкретных узлов: <strong>падера</strong> (впитывающей подушки), <em>фотофиксатора</em> (термоузла) и <strong>обратного вала</strong>. Если вы видите ошибку, связанную с обслуживанием, скорее всего, сработал именно один из этих механизмов защиты. Понимание разницы между ними помогает выбрать правильный алгоритм действий, а не гадать на кофейной гуще.</p>
+
+<p>Система защиты часто привязана к <strong>чипу картриджа</strong>, который также имеет свой внутренний счетчик. Иногда принтер требует сброса именно этого чипа, игнорируя общий пробег устройства. В таких случаях программное обнуление самого принтера может не дать результата, и потребуется физическая замена или перепрошивка чипа на расходном материале.</p>
+
+<h2 id="аппаратный-сброс-через-сервисное-меню-пошаговая-инструкция">Аппаратный сброс через сервисное меню: пошаговая инструкция</h2>
+
+<p>Наиболее надежный способ сбросить пробег на многих моделях <em>Canon</em> — это использование скрытого <strong>сервисного меню</strong>. Для входа в этот режим требуется специальная последовательность нажатий кнопок на панели управления устройства. Обычно это комбинация удержания клавиши <code>Stop/Reset</code> и кнопки включения питания, но точный алгоритм зависит от конкретной модификации.</p>
+
+<p>После успешного входа в меню вы увидите черный экран с зеленым текстом, где можно навигировать стрелками. Вам нужно найти раздел <code>Service Mode</code> и перейти в подраздел <code>Clear</code> или <code>Counter</code>. Здесь часто встречается опция <strong>Clear</strong> с подпунктом <code>ALL</code>, которая сбрасывает все счетчики сразу. Будьте осторожны: неправильный выбор пункта может привести к стиранию важных калибровочных данных.</p>
+
+<p>В некоторых моделях процедура требует ввода пароля или использования специфических комбинаций для подтверждения действий. Если вы не уверены в своих силах, лучше не рисковать и обратиться к профессионалам. Ошибка в сервисном режиме может превратить рабочий принтер в"кирпич", требующий полной перепрошивки контроллера.</p>
+
+<details class="pb-accordion"><summary>Пароль для входа в сервисное меню</summary><div class="pb-accordion-body"><p>Для большинства моделей Canon серия PIXMA пароль не требуется, но для более сложных офисных решений может понадобиться код, который обычно указан в технической документации или на специализированных форумах. Вводите его внимательно, так как ошибочные попытки могут заблокировать меню.</p></div></details>
+
+<p>Важным этапом после сброса является проверка результата. Выйдите из сервисного меню, нажав кнопку <code>Power</code> для перезагрузки устройства. Затем попробуйте напечатать тестовую страницу и проверьте отчет о состоянии, чтобы убедиться, что значения счетчиков обнулились.</p>
+
+<h2 id="программные-утилиты-для-сброса-счетчиков">Программные утилиты для сброса счетчиков</h2>
+
+<p>Если аппаратный метод кажется слишком сложным или не сработал, на помощь приходят специализированные утилиты, такие как <strong>Service Tool</strong>. Эти программы подключаются к принтеру через USB-порт и позволяют управлять внутренними счетчиками прямо с компьютера. Для работы утилиты необходимо установить <strong>драйверы</strong> устройства и выбрать правильную версию ПО под вашу модель.</p>
+
+<p>В интерфейсе программы вы найдете поле <code>Main Clear</code> или <code>Partial Clear</code>, где можно выставить желаемые значения счетчиков. После нажатия кнопки <code>Set</code> команда отправляется в память принтера. Обратите внимание, что некоторые версии <em>Service Tool</em> требуют наличия конкретного чипа или даже выключенного принтера на этапе подключения.</p>
+
+<p>Использование стороннего ПО несет определенные риски, так как неофициальные утилиты могут содержать ошибки или вирусы. Всегда скачивайте инструменты с проверенных источников и проверяйте их антивирусом перед запуском. Кроме того, не все модели поддерживают программный сброс без аппаратных манипуляций.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к программному сбросу</h4><label class="check-item"><input type="checkbox"><span>Установить драйверы принтера</span></label><label class="check-item"><input type="checkbox"><span>Скачать актуальную версию Service Tool</span></label><label class="check-item"><input type="checkbox"><span>Подключить принтер к ПК через USB</span></label><label class="check-item"><input type="checkbox"><span>Закрыть все лишние программы</span></label><label class="check-item"><input type="checkbox"><span>Запустить утилиту от имени администратора</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<p>Некоторые версии утилит позволяют сбрасывать только конкретные счетчики, не затрагивая общие данные о ресурсе устройства. Это удобно, если вам нужно просто снять блокировку по <strong>падере</strong>, не сбрасывая пробег до нуля, что может быть важно для статистики использования.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед запуском утилиты Service Tool обязательно отключите антивирус, так как он может блокировать работу программы, приняв её за вредоносное ПО из-за нестандартных команд, отправляемых на устройство.</p></aside>
+
+<h2 id="особенности-сброса-для-разных-серий-принтеров">Особенности сброса для разных серий принтеров</h2>
+
+<p>Серия <em>Pixma</em> имеет свои уникальные особенности. На моделях с чипованными картриджами сброс часто ограничивается перепрошивкой самого картриджа или заменой чипа. Общий пробег принтера в этих моделях может быть защищен жестче, чем на офисных аппаратах. Для некоторых старых моделей серии <em>PIXMA</em> требуется специальная процедура с удержанием кнопки <code>Stop</code> в течение 5, а затем 10 секунд.</p>
+
+<p>Офисные серии <em>imageRUNNER</em> и <em>imageCLASS</em> обладают более сложной структурой меню. Здесь часто требуется вход через веб-интерфейс или использование сервисной панели с полным доступом. Сброс счетчика <strong>фотофиксатора</strong> на этих моделях может потребовать не только программного сброса, но и подтверждения физической замены расходного материала системой.</p>
+
+<p>Модули печати <em>imagePROGRAF</em> для широкоформатной печати имеют свои специфические счетчики на каждый цвет. Сброс общего пробега здесь часто невозможен без полной перепрошивки платы, так как система отслеживает износ печатающей головки и дозирующих элементов.</p>
+
+<div class="pb-poll" id="poll-821a71ec"><div class="pb-poll-question">📊 Какая серия вашего принтера Canon?</div><div class="pb-poll-option" data-poll="821a71ec" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">PIXMA (домашняя)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="821a71ec" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">imageRUNNER (офисная)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="821a71ec" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">imagePROGRAF (широкоформатная)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="821a71ec" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Другая серия</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="821a71ec" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю модель</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="риски-и-возможные-последствия-сброса">Риски и возможные последствия сброса</h2>
+
+<p>Сброс пробег — это вмешательство в работу программного обеспечения принтера, что всегда несет определенные риски. Один из главных рисков — это потеря калибровочных данных, которые могут привести к ухудшению качества печати. После сброса может потребоваться повторная процедура выравнивания головок и настройки цветов.</p>
+
+<p>В случае ошибки при сбросе счетчика <strong>падера</strong> (впитывающей подушки), принтер может продолжать считать, что подушка переполнена, даже после программного обнуления. Это приведет к тому, что отработанные чернила будут просто выливаться на стол, повреждая мебель и окружающие предметы. Физическая очистка и замена подушек в таком случае обязательны.</p>
+
+<p>Некоторые производители используют защиту от несанкционированного сброса, блокируя принтер после нескольких неудачных попыток. В таких случаях единственным решением может стать полная замена платы управления, что экономически нецелесообразно для старых устройств.</p>
+
+<blockquote>⚠️ Внимание: Сброс счетчика не устраняет физический износ деталей. Если механизм требует замены, принтер все равно выйдет из строя через некоторое время, даже если счетчик будет обнулен. Это лишь программная мера, а не ремонт.</blockquote>
+
+<h2 id="таблица-популярных-моделей-и-методов-сброса">Таблица популярных моделей и методов сброса</h2>
+
+<p>Ниже приведена таблица с основными методами сброса для популярных моделей, которая поможет быстро сориентироваться в процедуре:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Серия/Модель</th>
+<th>Тип сброса</th>
+<th>Сложность</th>
+<th>Нюансы</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pixma iP2700/2800</td>
+<td>Service Tool v3400</td>
+<td>Средняя</td>
+<td>Требуется точный выбор версии ПО</td>
+</tr>
+<tr>
+<td>Pixma MP230/240</td>
+<td>Аппаратный (кнопки)</td>
+<td>Высокая</td>
+<td>Чувствительность к времени удержания кнопок</td>
+</tr>
+<tr>
+<td>imageRUNNER 2520</td>
+<td>Сервисное меню</td>
+<td>Низкая</td>
+<td>Доступ через панель управления</td>
+</tr>
+<tr>
+<td>Pixma MG2540s</td>
+<td>Смена чипа</td>
+<td>Низкая</td>
+<td>Сброс общего пробега невозможен, только чип</td>
+</tr>
+<tr>
+<td>imagePROGRAF iP110</td>
+<td>Программный + чипы</td>
+<td>Средняя</td>
+<td>Раздельный сброс цветовых картриджей</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="когда-сброс-пробег-не-поможет">Когда сброс пробег не поможет</h2>
+
+<p>Иногда проблема не в программном сбое, а в аппаратной неисправности. Если у принтера <em>Canon</em> вышел из строя <strong>шаговый двигатель</strong> или повреждена печатная плата, сброс счетчика лишь временно отсрочит проблему. В таких случаях устройство может вести себя неадекватно: печатать полосы, выдавать странные звуки или вообще не включаться.</p>
+
+<p>Также стоит помнить, что официальный сервисный центр может отказать в гарантийном обслуживании, если обнаружит следы вмешательства в программное обеспечение. Это особенно актуально для новых устройств, которые еще находятся на гарантии. В таких ситуациях лучше обратиться к специалистам и не пытаться сбрасывать пробег самостоятельно.</p>
+
+<p>Если после сброса принтер продолжает выдавать ошибки, возможно, проблема кроется в <strong>датчиках</strong> или механических узлах. В этом случае требуется диагностика оборудования профессионалами, которые смогут определить истинную причину неисправности и предложить адекватное решение.</p>
+
+<blockquote>⚠️ Внимание: Если принтер работает в режиме"частичной очистки" или"сохранения чернил", сброс счетчика может привести к переполнению впитывающей подушки и протечке чернил на стол. Обязательно проверьте состояние подушки физически.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Сброс счетчика страниц — это временная мера, которая не заменяет физический ремонт и обслуживание узлов принтера. Регулярная чистка и замена расходных материалов продлевают жизнь устройства.</p></aside>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Можно ли сбросить пробег без специального оборудования?</summary>
+<p>Для большинства моделей <em>Canon</em> требуется либо специальная последовательность нажатий кнопок, либо подключение к компьютеру с утилитой <strong>Service Tool</strong>. Полностью без оборудования сброс возможен только на некоторых старых моделях через сервисное меню, но это редкость.</p>
+</details>
+
+<details>
+<summary>Сбрасывается ли пробег при замене картриджа?</summary>
+<p>Нет, общий счетчик страниц принтера не сбрасывается при простой замене картриджа. Он накапливается за время работы устройства. Сбрасывается только счетчик ресурса самого картриджа (если он чипован), но это не влияет на общий пробег принтера.</p>
+</details>
+
+<details>
+<summary>Что делать, если после сброса принтер не печатает?</summary>
+<p>Возможно, вы использовали неверную версию утилиты или допустили ошибку в последовательности действий. Попробуйте перезагрузить устройство, проверьте подключение и попробуйте сбросить <strong>память</strong> принтера через настройки. Если это не поможет, обратитесь к специалисту.</p>
+</details>
+
+<details>
+<summary>Влияет ли сброс на гарантию?</summary>
+<p>Да, вмешательство в прошивку или сервисное меню принтера почти всегда аннулирует гарантию. Если устройство находится на гарантии, лучше обратиться в авторизованный сервисный центр для решения проблемы.</p>
+</details>
+
+<p>Помните, что правильное обслуживание и своевременная замена расходных материалов — залог долгой и стабильной работы вашего принтера. Сброс пробег — это крайняя мера, к которой стоит прибегать только после тщательного анализа ситуации и понимания всех рисков.</p>
+
+<blockquote>⚠️ Внимание: Информация в статье носит справочный характер. Детали сброса, версии утилит и процедуры могут меняться в зависимости от ревизии платы и обновлений прошивки. Всегда сверяйтесь с официальной документацией или обращайтесь к специалистам перед началом работ.</blockquote></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ca/canon-mf4018-zastryala-bumaga-kak-vytashchit.html" class="pb-related-card">
+                <span class="pb-related-title">Застряла бумага в Canon MF4018: как вытащить и устранить ошибку</span>
+                <span class="pb-related-desc">Пошаговая инструкция по устранению замятия бумаги в МФУ Canon imageRUNNER 4018. Обзор зон доступа, а</span>
+            </a><a href="/articles/k/ka/kak-sbrosit-absorber-na-canon-mp230.html" class="pb-related-card">
+                <span class="pb-related-title">Сброс абсорбера Canon MP230: пошаговая инструкция и сервисное меню</span>
+                <span class="pb-related-desc">Узнайте, как сбросить счетчик абсорбента принтера Canon MP230 через сервисное меню. Полная инструкци</span>
+            </a><a href="/articles/k/kr/krasnaya-knopka-na-printere-canon-chto-oznachaet.html" class="pb-related-card">
+                <span class="pb-related-title">Красная кнопка на принтере Canon: значение, ошибки и способы сброса</span>
+                <span class="pb-related-desc">Что означает мигающая или горящая красная кнопка на принтере Canon? Полная расшифровка кодов ошибок </span>
+            </a><a href="/articles/p/pr/printer-canon-pechataet-so-smeshcheniem-po-vertikali-kak-ispravit.html" class="pb-related-card">
+                <span class="pb-related-title">Принтер Canon печатает со смещением: как исправить вертикальный сдвиг</span>
+                <span class="pb-related-desc">Почему Canon печатает со смещением по вертикали? Подробная инструкция по диагностике, чистке головок</span>
+            </a><a href="/articles/k/ko/kod-podderzhki-2900-canon-chto-delat.html" class="pb-related-card">
+                <span class="pb-related-title">Ошибка E2900 (2900) Canon: причины, сброс и решение проблемы</span>
+                <span class="pb-related-desc">Код поддержки 2900 Canon указывает на ошибку памяти или переполнение. Узнайте, как сбросить ошибку, </span>
+            </a><a href="/articles/k/ka/kak-zapustit-printer-canon-bez-odnogo-kartridzha.html" class="pb-related-card">
+                <span class="pb-related-title">Как запустить принтер Canon без одного картриджа: обход ошибки</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как обмануть датчики Canon и печатать с пустым картриджем. Методы отключения к</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Scangear Canon: как пользоваться, установка и настройка сканирования — Кэнон Инфо</title>
+    <meta name="description" content="Подробная инструкция по работе с драйвером Scangear MP для принтеров Canon. Установка, настройка качества, решение проблем и тонкости использования TWAIN-драйвера.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/s/sc/scangear-canon-kak-polzovatsya.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Scangear Canon: как пользоваться, установка и настройка сканирования">
+    <meta property="og:description" content="Подробная инструкция по работе с драйвером Scangear MP для принтеров Canon. Установка, настройка качества, решение проблем и тонкости использования TWAIN-драйвера.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Scangear Canon: как пользоваться, установка и настройка сканирования</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#установка-и-проверка-драйвера-scangear-mp">Установка и проверка драйвера Scangear MP</a></li><li><a href="#запуск-и-интерфейс-программы-сканирования">Запуск и интерфейс программы сканирования</a></li><li><a href="#настройка-параметров-качества-и-формата">Настройка параметров качества и формата</a></li><li><a href="#распознавание-текста-ocr-и-работа-с-pdf">Распознавание текста (OCR) и работа с PDF</a></li><li><a href="#решение-частых-проблем-и-ошибок">Решение частых проблем и ошибок</a></li><li><a href="#интеграция-с-облачными-сервисами-и-сетевой-сканинг">Интеграция с облачными сервисами и сетевой сканинг</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-otskanirovat-dokument-na-printere-canon-3010.html">Как сканировать документы на Canon i-SENSYS MF3010: Полная инструкция</a></li><li><a href="/articles/c/ca/canon-4240-kak-skanirovat.html">Как сканировать на Canon i-SENSYS MF4240: Полная инструкция по настройке</a></li><li><a href="/articles/k/ka/kak-izmenit-papku-dlya-skanirovaniya-canon.html">Как изменить папку для сканирования на Canon: пошаговая инструкция</a></li><li><a href="/articles/p/pr/printer-canon-pixma-mp210-kak-skanirovat.html">Как сканировать на принтере Canon Pixma MP210: Пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-sdelat-skanirovanie-na-printere-canon-pixma.html">Как сканировать документы на принтере Canon PIXMA: Полная инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Scangear Canon: полное руководство по использованию драйвера сканирования</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#установка-и-проверка-драйвера-scangear-mp">Установка и проверка драйвера Scangear MP</a></li><li><a href="#запуск-и-интерфейс-программы-сканирования">Запуск и интерфейс программы сканирования</a></li><li><a href="#настройка-параметров-качества-и-формата">Настройка параметров качества и формата</a></li><li><a href="#распознавание-текста-ocr-и-работа-с-pdf">Распознавание текста (OCR) и работа с PDF</a></li><li><a href="#решение-частых-проблем-и-ошибок">Решение частых проблем и ошибок</a></li><li><a href="#интеграция-с-облачными-сервисами-и-сетевой-сканинг">Интеграция с облачными сервисами и сетевой сканинг</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Программное обеспечение <em>Scangear MP</em> (Scanner Driver) является ключевым компонентом для взаимодействия компьютерных систем с многофункциональными устройствами <em>Canon</em>. Без корректно установленного драйвера пользователь не сможет получить доступ к расширенным функциям сканирования, таким как редактирование изображений, распознавание текста (OCR) или сохранение документов в специфических форматах. Это ПО служит мостом между физическим аппаратом и операционной системой, обеспечивая передачу данных с высокой точностью.</p>
+
+<p>Многие пользователи сталкиваются с трудностями при попытке найти или запустить этот инструмент, так как он часто скрыт внутри стандартного пакета драйверов или интегрирован в фирменное приложение <em>IJ Scan Utility</em>. Понимание того, как правильно работать с <strong>Scangear</strong>, позволяет существенно повысить эффективность работы с документами и фотографиями, избегая потери качества при оцифровке.</p>
+
+<p>В данном руководстве мы разберем все этапы работы: от первоначальной установки до тонких настроек, влияющих на итоговый результат. Мы также рассмотрим, как избежать типичных ошибок, которые могут привести к зависанию процесса или получению размытых копий.</p>
+
+<h2 id="установка-и-проверка-драйвера-scangear-mp">Установка и проверка драйвера Scangear MP</h2>
+
+<p>Первым шагом для успешной работы является корректная инсталляция программного обеспечения. Процесс начинается с загрузки официального пакета с сайта производителя, где необходимо выбрать конкретную модель вашего устройства, например, <em>Canon PIXMA или imageRUNNER</em>. Важно не путать драйвер принтера с драйвером сканера, хотя часто они поставляются в едином установочном файле, который называется <strong>MP Driver</strong>.</p>
+
+<p>После запуска инсталлятора необходимо внимательно следить за этапами установки. Система предложит выбрать тип подключения: через USB-кабель или локальную сеть. Если вы выбираете сетевой вариант, убедитесь, что устройство и компьютер находятся в одной подсети, и мигает индикатор на корпусе МФУ. Если драйвер уже установлен, система предложит его обновить или переустановить, что часто помогает решить проблемы с некорректным определением устройства.</p>
+
+<p>После завершения установки и перезагрузки компьютера необходимо убедиться, что <em>Scangear</em> функционирует. Для этого откройте панель управления и найдите раздел <code>Устройства и принтеры</code>. В списке должен быть отображен ваш сканер Canon, а при попытке открыть свойства устройства вы увидите вкладку <strong>Scangear</strong> или кнопку запуска сканирования.</p>
+
+<blockquote>⚠️ Внимание: Если после установки драйвера система не видит сканер, проверьте, не блокирует ли подключение антивирусное программное обеспечение или брандмауэр. Иногда фаерволы блокируют порты, используемые драйвером для связи с устройством.</blockquote>
+
+<p>В случае если вы используете виртуальную машину или удаленный рабочий стол, установка драйвера требует дополнительных действий, так как стандартный протокол может не поддерживать перенаправление USB-устройств. В таких ситуациях может потребоваться специализированное ПО для передачи портов или использование сетевого протокола WSD.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка установки Scangear</h4><label class="check-item"><input type="checkbox"><span>Драйвер установлен в системе</span></label><label class="check-item"><input type="checkbox"><span>Устройство отображается в диспетчере устройств</span></label><label class="check-item"><input type="checkbox"><span>Кнопка "Сканировать" активна в свойствах принтера</span></label><label class="check-item"><input type="checkbox"><span>Нет ошибок в журнале событий Windows</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="запуск-и-интерфейс-программы-сканирования">Запуск и интерфейс программы сканирования</h2>
+
+<p>Запуск инструмента <em>Scangear</strong> может осуществляться несколькими способами в зависимости от версии операционной системы. Самый простой метод — использование ярлыка <code>IJ Scan Utility</code>, который автоматически интегрируется в меню «Пуск». При запуске этого приложения вы увидите окно, предлагающее выбрать режим работы: <strong>Сканирование документов</strong>, <strong>Сканирование фотографий</em> или <strong>Сканирование в PDF</em>.</p>
+
+<p>Для более продвинутого управления можно вызвать драйвер напрямую через настройки принтера. Зайдите в <code>Панель управления → Устройства и принтеры</code>, кликните правой кнопкой мыши по названию вашего МФУ <em>Canon</strong> и выберите <strong>Сканер</em> или <em>Настройки сканирования</em>. Это откроет классический интерфейс TWAIN-драйвера, где доступны все настройки качества и форматов.</p>
+
+<p>Интерфейс программы делится на несколько логических зон: панель предварительного просмотра, настройки параметров сканирования и область выбора назначения файла. В левой части экрана вы видите миниатюру документа, на которой можно выделить область интереса, перетаскивая рамку. Это позволяет избежать сканирования лишнего пространства и экономит место на диске.</p>
+
+<p>Обратите внимание на переключатель режимов: <strong>Быстрое сканирование</strong> и <strong>Полное сканирование</strong>. Первый режим оптимизирован для скорости, жертвуя качеством, тогда как второй раскрывает весь потенциал сенсора устройства. Выбор правильного режима критичен, если вы работаете с текстовыми документами, требующими распознавания, или с художественными фотографиями.</p>
+
+<details class="pb-accordion"><summary>Где найти настройки калибровки цвета?</summary><div class="pb-accordion-body"><p>В расширенных настройках драйвера Scangear есть вкладка «Цвета», где можно вручную настроить яркость, контрастность и насыщенность. Также доступно автоматическое выравнивание тонов, которое часто дает лучший результат для старых документов.</p></div></details>
+
+<h2 id="настройка-параметров-качества-и-формата">Настройка параметров качества и формата</h2>
+
+<p>Качество итогового изображения напрямую зависит от настроек, выбранных перед запуском процесса. Основным параметром является <strong>разрешение (DPI)</strong>. Для текстовых документов достаточно значения <code>300 dpi</code>, что обеспечивает четкость букв при увеличении. Если же задача состоит в оцифровке фотографий или мелких деталей документов, необходимо увеличить разрешение до <code>600 dpi</code> или даже <code>1200 dpi</code>.</p>
+
+<p>Второй важный параметр — <strong>цветовой режим</strong>. Для обычных документов отлично подходит режим <em>Ч/Б</em> (черно-белое) или <em>Оттенки серого</em>, что значительно уменьшает размер файла. Цветной режим необходимо использовать только при работе с фотографиями, цветными диаграммами или документами, где цвет несет смысловую нагрузку.</p>
+
+<p>Не стоит игнорировать настройки формата файла. Для документов лучше выбирать <strong>PDF</strong>, так как этот формат сохраняет структуру страницы и поддерживает многостраничность. Для изображений, требующих дальнейшего редактирования, предпочтительнее формат <em>TIFF</em> или <strong>PNG</strong>, которые не используют сжатие с потерей качества, в отличие от JPEG.</p>
+
+<p>Также в настройках можно активировать функцию <strong>Удаление фона</strong>, которая автоматически делает белый фон документа идеально белым, убрав желтизну или тени от стола. Это особенно актуально при работе с документами, отсканированными на прозрачной подложке или с текстов, написанных от руки.</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Тип документа</th>
+      <th>Рекомендуемое разрешение</th>
+      <th>Цветовой режим</th>
+      <th>Формат файла</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Текстовый документ (A4)</td>
+      <td><code>300 dpi</code></td>
+      <td>Ч/Б</td>
+      <td>PDF</td>
+    </tr>
+    <tr>
+      <td>Фотография (4x6)</td>
+      <td><code>600 dpi</code></td>
+      <td>Цветной</td>
+      <td>JPEG / PNG</td>
+    </tr>
+    <tr>
+      <td>Архивный документ</td>
+      <td><code>600 dpi</code></td>
+      <td>Оттенки серого</td>
+      <td>TIFF (без сжатия)</td>
+    </tr>
+    <tr>
+      <td>Мелкий текст/штрих-код</td>
+      <td><code>1200 dpi</code></td>
+      <td>Ч/Б</td>
+      <td>PNG</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class="pb-poll" id="poll-449e6721"><div class="pb-poll-question">📊 Для чего вы чаще всего используете сканер Canon?</div><div class="pb-poll-option" data-poll="449e6721" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Текстовые документы (PDF)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="449e6721" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Фотографии и картинки</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="449e6721" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Сканирование паспортов и ID</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="449e6721" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Редко использую</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="распознавание-текста-ocr-и-работа-с-pdf">Распознавание текста (OCR) и работа с PDF</h2>
+
+<p>Одной из самых востребованных функций драйвера <em>Scangear</em> является возможность конвертации отсканированного изображения в редактируемый текст. Это реализуется через технологию <strong>OCR</strong> (Optical Character Recognition). Чтобы активировать эту функцию, необходимо в окне настроек выбрать опцию <code>Создать PDF с возможностью поиска</code> или <strong>Распознать текст</strong>.</p>
+
+<p>При активации OCR программа анализирует изображение, ищет знакомые буквы и формирует текстовый слой поверх картинки. Качество распознавания напрямую зависит от четкости исходного скана и правильности выбранного языка в настройках драйвера. Если документ содержит несколько языков, необходимо добавить их в список поддерживаемых в конфигурации <em>Scangear</em>.</p>
+
+<p>Важно отметить, что процесс распознавания может занять время, особенно для документов с большим объемом текста или сложным оформлением. Не рекомендуется прерывать этот процесс, так как это может привести к повреждению файла или потере данных.</p>
+
+<blockquote>⚠️ Внимание: Функция OCR работает только с языками, установленными в пакет драйверов. Если вы сканируете документ на редком языке, убедитесь, что языковой пакет скачан и установлен в системе, иначе текст будет распознан как набор символов.</blockquote>
+
+<p>Для профессиональной работы с многостраничными документами рекомендуется использовать режим <strong>Многостраничный PDF</strong>. В этом режиме вы можете сканировать несколько листов по очереди без перезапуска программы, и система автоматически соберет их в один файл. Это удобно для создания электронных версий книг, договоров или отчетов.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед началом распознавания текста убедитесь, что документ лежит ровно на стекле сканера. Наклонный лист может привести к тому, что текст будет распознан с ошибками или не распознается вовсе.</p></aside>
+
+<h2 id="решение-частых-проблем-и-ошибок">Решение частых проблем и ошибок</h2>
+
+<p>Несмотря на надежность драйверов <em>Canon</em>, пользователи иногда сталкиваются с ошибками, такими как «Сканер не найден» или «Ошибка при чтении данных». Чаще всего проблема кроется в конфликте драйверов или отсутствии необходимых библиотек. Если устройство определяется в диспетчере устройств, но не запускается в программе, попробуйте удалить драйвер через панель управления и установить его заново в режиме совместимости.</p>
+
+<p>Другая распространенная проблема — зависание процесса сканирования на этапе предварительного просмотра. Это может быть вызвано недостатком оперативной памяти или слишком высоким разрешением для вашего компьютера. Попробуйте снизить разрешение до <code>300 dpi</code> или закройте другие тяжелые приложения перед запуском сканирования.</p>
+
+<p>Если сканер выдает ошибку «Нет связи», проверьте кабель USB на предмет повреждений и попробуйте подключить его к другому порту. Также стоит убедиться, что в настройках электропитания компьютера не отключаются USB-порты в режиме энергосбережения. В системных настройках нужно найти пункт <code>Управление питанием</code> и снять галочку с разрешения отключения устройства для экономии энергии.</p>
+
+<blockquote>⚠️ Внимание: Если при сканировании появляются полосы или пятна, это может указывать на загрязнение стекла сканера или внутренней подсветки. Очистите стекло мягкой безворсовой тканью, смоченной спиртом, но не используйте агрессивные химические растворители.</blockquote>
+
+<p>В некоторых случаях помогает сброс настроек драйвера до заводских значений. В окне параметров сканирования найдите кнопку <strong>Сброс</strong> или <code>Default</code>. Это вернет все настройки качества, цвета и формата к стандартным, что часто устраняет программные сбои, вызванные случайным изменением конфигурации.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярная очистка стекла сканера и проверка целостности USB-кабеля предотвращают 90% проблем с качеством изображения и связью с устройством.</p></aside>
+
+<h2 id="интеграция-с-облачными-сервисами-и-сетевой-сканинг">Интеграция с облачными сервисами и сетевой сканинг</h2>
+
+<p>Современные многофункциональные устройства <em>Canon</em> поддерживают не только локальное сканирование, но и отправку файлов напрямую в облачные хранилища. Для этого в драйвере <strong>Scangear</strong> предусмотрена вкладка <code>Назначение</code>, где можно выбрать отправку в Google Drive, OneDrive или Dropbox. Это требует предварительной авторизации в учетной записи и настройки прав доступа.</p>
+
+<p>Сетевое сканирование позволяет использовать один сканер несколькими пользователями в офисе. Для этого необходимо настроить <strong>Scan to Network</strong> или <em>Scan to Folder</em>. В настройках драйвера указывается путь к общей папке на сервере или сетевом диске. Важно, чтобы у пользователя были права на запись в эту папку, иначе процесс завершится ошибкой доступа.</p>
+
+<p>При работе через сеть задержки могут быть выше, чем при прямом подключении по USB. Это связано с пропускной способностью сети и скоростью отклика сервера. Если скорость сканирования кажется низкой, проверьте настройки сетевого протокола и убедитесь, что используется Gigabit Ethernet, а не Wi-Fi, если возможна прокладка кабеля.</p>
+
+<details class="pb-accordion"><summary>Как настроить сканирование на FTP?</summary><div class="pb-accordion-body"><p>В расширенных настройках назначения файла выберите протокол FTP. Введите адрес сервера, логин и пароль. Убедитесь, что порт 21 открыт на сервере и фаерволе, иначе соединение не будет установлено.</p></div></details>
+
+<p>Для автоматизации процесса можно настроить <strong>сценарии сканирования</strong>. Это предопределенные наборы настроек (например, «Отчет», «Фото», «Архив»), которые сохраняются в профиле. Пользователю достаточно выбрать профиль из списка, и программа автоматически применит нужное разрешение, формат и место сохранения. Это экономит время и исключает человеческий фактор при настройке параметров.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Использование сценариев и профилей в Scangear позволяет стандартизировать процесс сканирования в офисе и ускорить работу сотрудников.</p></aside>
+
+<details>
+<summary>Что делать, если драйвер Scangear не находит устройство?</summary>
+<p>Проверьте подключение кабеля, перезагрузите принтер и компьютер. Убедитесь, что драйвер установлен корректно. Если проблема сохраняется, попробуйте переустановить ПО в режиме совместимости с вашей версией Windows.</p>
+</details>
+
+<details>
+<summary>Можно ли сканировать без установки Scangear?</summary>
+<p>Да, в Windows 10/11 можно использовать встроенное приложение «Факсы и сканирование» или «Сканер Windows», однако они имеют ограниченный функционал по сравнению с родным драйвером Scangear MP.</p>
+</details>
+
+<details>
+<summary>Как изменить разрешение сканирования в процессе работы?</summary>
+<p>В окне предварительного просмотра нажмите на кнопку «Настройки» или «Дополнительно». В открывшемся окне найдите поле «Разрешение» и введите нужное значение (например, 300 или 600 dpi), затем подтвердите выбор.</p>
+</details>
+
+<details>
+<summary>Почему отсканированные файлы получаются слишком большими?</summary>
+<p>Это может быть связано с выбранным высоким разрешением (например, 1200 dpi) и форматом без сжатия (TIFF/BMP). Попробуйте переключиться на формат JPEG или PDF и снизить разрешение до 300 dpi для обычных документов.</p>
+</details>
+
+<details>
+<summary>Как подключить сканер Canon к Wi-Fi сети?</summary>
+<p>Используйте кнопку Wi-Fi на панели управления принтера и следуйте инструкциям на дисплее для подключения к роутеру. После подключения драйвер должен автоматически обнаружить устройство в сети.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-otskanirovat-dokument-na-printere-canon-3010.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы на Canon i-SENSYS MF3010: Полная инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по сканированию документов на МФУ Canon MF3010: через USB, сетевое подключение</span>
+            </a><a href="/articles/c/ca/canon-4240-kak-skanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на Canon i-SENSYS MF4240: Полная инструкция по настройке</span>
+                <span class="pb-related-desc">Подробное руководство по сканированию документов на МФУ Canon i-SENSYS MF4240. Настройка через панел</span>
+            </a><a href="/articles/k/ka/kak-izmenit-papku-dlya-skanirovaniya-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как изменить папку для сканирования на Canon: пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте простой способ сменить директорию сохранения сканов на принтерах Canon. Полная настройка дра</span>
+            </a><a href="/articles/p/pr/printer-canon-pixma-mp210-kak-skanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на принтере Canon Pixma MP210: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Полный гайд по сканированию документов и фото на МФУ Canon Pixma MP210. Настройка драйверов, работа </span>
+            </a><a href="/articles/k/ka/kak-sdelat-skanirovanie-na-printere-canon-pixma.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы на принтере Canon PIXMA: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по настройке и запуску сканирования на принтерах Canon PIXMA через программу I</span>
+            </a><a href="/articles/k/ka/kak-nastroit-skaner-kenon-3010.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить сканер Canon 3010: драйверы, драйвер TWAIN и сканирование</span>
+                <span class="pb-related-desc">Пошаговая инструкция: установка драйверов для Canon CanoScan 3010, настройка интерфейса, выбор форма</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Что не является информацией по Шеннону? Разбор для Canon — Кэнон Инфо</title>
+    <meta name="description" content="Разбираемся, какие данные не подходят под определение информации в теории Шеннона — с примерами из техники Canon и объяснениями для фотографов.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ch/chto-iz-perechislennogo-ne-yavlyaetsya-informatsiej-s-tochki-zreniya-teorii-informatsii-shennona-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Что не является информацией по Шеннону? Разбор для Canon">
+    <meta property="og:description" content="Разбираемся, какие данные не подходят под определение информации в теории Шеннона — с примерами из техники Canon и объяснениями для фотографов.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Что не является информацией по Шеннону? Разбор для Canon</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#1-основы-теории-информации-шеннона-что-считается-информацией">1. Основы теории информации Шеннона: что считается информацией?</a></li><li><a href="#2-что-не-является-информацией-5-ключевых-категорий">2. Что НЕ является информацией? 5 ключевых категорий</a></li><li><a href="#3-примеры-из-фотографии-что-не-несёт-информации">3. Примеры из фотографии: что не несёт информации?</a></li><li><a href="#4-почему-это-важно-для-фотографов-canon">4. Почему это важно для фотографов Canon?</a></li><li><a href="#5-как-проверить-несёт-ли-данные-информацию-практический-тест">5. Как проверить, несёт ли данные информацию? Практический тест</a></li><li><a href="#6-частые-ошибки-что-ошибочно-принимают-за-информацию">6. Частые ошибки: что ошибочно принимают за информацию</a></li><li><a href="#7-теория-на-практике-как-это-применяется-в-камерах-canon">7. Теория на практике: как это применяется в камерах Canon</a></li><li><a href="#faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-napechatat-fotografiyu-10kh15-na-printere-canon.html">Как напечатать фото 10х15 на принтере Canon: инструкция и настройки</a></li><li><a href="/articles/k/ka/kak-raspechatat-na-printere-canon-i-sensys-mf3010.html">Как распечатать документ на Canon i-SENSYS MF3010: Полное руководство</a></li><li><a href="/articles/k/ka/kak-raspechatat-foto-na-canon-pixma.html">Как распечатать фото на Canon Pixma: пошаговая инструкция и секреты</a></li><li><a href="/articles/p/po/pochemu-vindovs-11-ne-vidit-printer-kenon.html">Почему Windows 11 не видит принтер Canon: причины и решения</a></li><li><a href="/articles/c/ca/canon-pixma-mg2140-kak-podklyuchit.html">Как подключить Canon Pixma MG2140: пошаговая инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Что из перечисленного не является информацией с точки зрения теории информации Шеннона? Примеры для техники Canon</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#1-основы-теории-информации-шеннона-что-считается-информацией">1. Основы теории информации Шеннона: что считается информацией?</a></li><li><a href="#2-что-не-является-информацией-5-ключевых-категорий">2. Что НЕ является информацией? 5 ключевых категорий</a></li><li><a href="#3-примеры-из-фотографии-что-не-несёт-информации">3. Примеры из фотографии: что не несёт информации?</a></li><li><a href="#4-почему-это-важно-для-фотографов-canon">4. Почему это важно для фотографов Canon?</a></li><li><a href="#5-как-проверить-несёт-ли-данные-информацию-практический-тест">5. Как проверить, несёт ли данные информацию? Практический тест</a></li><li><a href="#6-частые-ошибки-что-ошибочно-принимают-за-информацию">6. Частые ошибки: что ошибочно принимают за информацию</a></li><li><a href="#7-теория-на-практике-как-это-применяется-в-камерах-canon">7. Теория на практике: как это применяется в камерах Canon</a></li><li><a href="#faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Теория информации Клода Шеннона — фундаментальная основа для понимания передачи данных, кодирования и обработки сигналов. Но когда речь заходит о том, <strong>что именно не считается информацией</strong> в этом контексте, даже опытные пользователи техники <em>Canon</em> могут запутаться. Особенно если говорить о фотографиях, настройках камер или файлах RAW — где грань между"данными" и"информацией" становится размытой.</p>
+
+<p>В этой статье мы не только разберём теоретические аспекты, но и привяжем их к реальным примерам из экосистемы <em>Canon</em>: от метаданных EXIF в снимках <em>EOS R5</em> до шумов матрицы в <em>Canon 5D Mark IV</em>. Вы узнаете, почему случайный шум в JPEG не несёт информации, а вот гистограмма экспозиции — вполне себе информативный сигнал. И главное — научитесь отличать одно от другого на практике.</p>
+
+<h2 id="1-основы-теории-информации-шеннона-что-считается-информацией">1. Основы теории информации Шеннона: что считается информацией?</h2>
+
+<p>Клод Шеннон определил <strong>информацию</strong> как меру неопределённости, которая уменьшается после получения сообщения. Проще говоря, информация — это то, что <mark>уменьшает энтропию системы</mark> (неупорядоченность). Например, когда ваша камера <em>Canon EOS R6</em> фиксирует свет на матрице, она преобразует хаотичные фотоны в упорядоченные данные о цвете и яркости каждого пикселя.</p>
+
+<p>Ключевые признаки информации по Шеннону:</p>
+<ul>
+ <li>📊 <strong>Измеримость</strong>: можно количественно оценить (в битах, байтах).</li>
+ <li>🔄 <strong>Передаваемость</strong>: может быть передана от источника к получателю (например, по Wi-Fi с <em>Canon EOS R3</em> на смартфон).</li>
+ <li>🎯 <strong>Смысловая нагрузка</strong>: уменьшает неопределённость (например, EXIF-метки в RAW-файле рассказывают о настройках съёмки).</li>
+</ul>
+
+<p>Но не все данные соответствуют этим критериям. Например, <strong>случайный шум матрицы</strong> при высоком ISO в <em>Canon 6D Mark II</em> не несёт полезной информации — он лишь добавляет энтропию. То же касается артефактов сжатия в JPEG или битых пикселей на экране камеры.</p>
+
+<div class="pb-poll" id="poll-5001215c"><div class="pb-poll-question">📊 Как вы обычно сохраняете фотографии?</div><div class="pb-poll-option" data-poll="5001215c" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">В RAW</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="5001215c" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">В JPEG</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="5001215c" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">В RAW+JPEG</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="5001215c" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Зависит от ситуации</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="2-что-не-является-информацией-5-ключевых-категорий">2. Что НЕ является информацией? 5 ключевых категорий</h2>
+
+<p>Теперь перейдём к главному: что <strong>не подпадает</strong> под определение информации в теории Шеннона. Рассмотрим на примерах техники <em>Canon</em>.</p>
+
+<div class="pb-table-wrap"><table>
+ <thead>
+ <tr>
+ <th>Категория</th>
+ <th>Пример из техники Canon</th>
+ <th>Почему это не информация?</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><strong>Шум</strong></td>
+ <td>Зерно на фото при ISO 12800 на <em>EOS R5</em></td>
+ <td>Случайные флуктуации, не несущие данных о сцене.</td>
+ </tr>
+ <tr>
+ <td><strong>Артефакты</strong></td>
+ <td>Блоки 8×8 в JPEG при сильном сжатии (<em>Canon PowerShot G7 X</em>)</td>
+ <td>Побочный продукт алгоритма сжатия, а не оригинальные данные.</td>
+ </tr>
+ <tr>
+ <td><strong>Избыточность</strong></td>
+ <td>Повторяющиеся метаданные в CR3-файле</td>
+ <td>Дублирование не уменьшает неопределённость.</td>
+ </tr>
+ <tr>
+ <td><strong>Неинтерпретируемые данные</strong></td>
+ <td>Битые сектора на карте памяти <em>SanDisk</em> в <em>EOS 90D</em></td>
+ <td>Невозможно декодировать в осмысленный сигнал.</td>
+ </tr>
+ <tr>
+ <td><strong>Контекстные данные</strong></td>
+ <td>Серийный номер камеры в EXIF</td>
+ <td>Не относится к содержанию изображения.</td>
+ </tr>
+ </tbody>
+</table></div>
+
+<p>Особенно интересный случай — <strong>метаданные</strong>. Например, в файле <code>.CR3</code> от <em>Canon EOS R</em> хранится:</p>
+<ul>
+ <li>📸 <strong>Информация</strong>: выдержка, диафрагма, баланс белого (уменьшают неопределённость о том, как была сделана фотография).</li>
+ <li>❌ <strong>Не информация</strong>: серийный номер объектива, версия прошивки (не влияют на содержание снимка).</li>
+</ul>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Чтобы уменьшить шум (неинформативные данные) в RAW-файлах Canon, используйте функцию <code>Long Exposure Noise Reduction</code> в меню камеры. Она автоматически вычитает тепловой шум матрицы.</p></aside>
+
+<h2 id="3-примеры-из-фотографии-что-не-несёт-информации">3. Примеры из фотографии: что не несёт информации?</h2>
+
+<p>Давайте разберём конкретные случаи, с которыми сталкиваются владельцы камер <em>Canon</em>.</p>
+
+<p><strong>1. Шум матрицы при высоком ISO</strong></p>
+<p>На снимках с <em>Canon EOS 6D Mark II</em> при ISO 25600 появляется цветное зерно. Это:</p>
+<ul>
+ <li>✅ <strong>Не информация</strong>: случайные электроны, генерируемые тепловым шумом.</li>
+ <li>❌ <strong>Не путайте с текстурой</strong>: детали объекта (например, фактура кожи) — это информация.</li>
+</ul>
+
+<p><strong>2. Артефакты сжатия JPEG</strong></p>
+<p>При сохранении в JPEG с качеством"Normal" на <em>Canon PowerShot SX70 HS</em> появляются:</p>
+<ul>
+ <li>🔲 Блоки 8×8 пикселей (потеря деталей из-за DCT-преобразования).</li>
+ <li>🌀"Муар" на мелких деталях (например, на ткани костюма).</li>
+</ul>
+<p>Это <strong>не информация</strong>, а следствие алгоритма сжатия. Оригинальные данные были утеряны.</p>
+
+<p><strong>3. Битые пиксели на экране</strong></p>
+<p>Если на дисплее <em>Canon EOS M50 Mark II</em> завис пиксель (например, зелёная точка), это:</p>
+<ul>
+ <li>🚫 <strong>Дефект отображения</strong>, а не часть изображения.</li>
+ <li>🔧 Можно устранить калибровкой или заменой матрицы.</li>
+</ul>
+
+<details class="pb-accordion"><summary>Как отличить шум от деталей изображения?</summary><div class="pb-accordion-body"><p>Шум обычно проявляется как случайные цветные точки (особенно в тенях), тогда как детали имеют чёткую структуру. В <em>Canon DPP</em> используйте инструмент <code>Noise Reduction</code> — если при его применении"исчезают" только хаотичные пиксели, это шум.</p></div></details>
+
+<h2 id="4-почему-это-важно-для-фотографов-canon">4. Почему это важно для фотографов Canon?</h2>
+
+<p>Понимание разницы между информацией и"мусорными" данными помогает:</p>
+<ol>
+ <li>📈 <strong>Оптимизировать настройки камеры</strong>: например, избегать избыточного ISO, чтобы не добавлять шум.</li>
+ <li>🖥️ <strong>Эффективнее обрабатывать RAW</strong>: в <em>Canon Digital Photo Professional</em> можно целенаправленно удалять неинформативные артефакты.</li>
+ <li>💾 <strong>Экономить место на карте памяти</strong>: не сохранять дублирующиеся метаданные.</li>
+</ol>
+
+<p>Пример из практики: при съёмке на <em>Canon EOS-1D X Mark III</em> в формате <code>HEIF</code> (вместо JPEG) вы уменьшаете объём файла без потери <strong>полезной информации</strong>, так как алгоритм сжатия лучше сохраняет детали и удаляет только избыточность.</p>
+
+<p>Ещё один нюанс — <strong>калибровка цвета</strong>. Когда вы создаёте ICC-профиль для монитора или принтера <em>Canon imagePROGRAF</em>, вы фактически уменьшаете неопределённость в воспроизведении цветов. Это информация. А вот если профиль повреждён и выдаёт случайные значения — это уже шум.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Информация в фотографии — это то, что помогает восстановить исходную сцену. Всё остальное (шум, артефакты, избыточность) можно удалить без потери качества.</p></aside>
+
+<h2 id="5-как-проверить-несёт-ли-данные-информацию-практический-тест">5. Как проверить, несёт ли данные информацию? Практический тест</h2>
+
+<p>Предлагаем простой алгоритм для владельцев техники <em>Canon</em>:</p>
+
+
+<p>1. Можно ли декодировать эти данные в осмысленный сигнал?|2. Уменьшают ли они неопределённость о сцене/объекте?|3. Являются ли они случайными или закономерными?|4. Можно ли их воспроизвести без потерь?</p>
+<p>--></p>
+
+<p><strong>Пример 1: EXIF-метки в CR2-файле</strong></p>
+<ul>
+ <li>✅ Да, их можно прочитать (например, в <em>ExifTool</em>).</li>
+ <li>✅ Они рассказывают о настройках съёмки (выдержка, диафрагма).</li>
+ <li>✅ Это структурированные данные, а не шум.</li>
+</ul>
+<p><strong>Вывод</strong>: информация.</p>
+
+<p><strong>Пример 2: Цветное зерно на ISO 51200</strong></p>
+<ul>
+ <li>❌ Нет закономерности — это тепловой шум матрицы.</li>
+ <li>❌ Не помогает восстановить детали сцены.</li>
+</ul>
+<p><strong>Вывод</strong>: не информация.</p>
+
+<div class="pb-poll" id="poll-fd683a40"><div class="pb-poll-question">📊 Какое ISO вы чаще всего используете?</div><div class="pb-poll-option" data-poll="fd683a40" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">До 800</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="fd683a40" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">800–3200</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="fd683a40" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">3200–12800</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="fd683a40" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Выше 12800</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="6-частые-ошибки-что-ошибочно-принимают-за-информацию">6. Частые ошибки: что ошибочно принимают за информацию</h2>
+
+<p>Даже опытные фотографы иногда путают понятия. Разберёмчные заблуждения:</p>
+
+<p><strong>1."Чем больше мегапикселей — тем больше информации"</strong></p>
+<p>На самом деле:</p>
+<ul>
+ <li>📏 Разрешение <code>8000×6000</code> (48 МП) на <em>Canon EOS 5DS R</em> даёт больше <strong>данных</strong>, но не всегда больше <strong>информации</strong>.</li>
+ <li>🔍 Если объектив не разрешает такие детали (например, <em>Canon EF 50mm f/1.8 STM</em>), дополнительные пиксели будут дублировать или добавлять шум.</li>
+</ul>
+
+<p><strong>2."Мetaданные всегда полезны"</strong></p>
+<p>Некоторые метаданные в файлах <em>Canon</em> — это <strong>избыточность</strong>:</p>
+<ul>
+ <li>📌 Серийный номер камеры (не влияет на изображение).</li>
+ <li>📌 Версия прошивки (полезна только для диагностики).</li>
+ <li>📌 Время съёмки с точностью до миллисекунд (обычно не нужно).</li>
+</ul>
+
+<p><strong>3."Шум можно убрать без потерь"</strong></p>
+<p>Это миф. Любой алгоритм шумоподавления (например, в <em>Canon DLO</em> или <em>Topaz Denoise</em>):</p>
+<ul>
+ <li>🧹 Удаляет и шум, и часть реальных деталей.</li>
+ <li>🎨 Добавляет собственные артефакты (размытие,"пластиковый" эффект).</li>
+</ul>
+
+<blockquote>⚠️ <strong>Внимание</strong>: Алгоритмы шумоподавления в камерах <em>Canon</em> (например, <code>High ISO Noise Reduction</code>) работают по принципу усреднения пикселей. Это означает, что вместе с шумом они могут"сгладить" мелкие детали (например, текстуру волос или листвы). Всегда проверяйте результат на 100% масштабе.</blockquote>
+
+<h2 id="7-теория-на-практике-как-это-применяется-в-камерах-canon">7. Теория на практике: как это применяется в камерах Canon</h2>
+
+<p>Производители активно используют принципы теории информации для улучшения качества съёмки. Вот несколько примеров:</p>
+
+<p><strong>1. Двойные пиксели в <em>Canon EOS R3</em></em></p>
+<p>Технология <em>Dual Pixel RAW</em> позволяет:</p>
+<ul>
+ <li>🔍 Разделять световые лучи для точного автофокуса.</li>
+ <li>📊 Уменьшать неопределённость в определении глубины резкости.</li>
+</ul>
+<p>Это <strong>увеличение информации</strong> о сцене по сравнению с традиционными сенсорами.</p>
+
+<p><strong>2. Алгоритмы сжатия <code>CR3</code> (C-RAW)</strong></p>
+<p>Формат <code>C-RAW</code> в камерах <em>Canon</em> (например, <em>EOS R5</em>) использует:</p>
+<ul>
+ <li>🗜️ Умное сжатие, удаляющее <strong>избыточность</strong> (например, повторяющиеся цвета в небе).</li>
+ <li>🛡️ Сохранение <strong>полезной информации</strong> (детали, динамический диапазон).</li>
+</ul>
+<p>Результат: файлы на 30–40% меньше, без видимой потери качества.</p>
+
+<p><strong>3. Системы автофокуса <em>DIGIC X</em></em></p>
+<p>Процессор <em>DIGIC X</em> в <em>Canon EOS-1D X Mark III</em> анализирует:</p>
+<ul>
+ <li>👁️ Движение объектов (уменьшает неопределённость их траектории).</li>
+ <li>🎭 Выражения лиц (добавляет информацию о эмоциях модели).</li>
+</ul>
+<p>Это позволяет камере"предсказывать" поведение объектов съёмки.</p>
+
+<blockquote>⚠️ <strong>Внимание</strong>: Функции вроде <code>Eye Detection AF</code> в <em>Canon EOS R6</em> работают лучше, если в кадре чётко виден глаз. Если объект закрыт волосами или очками, система может потерять фокус — энтропия (неопределённость) возрастает, и камере не хватает информации для точной наводки.</blockquote>
+
+<h2 id="faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</h2>
+
+<details>
+ <summary>📸 Почему фотографии в RAW весят больше, чем JPEG, если в них тоже есть шум?</summary>
+ <p>RAW содержит <strong>все данные с матрицы</strong>, включая шум, но также сохраняет максимальную информацию о сцене (динамический диапазон, цветовую глубину). JPEG отбрасывает часть данных (в том числе шум), но и теряет детали. Шум в RAW — это не информация, но он"привязан" к полезным данным, поэтому его нельзя удалить без потерь.</p>
+</details>
+
+<details>
+ <summary>🔍 Как понять, что на фото слишком много шума (неинформативных данных)?</summary>
+ <p>Откройте снимок в <em>Canon DPP</em> или <em>Lightroom</em> и увеличьте масштаб до 100–200%. Если в тенях или однородных областях (например, небо) видны случайные цветные точки — это шум. Если при этом теряются детали (например, текстура ткани), значит, шум начинает"забивать" полезную информацию.</p>
+</details>
+
+<details>
+ <summary>💾 Можно ли полностью удалить шум без потери качества?</summary>
+ <p>Нет. Любой метод шумоподавления — это компромисс. Например, в <em>Canon EOS R5</em> можно включить <code>High ISO Noise Reduction</code>, но это приведёт к:</p>
+ <ul>
+ <li>✅ Уменьшению видимого шума.</li>
+ <li>❌ Потере мелких деталей (размытие текстур).</li>
+ </ul>
+ <p>Лучший способ — минимизировать шум на этапе съёмки (ниже ISO, правильная экспозиция).</p>
+</details>
+
+<details>
+ <summary>📊 Почему EXIF считается информацией, а серийный номер камеры — нет?</summary>
+ <p>EXIF содержит данные о <strong>процессе съёмки</strong> (выдержка, диафрагма, баланс белого), которые помогают восстановить условия создания фото. Серийный номер — это <strong>идентификатор устройства</strong>, не связанный с содержимым изображения. Он полезен для гарантийного обслуживания, но не несёт информации о сцене.</p>
+</details>
+
+<details>
+ <summary>🖥️ Как teoria Шеннона применяется в видео с камер Canon?</summary>
+ <p>При записи видео (например, на <em>Canon EOS C70</em>) теория информации помогает:</p>
+ <ul>
+ <li>🎥 Оптимизировать битрейт (удалять избыточность между кадрами).</li>
+ <li>🔊 Сжимать звук без потери качества (например, в <code>All-I</code> vs <code>IPB</code>).</li>
+ <li>📡 Эффективнее передавать поток по Wi-Fi (в <em>Canon EOS R5 C</em>).</li>
+ </ul>
+ <p>Алгоритмы вроде <em>Canon Log 3</em> также основаны на уменьшении энтропии: они сохраняют максимальную информацию о динамическом диапазоне, удаляя избыточные данные о цвете.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-napechatat-fotografiyu-10kh15-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как напечатать фото 10х15 на принтере Canon: инструкция и настройки</span>
+                <span class="pb-related-desc">Пошаговая настройка печати фотографий 10х15 на принтерах Canon. Выбор бумаги, драйверов и режима кач</span>
+            </a><a href="/articles/k/ka/kak-raspechatat-na-printere-canon-i-sensys-mf3010.html" class="pb-related-card">
+                <span class="pb-related-title">Как распечатать документ на Canon i-SENSYS MF3010: Полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по настройке и печати на МФУ Canon i-SENSYS MF3010. Решение проблем с драйверам</span>
+            </a><a href="/articles/k/ka/kak-raspechatat-foto-na-canon-pixma.html" class="pb-related-card">
+                <span class="pb-related-title">Как распечатать фото на Canon Pixma: пошаговая инструкция и секреты</span>
+                <span class="pb-related-desc">Полное руководство по печати фотографий на принтерах Canon Pixma. Настройка драйверов, выбор бумаги,</span>
+            </a><a href="/articles/p/po/pochemu-vindovs-11-ne-vidit-printer-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Почему Windows 11 не видит принтер Canon: причины и решения</span>
+                <span class="pb-related-desc">Windows 11 не видит принтер Canon? Разбираем главные причины сбоя: драйверы, порты, службы. Пошагова</span>
+            </a><a href="/articles/c/ca/canon-pixma-mg2140-kak-podklyuchit.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon Pixma MG2140: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по подключению принтера Canon Pixma MG2140 к компьютеру и Wi-Fi сети. Установк</span>
+            </a><a href="/articles/p/pr/printer-canon-f158200-kak-podklyuchit-k-noutbuku.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon F158200 к ноутбуку: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по подключению принтера Canon F158200 к ноутбуку по USB и Wi-Fi. Установка дра</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

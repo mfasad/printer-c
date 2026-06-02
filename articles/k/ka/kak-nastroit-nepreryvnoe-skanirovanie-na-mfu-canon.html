@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как настроить непрерывное сканирование на МФУ Canon: Полная инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговое руководство по активации функции непрерывного сканирования на принтерах Canon. Настройка UFR II, драйверов и режима пакетной обработки документов.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-nastroit-nepreryvnoe-skanirovanie-na-mfu-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как настроить непрерывное сканирование на МФУ Canon: Полная инструкция">
+    <meta property="og:description" content="Пошаговое руководство по активации функции непрерывного сканирования на принтерах Canon. Настройка UFR II, драйверов и режима пакетной обработки документов.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как настроить непрерывное сканирование на МФУ Canon: Полная инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#базовые-настройки-через-панель-управления-устройства">Базовые настройки через панель управления устройства</a></li><li><a href="#настройка-драйвера-twain-и-wia-на-компьютере">Настройка драйвера TWAIN и WIA на компьютере</a></li><li><a href="#использование-утилиты-captureontouch-для-продвинутых-задач">Использование утилиты CaptureOnTouch для продвинутых задач</a></li><li><a href="#оптимизация-скорости-и-качества-обработки">Оптимизация скорости и качества обработки</a></li><li><a href="#настройка-разделения-страниц-и-обработки-ошибок">Настройка разделения страниц и обработки ошибок</a></li><li><a href="#типовые-проблемы-и-способы-их-решения">Типовые проблемы и способы их решения</a></li><li><a href="#заключение-и-финальные-рекомендации">Заключение и финальные рекомендации</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-otskanirovat-dokumenty-na-printere-canon-mg2540s.html">Как отсканировать документы на принтере Canon MG2540S: 3 способа</a></li><li><a href="/articles/k/ka/kak-otskanirovat-na-canon-g3420.html">Как отсканировать документ на Canon G3420: полное руководство</a></li><li><a href="/articles/c/ca/canon-pixma-mg3640-kak-skanirovat-dokument-na-kompyuter.html">Как сканировать документ на компьютер с Canon Pixma MG3640: Пошаговая инструкция</a></li><li><a href="/articles/c/ca/canon-mx300-kak-skanirovat.html">Как сканировать с Canon MX300: Полная инструкция по настройке</a></li><li><a href="/articles/k/ka/kak-polzovatsya-skanerom-na-printere-canon-g2415.html">Как пользоваться сканером на принтере Canon G2415: Полная инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Настройка непрерывного сканирования на МФУ Canon: Пошаговое руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#базовые-настройки-через-панель-управления-устройства">Базовые настройки через панель управления устройства</a></li><li><a href="#настройка-драйвера-twain-и-wia-на-компьютере">Настройка драйвера TWAIN и WIA на компьютере</a></li><li><a href="#использование-утилиты-captureontouch-для-продвинутых-задач">Использование утилиты CaptureOnTouch для продвинутых задач</a></li><li><a href="#оптимизация-скорости-и-качества-обработки">Оптимизация скорости и качества обработки</a></li><li><a href="#настройка-разделения-страниц-и-обработки-ошибок">Настройка разделения страниц и обработки ошибок</a></li><li><a href="#типовые-проблемы-и-способы-их-решения">Типовые проблемы и способы их решения</a></li><li><a href="#заключение-и-финальные-рекомендации">Заключение и финальные рекомендации</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Многие пользователи офисной техники сталкиваются с необходимостью оцифровки большого объема документов за один проход. Стандартный режим работы, при котором после каждого снимка требуется подтверждение, отнимает драгоценное время и нервы. В современных моделях <em>Canon imageRUNNER</em> и <em>imageCLASS</em> заложен мощный функционал, позволяющий автоматизировать этот процесс.</p>
+
+<p>Функция <strong>непрерывного сканирования</strong> превращает рутинную задачу в быстрый поток данных. Вам больше не нужно ждать завершения обработки каждого листа, чтобы положить следующий. Достаточно выставить настройки один раз, и устройство само выполнит серию снимков, объединив их в один файл или отправив на сетевой ресурс.</p>
+
+<p>Однако активация этого режима зависит от конкретной модели, установленного драйвера и типа подключения. В этой статье мы разберем, как правильно настроить <code>Continuous Scan</code> на разных уровнях взаимодействия с устройством: от панели управления до компьютера.</p>
+
+<h2 id="базовые-настройки-через-панель-управления-устройства">Базовые настройки через панель управления устройства</h2>
+
+<p>Самый быстрый способ активировать пакетную обработку документов — использовать сенсорный экран самого принтера. Этот метод идеален, если вам нужно отсканировать документы напрямую в облако или по сети, минуя компьютер. Начните с выбора нужного приложения на главном экране.</p>
+
+<p>Перейдите в раздел <code>Scan to PC</code> или <code>Scan to Email</code>. В зависимости от версии прошивки <em>Canon</em>, интерфейс может отличаться. Найдите кнопку <strong>Настройки</strong> (иконка шестеренки) или пункт <code>Режим сканирования</code>. Здесь вы увидите опцию, отвечающую за количество листов.</p>
+
+<p>Установите параметр <strong>Непрерывное сканирование</strong> в положение <em>Вкл.</em> или выберите <code>Многостраничный документ</code>. Это критически важный шаг, так как по умолчанию устройство может стоять в режиме «Один лист — один файл».</p>
+
+<blockquote>⚠️ Внимание: Если вы используете функцию <code>Scan to Folder</code>, убедитесь, что целевая папка имеет достаточный объем свободного места, так как непрерывный поток может быстро заполнить диск.</blockquote>
+
+<p>После включения режима, устройство будет ждать загрузки следующей страницы в автоматический лоток (ADF). Не кладите документы вручную по одному, если у вас есть функция автоподатчика. Система сама определит момент завершения сканирования, когда лоток опустеет в течение заданного времени.</p>
+
+<h2 id="настройка-драйвера-twain-и-wia-на-компьютере">Настройка драйвера TWAIN и WIA на компьютере</h2>
+
+<p>Для работы с документами на рабочем столе часто требуется использование драйверов. Два основных стандарта — это <strong>WIA</strong> (Windows Image Acquisition) и <strong>UFR II</strong> (для драйверов Canon). Интерфейсы могут сильно отличаться, поэтому важно знать, где искать нужные галочки.</p>
+
+<p>В драйвере <em>Canon IJ Scan Utility</em> или стандартном <code>WIA</code> переходите в <code>Настройки</code> → <code>Параметры</code>. Ищите вкладку <strong>Сканирование</strong> или <code>Раздел</code>. Там должен быть пункт <code>Непрерывное сканирование</code> или <code>Сканировать до остановки</code>.</p>
+
+<p>Если вы используете фирменное ПО <strong>Canon CaptureOnTouch</strong>, процесс еще проще. При создании нового задания выберите <code>Сканировать на компьютер</code>. В свойствах задания активируйте <code>Непрерывное сканирование</code>.</p>
+
+<ul>
+<li>✅ Убедитесь, что выбран формат файла <strong>PDF</strong>, а не JPG, для объединения страниц.</li>
+<li>✅ Проверьте галочку <code>Удалить пустые страницы</code> для чистоты результата.</li>
+<li>✅ Настройте <strong>распознавание текста</strong> (OCR) сразу, если нужно.</li>
+</ul>
+
+<p>Важно отметить, что в некоторых версиях драйвера <code>V4</code> эта функция может быть скрыта в расширенных настройках. Если вы не видите опцию, попробуйте обновить драйвер до последней версии с официального сайта <em>Canon</em>.</p>
+
+<h2 id="использование-утилиты-captureontouch-для-продвинутых-задач">Использование утилиты CaptureOnTouch для продвинутых задач</h2>
+
+<p>Программа <em>Canon CaptureOnTouch</strong> является одним из самых мощных инструментов для управления сканированием. Она позволяет создавать сложные сценарии, где непрерывное сканирование комбинируется с обработкой данных.</p>
+
+<p>Запустите утилиту и нажмите <strong>Новое задание</strong>. В мастере создания выберите тип сканирования. В окне настройки параметров найдите раздел <code>Результат сканирования</code>. Здесь можно выбрать <code>Один файл на задание</code>.</p>
+
+<p>Активируйте опцию <strong>Непрерывное сканирование</strong>. Это позволит устройству сканировать десятки страниц подряд. Вы можете настроить <code>Паузу между страницами</code>, если документ имеет разную толщину или требует перестановки.</p>
+
+<p>Для сложных задач используйте функцию <code>Разделение страниц</code>. Например, вы можете настроить устройство так, чтобы оно автоматически разрывало файл при встрече с цветной вставкой (разделителем). Это удобно при оцифровке архивов.</p>
+
+<div class="pb-poll" id="poll-a853be86"><div class="pb-poll-question">📊 Какой метод сканирования вы используете чаще?</div><div class="pb-poll-option" data-poll="a853be86" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Через панель принтера</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a853be86" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Через меню Пуск в Windows</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a853be86" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Через программу CaptureOnTouch</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a853be86" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Через веб-интерфейс</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="оптимизация-скорости-и-качества-обработки">Оптимизация скорости и качества обработки</h2>
+
+<p>Непрерывный режим часто требует ресурсов. Если сканирование происходит медленно, проблема может быть в настройках <strong>разрешения</strong> и <strong>цветности</strong>. Для текстовых документов достаточно <code>200-300 dpi</code>. Высокие значения замедляют передачу данных по сети.</p>
+
+<p>В режиме <code>Черно-белый текст</code> скорость обработки максимальна. Если вы сканируете смешанный контент, выберите <strong>Автоматическое определение</strong>. Это позволит устройству оптимизировать обработку для каждого типа контента.</p>
+
+<p>Распространенная ошибка — сканирование в формате <code>TIFF</code> без компрессии. Файлы получаются гигантскими, что приводит к зависанию при непрерывной передаче. Используйте <strong>PDF с компрессией</strong> или <code>JPG</code> для изображений.</p>
+
+<blockquote>⚠️ Внимание: При сканировании большого количества страниц (более 50) в один файл, убедитесь, что ваш файловый менеджер поддерживает открытие таких объемных документов без зависания.</blockquote>
+
+<p>Также проверьте настройки сети. Если принтер подключен через Wi-Fi, стабильность соединения критична. Для непрерывного потока данных предпочтительнее использовать кабель <strong>Ethernet</strong>.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Оптимальное разрешение для текстовых документов в непрерывном режиме — 300 dpi, что обеспечивает баланс между качеством и скоростью передачи данных.</p></aside>
+
+<h2 id="настройка-разделения-страниц-и-обработки-ошибок">Настройка разделения страниц и обработки ошибок</h2>
+
+<p>Когда вы сканируете стопку документов, важно, чтобы система понимала, где заканчивается один документ и начинается другой. В настройках <strong>CaptureOnTouch</strong> или драйвере <code>UFR II</code> доступна функция <code>Разделение по цвету</code>.</p>
+
+<p>Если вы используете специальные разделители (например, цветные листы), настройте устройство на их распознавание. Это позволит автоматически создавать отдельные файлы для каждого раздела архива.</p>
+
+<p>Также стоит обратить внимание на функцию <strong>Удаление пустых страниц</strong>. Она полезна, если вы сканируете документы, где могут попадаться чистые листы (например, обложки или прокладки).</p>
+
+<p>В случае замятия бумаги или сбоев в подаче, система должна иметь возможность восстановить процесс. Убедитесь, что в настройках <code>Обработка ошибок</code> стоит опция <strong>Продолжить после устранения</strong> вместо «Остановить».</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед стартом</h4><label class="check-item"><input type="checkbox"><span>Очистить ролики податчика</span></label><label class="check-item"><input type="checkbox"><span>Проверить уровень памяти ПК</span></label><label class="check-item"><input type="checkbox"><span>Установить режим "PDF"</span></label><label class="check-item"><input type="checkbox"><span>Активировать "Непрерывное сканирование"</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="типовые-проблемы-и-способы-их-решения">Типовые проблемы и способы их решения</h2>
+
+<p>Иногда пользователи сталкиваются с тем, что после сканирования первого листа устройство «замирает». Это часто связано с тем, что драйвер не получил сигнал о продолжении. Проверьте, не стоит ли в настройках ограничение по времени ожидания.</p>
+
+<p>Другая проблема — слияние страниц в один нечитаемый файл. Это случается, если формат <code>PDF</code> выбран неправильно. Убедитесь, что стоит <strong>Searchable PDF</em> (с слоем текста) или обычный <code>Multi-page PDF</code>, а не серия отдельных файлов.</p>
+
+<p>Если сканер отказывается сканировать больше трех страниц подряд, проверьте настройки <strong>памяти</em> самого МФУ. Некоторые бюджетные модели имеют лимит на количество страниц в одном задании.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Проблема</th>
+<th>Вероятная причина</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Принтер останавливается после 1 листа</td>
+<td>Режим «Один лист»</td>
+<td>Включить «Непрерывное сканирование» в драйвере</td>
+</tr>
+<tr>
+<td>Файл слишком большой и тормозит</td>
+<td>Высокое разрешение (600+ dpi)</td>
+<td>Снизить до 300 dpi и включить сжатие</td>
+</tr>
+<tr>
+<td>Страницы не объединяются в PDF</td>
+<td>Неправильный формат</td>
+<td>Выбрать «Многостраничный PDF»</td>
+</tr>
+<tr>
+<td>Сбой сети во время сканирования</td>
+<td>Нестабильный Wi-Fi</td>
+<td>Подключить кабель Ethernet</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>⚠️ Внимание: Если вы используете старые модели <em>Canon</strong> с драйверами версии V3 или ниже, функция непрерывного сканирования может отсутствовать. В этом случае необходимо обновить прошивку или приобрести лицензию на <strong>CaptureOnTouch</strong>.</blockquote>
+
+<p>Также проверьте, не включена ли функция <code>Экономия тонера</code> или <code>Тихий режим</code>, которые могут замедлять обработку данных и влиять на скорость передачи.</p>
+
+<details class="pb-accordion"><summary>Что делать, если драйвер не видит функцию?</summary><div class="pb-accordion-body"><p>Если опция отсутствует, попробуйте удалить текущий драйвер и установить «Полный пакет драйверов и ПО» с сайта Canon. Иногда только базовый драйвер принтера не содержит функций сканирования.</p></div></details>
+
+<h2 id="заключение-и-финальные-рекомендации">Заключение и финальные рекомендации</h2>
+
+<p>Настройка непрерывного сканирования — это не просто галочка в меню, а комплексный подход к организации рабочего процесса. Правильная конфигурация позволяет сэкономить часы работы при оцифровке архивов, счетов или договоров.</p>
+
+<p>Главное правило — всегда выбирать формат <strong>PDF</em> для многостраничных документов и использовать автоматический податчик листов. Ручная подача при включенном непрерывном режиме невозможна или крайне неудобна.</p>
+
+<p>Регулярно обновляйте ПО <em>Canon</em>, так как новые версии часто исправляют ошибки в логике обработки больших объемов данных и добавляют новые функции оптимизации.</p>
+
+<details>
+<summary><strong>Как включить непрерывное сканирование в Windows 10/11?</strong></summary>
+<p>В стандартной утилите Windows это делается через <code>Факсы и сканирование</code>. Нажмите <code>Новое сканирование</code> и поставьте галочку <code>Сканировать до завершения</code>. В драйверах <em>Canon</em> ищите эту опцию в разделе «Настройки» драйвера.</p>
+</details>
+
+<details>
+<summary><strong>Почему сканирование останавливается само по себе?</strong></summary>
+<p>Это может быть вызвано таймаутом ожидания следующей страницы (обычно 5-10 секунд) или переполнением памяти принтера. Увеличьте время ожидания в настройках драйвера или очистите очередь печати.</p>
+</details>
+
+<details>
+<summary><strong>Можно ли сканировать в разные папки непрерывно?</strong></summary>
+<p>Стандартная функция непрерывного сканирования обычно сохраняет все в один файл или одну папку. Для сохранения в разные папки используйте продвинутые сценарии в <strong>CaptureOnTouch</strong> с разделением по цветным меткам.</p>
+</details>
+
+<details>
+<summary><strong>Влияет ли разрешение на скорость непрерывного сканирования?</strong></summary>
+<p>Да, существенно. Высокое разрешение (600 dpi и выше) генерирует большие объемы данных, что может вызвать задержки в передаче. Для текстов используйте <code>200-300 dpi</code>.</p>
+</details>
+
+<p>Помните, что <mark>настройка непрерывного сканирования на МФУ Canon требует обязательного использования автоматического податчика документов (ADF), иначе режим не сработает корректно.</mark> Это техническое ограничение, связанное с механизмом подачи бумаги. Ручная подача не позволяет устройству гарантировать непрерывность потока.</p>
+
+<p>Следуя этим инструкциям, вы сможете максимально эффективно использовать возможности вашего оборудования. Не бойтесь экспериментировать с настройками качества и формата, чтобы найти идеальный баланс для ваших задач.</p></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-otskanirovat-dokumenty-na-printere-canon-mg2540s.html" class="pb-related-card">
+                <span class="pb-related-title">Как отсканировать документы на принтере Canon MG2540S: 3 способа</span>
+                <span class="pb-related-desc">Пошаговая инструкция по сканированию документов и фото на МФУ Canon MG2540S. Настройка через My Imag</span>
+            </a><a href="/articles/k/ka/kak-otskanirovat-na-canon-g3420.html" class="pb-related-card">
+                <span class="pb-related-title">Как отсканировать документ на Canon G3420: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по сканированию с Canon G3420 через приложение Canon IJ Scan Utility и драйверы</span>
+            </a><a href="/articles/c/ca/canon-pixma-mg3640-kak-skanirovat-dokument-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документ на компьютер с Canon Pixma MG3640: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по сканированию с Canon Pixma MG3640 через IJ Scan Utility и Windows. Настройк</span>
+            </a><a href="/articles/c/ca/canon-mx300-kak-skanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать с Canon MX300: Полная инструкция по настройке</span>
+                <span class="pb-related-desc">Подробное руководство: как настроить сканирование с МФУ Canon MX300 на компьютер и в PDF. Решение ош</span>
+            </a><a href="/articles/k/ka/kak-polzovatsya-skanerom-na-printere-canon-g2415.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться сканером на принтере Canon G2415: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по сканированию документов и фото на МФУ Canon G2415. Настройка драйверов, исп</span>
+            </a><a href="/articles/k/ka/kak-otskanirovat-dokument-na-printere-canon-mg3540.html" class="pb-related-card">
+                <span class="pb-related-title">Как отсканировать документ на Canon MG3540: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по сканированию с принтера Canon PIXMA MG3540: через ПК, с карты памяти, настр</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

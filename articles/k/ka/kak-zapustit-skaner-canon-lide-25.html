@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как запустить сканер Canon LiDE 25: Установка драйверов и настройка — Кэнон Инфо</title>
+    <meta name="description" content="Подробная инструкция по подключению и настройке сканера Canon LiDE 25 в Windows и macOS. Решение проблем с драйверами, использование TWAIN и WIA интерфейсов.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-zapustit-skaner-canon-lide-25.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как запустить сканер Canon LiDE 25: Установка драйверов и настройка">
+    <meta property="og:description" content="Подробная инструкция по подключению и настройке сканера Canon LiDE 25 в Windows и macOS. Решение проблем с драйверами, использование TWAIN и WIA интерфейсов.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как запустить сканер Canon LiDE 25: Установка драйверов и настройка</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-в-работу-с-устаревшей-моделью-сканера">Введение в работу с устаревшей моделью сканера</a></li><li><a href="#физическое-подключение-и-проверка-питания">Физическое подключение и проверка питания</a></li><li><a href="#выбор-и-установка-совместимых-драйверов">Выбор и установка совместимых драйверов</a></li><li><a href="#программное-обеспечение-для-сканирования">Программное обеспечение для сканирования</a></li><li><a href="#настройка-параметров-сканирования">Настройка параметров сканирования</a></li><li><a href="#сравнение-интерфейсов-подключения">Сравнение интерфейсов подключения</a></li><li><a href="#решение-распространенных-проблем">Решение распространенных проблем</a></li><li><a href="#особенности-работы-в-macos">Особенности работы в macOS</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-otskanirovat-dokument-na-kompyuter-s-printera-canon-mg3640s.html">Сканирование на ПК: Инструкция для Canon MG3640s</a></li><li><a href="/articles/k/ka/kak-skanirovat-na-canon-g3400.html">Как сканировать документы на Canon PIXMA G3400: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-otskanirovat-dokument-kenon-mf-3010.html">Как отсканировать документ на Canon MF3010: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-sdelat-kserokopiyu-na-printere-canon-mg2545s.html">Как сделать ксерокопию на принтере Canon MG2545s: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-nastroit-skaner-canon-4410.html">Настройка сканера Canon 4410: полное руководство по установке и драйверам</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полное руководство по запуску сканера Canon LiDE 25</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-в-работу-с-устаревшей-моделью-сканера">Введение в работу с устаревшей моделью сканера</a></li><li><a href="#физическое-подключение-и-проверка-питания">Физическое подключение и проверка питания</a></li><li><a href="#выбор-и-установка-совместимых-драйверов">Выбор и установка совместимых драйверов</a></li><li><a href="#программное-обеспечение-для-сканирования">Программное обеспечение для сканирования</a></li><li><a href="#настройка-параметров-сканирования">Настройка параметров сканирования</a></li><li><a href="#сравнение-интерфейсов-подключения">Сравнение интерфейсов подключения</a></li><li><a href="#решение-распространенных-проблем">Решение распространенных проблем</a></li><li><a href="#особенности-работы-в-macos">Особенности работы в macOS</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-в-работу-с-устаревшей-моделью-сканера">Введение в работу с устаревшей моделью сканера</h2>
+
+<p>Модель <em>Canon LiDE 25</em> представляет собой классический планшетный сканер, который пользовался enorme популярностью благодаря компактному дизайну и отсутствию внешнего блока питания. Несмотря на то, что устройство было выпущено достаточно давно, многие пользователи продолжают использовать его для оцифровки архивных материалов, фотографий и документов благодаря качественному оптическому разрешению.</p>
+
+<p>Главная сложность при работе с этой моделью в современных операционных системах заключается в отсутствии «родных» драйверов от производителя для новых версий Windows. Вам придется искать совместимые версии программного обеспечения или использовать стандартные системные библиотеки, которые уже установлены в вашей операционной системе. Это требует определенного терпения и внимательности при выборе версии драйвера.</p>
+
+<p>Перед тем как приступать к непосредственному сканированию, необходимо убедиться, что физическое подключение выполнено корректно и компьютер распознает устройство. Часто проблема кроется не в программной части, а в использовании неподходящего USB-кабеля или порта, что может привести к нестабильной работе или полному игнорированию сканера системой.</p>
+
+<h2 id="физическое-подключение-и-проверка-питания">Физическое подключение и проверка питания</h2>
+
+<p>Уникальной особенностью <em>Canon LiDE 25</em> является его способность работать от энергии, подаваемой напрямую через порт USB, без необходимости подключать отдельный адаптер в розетку. Это существенно упрощает транспортировку, но налагает жесткие ограничения на используемый кабель и порт подключения. Вам нужно убедиться, что кабель, идущий в комплекте, имеет надежные контакты и не поврежден.</p>
+
+<p>Подключите сканер к USB-порту компьютера. В идеале следует использовать порты USB 2.0, расположенные на задней панели системного блока, так как они обеспечивают более стабильную подачу тока, чем передняя панель или USB-хабы. Если вы подключаете устройство к ноутбуку, убедитесь, что он включен в сеть или имеет достаточный заряд батареи.</p>
+
+<p>Как только вы вставите штекер в разъем, на передней панели сканера должен загореться индикатор питания. Если лампочка не загорается, попробуйте заменить кабель или переподключить устройство к другому порту. В редких случаях может потребоваться использование Y-кабеля (с двумя штекерами USB), чтобы получить достаточную мощность от двух портов одновременно.</p>
+
+<h2 id="выбор-и-установка-совместимых-драйверов">Выбор и установка совместимых драйверов</h2>
+
+<p>Поскольку официальный сайт Canon больше не предоставляет драйверов для Windows 10 и Windows 11 специально для этой модели, вам придется прибегнуть к хитростям. Лучшим решением является поиск драйверов для <em>Canon LiDE 110</em> или <em>Canon LiDE 220</em>, так как они используют схожую архитектуру сенсора и часто работают с LiDE 25 без проблем.</p>
+
+<p>Скачивая драйвер, внимательно смотрите на версию операционной системы. Если вы используете 64-битную версию Windows, вам необходим именно 64-битный драйвер, иначе установка завершится ошибкой или устройство не будет определяться. Установка происходит через стандартный мастер установки, после которого требуется перезагрузка компьютера для применения всех изменений.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание</strong>: Если автоматическая установка драйвера не сработала, попробуйте использовать «Диспетчер устройств» для принудительного обновления. Нажмите правой кнопкой мыши на неопределенное устройство с желтым восклицательным знаком и выберите «Обновить драйвер» → «Выполнить поиск драйверов на этом компьютере». Укажите путь к распакованной папке с драйверами.</p>
+</blockquote>
+
+<p>В некоторых случаях проще использовать встроенные драйверы Windows. Система может автоматически распознать сканер как стандартное устройство WIA (Windows Image Acquisition), что позволит сканировать без установки дополнительного софта, хотя функционал будет ограничен базовыми настройками.</p>
+
+<div class="pb-poll" id="poll-d19cd650"><div class="pb-poll-question">📊 Какую операционную систему вы используете?</div><div class="pb-poll-option" data-poll="d19cd650" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 10</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d19cd650" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 11</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d19cd650" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">macOS</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d19cd650" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Linux</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d19cd650" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другая</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="программное-обеспечение-для-сканирования">Программное обеспечение для сканирования</h2>
+
+<p>После установки драйверов вам потребуется программа-посредник для управления сканированием. <em>Canon IJ Scan Utility</em> — это стандартное приложение, которое обычно идет в комплекте с драйверами. Оно предоставляет удобную панель управления для выбора типа документа, разрешения и формата сохранения файла.</p>
+
+<p>Если родное ПО не устанавливается, вы можете использовать стандартную программу «Факсы и сканирование» от Microsoft, которая есть в каждой версии Windows. Для запуска перейдите в меню «Пуск», введите название программы и выберите ваш сканер из списка доступных устройств. Этот метод работает стабильно даже на самых новых версиях операционной системы.</p>
+
+<p>Для профессиональной работы с фотографиями можно использовать графические редакторы, такие как <em>Adobe Photoshop</em> или <em>GIMP</em>. В меню «Файл» выберите «Импортировать» или «Сканировать», и программа предложит список доступных сканеров, поддерживающих стандарт TWAIN. Это позволяет сразу сохранять результат в рабочем проекте без промежуточных файлов.</p>
+
+<h2 id="настройка-параметров-сканирования">Настройка параметров сканирования</h2>
+
+<p>Качество итогового изображения напрямую зависит от правильно выбранных параметров. Основным параметром является <strong>разрешение</strong> (DPI), которое определяет детализацию скана. Для обычного текста достаточно <code>300 DPI</code>, тогда как для фотографий или мелких деталей лучше установить значение <code>600 DPI</code> или выше.</p>
+
+<p>Следующий важный параметр — <strong>цветовой режим</strong>. Если вы сканируете черно-белый документ, выберите режим «Черно-белый» или «Оттенки серого», чтобы уменьшить размер файла. Для цветных фотографий обязательно используйте режим <strong>Цветной</strong>, чтобы сохранить все нюансы оттенков и яркости.</p>
+
+<p>Не забывайте про функцию <strong>предпросмотра</strong>. Перед запуском основного сканирования всегда выполняйте предварительный прогон, чтобы убедиться, что документ лежит ровно и попадает в область захвата. Это экономит время и позволяет избежать повторных попыток сканирования.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Настройка параметров сканирования</h4><label class="check-item"><input type="checkbox"><span>Выбрать разрешение (300-600 DPI)</span></label><label class="check-item"><input type="checkbox"><span>Установить цветовой режим</span></label><label class="check-item"><input type="checkbox"><span>Проверить область сканирования</span></label><label class="check-item"><input type="checkbox"><span>Настроить формат сохранения</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="сравнение-интерфейсов-подключения">Сравнение интерфейсов подключения</h2>
+
+<p>При работе с драйверами вы можете столкнуться с выбором между двумя основными протоколами передачи данных: WIA и TWAIN. Понимание разницы между ними поможет вам быстрее настроить систему и избежать ошибок в будущем. Каждый из них имеет свои преимущества в зависимости от ваших задач.</p>
+
+<p>Таблица ниже показывает основные отличия между этими интерфейсами для вашего устройства:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Характеристика</th>
+<th>WIA (Windows Image Acquisition)</th>
+<th>TWAIN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Совместимость</td>
+<td>Встроена в Windows, работает «из коробки»</td>
+<td>Требуется установка драйвера</td>
+</tr>
+<tr>
+<td>Функциональность</td>
+<td>Базовая, ограниченные настройки</td>
+<td>Расширенная, тонкая настройка параметров</td>
+</tr>
+<tr>
+<td>Скорость работы</td>
+<td>Высокая, стабильная</td>
+<td>Зависит от драйвера</td>
+</tr>
+<tr>
+<td>Поддержка OCR</td>
+<td>Ограниченная (зависит от софта)</td>
+<td>Полная поддержка через внешние плагины</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Если вам нужно просто быстро отсканировать документ и отправить его по почте, используйте <code>WIA</code>. Если же вы работаете с архивами и требуете точной цветопередачи, выбирайте <code>TWAIN</code> через специализированный софт.</p>
+
+<details class="pb-accordion"><summary>Что такое TWAIN и почему он важен?</summary><div class="pb-accordion-body"><p>TWAIN — это стандартный программный интерфейс, который позволяет программному обеспечению напрямую общаться с устройствами ввода изображений, такими как сканеры. Он обеспечивает более гибкую настройку, чем стандартные драйверы Windows, позволяя управлять контрастом, яркостью и пороговыми значениями детально.</p></div></details>
+
+<h2 id="решение-распространенных-проблем">Решение распространенных проблем</h2>
+
+<p>Иногда даже после правильной установки возникают проблемы с распознаванием устройства. Самая частая ошибка — сообщение «Сканер не найден». В этом случае проверьте, не включен ли режим гибернации на компьютере, так как сканер может «отвалиться» от шины USB при снижении энергопотребления.</p>
+
+<p>Еще одна проблема — зависание программы во время сканирования. Это может быть связано с недостатком оперативной памяти или слишком высоким разрешением сканирования для слабых систем. Попробуйте снизить разрешение до минимального значения и отключить другие тяжелые приложения на время работы.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание</strong>: Если сканер издает странные щелчки или не двигает каретку, немедленно отключите устройство от сети. Это может указывать на механическую поломку шестеренки привода или засорение оптической линии. Не пытайтесь разбирать устройство самостоятельно, если это не входит в ваши навыки ремонта электроники.</p>
+</blockquote>
+
+<p>Иногда помогает полное удаление драйверов и их повторная установка. Используйте утилиту <code>pnputil</code> в командной строке для удаления драйверов сканера перед новой установкой, чтобы избежать конфликтов версий. Это радикальный, но эффективный метод решения программных конфликтов.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед сканированием ценных документов или фотографий обязательно протрите стекло сканера мягкой безворсовой салфеткой. Даже небольшая пылинка на стекле может испортить весь файл, создав белые точки или размытые участки.</p></aside>
+
+<h2 id="особенности-работы-в-macos">Особенности работы в macOS</h2>
+
+<p>Для пользователей компьютеров Apple ситуация с <em>Canon LiDE 25</em> может быть проще, так как система macOS часто имеет встроенную поддержку старых сканеров через протокол Image Capture. Вам не всегда нужно искать специфические драйверы Canon.</p>
+
+<p>Подключите сканер к Mac через USB-порт (возможно, потребуется переходник USB-C). Откройте программу <code>Image Capture</code> в папке «Программы». Если устройство определено, вы увидите его в списке слева. Здесь можно настроить формат файла, качество и место сохранения.</p>
+
+<p>Если сканер не отображается в списке, проверьте Центр управления (System Settings) → Bluetooth & Devices. Убедитесь, что система видит новое USB-устройство. В редких случаях может потребоваться разрешение на доступ к портам в настройках безопасности, если вы используете старую версию macOS.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для успешной работы сканера Canon LiDE 25 на современных компьютерах критически важно найти совместимый драйвер (обычно от LiDE 110/220) или полагаться на стандартные системные библиотеки WIA/TWAIN, так как родного ПО для новых ОС не существует.</p></aside>
+
+<details>
+<summary>Чем отличается сканирование по WIA от сканирования по TWAIN?</summary>
+<p>WIA — это стандартный интерфейс Windows, который обеспечивает базовое сканирование без установки дополнительного ПО, но с ограниченными настройками. TWAIN — это более сложный стандарт, требующий установки драйвера, но предоставляющий полный контроль над параметрами сканирования (яркость, контраст, цветовые профили).</p>
+</details>
+
+<details>
+<summary>Почему сканер Canon LiDE 25 не включается при подключении к USB?</summary>
+<p>Скорее всего, проблема в недостаточной мощности USB-порта. Попробуйте подключить сканер к порту на задней панели компьютера. Также возможно, что кабель поврежден или имеет слишком большую длину, вызывая падение напряжения. Попробуйте использовать кабель из комплекта поставки или качественный короткий кабель.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать сканер LiDE 25 для сканирования объемных объектов?</summary>
+<p>Нет, Canon LiDE 25 — это планшетный сканер, предназначенный исключительно для работы с плоскими объектами (бумага, фотографии, пленка). Крышка сканера не имеет сильной фиксации и может повредить объемные предметы, а оптическая система не рассчитана на фокусировку на высоте.</p>
+</details>
+
+<details>
+<summary>Где найти драйвер для Windows 11?</summary>
+<p>Официального драйвера для Windows 11 не существует. Рекомендуется скачать и установить драйвер для Windows 10 (64-bit) или использовать драйвер от модели Canon LiDE 110/220, который часто обнаруживается системой автоматически или устанавливается в режиме совместимости.</p>
+</details>
+
+<details>
+<summary>Как повысить скорость сканирования?</summary>
+<p>Увеличить скорость можно, снизив разрешение сканирования (например, с 600 до 300 DPI) и выбрав меньший формат файла (например, JPEG вместо TIFF). Также убедитесь, что нет фоновых процессов,ющих ресурсы процессора и диска во время работы сканера.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-otskanirovat-dokument-na-kompyuter-s-printera-canon-mg3640s.html" class="pb-related-card">
+                <span class="pb-related-title">Сканирование на ПК: Инструкция для Canon MG3640s</span>
+                <span class="pb-related-desc">Пошаговое руководство: как отсканировать документ на компьютер с принтера Canon MG3640s через IJ Sca</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-na-canon-g3400.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы на Canon PIXMA G3400: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство: как сканировать на Canon G3400 с компьютера и телефона. Настройка драйверов, </span>
+            </a><a href="/articles/k/ka/kak-otskanirovat-dokument-kenon-mf-3010.html" class="pb-related-card">
+                <span class="pb-related-title">Как отсканировать документ на Canon MF3010: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка сканирования на МФУ Canon MF3010 через драйвер, функцию Send to PC и веб-интерфе</span>
+            </a><a href="/articles/k/ka/kak-sdelat-kserokopiyu-na-printere-canon-mg2545s.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать ксерокопию на принтере Canon MG2545s: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробный гайд по копированию документов на Canon MG2545s. Узнайте, как настроить качество, цвет и м</span>
+            </a><a href="/articles/k/ka/kak-nastroit-skaner-canon-4410.html" class="pb-related-card">
+                <span class="pb-related-title">Настройка сканера Canon 4410: полное руководство по установке и драйверам</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как подключить и настроить сканер Canon CanoScan LiDE 4410. Установка драйверо</span>
+            </a><a href="/articles/k/ka/kak-kserokopirovat-na-printere-canon-mg2540s.html" class="pb-related-card">
+                <span class="pb-related-title">Как ксерокопировать на принтере Canon MG2540s: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробный гайд: как сделать ксерокопию на Canon MG2540s. Настройка, копирование фото и текста, устра</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

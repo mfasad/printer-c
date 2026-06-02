@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Canon 550D как веб-камера: полное подключение к ПК — Кэнон Инфо</title>
+    <meta name="description" content="Инструкция, как превратить Canon 550D в веб-камеру для трансляций и звонков. Обзор софта EOS Utility и OBS, устранение ошибок подключения.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-550d-podklyuchenie-k-kompyuteru-kak-veb-kameru.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Canon 550D как веб-камера: полное подключение к ПК">
+    <meta property="og:description" content="Инструкция, как превратить Canon 550D в веб-камеру для трансляций и звонков. Обзор софта EOS Utility и OBS, устранение ошибок подключения.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/fotoapparaty-canon/">Фотоаппараты Canon</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Canon 550D как веб-камера: полное подключение к ПК</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-в-задачу-трансформации-фотоаппарата">Введение в задачу трансформации фотоаппарата</a></li><li><a href="#способы-подключения-и-программное-обеспечение">Способы подключения и программное обеспечение</a></li><li><a href="#пошаговая-настройка-через-eos-webcam-utility">Пошаговая настройка через EOS Webcam Utility</a></li><li><a href="#альтернативный-метод-использование-obs-studio">Альтернативный метод: Использование OBS Studio</a></li><li><a href="#критические-нюансы-питания-и-перегрева">Критические нюансы питания и перегрева</a></li><li><a href="#сравнение-методов-подключения">Сравнение методов подключения</a></li><li><a href="#устранение-частых-ошибок-и-проблем">Устранение частых ошибок и проблем</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/g/gd/gde-serijnyj-nomer-obektiva-canon.html">Где найти серийный номер объектива Canon: полное руководство</a></li><li><a href="/articles/c/ca/canon-eos-r6-kakie-obektivy-podkhodyat.html">Какие объективы подходят для Canon EOS R6: полный гид по выбору</a></li><li><a href="/articles/c/ca/canon-1200d-ili-nikon-d5100-chto-luchshe.html">Canon 1200D или Nikon D5100: полное сравнение камер</a></li><li><a href="/articles/k/ka/kak-razobrat-kenon.html">Как разобрать фотоаппарат Canon: пошаговая инструкция по ремонту</a></li><li><a href="/articles/c/ca/canon-eos-600d-na-amerikanskom-rynke-kak-nazyvaetsya.html">Canon EOS 600D США: Как называется модель для американского рынка</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как подключить Canon 550D к компьютеру в качестве веб-камеры</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-в-задачу-трансформации-фотоаппарата">Введение в задачу трансформации фотоаппарата</a></li><li><a href="#способы-подключения-и-программное-обеспечение">Способы подключения и программное обеспечение</a></li><li><a href="#пошаговая-настройка-через-eos-webcam-utility">Пошаговая настройка через EOS Webcam Utility</a></li><li><a href="#альтернативный-метод-использование-obs-studio">Альтернативный метод: Использование OBS Studio</a></li><li><a href="#критические-нюансы-питания-и-перегрева">Критические нюансы питания и перегрева</a></li><li><a href="#сравнение-методов-подключения">Сравнение методов подключения</a></li><li><a href="#устранение-частых-ошибок-и-проблем">Устранение частых ошибок и проблем</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-в-задачу-трансформации-фотоаппарата">Введение в задачу трансформации фотоаппарата</h2>
+<p>Использование профессиональной зеркальной камеры <em>Canon EOS 550D</em> вместо стандартной веб-камеры открывает новые горизонты для видеоконференций, стриминга и образовательных вебинаров. Даже спустя много лет после выхода модели, её матрица APS-C обеспечивает качество изображения, недостижимое для большинства встроенных ноутбучных веб-камер, позволяя получать естественное размытие фона и глубокие цвета.</p>
+<p>Процесс превращения фотоаппарата в источник видеосигнала для ПК требует понимания двух основных подходов: использование родного программного обеспечения от производителя или применение сторонних решений для захвата видео. Выбор метода зависит от ваших целей — нужна ли вам простая связь в мессенджере или профессиональная трансляция с мультикамерой.</p>
+<p>Ниже мы детально разберем оба способа, укажем на критические нюансы совместимости и дадим пошаговые инструкции по настройке. Обратите внимание, что <em>Canon 550D</em> не имеет встроенного протокола UVC (USB Video Class) как современные беззеркалки, поэтому прямое подключение кабелем без вспомогательного ПО невозможно.</p>
+
+<h2 id="способы-подключения-и-программное-обеспечение">Способы подключения и программное обеспечение</h2>
+<p>Существует два основных пути реализации данной задачи: использование официального софта <em>Canon EOS Utility</em> или применение сторонних утилит, таких как <em>EOS Webcam Utility</em> или <em>DroidCam</em> (через захват видеокарты). Первый вариант является классическим, но часто ограничен функционалом и требует запуска специфического режима съемки на камере.</p>
+<p>Второй вариант, через утилиту <em>EOS Webcam Utility</em>, стал стандартом де-факто для многих пользователей. Она позволяет камере эмулировать веб-камеру, которую система видит как обычное USB-устройство ввода. Это открывает доступ к камере в любых приложениях: Zoom, Skype, OBS Studio или Google Meet без сложных настроек драйверов.</p>
+<p>Однако стоит учитывать, что <em>EOS Webcam Utility</em> для модели <em>550D</em> может потребовать специфической версии прошивки. Если у вас старая прошивка, софт может не распознать устройство. В таком случае необходимо обновить <em>firmware</em> камеры до последней доступной версии, скачанной с официального сайта Canon.</p>
+
+<div class="pb-poll" id="poll-fbf2d24d"><div class="pb-poll-question">📊 Какой софт вы планируете использовать?</div><div class="pb-poll-option" data-poll="fbf2d24d" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">EOS Webcam Utility</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="fbf2d24d" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">OBS Studio с захватом</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="fbf2d24d" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">EOS Utility</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="fbf2d24d" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, нужна помощь</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="пошаговая-настройка-через-eos-webcam-utility">Пошаговая настройка через EOS Webcam Utility</h2>
+<p>Первым этапом является скачивание и установка драйверов. Зайдите на официальный сайт поддержки Canon в раздел для вашей модели <em>550D</em>, найдите вкладку «Драйверы» и загрузите <em>EOS Webcam Utility</em> для вашей операционной системы (Windows или macOS).</p>
+<p>После установки драйверов необходимо подключить камеру к компьютеру с помощью качественного USB-кабеля. Убедитесь, что кабель не поврежден и обеспечивает стабильную передачу данных. Переключите камеру в режим видеосъемки (обычно это значок видеокамеры на диске режимов).</p>
+<p>Теперь откройте нужное приложение для видеосвязи. В настройках видео выберите источник <em>Canon EOS Webcam Utility</em>. Изображение с матрицы должно появиться мгновенно. Если картинка черная, проверьте, не открыто ли приложение <em>EOS Utility</em>, так как они могут конфликтовать за доступ к устройству.</p>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка готовности к трансляции</h4><label class="check-item"><input type="checkbox"><span>Установлен EOS Webcam Utility</span></label><label class="check-item"><input type="checkbox"><span>Камера подключен по USB</span></label><label class="check-item"><input type="checkbox"><span>Режим камеры — Video</span></label><label class="check-item"><input type="checkbox"><span>Приложение для связи запущено</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="альтернативный-метод-использование-obs-studio">Альтернативный метод: Использование OBS Studio</h2>
+<p>Если родной софт работает нестабильно или вы хотите получить максимальное качество с возможностью цветокоррекции, используйте <em>OBS Studio</em>. Этот бесплатный комбайн позволяет захватывать видеопоток с камеры и транслировать его в виртуальную камеру, которую затем можно выбрать в Zoom или Discord.</p>
+<p>В OBS добавьте новый источник «Устройство захвата видео» и выберите вашу <em>Canon 550D</em>. Здесь вы сможете настроить разрешение, битрейт и частоту кадров. Также полезно использовать функцию «Коррекция цвета», чтобы подогнать картинку под условия освещения в помещении.</p>
+<p>После настройки источника в OBS нажмите правой кнопкой мыши на список источников и выберите «Начать виртуальную камеру». Теперь в настройках вашего мессенджера в качестве веб-камеры следует выбрать «OBS Virtual Camera». Это дает полный контроль над картинкой без вмешательства в настройки самого фотоаппарата.</p>
+<details class="pb-accordion"><summary>Что делать, если OBS не видит камеру?</summary><div class="pb-accordion-body"><p>Проверьте, не используется ли камера другим приложением. Закройте все лишние программы, включая браузер. Убедитесь, что в настройках Windows в разделе «Конфиденциальность» разрешен доступ к камере для OBS Studio.</p></div></details>
+
+<h2 id="критические-нюансы-питания-и-перегрева">Критические нюансы питания и перегрева</h2>
+<p>Зеркальные камеры не предназначены для длительной работы видеосъемки. Батарея <em>LP-E8</em> модели <em>550D</em> разряжается за 30-40 минут непрерывной трансляции. Для длительного эфирного времени настоятельно необходимо использовать <em>False Battery</em> (кабель-свап с питанием от сети). Это устройство вставляется в отсек батареи и подключается к розетке 220В.</p>
+<p>Менее очевидная проблема — перегрев матрицы и процессора. При длительной записи видео в режиме Live View датчик камеры сильно нагревается. Если температура превысит критический порог, прибор автоматически отключится, чтобы избежать повреждения компонентов. Это может случиться даже через 40-50 минут непрерывной работы.</p>
+<blockquote>⚠️ Внимание: При использовании виртуальной камеры убедитесь, что разрешение источника совпадает с поддерживаемым приложением. Если OBS выдает 1080p, а Zoom принудительно снижает качество, изображение может «рассыпаться» или стать размытым. Всегда тестируйте связь перед началом эфира.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для предотвращения перегрева можно слегка приоткрыть крышку отсека для карт памяти или использовать небольшой USB-вентилятор, направленный на корпус камеры, но не на объектив.</p></aside>
+
+<h2 id="сравнение-методов-подключения">Сравнение методов подключения</h2>
+<p>Чтобы выбрать оптимальный вариант, сравним основные характеристики каждого метода. Прямое подключение через <em>EOS Webcam Utility</em> проще в настройке, но ограничивает настройки картинки. Использование <em>OBS</em> сложнее, но дает профессиональный контроль.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>EOS Webcam Utility</th>
+<th>OBS Studio + Virtual Cam</th>
+<th>Физический захват (HDMI)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Сложность настройки</td>
+<td>Низкая</td>
+<td>Средняя</td>
+<td>Высокая</td>
+</tr>
+<tr>
+<td>Качество изображения</td>
+<td>Среднее (сжато)</td>
+<td>Высокое (настраиваемое)</td>
+<td>Максимальное (Raw/Uncompressed)</td>
+</tr>
+<tr>
+<td>Звук</td>
+<td>Нет (только через ПК)</td>
+<td>Нет (только через ПК)</td>
+<td>Можно подключить микрофон</td>
+</tr>
+<tr>
+<td>Требования к ПК</td>
+<td>Минимальные</td>
+<td>Средние (мощная видеокарта)</td>
+<td>Требуется карта захвата</td>
+</tr>
+</tbody>
+</table></div>
+<p>Важно понимать, что HDMI-выход на <em>550D</em> выдает «чистый» сигнал только при использовании внешнего захвата (Capture Card), что требует дополнительных финансовых вложений. Для большинства домашних задач достаточно ПО-решений, но они имеют свои ограничения по наложению интерфейса камеры на видео.</p>
+<blockquote>⚠️ Внимание: В режиме Live View на LCD-экране камеры может отображаться интерфейс (инфо-панель, уровни). В настройках <em>EOS Utility</em> найдите пункт «Дисплей» и отключите все наложения, чтобы зрители видели только чистое изображение, а не меню настроек.</blockquote>
+
+<h2 id="устранение-частых-ошибок-и-проблем">Устранение частых ошибок и проблем</h2>
+<p>Частой проблемой является сообщение «Устройство не найдено» или зависание изображения. Это часто происходит из-за конфликта драйверов. Если вы ранее устанавливали <em>EOS Utility</em> версии 3.x, а затем установили <em>Webcam Utility</em>, система может путаться в устройствах. Решение — полное удаление старого софта через Панель управления.</p>
+<p>Еще одна проблема — отсутствие звука. Камера <em>Canon 550D</em> не передает звук через USB в режиме веб-камеры. Вам необходимо подключить внешний микрофон к компьютеру или использовать встроенный микрофон ноутбука. Синхронизация звука может потребовать небольшой задержки в настройках программы.</p>
+<p>Если изображение перевернуто или зеркально, проверьте настройки в приложении захвата. В <em>OBS</em> это делается через клик правой кнопкой по источнику видео и выбор «Преобразовать» → «Отразить по горизонтали». Также проверьте настройки самой камеры: иногда режим «Self-timer» (Самоспуск) может влиять на поведение клавиш управления.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главная мысль: Для стабильной работы без перегрева всегда используйте внешний источник питания (False Battery) и отключайте LCD-экран камеры, если он не нужен для мониторинга.</p></aside>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+<details>
+<summary>Можно ли использовать Canon 550D для Zoom без установки драйверов?</summary>
+<p>Нет, без установки драйвера <em>EOS Webcam Utility</em> или другого ПО камера не будет определяться системой как устройство видеоввода, так как она не поддерживает нативный протокол UVC.</p>
+</details>
+<details>
+<summary>Почему камера отключается через 30 минут работы?</summary>
+<p>Скорее всего, сработала защита от перегрева или разрядилась батарея. Рекомендуется использовать питание от сети через адаптер питания (Fake Battery) и следить за температурой корпуса.</p>
+</details>
+<details>
+<summary>Как выключить отображение меню на экране при трансляции?</summary>
+<p>В настройках <em>EOS Utility</em> или в самом меню камеры найдите пункт «Информация дисплея» или «Live View» и отключите отображение всех иконок и гистограмм.</p>
+</details>
+<details>
+<summary>Поддерживает ли 550D передачу звука при подключении к ПК?</summary>
+<p>Нет, при подключении через USB в режиме веб-камеры передача аудиопотока с микрофона камеры не реализуется. Звук нужно брать с внешнего микрофона или встроенного в компьютер.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/g/gd/gde-serijnyj-nomer-obektiva-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Где найти серийный номер объектива Canon: полное руководство</span>
+                <span class="pb-related-desc">Узнайте, где расположен серийный номер объектива Canon. Проверьте бокс, документацию и корпус. Как н</span>
+            </a><a href="/articles/c/ca/canon-eos-r6-kakie-obektivy-podkhodyat.html" class="pb-related-card">
+                <span class="pb-related-title">Какие объективы подходят для Canon EOS R6: полный гид по выбору</span>
+                <span class="pb-related-desc">Разбираем совместимость оптики с Canon EOS R6. Обзор native RF, адаптация EF/S, топовые модели для в</span>
+            </a><a href="/articles/c/ca/canon-1200d-ili-nikon-d5100-chto-luchshe.html" class="pb-related-card">
+                <span class="pb-related-title">Canon 1200D или Nikon D5100: полное сравнение камер</span>
+                <span class="pb-related-desc">Сравниваем Canon 1200D и Nikon D5100: матрица, видео, экран и эргономика. Узнайте, какая камера лучш</span>
+            </a><a href="/articles/k/ka/kak-razobrat-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Как разобрать фотоаппарат Canon: пошаговая инструкция по ремонту</span>
+                <span class="pb-related-desc">Подробный гайд по разборке зеркальных и беззеркальных камер Canon. Инструменты, этапы демонтажа корп</span>
+            </a><a href="/articles/c/ca/canon-eos-600d-na-amerikanskom-rynke-kak-nazyvaetsya.html" class="pb-related-card">
+                <span class="pb-related-title">Canon EOS 600D США: Как называется модель для американского рынка</span>
+                <span class="pb-related-desc">Узнайте официальное название Canon EOS 600D в США. Почему камера продается как Rebel T3i, в чем отли</span>
+            </a><a href="/articles/k/ka/kak-pravilno-nastroit-fotoapparat-canon-1200d.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить Canon 1200D: Полная инструкция по базовым параметрам</span>
+                <span class="pb-related-desc">Пошаговое руководство по настройке зеркальной камеры Canon 1200D. Разберем режимы съемки, баланс бел</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

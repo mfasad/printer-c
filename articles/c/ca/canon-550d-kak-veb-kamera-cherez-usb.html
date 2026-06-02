@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Canon 550D как веб-камера: полные инструкции подключения через USB — Кэнон Инфо</title>
+    <meta name="description" content="Подробная инструкция по использованию Canon 550D в качестве веб-камеры через USB. Сведения о Cannon EOS Utility, OBS, Clean HDMI и настройке видеостриминга.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-550d-kak-veb-kamera-cherez-usb.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Canon 550D как веб-камера: полные инструкции подключения через USB">
+    <meta property="og:description" content="Подробная инструкция по использованию Canon 550D в качестве веб-камеры через USB. Сведения о Cannon EOS Utility, OBS, Clean HDMI и настройке видеостриминга.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/podklyuchenie-k-pk/">Подключение к ПК</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Canon 550D как веб-камера: полные инструкции подключения через USB</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#технические-особенности-модели-и-ограничения-usb">Технические особенности модели и ограничения USB</a></li><li><a href="#метод-1-использование-canon-eos-utility">Метод 1: Использование Canon EOS Utility</a></li><li><a href="#метод-2-настройка-через-obs-studio-и-виртуальную-камеру">Метод 2: Настройка через OBS Studio и виртуальную камеру</a></li><li><a href="#метод-3-программные-плагины-и-сторонние-утилиты">Метод 3: Программные плагины и сторонние утилиты</a></li><li><a href="#проблема-с-режимом-live-view-и-нагревом">Проблема с режимом Live View и нагревом</a></li><li><a href="#альтернатива-подключение-через-hdmi-и-захватник">Альтернатива: Подключение через HDMI и захватник</a></li><li><a href="#сравнение-методов-подключения">Сравнение методов подключения</a></li><li><a href="#частые-вопросы-и-решения-проблем">Частые вопросы и решения проблем</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-podklyuchit-mfu-canon-ts-5040-k-kompyuteru-cherez-wifi.html">Подключение МФУ Canon TS5040 к компьютеру через Wi-Fi: Полное руководство</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-k-kompyuteru-windows.html">Как подключить принтер Canon к Windows: полное руководство 2026</a></li><li><a href="/articles/p/pr/printer-kenon-ts5040-kak-podklyuchit-k-kompyuteru.html">Как подключить Canon TS5040 к компьютеру: полное руководство</a></li><li><a href="/articles/c/ca/canon-r-kak-podklyuchit-k-kompyuteru.html">Как подключить Canon R к компьютеру: USB, Wi-Fi и EOS Utility</a></li><li><a href="/articles/k/ka/kak-ustanovit-printer-canon-f158200-bez-ustanovochnogo-diska.html">Как установить принтер Canon F158200 без диска — пошаговая инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Использование Canon 550D в качестве веб-камеры через USB-подключение</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#технические-особенности-модели-и-ограничения-usb">Технические особенности модели и ограничения USB</a></li><li><a href="#метод-1-использование-canon-eos-utility">Метод 1: Использование Canon EOS Utility</a></li><li><a href="#метод-2-настройка-через-obs-studio-и-виртуальную-камеру">Метод 2: Настройка через OBS Studio и виртуальную камеру</a></li><li><a href="#метод-3-программные-плагины-и-сторонние-утилиты">Метод 3: Программные плагины и сторонние утилиты</a></li><li><a href="#проблема-с-режимом-live-view-и-нагревом">Проблема с режимом Live View и нагревом</a></li><li><a href="#альтернатива-подключение-через-hdmi-и-захватник">Альтернатива: Подключение через HDMI и захватник</a></li><li><a href="#сравнение-методов-подключения">Сравнение методов подключения</a></li><li><a href="#частые-вопросы-и-решения-проблем">Частые вопросы и решения проблем</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Многие пользователи, обладающие зеркальными камерами, задаются вопросом, как использовать свой аппарат для видеозвонков или стриминга, чтобы получить картинку лучшего качества, чем обеспечивают стандартные веб-камеры. <strong>Canon EOS 550D</strong> (также известная как <em>Rebel T2i</em>) остается одной из самых популярных моделей для таких задач благодаря отличному датчику и сменным объективам. Однако превращение этой камеры в инструмент для видеосвязи не всегда очевидно из-за особенностей её интерфейса и программного обеспечения.</p>
+
+<p>Существует несколько подходов к решению этой задачи: от использования штатного программного обеспечения <em>Canon EOS Utility</em> до подключения через захват видеокарты. Каждый метод имеет свои плюсы и минусы, особенно в контексте подключения именно через кабель <strong>USB</strong>. В этой статье мы разберем технические нюансы, необходимые требования и пошаговые алгоритмы действий для получения стабильного видеопотока.</p>
+
+<h2 id="технические-особенности-модели-и-ограничения-usb">Технические особенности модели и ограничения USB</h2>
+
+<p>Важно сразу понять фундаментальное различие в работе камер разных поколений. Модель <em>Canon 550D</em> была выпущена довольно давно, и в её "железе" не заложена нативная функция <strong>Webcam Utility</strong>, которая появилась позже у камер серии 90D или R-серии. Это означает, что просто подключить камеру по USB и выбрать её в списке устройств в <code>Skype</code> или <code>Zoom</code> не получится без использования промежуточного программного обеспечения.</p>
+
+<p>При подключении через стандартный интерфейс USB 2.0 камера передает цифровые данные, требующие декодирования. Если вы попытаетесь запустить видеосвязь сразу после подключения, система, скорее всего, определит устройство как фотоаппарат, а не как источник видеосигнала. Вам потребуется специальный драйвер или утилита, которая сможет перехватить этот поток и превратить его в виртуальную веб-камеру.</p>
+
+<p>Самым доступным способом является использование официального софта от производителя. Программа <em>Canon EOS Utility</em> позволяет выводить изображение с матрицы камеры на экран компьютера. Именно этот вывод изображения можно затем использовать в других приложениях, однако процесс требует правильной настройки <strong>драйверов</strong> и понимания режима работы камеры.</p>
+
+<h2 id="метод-1-использование-canon-eos-utility">Метод 1: Использование Canon EOS Utility</h2>
+
+<p>Первый и наиболее официальный способ — это установка утилиты <em>Canon EOS Utility</em> версии 3.14.1 или новее. Скачайте её с официального сайта поддержки Canon, убедившись, что версия совместима с вашей операционной системой. После установки и подключения камеры по USB через кабель <code>A-B</code>, утилита должна распознать устройство и предложить режим "Запуск камеры удаленно".</p>
+
+<p>В меню программы найдите раздел "Настройки веб-камеры" (Webcam Settings). Здесь вы можете выбрать разрешение и частоту кадров, которые будут передаваться в систему. Важно отметить, что этот метод несколько нагружает <strong>CPU</strong> компьютера, так как происходит процесс преобразования видеопотока в реальном времени. Для старых ПК это может стать проблемой при высокой нагрузке.</p>
+
+<ul>
+<li>📥 Скачайте ПО только с официального сайта Canon, избегая сторонних источников.</li>
+<li>🔌 Используйте качественный USB-кабель длиной не более 3 метров для стабильной передачи данных.</li>
+<li>⚙️ Настройте питание камеры: подключите <em>Power Adapter</em> вместо аккумулятора.</li>
+</ul>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> При работе через EOS Utility камера может автоматически отключать экран при простое. В настройках меню камеры отключите функцию <code>Автовыключение</code> и <code>Дисплей</code> (Display Off), чтобы предотвратить потерю видеосигнала во время длительных звонков.</p>
+</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Метод через EOS Utility является самым простым в настройке, но может давать небольшую задержку изображения и требует постоянного запущенного процесса утилиты.</p></aside>
+
+<h2 id="метод-2-настройка-через-obs-studio-и-виртуальную-камеру">Метод 2: Настройка через OBS Studio и виртуальную камеру</h2>
+
+<p>Более продвинутый и гибкий способ — использование программы <em>OBS Studio</em>. Это бесплатное программное обеспечение позволяет захватывать изображение с камеры через <strong>DirectShow</strong> или специализированные плагины, а затем транслировать его как виртуальное устройство. Это дает возможность регулировать яркость, контраст и добавлять фильтры перед отправкой картинки в мессенджер.</p>
+
+<p>Для начала работы установите OBS и добавьте новый источник: "Устройство видеозахвата". В списке устройств должна появиться ваша <em>Canon 550D</em> (или название драйвера Canon). Если камера не отображается, проверьте, что она находится в режиме видеосъемки и утилита EOS Utility закрыта, так как они могут конфликтовать за доступ к устройству.</p>
+
+<p>После появления изображения в окне предпросмотра OBS, нажмите кнопку "Начать виртуальную камеру" (Start Virtual Camera) в панели управления справа. Теперь в настройках вашего мессенджера (Zoom, Teams, Discord) в качестве источника видео выберите "OBS Virtual Camera".</p>
+
+<details class="pb-accordion"><summary>Как избежать мерцания (flicker) изображения при использовании OBS?
+<p>В настройках источника видеозахвата в OBS перейдите во вкладку "Контроль управления" и установите частоту кадров в "50 Гц" или "60 Гц" в зависимости от частоты вашей сети, чтобы избежать полос на экране.--></p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание</summary><div class="pb-accordion-body"><p></strong> Некоторые антивирусные программы могут блокировать создание виртуального устройства. Если OBS не видит камеру, добавьте программу в исключения брандмауэра и антивируса.</p>
+</blockquote>
+
+
+<p>Установлен драйвер камеры</p>
+<p>Запущена OBS Studio</p>
+<p>Выбран источник "Устройство видеозахвата"</p>
+<p>Активирована "Виртуальная камера"</p>
+<p>Выбрана камера в мессенджере</p></div></details></p>
+
+<h2 id="метод-3-программные-плагины-и-сторонние-утилиты">Метод 3: Программные плагины и сторонние утилиты</h2>
+
+<p>Существуют альтернативные решения от сторонних разработчиков, такие как <em>SparkoCam</em> или <em>Camo</em>. Эти программы часто предоставляют более удобный интерфейс и дополнительные функции, недоступные в стандартном ПО Canon. Они умеют работать с камерами, которые не поддерживают нативный режим веб-камеры, используя свои алгоритмы захвата через USB.</p>
+
+<p>Однако следует учитывать, что многие из таких сервисов являются платными или имеют водяные знаки в бесплатной версии. Перед установкой внимательно изучите системные требования, так как некоторые плагины могут требовать установки специфических драйверов для <strong>DirectX</strong> и <strong>Visual Studio</strong>. Особенностью работы с <em>Canon 550D</em> в таких утилитах является необходимость перевода камеры в режим видеозаписи до подключения.</p>
+
+<ul>
+<li>💰 Проверьте стоимость лицензий, если планируете использовать платный софт на постоянной основе.</li>
+<li>🔧 Убедитесь в совместимости версии драйвера с вашей версией Windows (10 или 11).</li>
+<li>🚀 Тестируйте скорость отклика: некоторые утилиты могут добавлять значительную задержку (latency).</li>
+</ul>
+
+
+<p>Официальный Canon EOS Utility</p>
+<p>OBS Studio с виртуальной камерой</p>
+<p>Сторонний софт (SparkoCam, Camo и др.)</p>
+<p>Пока не решил, ищу информацию--></p>
+
+<h2 id="проблема-с-режимом-live-view-и-нагревом">Проблема с режимом Live View и нагревом</h2>
+
+<p>Одной из главных сложностей при длительной работе <em>Canon 550D</em> в режиме веб-камеры является режим <strong>Live View</strong>. В этом режиме матрица постоянно активна, что приводит к значительному нагреву корпуса. Камера оснащена защитой от перегрева, которая может отключить видеопоток при достижении критической температуры, даже если питание подается от сети.</p>
+
+<p>Необходимо обеспечить хорошую вентиляцию. Не накрывайте камеру тканью и не ставьте её в закрытые пространства. Рекомендуется использовать внешний вентилятор для обдува корпуса или съемку в прохладном помещении. Также стоит отключить функцию "Гистограммы" и отображения информации на экране камеры, так как это снижает нагрузку на процессор обработки изображения.</p>
+
+<p>Длительная работа в режиме Live View также ускоряет деградацию затвора, если вы оставляете его открытым на долгое время, хотя в Live View затвор обычно поднят. Тем не менее, для долгих трансляций (более 2 часов) стоит рассмотреть возможность охлаждения корпуса. <mark>Canon 550D не имеет активного охлаждения, поэтому длительная работа без перерывов может привести к аварийному отключению.</mark></p>
+
+<h2 id="альтернатива-подключение-через-hdmi-и-захватник">Альтернатива: Подключение через HDMI и захватник</h2>
+
+<p>Если качество по USB вас не устраивает или возникают проблемы со стабильностью соединения, альтернативой является использование <strong>HDMI-кабеля</strong>. Для этого потребуется HDMI-кабель с защитой от отключения экрана (Mini-HDMI на 550D) и устройство видеозахвата (Capture Card). Этот метод позволяет передавать несжатый видеопоток напрямую в компьютер.</p>
+
+<p>В этом сценарии камера подключается к видеозахватнику, который затем подключается к ПК через USB. Для использования этого метода на <em>Canon 550D</em> необходимо активировать режим <code>Clean HDMI</code> (чистый вывод), чтобы на экране не было иконок настроек. К сожалению, в базовой прошивке 550D эта функция отсутствует, но её можно реализовать через сторонние прошивки, например, <em>Magic Lantern</em>.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед установкой альтернативной прошивки (Magic Lantern) обязательно сделайте резервную копию текущего ПО камеры, так как некорректная установка может привести к неработоспособности устройства.</p></aside>
+
+<p>Использование захватника дает более высокое качество картинки и меньшую нагрузку на процессор компьютера, так как кодирование часто берет на себя сам захватчик. Однако это требует дополнительных финансовых вложений на покупку оборудования и качественного кабеля.</p>
+
+<h2 id="сравнение-методов-подключения">Сравнение методов подключения</h2>
+
+<p>Чтобы выбрать оптимальный вариант, сравним основные характеристики разных способов использования камеры для видеосвязи. Выбор зависит от ваших технических возможностей, наличия периферии и требований к качеству изображения.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Качество</th>
+<th>Задержка</th>
+<th>Сложность</th>
+<th>Нагрузка на ПК</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EOS Utility</td>
+<td>Среднее</td>
+<td>Высокая</td>
+<td>Низкая</td>
+<td>Высокая</td>
+</tr>
+<tr>
+<td>OBS + Virtual Cam</td>
+<td>Высокое</td>
+<td>Средняя</td>
+<td>Средняя</td>
+<td>Средняя</td>
+</tr>
+<tr>
+<td>HDMI + Capture Card</td>
+<td>Отличное</td>
+<td>Низкая</td>
+<td>Высокая</td>
+<td>Низкая</td>
+</tr>
+<tr>
+<td>Сторонний софт</td>
+<td>Среднее/Высокое</td>
+<td>Средняя</td>
+<td>Средняя</td>
+<td>Средняя</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Убедитесь, что ваш USB-порт поддерживает стандарт USB 2.0 или выше. Подключение через старое оборудование может привести к снижению разрешения картинки до 640x480 пикселей.</p>
+</blockquote>
+
+<h2 id="частые-вопросы-и-решения-проблем">Частые вопросы и решения проблем</h2>
+
+<p>В процессе настройки пользователи часто сталкиваются с типичными проблемами, такими как отсутствие изображения, разрывы связи или черный экран. Большинство из них решается проверкой драйверов, кабелей и настроек конфиденциальности в операционной системе. Важно внимательно проверять, разрешен ли доступ к камере для конкретных приложений в настройках Windows.</p>
+
+<details>
+<summary>Почему камера не определяется в списке устройств?</summary>
+<p>Чаще всего проблема кроется в драйверах. Попробуйте удалить устройство в диспетчере устройств и переподключить его. Также убедитесь, что камера переведена в режим "Запуск камеры удаленно" в меню подключения.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать батарею вместо сетевого адаптера?</summary>
+<p>Технически возможно, но не рекомендуется для длительных сеансов. Батарея <em>LP-E8</em> быстро разрядится из-за постоянной работы матрицы в режиме Live View. Используйте фиктивный аккумулятор (DC coupler) для стабильной работы.</p>
+</details>
+
+<details>
+<summary>Как убрать иконки настроек с картинки?</summary>
+<p>В стандартной прошивке Canon 550D полностью убрать иконки сложно. Можно отключить отображение гистограммы и информации в меню камеры. Для полного "Clean HDMI" требуется установка прошивки Magic Lantern.</p>
+</details>
+
+<details>
+<summary>Почему картинка мерцает или чернеет?</summary>
+<p>Это связано с частотой переменного тока (50/60 Гц). В настройках меню камеры найдите раздел "Экспозиция" и измените частоту поляризации (Flicker Reduction) на значение, соответствующее вашей сети, или отрегулируйте выдержку в ручном режиме.</p>
+</details>
+
+<details>
+<summary>Подходит ли камера для профессионального стриминга?</summary>
+<p>Для старта и небольших трансляций <em>Canon 550D</em> отлично подойдет благодаря сменной оптике. Однако для профессионального использования без ограничений по времени лучше рассмотреть более современные модели с поддержкой чистого HDMI и эффективным охлаждением.
+</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-podklyuchit-mfu-canon-ts-5040-k-kompyuteru-cherez-wifi.html" class="pb-related-card">
+                <span class="pb-related-title">Подключение МФУ Canon TS5040 к компьютеру через Wi-Fi: Полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по настройке беспроводного подключения принтера Canon TS5040 к ПК. Решаем пробл</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-canon-k-kompyuteru-windows.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon к Windows: полное руководство 2026</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению Canon к ПК через USB и Wi-Fi. Настройка драйверов, устранение ош</span>
+            </a><a href="/articles/p/pr/printer-kenon-ts5040-kak-podklyuchit-k-kompyuteru.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon TS5040 к компьютеру: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по настройке принтера Canon Pixma TS5040. Подключение по USB и Wi-Fi, установка</span>
+            </a><a href="/articles/c/ca/canon-r-kak-podklyuchit-k-kompyuteru.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon R к компьютеру: USB, Wi-Fi и EOS Utility</span>
+                <span class="pb-related-desc">Полная инструкция по подключению фотоаппарата Canon R к ПК. Настройка USB, беспроводного соединения,</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-printer-canon-f158200-bez-ustanovochnogo-diska.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить принтер Canon F158200 без диска — пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по установке принтера Canon PIXMA F158200 без установочного диска. Скачивание </span>
+            </a><a href="/articles/c/ca/canon-1120-kak-podklyuchit.html" class="pb-related-card">
+                <span class="pb-related-title">Canon 1120: как подключить к ПК, Wi-Fi и телефону — пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по подключению принтера Canon PIXMA MG1120 к компьютеру (USB/Wi-Fi), смартфону</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

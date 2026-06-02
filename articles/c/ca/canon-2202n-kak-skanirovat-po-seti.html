@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Canon 2202N: сканирование по сети — пошаговая инструкция 2026 — Кэнон Инфо</title>
+    <meta name="description" content="Как настроить сетевое сканирование на Canon i-SENSYS LBP2202N: драйверы, IP-адрес, протоколы SMB/FTPS. Решаем ошибки подключения и оптимизируем настройки для Windows/macOS/Linux.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-2202n-kak-skanirovat-po-seti.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Canon 2202N: сканирование по сети — пошаговая инструкция 2026">
+    <meta property="og:description" content="Как настроить сетевое сканирование на Canon i-SENSYS LBP2202N: драйверы, IP-адрес, протоколы SMB/FTPS. Решаем ошибки подключения и оптимизируем настройки для Windows/macOS/Linux.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Canon 2202N: сканирование по сети — пошаговая инструкция 2026</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#1-подготовка-принтера-к-сетевому-сканированию">1. Подготовка принтера к сетевому сканированию</a></li><li><a href="#2-настройка-сетевых-параметров-через-веб-интерфейс">2. Настройка сетевых параметров через веб-интерфейс</a></li><li><a href="#3-конфигурация-протокола-smb-для-сканирования">3. Конфигурация протокола SMB для сканирования</a></li><li><a href="#4-установка-драйверов-и-по-для-сканирования">4. Установка драйверов и ПО для сканирования</a></li><li><a href="#5-пошаговая-инструкция-как-отсканировать-документ-по-сети">5. Пошаговая инструкция: как отсканировать документ по сети</a></li><li><a href="#6-типичные-ошибки-и-их-устранение">6. Типичные ошибки и их устранение</a></li><li><a href="#7-оптимизация-качества-сканирования">7. Оптимизация качества сканирования</a></li><li><a href="#8-альтернативные-способы-сканирования">8. Альтернативные способы сканирования</a></li><li><a href="#faq-частые-вопросы-по-сканированию-на-canon-lbp2202n">FAQ: Частые вопросы по сканированию на Canon LBP2202N</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-otskanirovat-bumagu-na-printere-canon.html">Как отсканировать документ на принтере Canon: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-skanirovat-na-printere-kenon-g3411.html">Как сканировать документы на принтере Canon G3411: Полная инструкция</a></li><li><a href="/articles/k/ke/kenon-skaner-kak-skanirovat.html">Как сканировать на Canon: Полная инструкция по настройке и использованию</a></li><li><a href="/articles/k/ka/kak-sdelat-kopiyu-na-printere-canon-mp250.html">Как сделать копию на принтере Canon MP250: полная инструкция</a></li><li><a href="/articles/k/ka/kak-nastroit-skan-na-printere-canon.html">Как настроить скан на принтере Canon: полное руководство 2026</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Сканирование по сети на Canon i-SENSYS LBP2202N: полное руководство от настройки до устранения ошибок</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#1-подготовка-принтера-к-сетевому-сканированию">1. Подготовка принтера к сетевому сканированию</a></li><li><a href="#2-настройка-сетевых-параметров-через-веб-интерфейс">2. Настройка сетевых параметров через веб-интерфейс</a></li><li><a href="#3-конфигурация-протокола-smb-для-сканирования">3. Конфигурация протокола SMB для сканирования</a></li><li><a href="#4-установка-драйверов-и-по-для-сканирования">4. Установка драйверов и ПО для сканирования</a></li><li><a href="#5-пошаговая-инструкция-как-отсканировать-документ-по-сети">5. Пошаговая инструкция: как отсканировать документ по сети</a></li><li><a href="#6-типичные-ошибки-и-их-устранение">6. Типичные ошибки и их устранение</a></li><li><a href="#7-оптимизация-качества-сканирования">7. Оптимизация качества сканирования</a></li><li><a href="#8-альтернативные-способы-сканирования">8. Альтернативные способы сканирования</a></li><li><a href="#faq-частые-вопросы-по-сканированию-на-canon-lbp2202n">FAQ: Частые вопросы по сканированию на Canon LBP2202N</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>МФУ <em>Canon i-SENSYS LBP2202N</em> — компактное решение для малого офиса, но его возможности сетевого сканирования часто остаются невостребованными из-за сложностей с настройкой. В отличие от моделей с экраном, здесь все параметры задаются через веб-интерфейс или драйвер, что пугает новичков. Между тем, правильно настроенный <strong>сетевой сканинг</strong> экономит время: документы сразу сохраняются на ПК, в облако или отправляются по email без лишних манипуляций с USB-накопителями.</p>
+
+<p>В этой статье разберём <mark>уникальную особенность LBP2202N</mark>: устройство поддерживает сканирование по сети только через протокол <code>SMB</code> (в отличие от старших моделей с <code>FTPS</code> и <code>Email-), но при этом позволяет гибко настраивать права доступа и пути сохранения. Мы пройдём весь путь: от подключения принтера к роутеру до решения типичных ошибок вроде «Не удалось подключиться к папке» или «Сканер не обнаружен». Особое внимание уделим настройкам безопасности — почему <strong>гостевой доступ к SMB</strong> может блокироваться в Windows 11 и как это обойти.</p>
+
+<p>Если вы ранее работали с сетевыми сканерами <em>Canon</em> (например, <em>MF269dw</em> или <em>MF4770n</em>), привычные меню здесь отсутствуют. LBP2202N использует упрощённую веб-панель управления, где критические параметры спрятаны в подразделах <code>Network Settings</code> и <code>Scan Settings</code>. Мы покажем, где именно их искать, и предоставим актуальные скриншоты интерфейса (на момент публикации).</p>
+
+<div class="pb-poll" id="poll-65809539"><div class="pb-poll-question">📊 Как вы обычно сканируете документы?</div><div class="pb-poll-option" data-poll="65809539" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Через USB-накопитель</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="65809539" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">По локальной сети</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="65809539" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">В облако (Google Drive, Dropbox)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="65809539" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">По электронной почте</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="65809539" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другой способ</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="1-подготовка-принтера-к-сетевому-сканированию">1. Подготовка принтера к сетевому сканированию</h2>
+
+<p>Прежде чем настраивать сканирование, убедитесь, что <em>Canon LBP2202N</em> корректно подключён к сети. Устройство поддерживает только проводное соединение (<code>Ethernet</code>), поэтому Wi-Fi адаптеры или USB-кабели здесь не помогут. Проверьте следующие моменты:</p>
+
+<ul>
+  <li>🔌 <strong>Кабель:</strong> используйте <code>Cat5e</code> или выше (витую пару). Избегайте удлинителей — они могут вызывать потерю пакетов.</li>
+  <li>🌐 <strong>Роутер:</strong> порт принтера должен быть подключён к LAN-порту маршрутизатора, а не к WAN.</li>
+  <li>💡 <strong>Индикаторы:</strong> на передней панели <em>LBP2202N</em> должна гореть зелёная лампочка <code>Network</code> (мигает при активности, горит постоянно — соединение установлено).</li>
+</ul>
+
+<p>Если индикатор сети не активен:</p>
+<ol>
+  <li>Проверьте кабель на физические повреждения.</li>
+  <li>Перезагрузите роутер и принтер (выключите оба устройства на 30 секунд).</li>
+  <li>Убедитесь, что на роутере включён протокол <code>DHCP</code> (иначе придётся назначать <strong>статический IP</strong> вручную).</li>
+</ol>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Принтер <em>LBP2202N</em> не поддерживает <code>IPv6</code>. Если ваша сеть работает только через <code>IPv6</code>, сканирование по сети будет невозможно. Переключите роутер в режим <code>IPv4</code> или используйте переходные технологии (например, <code>6to4</code>).</blockquote>
+
+<p>Чтобы узнать текущий <strong>IP-адрес принтера</strong>, распечатайте страницу настроек:</p>
+<ol>
+  <li>Удерживайте кнопку <code>Cancel</code> (❌) на передней панели 5 секунд, пока не замигают все индикаторы.</li>
+  <li>Отпустите кнопку — принтер распечатает отчёт с сетевыми параметрами.</li>
+</ol>
+
+<h2 id="2-настройка-сетевых-параметров-через-веб-интерфейс">2. Настройка сетевых параметров через веб-интерфейс</h2>
+
+<p>Веб-панель управления <em>Canon LBP2202N</em> позволяет настроить все ключевые параметры сканирования. Для входа:</p>
+<ol>
+  <li>Откройте браузер и введите IP-адрес принтера (например, <code>http://192.168.1.100</code>).</li>
+  <li>Введите логин и пароль (по умолчанию: <code>admin</code>/<code>canon</code> или <code>7654321</code> — смотрите на распечатанной странице настроек).</li>
+</ol>
+
+<p>Перейдите в раздел <code>Network Settings → TCP/IP Settings</code>. Здесь критически важны два параметра:</p>
+<ul>
+  <li>📌 <strong>IP Address:</strong> если используется <code>DHCP</code>, зафиксируйте текущий IP в настройках роутера (привяжите по MAC-адресу).</li>
+  <li>🔒 <strong>Subnet Mask/Gateway:</strong> должны совпадать с настройками вашей локальной сети (обычно <code>255.255.255.0</code> и <code>192.168.1.1</code>).</li>
+</ul>
+
+<p>Для стабильной работы сканирования рекомендуем:</p>
+
+<p>Отключить IPv6 в настройках роутера|</p>
+<p>Задать статический IP принтеру вне диапазона DHCP (например, 192.168.1.200)|</p>
+<p>Установить MTU = 1500 (в разделе Network Settings)|</p>
+<p>Отключить энергосбережение на порту роутера (если есть такая опция)--></p>
+
+<p>После сохранения настроек принтер перезагрузится. Дождитесь, пока индикатор <code>Network</code> не загорится зелёным.</p>
+
+<h2 id="3-конфигурация-протокола-smb-для-сканирования">3. Конфигурация протокола SMB для сканирования</h2>
+
+<p><em>Canon LBP2202N</em> поддерживает сканирование только через <strong>протокол SMB</strong> (Server Message Block). Это означает, что вам нужно:</p>
+<ol>
+  <li>Создать на ПК или сервере <strong>сетевую папку</strong> с правами на запись.</li>
+  <li>Настроить принтер на сохранение сканов в эту папку.</li>
+</ol>
+
+<p>Инструкция для <strong>Windows 10/11</strong>:</p>
+<ol>
+  <li>Создайте папку (например, <code>C:\Scans</code>).</li>
+  <li>Кликните правой кнопкой → <code>Свойства → Доступ → Расшарить</code>.</li>
+  <li>Выберите пользователя <code>Everyone</code> и дайте права <code>Чтение и запись</code>.</li>
+  <li>В разделе <code>Безопасность</code> добавьте пользователя <code>Гость</code> (если его нет, включите гостевой доступ в <code>Панель управления → Программы → Включение или отключение компонентов Windows</code>).</li>
+</ol>
+
+<p>Для <strong>macOS/Linux</strong> используйте <code>Samba</code>:</p>
+<pre><code>sudo apt install samba  # Для Debian/Ubuntu
+<p>sudo nano /etc/samba/smb.conf</code></pre></p>
+<p>Добавьте в конец файла:</p>
+<pre><code>[scans]
+<p>path = /home/user/scans</p>
+<p>writable = yes</p>
+<p>guest ok = yes</p>
+<p>create mask = 0777</code></pre></p>
+<p>Перезапустите службу:</p>
+<pre><code>sudo systemctl restart smbd</code></pre>
+
+<blockquote>⚠️ <strong>Внимание:</strong> В Windows 11 по умолчанию отключён протокол <code>SMBv1</code>, который требуется для совместимости с <em>LBP2202N</em>. Включите его через <code>Панель управления → Программы → Включение или отключение компонентов Windows → Поддержка общего доступа к файлам SMB 1.0/CIFS</code>. Альтернатива — обновить прошивку принтера (если доступна версия с поддержкой <code>SMBv2</code>).</blockquote>
+
+<p>В веб-интерфейсе принтера перейдите в <code>Scan Settings → SMB Settings</code> и укажите:</p>
+<ul>
+  <li>📁 <strong>Path:</strong> <code>\\IP_компьютера\имя_папки</code> (пример: <code>\\192.168.1.5\Scans</code>).</li>
+  <li>👤 <strong>Username/Password:</strong> если папка защищена, укажите данные пользователя с правами записи (для гостевого доступа оставьте пустым).</li>
+</ul>
+
+<h2 id="4-установка-драйверов-и-по-для-сканирования">4. Установка драйверов и ПО для сканирования</h2>
+
+<p>Для полноценной работы сетевого сканирования на ПК требуются:</p>
+<ol>
+  <li><strong>Драйвер принтера:</strong> скачайте с <a href="https://www.canon.ru" target="_blank">официального сайта Canon</a> (выберите модель <em>i-SENSYS LBP2202N</em> → раздел <code>Драйверы</code>).</li>
+  <li><strong>Утилита <em>Canon MF Scan Utility</strong>:</em> нужна для расширенных настроек (цветовые профили, разрешение, формат файлов).</li>
+</ol>
+
+<p>При установке драйвера выберите <code>Сетевой принтер</code> и укажите IP-адрес <em>LBP2202N</em>. В процессе установки может появиться предупреждение о неподписанном драйвере — игнорируйте его (это особенность драйверов <em>Canon</em> для старых моделей).</p>
+
+<p>После установки проверьте доступность сканера:</p>
+<ol>
+  <li>Откройте <code>Панель управления → Устройства и принтеры</code>.</li>
+  <li>Найдите <em>Canon LBP2202N</em> → кликните правой кнопкой → <code>Настройки сканирования</code>.</li>
+  <li>Запустите тестовое сканирование (например, в <code>Paint</code> или <em>MF Scan Utility</em>).</li>
+</ol>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>ПО</th>
+      <th>Назначение</th>
+      <th>Ссылка на скачивание</th>
+      <th>Примечания</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>Canon UFR II Driver</em></td>
+      <td>Драйвер для печати и базового сканирования</td>
+      <td>Официальный сайт Canon</td>
+      <td>Поддерживает Windows 7–11, macOS 10.13+</td>
+    </tr>
+    <tr>
+      <td><em>MF Scan Utility</em></td>
+      <td>Расширенное управление сканером</td>
+      <td>Официальный сайт Canon</td>
+      <td>Позволяет настраивать цветокоррекцию, OCR, многостраничные PDF</td>
+    </tr>
+    <tr>
+      <td><em>IJ Scan Utility</em></td>
+      <td>Альтернативная утилита для macOS</td>
+      <td>App Store</td>
+      <td>Требует настройку SMB вручную</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если сканер не определяется в Windows, попробуйте отключить брандмауэр или добавить исключение для файла <code>CNMUS16.DLL</code> (расположен в папке с драйвером).</p></aside>
+
+<h2 id="5-пошаговая-инструкция-как-отсканировать-документ-по-сети">5. Пошаговая инструкция: как отсканировать документ по сети</h2>
+
+<p>Когда все настройки завершены, процесс сканирования занимает менее минуты:</p>
+
+<ol>
+  <li><strong>Поместите документ</strong> в лоток ADF (автоматическая подача) или на стекло сканера. Для ADF максимальная толщина стопки — 50 листов (80 г/м²).</li>
+  <li><strong>Выберите режим сканирования:</strong>
+    <ul>
+      <li>🖼️ <strong>Цветной:</strong> <code>Color</code> (поддерживает 24-bit, но увеличивает размер файла).</li>
+      <li>⚪ <strong>Чёрно-белый:</strong> <code>Black & White</code> (рекомендуется для текстов).</li>
+      <li>📄 <strong>Текст (OCR):</strong> только через <em>MF Scan Utility</em>.</li>
+    </ul>
+  </li>
+  <li><strong>Запустите сканирование:</strong>
+    <ul>
+      <li>С ПК: через <em>MF Scan Utility</em> или контекстное меню принтера.</li>
+      <li>С панели принтера: нажмите и удерживайте <code>Scan</code> 3 секунды (если настроен <code>Quick Scan</code>).</li>
+    </ol>
+  </li>
+</ol>
+
+<p>По умолчанию файлы сохраняются в формате <code>PDF</code> (для многостраничных документов) или <code>JPEG</code> (для изображений). Чтобы изменить формат:</p>
+<ol>
+  <li>Откройте <em>MF Scan Utility</em>.</li>
+  <li>Перейдите в <code>Preferences → File Format</code>.</li>
+  <li>Выберите <code>TIFF</code>, <code>PNG</code> или <code>Searchable PDF</code> (с распознаванием текста).</li>
+</ol>
+
+<details class="pb-accordion"><summary>Как отсканировать двусторонний документ?</summary><div class="pb-accordion-body"><p>
+<p>Для дуплексного сканирования:</p>
+<p>1. Поместите документ в ADF лицевой стороной вверх, коротким краем вперёд.</p>
+<p>2. В настройках сканера выберите <code>Duplex</code> (в <em>MF Scan Utility</em> это опция <code>2-Sided Scan</code>).</p>
+<p>3. Принтер автоматически перевернёт листы и отсканирует обратную сторону.</p>
+<p>⚠️ Не поддерживаются документы с степлером или клеем — они могут застрять в ADF.</p></div></details></p>
+
+<h2 id="6-типичные-ошибки-и-их-устранение">6. Типичные ошибки и их устранение</h2>
+
+<p>Даже при правильной настройке могут возникать сбои. Вот самые распространённые:</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Ошибка</th>
+      <th>Причина</th>
+      <th>Решение</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Cannot connect to the folder</code></td>
+      <td>Неверный путь SMB или права доступа</td>
+      <td>Проверьте имя папки (регистр важен!) и настройки безопасности на ПК</td>
+    </tr>
+    <tr>
+      <td><code>Scanner not found</code></td>
+      <td>Принтер не в сети или заблокирован фаерволом</td>
+      <td>Пингуйте IP принтера (<code>ping 192.168.1.100</code>), отключите брандмауэр</td>
+    </tr>
+    <tr>
+      <td><code>Invalid username or password</code></td>
+      <td>Неверные учётные данные SMB</td>
+      <td>Используйте локального пользователя Windows (не Microsoft-account)</td>
+    </tr>
+    <tr>
+      <td>Сканер "зависает" на 99%</td>
+      <td>Конфликт с антивирусом (например, Kaspersky)</td>
+      <td>Добавьте исключение для <code>CNMUS16.exe</code> в антивирусе</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Если принтер не отвечает на ping:</p>
+<ol>
+  <li>Проверьте, горит ли индикатор <code>Network</code>.</li>
+  <li>Подключите принтер напрямую к ПК по Ethernet (минуя роутер).</li>
+  <li>Сбросьте настройки сети на принтере (зажмите <code>Cancel</code> на 10 секунд).</li>
+</ol>
+
+<blockquote>⚠️ <strong>Внимание:</strong> После обновления Windows до версии 22H2 многие пользователи сталкиваются с ошибкой <code>0x0000011b</code> при печати/сканировании. Это связано с новыми требованиями безопасности SMB. Решение: установите на принтер последнюю прошивку (доступна на сайте <em>Canon</em> в разделе <code>Firmware</code>) или откатите Windows до версии 21H2.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>90% ошибок сетевого сканирования на LBP2202N связаны с неверными настройками SMB или блокировкой портов антивирусом. Всегда начинайте диагностику с проверки ping и доступа к сетевой папке с другого устройства.</p></aside>
+
+<h2 id="7-оптимизация-качества-сканирования">7. Оптимизация качества сканирования</h2>
+
+<p>По умолчанию <em>LBP2202N</em> сканирует с разрешением <code>200 dpi</code> и средним уровнем сжатия. Для улучшения качества:</p>
+
+<ul>
+  <li>📏 <strong>Разрешение:</strong> в <em>MF Scan Utility</em> выберите <code>300 dpi</code> (для архивных документов) или <code>600 dpi</code> (для фотографий).</li>
+  <li>🎨 <strong>Цветовой профиль:</strong> для текстовых документов используйте <code>Black & White</code> с включённым <code>Text Enhancement</code>.</li>
+  <li>🗜️ <strong>Сжатие:</strong> для PDF выберите <code>High Compression</code> (уменьшает размер файла на 40% без потери качества текста).</li>
+</ul>
+
+<p>Для сканирования <strong>книг или журналов</strong>:</p>
+<ul>
+  <li>Используйте режим <code>Book Scan</code> в <em>MF Scan Utility</em> (автоматически убирает перекос страниц).</li>
+  <li>Отключите <code>Auto Exposure</code> — это предотвратит потерю деталей в тёмных областях.</li>
+</ul>
+
+<p>Совет для <strong>многостраничных документов:</strong> если скан сохраняется как отдельные файлы, в настройках <em>MF Scan Utility</em> включите опцию <code>Combine into Single File</code> и выберите формат <code>PDF/A</code> для долговременного хранения.</p>
+
+<h2 id="8-альтернативные-способы-сканирования">8. Альтернативные способы сканирования</h2>
+
+<p>Если сетевое сканирование не удаётся настроить, рассмотрите альтернативы:</p>
+
+<ul>
+  <li>🖥️ <strong>Локальное подключение:</strong> подключите принтер к ПК по USB и используйте <em>MF Scan Utility</em>. Скорость передачи данных выше, но теряется удобство сетевого доступа.</li>
+  <li>☁️ <strong>Облачное сканирование:</strong> настройте отправку сканов на email (требуется SMTP-сервер) или в <code>Google Drive</code> через сторонние утилиты вроде <em>Scan to Cloud</em>.</li>
+  <li>📱 <strong>Мобильное сканирование:</strong> используйте приложение <em>Canon PRINT Business</em> (доступно для iOS/Android). Поддерживает сканирование по Wi-Fi Direct (если роутер не стабилен).</li>
+</ul>
+
+<p>Для отправки сканов по <strong>email</strong>:</p>
+<ol>
+  <li>В веб-интерфейсе принтера перейдите в <code>Scan Settings → Email Settings</code>.</li>
+  <li>Укажите SMTP-сервер (например, <code>smtp.gmail.com:587</code>), логин/пароль и email получателя.</li>
+  <li>Включите <code>SSL/TLS</code> (обязательно для Gmail/Yandex).</li>
+</ol>
+
+<blockquote>⚠️ <strong>Внимание:</strong> При сканировании на email <em>Canon LBP2202N</em> не поддерживает аутентификацию <code>OAuth 2.0</code>. Если ваш почтовый сервер требует её (например, Microsoft 365), используйте "пароли приложений" или настройте локальный SMTP-сервер (например, <em>hMailServer</em>).</blockquote>
+
+<h2 id="faq-частые-вопросы-по-сканированию-на-canon-lbp2202n">FAQ: Частые вопросы по сканированию на Canon LBP2202N</h2>
+
+<details>
+  <summary>Можно ли сканировать по Wi-Fi?</summary>
+  <p>Нет, <em>Canon LBP2202N</em> поддерживает только проводное подключение (<code>Ethernet</code>). Для беспроводного сканирования потребуется USB-Wi-Fi адаптер с поддержкой <code>RNDIS</code> (но это не гарантирует стабильную работу).</p>
+</details>
+
+<details>
+  <summary>Как сканировать в PDF с поиском по тексту (OCR)?</summary>
+  <p>Установите <em>MF Scan Utility</em> и в настройках сканирования выберите <code>Searchable PDF</code>. Для русского языка дополнительно скачайте языковой пакет OCR с сайта <em>Canon</em> (раздел <code>Software</code>).</p>
+</details>
+
+<details>
+  <summary>Принтер сканирует, но файлы не сохраняются в папку. В чём проблема?</summary>
+  <p>Проверьте:
+  <ol>
+    <li>Права доступа к папке (должны быть <code>Чтение и запись</code> для <code>Everyone</code>).</li>
+    <li>Наличие свободного места на диске.</li>
+    <li>Отсутствие блокировки антивирусом (добавьте исключение для папки).</li>
+  </ol>
+  </p>
+</details>
+
+<details>
+  <summary>Можно ли сканировать на флешку и одновременно по сети?</summary>
+  <p>Нет, <em>LBP2202N</em> не поддерживает одновременное сканирование в несколько источников. Приоритет отдаётся сетевому сохранению, если оно настроено.</p>
+</details>
+
+<details>
+  <summary>Как сбросить настройки сканера к заводским?</summary>
+  <p>Зажмите кнопку <code>Cancel</code> на 15 секунд, пока все индикаторы не замигают трижды. Альтернативно — в веб-интерфейсе перейдите в <code>Device Settings → Reset All</code>.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-otskanirovat-bumagu-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как отсканировать документ на принтере Canon: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по сканированию бумаг на принтерах Canon: через ПК, смартфон, кнопки устройств</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-na-printere-kenon-g3411.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы на принтере Canon G3411: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая инструкция по сканированию на Canon G3411 через программу IJ Scan Utility и мобильное прил</span>
+            </a><a href="/articles/k/ke/kenon-skaner-kak-skanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на Canon: Полная инструкция по настройке и использованию</span>
+                <span class="pb-related-desc">Подробное руководство: как сканировать документы и фото на сканерах и МФУ Canon. Настройка ПО, работ</span>
+            </a><a href="/articles/k/ka/kak-sdelat-kopiyu-na-printere-canon-mp250.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать копию на принтере Canon MP250: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка копирования на мфу Canon MP250. Советы по качеству, устранение ошибок и работа с</span>
+            </a><a href="/articles/k/ka/kak-nastroit-skan-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить скан на принтере Canon: полное руководство 2026</span>
+                <span class="pb-related-desc">Пошаговая инструкция по настройке сканирования на принтерах Canon. Настройка через IJ Scan Utility, </span>
+            </a><a href="/articles/k/ka/kak-skanirovat-kenon-3010.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на Canon 3010: полное руководство по настройке</span>
+                <span class="pb-related-desc">Подробная инструкция: как сканировать документы на МФУ Canon 3010 через компьютер и смартфон. Устран</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

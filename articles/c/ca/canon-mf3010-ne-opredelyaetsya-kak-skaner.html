@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Canon MF3010 не определяется как сканер: причины и способы решения — Кэнон Инфо</title>
+    <meta name="description" content="Почему принтер Canon MF3010 не видит сканер в Windows? Полное руководство по драйверам, портам и настройкам службы WIA для восстановления работы.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-mf3010-ne-opredelyaetsya-kak-skaner.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Canon MF3010 не определяется как сканер: причины и способы решения">
+    <meta property="og:description" content="Почему принтер Canon MF3010 не видит сканер в Windows? Полное руководство по драйверам, портам и настройкам службы WIA для восстановления работы.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Canon MF3010 не определяется как сканер: причины и способы решения</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#причины-конфликта-драйверов-и-служб-windows">Причины конфликта драйверов и служб Windows</a></li><li><a href="#правила-переустановки-драйверов-сканера">Правила переустановки драйверов сканера</a></li><li><a href="#использование-утилиты-mf-scan-utility-для-диагностики">Использование утилиты MF Scan Utility для диагностики</a></li><li><a href="#проверка-физического-подключения-и-портов">Проверка физического подключения и портов</a></li><li><a href="#альтернативные-методы-сканирования">Альтернативные методы сканирования</a></li><li><a href="#сводная-таблица-методов-устранения-неполадок">Сводная таблица методов устранения неполадок</a></li><li><a href="#решение-проблем-с-антивирусами-и-фаерволами">Решение проблем с антивирусами и фаерволами</a></li><li><a href="#частые-вопросы-пользователей">Частые вопросы пользователей</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ca/canon-i-sensys-mf3228-kak-skanirovat.html">Как сканировать на Canon i-SENSYS MF3228: Полная инструкция</a></li><li><a href="/articles/p/pr/printer-kenon-mf4410-ne-skaniruet-na-kompyuter-chto-delat.html">Принтер Canon MF4410 не сканирует: причины и пошаговое решение</a></li><li><a href="/articles/k/ka/kak-otskanirovat-dokument-na-kompyuter-s-printera-kenon-mf-3010.html">Как отсканировать документ на компьютер с принтера Canon MF3010: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-ispolzovat-printer-canon-kak-skaner.html">Как использовать принтер Canon как сканер: полное руководство</a></li><li><a href="/articles/p/po/pochemu-ne-skaniruet-printer-canon-3010.html">Почему не сканирует принтер Canon 3010: 7 причин и решение</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Решение проблемы: Canon MF3010 не определяется как сканер</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#причины-конфликта-драйверов-и-служб-windows">Причины конфликта драйверов и служб Windows</a></li><li><a href="#правила-переустановки-драйверов-сканера">Правила переустановки драйверов сканера</a></li><li><a href="#использование-утилиты-mf-scan-utility-для-диагностики">Использование утилиты MF Scan Utility для диагностики</a></li><li><a href="#проверка-физического-подключения-и-портов">Проверка физического подключения и портов</a></li><li><a href="#альтернативные-методы-сканирования">Альтернативные методы сканирования</a></li><li><a href="#сводная-таблица-методов-устранения-неполадок">Сводная таблица методов устранения неполадок</a></li><li><a href="#решение-проблем-с-антивирусами-и-фаерволами">Решение проблем с антивирусами и фаерволами</a></li><li><a href="#частые-вопросы-пользователей">Частые вопросы пользователей</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Проблема, когда многофункциональное устройство <em>Canon imageCLASS MF3010</em> корректно печатает, но отказывается работать в режиме сканирования, является одной из самых распространенных жалоб пользователей. Ситуация выглядит парадоксально: подключение установлено, устройство реагирует на нажатие кнопок, однако операционная система не видит входящий поток данных от сканирующей головки.</p>
+
+<p>Часто пользователи пытаются переустановить драйверы по многу раз, не понимая, что корень зла кроется в конфликте служб Windows или устаревших утилитах управления. В данной статье мы разберем технические аспекты взаимодействия <em>Canon MF3010</em> с современными версиями ОС и приведем пошаговые методы устранения сбоя.</p>
+
+<h2 id="причины-конфликта-драйверов-и-служб-windows">Причины конфликта драйверов и служб Windows</h2>
+
+<p>Основная причина, по которой <em>Canon MF3010</em> перестает определяться как сканер, заключается в некорректной работе службы <code>Windows Image Acquisition (WIA)</code>. Эта системная служба отвечает за передачу изображений со сканеров и цифровых камер, и при её сбоях устройство может отображаться в «Диспетчере устройств», но быть недоступным для приложений.</p>
+
+<p>Нередко конфликт возникает из-за того, что установленная утилита <em>MF Scan Utility</em> пытается перехватить управление портом, блокируя доступ стандартным средствам ОС. Если вы используете старые версии драйверов, предназначенные для Windows 7 или 8, они могут вызывать ошибки совместимости на Windows 10 или 11, приводя к полной потере функционала сканирования.</p>
+
+<p>Важно проверить статус службы в системе: нажмите <code>Win + R</code>, введите <code>services.msc</code> и найдите строку с названием <code>Windows Image Acquisition</code>. Если её статус отличается от «Выполняется», или тип запуска установлен как «Вручную», это прямая причина неработоспособности.</p>
+
+<h2 id="правила-переустановки-драйверов-сканера">Правила переустановки драйверов сканера</h2>
+
+<p>Перед тем как скачивать новые файлы, необходимо полностью удалить старые компоненты, которые могли повредить конфигурацию. Используйте встроенный инструмент удаления программ в панели управления, но будьте внимательны: иногда остаются скрытые папки с конфигурациями в системном каталоге.</p>
+
+<p>Скачивайте драйверы только с официального сайта производителя, избегая сторонних репозиториев. Для модели <em>Canon MF3010</em> существует отдельный пакет драйверов, включающий модуль сканирования, который часто путают с общим драйвером принтера.</p>
+
+<ul>
+<li>🛠️ Полностью удалите текущий драйвер через «Удаление программ» и перезагрузите компьютер.</li>
+<li>🔌 Отключите USB-кабель от компьютера до момента начала установки нового драйвера.</li>
+<li>📥 Скачайте полный пакет «MF Driver» с официального ресурса, а не только драйвер принтера.</li>
+<li>🔄 Запустите установщик от имени администратора и дождитесь финального этапа, когда программа попросит подключить устройство.</li>
+</ul>
+
+<blockquote>⚠️ Внимание: Если установка драйвера завершается ошибкой кода 10 или 43, это указывает на физическую проблему с USB-портом или кабелем, а не на программный сбой. Попробуйте использовать другой кабель и порт, желательно расположенный на задней панели системного блока.</blockquote>
+
+<div class="pb-poll" id="poll-6484a0a8"><div class="pb-poll-question">📊 В какой версии Windows возникла проблема?</div><div class="pb-poll-option" data-poll="6484a0a8" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 10</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6484a0a8" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 11</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6484a0a8" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 7</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6484a0a8" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 8.1</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="использование-утилиты-mf-scan-utility-для-диагностики">Использование утилиты MF Scan Utility для диагностики</h2>
+
+<p>Для корректной работы сканера <em>Canon MF3010</em> рекомендуется использовать специализированную утилиту <code>MF Scan Utility</code>, которая идет в комплекте с драйверами. Она позволяет управлять настройками разрешения и формата выходного файла, а также выполняет первичную проверку связи с устройством.</p>
+
+<p>Если утилита не видит принтер, это сигнал о том, что проблема находится на уровне драйвера или физического подключения. В окне программы может появиться сообщение об ошибке связи, которое часто игнорируется пользователями, но оно содержит ключевую информацию о статусе устройства.</p>
+
+<p>Иногда помогает сброс настроек самой утилиты через меню <code>Настройки</code> -> <code>Сбросить настройки</code>. Это действие очищает кэшированные пути к устройству и заставляет программу заново сканировать порты на наличие подключенного оборудования.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед запуском утилиты</h4><label class="check-item"><input type="checkbox"><span>Установка полного драйвера</span></label><label class="check-item"><input type="checkbox"><span>Отключен антивирус</span></label><label class="check-item"><input type="checkbox"><span>Перезагрузка ПК</span></label><label class="check-item"><input type="checkbox"><span>Проверка USB-порта</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="проверка-физического-подключения-и-портов">Проверка физического подключения и портов</h2>
+
+<p>Многие пользователи забывают, что сканирование требует более стабильного протокола передачи данных, чем печать. Печать может работать даже при нестабильном соединении, отправляя пакеты данных заново, тогда как сканирование требует непрерывного потока данных, который легко разрывается при плохом контакте.</p>
+
+<p>Проверьте кабель USB: он должен быть качественным, без перегибов и повреждений изоляции. Длина кабеля не должна превышать рекомендованную производителем, обычно это 1.5–2 метра, так как на больших расстояниях сигнал деградирует.</p>
+
+<p>Не используйте USB-хабы или удлинители при подключении <em>Canon MF3010</em>. Прямое подключение к материнской плате компьютера является обязательным условием для стабильной работы сканера, так как хабы часто не обеспечивают достаточную мощность для инициализации сканирующей головки.</p>
+
+<p>Попробуйте вставить кабель в другой USB-порт, желательно USB 2.0, если у вас современный компьютер с портами 3.0. Иногда драйверы старых устройств конфликтуют с контроллерами USB 3.0, вызывая периодические отключения сканера.</p>
+
+<details class="pb-accordion"><summary>Что делать, если порт неисправен?</summary><div class="pb-accordion-body"><p>Если ни один порт не видит устройство, попробуйте подключить МФУ к другому компьютеру. Если там проблема сохраняется — это аппаратная неисправность USB-разъема на самом принтере или контроллера.</p></div></details>
+
+<h2 id="альтернативные-методы-сканирования">Альтернативные методы сканирования</h2>
+
+<p>Если штатные средства <em>Canon</em> не помогают, можно использовать встроенные возможности Windows. Приложение <code>Факсы и сканирование</code> или <code>Сканер Windows</code> (в Windows 10/11) часто работают даже при отсутствии специфических утилит производителя, используя стандартный драйвер WIA.</p>
+
+<p>Для запуска обратитесь к поиску системы и введите название приложения. В окне программы выберите устройство из выпадающего списка. Если <em>Canon MF3010</em> там отсутствует, значит, проблема глубже и требует переустановки служб.</p>
+
+<p>Также можно использовать сторонние программы, такие как <em>NAPS2</em> или <em>VueScan</em>. Эти утилиты имеют собственные драйверы и часто позволяют оживить оборудование, которое «не видят» стандартные средства ОС, особенно если используются устаревшие модели.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед использованием сторонних программ попробуйте удалить все драйверы Canon через диспетчер устройств, чтобы система автоматически установила стандартный драйвер WIA, который часто работает стабильнее фирменного в старых версиях ПО.</p></aside>
+
+<h2 id="сводная-таблица-методов-устранения-неполадок">Сводная таблица методов устранения неполадок</h2>
+
+<p>Для удобства сравнения различных способов решения проблемы, ниже представлена таблица методов, их сложности и ожидаемого результата. Это поможет вам выбрать оптимальный путь в зависимости от конкретной ситуации.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Сложность</th>
+<th>Ожидаемый результат</th>
+<th>Риск</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Перезапуск службы WIA</td>
+<td>Низкая</td>
+<td>Восстановление связи в 80% случаев</td>
+<td>Отсутствует</td>
+</tr>
+<tr>
+<td>Переустановка драйвера</td>
+<td>Средняя</td>
+<td>Полное восстановление функционала</td>
+<td>Возможна потеря настроек</td>
+</tr>
+<tr>
+<td>Замена USB-кабеля</td>
+<td>Низкая</td>
+<td>Устранение аппаратных сбоев</td>
+<td>Минимальный (стоимость кабеля)</td>
+</tr>
+<tr>
+<td>Использование NAPS2</td>
+<td>Средняя</td>
+<td>Работа через обходной путь</td>
+<td>Отсутствует</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>⚠️ Внимание: При использовании сторонних драйверов в Windows 10 и 11 система может блокировать их установку из-за проверки цифровой подписи. В этом случае потребуется отключить проверку подписи драйверов, что временно снижает безопасность системы.</blockquote>
+
+<h2 id="решение-проблем-с-антивирусами-и-фаерволами">Решение проблем с антивирусами и фаерволами</h2>
+
+<p>Современные антивирусные комплексы часто воспринимают попытки доступа к портам USB и сетевым драйверам как потенциальное угрозу. Это может приводить к тому, что приложение сканирования блокируется на уровне ядра, и устройство не получает ответ от принтера.</p>
+
+<p>Попробуйте временно отключить антивирусную защиту и брандмауэр, чтобы проверить, является ли они причиной сбоя. Если после отключения сканер начинает работать, необходимо добавить утилиту <code>MF Scan Utility</code> в список исключений.</p>
+
+<p>Обратите внимание, что некоторые программы оптимизации системы также могут отключать службы сканирования для «ускорения» работы. Проверьте настройки таких утилит, как CCleaner или Avast Cleanup, и убедитесь, что служба WIA не помечена как ненужная.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Частая причина отказа сканирования — конфликт между антивирусом и драйвером WIA. Исключение программы из списка блокировок часто решает проблему без полной переустановки ПО.</p></aside>
+
+<h2 id="частые-вопросы-пользователей">Частые вопросы пользователей</h2>
+
+<details>
+<summary>Почему принтер работает, а сканер нет?</summary>
+<p>Печать и сканирование используют разные протоколы передачи данных. Печать работает через стандартный драйвер принтера, а сканирование требует отдельно установленного модуля сканирования и активной службы WIA. Если модуль сканирования не установлен или поврежден, печать продолжит работать.</p>
+</details>
+
+<details>
+<summary>Можно ли сканировать через Wi-Fi на Canon MF3010?</summary>
+<p>Нет, модель Canon MF3010 не имеет встроенного модуля Wi-Fi и сети. Это устройство подключается исключительно через кабель USB. Для сканирования по сети необходимо использовать принтер с поддержкой LAN или подключить его к компьютеру, который затем может делиться сканером по сети.</p>
+</details>
+
+<details>
+<summary>Что делать, если драйвер не находит устройство в Windows 11?</summary>
+<p>В Windows 11 поддержка старых драйверов может быть ограничена. Попробуйте установить драйвер в режиме совместимости с Windows 7 или 8. Для этого щелкните правой кнопкой мыши по файлу установки, выберите «Свойства», затем вкладку «Совместимость» и настройте требуемую ОС.</p>
+</details>
+
+<details>
+<summary>Помогает ли удаление драйвера через диспетчер устройств?</summary>
+<p>Да, это необходимый этап перед чистой установкой. В «Диспетчере устройств» найдите устройство, нажмите правой кнопкой и выберите «Удалить устройство», поставив галочку «Удалить программы драйверов». После этого перезагрузите компьютер и установите драйвер заново.</p>
+</details>
+
+<blockquote>⚠️ Внимание: Если после всех манипуляций сканер все равно не определяется, возможно, проблема носит аппаратный характер и связана с выходом из строя модуля сканирования (CCD или CIS матрицы) внутри принтера. В этом случае требуется ремонт в сервисном центре.</blockquote></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ca/canon-i-sensys-mf3228-kak-skanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на Canon i-SENSYS MF3228: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая инструкция по сканированию документов на МФУ Canon i-SENSYS MF3228 через панель управления</span>
+            </a><a href="/articles/p/pr/printer-kenon-mf4410-ne-skaniruet-na-kompyuter-chto-delat.html" class="pb-related-card">
+                <span class="pb-related-title">Принтер Canon MF4410 не сканирует: причины и пошаговое решение</span>
+                <span class="pb-related-desc">Принтер Canon i-SENSYS MF4410 потерял связь со сканером? Узнайте, как восстановить драйверы, провери</span>
+            </a><a href="/articles/k/ka/kak-otskanirovat-dokument-na-kompyuter-s-printera-kenon-mf-3010.html" class="pb-related-card">
+                <span class="pb-related-title">Как отсканировать документ на компьютер с принтера Canon MF3010: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка сканирования с Canon i-SENSYS MF3010 на Windows. Установка драйверов, использова</span>
+            </a><a href="/articles/k/ka/kak-ispolzovat-printer-canon-kak-skaner.html" class="pb-related-card">
+                <span class="pb-related-title">Как использовать принтер Canon как сканер: полное руководство</span>
+                <span class="pb-related-desc">Научитесь сканировать документы с принтеров Canon. Пошаговая инструкция для Windows и macOS, настрой</span>
+            </a><a href="/articles/p/po/pochemu-ne-skaniruet-printer-canon-3010.html" class="pb-related-card">
+                <span class="pb-related-title">Почему не сканирует принтер Canon 3010: 7 причин и решение</span>
+                <span class="pb-related-desc">Принтер Canon 3010 не сканирует? Узнайте основные причины неисправности: от драйверов до настроек се</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-dokumenty-s-printera-na-kompyuter-canon-mf4018.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы с Canon MF4018 на компьютер: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство: настройка драйверов, сканирование через USB и сеть, использование UFR II LT и</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как подключить принтер Canon к Linux: полное руководство — Кэнон Инфо</title>
+    <meta name="description" content="Подробная инструкция по настройке принтеров Canon на Linux. Установка драйверов, настройка CUPS и решение частых проблем для Ubuntu, Debian и Arch.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-podklyuchit-printer-kenon-k-linuks.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как подключить принтер Canon к Linux: полное руководство">
+    <meta property="og:description" content="Подробная инструкция по настройке принтеров Canon на Linux. Установка драйверов, настройка CUPS и решение частых проблем для Ubuntu, Debian и Arch.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как подключить принтер Canon к Linux: полное руководство</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-системы-и-проверка-оборудования">Подготовка системы и проверка оборудования</a></li><li><a href="#установка-драйверов-через-графический-интерфейс">Установка драйверов через графический интерфейс</a></li><li><a href="#скачивание-и-установка-драйверов-с-сайта-canon">Скачивание и установка драйверов с сайта Canon</a></li><li><a href="#настройка-сетевой-печати-через-cups">Настройка сетевой печати через CUPS</a></li><li><a href="#решение-распространенных-проблем">Решение распространенных проблем</a></li><li><a href="#таблица-типовых-драйверов-для-популярных-моделей">Таблица типовых драйверов для популярных моделей</a></li><li><a href="#оптимизация-и-дополнительные-утилиты">Оптимизация и дополнительные утилиты</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kakoj-printer-luchshe-canon-ili-brother.html">Canon или Brother: какой принтер выбрать для дома и офиса в 2026</a></li><li><a href="/articles/m/mf/mfu-canon-pixma-mg2540-i-mg2540s-v-chem-raznitsa.html">МФУ Canon Pixma MG2540 и MG2540S: главные отличия и что выбрать</a></li><li><a href="/articles/k/ka/kak-skachat-drajvera-na-canon-lbp-6020.html">Как скачать драйвер Canon LBP 6020: официальная инструкция 2026</a></li><li><a href="/articles/k/ka/kak-vyklyuchit-ekonomnyj-rezhim-na-printere-canon-cherez-mak.html">Как отключить экономный режим на принтере Canon через Mac: инструкция</a></li><li><a href="/articles/p/pr/printer-canon-mg2140-kak-pechatat.html">Как печатать на Canon MG2140: полное руководство по настройке и управлению</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Пошаговая инструкция: как подключить принтер Canon к Linux</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-системы-и-проверка-оборудования">Подготовка системы и проверка оборудования</a></li><li><a href="#установка-драйверов-через-графический-интерфейс">Установка драйверов через графический интерфейс</a></li><li><a href="#скачивание-и-установка-драйверов-с-сайта-canon">Скачивание и установка драйверов с сайта Canon</a></li><li><a href="#настройка-сетевой-печати-через-cups">Настройка сетевой печати через CUPS</a></li><li><a href="#решение-распространенных-проблем">Решение распространенных проблем</a></li><li><a href="#таблица-типовых-драйверов-для-популярных-моделей">Таблица типовых драйверов для популярных моделей</a></li><li><a href="#оптимизация-и-дополнительные-утилиты">Оптимизация и дополнительные утилиты</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Подключение периферийного оборудования к операционным системам семейства Linux часто вызывает вопросы у пользователей, привыкших к автоматизации Windows. Однако современные дистрибутивы, такие как <code>Ubuntu</code>, <code>Fedora</code> или <code>Linux Mint</code>, обладают мощными встроенными механизмами для работы с принтерами.</p>
+<p>Специфика <em>Canon</em> заключается в том, что многие их модели требуют установки дополнительных пакетов драйверов, даже если система обнаруживает устройство автоматически. Без корректных драйверов печать может быть невозможна или работать с ошибками. В этой статье мы разберем все способы интеграции техники в вашу рабочую среду.</p>
+
+<h2 id="подготовка-системы-и-проверка-оборудования">Подготовка системы и проверка оборудования</h2>
+<p>Прежде чем приступать к установке драйверов, необходимо убедиться, что физическое подключение выполнено корректно. Для устройств с интерфейсом USB просто вставьте кабель в свободный порт на компьютере. Операционная система должна подать звуковой сигнал или уведомить о подключении нового устройства.</p>
+<p>Важно проверить, видит ли ядро Linux ваше устройство. Откройте терминал и введите команду <code>lsusb</code>. В списке подключенных девайсов вы должны увидеть строку с названием <em>Canon</em> или номером модели (например, <em>Canon G3000</em>). Если строки нет, проверьте кабель и порт на другом компьютере.</p>
+<p>Для сетевых принтеров убедитесь, что устройство подключено к той же сети Wi-Fi или LAN, что и ваш компьютер. Это критически важно для последующего обнаружения через протокол <strong>IPP</strong> или <strong>LPD</strong>. Проверьте IP-адрес устройства, напечатав тестовую страницу из меню самого принтера.</p>
+
+<h2 id="установка-драйверов-через-графический-интерфейс">Установка драйверов через графический интерфейс</h2>
+<p>Самый простой способ начать работу — использовать утилиту управления принтерами, встроенную в ваш дистрибутив. В меню системных настроек найдите раздел «Принтеры» или «Устройства печати». Нажмите кнопку «Добавить принтер».</p>
+<p>Система просканирует сеть и локальные порты. Если ваш <em>Canon</em> найден, выберите его из списка. Часто система автоматически подбирает нужный драйвер из репозитория <strong>PPD</strong>. Если это произошло, вы увидите название модели в выпадающем списке драйверов.</p>
+<p>В случае если автоматический подбор не сработал, система предложит поискать драйвер вручную. Здесь часто возникает проблема: стандартные репозитории могут не содержать специфических драйверов для новых моделей. Вам придется скачать их с официального сайта производителя.</p>
+
+<h2 id="скачивание-и-установка-драйверов-с-сайта-canon">Скачивание и установка драйверов с сайта Canon</h2>
+<p>Официальный сайт <em>Canon</em> предоставляет специальный пакет драйверов для Linux под названием <strong>UFR II</strong> или <em>CEC</em> (Canon Easy-WebPrint EX). Перейдите в раздел поддержки и введите точное название вашей модели. Убедитесь, что вы скачиваете версию именно для Linux, а не для Windows.</p>
+<p>Также часто требуется установить пакет библиотек <strong>CUPS</strong>, если он не был установлен по умолчанию. Эти библиотеки отвечают за обработку заданий печати. Без них система не сможет обработать файл и отправить его на устройство.</p>
+<p>Скачанный архив обычно имеет формат .deb (для Debian/Ubuntu) или .rpm (для Fedora/OpenSUSE). Распакуйте архив и найдите файлы с расширением <code>.deb</code> или <code>.rpm</code>. Запустите их через центр управления программным обеспечением или используйте терминал.</p>
+
+<p>Для установки пакета <code>deb</code> введите в терминале:</p>
+<pre><code>sudo dpkg -i cnijfilter2-*.deb</code></pre>
+<p>Если система выдает ошибку зависимостей, выполните команду <code>sudo apt-get -f install</code> (для Ubuntu/Debian) или <code>sudo dnf install</code> (для Fedora), чтобы доустановить недостающие компоненты.</p>
+
+<div class="pb-poll" id="poll-7272e164"><div class="pb-poll-question">📊 Какой у вас дистрибутив Linux?</div><div class="pb-poll-option" data-poll="7272e164" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Ubuntu/Mint</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="7272e164" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Fedora</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="7272e164" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Arch Linux</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="7272e164" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Debian</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="7272e164" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другой</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="настройка-сетевой-печати-через-cups">Настройка сетевой печати через CUPS</h2>
+<p>Если графический интерфейс не видит сетевой принтер, можно воспользоваться веб-интерфейсом системы управления печатью <strong>CUPS</strong>. Это мощный инструмент, доступный через браузер. Откройте его по адресу <code>http://localhost:631</code>.</p>
+<p>Вам потребуется авторизация под пользователем с правами администратора. Перейдите во вкладку <code>Administration</code> и выберите <code>Add Printer</code>. Система запросит логин и пароль от вашей учетной записи Linux.</p>
+<blockquote>⚠️ <strong>Внимание:</strong> Убедитесь, что служба CUPS запущена и активна. В противном случае страница не откроется. Проверьте статус командой <code>systemctl status cups</code>. Если служба остановлена, запустите её командой <code>sudo systemctl start cups</code>.</blockquote>
+<p>В списке доступных устройств выберите ваш <em>Canon</em>. Для сетевых моделей часто используется протокол <strong>AppSocket</strong> или <strong>IPP</strong>. В поле устройства укажите IP-адрес в формате <code>socket://192.168.1.50:9100</code> или <code>ipp://192.168.1.50/ipp/print</code>.</p>
+<p>На этапе выбора драйвера (Make/Model) выберите <em>Canon</em> из списка производителей. Если вашей модели нет в списке, используйте кнопку <code>PPE File</code> и загрузите скачанный ранее файл драйвера. Это гарантирует корректную работу всех функций, включая двустороннюю печать.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка сетевых настроек</h4><label class="check-item"><input type="checkbox"><span>Проверить IP-адрес на принтере</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в доступе к сети</span></label><label class="check-item"><input type="checkbox"><span>Открыть порт 631</span></label><label class="check-item"><input type="checkbox"><span>Запустить службу CUPS</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="решение-распространенных-проблем">Решение распространенных проблем</h2>
+<p>Иногда после установки драйверов печать не запускается или выдает ошибку «Job failed». Это может быть связано с правами доступа. Пользователь должен состоять в группе <strong>lp</strong> или <code>lpadmin</code>. Добавьте себя в группу командой <code>sudo usermod -aG lpadmin $USER</code>.</p>
+<p>Другая частая проблема — неверная кодировка текста или несоответствие формата бумаги. В настройках принтера в разделе «Свойства» проверьте, что установлен стандартный размер <code>A4</code>, а не Letter. Также убедитесь, что выбранный тип бумаги соответствует загруженному в лоток.</p>
+<p>Для некоторых старых моделей <em>Canon</em> (серия Pixma) может потребоваться выполнение скрипта настройки через терминал. Обычно это скрипт с именем <code>install.sh</code>. Запустите его с правами суперпользователя, чтобы он автоматически настроил пути к драйверам и реестр.</p>
+
+<details class="pb-accordion"><summary>Что делать, если драйвер не устанавливается?</summary><div class="pb-accordion-body"><p>Если установка через dpkg или rpm дает ошибку, проверьте архитектуру системы. Для 64-битных систем нужны пакеты amd64, а не i386. Убедитесь, что вы скачали правильный файл. Иногда помогает ручная распаковка архива и выполнение скрипта установки вручную.</p></div></details>
+
+<h2 id="таблица-типовых-драйверов-для-популярных-моделей">Таблица типовых драйверов для популярных моделей</h2>
+<p>Выбор правильного драйвера — залог стабильной работы. Ниже приведена таблица, соответствующая основным сериям устройств и типам пакетов, которые стоит искать на официальном сайте.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Серия принтера</th>
+<th>Примеры моделей</th>
+<th>Тип драйвера</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pixma (МФУ)</td>
+<td>G3010, TS3140, TS5340</td>
+<td>cnijfilter2</td>
+<td>Требует библиотек libusb</td>
+</tr>
+<tr>
+<td>LBP (Лазерные)</td>
+<td>LBP6030, LBP2900</td>
+<td>CAPT</td>
+<td>Уникальная архитектура Canon</td>
+</tr>
+<tr>
+<td>imageRUNNER</td>
+<td>IR2520, IR3530</td>
+<td>UFRII</td>
+<td>Для корпоративного сегмента</td>
+</tr>
+<tr>
+<td>Pro (Фото)</td>
+<td>PRO-100, PRO-200</td>
+<td>UFRII LT</td>
+<td>Поддержка высокого разрешения</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="оптимизация-и-дополнительные-утилиты">Оптимизация и дополнительные утилиты</h2>
+<p>После базовой настройки рекомендуется установить утилиту управления <em>Canon</em> для Linux. Она позволяет сканировать документы, проверять уровень чернил и обновлять прошивку устройства. Часто она называется <strong>Canon IJ Scan Utility</strong>.</p>
+<p>Эта утилита необходима для полноценного использования МФУ. Без неё сканирование возможно только через стандартные программы вроде <code>Simple Scan</code>, которые могут работать с ошибками на специфических моделях. Установку можно выполнить через центр приложений или терминал.</p>
+<p>Регулярно обновляйте пакеты системы. Разработчики <em>Canon</em> периодически выпускают исправления для новых версий ядра Linux. Если вы перешли на новую версию дистрибутива, проверьте сайт поддержки на наличие обновленных драйверов.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярно очищайте очередь печати, если задачи застряли. Используйте команду <code>cancel -a</code> в терминале, чтобы удалить все зависшие задания и избежать конфликтов.</p></aside>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Некоторые дистрибутивы Linux (например, Arch Linux) не имеют официальных репозиториев для драйверов <em>Canon</em>. Вам придется использовать AUR (Arch User Repository) или компилировать драйверы из исходного кода, что требует технических навыков.</blockquote>
+
+<p>Настройка печати в Linux может показаться сложной на первых порах, но понимание принципов работы <strong>CUPS</strong> и <em>драйверов</em> дает полный контроль над процессом. Главное — использовать правильные пакеты для вашей модели и версий ОС.</p>
+
+<h2 id="часто-задаваемые-вопросы">Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Почему принтер Canon не виден в списке сетевых устройств?</summary>
+<p>Это часто происходит из-за того, что служба обнаружения mDNS (Avahi) не запущена или настроена неправильно. Проверьте, доступен ли порт 631 с другого устройства в сети. Также убедитесь, что брандмауэр не блокирует входящие соединения.</p>
+</details>
+
+<details>
+<summary>Как настроить двустороннюю печать на Linux?</summary>
+<p>Откройте настройки принтера в графическом интерфейсе или через веб-интерфейс CUPS. Найдите раздел <code>Paper Handling</code> или <code>Finishing</code> и включите опцию <code>Double-sided printing</code>. Если драйвер не поддерживает эту функцию, возможно, потребуется обновление драйвера.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать драйвер от Windows на Linux?</summary>
+<p>Нет, напрямую использовать .exe или .sys файлы невозможно. Linux использует совершенно другую архитектуру драйверов. Вам необходимо скачать специфический пакет для Linux (обычно .deb или .rpm) с официального сайта производителя.</p>
+</details>
+
+<details>
+<summary>Что делать, если печать идет с ошибками кодировки?</summary>
+<p>Проблема часто возникает при печати кириллицы на старых моделях. Попробуйте в настройках принтера изменить язык описания страницы (PDL) на <strong>PCL</strong> или <strong>PostScript</strong>, если драйвер это поддерживает. Также проверьте локаль системы.</p>
+</details>
+
+<details>
+<summary>Как проверить статус очереди печати командной строкой?</summary>
+<p>Используйте команду <code>lpstat -t</code>. Она покажет список всех принтеров, их состояние и текущие задания в очереди. Для просмотра конкретных задач введите <code>lpstat -o</code>.</p>
+</details>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Правильно подобранный драйвер и корректная настройка службы CUPS — основа стабильной работы любого принтера Canon в среде Linux.</p></aside>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Условия поддержки и доступность драйверов на официальном сайте могут меняться. Перед установкой проверяйте актуальность версий ПО и совместимость с вашей версией ядра Linux в личном кабинете поддержки или документации.</blockquote></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kakoj-printer-luchshe-canon-ili-brother.html" class="pb-related-card">
+                <span class="pb-related-title">Canon или Brother: какой принтер выбрать для дома и офиса в 2026</span>
+                <span class="pb-related-desc">Сравнение принтеров Canon и Brother: надежность, стоимость отпечатка, качество печати. Экспертный ра</span>
+            </a><a href="/articles/m/mf/mfu-canon-pixma-mg2540-i-mg2540s-v-chem-raznitsa.html" class="pb-related-card">
+                <span class="pb-related-title">МФУ Canon Pixma MG2540 и MG2540S: главные отличия и что выбрать</span>
+                <span class="pb-related-desc">Сравниваем модели Canon Pixma MG2540 и MG2540S. Узнайте разницу в функционале, совместимости картрид</span>
+            </a><a href="/articles/k/ka/kak-skachat-drajvera-na-canon-lbp-6020.html" class="pb-related-card">
+                <span class="pb-related-title">Как скачать драйвер Canon LBP 6020: официальная инструкция 2026</span>
+                <span class="pb-related-desc">Пошаговое руководство по загрузке и установке драйвера для Canon LBP 6020 на Windows 10 и 11. Решени</span>
+            </a><a href="/articles/k/ka/kak-vyklyuchit-ekonomnyj-rezhim-na-printere-canon-cherez-mak.html" class="pb-related-card">
+                <span class="pb-related-title">Как отключить экономный режим на принтере Canon через Mac: инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по отключению тонер-сейва на принтерах Canon с macOS. Рассмотрены модели MG, P</span>
+            </a><a href="/articles/p/pr/printer-canon-mg2140-kak-pechatat.html" class="pb-related-card">
+                <span class="pb-related-title">Как печатать на Canon MG2140: полное руководство по настройке и управлению</span>
+                <span class="pb-related-desc">Подробная инструкция: как настроить принтер Canon MG2140, установить драйверы, печатать фото и докум</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-drajver-dlya-printera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить драйвер для принтера Canon: полная инструкция 2026</span>
+                <span class="pb-related-desc">Пошаговое руководство по установке драйверов Canon. Методы через диск, сайт и Windows Update. Решени</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

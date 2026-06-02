@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Профилирование принтеров Canon: создание и применение ICC-профилей — Кэнон Инфо</title>
+    <meta name="description" content="Как профилировать принтер Canon для идеальной цветопередачи. Создание ICC-профилей, выбор оборудования, калибровка монитора и настройка драйвера.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-profilirovat-printer-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Профилирование принтеров Canon: создание и применение ICC-профилей">
+    <meta property="og:description" content="Как профилировать принтер Canon для идеальной цветопередачи. Создание ICC-профилей, выбор оборудования, калибровка монитора и настройка драйвера.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Профилирование принтеров Canon: создание и применение ICC-профилей</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#почему-стандартные-настройки-часто-не-работают">Почему стандартные настройки часто не работают</a></li><li><a href="#необходимое-оборудование-и-программное-обеспечение">Необходимое оборудование и программное обеспечение</a></li><li><a href="#этапы-создания-профиля-от-печати-до-файла">Этапы создания профиля: от печати до файла</a></li><li><a href="#настройка-драйвера-и-принтера-для-использования-профиля">Настройка драйвера и принтера для использования профиля</a></li><li><a href="#типы-бумаги-и-их-влияние-на-цветопередаду">Типы бумаги и их влияние на цветопередаду</a></li><li><a href="#решение-частых-проблем-и-ошибки-пользователей">Решение частых проблем и ошибки пользователей</a></li><li><a href="#faq-ответы-на-популярные-вопросы">FAQ: Ответы на популярные вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-otklyuchit-slezhenie-za-urovnem-chernil-canon-mg2540s.html">Как отключить слежение за уровнем чернил Canon MG2540s: Полная инструкция</a></li><li><a href="/articles/p/pr/printer-polosit-pri-pechati-chto-delat-canon.html">Принтер Canon полосит при печати: причины и как исправить</a></li><li><a href="/articles/k/ka/kak-polzovatsya-printerom-canon-lbp-1120.html">Canon LBP 1120: инструкция по эксплуатации и настройке принтера</a></li><li><a href="/articles/k/ka/kak-pechatat-vizitki-na-printere-canon.html">Как печатать визитки на принтере Canon: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-nastroit-tsvetnuyu-pechat-na-printere-canon-g3411.html">Как настроить цветную печать на принтере Canon G3411: полное руководство</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полное руководство по профилированию принтеров Canon</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#почему-стандартные-настройки-часто-не-работают">Почему стандартные настройки часто не работают</a></li><li><a href="#необходимое-оборудование-и-программное-обеспечение">Необходимое оборудование и программное обеспечение</a></li><li><a href="#этапы-создания-профиля-от-печати-до-файла">Этапы создания профиля: от печати до файла</a></li><li><a href="#настройка-драйвера-и-принтера-для-использования-профиля">Настройка драйвера и принтера для использования профиля</a></li><li><a href="#типы-бумаги-и-их-влияние-на-цветопередаду">Типы бумаги и их влияние на цветопередаду</a></li><li><a href="#решение-частых-проблем-и-ошибки-пользователей">Решение частых проблем и ошибки пользователей</a></li><li><a href="#faq-ответы-на-популярные-вопросы">FAQ: Ответы на популярные вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Точная передача цветов — это фундамент профессиональной полиграфии и любительской печати фотографий. Если вы работаете с принтерами <em>Canon</em>, будь то модели серии <em>imagePROGRAF</em> или компактные <em>PIXMA</em>, простое нажатие кнопки «Печать» редко дает ожидаемый результат без предварительной подготовки. Цвета на экране и на бумаге могут кардинально отличаться из-за различий в цветовых моделях и характеристиках материалов.</p>
+<p>Процесс, который выравнивает эти различия, называется профилированием. Он позволяет создать уникальный математический файл — <strong>ICC-профиль</strong>, который описывает, как именно ваша конкретная связка «принтер + бумага + чернила» воспроизводит оттенки. Без этого шага даже самая дорогая техника не раскроет свой потенциал.</p>
+
+<h2 id="почему-стандартные-настройки-часто-не-работают">Почему стандартные настройки часто не работают</h2>
+
+<p>Производители <em>Canon</em> поставляют свои устройства с набором предустановленных профилей для популярных типов бумаги. Эти файлы созданы на эталонном оборудовании в идеальных условиях лаборатории. Однако в реальности на цвет влияет множество переменных: влажность в помещении, возраст чернил, календарная дата производства бумаги и даже температура в комнате.</p>
+<p>Использование стандартного драйвера без учета индивидуальных особенностей часто приводит к сдвигу оттенков в сторону синего или красного, а также к потере детализации в тенях. <strong>Управление цветом</strong> должно быть двусторонним: правильный профиль должен работать в связке с правильным <em>калиброванным монитором</em>.</p>
+<p>Если вы печатаете коммерческие заказы или критически важные художественные снимки, полагаться на «режим стандартной цветопередачи» рискованно. Разница между «хорошо» и «идеально» заключается в том, что именно вы видите перед печатью.</p>
+
+<blockquote>⚠️ Внимание: Стандартные драйверы Canon часто игнорируют настройки ICC-профилей при выборе режима «Управление цветом автоматически». В таких случаях система сама решает, как интерпретировать цвета, что ведет к непредсказуемым результатам.</blockquote>
+
+<div class="pb-poll" id="poll-4c0c6d51"><div class="pb-poll-question">📊 Какой тип печати вы используете чаще всего?</div><div class="pb-poll-option" data-poll="4c0c6d51" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Студийная фотография</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="4c0c6d51" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Полиграфия и макеты</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="4c0c6d51" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Документы и текст</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="4c0c6d51" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Техническая графика</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="необходимое-оборудование-и-программное-обеспечение">Необходимое оборудование и программное обеспечение</h2>
+
+<p>Чтобы начать процесс <strong>калибровки и профилирования</strong>, вам потребуется специализированный измерительный прибор — спектрофотометр или колориметр. Популярные решения, такие как <em>X-Rite i1Studio</em> или <em>Datacolor SpyderX</em>, позволяют считывать цвета с печатного цветового ключа (тестового образца). Без аппаратного считывания создание точного профиля невозможно, так как человеческий глаз несовершенен для оценки спектрального состава цвета.</p>
+<p>Самым важным этапом является подготовка <strong>цветового ключа</strong>. Это специальный лист бумаги, на котором принтер печатает сотни или тысячи цветных плашек различных оттенков. После печати этот лист измеряется прибором, который сверяет фактический цвет с эталонным значением.</p>
+<p>Программное обеспечение, поставляемое вместе с прибором (например, <em>i1Profiler</em> или <em>ColorMunki</em>), берет данные измерений и рассчитывает корректирующую кривую. В результате вы получаете файл с расширением .icc или .icm, который система распознает как профиль для вашей связки.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к профилированию</h4><label class="check-item"><input type="checkbox"><span>Калибровка монитора</span></label><label class="check-item"><input type="checkbox"><span>Проверка уровня чернил в картриджах</span></label><label class="check-item"><input type="checkbox"><span>Очистка дюз и выравнивание печатающей головки</span></label><label class="check-item"><input type="checkbox"><span>Печать тестового цветового ключа</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Для работы с профессиональными моделями <em>Canon imagePROGRAF</em> часто используется фирменное ПО <em>Canon Professional Print & Layout</em>. Оно позволяет гибко управлять цветом, но требует наличия корректного ICC-профиля, который можно создать через сторонние утилиты или использовать готовые пресеты для специфических фотобумаг.</p>
+
+<h2 id="этапы-создания-профиля-от-печати-до-файла">Этапы создания профиля: от печати до файла</h2>
+
+<p>Процесс профилирования начинается с создания чистого листа. Печать тестового шаблона должна происходить на той же бумаге, на которой вы планируете работать в будущем. Использование бумаги от другой партии или другого производителя сделает созданный профиль бесполезным, так как плотность и текстура поверхности напрямую влияют на впитываемость чернил.</p>
+<p>После печати цветового ключа необходимо дать ему высохнуть. Это критически важный момент: чернила, особенно пигментные, могут менять оттенок в течение первого часа после печати. <strong>Время стабилизации</strong> зависит от типа носителя, но обычно составляет от 15 до 60 минут.</p>
+<p>Затем следует измерение. Вы проводите прибором по цветным плашкам на бумаге. Программа автоматически считывает данные, сопоставляет их с эталонной таблицей и строит математическую модель отклонений. На этом этапе можно установить параметры рендеринга: <em>Perceptual</em> (восприятие) или <em>Relative Colorimetric</em> (относительный колориметрический).</p>
+
+<details class="pb-accordion"><summary>Особенности пигментных чернил Canon</summary><div class="pb-accordion-body"><p>Пигментные чернила Canon UltraChrome имеют высокую стойкость к выцветанию, но требуют больше времени для полного высыхания на некоторых типах матовой бумаги по сравнению с красящими чернилами.</p></div></details>
+
+<p>Результатом работы утилиты становится готовый файл профиля. Его нужно сохранить в системной папке профилей (обычно C:\Windows\System32\spool\drivers\color для Windows или Library/ColorSync/Profiles для macOS), чтобы он стал доступен всем приложениям.</p>
+
+<h2 id="настройка-драйвера-и-принтера-для-использования-профиля">Настройка драйвера и принтера для использования профиля</h2>
+
+<p>Создание файла — это только половина дела. Теперь его нужно корректно применить. Откройте настройки печати в любой программе (Lightroom, Photoshop или драйвере <em>Canon</em>). Найдите раздел «Управление цветом» или «Color Management».</p>
+<p>Важно убедиться, что управление цветом передается драйверу принтера, а не программе. В окне драйвера выберите «ICC-профиль» и укажите тот файл, который вы только что создали. Также необходимо выбрать правильный <strong>метод рендеринга</strong>, который зависит от типа изображения: для фотографий часто лучше подходит «Перцептивный», а для графиков с плавными градиентами — «Относительный колориметрический».</p>
+<p>Не забудьте отключить управление цветом в самой программе, если вы выбрали управление цветом в драйвере принтера, и наоборот. Двойное управление цветом приведет к сильному искажению, сделав изображение слишком темным или бледным.</p>
+
+<p>Для профессиональных моделей <em>Canon</em> существует функция <strong>Soft Proof</strong> (мягкая проба), которая позволяет увидеть, как изображение будет выглядеть на экране с примененным профилем принтера. Это экономит бумагу и чернила, позволяя корректировать фото до отправки на принтер.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед печатью большого тиража всегда делайте пробный отпечаток на небольшом фрагменте изображения, чтобы убедиться, что профиль работает корректно в ваших текущих условиях.</p></aside>
+
+<h2 id="типы-бумаги-и-их-влияние-на-цветопередаду">Типы бумаги и их влияние на цветопередаду</h2>
+
+<p>Каждый тип бумаги имеет уникальную структуру поверхности. Глянцевая бумага отражает свет иначе, чем матовая или фактурная художественная бумага. <strong>Плотность бумаги</strong> определяет, насколько глубоко чернила проникают в материал, что влияет на насыщенность черного цвета и контрастность.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип бумаги</th>
+<th>Особенности профиля</th>
+<th>Рекомендуемый метод рендеринга</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Glossy Photo Paper</em></td>
+<td>Высокая насыщенность, глубокий черный</td>
+<td>Relative Colorimetric</td>
+</tr>
+<tr>
+<td><em>Matte Fine Art</em></td>
+<td>Мягкие переходы, отсутствие бликов</td>
+<td>Perceptual</td>
+</tr>
+<tr>
+<td><em>Hahnemühle Photo Rag</em></td>
+<td>Текстурированная поверхность, специфичный черный</td>
+<td>Perceptual</td>
+</tr>
+<tr>
+<td><em>Transparency Film</em></td>
+<td>Требует высокой яркости и прозрачности</td>
+<td>Relative Colorimetric</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Если вы используете неоригинальную бумагу, стандартные профили <em>Canon</em> будут давать ошибку. В этом случае создание собственного профиля становится единственным способом добиться качественного результата. Даже бумага одного производителя, но разных серий, может требовать отдельной калибровки.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для достижения максимальной точности цвета необходимо создавать отдельный ICC-профиль для каждой комбинации: модель принтера + тип чернил + конкретный тип и партия бумаги.</p></aside>
+
+<h2 id="решение-частых-проблем-и-ошибки-пользователей">Решение частых проблем и ошибки пользователей</h2>
+
+<p>Частой ошибкой является игнорирование <strong>калибровки монитора</strong>. Если ваш дисплей показывает цвета неверно, то даже идеально созданный профиль на принтере не поможет — вы просто будете печатать то, что видите на экране, а экран лжет. Регулярная калибровка дисплея — обязательное условие работы.</p>
+<p>Другая проблема — истечение срока годности профиля. Со временем чернила в картриджах могут менять свои характеристики, особенно если принтер простаивал. Профиль, созданный год назад, может не подходить для текущих чернил. Рекомендуется пересоздавать профиль при смене партии чернил или после длительного простоя.</p>
+
+<blockquote>⚠️ Внимание: Не пытайтесь использовать профиль, созданный для матовой бумаги, на глянцевой. Это приведет к полному искажению цветового баланса и потере детализации.</blockquote>
+
+<p>Также стоит обратить внимание на настройки <code>Color Matching</code> в драйвере. Иногда пользователи случайно переключают режим с «ICC Profile» на «Canon Image Engine», что отключает использование созданных вами профилей и возвращает работу к заводским алгоритмам.</p>
+
+<details class="pb-accordion"><summary>Почему профиль не применяется?</summary><div class="pb-accordion-body"><p>Самая частая причина — конфликт между настройками программы (Photoshop/Lightroom) и драйвера принтера. Убедитесь, что управление цветом включено только в одном месте.</p></div></details>
+
+<p>Если после применения профиля цвета стали слишком тусклыми, проверьте настройки <strong>компрессии точки черного</strong>. Иногда автоматический алгоритм сглаживает тени слишком агрессивно, что можно скорректировать в расширенных настройках утилиты профилирования.</p>
+
+<h2 id="faq-ответы-на-популярные-вопросы">FAQ: Ответы на популярные вопросы</h2>
+
+<details>
+<summary>Нужно ли профилировать принтер Canon для печати документов?</summary>
+<p>Нет, для обычной печати текстовых документов и черно-белых графиков профилирование не требуется. Стандартные настройки обеспечивают достаточную точность для офисных задач. Профилирование необходимо только для цветных изображений, где важна точность оттенков.</p>
+</details>
+
+<details>
+<summary>Как часто нужно создавать новый профиль для одной и той же бумаги?</summary>
+<p>Рекомендуется обновлять профиль при смене партии чернил, смене производителя бумаги или если принтер простаивал более месяца. При стабильной ежедневной работе создание нового профиля каждые 3-6 месяцев поможет поддерживать максимальную точность.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать один профиль для разных принтеров Canon?</summary>
+<p>Нет, каждый принтер имеет индивидуальные характеристики печатающей головки и подачи чернил. Профиль, созданный для модели <em>Canon PIXMA Pro-200</em>, не подойдет для <em>Canon imagePROGRAF Pro-1000</em>, даже если используются одни и те же чернила и бумага.</p>
+</details>
+
+<details>
+<summary>Что такое Soft Proof и зачем он нужен?</summary>
+<p>Soft Proof — это функция эмуляции печати на экране. Она показывает, как изображение будет выглядеть на бумаге с учетом профиля принтера, позволяя заранее скорректировать цвета и избежать ошибок при печати, экономя расходные материалы.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-otklyuchit-slezhenie-za-urovnem-chernil-canon-mg2540s.html" class="pb-related-card">
+                <span class="pb-related-title">Как отключить слежение за уровнем чернил Canon MG2540s: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по отключению мониторинга уровня чернил на принтере Canon MG2540s. Узнайте, ка</span>
+            </a><a href="/articles/p/pr/printer-polosit-pri-pechati-chto-delat-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Принтер Canon полосит при печати: причины и как исправить</span>
+                <span class="pb-related-desc">Принтер Canon оставляет полосы на печати? Узнайте главные причины дефектов и пошаговые инструкции по</span>
+            </a><a href="/articles/k/ka/kak-polzovatsya-printerom-canon-lbp-1120.html" class="pb-related-card">
+                <span class="pb-related-title">Canon LBP 1120: инструкция по эксплуатации и настройке принтера</span>
+                <span class="pb-related-desc">Пошаговое руководство по использованию принтера Canon LBP 1120: установка драйверов, заправка картри</span>
+            </a><a href="/articles/k/ka/kak-pechatat-vizitki-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как печатать визитки на принтере Canon: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по печати визиток на струйных и лазерных принтерах Canon. Настройка бумаги, вы</span>
+            </a><a href="/articles/k/ka/kak-nastroit-tsvetnuyu-pechat-na-printere-canon-g3411.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить цветную печать на принтере Canon G3411: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по включению цветной печати на Canon G3411. Настройка драйверов, проверка черни</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-smartfon-k-printeru-cherez-wifi-canon-pixma-g3415.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить смартфон к принтеру Canon Pixma G3415 по Wi-Fi</span>
+                <span class="pb-related-desc">Пошаговая инструкция: настройка Canon PIXMA G3415 через Wi-Fi Direct и приложение Canon PRINT Inkjet</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

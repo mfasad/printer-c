@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как настроить сканирование по сети на Canon iR2520: Полная инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговое руководство по настройке сканирования по сети для Canon iR2520. Настройка SMB, FTP, проверка IP-адресов и устранение частых ошибок.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-ir2520-kak-skanirovat-po-seti.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как настроить сканирование по сети на Canon iR2520: Полная инструкция">
+    <meta property="og:description" content="Пошаговое руководство по настройке сканирования по сети для Canon iR2520. Настройка SMB, FTP, проверка IP-адресов и устранение частых ошибок.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как настроить сканирование по сети на Canon iR2520: Полная инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-сети-и-проверка-ip-адреса-устройства">Подготовка сети и проверка IP-адреса устройства</a></li><li><a href="#настройка-протокола-smb-для-сканирования-в-папку">Настройка протокола SMB для сканирования в папку</a></li><li><a href="#альтернативные-методы-ftp-и-email">Альтернативные методы: FTP и Email</a></li><li><a href="#регистрация-адресов-в-адресной-книге">Регистрация адресов в адресной книге</a></li><li><a href="#типичные-ошибки-и-способы-их-устранения">Типичные ошибки и способы их устранения</a></li><li><a href="#безопасность-и-обновления-прошивки">Безопасность и обновления прошивки</a></li><li><a href="#выводы-и-рекомендации">Выводы и рекомендации</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-skanirovat-na-printere-canon-g2411.html">Как сканировать на принтере Canon G2411: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-skanirovat-na-printere-kenon-3010-mf.html">Как сканировать на принтере Canon 3010 MF: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-delat-skan-na-printere-canon.html">Как сделать скан на принтере Canon: полное руководство</a></li><li><a href="/articles/k/ka/kak-otkserit-pasport-na-odnoj-stranitse-na-printere-canon.html">Как отксерить паспорт на одной странице на принтере Canon: Пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-sdelat-kserokopiyu-na-printere-canon-mf3110.html">Как сделать ксерокопию на принтере Canon MF3110: Пошаговая инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Настройка сканирования по сети для Canon imageRUNNER 2520</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-сети-и-проверка-ip-адреса-устройства">Подготовка сети и проверка IP-адреса устройства</a></li><li><a href="#настройка-протокола-smb-для-сканирования-в-папку">Настройка протокола SMB для сканирования в папку</a></li><li><a href="#альтернативные-методы-ftp-и-email">Альтернативные методы: FTP и Email</a></li><li><a href="#регистрация-адресов-в-адресной-книге">Регистрация адресов в адресной книге</a></li><li><a href="#типичные-ошибки-и-способы-их-устранения">Типичные ошибки и способы их устранения</a></li><li><a href="#безопасность-и-обновления-прошивки">Безопасность и обновления прошивки</a></li><li><a href="#выводы-и-рекомендации">Выводы и рекомендации</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Многие офисные сотрудники сталкиваются с необходимостью быстрого оцифровывания документов, чтобы отправить их коллегам или сохранить в облаке. Мультifunctional device <em>Canon iR2520</em> отлично справляется с этой задачей, если правильно его настроить. Без корректной конфигурации сканер будет работать только с подключенным компьютером через USB, что создает лишние неудобства.</p>
+<p>Процесс настройки сетевой передачи файлов может показаться сложным из-за обилия меню, но на самом деле он сводится к последовательному выполнению нескольких шагов. Главное — обеспечить стабильное подключение устройства к локальной сети и правильно указать путь на сервере или компьютере-получателе. В этой статье мы разберем все нюансы конфигурации протоколов передачи данных.</p>
+<p>Особенность модели <em>Canon iR2520</em> заключается в поддержке современных протоколов, таких как SMB и FTP, которые позволяют передавать большие объемы информации без посредников. Если вы столкнулись с ошибкой при отправке скана, проблема часто кроется в правах доступа или неверном формате адреса. Следующие разделы помогут вам избежать типичных ошибок.</p>
+
+<h2 id="подготовка-сети-и-проверка-ip-адреса-устройства">Подготовка сети и проверка IP-адреса устройства</h2>
+<p>Первым и самым важным этапом является обеспечение физической связи между МФУ и сетью. Убедитесь, что кабель Ethernet надежно подключен к порту на задней панели <em>Canon iR2520</em> и к роутеру или свитчу. Индикатор активности сети должен мигать, подтверждая наличие связи.</p>
+<p>Для корректной работы в сети устройству необходим статический IP-адрес. Динамическая выдача через DHCP может привести к тому, что при перезагрузке роутера адрес изменится, и компьютер перестанет видеть сканер. Зайдите в меню устройства, выбрав <code>Настройки/Регистрировка → Настройки сети → Настройки TCP/IP → Настройки IPv4</code>.</p>
+<p>Введите постоянный IP-адрес, маску подсети и шлюз, соответствующие вашей локальной сети. Например, если ваш роутер имеет адрес <code>192.168.1.1</code>, то для сканера можно задать <code>192.168.1.50</code>. Запишите эти данные, они понадобятся для дальнейшей настройки.</p>
+<blockquote>⚠️ <strong>Внимание</strong>: Если вы не знаете параметры вашей сети, обратитесь к системному администратору. Неправильная установка маски подсети или шлюза полностью изолирует устройство от остальной сети.</blockquote>
+
+<h2 id="настройка-протокола-smb-для-сканирования-в-папку">Настройка протокола SMB для сканирования в папку</h2>
+<p>Протокол SMB (Server Message Block) является стандартным методом для сканирования в общую папку на компьютере или файловом сервере. Это самый простой способ, не требующий установки дополнительного ПО на сервере. Однако он чувствителен к настройкам безопасности Windows.</p>
+<p>Создайте на компьютере папку, куда будут сохраняться сканы, и расшарьте её. В свойствах папки перейдите на вкладку «Доступ» и разрешите чтение и запись для нужного пользователя. Важно создать отдельного пользователя в Windows, если вы не хотите использовать учетную запись администратора, и запомнить его логин и пароль.</p>
+<p>Теперь необходимо добавить эту папку как адрес в меню МФУ. Перейдите в режим администратора, выберите <code>Адресная книга → Регистрация нового адреса</code>. В поле «Тип» укажите «Папка», а в поле «Адрес» введите путь в формате <code>\\IP_адрес_ПК\Имя_папки</code>. Заполните поля логина и пароля пользователя, обладающего правами на запись в эту папку.</p>
+<p>Для проверки связи используйте функцию «Тест» в окне регистрации адреса. Если тест пройден успешно, вы можете сохранить настройки и переходить к печати тестовой страницы.</p>
+<ul>
+<li>✅ Убедитесь, что пароль пользователя не содержит спецсимволов, которые могут быть не распознаны прошивкой.</li>
+<li>✅ Отключите быстрый запуск в Windows, так как он иногда мешает корректному подключению к сетевым ресурсам.</li>
+<li>✅ Проверьте, что файрвол не блокирует порты 139 и 445 для входящих соединений.</li>
+</ul>
+<div class="pb-poll" id="poll-bebb6f06"><div class="pb-poll-question">📊 Какой протокол сканирования вы используете чаще всего?</div><div class="pb-poll-option" data-poll="bebb6f06" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">SMB (в папку)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="bebb6f06" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">FTP</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="bebb6f06" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Email</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="bebb6f06" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Сканирование в облако</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="альтернативные-методы-ftp-и-email">Альтернативные методы: FTP и Email</h2>
+<p>Если протокол SMB вызывает трудности из-за обновлений безопасности операционной системы, отличным решением станет использование протокола FTP. Он более стабилен и меньше зависит от настроек файрвола, если правильно настроить сервер. Для этого потребуется установить FTP-сервер на компьютер или использовать готовый файловый сервер.</p>
+<p>Настройка FTP в <em>Canon iR2520</em> аналогична настройке SMB, но требует указания порта (обычно 21) и режима передачи. Выберите пассивный режим, если вы сканируете через маршрутизатор с NAT. Это поможет избежать проблем с соединением при передаче больших файлов.</p>
+<p>Сканирование по Email также доступно на этой модели. Для этого необходимо настроить параметры SMTP-сервера в разделе <code>Настройки/Регистрировка → Настройки сети → Настройки протокола → Настройки SMTP</code>. Укажите адрес сервера, порт, и данные для авторизации, если они требуются вашим провайдером.</p>
+<details class="pb-accordion"><summary>Что такое пассивный режим FTP?</summary><div class="pb-accordion-body"><p>Пассивный режим (PASV) используется, когда сервер и клиент находятся за разными NAT-маршрутизаторами. В этом режиме клиент инициирует соединение для передачи данных, что часто решает проблемы с фаерволами.</p></div></details>
+<p>Выбор метода зависит от вашей инфраструктуры. Для малого офиса достаточно SMB, тогда как для корпоративных сетей с разнородными ОС лучше подходит FTP.</p>
+<blockquote>⚠️ <strong>Внимание</strong>: При использовании протокола FTP убедитесь, что на сервере разрешена запись файлов с именами, содержащими кириллицу, иначе сканы могут не сохраниться.</blockquote>
+
+<h2 id="регистрация-адресов-в-адресной-книге">Регистрация адресов в адресной книге</h2>
+<p>После того как сетевые настройки завершены, следующий шаг — создание удобных ярлыков для операторов. Вы можете зарегистрировать до 200 адресов, что позволяет быстро отправлять документы конкретным людям или в общие папки отделов. Интерфейс управления адресной книгой доступен как через панель устройства, так и через веб-интерфейс.</p>
+<p>Для более удобного входа в настройки используйте программное обеспечение <strong>Remote UI</strong>. Откройте браузер, введите IP-адрес <em>Canon iR2520</em> и войдите под паролем администратора (по умолчанию часто используется <code>7654321</code> или пустой пароль). Это позволит использовать клавиатуру для ввода данных, что значительно быстрее, чем ввод с сенсорной панели.</p>
+<p>При регистрации группы адресов вы можете создать ярлык, по нажатию на который документ отправится сразу в три разных места. Это экономит время сотрудников, которые часто дублируют документы. Назначайте понятные имена адресам, например, «Бухгалтерия» или «Мой Директор».</p>
+<p>Не забудьте настроить параметры формата файла. Вы можете выбрать между PDF, TIFF или JPEG. Для текстовых документов оптимальным вариантом является PDF с возможностью поиска текста (OCR), если ваша модель поддерживает эту функцию.</p>
+<ul>
+<li>📂 Создайте отдельную папку «Архив» для сканирования важных документов в формате PDF/A.</li>
+<li>🔒 Ограничьте права доступа к адресной книге, чтобы пользователи не могли случайно изменить настройки отправки.</li>
+<li>📱 Используйте поиск по имени адреса для быстрого выбора получателя на сенсорном экране.</li>
+</ul>
+
+<h2 id="типичные-ошибки-и-способы-их-устранения">Типичные ошибки и способы их устранения</h2>
+<p>Даже при тщательной настройке могут возникать проблемы. Самая частая ошибка — «Ошибка аутентификации» или «Не удалось подключиться к папке». Обычно это связано с истекшим сроком действия пароля или изменением учетных данных пользователя в Windows.</p>
+<p>Если вы видите ошибку «Неверный путь», проверьте наличие пробелов и спецсимволов в имени папки или в путях к ней. Система <em>Canon</em> может некорректно обрабатывать длинные имена папок или вложенность более 4-х уровней. Попробуйте создать папку на корне диска с коротким именем, например <code>C:\Scans</code>.</p>
+<p>Другой распространенной проблемой является блокировка со стороны антивируса. Некоторые антивирусные программы на уровне сети блокируют попытки подключения к ресурсам, которые они считают подозрительными. Добавьте IP-адрес МФУ в список исключений вашего антивируса и фаервола.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Ошибка</th>
+<th>Возможная причина</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ошиб. 016-700</td>
+<td>Проблема с DNS</td>
+<td>Проверьте настройки DNS сервера в сетевых настройках устройства</td>
+</tr>
+<tr>
+<td>Ошиб. 5100</td>
+<td>Ошибка аутентификации SMB</td>
+<td>Смените пароль пользователя или проверьте версию SMB</td>
+</tr>
+<tr>
+<td>Ошиб. 5102</td>
+<td>Папка не найдена</td>
+<td>Проверьте правильность пути и наличие папки</td>
+</tr>
+<tr>
+<td>Ошиб. 20000</td>
+<td>Сетевой сбой</td>
+<td>Проверьте кабель и состояние интерфейса</td>
+</tr>
+</tbody>
+</table></div>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед отправкой</h4><label class="check-item"><input type="checkbox"><span>Проверен ли IP-адрес?</span></label><label class="check-item"><input type="checkbox"><span>Верен ли путь к папке?</span></label><label class="check-item"><input type="checkbox"><span>Правильно ли введен пароль?</span></label><label class="check-item"><input type="checkbox"><span>Включен ли компьютер-сервер?</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="безопасность-и-обновления-прошивки">Безопасность и обновления прошивки</h2>
+<p>Безопасность сетевых сканеров часто недооценивают, но это критически важный аспект. Злоумышленники могут получить доступ к вашим документам, если не установить надежные пароли и не обновить прошивку. Прошивка <em>Canon iR2520</em> выпускается регулярно для устранения уязвимостей.</p>
+<p>Для обновления прошивки зайдите на официальный сайт <strong>Canon</strong> в раздел поддержки, найдите вашу модель и скачайте последнюю версию. Загрузите файл на флешку или обновите через веб-интерфейс Remote UI. Обновление может занять от 10 до 30 минут, поэтому делайте это в нерабочее время.</p>
+<p>Также рекомендуется изменить пароль администратора по умолчанию. Стандартный пароль известен многим, и его использование представляет серьезную угрозу для конфиденциальности данных. Используйте сложные пароли, содержащие буквы и цифры.</p>
+<p>В корпоративных сетях можно настроить ограничение доступа к устройству по IP-адресам. Это позволит использовать сканер только с рабочих станций, входящих в список разрешенных. Это дополнительная мера защиты от несанкционированного использования.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярно проверяйте журнал событий на устройстве (System Monitor), чтобы отслеживать неудачные попытки входа в систему.</p></aside>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярное обновление прошивки и смена паролей по умолчанию — основа безопасности ваших корпоративных данных при использовании сетевых функций.</p></aside>
+
+<h2 id="выводы-и-рекомендации">Выводы и рекомендации</h2>
+<p>Настройка сканирования по сети на <em>Canon iR2520</em> — это задача, которая требует внимательности, но не глубоких технических знаний. Главное — последовательность действий: от настройки IP-адреса до проверки прав доступа к папке. Правильно настроенный сканер существенно ускоряет рабочий процесс.</p>
+<p>Если вы планируете масштабировать систему, рассмотрите возможность использования облачных сервисов или специализированного ПО для управления документооборотом. Это позволит автоматизировать обработку сканов и их интеграцию с другими бизнес-процессами. Однако для базовых нужд стандартных возможностей устройства более чем достаточно.</p>
+<p>Помните, что стабильность работы зависит не только от самого устройства, но и от качества сетевой инфраструктуры. Регулярный мониторинг состояния сети и своевременное обслуживание оборудования гарантируют бесперебойную работу. Игнорирование рекомендаций по безопасности может привести к утечке данных, поэтому не пренебрегайте настройками защиты.</p>
+<p>В случае возникновения сложных ошибок, которые не удаляется устранить самостоятельно, стоит обратиться кному сервисному центру. Специалисты помогут диагностировать проблему и, при необходимости, обновить программное обеспечение или заменить неисправные модули.</p>
+
+<details>
+<summary>Что делать, если компьютер не видит папку при сканировании?</summary>
+<p>Проверьте, включен ли общий доступ к файлам и принтерам в настройках Windows. Убедитесь, что в свойствах папки разрешен доступ для пользователя, под которым сканер пытается подключиться. Также проверьте, что служба «Рабочая станция» и «Сервер» запущены.</p>
+</details>
+<details>
+<summary>Можно ли сканировать по сети без создания общей папки?</summary>
+<p>Да, для этого можно использовать протокол FTP. В этом случае сканер будет загружать файлы на FTP-сервер, который может быть настроен на любом компьютере или специальном устройстве. Это альтернатива протоколу SMB.</p>
+</details>
+<details>
+<summary>Как узнать текущий IP-адрес устройства?</summary>
+<p>Нажмите кнопку «Меню» (или «Устройства»), перейдите в раздел «Состояние устройства» или «Печать отчетов». Выберите «Печать отчета конфигурации сети». На распечатанном листе будет указан текущий IP-адрес, маска подсети и шлюз.</p>
+</details>
+<details>
+<summary>Почему ошибка сканирования возникает только по ночам?</summary>
+<p>Это может быть связано с тем, что в ночное время компьютер, на который отправляются сканы, переходит в режим сна или гибернации. Убедитесь, что настройки электропитания не отключают сетевой адаптер или сам компьютер в нерабочее время.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-skanirovat-na-printere-canon-g2411.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на принтере Canon G2411: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по сканированию документов и фото на принтере Canon PIXMA G2411. Настройка, др</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-na-printere-kenon-3010-mf.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на принтере Canon 3010 MF: Полная инструкция</span>
+                <span class="pb-related-desc">Узнайте, как настроить сканирование документов и фото на МФУ Canon 3010 MF через USB и сеть. Простые</span>
+            </a><a href="/articles/k/ka/kak-delat-skan-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать скан на принтере Canon: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по сканированию документов на принтерах Canon. Настройка через IJ Scan Utility,</span>
+            </a><a href="/articles/k/ka/kak-otkserit-pasport-na-odnoj-stranitse-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как отксерить паспорт на одной странице на принтере Canon: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как разместить две стороны паспорта на одном листе на МФУ Canon. Инструкция с настройками м</span>
+            </a><a href="/articles/k/ka/kak-sdelat-kserokopiyu-na-printere-canon-mf3110.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать ксерокопию на принтере Canon MF3110: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробная инструкция по созданию копий на МФУ Canon MF3110. Разбор панели управления, настройки каче</span>
+            </a><a href="/articles/k/ka/kak-otskanirovat-dokument-na-noutbuk-s-printera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы с принтера Canon на ноутбук: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция: настройка драйверов, использование приложения IJ Scan Utility и стандартных ср</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

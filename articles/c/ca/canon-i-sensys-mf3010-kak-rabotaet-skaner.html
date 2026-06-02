@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Canon i-SENSYS MF3010: принцип работы сканера и настройка — Кэнон Инфо</title>
+    <meta name="description" content="Подробный разбор того, как работает сканер в МФУ Canon i-SENSYS MF3010. Инструкция по драйверам, требованиям к системе и устранению частых сбоев при сканировании.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-i-sensys-mf3010-kak-rabotaet-skaner.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Canon i-SENSYS MF3010: принцип работы сканера и настройка">
+    <meta property="og:description" content="Подробный разбор того, как работает сканер в МФУ Canon i-SENSYS MF3010. Инструкция по драйверам, требованиям к системе и устранению частых сбоев при сканировании.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Canon i-SENSYS MF3010: принцип работы сканера и настройка</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#аппаратная-архитектура-модуля-сканирования">Аппаратная архитектура модуля сканирования</a></li><li><a href="#роль-драйверов-и-по-в-процессе-обработки">Роль драйверов и ПО в процессе обработки</a></li><li><a href="#технология-оцифровки-и-параметры-качества">Технология оцифровки и параметры качества</a></li><li><a href="#пошаговая-настройка-и-запуск-сканирования">Пошаговая настройка и запуск сканирования</a></li><li><a href="#частые-проблемы-и-методы-их-устранения">Частые проблемы и методы их устранения</a></li><li><a href="#технические-характеристики-и-ограничения">Технические характеристики и ограничения</a></li><li><a href="#уход-за-оптической-системой">Уход за оптической системой</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-sdelat-skan-na-canon-g2415.html">Как сделать скан на Canon G2415: пошаговая инструкция 2026</a></li><li><a href="/articles/k/ka/kak-otskanirovat-dokument-na-kompyuter-s-printera-kenon-piksma.html">Как сканировать документ с Canon Pixma на компьютер: Полное руководство</a></li><li><a href="/articles/k/ka/kak-zapustit-skaner-canon-pixma-mg2440-bez-kartridzhej.html">Как запустить сканер Canon Pixma MG2440 без картриджей: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-skanirovat-dokumenty-na-canon-mg2540.html">Как сканировать документы на Canon MG2540: полное руководство</a></li><li><a href="/articles/k/ka/kak-nastroit-skaner-canon-4730.html">Как настроить сканер Canon 4730: драйверы, Wi-Fi и работа в сети</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Принцип работы сканера в МФУ Canon i-SENSYS MF3010: от сенсора до файла</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#аппаратная-архитектура-модуля-сканирования">Аппаратная архитектура модуля сканирования</a></li><li><a href="#роль-драйверов-и-по-в-процессе-обработки">Роль драйверов и ПО в процессе обработки</a></li><li><a href="#технология-оцифровки-и-параметры-качества">Технология оцифровки и параметры качества</a></li><li><a href="#пошаговая-настройка-и-запуск-сканирования">Пошаговая настройка и запуск сканирования</a></li><li><a href="#частые-проблемы-и-методы-их-устранения">Частые проблемы и методы их устранения</a></li><li><a href="#технические-характеристики-и-ограничения">Технические характеристики и ограничения</a></li><li><a href="#уход-за-оптической-системой">Уход за оптической системой</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Многофункциональное устройство <em>Canon i-SENSYS MF3010</em> остается одним из самых популярных решений для малого офиса благодаря своей компактности и надежности. Однако многие пользователи сталкиваются с нюансами, когда речь заходит о цифровом копировании документов. Понимание того, как именно работает сканер внутри корпуса, помогает быстрее диагностировать проблемы и грамотно настроить оборудование под свои задачи.</p>
+<p>В основе процесса лежит оптическая система, преобразующая аналоговое изображение страницы в цифровой сигнал. Для корректной работы всего устройства критически важно наличие правильного программного обеспечения, которое связывает аппаратную часть с операционной системой вашего компьютера. Если шаги настройки пропустить или выполнить неверно, привычная функция превратится в источник постоянных ошибок.</p>
+<p>В этой статье мы разберем технические особенности модуля считывания, требования к драйверам и дадим четкие инструкции по запуску процесса сканирования. Вы узнаете, почему иногда устройство «не видит» документ и как исправить распространенные сбои без обращения в сервисный центр.</p>
+
+<h2 id="аппаратная-архитектура-модуля-сканирования">Аппаратная архитектура модуля сканирования</h2>
+<p>Внутри корпуса <em>Canon i-SENSYS MF3010</em> установлен планшетный сканер, работающий по принципу линейной матрицы. В отличие от высокоскоростных протяжных моделей, здесь документ лежит неподвижно на стеклянной поверхности, а источник света перемещается под стеклом вдоль всего листа. Именно эта механика определяет скорость и качество получаемого изображения.</p>
+<p>Основой системы является <strong>CCD-матрица</strong> (или аналогичный датчик изображения), которая улавливает отраженный от бумаги свет. Лампа подсветки освещает документ, а система зеркал и линз фокусирует отраженный свет на фотодатчике. Каждый пиксель сенсора преобразует интенсивность света в электрический сигнал, который затем оцифровывается процессором устройства.</p>
+<p>Особенностью данной модели является отсутствие вращающихся барабанов для протяжки бумаги при сканировании. Это делает устройство идеальным для работы с хрупкими документами или книгами, где нельзя использовать автоматический податчик. Однако механическая подвижность каретки требует регулярной проверки на предмет посторонних шумов или засорения оптической пути.</p>
+
+<h2 id="роль-драйверов-и-по-в-процессе-обработки">Роль драйверов и ПО в процессе обработки</h2>
+<p>Физическое перемещение каретки — это только половина дела. Без специально написанного программного обеспечения компьютер просто не сможет управлять механизмом. Для <em>Canon i-SENSYS MF3010</strong> критически важен драйвер <strong>MF Scan Utility</strong>, который выступает посредником между операционной системой и аппаратным модулем.</p>
+<p>При запуске процесса сканирования система отправляет команду на инициализацию сенсора. Драйвер определяет разрешение, цветовой режим и формат выходного файла. Если драйвер устарел или поврежден, команды могут доходить с задержкой или вообще игнорироваться устройством. Именно поэтому установка драйверов должна быть первым шагом при подключении.</p>
+<p>Некоторые пользователи ошибочно полагают, что стандартных средств Windows достаточно для работы. Хотя базовая функция «Факс и сканирование» может запустить процесс, она часто не дает доступа к расширенным настройкам, таким как <strong>OCR-распознавание</em> или настройка контрастности. Полноценный функционал раскрывается только через фирменное ПО от производителя.</p>
+
+<h2 id="технология-оцифровки-и-параметры-качества">Технология оцифровки и параметры качества</h2>
+<p>Качество получаемого документа напрямую зависит от настроек разрешения, измеряемого в точках на дюйм (dpi). В режиме черно-белого текста достаточно низких значений, тогда как для цветных изображений требуется максимальное разрешение, которое поддерживает данная модель. Высокое <strong>DPI</em> обеспечивает четкость мелких деталей, но значительно увеличивает размер итогового файла.</p>
+<p>Процесс преобразования аналогового сигнала в цифровой включает в себя несколько этапов фильтрации шума и коррекции цвета. Программное обеспечение автоматически выравнивает яркость, чтобы избежать слишком темных или выгоревших участков на странице. Это особенно важно при работе со старыми документами, где бумага уже пожелтела.</p>
+<p>Важно понимать, что максимальное оптическое разрешение — это физический предел сенсора. Программная интерполяция, которая увеличивает разрешение за счет алгоритмов, не добавляет новых деталей, а лишь растягивает существующие пиксели. Поэтому для архивирования документов лучше использовать <em>оптическое</strong> разрешение, а не программно увеличенное.</p>
+
+<div class="pb-poll" id="poll-089db05d"><div class="pb-poll-question">📊 Какое разрешение вы обычно используете для сканирования?</div><div class="pb-poll-option" data-poll="089db05d" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">72-150 dpi (для экрана)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="089db05d" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">300 dpi (стандарт)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="089db05d" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">600 dpi (качество)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="089db05d" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Максимальное (1200 dpi)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="пошаговая-настройка-и-запуск-сканирования">Пошаговая настройка и запуск сканирования</h2>
+<p>Перед началом работы убедитесь, что устройство подключено к компьютеру через USB-кабель и находится в рабочем состоянии. Индикаторы на панели управления должны гореть зеленым, сигнализируя о готовности. Не пытайтесь запустить сканирование, если принтер находится в режиме «Пауза» или сигнализирует об ошибке загрузки бумаги.</p>
+<p>Для старта процесса откройте программу <code>MF Scan Utility</code> или стандартное приложение «Факсы и сканирование Windows». В меню выберите тип документа: «Документ» или «Фотография». Затем укажите папку для сохранения и формат файла, например, <strong>PDF</strong> для многостраничных документов или <strong>JPEG</em> для изображений.</p>
+<p>После нажатия кнопки «Сканировать» каретка начнет движение под стеклом. В этот момент не прикасайтесь к устройству и не закрывайте крышку с усилием. Если процесс прерывается или появляется сообщение об ошибке связи, проверьте целостность кабеля и перезапустите службу спулинга печати в системе.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к сканированию</h4><label class="check-item"><input type="checkbox"><span>Установить драйверы</span></label><label class="check-item"><input type="checkbox"><span>Открыть крышку МФУ</span></label><label class="check-item"><input type="checkbox"><span>Убрать загрязнения со стекла</span></label><label class="check-item"><input type="checkbox"><span>Нажать кнопку сканирования в ПО</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<blockquote>
+<p>⚠️ Внимание: Если световая полоса на стекле выглядит нечеткой или смещенной, это может указывать на физическое повреждение оптической системы. В этом случае программная перенастройка не поможет, потребуется замена модуля.</p>
+</blockquote>
+
+<h2 id="частые-проблемы-и-методы-их-устранения">Частые проблемы и методы их устранения</h2>
+<p>Одной из самых распространенных проблем является появление черных полос или пятен на отсканированных страницах. Причина чаще всего кроется в загрязнениях на стеклянной поверхности или на самом зеркале внутри устройства. Даже мельчайшая пылинка может создать заметную артефактную полосу на всем документе.</p>
+<p>Другой частый сбой — устройство не реагирует на команду «Сканировать». В этом случае проверьте, правильно ли определен порт в диспетчере устройств. Иногда Windows обновляет драйверы автоматически, заменяя их на несовместимые версии. В таком случае необходимо вручную откатить драйвер на версию от <em>Canon</em>.</p>
+<p>Также проблема может заключаться в отсутствии достаточного количества оперативной памяти на компьютере для обработки больших файлов. При сканировании в высоком разрешении процесс требует значительных ресурсов. Если компьютер зависает, попробуйте снизить разрешение или закрыть лишние приложения.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Фиксированное положение крышки критично для качества. Если крышка плотно не прилегает к документу, свет рассеивается, и изображение получается размытым или с тенями по краям.</p>
+</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед чисткой стекла обязательно отключите устройство от сети, чтобы избежать поражения током при случайном нажатии кнопок во время ухода за оптикой.</p></aside>
+
+<h2 id="технические-характеристики-и-ограничения">Технические характеристики и ограничения</h2>
+<p>Понимание ограничений модели помогает избежать разочарований при эксплуатации. <em>Canon i-SENSYS MF3010</em> не предназначен для массовой обработки больших объемов документов, так как процесс сканирования каждого листа требует ручного открытия и закрытия крышки. Это делает его идеальным для разовых задач, но неудобным для архивирования целых папок.</p>
+<p>Скорость сканирования также варьируется в зависимости от настроек. При максимальном разрешении и цветном режиме время обработки одной страницы может увеличиваться. Это связано с необходимостью обработки большего объема данных процессором устройства и передачей их по USB-интерфейсу.</p>
+<p>Ниже приведена сводная таблица ключевых параметров, влияющих на работу сканера:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+<th>Влияние на работу</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Тип сенсора</td>
+<td>CIS / CCD</td>
+<td>Определяет глубину резкости и необходимость плотного прижатия</td>
+</tr>
+<tr>
+<td>Максимальное разрешение</td>
+<td>600 x 600 dpi</td>
+<td>Влияет на детализацию и размер файла</td>
+</tr>
+<tr>
+<td>Глубина цвета</td>
+<td>24 бит</td>
+<td>Позволяет сканировать цветные изображения без потерь</td>
+</tr>
+<tr>
+<td>Интерфейс</td>
+<td>USB 2.0</td>
+<td>Ограничивает скорость передачи данных</td>
+</tr>
+<tr>
+<td>Поддерживаемые форматы</td>
+<td>PDF, JPEG, TIFF, PNG</td>
+<td>Определяет совместимость с другими программами</td>
+</tr>
+</tbody>
+</table></div>
+
+<details class="pb-accordion"><summary>Особенности работы с толстыми документами</summary><div class="pb-accordion-body"><p>Если вы сканируете книгу или толстый блокнот, убедитесь, что крышка не давит на переплет слишком сильно. Это может привести к деформации стекла или повреждению механизма шарнира. Рекомендуется использовать режим «Книги» в ПО, если он доступен, или сканировать по одной странице, слегка приподнимая крышку.</p></div></details>
+
+<h2 id="уход-за-оптической-системой">Уход за оптической системой</h2>
+<p>Долговечность работы сканера напрямую зависит от регулярного ухода. Стекло должно быть идеально чистым, без следов пальцев и пыли. Используйте только специальные салфетки для оптики или мягкую безворсовую ткань, слегка смоченную спиртовым раствором. Агрессивные химические средства могут повредить покрытие стекла.</p>
+<p>Важно также следить за состоянием уплотнителя по периметру крышки. Если он поврежден, внутрь корпуса может попадать пыль, которая затем оседает на зеркалах и каретке. Периодически осматривайте уплотнитель и при необходимости очищайте его от налипшей грязи.</p>
+<p>Не оставляйте устройство включенным на долгое время без необходимости. Хотя современные модели имеют режим энергосбережения, постоянное излучение лампы подсветки сокращает срок её службы. Если вы не планируете работать с документами в ближайшее время, лучше выключить устройство.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярная очистка стекла и правильное использование драйверов — залог стабильной работы сканера на протяжении многих лет.</p></aside>
+
+<details>
+<summary>Что делать, если компьютер не видит сканер Canon i-SENSYS MF3010?</summary>
+<p>Проверьте подключение USB-кабеля, попробуйте другой порт на компьютере. Убедитесь, что драйвер <strong>MF Driver</strong> установлен корректно. В диспетчере устройств проверьте, нет ли желтых восклицательных знаков напротив устройства. Если проблема сохраняется, перезагрузите компьютер и сам принтер.</p>
+</details>
+
+<details>
+<summary>Можно ли сканировать документы в высоком разрешении?</summary>
+<p>Да, модель поддерживает разрешение до <code>600 dpi</code>. Однако помните, что это значительно увеличивает время сканирования и размер файлов. Для текстовых документов достаточно <code>300 dpi</code>, для фотографий лучше использовать максимальное значение.</p>
+</details>
+
+<details>
+<summary>Почему на отсканированном изображении есть черная полоса?</summary>
+<p>Это признак загрязнения стекла или внутренней оптической системы. Очистите поверхность стекла мягкой тканью. Если полоса осталась, возможно, потребуется чистка зеркал внутри устройства, что лучше доверить специалистам.</p>
+</details>
+
+<details>
+<summary>Нужно ли устанавливать специальное ПО для сканирования?</summary>
+<p>Хотя базовые функции доступны через стандартные средства Windows, для полноценной работы с <em>Canon i-SENSYS MF3010</em> настоятельно рекомендуется установить пакет <strong>MF Scan Utility</strong>. Он обеспечивает доступ ко всем настройкам и функциям устройства.</p>
+</details>
+
+<details>
+<summary>Как часто нужно чистить сканер?</summary>
+<p>Рекомендуется проводить профилактическую чистку стекла раз в месяц или при появлении видимых загрязнений. Это предотвратит появление артефактов на документах и обеспечит высокое качество сканирования.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-sdelat-skan-na-canon-g2415.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать скан на Canon G2415: пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Подробное руководство по сканированию на МФУ Canon PIXMA G2415: настройки, программы, ошибки и совет</span>
+            </a><a href="/articles/k/ka/kak-otskanirovat-dokument-na-kompyuter-s-printera-kenon-piksma.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документ с Canon Pixma на компьютер: Полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция: настройка сканирования с принтеров Canon Pixma через IJ Scan Utility, драйверы</span>
+            </a><a href="/articles/k/ka/kak-zapustit-skaner-canon-pixma-mg2440-bez-kartridzhej.html" class="pb-related-card">
+                <span class="pb-related-title">Как запустить сканер Canon Pixma MG2440 без картриджей: Полная инструкция</span>
+                <span class="pb-related-desc">Узнайте, как включить сканирование на принтере Canon Pixma MG2440 при отсутствии чернил. Обход блоки</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-dokumenty-na-canon-mg2540.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы на Canon MG2540: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по сканированию документов и фото на МФУ Canon MG2540 через компьютер и телефон</span>
+            </a><a href="/articles/k/ka/kak-nastroit-skaner-canon-4730.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить сканер Canon 4730: драйверы, Wi-Fi и работа в сети</span>
+                <span class="pb-related-desc">Пошаговая инструкция по настройке МФУ Canon iC MF4730. Установка драйверов, подключение по USB и Wi-</span>
+            </a><a href="/articles/c/ca/canon-mp235-kak-skanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на Canon MP235: Полная инструкция по настройке</span>
+                <span class="pb-related-desc">Подробное руководство: как сканировать документы и фото на принтере Canon MP235 через компьютер и па</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

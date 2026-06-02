@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как установить CHDK на Canon: полная пошаговая инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Полное руководство по установке CHDK на фотоаппараты Canon. Узнайте, где скачать прошивку, как записать её на карту и активировать возможности режима LiveView.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ch/chdk-canon-kak-ustanovit.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как установить CHDK на Canon: полная пошаговая инструкция">
+    <meta property="og:description" content="Полное руководство по установке CHDK на фотоаппараты Canon. Узнайте, где скачать прошивку, как записать её на карту и активировать возможности режима LiveView.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/fotoapparaty-canon/">Фотоаппараты Canon</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как установить CHDK на Canon: полная пошаговая инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-карты-памяти-и-выбор-версии-прошивки">Подготовка карты памяти и выбор версии прошивки</a></li><li><a href="#форматирование-и-установка-загрузочного-флага">Форматирование и установка загрузочного флага</a></li><li><a href="#перенос-файлов-и-настройка-структуры-каталогов">Перенос файлов и настройка структуры каталогов</a></li><li><a href="#активация-режима-chdk-в-меню-камеры">Активация режима CHDK в меню камеры</a></li><li><a href="#проверка-работоспособности-и-базовая-настройка">Проверка работоспособности и базовая настройка</a></li><li><a href="#использование-расширенных-функций">Использование расширенных функций</a></li><li><a href="#возможные-проблемы-и-способы-их-решения">Возможные проблемы и способы их решения</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kakoj-obektiv-canon-vybrat-novichku-vmesto-shtatnogo.html">Какой объектив Canon выбрать новичку: гид по замене штатного кита</a></li><li><a href="/articles/k/ke/kenon-kak-posmotret-foto.html">Как посмотреть фото на камере Canon: обзор всех методов просмотра</a></li><li><a href="/articles/c/ca/canon-eos-600d-kakoj-akkumulyator.html">Аккумулятор для Canon EOS 600D: какой выбрать и как заменить</a></li><li><a href="/articles/k/ka/kakaya-zerkalka-luchshe-canon-ili-nikon.html">Canon или Nikon: какая зеркалка лучше для фотографа? Сравнение 2026</a></li><li><a href="/articles/o/ob/obektiv-55-200-canon-dlya-chego.html">Объектив Canon EF 55-200mm: для чего нужен и как использовать</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Руководство по установке CHDK на камеры Canon: от подготовки до активации</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-карты-памяти-и-выбор-версии-прошивки">Подготовка карты памяти и выбор версии прошивки</a></li><li><a href="#форматирование-и-установка-загрузочного-флага">Форматирование и установка загрузочного флага</a></li><li><a href="#перенос-файлов-и-настройка-структуры-каталогов">Перенос файлов и настройка структуры каталогов</a></li><li><a href="#активация-режима-chdk-в-меню-камеры">Активация режима CHDK в меню камеры</a></li><li><a href="#проверка-работоспособности-и-базовая-настройка">Проверка работоспособности и базовая настройка</a></li><li><a href="#использование-расширенных-функций">Использование расширенных функций</a></li><li><a href="#возможные-проблемы-и-способы-их-решения">Возможные проблемы и способы их решения</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Многие владельцы старых и бюджетных моделей <em>Canon</em> сталкиваются с ограничениями встроенного программного обеспечения, которое не позволяет раскрыть весь творческий потенциал устройства. Отсутствие ручных настроек выдержки и ISO в видеорежиме или невозможность использования интервальной съемки — лишь верхушка айсберга. Решением этой проблемы становится установка <strong>CHDK</strong> (Canon Hack Development Kit), прошивки с открытым исходным кодом, которая загружается прямо с карты памяти.</p>
+<p>В отличие от стандартных обновлений, <strong>CHDK</strong> не записывается во флеш-память камеры, а запускается только при наличии загрузочной карты. Это означает, что вы можете в любой момент вернуться к штатной работе устройства, просто вынув карту памяти. Интеграция такого мощного инструмента в <em>PowerShot</em> или <em>EOS</em> превращает обычную компактную камеру в профессиональный инструмент для макросъемки, астрофотографии и точного контроля экспозиции.</p>
+<p>Процесс установки кажется сложным только на первый взгляд, если не понимать логики работы скрипта загрузки. На самом деле, алгоритм действий строго детерминирован и требует лишь внимательности при работе с файловой системой. Вам предстоит правильно отформатировать носитель, скопировать специальные файлы и активировать загрузку через меню камеры.</p>
+
+<h2 id="подготовка-карты-памяти-и-выбор-версии-прошивки">Подготовка карты памяти и выбор версии прошивки</h2>
+<p>Первым и самым критичным этапом является подготовка носителя информации. Обычная карта памяти, отформатированная в камере, не сработает для первоначальной загрузки. Вам необходимо использовать компьютер для выполнения низкоуровневых операций. <strong>CHDK</strong> требует, чтобы на карте был установлен специальный загрузочный флаг, который заставляет камеру искать исполняемые файлы при старте.</p>
+<p>Скачивание дистрибутива должно происходить только с официального репозитория, так как модифицированные версии могут содержать вредоносный код или быть нестабильными. На сайте проекта нужно найти раздел <code>Downloads</code> и выбрать папку, соответствующую вашей модели камеры. </p>
+<p>Убедитесь, что вы скачиваете именно архив <strong>CHDK</strong> для вашей конкретной ревизии прошивки камеры. Иногда даже одно обновление <em>Canon</em> меняет работу загрузчика, требуя новой версии скрипта.</p>
+<blockquote>⚠️ <strong>Внимание</strong>: Если вы используете карту памяти объемом более 32 ГБ, убедитесь, что она отформатирована в файловой системе FAT32, а не exFAT. Старые модели камер могут не распознать exFAT, и процесс загрузки <strong>CHDK</strong> не начнется.</blockquote>
+
+<h2 id="форматирование-и-установка-загрузочного-флага">Форматирование и установка загрузочного флага</h2>
+<p>Для выполнения этой операции потребуется утилита <code>CHDKPTP</code> или встроенный в стандартный дистрибутив инструмент <code>Card Reader</code>. Самостоятельно изменить флаг загрузчика через стандартные инструменты Windows или macOS невозможно. Вы должны подключить карту к компьютеру и запустить программу, которая напишет необходимый бит в сектор загрузочной таблицы.</p>
+<p>В окне утилиты выберите вашу карту памяти и нажмите кнопку <code>Make Bootable</code>. Процесс мгновенен, но после его завершения система может запросить форматирование диска. Согласитесь на это действие, так как оно необходимо для создания правильной структуры файлов. После форматирования карта станет видна как загрузочная, но пока не содержит самой прошивки.</p>
+<p>Теперь необходимо извлечь содержимое скачанного архива <strong>CHDK</strong> и перенести его в корень карты памяти. Ключевым является сохранение структуры папок: файлы <code>PS.FI2</code> и <code>DISKBOOT.BIN</code> должны лежать в самом начале носителя, а папка <code>CHDK</code> — в корне. Любое перемещение этих файлов в подпапки приведет к тому, что камера не найдет их при включении.</p>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка готовности карты</h4><label class="check-item"><input type="checkbox"><span>Отформатировать в FAT32</span></label><label class="check-item"><input type="checkbox"><span>Запустить утилиту Card Reader</span></label><label class="check-item"><input type="checkbox"><span>Нажать Make Bootable</span></label><label class="check-item"><input type="checkbox"><span>Скопировать файлы в корень</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="перенос-файлов-и-настройка-структуры-каталогов">Перенос файлов и настройка структуры каталогов</h2>
+<p>После копирования файлов важно проверить их целостность и расположение. В корневой папке карты памяти должны находиться скрытые системные файлы, которые вы могли не заметить при обычном просмотре. Включите отображение скрытых файлов в настройках проводника, чтобы убедиться в наличии <code>DISKBOOT.BIN</code>.</p>
+<p>Дополнительно стоит проверить наличие папки <code>CHDK</code>, внутри которой лежат скрипты, языковые пакеты и настройки. Если вы используете <em>Canon EOS</em> с модулем LiveView, убедитесь, что соответствующие библиотеки загружены в подпапку <code>scripts</code>. Отсутствие этих файлов не помешает загрузке, но лишит вас расширенных функций.</p>
+<p>Некоторые пользователи предпочитают создавать резервную копию оригинальных файлов камеры перед записью <strong>CHDK</strong>. Это разумная мера предосторожности, позволяющая вернуть камеру в заводское состояние в случае критической ошибки. Скопируйте содержимое карты памяти на жесткий диск компьютера, прежде чем перезаписывать его новыми данными.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если вы используете карту памяти с защитой от записи (переключатель Lock), обязательно снимите его перед попыткой установки прошивки, иначе утилита не сможет записать загрузочный флаг.</p></aside>
+
+<h2 id="активация-режима-chdk-в-меню-камеры">Активация режима CHDK в меню камеры</h2>
+<p>Теперь, когда карта готова, вставьте её в отключенную камеру и включите устройство. В зависимости от модели, процесс запуска может занять от одной до пяти секунд. На экране может появиться надпись <code>CHDK</code> или просто обновленный интерфейс меню. Если экран остался черным или камера зависла — проблема в несовместимости версии прошивки.</p>
+<p>Для активации функционала нужно зайти в меню настроек камеры. Перейдите в раздел <code>Setup</code> (Настройки) и найдите пункт <code>CHDK Settings</code>. Если такого пункта нет, значит, камера не загрузила скрипт, и вам следует проверить форматирование карты. Внутри этого меню нужно активировать автоматическую загрузку <strong>CHDK</strong> при каждом включении.</p>
+<p>Установите опцию <code>Auto Load</code> в положение <code>Enabled</code>. Также рекомендуется включить функцию <code>Print Start</code>, чтобы прошивка не конфликтовала с функцией печати при подключении к компьютеру. После сохранения настроек перезапустите камеру, чтобы убедиться, что <strong>CHDK</strong> загружается стабильно и без зависаний.</p>
+<blockquote>⚠️ <strong>Внимание</strong>: При первом запуске <strong>CHDK</strong> может занять больше времени, чем обычно. Не вынимайте карту памяти и не выключайте питание в течение первых 10-15 секунд после включения, пока не появится меню или рабочий экран.</blockquote>
+<details class="pb-accordion"><summary>Что делать, если камера не загружается?|Если камера не загружается, попробуйте отключить автоматическую загрузку в BIOS (если доступно) или проверить, не повреждена ли карта памяти. Иногда помогает повторное форматирование через утилиту SD Formatter.-->
+
+<h2 id="проверка-работоспособности-и-базовая-настройка">Проверка работоспособности и базовая настройка</h2>
+<p>После успешной загрузки вы увидите на экране дополнительные элементы управления. Попробуйте вызвать меню прошивки, нажав комбинацию клавиш, указанную в документации (обычно это <code>Menu</code> или <code>Display</code> в зависимости от модели). В открывшемся окне проверьте версию ядра — она должна соответствовать той, что вы скачали.</p>
+<p>Перейдите в раздел <code>Scripting</code> и попробуйте запустить встроенный демо-скрипт. Это позволит убедиться, что интерпретатор работает корректно и камера реагирует на команды. Успешный запуск скрипта — лучший индикатор того, что <strong>CHDK</strong> готов к полноценному использованию.</p>
+<p>Не забудьте настроить параметры <code>LiveView</code>, если ваша модель <em>Canon</em> их поддерживает. Это позволит вам видеть изображение с матрицы на экране в реальном времени, что критически важно для макросъемки и фокусировки на труднодоступных объектах. Убедитесь, что разрешение LiveView установлено на комфортное для вас значение.</p>
+<!--WIDGET</summary><div class="pb-accordion-body"><p>poll:Какие функции CHDK вы планируете использовать чаще всего?:Интервальная съемка|Живая фокусировка (LiveView)|Съемка в RAW|Макросъемка</p></div></details>
+
+<h2 id="использование-расширенных-функций">Использование расширенных функций</h2>
+<p>Основная цель установки <strong>CHDK</strong> — получение доступа к функциям, недоступным в штатной прошивке. Самым популярным инструментом является интервальная съемка для создания таймлапсов. Вы можете настроить камеру на съемку одного кадра каждые несколько секунд или минут, сохраняя результаты в формате <strong>RAW</strong> для последующей обработки.</p>
+<p>Для астрофотографии используется функция <code>Long Exposure</code> (длительная выдержка), которая позволяет держать затвор открытым более 30 секунд. Это невозможно сделать штатно на большинстве компактных камер <em>Canon</em>. Также доступен режим <code>Bulb</code>, управляемый скриптами, что дает полный контроль над экспозицией.</p>
+<p>Особое внимание стоит уделить настройке <strong>ISO</strong>. В режиме <strong>CHDK</strong> можно вручную выставлять значения, превышающие стандартные ограничения, что полезно при съемке в условиях низкой освещенности. Однако помните, что увеличение чувствительности ведет к росту шумов на изображении.</p>
+
+<div class="pb-table-wrap"><table>
+ <thead>
+  <tr>
+   <th>Функция</th>
+   <th>Штатная прошивка</th>
+   <th>CHDK (с активацией)</th>
+   <th>Примечание</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>RAW-съемка</td>
+   <td>Только на профессиональных моделях</td>
+   <td>Доступно для большинства моделей</td>
+   <td>Позволяет гибкую постобработку</td>
+  </tr>
+  <tr>
+   <td>Интервалометр</td>
+   <td>Отсутствует</td>
+   <td>Встроенный скрипт</td>
+   <td>Для создания таймлапсов</td>
+  </tr>
+  <tr>
+   <td>LiveView</td>
+   <td>Частично или нет</td>
+   <td>Полный контроль</td>
+   <td>Для макросъемки и астрофотографии</td>
+  </tr>
+  <tr>
+   <td>Длительная выдержка</td>
+   <td>До 15-30 сек</td>
+   <td>Без ограничений (до часов)</td>
+   <td>Нужен штатив</td>
+  </tr>
+ </tbody>
+</table></div>
+
+<h2 id="возможные-проблемы-и-способы-их-решения">Возможные проблемы и способы их решения</h2>
+<p>Иногда при загрузке <strong>CHDK</strong> возникают ошибки, связанные с несовместимостью файлов. Если камера выдает сообщение <code>Error</code> при старте, проверьте, соответствует ли версия прошивки <em>Canon</em> требованиям скрипта. Для каждой камеры существует свой список поддерживаемых версий прошивки.</p>
+<p>Другой распространенной проблемой является зависание камеры при включении. В этом случае нужно извлечь карту памяти, отформатировать её на компьютере и загрузить файлы заново. Иногда помогает очистка кэша прошивки через специальные утилиты, описанные в документации к <strong>CHDK</strong>.</p>
+<p>Если камера включается, но меню <strong>CHDK</strong> не отображается, проверьте настройки автозагрузки. Возможно, вы случайно отключили опцию <code>Auto Load</code> или карта памяти повреждена и не читается корректно. Избегайте извлечения карты во время записи данных, это может повредить файловую таблицу.</p>
+<blockquote>⚠️ <strong>Внимание</strong>: Если после обновления <strong>CHDK</strong> камера перестала включаться, это может означать повреждение загрузочного сектора карты. Вставьте карту в компьютер, отформатируйте её и загрузите свежую версию прошивки.</blockquote>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярное обновление прошивки CHDK и проверка целостности файлов на карте памяти — залог стабильной работы расширенных функций камеры.</p></aside>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+<details>
+ <summary>Безопасно ли устанавливать CHDK на Canon?</summary>
+ <p>Да, установка <strong>CHDK</strong> считается безопасной, так как она не записывается во внутреннюю память камеры. Прошивка загружается только с карты памяти при включении устройства. Вы можете в любой момент вернуть камеру к заводским настройкам, просто вынув карту.</p>
+</details>
+<details>
+ <summary>Можно ли использовать CHDK с картой памяти большого объема?</summary>
+ <p>Технически да, но для карт объемом более 32 ГБ часто требуется использование файловой системы FAT32 вместо exFAT. Старые камеры могут не поддерживать exFAT, что приведет к невозможности загрузки скрипта. Используйте утилиту для форматирования в FAT32.</p>
+</details>
+<details>
+ <summary>Что делать, если камера не видит CHDK?</summary>
+ <p>Сначала проверьте, правильно ли отформатирована карта и установлен ли загрузочный флаг утилитой <code>Card Reader</code>. Убедитесь, что файлы <code>DISKBOOT.BIN</code> находятся в корне карты. Также проверьте совместимость версии прошивки камеры с версией <strong>CHDK</strong>.</p>
+</details>
+<details>
+ <summary>Как удалить CHDK с камеры?</summary>
+ <p>Для удаления достаточно просто извлечь карту памяти. Если вы хотите полностью убрать загрузочный флаг, используйте утилиту <code>Card Reader</code> и выберите опцию <code>Unmake Bootable</code>, после чего отформатируйте карту стандартным способом.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kakoj-obektiv-canon-vybrat-novichku-vmesto-shtatnogo.html" class="pb-related-card">
+                <span class="pb-related-title">Какой объектив Canon выбрать новичку: гид по замене штатного кита</span>
+                <span class="pb-related-desc">Узнайте, какой объектив Canon лучше купить вместо штатного кита. Обзор фиксов, зумов и светосильной </span>
+            </a><a href="/articles/k/ke/kenon-kak-posmotret-foto.html" class="pb-related-card">
+                <span class="pb-related-title">Как посмотреть фото на камере Canon: обзор всех методов просмотра</span>
+                <span class="pb-related-desc">Инструкция по просмотру снимков на экране камеры, переносу на ПК и смартфону. Решение проблем с отоб</span>
+            </a><a href="/articles/c/ca/canon-eos-600d-kakoj-akkumulyator.html" class="pb-related-card">
+                <span class="pb-related-title">Аккумулятор для Canon EOS 600D: какой выбрать и как заменить</span>
+                <span class="pb-related-desc">Полный обзор батареи LP-E8 для Canon 600D. Сравнение оригинала и аналогов, время работы, зарядка и с</span>
+            </a><a href="/articles/k/ka/kakaya-zerkalka-luchshe-canon-ili-nikon.html" class="pb-related-card">
+                <span class="pb-related-title">Canon или Nikon: какая зеркалка лучше для фотографа? Сравнение 2026</span>
+                <span class="pb-related-desc">Подробное сравнение зеркальных камер Canon и Nikon. Разбор эргономики, автофокуса, матриц и объектив</span>
+            </a><a href="/articles/o/ob/obektiv-55-200-canon-dlya-chego.html" class="pb-related-card">
+                <span class="pb-related-title">Объектив Canon EF 55-200mm: для чего нужен и как использовать</span>
+                <span class="pb-related-desc">Полный обзор объектива Canon EF 55-200mm: назначение, особенности съемки, сравнение с аналогами, пра</span>
+            </a><a href="/articles/k/ka/kak-polzovatsya-fotoapparatom-canon-1200d.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться фотоаппаратом Canon 1200D: Полное руководство</span>
+                <span class="pb-related-desc">Подробная инструкция по настройке и эксплуатации зеркальной камеры Canon EOS 1200D. Режимы съемки, р</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Установка сканера Canon Lide 35 на Windows 10: драйверы и настройка — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция по установке драйверов для сканера Canon Lide 35 под Windows 10. Решение проблем с подключением, настройка TWAIN и WIA.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-ustanovit-skaner-canon-lide-35-na-windows-10.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Установка сканера Canon Lide 35 на Windows 10: драйверы и настройка">
+    <meta property="og:description" content="Пошаговая инструкция по установке драйверов для сканера Canon Lide 35 под Windows 10. Решение проблем с подключением, настройка TWAIN и WIA.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Установка сканера Canon Lide 35 на Windows 10: драйверы и настройка</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-оборудования-и-проверка-системных-требований">Подготовка оборудования и проверка системных требований</a></li><li><a href="#поиск-и-скачивание-актуальных-драйверов">Поиск и скачивание актуальных драйверов</a></li><li><a href="#процесс-установки-программного-обеспечения">Процесс установки программного обеспечения</a></li><li><a href="#ручная-установка-через-диспетчер-устройств">Ручная установка через Диспетчер устройств</a></li><li><a href="#настройка-параметров-сканирования-и-выбор-интерфейса">Настройка параметров сканирования и выбор интерфейса</a></li><li><a href="#решение-типичных-проблем-и-ошибок">Решение типичных проблем и ошибок</a></li><li><a href="#альтернативные-способы-использования-устройства">Альтернативные способы использования устройства</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-sdelat-skaner-na-printere-kenon.html">Как сделать сканер на принтере Canon — пошаговая инструкция</a></li><li><a href="/articles/p/pr/printer-canon-mp210-kak-skanirovat.html">Как сканировать на принтере Canon MP210: Полное руководство</a></li><li><a href="/articles/c/ca/canon-ij-scan-utility-kak-ustanovit.html">Как установить Canon IJ Scan Utility: Пошаговая инструкция 2026</a></li><li><a href="/articles/p/pr/printer-canon-pixma-mg2540s-kak-skanirovat-na-kompyuter.html">Как сканировать с Canon Pixma MG2540s на компьютер: пошаговая инструкция</a></li><li><a href="/articles/p/pr/printer-kenon-kak-kserokopirovat.html">Как копировать с принтера Canon: пошаговая инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как установить сканер Canon Lide 35 на Windows 10: полное руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-оборудования-и-проверка-системных-требований">Подготовка оборудования и проверка системных требований</a></li><li><a href="#поиск-и-скачивание-актуальных-драйверов">Поиск и скачивание актуальных драйверов</a></li><li><a href="#процесс-установки-программного-обеспечения">Процесс установки программного обеспечения</a></li><li><a href="#ручная-установка-через-диспетчер-устройств">Ручная установка через Диспетчер устройств</a></li><li><a href="#настройка-параметров-сканирования-и-выбор-интерфейса">Настройка параметров сканирования и выбор интерфейса</a></li><li><a href="#решение-типичных-проблем-и-ошибок">Решение типичных проблем и ошибок</a></li><li><a href="#альтернативные-способы-использования-устройства">Альтернативные способы использования устройства</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Подключение старого, но надежного <em>Canon Lide 35</em> к современной операционной системе может вызвать затруднения у неопытных пользователей. В отличие от новых моделей, это устройство не всегда автоматически распознается системой после простого подключения кабеля. Вам потребуется вручную обеспечить корректную передачу данных между аппаратной частью и программным обеспечением.</p>
+
+<p>Система <strong>Windows 10</strong> обладает обширной базой драйверов, но специфичное оборудование прошлых лет часто требует ручного вмешательства. Отсутствие правильного <strong>драйвера</strong> приведет к тому, что сканер будет виден в диспетчере устройств как неизвестное устройство или не будет отображаться вовсе. Процесс установки сводится к поиску совместимого ПО и правильной настройке последовательности действий.</p>
+
+<p>В данной инструкции мы подробно разберем, как заставить <em>Canon Lide 35</em> корректно работать в среде <strong>Windows 10</strong>. Мы рассмотрим методы использования стандартных средств системы, а также способы ручной установки драйверов с официального ресурса. Правильная конфигурация обеспечит стабильную работу без ошибок и зависаний при сканировании документов или фотографий.</p>
+
+<h2 id="подготовка-оборудования-и-проверка-системных-требований">Подготовка оборудования и проверка системных требований</h2>
+
+<p>Прежде чем приступать к программной части, необходимо убедиться, что физическое подключение выполнено безупречно. Сканер <em>Canon Lide 35</em> использует интерфейс USB 2.0, который обратнос совместим с портами USB 3.0, но для стабильности лучше использовать порты, расположенные непосредственно на корпусе системного блока, а не на передней панели или хабах.</p>
+
+<p>Важно проверить целостность кабеля. Иногда проблема заключается не в ПО, а в поврежденном проводнике. Убедитесь, что кабель плотно вставлен в разъемы. Также стоит убедиться, что устройство получает питание, хотя данный сканер запитывается от USB-порта и не требует отдельного блока питания.</p>
+
+<p>Внимательно отнеситесь к состоянию USB-портов. Если вы используете старый компьютер или ноутбук, порты могут быть загрязнены или иметь механические повреждения. Попробуйте подключить сканер в другой порт, чтобы исключить возможность сбоя на уровне контроллера.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Не используйте USB-удлинители или переходники при первоначальной настройке. Это может привести к падению напряжения и нестабильной работе <strong>драйвера</strong>, что затруднит диагностику.</p>
+</blockquote>
+
+<p>Если система не реагирует на подключение, проверьте диспетчер устройств. Возможно, устройство определяется как "Неизвестное устройство", что говорит о необходимости ручной установки. В этом случае переходите к следующему этапу, не пытаясь использовать автоматические средства обновления.</p>
+
+<div class="pb-poll" id="poll-8e649d7e"><div class="pb-poll-question">📊 У вас есть драйверы на диске?</div><div class="pb-poll-option" data-poll="8e649d7e" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Да, есть на диске</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="8e649d7e" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Нет, нужно скачивать в интернете</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="8e649d7e" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, где искать</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="8e649d7e" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Использую только автоматическую установку</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="поиск-и-скачивание-актуальных-драйверов">Поиск и скачивание актуальных драйверов</h2>
+
+<p>Основной источник программного обеспечения для <em>Canon Lide 35</em> — официальный веб-сайт производителя. Несмотря на возраст модели, <strong>Canon</strong> часто предоставляет обновленные версии драйверов, адаптированные под новые версии ОС. Вам необходимо зайти в раздел поддержки и ввести точное название модели.</p>
+
+<p>На странице загрузки выберите вашу операционную систему. Если <strong>Windows 10</strong> не отображается в списке автоматически, попробуйте выбрать <strong>Windows 8</strong> или <strong>Windows 7</strong> (64-bit). Драйверы для этих систем часто работают в режиме совместимости на "десятке". Обратите внимание на тип драйвера: вам нужен <strong>Scanner Driver</strong> или пакет TWAIN/WIA.</p>
+
+<p>Скачивайте только файлы с официального домена. Файлы с сомнительных ресурсов могут содержать вредоносное ПО или устаревшие версии, которые не смогут взаимодействовать с современными библиотеками системы. После загрузки проверьте целостность архива и расширение файла, оно должно быть <code>.exe</code> или <code>.zip</code>.</p>
+
+<p>Важно различать типы драйверов. Для обычного сканирования изображений достаточно драйвера TWAIN. Если вы планируете использовать специфические функции сканирования документов, возможно, потребуется дополнительная утилита <strong>Canon IJ Scan Utility</strong>. Устанавливать все доступные компоненты рекомендуется только при наличии свободного места на диске и уверенности в необходимости каждого модуля.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Если на сайте нет драйвера именно для <strong>Windows 10</strong>, не пытайтесь установить драйвер для <strong>Windows XP</strong>. Это гарантированно приведет к конфликту системных библиотек. Используйте версии для Windows 7 или 8.</p>
+</blockquote>
+
+<details class="pb-accordion"><summary>Что делать, если сайт Canon не открывается?
+<p>Если официальный сайт недоступен из-за региональных ограничений, можно воспользоваться сайтом-зеркалом или архивами драйверов, но только если вы уверены в их репутации. Лучше всего использовать мобильный интернет или VPN для доступа к официальному ресурсу поддержки Canon.--></p>
+
+<h2 id="процесс-установки-программного-обеспечения">Процесс установки программного обеспечения</h2>
+
+<p>Запустите скачанный установочный файл от имени администратора. Это критически важный шаг, так как установка драйверов требует доступа к системным папкам и реестру. Без прав администратора процесс может прерваться на этапе копирования файлов.</p>
+
+<p>Следуйте инструкциям мастера установки. Обычно требуется принять лицензионное соглашение и выбрать путь установки. Оставьте стандартные настройки, если вы не обладаете глубокими знаниями о структуре системы. Утилита сама определит необходимые библиотеки и распакует их в правильные директории.</p>
+
+<p>В процессе установки мастер может предложить подключить устройство. Если сканер уже подключен, система попытается найти его автоматически. Если устройство не найдено, мастер установки предложит отключить и снова подключить кабель для инициализации. Выполните это действие, когда появится соответствующее окно.</p>
+
+<!--WIDGET</summary><div class="pb-accordion-body"><p>checklist:Проверка перед запуском установки:
+<p>Драйвер скачан с официального сайта</p>
+<p>Установщик запущен от имени администратора</p>
+<p>USB-кабель подключен к порту на задней панели</p>
+<p>Сканер включен и не находится в режиме сна</p></div></details></p>
+
+<p>После завершения установки не перезагружайте компьютер сразу, если мастер установки не попросит об этом. Лучше проверить работу устройства в системе. Если установка прошла успешно, в списке подключенных устройств должен появиться <em>Canon Lide 35</em> без восклицательных знаков.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Установка драйверов от имени администратора — обязательное условие для корректной записи системных файлов и регистрации устройства в системе.</p></aside>
+
+<h2 id="ручная-установка-через-диспетчер-устройств">Ручная установка через Диспетчер устройств</h2>
+
+<p>Иногда автоматический установщик не находит устройство или выдаёт ошибку. В этом случае необходимо использовать штатный инструмент <strong>Диспетчер устройств</strong>. Откройте его через контекстное меню кнопки "Пуск" или через поиск, введя <code>devmgmt.msc</code>.</p>
+
+<p>Найдите в списке раздел "Другие устройства" или "Контроллеры USB". Там может присутствовать странный значок с восклицательным знаком, соответствующий вашему сканеру. Нажмите на него правой кнопкой мыши и выберите "Обновить драйвер".</p>
+
+<p>Выберите опцию "Найти драйверы на этом компьютере". Укажите путь к папке, куда вы распаковали скачанные файлы. Система просканирует директорию и найдет подходящий INF-файл. Подтвердите установку, подтвердив действия в диалоговых окнах.</p>
+
+<p>Если драйвер не находится автоматически, попробуйте метод "Установка драйвера вручную". В списке устройств выберите "Сканеры" или "Устройства обработки изображений" и укажите файл драйвера вручную. Это более сложный путь, но он часто работает, когда автоматика отказывает.</p>
+
+<pre><code>devmgmt.msc</code></pre>
+
+<p>Важно не путать <strong>драйверы</strong> для других устройств. Убедитесь, что вы указываете именно файлы для модели <em>Lide 35</em>. Установка неправильного драйвера может привести к сбою работы всего USB-контроллера.</p>
+
+<details class="pb-accordion"><summary>Что такое INF-файл?
+<p>INF-файл — это текстовый файл конфигурации, который описывает системе, как устанавливать драйвер устройства. Он содержит инструкции о том, какие файлы копировать и какие ключи реестра создавать.--></p>
+
+<h2 id="настройка-параметров-сканирования-и-выбор-интерфейса">Настройка параметров сканирования и выбор интерфейса</h2>
+
+<p>После успешной установки драйвера необходимо выбрать способ взаимодействия со сканером. В <strong>Windows 10</strong> используются два основных стандарта</summary><div class="pb-accordion-body"><p> <strong>WIA</strong> (Windows Image Acquisition) и <strong>TWAIN</strong>. WIA проще в настройке, но TWAIN часто предлагает больше настроек качества изображения.</p>
+
+<p>Для запуска сканирования можно использовать стандартное приложение "Факсы и сканирование Windows" или утилиту <strong>Canon IJ Scan Utility</strong>. Последняя предпочтительнее, так как она предоставляет расширенные функции управления цветом и разрешением.</p>
+
+<p>В настройках утилиты выберите источник сканирования. Убедитесь, что выбрана именно модель <em>Canon Lide 35</em>, а не виртуальный сканер или веб-камера. Проверьте разрешение: для документов достаточно <code>200-300 dpi</code>, для фотографий рекомендуется <code>600 dpi</code> и выше.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип документа</th>
+<th>Рекомендуемое разрешение (dpi)</th>
+<th>Цветовой режим</th>
+<th>Формат файла</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Текстовые документы</td>
+<td>200-300</td>
+<td>Черно-белый</td>
+<td>PDF / TIFF</td>
+</tr>
+<tr>
+<td>Фотографии (архив)</td>
+<td>600</td>
+<td>Цветной</td>
+<td>JPG / PNG</td>
+</tr>
+<tr>
+<td>Слайды и пленка</td>
+<td>1200-2400</td>
+<td>Цветной</td>
+<td>TIFF</td>
+</tr>
+<tr>
+<td>Газеты (для чтения)</td>
+<td>150-200</td>
+<td>Градации серого</td>
+<td>PDF</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Правильный выбор параметров существенно влияет на скорость работы и размер итогового файла. Не стоит сканировать текстовые документы в максимальном разрешении — это лишь займет время и место на диске. <mark>Для сканирования старых фотографий на Canon Lide 35 оптимальным разрешением является 600 dpi, что обеспечивает баланс между детализацией и временем обработки.</mark></p>
+
+
+
+<h2 id="решение-типичных-проблем-и-ошибок">Решение типичных проблем и ошибок</h2>
+
+<p>Иногда после установки сканер не определяется системой или выдает ошибку "Нет ответа от устройства". Первым делом проверьте, не блокирует ли антивирус доступ к драйверу. Временно отключите защиту и попробуйте перезапустить службу сканирования в системе.</p>
+
+<p>Если устройство отображается в диспетчере устройств, но не работает в приложениях, проверьте статус службы <strong>Windows Image Acquisition</strong>. Она должна быть запущена и работать в автоматическом режиме. Остановка этой службы блокирует работу любых сканеров в системе.</p>
+
+<p>Другая частая проблема — "зависание" сканера в процессе работы. Это может происходить из-за перегрева устройства или конфликта USB-контроллера. Попробуйте отключить сканер, подождать 10 секунд и подключить снова. Если проблема повторяется, обновите прошивку контроллера USB на материнской плате.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Если при сканировании появляются полосы или артефакты, это не ошибка драйвера, а загрязнение стекла сканера. Протрите поверхность мягкой безворсовой тканью с небольшим количеством спирта.</p>
+</blockquote>
+
+<p>В случае, если ничего не помогает, попробуйте удалить устройство через диспетчер устройств и перезагрузить компьютер. После перезагрузки система попытается обнаружить оборудование заново. Если драйвер установлен корректно, Windows сама подберет нужные настройки.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Служба Windows Image Acquisition (WIA) является критически важным компонентом для работы сканеров в Windows 10; её остановка делает сканирование невозможным даже при наличии установленных драйверов.</p></aside>
+
+<h2 id="альтернативные-способы-использования-устройства">Альтернативные способы использования устройства</h2>
+
+<p>Если официальный драйвер не работает или вы не можете его найти, существуют альтернативные решения. Программы-сканеры от сторонних разработчиков, такие как <strong>NAPS2</strong> или <strong>VueScan</strong>, часто имеют встроенные драйверы для старого оборудования и могут работать без установки родного ПО.</p>
+
+<p>Эти утилиты используют свои собственные драйверы, которые эмулируют стандарт TWAIN. Это позволяет использовать <em>Canon Lide 35</em> даже на очень новых версиях Windows, где родное ПО производителя может быть несовместимо. Однако использование стороннего ПО может потребовать покупки лицензии для разблокировки всех функций.</p>
+
+<p>Еще один вариант — использование облачных сервисов, если компьютер имеет доступ к интернету. Некоторые облачные решения позволяют управлять сканером через веб-интерфейс, перекладывая часть задач по обработке на сервер. Это удобно, если локальная система работает нестабильно.</p>
+
+<p>Выбирайте альтернативное ПО только после тщательного изучения отзывов и проверки безопасности. Не устанавливайте непроверенные программы, которые могут запросить права администратора без необходимости. Надежность и безопасность данных при сканировании документов должны быть приоритетом.</p>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Почему сканер Canon Lide 35 не определяется Windows 10?</summary>
+<p>Чаще всего проблема заключается в отсутствии драйвера или конфликте USB-порта. Попробуйте подключить устройство в другой порт, желательно напрямую в материнскую плату, и переустановить драйвер с официального сайта.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать драйвер от Canon Lide 30 для Lide 35?</summary>
+<p>Нет, это разные модели с разными чипами. Использование драйвера от другой модели может привести к ошибкам работы или полному отсутствию функционала. Используйте только драйверы, предназначенные именно для вашей модели.</p>
+</details>
+
+<details>
+<summary>Как отсканировать документ в PDF?</summary>
+<p>В утилите Canon IJ Scan Utility выберите режим "Документ", укажите формат сохранения "PDF" и нажмите кнопку "Сканировать". Вы также можете использовать стандартное приложение "Факсы и сканирование Windows", выбрав PDF в настройках.</p>
+</details>
+
+<details>
+<summary>Сканер работает медленно, как ускорить?</summary>
+<p>Убедитесь, что вы не используете избыточное разрешение. Для текстов достаточно 300 dpi. Также проверьте, не запущено ли фоновое обновление системы, которое может занимать ресурсы процессора и замедлять работу драйвера.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-sdelat-skaner-na-printere-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать сканер на принтере Canon — пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по настройке сканирования на принтерах Canon: от подключения до сохранения фай</span>
+            </a><a href="/articles/p/pr/printer-canon-mp210-kak-skanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на принтере Canon MP210: Полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция, как настроить сканирование документов и фото на МФУ Canon MP210 через компьюте</span>
+            </a><a href="/articles/c/ca/canon-ij-scan-utility-kak-ustanovit.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить Canon IJ Scan Utility: Пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Полное руководство по установке утилиты Canon IJ Scan Utility. Скачать драйвер, настроить сканирован</span>
+            </a><a href="/articles/p/pr/printer-canon-pixma-mg2540s-kak-skanirovat-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать с Canon Pixma MG2540s на компьютер: пошаговая инструкция</span>
+                <span class="pb-related-desc">Полное руководство по настройке сканирования с принтера Canon Pixma MG2540s. Установка драйверов, ис</span>
+            </a><a href="/articles/p/pr/printer-kenon-kak-kserokopirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как копировать с принтера Canon: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство: как сделать ксерокопию на принтерах Canon. Настройка цвета, плотности, масшта</span>
+            </a><a href="/articles/k/ka/kak-sdelat-skan-canon-mf3010.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать скан на Canon MF3010: Полная инструкция по настройке</span>
+                <span class="pb-related-desc">Узнайте, как настроить и выполнить сканирование на принтере Canon MF3010. Пошаговая инструкция драйв</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

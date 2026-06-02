@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Установка Canon LBP 2900 на Astra Linux: Полное руководство — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция по настройке драйвера Canon LBP 2900 для ОС Astra Linux. Решение проблем с пакетом cnijfilter2 и настройкой CUPS.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-ustanovit-printer-canon-lbp-2900-na-astra-linux.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Установка Canon LBP 2900 на Astra Linux: Полное руководство">
+    <meta property="og:description" content="Пошаговая инструкция по настройке драйвера Canon LBP 2900 для ОС Astra Linux. Решение проблем с пакетом cnijfilter2 и настройкой CUPS.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Установка Canon LBP 2900 на Astra Linux: Полное руководство</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-системы-и-подготовка-файлов">Подготовка системы и подготовка файлов</a></li><li><a href="#процесс-установки-драйверов-через-терминал">Процесс установки драйверов через терминал</a></li><li><a href="#регистрация-принтера-в-системе-cups">Регистрация принтера в системе CUPS</a></li><li><a href="#запуск-демона-и-настройка-очереди-печати">Запуск демона и настройка очереди печати</a></li><li><a href="#типичные-проблемы-и-способы-их-решения">Типичные проблемы и способы их решения</a></li><li><a href="#альтернативные-методы-настройки">Альтернативные методы настройки</a></li><li><a href="#финальная-проверка-и-начало-работы">Финальная проверка и начало работы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/p/pr/printer-canon-opredelyaetsya-kak-capt-usb-device.html">Canon принтер определяется как CAPT USB Device: причина и решение</a></li><li><a href="/articles/c/ca/canon-g3410-kak-podklyuchit-k-wifi.html">Canon G3410: как подключить к Wi-Fi за 5 минут (пошагово)</a></li><li><a href="/articles/k/ka/kak-zapustit-testovuyu-pechat-na-printere-canon-g2411.html">Как запустить тестовую печать на Canon PIXMA G2411: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-proshit-printer-canon.html">Как прошить принтер Canon: инструкция по обновлению прошивки</a></li><li><a href="/articles/k/ka/kak-v-printere-canon-mf3010-dobavit-yarkosti-na-pechat.html">Как настроить яркость печати на Canon MF3010: полное руководство</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как установить принтер Canon LBP 2900 на Astra Linux: Полное руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-системы-и-подготовка-файлов">Подготовка системы и подготовка файлов</a></li><li><a href="#процесс-установки-драйверов-через-терминал">Процесс установки драйверов через терминал</a></li><li><a href="#регистрация-принтера-в-системе-cups">Регистрация принтера в системе CUPS</a></li><li><a href="#запуск-демона-и-настройка-очереди-печати">Запуск демона и настройка очереди печати</a></li><li><a href="#типичные-проблемы-и-способы-их-решения">Типичные проблемы и способы их решения</a></li><li><a href="#альтернативные-методы-настройки">Альтернативные методы настройки</a></li><li><a href="#финальная-проверка-и-начало-работы">Финальная проверка и начало работы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Переход на отечественные операционные системы часто ставит перед пользователями сложные задачи по адаптации периферийного оборудования. Одной из самых распространенных проблем является подключение лазерного принтера <em>Canon LBP 2900</em> к платформе <em>Astra Linux</em>. Хотя эта модель известна своей надежностью в среде Windows, в Linux-окружении она требует ручной настройки, так как автоматическое определение не всегда корректно срабатывает для старых моделей.</p>
+
+<p>Процесс установки может показаться запутанным из-за отсутствия нативных драйверов в стандартных репозиториях дистрибутива. Однако, следуя проверенной методике, вы сможете заставить устройство работать стабильно. Ключ к успеху лежит в правильной установке пакета <code>cnijfilter2</code> и корректной регистрации очереди печати в системе <code>CUPS</code>.</p>
+
+<h2 id="подготовка-системы-и-подготовка-файлов">Подготовка системы и подготовка файлов</h2>
+
+<p>Перед началом работы необходимо убедиться, что у вас есть доступ к файлам драйвера. Официальный сайт <em>Canon</em> не всегда предоставляет прямые ссылки на Linux-версии драйверов для старых моделей, поэтому часто приходится использовать архивы, сохраненные ранее, или находить их в сообществах пользователей. Вам понадобятся два основных файла: <code>cnijfilter2-5.80-1.i386.deb</code> и <code>cupswrapperLBP2900-2.0.0-2.i386.deb</code>. </p>
+
+<p>Если вы используете сборку <em>Astra Linux</em> со строгими настройками безопасности, подключение внешних носителей может быть заблокировано. В этом случае потребуется скачать файлы на сервере или использовать доверенный сетевой ресурс. Убедитесь, что у вашей учетной записи есть права <code>sudo</code> для выполнения установочных команд. Без административных привилегий дальнейшая работа невозможна.</p>
+
+<p>Проверьте, установлен ли необходимый набор библиотек. В некоторых минималистичных сборках отсутствуют компоненты для работы с 32-разрядными библиотеками. Вам нужно будет выполнить команду для установки зависимостей:</p>
+<pre><code>sudo apt-get install lib32z1 lib32ncurses5 lib32tinfo5</code></pre>
+
+<blockquote>⚠️ Внимание: Если система выдает ошибку о несуществующих пакетах <code>lib32z1</code>, убедитесь, что репозиторий <code>multilib</code> включен в источниках обновлений, иначе установка 32-битных библиотек будет невозможна.</blockquote>
+
+<div class="pb-poll" id="poll-ab3862f3"><div class="pb-poll-question">📊 В какой версии Astra Linux вы работаете?</div><div class="pb-poll-option" data-poll="ab3862f3" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Орел (1.6)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ab3862f3" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Орел (1.7)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ab3862f3" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Смоленск</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ab3862f3" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Другая версия</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="процесс-установки-драйверов-через-терминал">Процесс установки драйверов через терминал</h2>
+
+<p>Использование графического установщика пакетов в <em>Astra Linux</em> для файлов <em>Canon</em> часто приводит к ошибкам зависимостей. Надежнее всего использовать командную строку. Перейдите в папку, где хранятся скачанные файлы, и выполните установку первого пакета драйверов. Обратите внимание на точное написание имени файла, так как регистр букв имеет значение в Linux.</p>
+
+<p>Введите следующую команду для установки основного драйвера:</p>
+<pre><code>sudo dpkg -i cnijfilter2-5.80-1.i386.deb</code></pre>
+
+<p>После успешной установки основного драйвера необходимо установить утилиту <code>cupswrapper</code>, которая отвечает за связь между принтером и системой печати. Этот шаг критически важен, так как без него очередь печати не сможет отправлять задания на устройство. Если система сообщит о конфликтах зависимостей, попробуйте исправить их командой <code>sudo apt-get -f install</code>.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Готовимся к установке драйвера</h4><label class="check-item"><input type="checkbox"><span>Скачать пакеты cnijfilter2 и cupswrapper</span></label><label class="check-item"><input type="checkbox"><span>Включить репозиторий multilib</span></label><label class="check-item"><input type="checkbox"><span>Установить 32-битные библиотеки</span></label><label class="check-item"><input type="checkbox"><span>Запустить терминал от имени root</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="регистрация-принтера-в-системе-cups">Регистрация принтера в системе CUPS</h2>
+
+<p>После установки пакетов драйверов система еще не «видит» ваш принтер как готовое устройство. Необходимо зарегистрировать его в очереди печати <code>CUPS</code>. Для этого существует специальная утилита <code>lbp2900-add</code>, которая создает виртуальный порт и связывает его с физическим устройством. Запускать эту команду нужно с правами суперпользователя.</p>
+
+<p>В терминале введите команду регистрации:</p>
+<pre><code>sudo lbp2900-add</code></pre>
+
+<p>Если вы используете USB-кабель, убедитесь, что принтер подключен и включен перед запуском этой команды. Система должна определить устройство по USB-шине. В случае если принтер подключен по сети, вам потребуется узнать его IP-адрес и указать его вручную через настройки <code>CUPS</code> в браузере, так как утилита <code>lbp2900-add</code> рассчитана в первую очередь на USB-подключение.</p>
+
+<details class="pb-accordion"><summary>Что делать, если команда lbp2900-add не найдена?</summary><div class="pb-accordion-body"><p>Это означает, что пакет cupswrapper не установлен корректно или не прописан в системном PATH. Попробуйте переустановить его, указав полный путь к файлу: sudo dpkg -i./cupswrapperLBP2900-2.0.0-2.i386.deb.</p></div></details>
+
+<blockquote>⚠️ Внимание: Запуск команды <code>lbp2900-add</code> без подключения принтера по USB приведет к ошибке регистрации. Убедитесь, что индикатор на корпусе <em>Canon LBP 2900</em> горит зеленым цветом перед выполнением команды.</blockquote>
+
+<h2 id="запуск-демона-и-настройка-очереди-печати">Запуск демона и настройка очереди печати</h2>
+
+<p>После регистрации устройства необходимо запустить фоновый процесс, который будет обрабатывать задания печати. Этот процесс называется <code>cnijfilter2</code>. Он должен работать непрерывно в фоновом режиме. Если он остановится, принтер перестанет отвечать. В старых версиях драйверов эту службу приходилось запускать вручную при каждом входе в систему, но современные скрипты делают это автоматически.</p>
+
+<p>Для запуска демона выполните команду:</p>
+<pre><code>sudo /etc/init.d/cupswrapperLBP2900 start</code></pre>
+
+<p>Чтобы проверить статус службы, можно использовать утилиту <code>systemctl</code> или проверить список процессов. Вывод команды <code>ps aux | grep cnijfilter</code> должен показать активный процесс. Если процесс отсутствует, значит, настройки демона некорректны, и печать будет невозможна до восстановления службы.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Демон cnijfilter2 должен быть запущен постоянно — остановка процесса равносильна отключению принтера из системы.</p></aside>
+
+<h2 id="типичные-проблемы-и-способы-их-решения">Типичные проблемы и способы их решения</h2>
+
+<p>Даже при аккуратном выполнении всех шагов пользователи могут столкнуться с трудностями. Самой частой проблемой является статус «Принтер занят» или отсутствие реакции на печать. В этом случае стоит проверить права доступа к порту <code>/dev/usb/lp0</code>. Если ваша учетная запись не имеет прав на запись в этот файл, система не сможет отправить данные на принтер.</p>
+
+<p>Исправить проблему с правами доступа можно добавлением пользователя в группу <code>lp</code> или изменением прав файла вручную. Также стоит обратить внимание на версию ядра системы. Некоторые обновления <em>Astra Linux</em> могут менять настройки USB-контроллера, что требует повторной регистрации принтера.</p>
+
+<p>Ниже приведена таблица с основными ошибками и методами их устранения:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Ошибка</th>
+<th>Причина</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Команда lbp2900-add не найдена</td>
+<td>Не установлен пакет cupswrapper</td>
+<td>Переустановить <code>cupswrapperLBP2900</code></td>
+</tr>
+<tr>
+<td>Ошибка доступа к порту</td>
+<td>Нет прав у пользователя</td>
+<td>Добавить в группу <code>lp</code></td>
+</tr>
+<tr>
+<td>Принтер не печатает</td>
+<td>Демон остановлен</td>
+<td>Выполнить <code>start cupswrapperLBP2900</code></td>
+</tr>
+<tr>
+<td>Пакеты не устанавливаются</td>
+<td>Отсутствуют 32-битные библиотеки</td>
+<td>Установить <code>lib32z1</code> и аналоги</td>
+</tr>
+</tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если после установки драйвера принтер печатает «мусор» (набор символов), попробуйте перезапустить демон или сменить драйвер на старую версию, если новая вызывает конфликты кодировки.</p></aside>
+
+<h2 id="альтернативные-методы-настройки">Альтернативные методы настройки</h2>
+
+<p>В некоторых случаях стандартная процедура установки через <code>dpkg</code> может не сработать из-за специфики сборки <em>Astra Linux</em>. Альтернативным вариантом является использование утилиты <code>Print Manager</code> из графического интерфейса. Однако, для <em>Canon LBP 2900</em> этот метод работает не всегда гарантированно, так как система может предложить драйвер Generic PCL6, который не поддерживает все функции устройства.</p>
+
+<p>Если вы знакомы с веб-интерфейсом <code>CUPS</code>, можно попробовать добавить принтер вручную через браузер, перейдя по адресу <code>http://localhost:631</code>. В разделе <em>Add Printer</em> выберите устройство из списка USB и укажите драйвер <em>Canon LBP 2900</em> из списка, если он появился после установки пакетов. Это более трудоемкий путь, но он позволяет гибко настроить параметры очереди.</p>
+
+<p>Также стоит упомянуть о возможности использования проекта <code>OpenPrinting</code>, который иногда содержит альтернативные драйверы для старых моделей Canon. Однако поддержка <em>LBP 2900</em> в открытых проектах ограничена, поэтому официальный пакет остаётся наиболее стабильным решением.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Графический интерфейс может не найти драйвер автоматически — ручная регистрация через терминал является самым надежным способом для этой модели.</p></aside>
+
+<blockquote>⚠️ Внимание: Интерфейс управления принтерами в разных версиях <em>Astra Linux</em> может отличаться. Если стандартные кнопки не работают, всегда возвращайтесь к проверке статуса служб в терминале.</blockquote>
+
+<h2 id="финальная-проверка-и-начало-работы">Финальная проверка и начало работы</h2>
+
+<p>После выполнения всех вышеописанных шагов необходимо убедиться, что принтер готов к работе. Для этого можно распечатать тестовую страницу прямо из настроек системы или через консоль. Введите команду <code>lp -d LBP2900 /usr/share/cups/data/testprint</code>, чтобы проверить прохождение данных. Если принтер выдал лист с тестовым узором, значит, настройка завершена успешно.</p>
+
+<p>Теперь вы можете пользоваться <em>Canon LBP 2900</em> в полноценном режиме. Убедитесь, что при перезагрузке компьютера служба печати запускается автоматически. Если этого не происходит, проверьте настройки автозагрузки демона <code>cupswrapperLBP2900</code> и убедитесь, что он добавлен в нужную группу инициализации.</p>
+
+<p>Важно отметить, что <em>Astra Linux</em> — развивающаяся система, и в будущих обновлениях процесс установки может быть упрощен за счет включения драйверов в базовые репозитории. Однако на текущий момент ручная настройка остаётся актуальным навыком для администраторов и пользователей, работающих с этим оборудованием.</p>
+
+<details>
+<summary>Почему драйверы Canon LBP 2900 часто i386 (32-бит), а не x64?</summary>
+<p>Принтеры этой серии были разработаны давно, когда 64-битная архитектура не была стандартом для периферии. Производители сохранили совместимость с 32-битными драйверами, так как они работают на любых системах через эмуляцию, что проще для поддержки старых моделей.</p>
+</details>
+
+<details>
+<summary>Что делать, если принтер не виден в списке устройств?</summary>
+<p>Проверьте физическое подключение кабеля USB. Попробуйте другой порт. Убедитесь, что утилита <code>lbp2900-add</code> была выполнена с правами root и принтер был включен в момент регистрации.</p>
+</details>
+
+<details>
+<summary>Можно ли подключить Canon LBP 2900 по сети?</summary>
+<p>Да, но это требует дополнительных настроек. В модели LBP 2900 нет встроенного сетевого интерфейса, поэтому потребуется внешний USB-сервер печати или настройка общего доступа к принтеру через другую машину с Linux, к которой он подключен.</p>
+</details>
+
+<details>
+<summary>Как проверить, установлен ли драйвер правильно?</summary>
+<p>Выполните команду <code>dpkg -l | grep cnijfilter</code> в терминале. Если вы видите установленные пакеты, значит, драйвер загружен в систему. Также проверьте статус демона.</p>
+</details>
+
+<details>
+<summary>Нужно ли перезагружать компьютер после установки?</summary>
+<p>Обычно это не требуется, если вы запустили демон вручную. Однако для полной инициализации USB-шлюзов и корректной работы всех служб рекомендуется выполнить перезагрузку системы после установки всех пакетов.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/p/pr/printer-canon-opredelyaetsya-kak-capt-usb-device.html" class="pb-related-card">
+                <span class="pb-related-title">Canon принтер определяется как CAPT USB Device: причина и решение</span>
+                <span class="pb-related-desc">Принтер Canon показывает статус CAPT USB Device? Узнайте, как вернуть нормальную печать, настроить д</span>
+            </a><a href="/articles/c/ca/canon-g3410-kak-podklyuchit-k-wifi.html" class="pb-related-card">
+                <span class="pb-related-title">Canon G3410: как подключить к Wi-Fi за 5 минут (пошагово)</span>
+                <span class="pb-related-desc">Подробная инструкция по подключению принтера Canon PIXMA G3410 к Wi-Fi. Решение ошибок, настройка с </span>
+            </a><a href="/articles/k/ka/kak-zapustit-testovuyu-pechat-na-printere-canon-g2411.html" class="pb-related-card">
+                <span class="pb-related-title">Как запустить тестовую печать на Canon PIXMA G2411: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство: как сделать тестовую страницу, проверить дюз и настроить качество печати на М</span>
+            </a><a href="/articles/k/ka/kak-proshit-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как прошить принтер Canon: инструкция по обновлению прошивки</span>
+                <span class="pb-related-desc">Полное руководство по обновлению прошивки принтеров Canon. Способы через USB и сеть, устранение ошиб</span>
+            </a><a href="/articles/k/ka/kak-v-printere-canon-mf3010-dobavit-yarkosti-na-pechat.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить яркость печати на Canon MF3010: полное руководство</span>
+                <span class="pb-related-desc">Узнайте, как увеличить контрастность и яркость на МФУ Canon MF3010. Настройки драйвера, калибровка к</span>
+            </a><a href="/articles/k/ka/kak-vklyuchit-printer-canon-mf4018.html" class="pb-related-card">
+                <span class="pb-related-title">Как включить принтер Canon MF4018: пошаговая инструкция и настройка</span>
+                <span class="pb-related-desc">Подробный гайд по включению МФУ Canon MF4018, первое подключение к сети, установка драйверов и устра</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

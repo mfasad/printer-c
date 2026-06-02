@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как обнулить принтер Canon iP2700: сброс счетчиков PP201 — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция по сбросу сервисного счетчика Canon iP2700. Устранение ошибок 5B00 и 00, использование сервисной утилиты PP201 для восстановления работоспособности.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-obnulit-printer-canon-ip2700.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как обнулить принтер Canon iP2700: сброс счетчиков PP201">
+    <meta property="og:description" content="Пошаговая инструкция по сбросу сервисного счетчика Canon iP2700. Устранение ошибок 5B00 и 00, использование сервисной утилиты PP201 для восстановления работоспособности.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-nav-active">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/remont-i-oshibki/">Ремонт и ошибки</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как обнулить принтер Canon iP2700: сброс счетчиков PP201</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-почему-принтер-останавливается">Введение: почему принтер останавливается</a></li><li><a href="#суть-проблемы-и-признаки-переполнения">Суть проблемы и признаки переполнения</a></li><li><a href="#необходимые-инструменты-и-программное-обеспечение">Необходимые инструменты и программное обеспечение</a></li><li><a href="#подготовка-принтера-к-сервисному-режиму">Подготовка принтера к сервисному режиму</a></li><li><a href="#процедура-сброса-через-утилиту-pp201">Процедура сброса через утилиту PP201</a></li><li><a href="#таблица-состояний-индикаторов">Таблица состояний индикаторов</a></li><li><a href="#механическая-замена-абсорбера-опционально">Механическая замена абсорбера (опционально)</a></li><li><a href="#частые-вопросы-и-troubleshooting">Частые вопросы и troubleshooting</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-chistit-printer-kenon.html">Как почистить принтер Кэнон: инструкция по удалению засоров и обслуживанию</a></li><li><a href="/articles/c/ch/chto-delat-esli-zasokh-kartridzh-v-printere-canon.html">Засох картридж в принтере Canon: 7 способов оживить</a></li><li><a href="/articles/p/pr/printer-canon-mp220-oshibka-5100-chto-delat.html">Ошибка 5100 на принтере Canon MP220: пошаговая инструкция по устранению</a></li><li><a href="/articles/k/ka/kak-snimat-kartridzh-s-printera-canon.html">Как снять картридж с принтера Canon: пошаговая инструкция и советы</a></li><li><a href="/articles/k/ka/kak-razobrat-printer-canon-4410.html">Инструкция: как разобрать принтер Canon i-SENSYS LBP4410</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полный сброс сервисных счетчиков Canon iP2700 без ошибок</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-почему-принтер-останавливается">Введение: почему принтер останавливается</a></li><li><a href="#суть-проблемы-и-признаки-переполнения">Суть проблемы и признаки переполнения</a></li><li><a href="#необходимые-инструменты-и-программное-обеспечение">Необходимые инструменты и программное обеспечение</a></li><li><a href="#подготовка-принтера-к-сервисному-режиму">Подготовка принтера к сервисному режиму</a></li><li><a href="#процедура-сброса-через-утилиту-pp201">Процедура сброса через утилиту PP201</a></li><li><a href="#таблица-состояний-индикаторов">Таблица состояний индикаторов</a></li><li><a href="#механическая-замена-абсорбера-опционально">Механическая замена абсорбера (опционально)</a></li><li><a href="#частые-вопросы-и-troubleshooting">Частые вопросы и troubleshooting</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-почему-принтер-останавливается">Введение: почему принтер останавливается</h2>
+<p>Модель <em>Canon iP2700</em> стала одним из самых популярных домашних принтеров благодаря своей надежности и низкой стоимости печати. Однако со временем владельцы сталкиваются с критической проблемой: устройство перестает печатать и выдает ошибку, которую невозможно устранить простой перезагрузкой.</p>
+<p>Причиной является переполнение <strong>сервисного счетчика</strong> (Waste Ink Pad Counter). Это виртуальный таймер, который отслеживает объем чернил, накопленный в абсорбирующей прокладке внутри корпуса. Когда лимит достигнут, принтер блокирует работу, требуя технического обслуживания.</p>
+<p>Важно понимать, что физический абсорбер может быть еще сухим, но программный счетчик уже исчерпал свой ресурс. Для восстановления функциональности необходимо выполнить процедуру <strong>обнуления счетчиков</strong> через специализированное программное обеспечение. Это позволит продолжить печать без дорогостоящего ремонта в сервисном центре.</p>
+
+<h2 id="суть-проблемы-и-признаки-переполнения">Суть проблемы и признаки переполнения</h2>
+<p>Система защиты Canon разработана так, чтобы предотвратить перелив чернил на стол пользователя. Счетчик фиксирует каждый микроскопический миллилитр, уходящий в прокладку при очистке дюз или выполнении сервисных циклов. Как только накопленная сумма превышает заводской предел, срабатывает блокировка.</p>
+<p>На дисплее или в программном обеспечении компьютера вы увидите код ошибки <code>5B00</code> (на некоторых версиях это <code>00</code>). Индикаторы на корпусе начинают мигать в определенном ритме: обычно это комбинация из 8 и 9 миганий оранжевой и зеленой лампочек. Это сигнал о том, что принтер находится в сервисном режиме и требует вмешательства.</p>
+<p>Игнорирование проблемы приводит к полной остановке печати. Даже если вы замените картриджи или проведете глубокую чистку, устройство не выполнит команду, пока не будет сброшена ошибка. Многие пользователи ошибочно полагают, что проблема в картридже, но дело именно в программном ограничении.</p>
+<blockquote>
+<p>⚠️ Внимание: Если индикаторы мигают в другом ритме (например, 7 или 10 раз), это может указывать на другие неисправности, такие как замятие бумаги или проблема с кареткой. Не пытайтесь сбрасывать счетчики, пока не убедитесь, что ошибка именно 5B00, иначе вы можете скрыть реальную поломку.</p>
+</blockquote>
+
+<h2 id="необходимые-инструменты-и-программное-обеспечение">Необходимые инструменты и программное обеспечение</h2>
+<p>Для выполнения процедуры вам понадобится персональный компьютер с операционной системой Windows. К сожалению, стандартные драйверы, идущие в комплекте с принтером, не имеют функции сброса. Необходима специализированная утилита, часто называемая сервисным адаптером или SS-инструментом.</p>
+<p>Для серии <em>Canon iP2700</em> наиболее эффективной и проверенной утилитой является <strong>PP201</strong> (или ее модификации типа PP118). Именно эта программа позволяет корректно взаимодействовать с микроконтроллером принтера и изменять значения счетчиков абсорбера. Скачивание утилиты лучше проводить с проверенных технических ресурсов, так как в сети много устаревших версий.</p>
+<p>Вам также понадобится качественный USB-кабель для подключения устройства к ПК. Убедитесь, что кабель не поврежден и обеспечивает стабильную передачу данных. Слабый контакт может привести к сбою прошивки и переходу принтера в состояние «кирпича», что потребует более сложного вмешательства.</p>
+<ul>
+<li>💻 Компьютер с ОС Windows (7, 10 или 11)</li>
+<li>🔌 USB-кабель типа A-B (стандартный для принтеров)</li>
+<li>📥 Утилита <strong>SS Tool</strong> или <strong>PP201</strong> последней версии</li>
+<li>🖨️ Сам принтер <em>Canon iP2700</em> с установленными картриджами</li>
+</ul>
+
+<div class="pb-poll" id="poll-8d535223"><div class="pb-poll-question">📊 Какой код ошибки выдает ваш принтер?</div><div class="pb-poll-option" data-poll="8d535223" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">5B00 (Переполнение абсорбера)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="8d535223" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">168x (Нет чернил)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="8d535223" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">00 (Ошибка памяти)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="8d535223" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Другая ошибка</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="подготовка-принтера-к-сервисному-режиму">Подготовка принтера к сервисному режиму</h2>
+<p>Перед запуском программы необходимо перевести аппаратную часть в специфическое состояние. Это критически важный этап, который требует точности в выполнении действий. Если вы пропустите шаг или сделаете его не в той последовательности, компьютер не увидит принтер как сервисное устройство.</p>
+<p>Сначала убедитесь, что устройство выключено кнопкой на корпусе. Отсоедините кабель питания из розетки (или выдерните штекер сзади принтера), но USB-кабель, соединяющий принтер с компьютером, должен оставаться подключенным. Это обеспечит питание для микроконтроллера при включении.</p>
+<p>Теперь выполните последовательность нажатий на кнопку «Resume» (восстановление/треугольник) и кнопку «Power» (включение). Сначала зажмите кнопку «Resume» и, не отпуская её, нажмите кнопку «Power». Удерживая обе кнопки, подождите, пока индикатор питания не загорится зеленым цветом. Затем отпустите кнопку «Resume», продолжая удерживать «Power». Сделайте быстрые нажатия на «Resume» (обычно 2-5 раз), после чего отпустите обе кнопки. Если индикатор мигнет зеленым и оранжевым, а затем снова загорится зеленым — вы успешно вошли в сервисный режим.</p>
+<blockquote>
+<p>⚠️ Внимание: Если индикатор загорелся оранжевым и продолжает мигать или гореть постоянно, процедура входа не удалась. Выключите принтер кнопкой на корпусе (если возможно) или выдерните шнур питания и повторите попытку с начала.</p>
+</blockquote>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка устройства</h4><label class="check-item"><input type="checkbox"><span>Отключить кабель питания</span></label><label class="check-item"><input type="checkbox"><span>Подключить USB к ПК</span></label><label class="check-item"><input type="checkbox"><span>Зажать Resume и Power</span></label><label class="check-item"><input type="checkbox"><span>Отпустить Resume</span></label><label class="check-item"><input type="checkbox"><span>Быстро нажать Resume 2 раза</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<details class="pb-accordion"><summary>Почему важно не отключать питание?Если вы выключите принтер или отсоедините USB-кабель в процессе сброса, счетчики могут зафиксировать промежуточное значение. Это приведет к тому, что при следующем включении ошибка вернется, а в некоторых случаях программа может заблокировать доступ к сбросу на некоторое время.-->
+
+<h2 id="процедура-сброса-через-утилиту-pp201">Процедура сброса через утилиту PP201</h2>
+<p>После того как принтер находится в сервисном режиме, запускайте утилиту <strong>PP201</strong>. Интерфейс программы обычно прост, но требует внимательности. В главном окне вы увидите выпадающий список устройств. Убедитесь, что система определила ваш <em>Canon iP2700</em>.</p>
+<p>В разделе «Main» (Главное) найдите графу «Clear Waste Ink Counter» (Очистка счетчика чернил). Именно здесь происходит магия сброса. Вам нужно выбрать тип сброса. Существует два основных варианта</summary><div class="pb-accordion-body"><p> частичный сброс (Partial) и полный сброс (Main). Для начала рекомендуется использовать <strong>Partial</strong>, так как он сбрасывает только основной счетчик и безопаснее для прошивки.</p>
+<p>Нажмите кнопку «OK» или «Execute». Программа отправит команду на принтер, и индикаторы на корпусе начнут мигать, подтверждая выполнение задачи. Процесс может занять от нескольких секунд до минуты. Не отключайте кабель USB в этот момент!</p>
+<p>После завершения утилита выдаст сообщение об успешном завершении операции. В этот момент индикатор на принтере должен перестать мигать и загореться постоянным зеленым цветом, сигнализируя о готовности к работе. Однако, чтобы изменения вступили в силу, принтер необходимо перезагрузить.</p>
+<ul>
+<li>✅ Запустите <code>PP201</code> и проверьте подключение</li>
+<li>✅ Выберите опцию <strong>Clear Ink Counter</strong></li>
+<li>✅ Нажмите кнопку сброса и дождитесь зеленого индикатора</li>
+<li>✅ Перезагрузите устройство выключением и включением</li>
+</ul>
+
+
+
+<h2 id="таблица-состояний-индикаторов">Таблица состояний индикаторов</h2>
+<p>Понимание сигналов светодиодов поможет вам контролировать процесс сброса и вовремя реагировать на проблемы. Приведенная ниже таблица описывает наиболее распространенные состояния светового индикатора на корпусе <em>Canon iP2700</em>.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Состояние индикатора</th>
+<th>Значение</th>
+<th>Действие пользователя</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Зеленый горит постоянно</td>
+<td>Принтер готов к работе</td>
+<td>Можно запускать печать</td>
+</tr>
+<tr>
+<td>Оранжевый мигает 8 раз</td>
+<td>Переполнен абсорбер (5B00)</td>
+<td>Требуется сброс через утилиту</td>
+</tr>
+<tr>
+<td>Зеленый и Оранжевый мигают</td>
+<td>Вход в сервисный режим</td>
+<td>Запуск программы сброса</td>
+</tr>
+<tr>
+<td>Оранжевый горит постоянно</td>
+<td>Ошибка входа в сервис</td>
+<td>Перезагрузка и повтор попытки</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Если после сброса счетчиков принтер продолжает выдавать ошибку, возможно, вы выбрали неправильный режим сброса или утилита несовместима с вашей ревизией платы. В редких случаях требуется сброс не только счетчика абсорбера, но и <strong>счетчика чернил</strong> (Ink Absorber) через другие параметры в меню утилиты.</p>
+<blockquote>
+<p>⚠️ Внимание: Регулярный сброс счетчиков без замены физической прокладки может привести к тому, что чернила протечут наружу. Следите за состоянием корпуса принтера и при первых признаках протечки меняйте абсорбер.</p>
+</blockquote>
+
+<h2 id="механическая-замена-абсорбера-опционально">Механическая замена абсорбера (опционально)</h2>
+<p>Программный сброс — это лишь временное решение. Физический объем впитывающей прокладки конечен. Если вы часто печатаете, абсорбер быстро снова заполнится, и ошибка вернется. Для полного решения проблемы рекомендуется механическая очистка или замена прокладки.</p>
+<p>Процедура замены требует разборки корпуса принтера <em>Canon iP2700</em>. Вам нужно открутить винты, снять верхнюю крышку и добраться до прокладки, расположенной в нижней части устройства. Аккуратно извлеките ее, промойте теплой водой с мылом и высушите, либо замените на новую губку.</p>
+<p>После физической очистки необходимо снова выполнить программный сброс, чтобы обнулить счетчик. Это гарантирует, что принтер начнет отсчет с нуля, учитывая реальное состояние абсорбера. Игнорирование физического состояния прокладки при частых сбросах может привести к коррозии внутренних плат.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед тем как лезть отверткой внутрь принтера, сфотографируйте расположение всех проводов и винтов. Это поможет вам правильно собрать устройство обратно, не оставив лишних деталей внутри.</p></aside>
+
+<h2 id="частые-вопросы-и-troubleshooting">Частые вопросы и troubleshooting</h2>
+<p>В процессе работы с утилитой могут возникнуть дополнительные вопросы. Ниже собраны ответы на наиболее распространенные проблемы, с которыми сталкиваются пользователи при попытке сбросить <em>Canon iP2700</em>.</p>
+<p>Иногда программа не видит принтер, даже если он подключен и включен в сервисный режим. В этом случае проверьте, установлен ли драйвер принтера в системе. Утилита часто использует драйвер для связи с устройством. Попробуйте переустановить драйвер с сайта производителя или использовать версию драйвера от другой модели серии iP.</p>
+<p>Другой частой проблемой является невозможность удержания кнопок в правильной последовательности. Рука может дрогнуть, или timing может быть нарушен. В таком случае лучше потренироваться несколько раз без подключенного USB-кабеля, чтобы отработать механику нажатий до автоматизма.</p>
+
+<details>
+<summary>Что делать, если сброс не помог и ошибка 5B00 вернулась?</summary>
+<p>Если ошибка возвращается сразу после перезагрузки, попробуйте выполнить полный сброс (Main) вместо частичного (Partial) в утилите PP201. Также проверьте, не установлен ли драйвер в режиме совместимости. Иногда помогает удаление драйвера и установка его заново перед повторным сбросом.</p>
+</details>
+
+<details>
+<summary>Можно ли сбросить принтер без компьютера?</summary>
+<p>Для модели <em>Canon iP2700</em> стандартный сброс через кнопки (без ПК) невозможен. Эта процедура разработана только для работы с сервисным ПО, таким как PP201. Существуют сложные манипуляции с кнопками, но они ненадежны и могут привести к поломке, поэтому рекомендуется использовать компьютер.</p>
+</details>
+
+<details>
+<summary>Безопасно ли использовать утилиту PP201?</summary>
+<p>Сама по себе утилита безопасна, если вы не нажимаете кнопку «EEPROM Clear» (если она есть), так как это может стереть уникальные настройки платы. Используйте только опцию сброса счетчика абсорбера (Waste Ink Counter). <strong>Ни в коем случае не пытайтесь сбросить прошивку или EEPROM без четкого понимания последствий.</strong></p>
+</details>
+
+<details>
+<summary>Как часто нужно делать сброс?</summary>
+<p>Частота зависит от объема печати. При активной печати это может быть раз в 6-12 месяцев. При редком использовании — раз в несколько лет. <mark>Сброс не является лечением, это лишь программный обход защитного механизма.</mark> Если вы сбрасываете счетчик чаще раза в полгода, значит, абсорбер физически переполнен.</p>
+</details>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярный программный сброс без замены абсорбера — это «палочка-выручалочка», которая может привести к переливу чернил на стол, если не следить за состоянием прокладки.</p></aside></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-chistit-printer-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Как почистить принтер Кэнон: инструкция по удалению засоров и обслуживанию</span>
+                <span class="pb-related-desc">Полное руководство по обслуживанию принтеров Canon. Узнайте, как чистить дюзи, головки, ролики подач</span>
+            </a><a href="/articles/c/ch/chto-delat-esli-zasokh-kartridzh-v-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Засох картридж в принтере Canon: 7 способов оживить</span>
+                <span class="pb-related-desc">Картридж Canon засох и не печатает? Узнайте, как восстановить чернила без замены: от разогрева до пр</span>
+            </a><a href="/articles/p/pr/printer-canon-mp220-oshibka-5100-chto-delat.html" class="pb-related-card">
+                <span class="pb-related-title">Ошибка 5100 на принтере Canon MP220: пошаговая инструкция по устранению</span>
+                <span class="pb-related-desc">Полное руководство по исправлению ошибки 5100 на Canon MP220. Причины, чистка шестеренок, смазка кар</span>
+            </a><a href="/articles/k/ka/kak-snimat-kartridzh-s-printera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как снять картридж с принтера Canon: пошаговая инструкция и советы</span>
+                <span class="pb-related-desc">Подробный гайд по извлечению картриджа из принтеров Canon. Разбор моделей, частые ошибки и советы по</span>
+            </a><a href="/articles/k/ka/kak-razobrat-printer-canon-4410.html" class="pb-related-card">
+                <span class="pb-related-title">Инструкция: как разобрать принтер Canon i-SENSYS LBP4410</span>
+                <span class="pb-related-desc">Пошаговое руководство по разборке принтера Canon LBP4410. Разборка корпуса, замена картриджа, устран</span>
+            </a><a href="/articles/k/ka/kak-prochistit-printer-canon-bez-kompyutera.html" class="pb-related-card">
+                <span class="pb-related-title">Как прочистить принтер Canon без компьютера: пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как самостоятельно очистить печатающую головку и дюз принтера Canon, используя только кнопк</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

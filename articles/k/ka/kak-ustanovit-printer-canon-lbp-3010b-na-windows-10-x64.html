@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Установка принтера Canon LBP 3010B на Windows 10 x64: Полная инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Подробная пошаговая установка драйвера и настройка Canon LBP 3010B на Windows 10 64-bit. Решение проблем с LPT-портом и автоматическое подключение.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-ustanovit-printer-canon-lbp-3010b-na-windows-10-x64.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Установка принтера Canon LBP 3010B на Windows 10 x64: Полная инструкция">
+    <meta property="og:description" content="Подробная пошаговая установка драйвера и настройка Canon LBP 3010B на Windows 10 64-bit. Решение проблем с LPT-портом и автоматическое подключение.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Установка принтера Canon LBP 3010B на Windows 10 x64: Полная инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-системы-и-проверка-драйверов">Подготовка системы и проверка драйверов</a></li><li><a href="#скачивание-официального-или-адаптированного-драйвера">Скачивание официального или адаптированного драйвера</a></li><li><a href="#проверка-службы-lpc-и-её-запуск">Проверка службы LPC и её запуск</a></li><li><a href="#процесс-ручной-установки-через-диспетчер-устройств">Процесс ручной установки через Диспетчер устройств</a></li><li><a href="#устранение-ошибок-порта-lpt">Устранение ошибок порта LPT</a></li><li><a href="#решение-проблем-с-несовместимостью">Решение проблем с несовместимостью</a></li><li><a href="#faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-ustanovit-drajver-na-kenon-mf-3228.html">Установка драйвера Canon MF3228: пошаговая инструкция 2026</a></li><li><a href="/articles/k/ka/kak-pravilno-vstavit-sakharnuyu-bumagu-v-printer-canon.html">Как правильно вставить сахарную бумагу в принтер Canon: инструкция</a></li><li><a href="/articles/k/ka/kak-ustanovit-drajvera-na-printer-canon-mf3228-dlya-windows-10.html">Драйвера для Canon MF3228 на Windows 10: установка за 5 минут</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-mg3140-cherez-wifi-k-telefonu.html">Как подключить Canon MG3140 к Wi-Fi и телефону: Полная инструкция</a></li><li><a href="/articles/p/pr/printery-kenon-kto-proizvoditel.html">Кто производитель принтеров Canon: история бренда и технологии</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Установка принтера Canon LBP 3010B на Windows 10 x64: Полный гайд</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-системы-и-проверка-драйверов">Подготовка системы и проверка драйверов</a></li><li><a href="#скачивание-официального-или-адаптированного-драйвера">Скачивание официального или адаптированного драйвера</a></li><li><a href="#проверка-службы-lpc-и-её-запуск">Проверка службы LPC и её запуск</a></li><li><a href="#процесс-ручной-установки-через-диспетчер-устройств">Процесс ручной установки через Диспетчер устройств</a></li><li><a href="#устранение-ошибок-порта-lpt">Устранение ошибок порта LPT</a></li><li><a href="#решение-проблем-с-несовместимостью">Решение проблем с несовместимостью</a></li><li><a href="#faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Многие пользователи продолжают использовать легендарный лазерный принтер <em>Canon LBP 3010B</em>, несмотря на появление новых моделей. Эта надежная машина отлично справляется с печатью текстовых документов в домашних условиях и небольших офисах. Однако при переходе на современную операционную систему <strong>Windows 10 x64</strong> многие сталкиваются с трудностями: система не видит устройство или не может найти подходящие драйверы самостоятельно.</p>
+
+<p>Ситуация усугубляется тем, что <em>Canon</em> официально прекратил выпуск драйверов для некоторых старых версий, что заставляет пользователей искать обходные пути. В этой статье мы подробно разберем, как корректно настроить <strong>Canon LBP 3010B</strong> на шестнадцатеразрядной версии Windows 10, обходя системные ограничения и обеспечивая стабильную работу устройства.</p>
+
+<h2 id="подготовка-системы-и-проверка-драйверов">Подготовка системы и проверка драйверов</h2>
+
+<p>Перед началом процесса установки необходимо убедиться, что ваша операционная система готова к приему нового оборудования. Важно понимать, что автоматический поиск драйверов через <code>Центр обновлений Windows</code> часто дает сбой для старых моделей, так как Microsoft перестала включать их в стандартный каталог.</p>
+
+<p>Вам нужно проверить разрядность системы, чтобы скачать правильную версию ПО. Несмотря на название <em>Windows 10</em>, она может быть как 32-битной, так и 64-битной. Для <strong>Canon LBP 3010B</strong> критически важно использовать именно драйвер для архитектуры <code>x64</code>, иначе устройство не войдет в рабочий режим.</p>
+
+<p>Запустите меню <code>Пуск</code>, введите <code>О системе</code> и откройте соответствующий раздел настроек. В графе <code>Тип системы</code> вы увидите надпись «64-разрядная операционная система». Если вы видите 32-разрядную версию, инструкция ниже не подойдет, и потребуется поиск другого решения.</p>
+
+<blockquote>⚠️ Внимание: Не пытайтесь принудительно установить 32-битный драйвер на 64-битную систему Windows 10. Это приведет к ошибкам службы печати и невозможности отправить документ на принтер, даже если он будет определен как устройство.</blockquote>
+
+<h2 id="скачивание-официального-или-адаптированного-драйвера">Скачивание официального или адаптированного драйвера</h2>
+
+<p>Основная сложность заключается в поиске актуального файла установки. На официальном сайте производителя часто отсутствуют ссылки на старые модели в разделе поддержки для новых ОС. Вам придется вручную искать драйвер <em>Canon CAPT</em> (Canon Advanced Printing Technology), который является основой работы устройства.</p>
+
+<p>Идеальным решением будет поиск версии драйвера <strong>CAPT Printer Driver</strong> для Windows 10. Если официальной версии для вашей модели нет, часто помогает использование драйвера от похожей модели, например, <em>Canon LBP 2900</em> или <em>LBP 6000</em>, так как их аппаратная начинка идентична. Однако лучше всего скачать универсальный пакет, который поддерживает широкий спектр устройств.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Модель принтера</th>
+<th>Тип драйвера</th>
+<th>Совместимость с Win 10 x64</th>
+<th>Версия CAPT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canon LBP 3010B</td>
+<td>Официальный (если есть)</td>
+<td>Полная</td>
+<td>3.80</td>
+</tr>
+<tr>
+<td>Canon LBP 2900</td>
+<td>Альтернативный</td>
+<td>Совместима</td>
+<td>3.50</td>
+</tr>
+<tr>
+<td>Canon LBP 6000</td>
+<td>Альтернативный</td>
+<td>Совместима</td>
+<td>3.30</td>
+</tr>
+<tr>
+<td>Canon i-SENSYS LBP</td>
+<td>Универсальный</td>
+<td>Частичная</td>
+<td>4.00+</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>После скачивания архива его необходимо распаковать в отдельную папку, например, <code>C:\Drivers\Canon</code>. Установка драйверов <em>Canon</em> часто требует доступа к файлам в конкретном расположении, и работа из архива может прерваться ошибкой.</p>
+
+<blockquote>⚠️ Внимание: Убедитесь, что в названии папки с распакованными драйверами нет кириллических символов. Английский язык в путях к файлам — обязательное условие для корректной работы установщика.</blockquote>
+
+<div class="pb-poll" id="poll-98bb723e"><div class="pb-poll-question">📊 Какая у вас версия Windows 10?</div><div class="pb-poll-option" data-poll="98bb723e" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Build 19045 (22H2)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="98bb723e" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Build 19044 (21H2)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="98bb723e" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Build 19043 (21H1)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="98bb723e" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Другая версия</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="проверка-службы-lpc-и-её-запуск">Проверка службы LPC и её запуск</h2>
+
+<p>Самая частая причина, по которой <strong>Canon LBP 3010B</strong> не печатает после установки — это отключенная служба <em>CAPT Status Monitor</em> или проблемы со службой <code>LPT</code> (Parallel Port). В современных системах служба портов часто отключена по умолчанию, так как USB-интерфейс считается более приоритетным.</p>
+
+<p>Для работы драйвера необходимо вручную проверить статус службы. Нажмите сочетание клавиш <code>Win + R</code>, введите <code>services.msc</code> и нажмите <code>Enter</code>. В открывшемся окне найдите службу с названием <strong>Canon Remote Print Service</strong> или <code>Print Spooler</code>.</p>
+
+<p>Если служба остановлена, дважды кликните по ней, выберите тип запуска <code>Автоматически</code> и нажмите кнопку <code>Запустить</code>. Без активной службы <code>Print Spooler</code> любой принтер в системе будет находиться в состоянии «Оффлайн» или «Пауза».</p>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка служб печати</h4><label class="check-item"><input type="checkbox"><span>Открыть services.msc</span></label><label class="check-item"><input type="checkbox"><span>Найти Print Spooler</span></label><label class="check-item"><input type="checkbox"><span>Установить старт Автоматически</span></label><label class="check-item"><input type="checkbox"><span>Запустить службу вручную</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="процесс-ручной-установки-через-диспетчер-устройств">Процесс ручной установки через Диспетчер устройств</h2>
+
+<p>Если автоматический установщик не сработал или вы скачали только драйвер без программы-мастера, используйте метод ручной установки через <em>Диспетчер устройств</em>. Это наиболее надежный способ для старых моделей на Windows 10.</p>
+
+<p>Подключите USB-кабель принтера к компьютеру. Если система издаст звук подключения нового устройства, но не установит его, откройте <code>Диспетчер устройств</code> через контекстное меню Пуск. Найдите раздел <code>Другие устройства</code> или <code>Принтеры</code>, где будет висеть неизвестное устройство с желтым восклицательным знаком.</p>
+
+<p>Кликните правой кнопкой мыши по устройству и выберите <code>Обновить драйвер</code>. В появившемся окне выберите <code>Выполнить поиск драйверов на этом компьютере</code>. Нажмите <code>Обзор</code> и укажите путь к распакованной папке с драйверами, которую вы подготовили ранее.</p>
+
+<p>Система предложит выбрать конкретную модель из списка. Если <em>Canon LBP 3010B</em> есть в списке, выберите его. Если нет, попробуйте выбрать модель <em>Canon LBP 2900</em>, так как они часто имеют идентичные чипы. Нажмите <code>Далее</code> и дождитесь завершения процесса.</p>
+
+<details class="pb-accordion"><summary>Что делать, если драйвер не находится</summary><div class="pb-accordion-body"><p>Если система пишет "Драйверы для этого устройства не найдены", проверьте папку на наличие файлов .inf. Иногда установщик требует указать именно папку с этими файлами, а не архив с ними.</p></div></details>
+
+<h2 id="устранение-ошибок-порта-lpt">Устранение ошибок порта LPT</h2>
+
+<p>Даже при успешной установке драйвера принтер может не печатать, если в настройках устройства выбран неверный порт. Для старых моделей <em>Canon</em> часто используется порт <code>LPT1</code>, который в реальности не существует на современных ноутбуках.</p>
+
+<p>Зайдите в <code>Панель управления → Устройства и принтеры</code>. Найдите иконку <strong>Canon LBP 3010B</strong>, кликните по ней правой кнопкой и выберите <code>Свойства принтера</code>. Перейдите на вкладку <code>Порты</code>.</p>
+
+<p>В списке портов вам нужно выбрать <code>USB001</code> (или <code>USB002</code>, <code>USB003</code> в зависимости от того, в какой порт вы воткнули кабель). Если выбран порт <code>LPT1</code>, принтер будет зависать в ожидании подключения к несуществующему параллельному порту.</p>
+
+<blockquote>⚠️ Внимание: Если после смены порта на USB принтер всё равно не печатает, попробуйте удалить устройство полностью и подключить его к другому USB-порту, желательно расположенному сзади системного блока напрямую, без удлинителей.</blockquote>
+
+<p>Иногда требуется принудительное переназначение порта. В том же меню <code>Порты</code> можно нажать кнопку <code>Конфигурировать порт</code>, но для USB-принтеров это действие часто недоступно. Главное — убедиться, что галочка стоит именно на USB-порте.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если принтер определяется как "Неизвестное устройство", попробуйте временно отключить антивирус, который может блокировать установку драйверов старых производителей.</p></aside>
+
+<h2 id="решение-проблем-с-несовместимостью">Решение проблем с несовместимостью</h2>
+
+<p>В редких случаях установщик драйвера выдает ошибку совместимости с Windows 10. В такой ситуации поможет режим совместимости. Найдите файл установки (обычно <code>Setup.exe</code> или <code>Install.exe</code>) в папке с драйверами.</p>
+
+<p>Кликните по файлу правой кнопкой мыши, выберите <code>Свойства</code> и перейдите на вкладку <code>Совместимость</code>. Отметьте галочку <code>Запустить эту программу в режиме совместимости</code> и выберите в списке <code>Windows 7</code> или <code>Windows XP (Service Pack 3)</code>.</p>
+
+<p>Также полезно нажать кнопку <code>Выполнить как администратор</code>. Это гарантирует, что установщик получит все необходимые права для записи ключей в реестр и создания служб. После применения настроек запустите установку заново.</p>
+
+<p>Одной из последних мер является использование утилиты <em>Windows Troubleshooter</em> для устранения неполадок. Введите в поиске <code>Устранение неполадок</code> и выберите <code>Принтеры</code>. Система автоматически попытается исправить ошибки в очереди печати и конфигурации портов.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Установка драйвера через Диспетчер устройств и выбор USB-порта — самый надежный способ настроить Canon LBP 3010B на Windows 10, так как он обходит ограничения автоматических установщиков.</p></aside>
+
+<h2 id="faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</h2>
+
+<details>
+<summary>Почему принтер Canon LBP 3010B определяется, но не печатает?</summary>
+<p>Чаще всего проблема кроется в выборе неверного порта в свойствах принтера. Убедитесь, что в разделе <code>Порты</code> выбран порт <code>USB00x</code>, а не <code>LPT1</code>. Также проверьте, не стоит ли принтер в режиме "Пауза" или "Оффлайн".</p>
+</details>
+
+<details>
+<summary>Можно ли использовать драйвер от LBP 2900 для LBP 3010B?</summary>
+<p>Да, в большинстве случаев драйверы для моделей LBP 2900 и LBP 3010B полностью совместимы, так как они построены на одинаковой аппаратной платформе. Это отличный вариант, если официальный драйвер для вашей модели отсутствует.</p>
+</details>
+
+<details>
+<summary>Как проверить, что драйвер установлен на 64-битную систему?</summary>
+<p>В <code>Диспетчере устройств</code> кликните правой кнопкой на принтере, выберите <code>Свойства</code> и перейдите на вкладку <code>Драйвер</code>. Там будет указан путь к файлу драйвера. Если в пути есть <code>amd64</code> или <code>x64</code>, значит, драйвер подходит для вашей архитектуры.</p>
+</details>
+
+<details>
+<summary>Что делать, если служба CAPT не запускается?</summary>
+<p>Это может произойти из-за отсутствия прав администратора или конфликта с другим программным обеспечением. Попробуйте переустановить драйвер от имени администратора и перезагрузить компьютер. Если не поможет, проверьте реестр на наличие битых ключей.</p>
+</details>
+
+<details>
+<summary>Работает ли этот принтер с Windows 11?</summary>
+<p>Canon LBP 3010B может работать и на Windows 11, так как эта ОС полностью совместима с драйверами Windows 10. Используйте тот же алгоритм установки, что и для "десятки", выбрав драйвер для Windows 10 x64.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-ustanovit-drajver-na-kenon-mf-3228.html" class="pb-related-card">
+                <span class="pb-related-title">Установка драйвера Canon MF3228: пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Полное руководство по установке драйверов, ПО и утилит для МФУ Canon i-SENSYS MF3228. Решаем проблем</span>
+            </a><a href="/articles/k/ka/kak-pravilno-vstavit-sakharnuyu-bumagu-v-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как правильно вставить сахарную бумагу в принтер Canon: инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по загрузке термобумаги в принтеры Canon. Советы по выбору, настройке параметр</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-drajvera-na-printer-canon-mf3228-dlya-windows-10.html" class="pb-related-card">
+                <span class="pb-related-title">Драйвера для Canon MF3228 на Windows 10: установка за 5 минут</span>
+                <span class="pb-related-desc">Пошаговая инструкция по установке драйверов для принтера Canon MF3228 на Windows 10. Скачивание с оф</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-canon-mg3140-cherez-wifi-k-telefonu.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon MG3140 к Wi-Fi и телефону: Полная инструкция</span>
+                <span class="pb-related-desc">Узнайте, как настроить беспроводную печать с телефона на принтер Canon MG3140. Пошаговая настройка ч</span>
+            </a><a href="/articles/p/pr/printery-kenon-kto-proizvoditel.html" class="pb-related-card">
+                <span class="pb-related-title">Кто производитель принтеров Canon: история бренда и технологии</span>
+                <span class="pb-related-desc">Узнайте, кто производит принтеры Canon, какая компания стоит за брендом и где собираются устройства.</span>
+            </a><a href="/articles/k/ka/kak-nastroit-besprovodnuyu-pechat-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить беспроводную печать Canon: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению принтеров Canon к Wi-Fi. Настройка через WPS, программу Easy-Web</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

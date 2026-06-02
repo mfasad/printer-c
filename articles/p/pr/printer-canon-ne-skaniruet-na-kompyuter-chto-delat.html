@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Принтер Canon не сканирует на ПК: основные причины и решения — Кэнон Инфо</title>
+    <meta name="description" content="Узнайте, как исправить ошибку сканирования на компьютере. Пошаговая инструкция: обновление драйверов, настройка IJ Scan Utility и проверка службы WIA.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/p/pr/printer-canon-ne-skaniruet-na-kompyuter-chto-delat.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Принтер Canon не сканирует на ПК: основные причины и решения">
+    <meta property="og:description" content="Узнайте, как исправить ошибку сканирования на компьютере. Пошаговая инструкция: обновление драйверов, настройка IJ Scan Utility и проверка службы WIA.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Принтер Canon не сканирует на ПК: основные причины и решения</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#проверка-физического-подключения-и-состояния-устройства">Проверка физического подключения и состояния устройства</a></li><li><a href="#диагностика-и-обновление-программного-обеспечения">Диагностика и обновление программного обеспечения</a></li><li><a href="#настройка-службы-windows-image-acquisition">Настройка службы Windows Image Acquisition</a></li><li><a href="#работа-с-утилитами-canon-и-настройка-брандмауэра">Работа с утилитами Canon и настройка брандмауэра</a></li><li><a href="#использование-сторонних-инструментов-и-альтернативных-методов">Использование сторонних инструментов и альтернативных методов</a></li><li><a href="#типичные-ошибки-и-их-коды">Типичные ошибки и их коды</a></li><li><a href="#сброс-настроек-и-полная-переустановка">Сброс настроек и полная переустановка</a></li><li><a href="#когда-стоит-обратиться-в-сервисный-центр">Когда стоит обратиться в сервисный центр</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-polzovatsya-skanerom-canon-fc108.html">Как пользоваться сканером Canon FC-108: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-skanirovat-na-printere-canon-mp-230.html">Как сканировать документы на принтере Canon MP230: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-na-printere-canon-skanirovat-na-kompyuter.html">Как сканировать на компьютер с принтера Canon: Полное руководство</a></li><li><a href="/articles/k/ka/kak-otskanirovat-dokument-na-kenon-mf-3228.html">Как сканировать документы на принтере Canon MF3228: Инструкция по USB и Wi-Fi</a></li><li><a href="/articles/k/ka/kak-ustanovit-skaner-na-kompyuter-canon.html">Как установить сканер Canon на компьютер: полное руководство</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Почему принтер Canon не сканирует на компьютер и как это исправить</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#проверка-физического-подключения-и-состояния-устройства">Проверка физического подключения и состояния устройства</a></li><li><a href="#диагностика-и-обновление-программного-обеспечения">Диагностика и обновление программного обеспечения</a></li><li><a href="#настройка-службы-windows-image-acquisition">Настройка службы Windows Image Acquisition</a></li><li><a href="#работа-с-утилитами-canon-и-настройка-брандмауэра">Работа с утилитами Canon и настройка брандмауэра</a></li><li><a href="#использование-сторонних-инструментов-и-альтернативных-методов">Использование сторонних инструментов и альтернативных методов</a></li><li><a href="#типичные-ошибки-и-их-коды">Типичные ошибки и их коды</a></li><li><a href="#сброс-настроек-и-полная-переустановка">Сброс настроек и полная переустановка</a></li><li><a href="#когда-стоит-обратиться-в-сервисный-центр">Когда стоит обратиться в сервисный центр</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Ситуация, когда многофункциональное устройство отказывается передавать отсканированные изображения на жесткий диск, является одной из самых распространенных проблем офисной техники. Пользователи часто сталкиваются с тем, что печать работает исправно, но функция <strong>сканирования</strong> внезапно перестает отвечать на запросы. Это может происходить как с новыми моделями, так и с устройствами, которые годами служили верой и правдой.</p>
+
+<p>Причины сбоя могут быть самыми разными: от банального отсутствия драйверов до конфликтов системных служб Windows. В некоторых случаях проблема кроется в настройках брандмауэра или устаревшем ПО, которое перестало корректно взаимодействовать с обновленной операционной системой. Разобраться в тонкостях диагностики и устранить препятствия для работы <em>Canon</em> можно самостоятельно, не прибегая к вызову специалиста.</p>
+
+<p>В этой статье мы рассмотрим основные сценарии возникновения ошибки и предложим конкретные алгоритмы действий для восстановления работоспособности сканера. Главное — сохранять спокойствие и последовательно проверять каждый потенциальный источник проблемы, не пропуская важные этапы настройки.</p>
+
+<h2 id="проверка-физического-подключения-и-состояния-устройства">Проверка физического подключения и состояния устройства</h2>
+
+<p>Первым шагом в диагностике всегда должен быть осмотр аппаратной части. Иногда проблема решается буквально за секунды простым перезапуском или переподключением кабеля. Убедитесь, что кабель USB плотно вставлен в разъемы как на корпусе принтера, так и в системный блок или ноутбук. Не используйте USB-хабы или удлинители при первом подключении — <strong>прямое соединение</strong> гарантирует стабильность передачи данных.</p>
+
+<p>Обратите внимание на индикаторы состояния на панели управления. Мигающий оранжевый свет часто сигнализирует о наличии замятия бумаги или открытой крышки, что блокирует запуск сканирования. Если на дисплее устройства отображается код ошибки, загляните в инструкцию к конкретной модели <em>Canon Pixma</em> или <em>Canon imageRUNNER</em>, чтобы расшифровать значение. Временная зависимость прошивки также может быть устранена полным обесточиванием аппарата на 30-60 секунд.</p>
+
+<p>При использовании беспроводного подключения по Wi-Fi необходимо проверить уровень сигнала. Если принтер находится слишком далеко от роутера или между ними есть толстые стены, пакет данных может теряться, и компьютер просто не "увидит" устройство для сканирования. Убедитесь, что и ПК, и МФУ подключены к одной и той же сети, а не к гостевой или гостевой подсети.</p>
+
+<h2 id="диагностика-и-обновление-программного-обеспечения">Диагностика и обновление программного обеспечения</h2>
+
+<p>Самая частая причина отказа сканера — устаревшие или поврежденные драйверы. Операционная система Windows часто пытается установить универсальный драйвер, который не поддерживает расширенный функционал сканирования. Вам необходимо зайти на официальный сайт производителя и скачать специализированный пакет <strong>IJ Scan Utility</strong> или <em>Canon My Image Garden</em>.</p>
+
+<p>Важно не просто обновить драйвер, а выполнить "чистую" установку. Для этого откройте <code>Панель управления → Удаление программ</code> и удалите все компоненты, связанные с вашим устройством. После перезагрузки компьютера установите свежую версию ПО с сайта, выбрав тип подключения (USB или Wi-Fi). Программа установки сама найдет устройство и настроит необходимые службы.</p>
+
+<p>Иногда проблема возникает из-за конфликта версий драйверов 32 и 64 бит. Если у вас установлена 64-разрядная версия Windows, но вы установили драйвер для 32-битной системы, сканирование будет невозможно. Проверьте архитектуру вашей ОС через <code>Свойства системы</code> и скачайте соответствующий дистрибутив.</p>
+
+<div class="pb-poll" id="poll-914be673"><div class="pb-poll-question">📊 Какой способ подключения вы используете?</div><div class="pb-poll-option" data-poll="914be673" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">USB-кабель</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="914be673" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Wi-Fi сеть</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="914be673" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Ethernet (LAN)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="914be673" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не подключен</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="настройка-службы-windows-image-acquisition">Настройка службы Windows Image Acquisition</h2>
+
+<p>Система Windows использует встроенную службу для управления сканированием, которая называется <strong>WIA (Windows Image Acquisition)</strong>. Если эта служба отключена или зависла, ни одна программа не сможет инициировать процесс сканирования. Это критически важный компонент, без которого работа сканера невозможна в стандартном режиме.</p>
+
+<p>Чтобы проверить статус службы, нажмите комбинацию клавиш <code>Win + R</code>, введите команду <code>services.msc</code> и нажмите Enter. В открывшемся списке найдите строку <em>Служба загрузки изображений Windows (WIA)</em>. Дважды кликните по ней и убедитесь, что тип запуска установлен в <code>Автоматически</code>, а состояние — <code>Выполняется</code>.</p>
+
+<blockquote>⚠️ Внимание: Если служба уже запущена, но сканирование не работает, попробуйте остановить её через кнопку "Остановить", подождать пару секунд и снова запустить. Это перезагрузит процесс и сбросит возможные программные ошибки.</blockquote>
+
+<p>В некоторых случаях служба "Сканер" или <em>Remote Procedure Call (RPC)</em> также может влиять на работу. Убедитесь, что они тоже настроены на автоматический запуск. Если служба WIA постоянно отключается после перезагрузки, это может указывать на конфликт с антивирусным программным обеспечением или повреждение системных файлов.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка службы сканирования</h4><label class="check-item"><input type="checkbox"><span>Открыть services.msc</span></label><label class="check-item"><input type="checkbox"><span>Найти службу WIA</span></label><label class="check-item"><input type="checkbox"><span>Установить "Автоматически"</span></label><label class="check-item"><input type="checkbox"><span>Перезапустить службу</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="работа-с-утилитами-canon-и-настройка-брандмауэра">Работа с утилитами Canon и настройка брандмауэра</h2>
+
+<p>Программное обеспечение от <em>Canon</em> часто требует доступа к сети для передачи данных между устройством и компьютером. Брандмауэр Windows или сторонний антивирус могут блокировать эти соединения, считая их подозрительными. Вам необходимо добавить исключения для утилиты сканирования в настройках файлового экрана.</p>
+
+<p>Зайдите в <code>Параметры Windows → Обновление и безопасность → Безопасность Windows → Брандмауэр и защита сети</code>. Выберите <code>Разрешить взаимодействие с приложением</code> и найдите в списке <strong>IJ Scan Utility</strong> или <em>Canon IJ Network Scan Utility</em>. Убедитесь, что галочки стоят напротив частных и публичных сетей.</p>
+
+<p>Если вы используете функцию сканирования по сети, необходимо убедиться, что порт, используемый программой, не заблокирован. Стандартные порты для <em>Canon</em> обычно находятся в диапазоне 80, 6566 или 8080. Проверьте настройки маршрутизатора, если проблема сохраняется после настройки брандмауэра на ПК.</p>
+
+<h2 id="использование-сторонних-инструментов-и-альтернативных-методов">Использование сторонних инструментов и альтернативных методов</h2>
+
+<p>Если стандартная утилита <em>Canon IJ Scan Utility</em> не работает, можно попробовать сканировать через встроенное приложение Windows <strong>Факсы и сканирование</strong> или <em>Сканер Windows</em>. Эти инструменты используют базовый драйвер TWAIN или WIA и часто позволяют получить изображение даже при наличии проблем с фирменным ПО.</p>
+
+<p>Для проверки можно также воспользоваться онлайн-сервисами или другими программами, например <em>NAPS2</em> или <em>VueScan</em>. Если через стороннее ПО сканирование проходит успешно, значит проблема точно в конфигурации или файлах драйверов Canon, а не в самом железе сканера.</p>
+
+<blockquote>⚠️ Внимание: При использовании сторонних драйверов качество изображения может отличаться от стандартного. Рекомендуется вернуть оригинальное ПО после устранения основной ошибки, чтобы получить максимальную производительность.</blockquote>
+
+<details class="pb-accordion"><summary>Что делать, если драйвер не находится?</summary><div class="pb-accordion-body"><p>Иногда система не может найти драйвер автоматически. В этом случае скачайте полный пакет драйверов с сайта Canon, распакуйте архив и при установке выберите "Установка с диска", указав путь к распакованной папке. Это часто решает проблему поиска устройства.</p></div></details>
+
+<h2 id="типичные-ошибки-и-их-коды">Типичные ошибки и их коды</h2>
+
+<p>Разные модели принтеров <em>Canon</em> могут выдавать специфические коды ошибок, которые помогают сузить круг поиска проблемы. Ниже приведена таблица с наиболее частыми сообщениями и способами их устранения.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Код ошибки / Сообщение</th>
+<th>Возможная причина</th>
+<th>Рекомендуемое действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ошибка 1300, 1301</td>
+<td>Проблема с механикой сканера</td>
+<td>Проверить наличие посторонних предметов под крышкой</td>
+</tr>
+<tr>
+<td>Нет ответа от устройства</td>
+<td>Потеря связи по сети/USB</td>
+<td>Переподключить кабель или проверить IP-адрес</td>
+</tr>
+<tr>
+<td>Ошибка драйвера</td>
+<td>Повреждение ПО</td>
+<td>Полная переустановка драйверов</td>
+</tr>
+<tr>
+<td>Недостаточно памяти</td>
+<td>Переполнение буфера</td>
+<td>Снизить разрешение сканирования</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Особое внимание стоит уделить сообщениям о нехватке памяти. При сканировании изображений высокого разрешения (например, 600 dpi или выше) объем данных может превышать доступную оперативную память компьютера. В таких случаях помогает снижение разрешения в настройках программы до 300 dpi или 150 dpi.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед началом сложного сканирования закройте все лишние программы, особенно браузеры с множеством вкладок, чтобы освободить оперативную память для обработки изображения.</p></aside>
+
+<h2 id="сброс-настроек-и-полная-переустановка">Сброс настроек и полная переустановка</h2>
+
+<p>Если ни один из описанных выше методов не помог, остается радикальный вариант — полный сброс настроек принтера и переустановка всего программного стека. Это действие вернет устройство и драйверы в исходное состояние, как при первом подключении. Начните с удаления всех драйверов через <code>Диспетчер устройств</code>, удалив устройство из списка и выбрав опцию "Удалить программу драйвера".</p>
+
+<p>Затем выполните аппаратный сброс самого принтера. Обычно для этого нужно удерживать кнопку "Stop/Reset" (треугольник в круге) в течение 5-10 секунд, пока не загорится зеленый индикатор, или найти соответствующую опцию в меню настроек устройства. После этого перезагрузите компьютер и установите драйверы заново с официального сайта.</p>
+
+<blockquote>⚠️ Внимание: Перед полным сбросом запишите настройки Wi-Fi и IP-адреса устройства, если они были настроены вручную, так как они будут утрачены. Если у вас сложный офисный сетевой принтер, проконсультируйтесь с администратором сети.</blockquote>
+
+<p>Иногда проблема может заключаться в повреждении реестра Windows. В редких случаях помогает запуск утилиты восстановления системы, чтобы откатить состояние компьютера на дату, когда сканирование работало корректно. Это крайняя мера, но она часто спасает в ситуациях с глубокими системными сбоями.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Полная переустановка драйверов с предварительным удалением старых версий — самый эффективный способ решения программных конфликтов, если простые перезагрузки не помогают.</p></aside>
+
+<h2 id="когда-стоит-обратиться-в-сервисный-центр">Когда стоит обратиться в сервисный центр</h2>
+
+<p>Если после всех манипуляций с ПО и настройками сканер по-прежнему не работает, а на дисплее принтера горит ошибка, связанная с механикой (например, "Ошибка позиционирования сканера"), скорее всего, проблема аппаратная. Это может быть износ шагового двигателя, обрыв шлейфа или поломка самого модуля сканирования.</p>
+
+<p>Не пытайтесь разбирать корпус самостоятельно, если устройство находится на гарантии. Это приведет к потере гарантийных обязательств. Обратитесь в авторизованный сервисный центр <em>Canon</em> для диагностики. Если устройство старое, ремонт может оказаться нецелесообразным, и стоит рассмотреть вариант замены на новую модель с поддержкой современных интерфейсов.</p>
+
+<p>Помните, что регулярное обслуживание и использование качественных кабелей значительно продлевают жизнь технике. Избегайте частого отключения устройства от сети без предварительной остановки через меню, так как это может повредить firmware.</p>
+
+<details>
+<summary>Почему компьютер видит принтер, но не видит сканер?</summary>
+<p>Это часто происходит из-за того, что драйверы печати и драйверы сканирования устанавливаются как отдельные компоненты. Проверьте, установлен ли пакет "IJ Scan Utility" или аналогичный модуль сканирования в списке программ на компьютере.</p>
+</details>
+
+<details>
+<summary>Можно ли сканировать через Wi-Fi, если кабель отключен?</summary>
+<p>Да, большинство современных моделей <em>Canon</em> поддерживают сканирование по беспроводной сети. Для этого необходимо, чтобы и компьютер, и принтер были подключены к одной сети Wi-Fi, и была установлена соответствующая утилита <strong>IJ Network Scan Utility</strong>.</p>
+</details>
+
+<details>
+<summary>Что делать, если сканирование обрывается на полпути?</summary>
+<p>Обычно это связано с нестабильным соединением или нехваткой памяти. Попробуйте уменьшить разрешение сканирования или перевести режим с цветного на черно-белый. Также проверьте кабель USB на предмет перегибов.</p>
+</details>
+
+<details>
+<summary>Как проверить, исправен ли сам модуль сканирования?</summary>
+<p>Попробуйте сделать копию прямо на устройстве (функция копирования). Если копия получается четкая и без искажений, значит сам модуль сканирования исправен, и проблема кроется в программном обеспечении или подключении к ПК.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-polzovatsya-skanerom-canon-fc108.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться сканером Canon FC-108: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по эксплуатации сканера Canon FC-108. Настройка драйверов, процесс сканировани</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-na-printere-canon-mp-230.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы на принтере Canon MP230: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по сканированию с Epson и Canon MP230 на ПК и Mac. Настройка драйверов, исполь</span>
+            </a><a href="/articles/k/ka/kak-na-printere-canon-skanirovat-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на компьютер с принтера Canon: Полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция: настройка драйверов, использование IJ Scan Utility и приложения Canon PRINT. Р</span>
+            </a><a href="/articles/k/ka/kak-otskanirovat-dokument-na-kenon-mf-3228.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы на принтере Canon MF3228: Инструкция по USB и Wi-Fi</span>
+                <span class="pb-related-desc">Пошаговая настройка сканирования на МФУ Canon MF3228. Работа через IJ Scan Utility, драйверы и панел</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-skaner-na-kompyuter-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить сканер Canon на компьютер: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по установке драйверов и ПО сканера Canon. Решаем проблемы подключения, настраи</span>
+            </a><a href="/articles/k/ks/kseroks-canon-pixma-kak-sdelat-kserokopiyu.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать ксерокопию на Canon Pixma: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство: как настроить и запустить копирование документов, фото и цветных изображений </span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

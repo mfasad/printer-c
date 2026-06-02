@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Сброс счетчика чернил Canon MG2540S: Инструкция прошивки Service Tool — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция по сбросу EEPROM принтеров Canon MG2540S. Чиптер, прошивка Service Tool v3400, как войти в сервисное меню и обнулить картриджи без замены чипа.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-sbrosit-schetchik-chernil-u-canon-mg-2540s.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Сброс счетчика чернил Canon MG2540S: Инструкция прошивки Service Tool">
+    <meta property="og:description" content="Пошаговая инструкция по сбросу EEPROM принтеров Canon MG2540S. Чиптер, прошивка Service Tool v3400, как войти в сервисное меню и обнулить картриджи без замены чипа.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-nav-active">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/remont-i-oshibki/">Ремонт и ошибки</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Сброс счетчика чернил Canon MG2540S: Инструкция прошивки Service Tool</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-в-проблему-полной-системы-защиты-картриджей">Введение в проблему полной системы защиты картриджей</a></li><li><a href="#подготовка-оборудования-и-программного-обеспечения">Подготовка оборудования и программного обеспечения</a></li><li><a href="#алгоритм-входа-в-сервисный-режим-принтера">Алгоритм входа в сервисный режим принтера</a></li><li><a href="#работа-с-утилитой-service-tool">Работа с утилитой Service Tool</a></li><li><a href="#таблица-основных-параметров-сброса">Таблица основных параметров сброса</a></li><li><a href="#проверка-результатов-и-устранение-неполадок">Проверка результатов и устранение неполадок</a></li><li><a href="#частые-вопросы-faq">Частые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-razbiraetsya-printer-canon.html">Как разобрать принтер Canon: Пошаговая инструкция по ремонту</a></li><li><a href="/articles/k/ka/kak-perezagruzit-mfu-canon-pixma-mg2540s.html">Как перезагрузить МФУ Canon Pixma MG2540s: 5 способов сброса</a></li><li><a href="/articles/k/ka/kak-sbrosit-pamyat-printera-canon.html">Как сбросить память принтера Canon: 5 рабочих способов</a></li><li><a href="/articles/c/ca/canon-250-kak-razobrat.html">Как разобрать Canon imageRUNNER 250: Пошаговая инструкция по ремонту</a></li><li><a href="/articles/p/po/pochemu-kenon-ne-pechataet-chernym.html">Canon не печатает черным: причины и способы решения проблемы</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как сбросить счетчик чернил у Canon MG2540S: Полный гайд по сервисному сбросу</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-в-проблему-полной-системы-защиты-картриджей">Введение в проблему полной системы защиты картриджей</a></li><li><a href="#подготовка-оборудования-и-программного-обеспечения">Подготовка оборудования и программного обеспечения</a></li><li><a href="#алгоритм-входа-в-сервисный-режим-принтера">Алгоритм входа в сервисный режим принтера</a></li><li><a href="#работа-с-утилитой-service-tool">Работа с утилитой Service Tool</a></li><li><a href="#таблица-основных-параметров-сброса">Таблица основных параметров сброса</a></li><li><a href="#проверка-результатов-и-устранение-неполадок">Проверка результатов и устранение неполадок</a></li><li><a href="#частые-вопросы-faq">Частые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-в-проблему-полной-системы-защиты-картриджей">Введение в проблему полной системы защиты картриджей</h2>
+<p>Владельцы бюджетных МФУ <strong>Canon PIXMA MG2540S</strong> часто сталкиваются с ситуацией, когда устройство перестает печатать, несмотря на наличие чернил в картриджах. На индикаторе начинает мигать оранжевая лампочка, а на экране компьютера появляется ошибка, сообщающая о том, что <em>впитыватель абсорбера</em> заполнен или уровень чернил исчерпан. В случае с <code>MG2540S</code> проблема чаще всего кроется не в физической пустоте, а в срабатывании электронного счетчика, который блокирует работу устройства после определенного количества напечатанных страниц.</p>
+<p>Многие пользователи ошибочно полагают, что единственный выход — это покупка новых картриджей с чипами, что является неоправданными расходами. На самом деле, встроенная память <strong>EEPROM</strong> на печатающей головке просто требует программной инициализации. <em>Сброс счетчика чернил</em> у <code>Canon MG2540S</code> — это процедура, позволяющая обнулить значение в памяти и вернуть принтер в рабочее состояние, продолжая использовать те же картриджи.</p>
+<p>Процесс требует определенной аккуратности и понимания того, как работает <strong>Service Tool</strong> — специализированная утилита от производителя, предназначенная для инженеров. Не стоит бояться технических терминов, так как все действия сводятся к нажатию нескольких кнопок и выбору нужных параметров в интерфейсе программы. Если вы готовы потратить 10-15 минут, вы сможете сэкономить существенную сумму на покупке расходных материалов.</p>
+
+<h2 id="подготовка-оборудования-и-программного-обеспечения">Подготовка оборудования и программного обеспечения</h2>
+<p>Прежде чем приступать к непосредственному сбросу, необходимо подготовить рабочее место и исключить любые внешние помехи, которые могут прервать процесс прошивки. Самое важное условие для успешного обнуления — это стабильное подключение устройства к компьютеру через <strong>USB-кабель</strong>. Не пытайтесь выполнять сброс через Wi-Fi, так как программа <em>Service Tool</em> не сможет корректно распознать принтер в сервисном режиме без прямого физического соединения.</p>
+<p>Вам потребуется скачать специализированное программное обеспечение, которое называется <strong>Service Tool</strong>. Для модели <code>MG2540S</code> (которая является модификацией серии <em>MG2400/2500/2900</em>) наиболее стабильно работает версия <code>v3400</code> или <code>v3801</code>. Обратите внимание, что антивирусы могут блокировать запуск таких утилит, так как они вмешиваются в работу драйверов, поэтому на время процедуры их лучше временно отключить или добавить файл в исключения.</p>
+<p>Также проверьте состояние картриджей: убедитесь, что они установлены до щелчка, а печати листы бумаги в лотке. Если принтер находится в состоянии "Ошибка подачи бумаги", <strong>Service Tool</strong> может не запустить процедуру сброса, так как устройство будет считаться неисправным по механическим параметрам. Заранее подготовьте лист бумаги формата А4, чтобы проверить работу после сброса.</p>
+<blockquote>⚠️ <strong>Внимание</strong>: Убедитесь, что вы скачиваете утилиту с проверенного источника. Файлы <code>.exe</code> с неофициальных сайтов могут содержать вредоносный код, который способен повредить драйверы принтера или операционную систему вашего компьютера.</blockquote>
+
+<div class="pb-poll" id="poll-83ebe4ea"><div class="pb-poll-question">📊 Где вы чаще всего заправляетесь картриджи?</div><div class="pb-poll-option" data-poll="83ebe4ea" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">В сервисном центре</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="83ebe4ea" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Самостоятельно дома</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="83ebe4ea" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Покупаю новые</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="83ebe4ea" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю как заправить</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="алгоритм-входа-в-сервисный-режим-принтера">Алгоритм входа в сервисный режим принтера</h2>
+<p>Самый сложный и ответственный этап всей процедуры — это перевод устройства в <strong>Service Mode</strong>. Обычные кнопки на корпусе принтера в обычном режиме не позволяют получить доступ к инженерным настройкам, поэтому необходимо выполнить точную последовательность нажатий. Если вы сделаете это неправильно, устройство просто перейдет в спящий режим или перезагрузится, и процесс придется начинать заново.</p>
+<p>Для начала убедитесь, что принтер включен и находится в состоянии готовности (все лампочки горят или мигают в штатном режиме). Отключите кабель USB от компьютера, чтобы устройство не реагировало на внешние сигналы. Теперь выполните следующее: нажмите и удерживайте кнопку <code>Stop/Reset</code> (треугольник в круге), не отпуская ее, нажмите кнопку <code>Power</code> (включение).</p>
+<p>Держите обе кнопки нажатыми. Зеленый индикатор загорится, но continue удерживать <code>Stop/Reset</code>. Когда зеленый свет загорится, отпустите кнопку <code>Power</code>, но продолжайте удерживать <code>Stop/Reset</code>. Теперь, не отпуская кнопку сброса, нажмите <code>Power</code> еще раз. Это критически важный момент: если вы отпустите клавишу раньше времени, режим не активируется.</p>
+<p>Удерживая <code>Stop/Reset</code>, нажмите кнопку <code>Power</code> второй раз. После этого отпустите обе кнопки. Если все сделано верно, оранжевая лампочка начнет мигать определенным паттерном (обычно 2 раза, затем пауза, затем снова), что означает успешный вход в сервисное меню. Теперь можно подключать кабель USB к компьютеру.</p>
+<blockquote>⚠️ <strong>Внимание</strong>: Если после подключения к ПК утилита не показывает модель принтера в выпадающем списке, значит, вход в сервисный режим произошел неудачно. Отключите принтер от сети, выждите 10 секунд и повторите процедуру нажатия кнопок заново, соблюдая строгий ритм.</blockquote>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Вход в сервисный режим</h4><label class="check-item"><input type="checkbox"><span>Выключить принтер</span></label><label class="check-item"><input type="checkbox"><span>Нажать Stop и Power</span></label><label class="check-item"><input type="checkbox"><span>Отпустить Power</span></label><label class="check-item"><input type="checkbox"><span>Нажать Power снова</span></label><label class="check-item"><input type="checkbox"><span>Отпустить обе кнопки</span></label><label class="check-item"><input type="checkbox"><span>Подключить USB</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 6</div></div>
+
+<h2 id="работа-с-утилитой-service-tool">Работа с утилитой Service Tool</h2>
+<p>После запуска программы <strong>Service Tool</strong> вы увидите основной интерфейс с несколькими полями ввода и кнопками управления. В верхней части окна должен автоматически определиться тип устройства. Если поле <em>Device</em> пустое или показывает ошибку, проверьте драйверы и дважды убедитесь, что принтер находится в сервисном режиме (оранжевый индикатор должен мигать).</p>
+<p>Вам нужно найти раздел, отвечающий за управление памятью абсорбера или счетчиком чернил. Обычно этот параметр называется <strong>Main Absorber</strong> или <em>Waste Ink Pad Counter</em>. Рядом с этим полем есть выпадающий список, где необходимо выбрать значение <code>0%</code> или <code>0</code>. Это и есть целевое значение, которое сообщает принтеру, что впитыватель пуст и готов к работе.</p>
+<p>После выбора значения нажмите кнопку <strong>Set</strong>. На экране может появиться сообщение <code>OK</code> или <code>Function complete</code>. Это означает, что команда успешно отправлена в микросхему принтера. Если вы видите ошибку <code>Communication Error</code>, значит, связь с устройством потеряна, и процедуру сброса нужно повторить с самого начала.</p>
+<details class="pb-accordion"><summary>Что такое абсолютный сброс?</summary><div class="pb-accordion-body"><p>Существует еще параметр "Ink Absorber Counter", который сбрасывает не только текущее состояние, но и общий счетчик наработки принтера. Это полезно, если вы продаете устройство, но для простого продолжения печати достаточно сброса Main Absorber.</p></div></details>
+
+<h2 id="таблица-основных-параметров-сброса">Таблица основных параметров сброса</h2>
+<p>Для наглядности ниже приведена таблица основных параметров, которые вы можете встретить в утилите <code>Service Tool</code> для серии <em>MG2540S</em>. Понимание различий между ними поможет избежать случайного сброса не тех данных, что может привести к сбоям в работе устройства.</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Параметр</th>
+      <th>Описание</th>
+      <th>Рекомендуемое действие</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Main Absorber</td>
+      <td>Счетчик заполненности основного впитывателя чернил</td>
+      <td>Сбросить на 0%</td>
+    </tr>
+    <tr>
+      <td>EEPROM</td>
+      <td>Память картриджа с информацией о чернилах</td>
+      <td>Оставит без изменений</td>
+    </tr>
+    <tr>
+      <td>Waste Ink Counter</td>
+      <td>Счетчик накопленных отходов печати</td>
+      <td>Сбросить на 0%</td>
+    </tr>
+    <tr>
+      <td>Clear Ink Counter</td>
+      <td>Сброс счетчика уровня чернил в картриджах</td>
+      <td>Опционально (если мигает лампа)</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Обратите внимание, что некоторые версии утилиты могут иметь дополнительные поля, такие как <strong>Partial Clear</strong> или <em>EEPROM Clear</em>. Ни в коем случае не используйте полную очистку EEPROM, если вы не уверены в своих действиях, так как это может стереть заводские калибровки печатающей головки.</p>
+<blockquote>⚠️ <strong>Внимание</strong>: Если после сброса счетчика принтер все равно требует замены картриджей, проблема может быть в физическом контакте чипов. Попробуйте аккуратно протереть контакты картриджей и внутри принтера ластиком или спиртовой салфеткой.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>После успешного сброса счетчика, принтер может потребовать перезагрузки. Просто выключите его кнопкой Power и включите снова, чтобы сохранить новые настройки в памяти устройства.</p></aside>
+
+<h2 id="проверка-результатов-и-устранение-неполадок">Проверка результатов и устранение неполадок</h2>
+<p>После выполнения всех операций в утилите <strong>Service Tool</strong> и получения сообщения об успехе, необходимо проверить работоспособность устройства. Отсоедините кабель USB, если это требуется для перезапуска, и нажмите кнопку <code>Power</code> для включения принтера в обычном режиме. Оранжевый индикатор должен перестать мигать, а зеленый — загореться ровным светом.</p>
+<p>Для полной уверенности в том, что <em>сброс счетчика чернил</em> прошел успешно, попробуйте распечатать тестовую страницу. В меню принтера или через драйвер на компьютере найдите пункт <code>Print Test Page</code> (Печать тестовой страницы). Если печать началась и лист вышел с четким изображением, поздравляем — процедура выполнена.</p>
+<p>В случае, если ошибка возвращается сразу после перезагрузки, возможно, утилитой был выбран неверный тип сброса или версия программы несовместима с прошивкой вашего устройства. В этом случае попробуйте скачать более новую или, наоборот, более старую версию <em>Service Tool</em> (например, <code>v3400</code> вместо <code>v3801</code>), так как разные ревизии прошивок требуют разных версий ПО для доступа к памяти.</p>
+<blockquote>⚠️ <strong>Внимание</strong>: Помните, что программный сброс не отменяет физического наполнения впитывателя. Если вы печатаете очень много, абсорбер может переполниться и чернила могут вытечь на стол. После 10-15 циклов сброса рекомендуется заменить впитывающую подушку.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Успешный сброс подтверждается исчезновением мигающей оранжевой лампочки и возможностью печати тестовой страницы без ошибок в драйвере.</p></aside>
+
+<h2 id="частые-вопросы-faq">Частые вопросы (FAQ)</h2>
+
+<details>
+  <summary>Почему утилита Service Tool не видит принтер?</summary>
+  <p>Чаще всего проблема заключается в неправильном входе в сервисный режим или incompatibility драйверов. Убедитесь, что вы нажали кнопки в правильной последовательности (Stop + Power -> отпустить Power -> отпустить Stop). Также проверьте, что кабель USB исправен и подключен напрямую к материнской плате, а не через USB-хаб.</p>
+</details>
+
+<details>
+  <summary>Сколько раз можно сбрасывать счетчик чернил?</summary>
+  <p>Технически сброс можно выполнять бесконечное количество раз. Однако, как только физический впитыватель чернил переполнится, чернила начнут вытекать. Рекомендуется выполнять сброс и чистку/замену абсорбера каждые 3-5 раз, в зависимости от объема печати.</p>
+</details>
+
+<details>
+  <summary>Что делать, если после сброса мигает лампа 5 раз?</summary>
+  <p>Ошибка с 5 миганиями обычно указывает на неисправность печатающей головки (информация о карбонах не считывается). В этом случае сброс счетчика не поможет. Возможно, потребуется замена картриджа или чистка контактов. Если проблема осталась, возможно, <em>Service Tool</em> был использован некорректно для данной ревизии.</p>
+</details>
+
+<details>
+  <summary>Нужна ли Windows 10 или 11 для сброса?</summary>
+  <p>Нет, утилита <strong>Service Tool</strong> для серии <code>MG2540S</code> отлично работает на Windows 7, 8, 10 и 11. Главное требование — наличие прав администратора, чтобы программа могла записывать данные в память устройства. Старые версии Windows, такие как XP, могут не поддерживать современные драйверы.</p>
+</details>
+
+<details>
+  <summary>Можно ли сбросить счетчик через настройки самого принтера?</summary>
+  <p>Нет, стандартное меню принтера <code>Canon MG2540S</code> не предоставляет доступа к сбросу счетчика впитывателя. Эта функция скрыта в инженерном меню, доступ к которому возможен только через утилиту <em>Service Tool</em> и специальную комбинацию кнопок на корпусе устройства.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-razbiraetsya-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как разобрать принтер Canon: Пошаговая инструкция по ремонту</span>
+                <span class="pb-related-desc">Подробное руководство: как грамотно разобрать принтер Canon для чистки и ремонта. Инструкция по снят</span>
+            </a><a href="/articles/k/ka/kak-perezagruzit-mfu-canon-pixma-mg2540s.html" class="pb-related-card">
+                <span class="pb-related-title">Как перезагрузить МФУ Canon Pixma MG2540s: 5 способов сброса</span>
+                <span class="pb-related-desc">Пошаговая инструкция по перезагрузке принтера Canon Pixma MG2540s. Решаем зависания, ошибки печати и</span>
+            </a><a href="/articles/k/ka/kak-sbrosit-pamyat-printera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как сбросить память принтера Canon: 5 рабочих способов</span>
+                <span class="pb-related-desc">Пошаговая инструкция по сбросу памяти принтеров Canon: аппаратный, программный и заводской сброс. Ус</span>
+            </a><a href="/articles/c/ca/canon-250-kak-razobrat.html" class="pb-related-card">
+                <span class="pb-related-title">Как разобрать Canon imageRUNNER 250: Пошаговая инструкция по ремонту</span>
+                <span class="pb-related-desc">Полная инструкция по разборке МФУ Canon iR 250 для замены подшипников и устранения ошибок. Советы по</span>
+            </a><a href="/articles/p/po/pochemu-kenon-ne-pechataet-chernym.html" class="pb-related-card">
+                <span class="pb-related-title">Canon не печатает черным: причины и способы решения проблемы</span>
+                <span class="pb-related-desc">Почему принтер Canon не печатает черным цветом? Разбор основных причин: засохшие дюз, сбой драйвера,</span>
+            </a><a href="/articles/g/gd/gde-otremontirovat-printer-canon-v-moskve.html" class="pb-related-card">
+                <span class="pb-related-title">Ремонт принтеров Canon в Москве: Сервисные центры и цены</span>
+                <span class="pb-related-desc">Где отремонтировать принтер Canon в Москве? Полный обзор сервисных центров, цены на диагностику, ори</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

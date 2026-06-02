@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Строение струйного принтера Canon: принцип работы и устройство — Кэнон Инфо</title>
+    <meta name="description" content="Подробный разбор внутреннего устройства струйных принтеров Canon. Узнайте, как работают печатающие головки, система подачи чернил и блоки управления.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-ustroen-strujnyj-printer-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Строение струйного принтера Canon: принцип работы и устройство">
+    <meta property="og:description" content="Подробный разбор внутреннего устройства струйных принтеров Canon. Узнайте, как работают печатающие головки, система подачи чернил и блоки управления.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Строение струйного принтера Canon: принцип работы и устройство</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#основы-технологии-bubble-jet">Основы технологии Bubble Jet</a></li><li><a href="#механика-подачи-бумаги-и-каретка">Механика подачи бумаги и каретка</a></li><li><a href="#система-подачи-чернил-и-картриджи">Система подачи чернил и картриджи</a></li><li><a href="#электронное-управление-и-датчики">Электронное управление и датчики</a></li><li><a href="#типичные-проблемы-и-их-механические-причины">Типичные проблемы и их механические причины</a></li><li><a href="#обслуживание-и-уход-за-механизмом">Обслуживание и уход за механизмом</a></li><li><a href="#особенности-разных-серий-canon">Особенности разных серий Canon</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-sdelat-dvukhstoronnyuyu-pechat-na-printere-kenon.html">Как сделать двухстороннюю печать на принтере Canon: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-podklyuchit-smartfon-k-printeru-cherez-wifi-canon-pixma-g3415.html">Как подключить смартфон к принтеру Canon Pixma G3415 по Wi-Fi</a></li><li><a href="/articles/k/ka/kak-napechatat-testovuyu-stranitsu-na-printere-canon-lbp6020b.html">Как напечатать тестовую страницу на Canon LBP6020B: Пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-ustanovit-drajvera-na-printer-canon-pixma-mp280.html">Как установить драйвер Canon Pixma MP280 на Windows и Mac: полная инструкция</a></li><li><a href="/articles/p/pe/pechatayushchaya-golovka-printera-canon-kak-vyrovnyat.html">Как выровнять печатающую головку принтера Canon: пошаговая инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как устроен струйный принтер Canon: внутреннее устройство и принцип работы</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#основы-технологии-bubble-jet">Основы технологии Bubble Jet</a></li><li><a href="#механика-подачи-бумаги-и-каретка">Механика подачи бумаги и каретка</a></li><li><a href="#система-подачи-чернил-и-картриджи">Система подачи чернил и картриджи</a></li><li><a href="#электронное-управление-и-датчики">Электронное управление и датчики</a></li><li><a href="#типичные-проблемы-и-их-механические-причины">Типичные проблемы и их механические причины</a></li><li><a href="#обслуживание-и-уход-за-механизмом">Обслуживание и уход за механизмом</a></li><li><a href="#особенности-разных-серий-canon">Особенности разных серий Canon</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2>Введение</
+<p>Современные струйные принтеры от компании <em>Canon</em> представляют собой высокотехнологичные устройства, способные выдавать изображения невероятной детализации. В отличие от лазерных аналогов, они используют жидкие чернила, что требует совершенно иной архитектуры механических и электронных узлов. Понимание того, как устроен <strong>струйный принтер Canon</strong>, помогает пользователям избежать частых ошибок при эксплуатации и правильно выполнять обслуживание.</p>
+
+<p>Основная задача любого устройства печати — перенести цифровой образ на физический носитель. В моделях <em>Canon PIXMA</em> и <em>Canon imagePROGRAF</em> этот процесс осуществляется за счет микроскопических капель чернил, которые выбрасываются с огромной скоростью. Ключевым элементом здесь является <strong>печатающая головка</strong>, которая может быть как съемной, так и встроенной в механизм перемещения. Именно от качества сборки этого узла зависит четкость текста и насыщенность цветов.</p>
+
+<h2 id="основы-технологии-bubble-jet">Основы технологии Bubble Jet</h2>
+<p>Сердцем любой струйной модели Canon является уникальная технология <strong>Bubble Jet</strong>. В отличие от пьезоэлектрических головок, используемых конкурентами, здесь для выброса чернил применяется термический метод. Внутри каждой микроскопической камеры находится нагревательный элемент, который за доли секунды разогревает чернила до температуры кипения.</p>
+
+<p>В момент нагрева образуется микроскопический пузырь паров, который резко расширяется и выталкивает каплю чернил через сопло на бумагу. Этот процесс повторяется тысячи раз в секунду. Важно понимать, что <strong>нагревательный резистор</strong> в <em>Canon</em> рассчитан на огромное количество циклов, но со временем его ресурс исчерпывается, что может привести к неравномерной печати.</p>
+
+<p>Технология позволяет достигать чрезвычайно высокого разрешения, так как размер капли может быть минимизирован до 1-2 пиколитров. <mark>Именно термический метод позволяет Canon использовать дешевые картриджи с интегрированными головками, что снижает стоимость обслуживания для пользователя.</mark> Однако этот метод требует использования специальных чернил, устойчивых к высоким температурам, иначе они могут повредить саму головку или изменить свои свойства.</p>
+
+<h2 id="механика-подачи-бумаги-и-каретка">Механика подачи бумаги и каретка</h2>
+<p>Механическая часть принтера не менее важна, чем электронная. Система подачи бумаги состоит из роликов захвата, которые забирают лист с лотка, и системы вееров, предотвращающих захват нескольких листов одновременно. В моделях <em>Canon MegaTank</em> эта система оптимизирована для работы с плотными фотобумагами, что требует более мощного мотора подачи.</p>
+
+<p>Каретка, на которой крепится печатающая головка, перемещается по направляющим штангам с высокой точностью. Движение обеспечивается шаговым двигателем и приводным ремнем. Датчики положения каретки, обычно оптические или магнитные, постоянно сообщают контроллеру координаты головки в пространстве. Любая запыленность или перекос штанги может привести к появлению полос на печати.</p>
+
+<ul>
+<li>🔧 Регулярная очистка <strong>направляющих штанг</strong> от старой смазки и пыли критически важна для плавности хода.</li>
+<li>📄 Система захвата бумаги должна быть протерта спиртом, если ролики начали проскальзывать.</li>
+<li>⚙️ Мотор каретки должен работать без посторонних звуков, иначе ремень может перескочить.</li>
+</ul>
+
+<p>Важно отметить, что в некоторых моделях Canon каретка перемещается не только горизонтально, но и имеет возможность изменения угла наклона для печати на объемных объектах. Это сложная механика, которая требует аккуратного обращения при транспортировке устройства.</p>
+
+<h2 id="система-подачи-чернил-и-картриджи">Система подачи чернил и картриджи</h2>
+<p>Архитектура подачи чернил в принтерах Canon претерпела значительные изменения за последние годы. Традиционная схема с отдельными картриджами для каждого цвета (Cyan, Magenta, Yellow, Black) постепенно уступает место системам с внешними баками. В первых моделях <em>Canon PIXMA</em> картридж часто служил одновременно и резервуаром, и печатающей головкой.</p>
+
+<p>Современные системы с внешними баками (MegaTank) используют капиллярный эффект и гравитацию для подачи чернил к головке. Трубки, соединяющие баки с головкой, имеют клапаны, предотвращающие вытекание чернил при перемещении принтера. <strong>Воздушные фильтры</strong> внутри баков обеспечивают поступление воздуха, компенсируя объем израсходованных чернил, чтобы не образовывалось вакуумное давление.</p>
+
+<p>При использовании стандартных картриджей важно следить за состоянием контактных площадок. Окисление контактов между картриджем и кареткой — одна из самых частых причин ошибок печати. В этом случае <strong>чистка контактов</strong> сухим безворсовым материалом часто решает проблему.</p>
+<blockquote>⚠️ Внимание: Никогда не используйте спирт или жидкости для очистки контактов печатающей головки, если они находятся в открытом доступе, так как это может повредить электронные компоненты головки. Используйте только сухую ткань или специальные салфетки.</blockquote>
+
+<h2 id="электронное-управление-и-датчики">Электронное управление и датчики</h2>
+<p>«Мозгом» принтера является главная плата управления (Mainboard), которая обрабатывает данные с компьютера и координирует работу всех двигателей. Процессор принимает команды драйвера, преобразует изображение в матрицу точек и рассчитывает момент подачи импульса на нагревательные элементы. В современных моделях <em>Canon</em> используется двухпроцессорная архитектура для ускорения обработки высококачественных фото.</p>
+
+<p>Система датчиков играет решающую роль в обеспечении качества печати. Каждый принтер оснащен датчиком уровня чернил (оптическим или емкостным), датчиком наличия бумаги и энкодером для определения положения каретки. Ошибка любого из этих датчиков приводит к остановке работы и появлению кода ошибки на дисплее.</p>
+
+<p>Датчик энкодера представляет собой специальную полупрозрачную пленку с нанесенными штрихами, которая проходит вдоль всей ширины печати. Пыль или чернила на этой пленке могут полностью дезориентировать принтер, заставив его думать, что каретка находится в другом месте. Очистка энкодера — процедура, требующая предельной осторожности.</p>
+
+<div class="pb-poll" id="poll-d8a4a0aa"><div class="pb-poll-question">📊 Какой тип картриджей вы используете чаще всего?</div><div class="pb-poll-option" data-poll="d8a4a0aa" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Стандартные картриджи</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d8a4a0aa" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Системы с внешними баками</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d8a4a0aa" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Сопоставимые чернила</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d8a4a0aa" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, как называется</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<details class="pb-accordion"><summary>Почему чернила могут засохнуть?
+<p>Если принтер долго не используется, чернила в соплах головки начинают сохнуть, образуя пробки. Термический метод работы требует, чтобы чернила были жидкими. Засорение сопел — самая частая проблема, с которой сталкиваются владельцы, печатающие редко.--></p>
+
+<h2 id="типичные-проблемы-и-их-механические-причины">Типичные проблемы и их механические причины</h2>
+<p>Понимание устройства принтера позволяет диагностировать проблемы без обращения в сервис. Например, если появляются вертикальные полосы, это может означать, что каретка движется рывками или сопла одной из групп забиты. Если же полосы горизонтальные, проблема чаще всего в подаче бумаги или в calibration (калибровке) головки.</p>
+
+<p>Другой распространенной проблемой является «гало» вокруг текста — размытые края букв. Это происходит, когда чернила растекаются по бумаге, что может быть связано с неправильным выбором типа бумаги в настройках или с использованием неоригинальных чернил, имеющих иной поверхностный натяжение. <strong>Специфика бумаги</strong> напрямую влияет на впитываемость чернил.</p>
+
+<p>Иногда пользователи сталкиваются с тем, что принтер издает щелчки или скрежет. Это механический сигнал о том, что что-то застряло в тракте подачи бумаги или ремень каретки перекручен. В таких случаях необходимо немедленно остановить работу и проверить наличие посторонних предметов внутри устройства.</p>
+
+<p>Ниже приведена таблица, описывающая основные узлы и их функции</summary><div class="pb-accordion-body"><p></p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Узел устройства</th>
+<th>Основная функция</th>
+<th>Типичная неисправность</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Печатающая головка</td>
+<td>Формирование изображения каплями</td>
+<td>Засорение сопел, перегорание резистора</td>
+</tr>
+<tr>
+<td>Каретка</td>
+<td>Перемещение головки по бумаге</td>
+<td>Смещение, заклинивание, износ ремня</td>
+</tr>
+<tr>
+<td>Ролики подачи</td>
+<td>Зачем листа бумаги</td>
+<td>Проскальзывание, стирание резины</td>
+</tr>
+<tr>
+<td>Плата управления</td>
+<td>Обработка данных и управление</td>
+<td>Повреждение контактов, выход из строя чипа</td>
+</tr>
+<tr>
+<td>Датчик энкодера</td>
+<td>Определение положения каретки</td>
+<td>Загрязнение пленки чернилами</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед печатью</h4><label class="check-item"><input type="checkbox"><span>Проверить наличие бумаги</span></label><label class="check-item"><input type="checkbox"><span>Очистить контактные площадки</span></label><label class="check-item"><input type="checkbox"><span>Выполнить калибровку головки</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в отсутствии посторонних предметов</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="обслуживание-и-уход-за-механизмом">Обслуживание и уход за механизмом</h2>
+<p>Чтобы устройство работало долго, за ним нужен регулярный уход, но не все методы подходят для всех моделей. Например, программная очистка головок потребляет много чернил, поэтому её не следует запускать без необходимости. Механическая очистка требует снятия определенных частей, что может быть небезопасно для гарантийного устройства.</p>
+
+<p>Одной из самых важных процедур является очистка контактных площадок на каретке и картридже. Для этого лучше всего использовать безворсовые салфетки, слегка смоченные дистиллированной водой. Спирт может оставить пленку, которая ухудшит передачу сигнала. <strong>Качество контактов</strong> напрямую влияет на стабильность подачи импульсов на нагреватели.</p>
+
+<p>Также необходимо следить за состоянием валиков подачи. Если они потеряли эластичность и стали гладкими, бумага будет проскальзывать. Их можно промыть теплой водой с мылом, чтобы вернуть шероховатость, но если стерся слой резины, валик придется заменить. В некоторых моделях <em>Canon</em> валики легко демонтируются без разборки корпуса.</p>
+
+<p> Если вы не планируете использовать устройство в течение месяца, рекомендуется выполнить глубокую очистку и оставить картриджи в каретке, чтобы они не высохли на воздухе. Однако, если картриджи съемные, лучше хранить их в герметичном пакете.</p>
+<blockquote>⚠️ Внимание: При выполнении механической очистки энкодерной пленки используйте только сухую салфетку или ластик. Любые химические растворители могут растворить защитное покрытие и сделать пленку полупрозрачной, что приведет к полному отказу принтера.</blockquote>
+
+
+
+<h2 id="особенности-разных-серий-canon">Особенности разных серий Canon</h2>
+<p>Компания Canon выпускает принтеры в разных линейках, и их устройство может существенно отличаться. Серия <em>Pixma</em> ориентирована на домашнее использование и часто использует картриджи с интегрированной головкой. Это упрощает ремонт: если головка вышла из строя, вы просто меняете картридж. Однако это увеличивает стоимость печати на одну страницу.</p>
+
+<p>Серия <em>imagePROGRAF</em> и профессиональные модели <em>MAXIFY</em> используют встроенные головки, которые служат годами. В этих устройствах система подачи чернил более сложная, с демпферами и насосами для откачки воздуха. Здесь стоимость обслуживания выше, но качество печати и долговечность узлов значительно превосходят домашние модели.</p>
+
+<p>В профессиональных моделях также используется система 6, 8 или 12 цветов, что требует более сложной механики каретки. Головки в таких устройствах могут быть разделены на отдельные блоки для светлых и темных тонов, что позволяет быстрее печатать и снижать засорение. <strong>Сложность механики</strong> в таких моделях требует более частого сервисного обслуживания.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Понимание разницы между моделями с интегрированной и встроенной головкой поможет вам выбрать устройство, наиболее подходящее под ваши потребности и бюджет на обслуживание.</p></aside>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Почему принтер Canon пишет "Забиты сопла", даже если я печатаю регулярно?</summary>
+<p>Это может быть связано с качеством чернил или с тем, что принтер работает в режиме экономии, используя только часть сопел. Также проблема может возникнуть, если чернила имеют слишком высокую вязкость. Попробуйте выполнить очистку через меню драйвера или замените картридж.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать чернила других производителей в принтерах Canon?</summary>
+<p>Технически можно, но это может привести к засорению головок, так как химический состав может не подходить для термического метода. Кроме того, это может аннулировать гарантию. Лучше использовать оригинальные чернила или сертифицированные аналоги, рекомендованные производителем.</p>
+</details>
+
+<details>
+<summary>Как часто нужно чистить каретку и направляющие?</summary>
+<p>Рекомендуется проводить чистку направляющих и каретки каждые 6 месяцев или при появлении рывков в движении. Для чистки используйте сухую безворсовую тряпку. Не используйте масло или смазку, если это не предусмотрено инструкцией, так как это может притянуть пыль.</p>
+</details>
+
+<details>
+<summary>Что делать, если принтер перестал определять картридж?</summary>
+<p>В первую очередь проверьте чистоту контактных площадок на картридже и каретке. Убедитесь, что чип картриджа не поврежден. Попробуйте переустановить картридж до щелчка. Если проблема не решена, возможно, поврежден сам картридж или контакты на каретке.</p>
+</details>
+
+<details>
+<summary>Почему принтер печатает полосами только на одном цвете?</summary>
+<p>Скорее всего, засорилось сопло конкретного цвета. Выполните проверку дюз и очистку головок. Если это не помогает, возможно, в картридже закончились чернила или закончился ресурс печатающей головки (если она интегрирована).</p>
+</details>
+
+<blockquote>⚠️ Внимание: Если принтер находится на гарантии, самостоятельная разборка корпуса или попытка очистки внутренних узлов с использованием инструментов может привести к потере гарантийных обязательств. Всегда обращайтесь в авторизованный сервисный центр.</blockquote></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-sdelat-dvukhstoronnyuyu-pechat-na-printere-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать двухстороннюю печать на принтере Canon: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по настройке двусторонней печати на принтерах Canon. Настройка драйверов, ручн</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-smartfon-k-printeru-cherez-wifi-canon-pixma-g3415.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить смартфон к принтеру Canon Pixma G3415 по Wi-Fi</span>
+                <span class="pb-related-desc">Пошаговая инструкция: настройка Canon PIXMA G3415 через Wi-Fi Direct и приложение Canon PRINT Inkjet</span>
+            </a><a href="/articles/k/ka/kak-napechatat-testovuyu-stranitsu-na-printere-canon-lbp6020b.html" class="pb-related-card">
+                <span class="pb-related-title">Как напечатать тестовую страницу на Canon LBP6020B: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как вывести тестовую страницу на принтере Canon LBP6020B через драйвер Windows и панель упр</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-drajvera-na-printer-canon-pixma-mp280.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить драйвер Canon Pixma MP280 на Windows и Mac: полная инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по установке драйверов для МФУ Canon Pixma MP280. Решение проблем с подключени</span>
+            </a><a href="/articles/p/pe/pechatayushchaya-golovka-printera-canon-kak-vyrovnyat.html" class="pb-related-card">
+                <span class="pb-related-title">Как выровнять печатающую головку принтера Canon: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по выравниванию печатающей головки Canon. Устранение полос и размытости, настр</span>
+            </a><a href="/articles/k/ka/kak-na-kenone-pechatat-s-odnoj-kraskoj.html" class="pb-related-card">
+                <span class="pb-related-title">Как печатать с одной краской на принтерах Canon: инструкция и советы</span>
+                <span class="pb-related-desc">Полное руководство по печати с одной краской на Canon. Разбор режимов, экономия чернил и что делать </span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

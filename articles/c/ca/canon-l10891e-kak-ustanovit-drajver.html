@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Установка драйвера Canon LBP 2900 (L10891E) на Windows 10/11: Пошаговая инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Полная инструкция по установке драйвера Canon L10891E для принтеров LBP 2900. Решаем проблемы с совместимостью Windows 10 и 11, ручная настройка порта.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-l10891e-kak-ustanovit-drajver.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Установка драйвера Canon LBP 2900 (L10891E) на Windows 10/11: Пошаговая инструкция">
+    <meta property="og:description" content="Полная инструкция по установке драйвера Canon L10891E для принтеров LBP 2900. Решаем проблемы с совместимостью Windows 10 и 11, ручная настройка порта.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Установка драйвера Canon LBP 2900 (L10891E) на Windows 10/11: Пошаговая инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-системы-и-проверка-совместимости">Подготовка системы и проверка совместимости</a></li><li><a href="#распаковка-и-запуск-драйвера">Распаковка и запуск драйвера</a></li><li><a href="#ручная-установка-через-диспетчер-устройств">Ручная установка через Диспетчер устройств</a></li><li><a href="#настройка-порта-и-запуск-службы">Настройка порта и запуск службы</a></li><li><a href="#решение-частых-ошибок-и-проблем">Решение частых ошибок и проблем</a></li><li><a href="#итоги-и-проверка-работоспособности">Итоги и проверка работоспособности</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-obnovit-printer-canon.html">Как обновить принтер Canon: пошаговая инструкция по прошивке 2026</a></li><li><a href="/articles/k/ka/kak-vstavlyat-fotobumagu-v-printer-canon-pixma.html">Как правильно вставить фотобумагу в принтер Canon Pixma: инструкция</a></li><li><a href="/articles/k/ka/kak-ustanovit-printer-canon-pixma-ip3300.html">Как установить принтер Canon Pixma iP3300: драйверы и настройка</a></li><li><a href="/articles/k/ka/kak-zapustit-canon-lbp-1120-na-windows-7-64.html">Как запустить Canon LBP 1120 на Windows 7 64 бит: полные драйверы</a></li><li><a href="/articles/k/ka/kak-vstavit-kartridzhi-v-printer-canon-pixma.html">Как вставить картриджи в принтер Canon Pixma: Полная инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как установить драйвер Canon L10891E на Windows: Пошаговое руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-системы-и-проверка-совместимости">Подготовка системы и проверка совместимости</a></li><li><a href="#распаковка-и-запуск-драйвера">Распаковка и запуск драйвера</a></li><li><a href="#ручная-установка-через-диспетчер-устройств">Ручная установка через Диспетчер устройств</a></li><li><a href="#настройка-порта-и-запуск-службы">Настройка порта и запуск службы</a></li><li><a href="#решение-частых-ошибок-и-проблем">Решение частых ошибок и проблем</a></li><li><a href="#итоги-и-проверка-работоспособности">Итоги и проверка работоспособности</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Многие пользователи сталкиваются с необходимостью подключения популярного лазерного принтера <em>Canon LBP 2900</em> к современным компьютерам. В технической документации и на некоторых ресурсах этот драйвер может обозначаться кодом <em>L10891E</em>, который часто вызывает путаницу у новичков. На самом деле, речь идет об универсальном пакете драйверов для серии принтеров LaserBeam, который не всегда корректно определяется системой автоматически.</p>
+
+<p>Сложность установки заключается в том, что официальный установщик от <em>Canon</em> часто не видит более старые версии <strong>Windows 10</strong> или <strong>Windows 11</strong> без предварительных манипуляций. Вам придется вручную указать путь к файлам драйвера и создать виртуальный порт, чтобы устройство заработало стабильно. Игнорирование этих шагов приведет к тому, что принтер будет отображаться в системе, но команды печати не будут доходить до устройства.</p>
+
+<p>Ниже представлена детальная последовательность действий, которая гарантированно поможет вам запустить печать даже на самых свежих сборках операционной системы. Мы разберем не только стандартный сценарий, но и способы обхода частых ошибок при подключении USB-интерфейса.</p>
+
+<h2 id="подготовка-системы-и-проверка-совместимости">Подготовка системы и проверка совместимости</h2>
+
+<p>Прежде чем приступать к скачиванию файлов, необходимо убедиться, что ваша операционная система готова к работе с драйвером <em>Canon LBP 2900</em>. В Windows 10 и 11 встроенная функция автоматического поиска часто предлагает устаревшие или некорректные драйверы, которые просто не могут управлять принтером. Вам нужно скачать официальный архив с драйвером, который обычно называется <code>lbp2900b_cndrv_win_6.10_w_1601.exe</code> или аналогичный, содержащий код версии <em>L10891E</em>.</p>
+
+<p>Важно отметить, что перед началом работы следует отключить принтер от USB-порта компьютера. Это критически важный шаг, так как система может попытаться установить стандартный драйвер <strong>Microsoft IPP Class Driver</strong>, который блокирует работу родного ПО <em>Canon</em>. Если вы подключите устройство слишком рано, процесс настройки придется начинать заново, удаляя некорректно установленное оборудование.</p>
+
+<p>Также проверьте версию вашей Windows. Если у вас 64-битная система, вам потребуется именно 64-битный драйвер, хотя для этой модели часто работают и универсальные пакеты. Убедитесь, что у вас есть права администратора, так как установка драйверов требует изменения системных реестров и служб.</p>
+
+<h2 id="распаковка-и-запуск-драйвера">Распаковка и запуск драйвера</h2>
+
+<p>После скачивания архива не пытайтесь запустить файл установки напрямую, если он имеет расширение .exe. В случае с <em>Canon L10891E</em> (код для <strong>LBP 2900</strong>) часто требуется сначала распаковать содержимое архива в отдельную папку. Это связано с особенностями структуры файлов, где установщик ищет драйверы в определенных директориях, а не во временных файлах системы.</p>
+
+<p>Используйте любой архиватор, например <strong>WinRAR</strong> или <strong>7-Zip</strong>, чтобы извлечь файлы в папку на рабочем столе, например, с названием <code>Canon_Driver</code>. Внутри вы найдете множество файлов, среди которых искомый драйвер может называться <code>cnms32.dll</code> или лежать в подпапке <code>en</code> (для английской версии) или <code>ru</code>. Именно доступ к этим файлам даст системе понять, как управлять лазерным модулем.</p>
+
+<p>Если автоматический установщик все же запускается, он может выдать ошибку о том, что устройство не найдено. В этом случае не паникуйте и закройте окно установки. Это нормальное поведение, так как программа ожидает физического подключения устройства, которого вы пока не сделали. Вам потребуется перейти к ручной установке через диспетчер устройств.</p>
+
+<p><strong>Внимание</strong>: Не пытайтесь запустить установку от имени обычного пользователя. Отсутствие прав администратора приведет к тому, что драйвер будет установлен только для текущего сеанса и пропадет после перезагрузки компьютера. Всегда используйте учетную запись с полными правами доступа.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание</strong>: Если при попытке распаковки файла система сообщает об ошибке "Архив поврежден" или "Неверный формат", попробуйте скачать драйвер с другого источника или проверьте антивирус, который иногда блокирует старые исполняемые файлы как подозрительные.</p>
+</blockquote>
+
+<div class="pb-poll" id="poll-1d256cbc"><div class="pb-poll-question">📊 Какая у вас версия Windows?</div><div class="pb-poll-option" data-poll="1d256cbc" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 10</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1d256cbc" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 11</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1d256cbc" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 7</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1d256cbc" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Другая версия</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="ручная-установка-через-диспетчер-устройств">Ручная установка через Диспетчер устройств</h2>
+
+<p>Самый надежный способ установки драйвера <em>Canon L10891E</em> — это ручное добавление принтера через <strong>Диспетчер устройств</strong>. Сначала подключите принтер к компьютеру через USB-кабель и включите его. Дождитесь, пока система издаст звук обнаружения нового оборудования, и сразу же откройте <code>Диспетчер устройств</code> (нажмите <code>Win + X</code> и выберите соответствующий пункт в меню).</p>
+
+<p>В списке оборудования вы можете увидеть устройство с желтым восклицательным знаком или как "Неизвестное устройство" в разделе "Другие устройства". Найдите этот пункт, кликните по нему правой кнопкой мыши и выберите <code>Обновить драйвер</code>. В открывшемся окне укажите <code>Выполнить поиск драйверов на этом компьютере</code>. Это позволит системе не искать решения в интернете, а использовать файлы, которые вы скачали ранее.</p>
+
+<p>На следующем этапе нажмите <code>Выбрать драйвер из списка доступных драйверов на компьютере</code>. Вам предложат список моделей. Если <em>Canon LBP 2900</em> есть в списке, выберите его. Если его нет — нажмите кнопку <code>С диска</code> и укажите путь к файлу <code>Canon.inf</code> или <code>CanonLBP.inf</code> в папке, куда вы распаковали драйвер.</p>
+
+<p><strong>Внимание</em>: Если система предложит драйвер от Microsoft, откажитесь от него. Драйверы Microsoft для этой модели часто не поддерживают функцию офлайн-печати и могут вызвать зависание очереди печати. Всегда отдавайте предпочтение драйверу производителя <em>Canon</em>.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед ручной установкой</h4><label class="check-item"><input type="checkbox"><span>Драйвер распакован в папку</span></label><label class="check-item"><input type="checkbox"><span>Принтер подключен к USB</span></label><label class="check-item"><input type="checkbox"><span>Диспетчер устройств открыт</span></label><label class="check-item"><input type="checkbox"><span>Права администратора подтверждены</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="настройка-порта-и-запуск-службы">Настройка порта и запуск службы</h2>
+
+<p>После того как драйвер установлен, принтер появится в списке устройств, но может не печатать. Это происходит потому, что система не назначила правильный порт. Откройте <code>Панель управления</code> → <code>Устройства и принтеры</code> (или <code>Принтеры и сканеры</code> в новых версиях Windows). Найдите <em>Canon LBP 2900</strong>, нажмите правой кнопкой мыши и выберите <code>Свойства принтера</code>.</p>
+
+<p>Перейдите на вкладку <code>Порты</code>. В списке портов найдите <code>USB001</code> (или USB002, USB003, если у вас несколько USB-устройств). Убедитесь, что галочка стоит именно напротив виртуального порта для принтера. Если порт не выбран, система не сможет передать данные на устройство, даже если драйвер работает исправно.</p>
+
+<p>Для корректной работы также необходимо запустить службу <strong>Canon LBP Port Monitor</em>. Откройте <code>Службы</code> (через <code>Win + R</code> введите <code>services.msc</code>). Найдите службу с именем <code>Canon LBP Port Monitor</code>. Если она остановлена, дважды кликните по ней и нажмите <code>Запустить</code>. Установите тип запуска в режим <code>Автоматически</code>, чтобы служба стартовала при каждом включении компьютера.</p>
+
+<details class="pb-accordion"><summary>Что делать, если порт USB001 не доступен?</summary><div class="pb-accordion-body"><p>Если порт USB001 не виден в списке, попробуйте отключить принтер, перезагрузить компьютер, подключить его снова и подождать минуту. Иногда системе требуется время для пересканирования портов.</p></div></details>
+
+<h2 id="решение-частых-ошибок-и-проблем">Решение частых ошибок и проблем</h2>
+
+<p>Даже при соблюдении всех инструкций пользователи могут столкнуться с отсутствием печати. Одной из самых частых причин является конфликт версий драйверов. Если вы ранее устанавливали другую модель принтера <em>Canon</em>, старый драйвер может конфликтовать с новым. В этом случае необходимо полностью удалить старое ПО через <code>Панель управления</code> → <code>Программы и компоненты</code>.</p>
+
+<p>Еще одна проблема — зависание очереди печати. Если документ "висит" в статусе "Ожидание", попробуйте остановить службу <strong>Print Spooler</strong>, очистить папку <code>C:\Windows\System32\spool\PRINTERS</code> и снова запустить службу. Это сбросит застрявшие задачи и освободит канал связи.</p>
+
+<p>Также проверьте кабель USB. Дешевые кабели с низким сечением проводов могут не обеспечивать стабильное питание и передачу данных. Попробуйте заменить кабель или подключить принтер напрямую в порт на материнской плате, минуя USB-хабы и удлинители.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Проблема</th>
+<th>Возможная причина</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Принтер не определяется</td>
+<td>Неподходящий драйвер</td>
+<td>Ручная установка через "С диска"</td>
+</tr>
+<tr>
+<td>Очередь печати зависла</td>
+<td>Ошибка службы Spooler</td>
+<td>Перезапуск службы и очистка папки</td>
+</tr>
+<tr>
+<td>Нет печати, статус "Офлайн"</td>
+<td>Неверный порт</td>
+<td>Проверка USB001 в свойствах</td>
+</tr>
+<tr>
+<td>Ошибка "Недостаточно памяти"</td>
+<td>Сбой драйвера</td>
+<td>Полная переустановка драйвера</td>
+</tr>
+</tbody>
+</table></div>
+
+<p><strong>Внимание</strong>: Если после всех манипуляций принтер работает нестабильно, попробуйте отключить службу <code>Canon LBP Port Monitor</code> и снова включить её. Иногда служба "зависает" на уровне ядра, и простая перезагрузка процесса не помогает без перезагрузки всей системы.</p>
+
+<p>В некоторых случаях помогает обновление прошивки самого принтера, но для модели <em>LBP 2900</em> это требуется крайне редко. Чаще всего проблема кроется именно в программной части Windows и некорректной привязке драйвера к порту.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед попыткой установки драйвера обязательно отключите антивирус и брандмауэр на время процесса, так как они могут блокировать запись драйверов в системные папки, выдавая ошибку доступа.</p></aside>
+
+<h2 id="итоги-и-проверка-работоспособности">Итоги и проверка работоспособности</h2>
+
+<p>После завершения всех этапов установки и настройки портов необходимо убедиться, что система готова к печати. Откройте любой текстовый документ (например, <em>Блокнот</em>), напишите тестовую фразу и нажмите <code>Файл</code> → <code>Печать</code>. Выберите <em>Canon LBP 2900</em> из списка устройств и отправьте задание.</p>
+
+<p>Если принтер начал печатать, поздравляем — проблема решена. В случае если печать не началась, проверьте статус в <code>Очереди печати</code>. Если там нет заданий, значит, проблема на этапе отправки. Если задание есть, но статус "Ошибка печати", проверьте подключение кабеля и наличие бумаги в лотке.</p>
+
+<p>Установка драйвера <em>Canon L10891E</em> может показаться сложной только на первый взгляд. Главное — не полагаться на автоматический поиск Windows и внимательно следовать инструкции по ручной настройке порта. Это обеспечит стабильную работу вашего принтера на долгие годы.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Ручная установка драйвера через "С диска" и правильный выбор порта USB001 — ключевые факторы успешного запуска Canon LBP 2900 на современных версиях Windows.</p></aside>
+
+<details>
+<summary>Что делать, если драйвер не устанавливается на Windows 11?</summary>
+<p>В Windows 11 защита системы (Secure Boot) может блокировать старые драйверы. Попробуйте временно отключить проверку подписи драйверов или использовать режим совместимости: кликните правой кнопкой по установщику → Свойства → Совместимость → Запустить в режиме Windows 8 или 7.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать универсальный драйвер Canon?</summary>
+<p>Для серии LBP 2900 (код L10891E) универсальные драйверы (UPD) часто не подходят, так как эта модель использует специфический протокол передачи данных. Лучше использовать именно родной драйвер LBP 2900, ориентированный на эту серию принтеров.</p>
+</details>
+
+<details>
+<summary>Как узнать, какой порт использует принтер?</summary>
+<p>Зайдите в Свойства принтера → Вкладка Порты. Чекбокс напротив нужного порта будет активен. Обычно это USB001, USB002 или USB003. Если принтер подключен через Wi-Fi (через переходник), порт может называться IP-адресом.</p>
+</details>
+
+<details>
+<summary>Почему принтер печатает только одну страницу и останавливается?</summary>
+<p>Это признак того, что драйвер не может корректно передавать поток данных. Чаще всего это решается переустановкой драйвера и проверкой версии драйвера. Убедитесь, что вы используете версию, соответствующую вашей архитектуре системы (x64 или x86).</p>
+</details>
+
+<details>
+<summary>Нужно ли перезагружать компьютер после установки?</summary>
+<p>Хотя современные системы часто подхватывают изменения без перезагрузки, для драйверов принтеров <em>Canon</em> рекомендуется перезагрузка. Это гарантирует, что служба <strong>Print Spooler</strong> и <strong>Canon LBP Port Monitor</strong> запустятся с новыми параметрами.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-obnovit-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как обновить принтер Canon: пошаговая инструкция по прошивке 2026</span>
+                <span class="pb-related-desc">Полное руководство по обновлению прошивки принтеров Canon. Узнайте, как установить драйверы, использ</span>
+            </a><a href="/articles/k/ka/kak-vstavlyat-fotobumagu-v-printer-canon-pixma.html" class="pb-related-card">
+                <span class="pb-related-title">Как правильно вставить фотобумагу в принтер Canon Pixma: инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка лотка и загрузка фотобормы в принтеры Canon Pixma. Избегайте замятия и получайте</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-printer-canon-pixma-ip3300.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить принтер Canon Pixma iP3300: драйверы и настройка</span>
+                <span class="pb-related-desc">Полная инструкция по подключению и установке Canon Pixma iP3300 на Windows и macOS. Скачивание драйв</span>
+            </a><a href="/articles/k/ka/kak-zapustit-canon-lbp-1120-na-windows-7-64.html" class="pb-related-card">
+                <span class="pb-related-title">Как запустить Canon LBP 1120 на Windows 7 64 бит: полные драйверы</span>
+                <span class="pb-related-desc">Пошаговая инструкция по установке драйверов принтера Canon LBP 1120 на операционную систему Windows </span>
+            </a><a href="/articles/k/ka/kak-vstavit-kartridzhi-v-printer-canon-pixma.html" class="pb-related-card">
+                <span class="pb-related-title">Как вставить картриджи в принтер Canon Pixma: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая замена и установка картриджей в принтеры Canon Pixma. Разбор ошибок, типы картриджей и сов</span>
+            </a><a href="/articles/k/ka/kak-vstavit-bumagu-v-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как заправить бумагу в принтер Canon: пошаговая инструкция и советы</span>
+                <span class="pb-related-desc">Подробный гайд по установке бумаги в различные модели принтеров Canon. Разбор лотков, регулировка фи</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

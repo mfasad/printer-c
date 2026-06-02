@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как настроить потоковое сканирование на Canon imageRUNNER MF752 — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция по настройке потокового сканирования на принтере Canon imageRUNNER ADVANCE DX C752. Настройка папок, сетевых протоколов, безопасности и автоматизации процесса.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/p/po/potokovoe-skanirovanie-na-printere-canon-mf752-kak-nastroit.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как настроить потоковое сканирование на Canon imageRUNNER MF752">
+    <meta property="og:description" content="Пошаговая инструкция по настройке потокового сканирования на принтере Canon imageRUNNER ADVANCE DX C752. Настройка папок, сетевых протоколов, безопасности и автоматизации процесса.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как настроить потоковое сканирование на Canon imageRUNNER MF752</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-сетевой-инфраструктуры-и-адресной-книги">Подготовка сетевой инфраструктуры и адресной книги</a></li><li><a href="#настройка-сетевых-папок-и-протоколов-smb">Настройка сетевых папок и протоколов SMB</a></li><li><a href="#конфигурация-драйверов-и-утилиты-scan-firmware">Конфигурация драйверов и утилиты Scan Firmware</a></li><li><a href="#активация-функции-потоковой-передачи-с-мобильного-и-облака">Активация функции потоковой передачи с мобильного и облака</a></li><li><a href="#таблица-совместимости-протоколов-и-форматов">Таблица совместимости протоколов и форматов</a></li><li><a href="#тонкая-настройка-параметров-качества-и-обработки">Тонкая настройка параметров качества и обработки</a></li><li><a href="#диагностика-ошибок-и-устранение-неполадок">Диагностика ошибок и устранение неполадок</a></li><li><a href="#оптимизация-производительности-для-больших-нагрузок">Оптимизация производительности для больших нагрузок</a></li><li><a href="#безопасность-данных-и-контроль-доступа">Безопасность данных и контроль доступа</a></li><li><a href="#заключение-по-настройке-процесса">Заключение по настройке процесса</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-sdelat-skan-dokumenta-na-printere-canon-mg3640s.html">Инструкция: как сделать скан на Canon MG3640s за 5 минут</a></li><li><a href="/articles/k/ka/kak-skanirovat-na-printere-canon-i-sensys-mf3010.html">Как сканировать документы на Canon i-SENSYS MF3010: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-otskanirovat-dokument-na-kompyuter-s-printera-canon-pixma-mp270.html">Как отсканировать документ на компьютер с Canon PIXMA MP270</a></li><li><a href="/articles/c/ca/canon-mg3000-kak-skanirovat-na-kompyuter.html">Как сканировать документы с Canon MG3000 на компьютер: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-pereklyuchit-skaner-na-printer-canon.html">Как переключить сканер на принтер Canon: полное руководство</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полное руководство по настройке потокового сканирования на Canon imageRUNNER ADVANCE DX C752</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-сетевой-инфраструктуры-и-адресной-книги">Подготовка сетевой инфраструктуры и адресной книги</a></li><li><a href="#настройка-сетевых-папок-и-протоколов-smb">Настройка сетевых папок и протоколов SMB</a></li><li><a href="#конфигурация-драйверов-и-утилиты-scan-firmware">Конфигурация драйверов и утилиты Scan Firmware</a></li><li><a href="#активация-функции-потоковой-передачи-с-мобильного-и-облака">Активация функции потоковой передачи с мобильного и облака</a></li><li><a href="#таблица-совместимости-протоколов-и-форматов">Таблица совместимости протоколов и форматов</a></li><li><a href="#тонкая-настройка-параметров-качества-и-обработки">Тонкая настройка параметров качества и обработки</a></li><li><a href="#диагностика-ошибок-и-устранение-неполадок">Диагностика ошибок и устранение неполадок</a></li><li><a href="#оптимизация-производительности-для-больших-нагрузок">Оптимизация производительности для больших нагрузок</a></li><li><a href="#безопасность-данных-и-контроль-доступа">Безопасность данных и контроль доступа</a></li><li><a href="#заключение-по-настройке-процесса">Заключение по настройке процесса</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Многие офисные супервайзеры и системные администраторы сталкиваются с необходимостью автоматизации процесса оцифровки документов. Модель <em>Canon imageRUNNER ADVANCE DX C752</em> обладает мощным функционалом для решения этой задачи через функцию потокового сканирования. Это не просто отправка файла на email, а глубокая интеграция с файловыми серверами и облачными хранилищами.</p>
+
+<p>В отличие от стандартного сканирования, где пользователь вручную нажимает кнопку на сенсорном экране, потоковое сканирование позволяет инициировать процесс с компьютера или мобильного устройства. Это критически важно для рабочих групп, где объем обрабатываемой документации исчисляется тысячами страниц в день. Правильная настройка <strong>протоколов передачи данных</strong> и <strong>политик безопасности</strong> является залогом стабильной работы всей системы.</p>
+
+<h2 id="подготовка-сетевой-инфраструктуры-и-адресной-книги">Подготовка сетевой инфраструктуры и адресной книги</h2>
+
+<p>Первым шагом для успешной конфигурации является проверка сетевых параметров. Убедитесь, что принтер <em>Canon C752</em> имеет статический <code>IP-адрес</code> или корректно настроенный <code>DHCP</code> с фиксацией адреса. Без этого связь с сервером может быть нестабильной.</p>
+
+<p>Далее необходимо зайти в административную консоль устройства через веб-браузер, используя адрес <code>http://[IP-адрес-принтера]</code>. В меню <code>Управление устройством</code> перейдите в раздел <code>Адресная книга</code>. Здесь вы будете создавать шаблоны или <strong>адресаты групп</strong>, которые будут использоваться потоковым сканированием для маршрутизации документов.</p>
+
+<p>Важно добавить не только сетевые папки, но и учетные данные Microsoft Active Directory, если ваша сеть интегрирована с доменом. Это позволит упростить процесс аутентификации при запуске задания с рабочих станций.</p>
+
+<h2 id="настройка-сетевых-папок-и-протоколов-smb">Настройка сетевых папок и протоколов SMB</h2>
+
+<p>Фундаментом потокового сканирования является правильно настроенная сетевая папка. В современных версиях ОС Windows 10 и 11 протокол <strong>SMBv1</strong> отключен по соображениям безопасности, поэтому <em>Canon C752</em> должен поддерживаться для работы с <code>SMBv2</code> или <code>SMBv3</code>.</p>
+
+<p>Создайте папку на сервере или локальном компьютере, который будет участвовать в обмене данными. Задайте права доступа <strong>Full Control</strong> для пользователя, под которым принтер будет выполнять вход. Не забудьте проверить настройки брандмауэра Windows, чтобы разрешить входящие соединения по портам <code>445</code> и <code>139</code>.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Убедитесь, что пароль учетной записи, используемой для доступа к папке, не содержит специальных символов, которые могут вызвать ошибки кодировки при передаче между устройствами.</p>
+</blockquote>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка доступности сетевой папки</h4><label class="check-item"><input type="checkbox"><span>Ping-тест до IP сервера</span></label><label class="check-item"><input type="checkbox"><span>Проверка прав доступа к папке</span></label><label class="check-item"><input type="checkbox"><span>Отключение антивируса для теста</span></label><label class="check-item"><input type="checkbox"><span>Тестовое сохранение файла вручную</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="конфигурация-драйверов-и-утилиты-scan-firmware">Конфигурация драйверов и утилиты Scan Firmware</h2>
+
+<p>Для инициации сканирования с ПК необходимо установить специализированное программное обеспечение. Стандартный драйвер печати не подходит для полноценного управления потоками. Скачайте и установите <strong>Canon MF Toolbox</strong> или специализированный <em>ScanGear</em>.</p>
+
+<p>В настройках утилиты выберите режим <code>Send to Network Folder</code>. Здесь вы указываете путь к той самой сетевой папке, которую подготовили на предыдущем этапе. Система предложит ввести <strong>учетные данные</strong> (логин и пароль) для доступа к ресурсу.</p>
+
+<p>Особое внимание уделите параметрам сжатия и разрешения. Для текстовых документов достаточно <code>300 dpi</code> в формате <strong>PDF</strong>, но для чертежей или фотографий потребуется <code>600 dpi</code> и формат <strong>TIFF</strong>. Настройки по умолчанию можно изменить в профиле пользователя.</p>
+
+<h2 id="активация-функции-потоковой-передачи-с-мобильного-и-облака">Активация функции потоковой передачи с мобильного и облака</h2>
+
+<p>Multifunctional device <em>Canon C752</em> поддерживает прямую интеграцию с облачными сервисами. Это позволяет создавать потоки сканирования не только на локальные сервера, но и в корпоративное облако. Активируйте сервисы <strong>SharePoint</strong>, <strong>Google Drive</strong> или <strong>OneDrive</strong> в разделе <code>Cloud Services</code> на панели управления.</p>
+
+<p>Для мобильных устройств установите приложение <em>Canon PRINT Business</em>. После сопряжения с принтером вы сможете запускать сканирование с телефона, которое автоматически попадет в назначенную папку. Это удобно для быстрой оцифровки накладных или визиток.</p>
+
+<p>Настройте <strong>автоматическую сортировку</strong> файлов по имени или дате. Это предотвратит появление огромного количества файлов с одинаковыми именами в одной директории, что часто приводит к потере данных при перезаписи.</p>
+
+<blockquote>
+<p>⚠️ Внимание: При использовании публичных облачных сервисов убедитесь, что передача данных происходит по зашифрованному каналу <code>HTTPS</code>, чтобы избежать перехвата конфиденциальной информации.</p>
+</blockquote>
+
+<details class="pb-accordion"><summary>Как работают алгоритмы распознавания текста (OCR)</summary><div class="pb-accordion-body"><p>При потоковом сканировании можно включить функцию OCR. Это позволяет превратить изображение документа в редактируемый текст. Настройка осуществляется в профиле сканирования, где выбирается язык распознавания. </p></div></details>
+
+<h2 id="таблица-совместимости-протоколов-и-форматов">Таблица совместимости протоколов и форматов</h2>
+
+<p>Ниже приведена сводная таблица, показывающая совместимость различных протоколов передачи с поддерживаемыми форматами файлов на модели <em>Canon imageRUNNER ADVANCE DX C752</em>. Это поможет вам выбрать оптимальную конфигурацию для ваших задач.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Протокол передачи</th>
+<th>Поддерживаемые форматы</th>
+<th>Максимальное разрешение</th>
+<th>Особенности безопасности</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMB (v2/v3)</td>
+<td>PDF, PDF/A, TIFF, JPEG</td>
+<td>600 x 600 dpi</td>
+<td>Требует локальной аутентификации</td>
+</tr>
+<tr>
+<td>FTP / FTPS</td>
+<td>PDF, JPEG, TIFF</td>
+<td>1200 x 1200 dpi</td>
+<td>Поддержка SSL/TLS шифрования</td>
+</tr>
+<tr>
+<td>Send to Email (SMTP)</td>
+<td>PDF, JPEG</td>
+<td>300 x 300 dpi</td>
+<td>Требует настройки SMTP сервера</td>
+</tr>
+<tr>
+<td>Cloud (SharePoint/Google)</td>
+<td>PDF, XPS</td>
+<td>600 x 600 dpi</td>
+<td>OAuth 2.0 аутентификация</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Выбор протокола зависит от инфраструктуры вашей компании. Если вы работаете в закрытом контуре, <strong>SMB</strong> будет самым быстрым решением. Для распределенных офисов предпочтительнее использовать <code>FTP</code> или облачные шлюзы.</p>
+
+<h2 id="тонкая-настройка-параметров-качества-и-обработки">Тонкая настройка параметров качества и обработки</h2>
+
+<p>Качество итогового документа напрямую зависит от настроек сканирования. В меню <code>Настройки сканирования</code> можно активировать функции удаления фона, удаления пустых страниц и автоматического выравнивания текста. Эти опции критичны для архивации документов.</p>
+
+<p>Для черно-белых документов рекомендуется включить режим <strong>Binary</strong> или <code>Halftone</code>, что значительно уменьшает размер файла без потери читаемости. Для цветных сканов используйте профиль <code>Color</code> с оптимальной глубиной цвета <strong>24-bit</strong>.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Включение всех функций улучшения изображения одновременно может привести к переполнению оперативной памяти устройства при сканировании больших пачек документов.</p>
+</blockquote>
+
+<p>Не забывайте настраивать <strong>фильтры наложения</strong> для страниц с пробелами или пометками. Это поможет избежать попадания мусорных файлов в основной архив. Настройка фильтров осуществляется через веб-интерфейс в разделе <code>Фильтры сканирования</code>.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для ускорения работы с большими тиражами документов настройте режим "Дуплексное сканирование" по умолчанию. Это сэкономит место на сервере и упростит сортировку в два раза.</p></aside>
+
+<div class="pb-poll" id="poll-bd5fb1a3"><div class="pb-poll-question">📊 Какой протокол вы используете для сканирования?</div><div class="pb-poll-option" data-poll="bd5fb1a3" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">SMB (Сетевая папка)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="bd5fb1a3" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Email (SMTP)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="bd5fb1a3" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">FTP/FTPS</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="bd5fb1a3" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Облачные сервисы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="диагностика-ошибок-и-устранение-неполадок">Диагностика ошибок и устранение неполадок</h2>
+
+<p>Даже при идеальной настройке могут возникать ошибки передачи данных. Самая частая проблема — ошибка <code>016-798</code> или <code>016-799</code>, указывающая на проблемы с доступом к сетевой папке. Проверьте, не истек ли срок действия пароля учетной записи.</p>
+
+<p>Если файлы приходят пустыми или поврежденными, проверьте настройки <strong>MTU</strong> на сетевом адаптере. Иногда пакеты данных слишком большого размера не проходят через маршрутизатор. Уменьшение значения MTU до <code>1400</code> часто решает проблему разрыва соединения.</p>
+
+<p>В случае, когда принтер не видит сетевую папку, проверьте работу службы <strong>File and Printer Sharing</strong> на компьютере-сервере. Перезагрузка сетевых служб и принтера иногда помогает сбросить "зависшие" сессии.</p>
+
+<p>Также стоит обратить внимание на лог-файлы устройства. В разделе <code>Журнал событий</code> можно найти детальное описание каждой попытки сканирования. Это поможет выявить системные ошибки конфигурации.</p>
+
+<h2 id="оптимизация-производительности-для-больших-нагрузок">Оптимизация производительности для больших нагрузок</h2>
+
+<p>При высоких нагрузках на <em>Canon imageRUNNER ADVANCE DX C752</em> важно правильно настроить кэширование. Используйте функцию <strong>Memory Buffer</strong> для временного хранения данных перед отправкой на сервер. Это разгрузит процессор и ускорит прием следующих листов.</p>
+
+<p>Настройте <strong>расписание сканирования</strong> для автоматических заданий. Если вам нужно оцифровывать большие архивы, запланируйте эту задачу на ночное время, когда сеть менее загружена. Это обеспечит максимальную скорость передачи файлов.</p>
+
+<p>Регулярно проверяйте <strong>вместимость жесткого диска</strong> устройства. Переполненный диск может привести к сбоям в работе потокового сканирования и потере данных. Настройте автоматическую очистку временных файлов.</p>
+
+<h2 id="безопасность-данных-и-контроль-доступа">Безопасность данных и контроль доступа</h2>
+
+<p>Защита конфиденциальной информации является приоритетом. Используйте функцию <strong>Secure Print</strong> и <code>Encryption</code> для шифрования сканируемых файлов при передаче. Это особенно актуально для финансовых и юридических документов.</p>
+
+<p>Настройте <strong>фильтры по IP-адресам</strong> в веб-интерфейсе, чтобы ограничить доступ к функциям сканирования только доверенным компьютерам. Это предотвратит попытки несанкционированного доступа к устройству извне.</p>
+
+<p>Используйте <strong>двухфакторную аутентификацию</strong> для доступа к административным настройкам. Это снизит риск взлома устройства злоумышленниками, которые могут изменить конфигурацию сканирования.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярное обновление прошивки и проверка настроек безопасности — залог стабильной работы потокового сканирования в корпоративной сети.</p></aside>
+
+<h2 id="заключение-по-настройке-процесса">Заключение по настройке процесса</h2>
+
+<p>Настройка потокового сканирования на <em>Canon C752</em> — это комплексный процесс, требующий внимания к деталям сетевой инфраструктуры и параметрам безопасности. Правильно настроенная система позволит автоматизировать рутинные задачи и повысить эффективность работы офиса.</p>
+
+<p>Помните, что каждый шаг настройки должен быть протестирован на практике. Не полагайтесь только на теоретические рекомендации — проверьте работу системы с реальными документами и нагрузками.</p>
+
+<details>
+<summary>Как проверить, что потоковое сканирование работает корректно?</summary>
+<p>Для проверки отправьте тестовый документ объемом 10-15 страниц. Убедитесь, что файл появился в папке назначения в течение минуты, имеет корректное имя и читаемое содержимое. Проверьте журнал устройств на наличие ошибок.</p>
+</details>
+
+<details>
+<summary>Что делать, если принтер не видит сетевую папку?</summary>
+<p>Проверьте физическое подключение к сети, убедитесь, что IP-адреса находятся в одной подсети. Проверьте права доступа к папке и правильность введенных учетных данных. Попробуйте добавить папку по IP-адресу вместо имени компьютера.</p>
+</details>
+
+<details>
+<summary>Можно ли сканировать в Outlook напрямую?</summary>
+<p>Да, Canon C752 поддерживает протокол SMTP. В настройках укажите адрес почтового сервера, логин и пароль от учетной записи Outlook. Файлы будут отправляться как вложения к письмам.</p>
+</details>
+
+<details>
+<summary>Как настроить сканирование по расписанию?</summary>
+<p>В разделе <code>Настройки устройства</code> найдите пункт <code>Планировщик заданий</code>. Создайте новое задание, выберите действие <code>Сканирование в папку</code> и укажите время начала и дни недели для выполнения.</p>
+</details>
+
+<details>
+<summary>Поддерживает ли модель сканирование в облако?</summary>
+<p>Да, модель поддерживает интеграцию с Google Drive, OneDrive и SharePoint. Для этого необходимо авторизовать устройство в облачных сервисах через веб-интерфейс.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-sdelat-skan-dokumenta-na-printere-canon-mg3640s.html" class="pb-related-card">
+                <span class="pb-related-title">Инструкция: как сделать скан на Canon MG3640s за 5 минут</span>
+                <span class="pb-related-desc">Пошаговое руководство по сканированию документов с принтера Canon MG3640s на компьютер и смартфон. Р</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-na-printere-canon-i-sensys-mf3010.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы на Canon i-SENSYS MF3010: Полная инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по настройке и использованию сканера Canon MF3010. Установка драйверов, работа</span>
+            </a><a href="/articles/k/ka/kak-otskanirovat-dokument-na-kompyuter-s-printera-canon-pixma-mp270.html" class="pb-related-card">
+                <span class="pb-related-title">Как отсканировать документ на компьютер с Canon PIXMA MP270</span>
+                <span class="pb-related-desc">Пошаговая инструкция по сканированию с Canon PIXMA MP270 через IJ Scan Utility и стандартные средств</span>
+            </a><a href="/articles/c/ca/canon-mg3000-kak-skanirovat-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы с Canon MG3000 на компьютер: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка сканирования документов и фото с принтера Canon MG3000 на ПК через USB и Wi-Fi. </span>
+            </a><a href="/articles/k/ka/kak-pereklyuchit-skaner-na-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как переключить сканер на принтер Canon: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как настроить сканирование на МФУ Canon, переключить режимы, использовать драй</span>
+            </a><a href="/articles/k/ka/kak-otskanirovat-dokument-na-canon-i-sensys-mf3010.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на Canon i-SENSYS MF3010: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по сканированию документов на МФУ Canon i-SENSYS MF3010: через ПК, USB, сеть и</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

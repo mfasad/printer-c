@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Какой порт выбрать для принтера Canon i-SENSYS: USB, TCP/IP или WSD — Кэнон Инфо</title>
+    <meta name="description" content="Полное руководство по выбору типа подключения для МФУ и принтеров Canon i-SENSYS. Разбор портов TCP/IP, LPR, WSD и USB с пошаговыми инструкциями.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kakoj-port-vybrat-dlya-printera-canon-i-sensys.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Какой порт выбрать для принтера Canon i-SENSYS: USB, TCP/IP или WSD">
+    <meta property="og:description" content="Полное руководство по выбору типа подключения для МФУ и принтеров Canon i-SENSYS. Разбор портов TCP/IP, LPR, WSD и USB с пошаговыми инструкциями.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/podklyuchenie-k-pk/">Подключение к ПК</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Какой порт выбрать для принтера Canon i-SENSYS: USB, TCP/IP или WSD</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#анализ-основных-типов-сетевых-портов-в-windows">Анализ основных типов сетевых портов в Windows</a></li><li><a href="#преимущества-и-недостатки-протокола-wsd">Преимущества и недостатки протокола WSD</a></li><li><a href="#золотой-стандарт-настройка-standard-tcpip-порта">Золотой стандарт: настройка Standard TCP/IP порта</a></li><li><a href="#протокол-lpr-и-его-роль-в-корпоративных-сетях">Протокол LPR и его роль в корпоративных сетях</a></li><li><a href="#сравнительная-характеристика-методов-подключения">Сравнительная характеристика методов подключения</a></li><li><a href="#диагностика-и-устранение-проблем-с-портами">Диагностика и устранение проблем с портами</a></li><li><a href="#инструкция-по-смене-порта-для-существующего-принтера">Инструкция по смене порта для существующего принтера</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-peredat-foto-s-canon-na-kompyuter.html">Как передать фото с Canon на компьютер: полные инструкции 2026</a></li><li><a href="/articles/c/ca/canon-i-sensys-lbp-2900-kak-podklyuchit.html">Canon i-SENSYS LBP 2900: Как подключить к Windows и Mac</a></li><li><a href="/articles/k/ka/kak-ustanovit-drajvera-na-noutbuk-dlya-printera-canon-s-diska.html">Установка драйверов Canon с диска: Пошаговая инструкция для ноутбука</a></li><li><a href="/articles/k/ka/kak-podklyuchit-canon-eos-r-k-kompyuteru.html">Как подключить Canon EOS R к компьютеру: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-ustanovit-printer-na-kompyuter-bez-ustanovochnogo-diska-canon.html">Установка принтера Canon без диска: пошаговая инструкция и драйверы</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Выбор оптимального порта подключения для принтеров Canon i-SENSYS</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#анализ-основных-типов-сетевых-портов-в-windows">Анализ основных типов сетевых портов в Windows</a></li><li><a href="#преимущества-и-недостатки-протокола-wsd">Преимущества и недостатки протокола WSD</a></li><li><a href="#золотой-стандарт-настройка-standard-tcpip-порта">Золотой стандарт: настройка Standard TCP/IP порта</a></li><li><a href="#протокол-lpr-и-его-роль-в-корпоративных-сетях">Протокол LPR и его роль в корпоративных сетях</a></li><li><a href="#сравнительная-характеристика-методов-подключения">Сравнительная характеристика методов подключения</a></li><li><a href="#диагностика-и-устранение-проблем-с-портами">Диагностика и устранение проблем с портами</a></li><li><a href="#инструкция-по-смене-порта-для-существующего-принтера">Инструкция по смене порта для существующего принтера</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Подключение современного офисного оборудования к вычислительным сетям требует внимательного отношения к настройкам сетевого протокола. Для линейки лазерных принтеров и МФУ <em>Canon i-SENSYS</em> выбор правильного типа порта является критическим фактором стабильной работы. Неправильная конфигурация может привести к периодическим ошибкам печати, дублированию заданий или полной потере связи с устройством.</p>
+
+<p>Многие пользователи совершают ошибку, оставляя настройки по умолчанию, которые система Windows часто выбирает автоматически. В то время как для домашнего использования это может быть приемлемо, в корпоративной среде или при наличии сложной топологии сети это становится источником проблем. Понимание различий между протоколами <strong>WSD</strong>, <strong>Standard TCP/IP</strong> и <strong>LPR</strong> позволит вам гарантировать бесперебойную печать документов.</p>
+
+<p>В зависимости от версии операционной системы и драйвера, доступные опции могут незначительно отличаться, но базовые принципы остаются неизменными. Мы разберем, какой именно <strong>тип порта</strong> лучше всего подходит для ваших задач, как избежать конфликтов IP-адресов и что делать, если принтер не отвечает на запросы. Правильный выбор обеспечит не только скорость работы, но и возможность удаленного мониторинга статуса устройства.</p>
+
+<h2 id="анализ-основных-типов-сетевых-портов-в-windows">Анализ основных типов сетевых портов в Windows</h2>
+
+<p>При установке драйвера для устройств <em>Canon i-SENSYS</em> система предлагает несколько вариантов подключения, каждый из которых имеет свои архитектурные особенности. Наиболее распространенным методом в современных сетях является использование протокола <strong>Standard TCP/IP</strong>, который обеспечивает прямой и надежный канал передачи данных. Этот метод идентифицирует принтер по его уникальному сетевому адресу, что делает его независимым от имени компьютера или рабочей группы.</p>
+
+<p>Альтернативный вариант — <strong>WSD (Web Services for Devices)</strong>, который часто выбирается автоматически при обнаружении устройства в сети. Этот протокол основан на веб-технологиях и позволяет системе получать информацию о состоянии принтера через стандартные веб-запросы. Однако он может работать нестабильно в сетях с большим количеством устройств или при использовании маршрутизаторов с агрессивной фильтрацией трафика.</p>
+
+<p>Существует также менее известный, но важный для серверных сред вариант — протокол <strong>LPR (Line Printer Remote)</strong>. Он исторически использовался в Unix-системах и до сих пор актуален, когда требуется интеграция <em>Canon</em> с гетерогенными сетевыми средами. Выбор между этими технологиями зависит от того, насколько критична для вас скорость отклика и возможность детального контроля за очередью печати.</p>
+
+<blockquote>⚠️ Внимание: Протокол WSD, несмотря на простоту настройки, часто блокируется антивирусным ПО или фаерволами, что приводит к исчезновению принтера из списка доступных устройств без видимых причин.</blockquote>
+
+<p>Важно понимать, что смена типа порта не всегда требует полной переустановки драйвера. В панели управления устройствами можно изменить настройки существующего принтера, добавив новый порт и привязав его к текущему устройству. Это позволяет тестировать различные конфигурации без потери установленных настроек печати и профилей качества.</p>
+
+<h2 id="преимущества-и-недостатки-протокола-wsd">Преимущества и недостатки протокола WSD</h2>
+
+<p>Протокол <strong>Web Services for Devices</strong> (WSD) стал стандартом по умолчанию для многих производителей после выпуска Windows Vista и 7. Его главное достоинство заключается в автоматизации процесса настройки: система сама находит принтер, подгружает необходимые данные о его возможностях и создает порт без вмешательства пользователя. Для моделей <em>Canon i-SENSYS</em> серии MF это означает быстрый старт работы "из коробки".</p>
+
+<p>Однако, у этого удобства есть существенная цена. WSD-порт использует широковещательные запросы, которые могут создавать нагрузку на сеть. Кроме того, механизм обнаружения работает не всегда корректно при переходах устройства в спящий режим. Вы можете столкнуться с ситуацией, когда принтер физически доступен, но система показывает его как "неактивный" или "оффлайн", требуя перезапуска службы печати.</p>
+
+<p>Сравнение скорости отклика показывает, что WSD часто медленнее реагирует на отправку документов по сравнению с TCP/IP. Это связано с тем, что перед передачей данных протокол устанавливает дополнительный сеанс связи для проверки состояния устройства. В условиях интенсивной офисной печати, когда очереди документов формируются быстро, такая задержка может стать заметной.</p>
+
+<ul>
+<li>✅ <strong>Простота настройки</strong>: не требует ввода IP-адреса, работает автоматически.</li>
+<li>❌ <strong>Нестабильность</strong>: частые разрывы связи при выходе принтера из режима сна.</li>
+<li>⚠️ <strong>Ограничения безопасности</strong>: проблемы с работой через сложные корпоративные фаерволы.</li>
+</ul>
+
+<div class="pb-poll" id="poll-ae4a3639"><div class="pb-poll-question">📊 Какой протокол использует ваш принтер сейчас?</div><div class="pb-poll-option" data-poll="ae4a3639" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">WSD (автоматически)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ae4a3639" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">TCP/IP (вручную)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ae4a3639" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">LPR (редко)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ae4a3639" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, как проверить</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="золотой-стандарт-настройка-standard-tcpip-порта">Золотой стандарт: настройка Standard TCP/IP порта</h2>
+
+<p>Для обеспечения максимальной стабильности работы <em>Canon i-SENSYS</em> настоятельно рекомендуется использовать порт <strong>Standard TCP/IP</em>. Этот метод требует ручного ввода статического IP-адреса устройства, что исключает вероятность конфликта адресов и обеспечивает прямой доступ к принтеру. Данные передаются по предсказуемому пути, что критически важно для бизнеса, где простой печати недопустим.</p>
+
+<p>При выборе этого варианта система запрашивает точный адрес устройства в сети. Вам необходимо предварительно зайти в меню самого принтера и зафиксировать его IP-адрес, либо настроить резервирование адреса на роутере. После ввода адреса драйвер проводит тестовый запрос (ping), чтобы убедиться в доступности устройства, и только затем завершает установку порта.</p>
+
+<p>Особое внимание следует уделить настройке "SNMP State" (состояние SNMP). По умолчанию Windows пытается опрашивать принтер через SNMP для получения данных о количестве тонера и статусе бумаги. Если эти настройки несовместимы с версией прошивки <em>Canon</strong>, система может ошибочно считать принтер "недоступным", даже если он полностью исправен. Рекомендуется отключить опрос SNMP или настроить параметры SNMP Community Name в соответствии с документацией устройства.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Настройка TCP/IP порта</h4><label class="check-item"><input type="checkbox"><span>Зафиксировать IP-адрес принтера</span></label><label class="check-item"><input type="checkbox"><span>Зайти в Панель управления принтерами</span></label><label class="check-item"><input type="checkbox"><span>Выбрать "Добавить TCP/IP порт"</span></label><label class="check-item"><input type="checkbox"><span>Ввести адрес и завершить мастер</span></label><label class="check-item"><input type="checkbox"><span>Проверить статус "Готов"</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<p>Несмотря на кажущуюся сложность ручной настройки, именно этот метод дает вам полный контроль над инфраструктурой. Вы точно знаете, по какому адресу находится принтер, и можете быстро диагностировать проблемы сети, не тратя время на поиск устройств, пропадающих из списка. Это фундамент профессиональной настройки печати.</p>
+
+<blockquote>⚠️ Внимание: Если вы используете DHCP на роутере, IP-адрес принтера может измениться после перезагрузки, что приведет к потере связи. Обязательно настройте резервирование IP-адреса (Static DHCP) в вашем маршрутизаторе.</blockquote>
+
+<h2 id="протокол-lpr-и-его-роль-в-корпоративных-сетях">Протокол LPR и его роль в корпоративных сетях</h2>
+
+<p>Протокол <strong>LPR (Line Printer Remote)</em> является наследием Unix-систем и часто используется в смешанных средах, где есть серверы Linux или специализированные очереди печати. В контексте принтеров <em>Canon i-SENSYS</em> он может быть полезен, если вам требуется управлять очередью заданий с высокой степенью детализации или если ваша сеть имеет сложные правила маршрутизации.</p>
+
+<p>Отличительной особенностью LPR является механизм работы с очередями. Вы можете указывать имя очереди (Queue Name), которое назначается на стороне принтера или принт-сервера. Система отправляет данные в эту очередь, а устройство самостоятельно обрабатывает их. Это позволяет разделить потоки печати от разных пользователей или отделов, предотвращая смешивание документов.</p>
+
+<p>Однако для обычного домашнего или малого офисного использования LPR часто избыточен. Настройка требует знания параметров, которые не всегда очевидны для пользователя, и может потребовать дополнительных прав администратора. Если ваша сеть состоит только из Windows-компьютеров и принтеров <em>Canon</em>, использование LPR не даст существенных преимуществ перед TCP/IP, но может усложнить процедуру обслуживания.</p>
+
+<pre><code>Настройка очереди LPR:
+<p>1. Имя очереди: RAW (или LPT1, LPT2)</p>
+<p>2. Port Number: 9100</p>
+<p>3. Протокол: RAW</code></pre></p>
+
+<p>Иногда LPR требуется для специфических задач, например, при интеграции с системами документооборота, которые не поддерживают современные протоколы. В таких случаях важно правильно настроить параметры "Имя очереди" и "Протокол", чтобы избежать ошибок "Job rejected" или "Connection timed out".</p>
+
+<details class="pb-accordion"><summary>Как проверить поддержку LPR на принтере?</summary><div class="pb-accordion-body"><p>Зайдите в меню принтера -> Настройки сети -> TCP/IP -> LPR. Убедитесь, что функция LPR включена и порт 9100 открыт. Если LPR отключен, система Windows не сможет установить связь через этот протокол.</p></div></details>
+
+<h2 id="сравнительная-характеристика-методов-подключения">Сравнительная характеристика методов подключения</h2>
+
+<p>Чтобы принять взвешенное решение, сравним три основных метода по ключевым параметрам. Мы учитываем скорость передачи данных, стабильность связи, сложность настройки и совместимость с различными версиями Windows. Это поможет вам выбрать оптимальный вариант для вашей конкретной ситуации, будь то домашний кабинет или крупный офис.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>WSD</th>
+<th>Standard TCP/IP</th>
+<th>LPR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Скорость отклика</td>
+<td>Средняя</td>
+<td>Высокая</td>
+<td>Высокая</td>
+</tr>
+<tr>
+<td>Стабильность связи</td>
+<td>Низкая (зависит от сна)</td>
+<td>Максимальная</td>
+<td>Высокая</td>
+</tr>
+<tr>
+<td>Сложность настройки</td>
+<td>Автоматическая</td>
+<td>Средняя (требует IP)</td>
+<td>Высокая</td>
+</tr>
+<tr>
+<td>Идеально для</td>
+<td>Домашних сетей</td>
+<td>Офисов и бизнеса</td>
+<td>Серверов и Linux</td>
+</tr>
+<tr>
+<td>Поддержка SNMP</td>
+<td>Автоматическая</td>
+<td>Настраиваемая</td>
+<td>Ограниченная</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Анализ показывает, что <strong>Standard TCP/IP</strong> является наиболее универсальным и надежным решением для большинства сценариев. Он обеспечивает баланс между простотой управления и производительностью, позволяя избежать типичных проблем, связанных с автоматическим обнаружением. Протокол WSD стоит использовать только в том случае, если вы не хотите тратить время на ввод IP-адреса и готовы мириться с возможными сбоями связи.</p>
+
+<p>Выбор LPR оправдан только в специфических случаях, когда требуется строгая дисциплина очередей печати или интеграция с устаревшими системами. Для современных моделей <em>Canon i-SENSYS</em> поддержка LPR часто включена, но редко используется как основной метод подключения в чистых Windows-средах.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При настройке порта TCP/IP всегда отключайте опцию "SNMP Status Enabled" в свойствах порта, если принтер не отображается как "Готов", а показывает "Оффлайн", даже при работающей печати.</p></aside>
+
+<h2 id="диагностика-и-устранение-проблем-с-портами">Диагностика и устранение проблем с портами</h2>
+
+<p>Даже при правильном выборе типа подключения могут возникнуть проблемы. Самая частая причина — изменение IP-адреса принтера после перезагрузки роутера, если не было настроено резервирование. Windows продолжает отправлять данные на старый адрес, в то время как принтер получил новый. В результате задания накапливаются в очереди и не отправляются, а статус устройства остается "Оффлайн".</p>
+
+<p>Для диагностики используйте утилиту <em>ping</em> из командной строки. Введите <code>ping 192.168.1.100</code> (замените адрес на актуальный IP вашего принтера). Если вы видите ответ от устройства, значит, сетевое соединение исправно, и проблема кроется в настройках драйвера или порта. Если ответа нет, проверьте кабель, настройки Wi-Fi или перезагрузите принтер и роутер.</p>
+
+<p>Иногда проблема связана с конфликтом версий драйверов. Если вы установили универсальный драйвер <em>Canon UFR II</em> или драйвер для другой модели, порт может быть настроен некорректно. В таких случаях рекомендуется полностью удалить устройство, а затем добавить его заново, выбрав именно тот драйвер, который предназначен для вашей серии <em>i-SENSYS</em>.</p>
+
+<p>Еще один распространенный сценарий — блокировка порта 9100 антивирусом. Этот порт используется протоколами TCP/IP и LPR для передачи данных. Антивирусное программное обеспечение может ошибочно принять поток печати за подозрительную активность и заблокировать соединение. Проверьте логи брандмауэра, если принтер не отвечает на команды, но сеть работает нормально.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если принтер перестал отвечать после перезагрузки роутера, первым делом проверьте, не изменился ли его IP-адрес и не нуждается ли порт в обновлении настроек.</p></aside>
+
+<h2 id="инструкция-по-смене-порта-для-существующего-принтера">Инструкция по смене порта для существующего принтера</h2>
+
+<p>Если у вас уже установлен принтер, но вы подозреваете, что используется неоптимальный порт (например, WSD), вы можете сменить его без переустановки драйвера. Это быстрый способ улучшить стабильность работы. Вам не нужно скачивать новые файлы или перезагружать компьютер, достаточно изменить настройки в системе.</p>
+
+<p>Откройте <code>Панель управления</code> и перейдите в раздел <code>Устройства и принтеры</code> (или "Принтеры и сканеры" в Windows 10/11). Найдите ваше устройство <em>Canon i-SENSYS</em>, нажмите на него правой кнопкой мыши и выберите <code>Свойства принтера</code>. Важно выбрать именно "Свойства принтера", а не просто "Свойства", так как вторая вкладка открывает настройки драйвера, а не портов.</p>
+
+<p>Перейдите на вкладку <code>Порты</code>. Здесь вы увидите список доступных портов и галочку напротив текущего. Если текущий порт — WSD, нажмите кнопку <code>Добавить порт</code>. В появившемся окне выберите <code>Standard TCP/IP Port</code> и нажмите <code>Новый порт</code>. Мастер настройки предложит ввести IP-адрес принтера. Введите его и следуйте инструкциям до завершения.</p>
+
+<p>После создания нового порта убедитесь, что галочка переместилась на него. Нажмите <code>Применить</code> и попробуйте распечатать тестовую страницу. Если печать прошла успешно, вы можете удалить старый порт WSD, чтобы избежать путаницы в будущем. Это действие не повлияет на другие устройства, подключенные к компьютеру.</p>
+
+<blockquote>⚠️ Внимание: Перед удалением старого порта убедитесь, что новый порт работает стабильно. Удаление активного порта может привести к потере связи с устройством и необходимости повторной конфигурации.</blockquote>
+
+<details class="pb-accordion"><summary>Как узнать IP-адрес принтера?</summary><div class="pb-accordion-body"><p>Нажмите кнопку "Меню" на панели управления принтера -> Перейдите в раздел "Настройки" -> Выберите "Настройки сети" -> Найдите "TCP/IP" или "IP-адрес". На экране отобразится текущий адрес устройства.</p></div></details>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Почему принтер Canon i-SENSYS постоянно показывает статус "Оффлайн" при использовании WSD?</summary>
+<p>Это частая проблема с протоколом WSD, особенно когда принтер переходит в режим энергосбережения. Система перестает получать ответы на запросы состояния и помечает устройство как недоступное. Решение: создайте порт Standard TCP/IP и отключите SNMP статус в его свойствах.</p>
+</details>
+
+<details>
+<summary>Нужно ли настраивать порт LPR для печати с обычного компьютера на Windows?</summary>
+<p>В 99% случаев нет. Протокол LPR предназначен для специфических задач в серверных или Unix-сетях. Для домашней и офисной печати на Windows лучше всего подходит Standard TCP/IP, который обеспечивает лучшую совместимость и скорость.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать один и тот же IP-адрес для нескольких принтеров?</summary>
+<p>Категорически нельзя. Каждый сетевой принтер должен иметь уникальный IP-адрес. Если вы назначите один и тот же адрес двум устройствам, возникнет конфликт, и ни одно из них не сможет нормально работать в сети. Используйте резервирование адресов на роутере для каждого устройства.</p>
+</details>
+
+<details>
+<summary>Что делать, если мастер установки не находит принтер при добавлении TCP/IP порта?</summary>
+<p>Убедитесь, что принтер подключен к сети и включен. Проверьте, что IP-адрес введен верно. Попробуйте отключить брандмауэр Windows на время установки. Если проблема сохраняется, убедитесь, что на роутере не включена изоляция клиентов (AP Isolation), которая запрещает устройствам общаться друг с другом.</p>
+</details>
+
+<details>
+<summary>Влияет ли тип порта на качество печати документов?</summary>
+<p>Нет, тип порта (WSD, TCP/IP, LPR) влияет только на скорость передачи данных и стабильность соединения. Качество отпечатка определяется настройками драйвера, типом бумаги и состоянием картриджа, а не сетевым протоколом.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-peredat-foto-s-canon-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как передать фото с Canon на компьютер: полные инструкции 2026</span>
+                <span class="pb-related-desc">Узнайте, как быстро и качественно перенести снимки с камеры Canon на ПК. Обзор USB, Wi-Fi, картридер</span>
+            </a><a href="/articles/c/ca/canon-i-sensys-lbp-2900-kak-podklyuchit.html" class="pb-related-card">
+                <span class="pb-related-title">Canon i-SENSYS LBP 2900: Как подключить к Windows и Mac</span>
+                <span class="pb-related-desc">Пошаговая инструкция по установке драйверов и подключению Canon i-SENSYS LBP 2900 к компьютеру. Реше</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-drajvera-na-noutbuk-dlya-printera-canon-s-diska.html" class="pb-related-card">
+                <span class="pb-related-title">Установка драйверов Canon с диска: Пошаговая инструкция для ноутбука</span>
+                <span class="pb-related-desc">Подробное руководство по установке драйверов принтера Canon с установочного диска на ноутбук. Разбор</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-canon-eos-r-k-kompyuteru.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon EOS R к компьютеру: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по подключению камеры Canon EOS R к ПК. Настройка Canon EOS Utility, передача </span>
+            </a><a href="/articles/k/ka/kak-ustanovit-printer-na-kompyuter-bez-ustanovochnogo-diska-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Установка принтера Canon без диска: пошаговая инструкция и драйверы</span>
+                <span class="pb-related-desc">Как подключить принтер Canon к компьютеру без установочного диска. Скачать драйверы, настроить Wi-Fi</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-kenon-k-noutbuku.html" class="pb-related-card">
+                <span class="pb-related-title">Подключение принтера Canon к ноутбуку: USB и Wi-Fi настройка</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как подключить принтер Canon к ноутбуку через кабель или Wi-Fi. Установка драй</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

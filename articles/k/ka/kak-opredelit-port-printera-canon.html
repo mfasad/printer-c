@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как найти порт принтера Canon: полное руководство по настройке — Кэнон Инфо</title>
+    <meta name="description" content="Узнайте, как определить и настроить порт принтера Canon в Windows и macOS. Пошаговая инструкция, решение проблем с драйверами и подключением.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-opredelit-port-printera-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как найти порт принтера Canon: полное руководство по настройке">
+    <meta property="og:description" content="Узнайте, как определить и настроить порт принтера Canon в Windows и macOS. Пошаговая инструкция, решение проблем с драйверами и подключением.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/podklyuchenie-k-pk/">Подключение к ПК</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как найти порт принтера Canon: полное руководство по настройке</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#анализ-текущего-состояния-подключения-в-windows">Анализ текущего состояния подключения в Windows</a></li><li><a href="#поиск-ip-адреса-на-самом-устройстве-canon">Поиск IP-адреса на самом устройстве Canon</a></li><li><a href="#настройка-и-создание-нового-сетевого-порта">Настройка и создание нового сетевого порта</a></li><li><a href="#особенности-подключения-через-macos">Особенности подключения через macOS</a></li><li><a href="#решение-частых-проблем-с-портами-lpt-и-com">Решение частых проблем с портами LPT и COM</a></li><li><a href="#использование-утилиты-canon-my-printer">Использование утилиты Canon My Printer</a></li><li><a href="#работа-со-статическими-и-динамическими-адресами">Работа со статическими и динамическими адресами</a></li><li><a href="#когда-требуется-переустановка-драйвера">Когда требуется переустановка драйвера</a></li><li><a href="#диагностика-сетевых-конфликтов-и-фаервола">Диагностика сетевых конфликтов и фаервола</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ca/canon-eos-550d-kak-podklyuchit-k-kompyuteru.html">Как подключить Canon EOS 550D к компьютеру: полный гайд по USB и Wi-Fi</a></li><li><a href="/articles/c/ca/canon-3010-kak-podklyuchit.html">Как подключить Canon 3010: пошаговая инструкция по настройке</a></li><li><a href="/articles/p/po/pochemu-ne-poluchaetsya-podklyuchit-printer-canon.html">Почему не получается подключить принтер Canon: полное руководство по устранению</a></li><li><a href="/articles/k/ka/kak-podklyuchit-fotoapparat-canon-k-kompyuteru-cherez-provod.html">Как подключить фотоаппарат Canon к компьютеру через USB кабель</a></li><li><a href="/articles/k/ka/kak-ustanovit-printer-canon-l11121e-bez-diska-besplatno.html">Установка принтера Canon LBP1120 без диска: драйверы и драйвер-пак</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как определить и найти порт принтера Canon на компьютере</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#анализ-текущего-состояния-подключения-в-windows">Анализ текущего состояния подключения в Windows</a></li><li><a href="#поиск-ip-адреса-на-самом-устройстве-canon">Поиск IP-адреса на самом устройстве Canon</a></li><li><a href="#настройка-и-создание-нового-сетевого-порта">Настройка и создание нового сетевого порта</a></li><li><a href="#особенности-подключения-через-macos">Особенности подключения через macOS</a></li><li><a href="#решение-частых-проблем-с-портами-lpt-и-com">Решение частых проблем с портами LPT и COM</a></li><li><a href="#использование-утилиты-canon-my-printer">Использование утилиты Canon My Printer</a></li><li><a href="#работа-со-статическими-и-динамическими-адресами">Работа со статическими и динамическими адресами</a></li><li><a href="#когда-требуется-переустановка-драйвера">Когда требуется переустановка драйвера</a></li><li><a href="#диагностика-сетевых-конфликтов-и-фаервола">Диагностика сетевых конфликтов и фаервола</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Проблемы с печатью часто возникают именно на этапе настройки сетевого взаимодействия между компьютером и периферийным устройством. Когда <em>Canon PIXMA</em> или <em>imageRUNNER</em> не отвечает на команды, первым делом необходимо проверить, корректно ли настроен <strong>сетевой порт</strong> в системе управления принтерами. Многие пользователи ошибочно полагают, что проблема в драйверах, хотя на самом деле система просто пытается отправить данные по неверному адресу или через закрытый канал связи.</p>
+
+<p>Определение правильного <strong>порта LPT или TCP/IP</strong> — это фундамент стабильной работы офисной техники. Без верной настройки даже самый мощный <em>Canon imagePROGRAF</em> останется бесполезной коробкой. В этой статье мы разберем, как точно идентифицировать текущий порт, проверить его работоспособность и, при необходимости, создать новый канал передачи данных.</p>
+
+<h2 id="анализ-текущего-состояния-подключения-в-windows">Анализ текущего состояния подключения в Windows</h2>
+
+<p>Первый шаг к решению проблемы — это запуск стандартного диспетчера устройств или панели управления, где хранятся все настройки периферии. Вам нужно открыть окно <code>Устройства и принтеры</code> или <code>Параметры → Принтеры и сканеры</code> в зависимости от версии вашей операционной системы. Найдите в списке вашу модель <em>Canon</em>, нажмите на нее правой кнопкой мыши и выберите пункт <code>Свойства принтера</code>. Важно не перепутать это с обычными <code>Свойствами</code>, так как именно во вкладке портов скрывается необходимая информация.</p>
+
+<p>Перейдите во вкладку <code>Порты</code>. Здесь вы увидите список всех доступных интерфейсов, которые операционная система "видит" в данный момент. Искомый порт будет отмечен галочкой. Обратите внимание на название: если вы видите строку, начинающуюся с IP-адреса (например, <code>192.168.1.55</code>), значит, устройство подключено по сети. Если же указан <code>USB001</code> или <code>LPT1</code>, соединение осуществляется через кабель.</p>
+
+<p>Часто пользователи сталкиваются с ситуацией, когда галочка стоит на порте, но печать не идет, либо устройство определяется как "Не работает". Это может означать, что IP-адрес принтера изменился после перезагрузки роутера, а порт в системе остался старым. Чтобы это проверить, нажмите кнопку <code>Настроить порт</code>. В открывшемся окне вы увидите поле <code>Имя принтера</code> и <code>Адрес</code>. Сравните эти данные с реальной настройкой устройства, напечатанной из его меню.</p>
+
+<h2 id="поиск-ip-адреса-на-самом-устройстве-canon">Поиск IP-адреса на самом устройстве Canon</h2>
+
+<p>Чтобы сравнить данные из Windows с реальностью, нужно узнать текущий <strong>IP-адрес</strong> самого принтера. На большинстве моделей <em>Canon</em> это делается через встроенный дисплей и меню. Зайдите в настройки, найдите раздел <code>Сеть</code> или <code>Настройки LAN</code>. В разделе <code>Информация о сети</code> или <code>Статус</code> вы увидите текущий адрес. Если у вашей модели нет экрана, воспользуйтесь функцией печати отчета конфигурации.</p>
+
+<p>Для печати отчета обычно нужно зажать кнопку <code>Stop/Reset</code> (треугольник в круге) и удерживать её, пока не загорится индикатор <code>Power</code> (питание), а затем отпустить. На некоторых офисных моделях <em>imageRUNNER</em> путь может быть другим: <code>Настройки/Регистрация → Отчеты → Отчет о настройках</code>. В полученном документе найдите строку <strong>TCP/IP</strong> или <strong>IP Address</strong>. Именно эти цифры являются ключом к правильной настройке.</p>
+
+<blockquote>⚠️ Внимание: Если ваш принтер подключен через USB-кабель, поиск IP-адреса не имеет смысла, так как он не используется для передачи данных. В этом случае вы должны искать порт <code>USB001</code> или подобный в списке портов.</blockquote>
+
+<div class="pb-poll" id="poll-f222c510"><div class="pb-poll-question">📊 Каким способом вы чаще всего подключаете принтер?</div><div class="pb-poll-option" data-poll="f222c510" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">USB-кабель</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f222c510" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Wi-Fi сеть</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f222c510" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Кабель LAN (Ethernet)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f222c510" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Через сервер печати</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="настройка-и-создание-нового-сетевого-порта">Настройка и создание нового сетевого порта</h2>
+
+<p>Если вы выяснили, что IP-адрес в системе не совпадает с реальным, необходимо создать новый порт. В окне <code>Свойства принтера → Порты</code> нажмите кнопку <code>Добавить порт</code>. В списке выберите <code>Standard TCP/IP Port</code> и нажмите <code>Новый порт</code>. Запустится мастер добавления, который запросит адрес устройства.</p>
+
+<p>Введите актуальный IP-адрес, который вы узнали в предыдущем разделе. Мастер может попытаться автоматически определить тип устройства и его имя. Если он находит устройство, вы можете просто нажать <code>Далее</code>. В случае ошибки поиска убедитесь, что компьютер и принтер находятся в одной подсети, и попробуйте ввести адрес вручную, сняв галочку с "Опросить принтер".</p>
+
+<p>После создания порта система автоматически переключит галочку на новый адрес. Теперь нажмите <code>Применить</code> и попробуйте распечатать пробную страницу. Если устройство откликается, значит проблема была именно в неверном маршрутизаторе данных. Если же ошибка повторяется, возможно, проблема в драйвере или блокировке фаерволом.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед созданием порта</h4><label class="check-item"><input type="checkbox"><span>Проверьте IP принтера в меню</span></label><label class="check-item"><input type="checkbox"><span>Убедитесь в наличии кабеля LAN</span></label><label class="check-item"><input type="checkbox"><span>Проверьте пинг с компьютера</span></label><label class="check-item"><input type="checkbox"><span>Сверьте маску подсети</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="особенности-подключения-через-macos">Особенности подключения через macOS</h2>
+
+<p>В операционной системе macOS логика работы портов несколько иная, но принцип остается тем же. Откройте <code>Системные настройки → Принтеры и сканеры</code>. Выделите ваш принтер и нажмите <code>Опции и расходные материалы</code> (или <code>Параметры</code>). Перейдите на вкладку <code>Порт</code>. Здесь отображается текущий способ подключения: <code>IP</code> или <code>USB</code>.</p>
+
+<p>Для сетевого подключения в macOS часто используется протокол <strong>IPP</strong> (Internet Printing Protocol) или <strong>smb</strong>. Если принтер не определяется автоматически, можно нажать <code>+</code> для добавления нового устройства и выбрать вкладку <code>IP</code>. Введите адрес вручную, выбрав протокол <code>HP JetDirect</code> (он же Socket) или <code>IPP</code>. Драйвер система подберет автоматически, если он есть в базе, или предложит загрузить его с сайта <em>Canon</em>.</p>
+
+<p>Важно отметить, что в macOS иногда происходит смена порта "на лету" при обновлении системы или роутера. В отличие от Windows, здесь нет отдельного менеджера портов, доступного через контекстное меню принтера. Поэтому при сбоях проще удалить устройство и добавить его заново, введя правильный IP-адрес.</p>
+
+<details class="pb-accordion"><summary>Почему macOS сбрасывает настройки?</summary><div class="pb-accordion-body"><p>При обновлении системы или смене роутера Mac может потерять привязку к старому протоколу связи, если не используется статический IP.</p></div></details>
+
+<h2 id="решение-частых-проблем-с-портами-lpt-и-com">Решение частых проблем с портами LPT и COM</h2>
+
+<p>Старые модели <em>Canon</em> или специализированное оборудование иногда требуют подключения через параллельный порт <code>LPT</code> или последовательный <code>COM</code>. Это редко встречается в современных домашних офисах, но актуально для промышленной сферы. Если вы используете USB-переходник, система может определить его как <code>USB001</code>, но драйвер будет требовать <code>LPT1</code>.</p>
+
+<p>В этом случае необходимо изменить свойства порта в диспетчере устройств или в настройках принтера на правильный виртуальный COM-порт, который выделил переходник. Неправильный выбор порта приведет к тому, что данные будут уходить в "никуда". Проверьте, какой COM-порт назначен переходнику, зайдя в <code>Диспетчер устройств → Порты (COM и LPT)</code>.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип порта</th>
+<th>Обычное название в системе</th>
+<th>Сценарий использования</th>
+<th>Проблемы при сбое</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USB</td>
+<td>USB001, USB002</td>
+<td>Прямое подключение кабелем к ПК</td>
+<td>Принтер не отвечает на команды, "Драйвер не найден"</td>
+</tr>
+<tr>
+<td>TCP/IP</td>
+<td>IP-адрес (192.168.x.x)</td>
+<td>Сетевое подключение через роутер</td>
+<td>Ошибка "Нет связи", печать зависает</td>
+</tr>
+<tr>
+<td>LPT</td>
+<td>LPT1, LPT2</td>
+<td>Старые модели, промышленное ПО</td>
+<td>Полное отсутствие печати, ошибка порта</td>
+</tr>
+<tr>
+<td>WSD</td>
+<td>WSD-порт</td>
+<td>Автоматическое обнаружение в Windows</td>
+<td>Нестабильная работа, медленная печать</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>⚠️ Внимание: При использовании протокола WSD (Web Services for Devices) соединение может быть нестабильным. Для стабильной работы в офисе настоятельно рекомендуется использовать статический IP-порт вместо WSD.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если вы часто переносите принтер или меняете место работы, настройте статический IP-адрес в самом роутере для устройства Canon. Это гарантирует, что порт никогда не изменится после перезагрузки.</p></aside>
+
+<h2 id="использование-утилиты-canon-my-printer">Использование утилиты Canon My Printer</h2>
+
+<p>Для устранения проблем с портами разработчики <em>Canon</em> создали специализированное приложение <code>Canon My Printer</code>. Оно часто устанавливается вместе с драйверами. Запустите утилиту и выберите ваше устройство. В разделе <code>Параметры</code> или <code>Сетевое подключение</code> вы можете увидеть текущий статус порта и попробовать выполнить диагностику.</p>
+
+<p>Утилита способна автоматически обнаружить смену IP-адреса и обновить настройки драйвера на компьютере без ручного вмешательства пользователя. Это особенно полезно, если вы переподключили принтер к другому роутеру или изменили настройки DHCP. Просто нажмите кнопку <code>Обновить</code> или <code>Найти устройство</code> в интерфейсе программы.</p>
+
+<p>Если автоматическая настройка не срабатывает, в утилите есть ссылка на веб-интерфейс принтера (Remote UI). Открыв его в браузере, вы получите полный контроль над сетевыми настройками, включая возможность закрепления <strong>MAC-адреса</strong> за конкретным IP, что исключит будущие конфликты адресов.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярная проверка настроек порта в утилите Canon My Printer позволяет избежать внезапных сбоев печати при смене сетевой инфраструктуры офиса.</p></aside>
+
+<h2 id="работа-со-статическими-и-динамическими-адресами">Работа со статическими и динамическими адресами</h2>
+
+<p>Существует два основных типа адресации: динамическая (DHCP) и статическая. При динамической настройке роутер сам выдает IP-адрес принтеру при каждом включении. Это удобно для дома, но опасно, так как адрес может измениться, и порт в Windows перестанет работать.</p>
+
+<p>Для офисов и стабильной работы рекомендуется назначать принтеру <strong>статический IP-адрес</strong>. Это делается либо в настройках самого принтера (в меню сети), либо через резервирование адреса в настройках роутера по MAC-адресу. После назначения статического адреса обновите порт в Windows, указав этот фиксированный IP.</p>
+
+<p>Если вы выберете статический адрес, убедитесь, что он не пересекается с диапазоном, выдаваемым DHCP-сервером роутера. Например, если роутер раздает адреса с 1.100 по 1.200, назначьте принтеру адрес 1.50. Это предотвратит конфликты, когда два устройства получат одинаковый адрес, что парализует работу всей сети.</p>
+
+<h2 id="когда-требуется-переустановка-драйвера">Когда требуется переустановка драйвера</h2>
+
+<p>Иногда проблема не в самом порте, а в драйвере, который не может корректно работать с выбранным интерфейсом. Если вы меняли тип подключения (например, с USB на Wi-Fi), старый драйвер может "застрять" на старом порте. В этом случае проще всего удалить принтер из системы полностью.</p>
+
+<p>Удалите устройство через <code>Панель управления</code>, затем зайдите в <code>Диспетчер устройств</code> и очистите остатки драйверов в разделе "Устройства обработки изображений". Скачайте свежий пакет драйверов с официального сайта <em>Canon</em>, выбрав вашу точную модель и версию ОС. При установке следуйте мастеру, который сам предложит найти устройство в сети.</p>
+
+<p>Современные установщики <em>Canon</em> умеют самостоятельно сканировать сеть и подбирать правильный драйвер под найденный порт. Это самый надежный способ, гарантирующий, что все настройки будут применены верно с первого раза. Избегайте использования драйверов от сторонних сайтов, так как они могут содержать устаревшие конфигурации портов.</p>
+
+<details class="pb-accordion"><summary>Можно ли использовать драйвер от другой модели?</summary><div class="pb-accordion-body"><p>Иногда драйверы от серии PIXMA совместимы, но это не гарантирует корректной работы портов и всех функций. Лучше использовать родной драйвер.</p></div></details>
+
+<h2 id="диагностика-сетевых-конфликтов-и-фаервола">Диагностика сетевых конфликтов и фаервола</h2>
+
+<p>Если порт выбран верно, IP-адрес совпадает, но печать не идет, проверьте настройки брандмауэра Windows. Антивирусные программы или встроенный фаервол могут блокировать порты, используемые для печати (обычно <code>9100</code>, <code>515</code> или <code>631</code>). Попробуйте временно отключить защиту для проверки.</p>
+
+<p>Также стоит проверить, не используется ли этот IP-адрес другим устройством в сети. Введите <code>ping</code> IP-адреса принтера в командной строке. Если вы получите ответ, значит адрес занят, и проблема может быть в другом устройстве, которое "захватило" этот адрес. В этом случае смените адрес принтера на другой.</p>
+
+<blockquote>⚠️ Внимание: Постоянное использование утилит ping для проверки связи может вывести из строя старые сетевые платы принтеров в редких случаях перегрузки, но для современных моделей это безопасно.</blockquote>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Что делать, если порт LPT1 не работает на современном компьютере?</summary>
+<p>Современные материнские платы не имеют физических портов LPT. Если вам нужно подключить старый принтер, используйте качественный USB-кабель и установите соответствующий драйвер, который эмулирует порт LPT в формате USB. В свойствах принтера выберите созданный виртуальный порт.</p>
+</details>
+
+<details>
+<summary>Как узнать порт принтера Canon без доступа к компьютеру?</summary>
+<p>Вы можете распечатать отчет о конфигурации прямо с панели управления принтера. В отчете будет указан IP-адрес и состояние сети. Для моделей с экраном это можно посмотреть в меню настроек сети.</p>
+</details>
+
+<details>
+<summary>Можно ли подключить принтер Canon к Wi-Fi без использования порта в Windows?</summary>
+<p>Нет, порт в Windows необходим для передачи данных. Подключение к Wi-Fi само по себе не создает порт в системе. Вы должны создать порт TCP/IP, указав IP-адрес, который получил принтер от роутера.</p>
+</details>
+
+<details>
+<summary>Почему после обновления Windows порт изменился на WSD?</summary>
+<p>Обновления Windows часто пытаются оптимизировать работу периферии, заменяя пользовательские настройки TCP/IP на стандартный WSD-порт. Это не всегда удобно. Рекомендуется вручную переключить порт обратно на TCP/IP для стабильности.</p>
+</details>
+
+<details>
+<summary>Как проверить, работает ли порт принтера?</summary>
+<p>Самый простой способ — напечатать пробную страницу из меню свойств принтера. Если страница вышла, порт работает. Также можно использовать команду <code>telnet IP_адрес 9100</code> в командной строке; если соединение открылось, порт активен.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ca/canon-eos-550d-kak-podklyuchit-k-kompyuteru.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon EOS 550D к компьютеру: полный гайд по USB и Wi-Fi</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как подключить Canon EOS 550D к ПК через USB и Wi-Fi. Настройка EOS Utility, п</span>
+            </a><a href="/articles/c/ca/canon-3010-kak-podklyuchit.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon 3010: пошаговая инструкция по настройке</span>
+                <span class="pb-related-desc">Подробное руководство: как подключить Canon 3010 к компьютеру и Wi-Fi. Решение проблем, установка др</span>
+            </a><a href="/articles/p/po/pochemu-ne-poluchaetsya-podklyuchit-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Почему не получается подключить принтер Canon: полное руководство по устранению</span>
+                <span class="pb-related-desc">Узнайте, почему ваш принтер Canon не определяется компьютером. Пошаговая инструкция по настройке дра</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-fotoapparat-canon-k-kompyuteru-cherez-provod.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить фотоаппарат Canon к компьютеру через USB кабель</span>
+                <span class="pb-related-desc">Пошаговая инструкция: настройка проводного соединения фотоаппарата Canon с ПК. Решаем проблемы драйв</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-printer-canon-l11121e-bez-diska-besplatno.html" class="pb-related-card">
+                <span class="pb-related-title">Установка принтера Canon LBP1120 без диска: драйверы и драйвер-пак</span>
+                <span class="pb-related-desc">Пошаговая инструкция по установке драйверов для Canon LBP1120 без компакт-диска. Бесплатное скачиван</span>
+            </a><a href="/articles/c/ca/canon-lbp6030b-kak-podklyuchit.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon LBP6030B к компьютеру: USB и сеть</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению принтера Canon LBP6030B. Установка драйверов, настройка USB и Wi</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

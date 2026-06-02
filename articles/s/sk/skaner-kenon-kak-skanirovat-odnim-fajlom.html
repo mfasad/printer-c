@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как сканировать одним файлом на Canon: настройка TWAIN и WIA — Кэнон Инфо</title>
+    <meta name="description" content="Инструкция по сканированию в один файл на принтерах Canon. Настройка TWAIN, WIA и Canon IJ Scan Utility для объединения страниц.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/s/sk/skaner-kenon-kak-skanirovat-odnim-fajlom.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как сканировать одним файлом на Canon: настройка TWAIN и WIA">
+    <meta property="og:description" content="Инструкция по сканированию в один файл на принтерах Canon. Настройка TWAIN, WIA и Canon IJ Scan Utility для объединения страниц.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как сканировать одним файлом на Canon: настройка TWAIN и WIA</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#выбор-программного-обеспечения-для-объединения-страниц">Выбор программного обеспечения для объединения страниц</a></li><li><a href="#настройка-сканирования-через-ij-scan-utility">Настройка сканирования через IJ Scan Utility</a></li><li><a href="#использование-драйвера-wia-для-сканирования-в-один-файл">Использование драйвера WIA для сканирования в один файл</a></li><li><a href="#сканирование-через-панель-управления-мфу">Сканирование через панель управления МФУ</a></li><li><a href="#решение-проблем-с-разделением-файлов">Решение проблем с разделением файлов</a></li><li><a href="#экспорт-и-сохранение-результирующего-документа">Экспорт и сохранение результирующего документа</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-sdelat-skan-na-mfu-kenon.html">Как сделать скан на МФУ Canon: Полная инструкция по настройке и работе</a></li><li><a href="/articles/k/ka/kak-sdelat-skan-foto-na-kompyuter-s-printera-canon.html">Как сканировать фото на компьютер с принтера Canon: Полное руководство</a></li><li><a href="/articles/k/ka/kak-nastroit-skaner-canon-4730.html">Как настроить сканер Canon 4730: драйверы, Wi-Fi и работа в сети</a></li><li><a href="/articles/k/ka/kak-sdelat-skan-na-noutbuk-s-printera-canon.html">Как сделать скан с принтера Canon на ноутбук: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-otskanirovat-dokumenty-na-printere-canon-mg3540.html">Как отсканировать документы на Canon MG3540: инструкции для ПК и телефона</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как настроить сканирование в один файл на сканерах Canon</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#выбор-программного-обеспечения-для-объединения-страниц">Выбор программного обеспечения для объединения страниц</a></li><li><a href="#настройка-сканирования-через-ij-scan-utility">Настройка сканирования через IJ Scan Utility</a></li><li><a href="#использование-драйвера-wia-для-сканирования-в-один-файл">Использование драйвера WIA для сканирования в один файл</a></li><li><a href="#сканирование-через-панель-управления-мфу">Сканирование через панель управления МФУ</a></li><li><a href="#решение-проблем-с-разделением-файлов">Решение проблем с разделением файлов</a></li><li><a href="#экспорт-и-сохранение-результирующего-документа">Экспорт и сохранение результирующего документа</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Многие пользователи сталкиваются с неприятной ситуацией, когда при сканировании многостраничного документа каждая страница сохраняется как отдельный файл. Это создает хаос в папках и усложняет архивирование. Для владельцев техники <em>Canon</em> проблема решается изменением настроек драйвера или выбором специализированного программного обеспечения, способного объединять изображения.</p> <p>Важно понимать, что стандартные настройки Windows часто по умолчанию ориентированы на одностраничное сканирование. Однако в интерфейсе драйвера или утилиты производителя сканирование одним файлом является стандартной возможностью, просто она требует ручной активации. Мы разберем, как правильно настроить процесс для получения единого <strong>PDF-документа</strong>.</p> <p>Независимо от того, используете ли вы настольный планшет или МФУ с автоподатчиком документов, алгоритм действий будет схожим. Главное — знать, какой именно параметр отвечает за объединение страниц и где он скрыт в меню настроек вашего устройства.</p>
+
+<h2 id="выбор-программного-обеспечения-для-объединения-страниц">Выбор программного обеспечения для объединения страниц</h2>
+
+<p>Прежде чем приступать к настройкам, необходимо определиться с инструментом. Стандартное приложение «Факсы и сканирование Windows» часто не поддерживает функцию объединения страниц в один файл без сторонних утилит. Для устройств <em>Canon</em> наиболее эффективным решением является родная программа <code>IJ Scan Utility</code>, которая идет в комплекте с драйверами.</p>
+
+<p>Альтернативой может служить драйвер <strong>WIA</strong> (Windows Image Acquisition) или <strong>TWAIN</strong>, доступные через функции меню самого устройства. Если вы используете профессиональный софт вроде <code>Adobe Photoshop</code> или <code>VueScan</code>, опция объединения обычно включается в разделе настроек экспорта. Выбор зависит от версии вашей операционной системы и модели сканера.</p>
+
+<p>Обратите внимание, что старые модели могут требовать установки специфических драйверов для работы расширенных функций. В таких случаях скачивайте ПО с официального сайта производителя, указав точную модель вашего <em>Canon</em>.</p>
+
+<blockquote>⚠️ Внимание: Устаревшие версии ПО могут не поддерживать современные форматы контейнеров. Если вы не видите опции «Объединить», обновите драйверы до последней версии.</blockquote>
+
+<h2 id="настройка-сканирования-через-ij-scan-utility">Настройка сканирования через IJ Scan Utility</h2>
+
+<p>Это наиболее надежный способ для пользователей <em>Canon</em>, так как программа имеет нативный интерфейс для работы с документацией. Запустите утилиту <code>IJ Scan Utility</code> и выберите режим «Документ» (Data Capture). В открывшемся окне настроек найдите галочку или переключатель «Сохранить в один файл».</p>
+
+<p>Ключевой момент заключается в выборе формата выхода. Для объединения страниц необходимо выбрать формат <strong>PDF</strong>. Если вы выберете JPEG или PNG, программа автоматически создаст отдельные файлы для каждого сканируемого листа, игнорируя настройки объединения.</p>
+
+<p>После выбора формата <code>PDF</code> активируйте функцию «Добавить страницу» (Append). Теперь при нажатии кнопки сканирования, но без закрытия окна программы, вы можете подкладывать новые листы, и они будут добавляться в тот же файл. Это позволяет создавать многостраничные документы без разрывов.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед началом сканирования убедитесь, что в настройках разрешения (DPI) установлено значение не ниже 300, чтобы текст был четким при печати или просмотре на экране.</p></aside>
+
+<h2 id="использование-драйвера-wia-для-сканирования-в-один-файл">Использование драйвера WIA для сканирования в один файл</h2>
+
+<p>Если вы предпочитаете стандартные средства Windows, вам нужно правильно настроить драйвер <strong>WIA</strong>. Откройте приложение «Факсы и сканирование Windows». В меню нажмите «Новое сканирование» и в окне выбора устройства убедитесь, что выбран драйвер WIA для вашей модели <em>Canon</em>.</p>
+
+<p>В окне предварительного просмотра или настроек сканирования найдите раздел «Параметры». Здесь должна быть опция «Сохранять в один файл» или «Создать многостраничный файл». Если вы не видите этой опции, возможно, драйвер работает в режиме совместимости, и потребуется переключение на TWAIN.</p>
+
+<p>Для активации функции объедините все страницы в процессе работы: сканируйте первую страницу, затем нажмите кнопку «Добавить» или «Сканировать еще», прежде чем программа предложит сохранить результат. Игнорирование этого шага приведет к сохранению отдельного файла.</p>
+
+<ul>
+<li>Выберите формат <strong>PDF</strong> в выпадающем списке типов файлов.</li>
+<li>Убедитесь, что включен режим «Многостраничное сканирование».</li>
+<li>Проверьте настройки сжатия, чтобы файл не был слишком тяжелым.</li>
+</ul>
+
+<h2 id="сканирование-через-панель-управления-мфу">Сканирование через панель управления МФУ</h2>
+
+<p>Многие современные МФУ <em>Canon</em> имеют встроенный сканер с сенсорным экраном. Это позволяет сканировать документы напрямую в PDF без использования компьютера. Зайдите в меню устройства и выберите функцию «Сканирование в PDF» или «Scan to PC».</p>
+
+<p>В настройках профиля сканирования на экране найдите пункт «Тип файла» и установите его в значение <strong>PDF</strong>. Далее ищите опцию «Объединить» или «Многостраничный режим». Активация этой функции позволит вам загружать стопку документов в автоподатчик и получить один файл вместо множества изображений.</p>
+
+<p>Если вы используете автоподатчик документов (ADF), убедитесь, что в настройках указано количество страниц. Некоторые модели автоматически объединяют все сканируемые страницы в один файл, если в настройках не стоит ограничение на количество страниц на файл.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Настройка сканирования через МФУ</h4><label class="check-item"><input type="checkbox"><span>Выбрать режим PDF</span></label><label class="check-item"><input type="checkbox"><span>Включить объединение страниц</span></label><label class="check-item"><input type="checkbox"><span>Проверить автоподатчик</span></label><label class="check-item"><input type="checkbox"><span>Запустить сканирование</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<blockquote>⚠️ Внимание: При сканировании через панель управления устройства убедитесь, что на сервере или ПК, куда передается файл, достаточно места на диске для сохранения крупного PDF-файла.</blockquote>
+
+<h2 id="решение-проблем-с-разделением-файлов">Решение проблем с разделением файлов</h2>
+
+<p>Иногда пользователи сталкиваются с тем, что даже при включенных настройках файлы все равно делятся. Это часто происходит из-за настроек драйвера <strong>TWAIN</strong>, где параметр «Разделение страниц» установлен на «По времени» или «По размеру». Необходимо изменить это значение на «Отключено».</p>
+
+<p>Другой причиной может быть особенность формата файла. Если вы сканируете в <strong>TIFF</strong>, некоторые версии драйверов могут не поддерживать многостраничность по умолчанию. В этом случае переключитесь на PDF, который является стандартом для таких задач.</p>
+
+<p>Также проверьте, не включена ли функция «Удаление пустых страниц». Если она активна, система может ошибочно интерпретировать разрыв между страницами как пустое место и завершать файл. Отключите эту опцию в расширенных настройках сканирования.</p>
+
+<details class="pb-accordion"><summary>Что делать, если драйвер не видит PDF?</summary><div class="pb-accordion-body"><p>Попробуйте переустановить драйвер TWAIN, так как он часто конфликтует со стандартными драйверами Windows, блокируя возможность сохранения в PDF.</p></div></details>
+
+<p>Таблица ниже поможет быстро определить, какой метод лучше использовать в зависимости от вашей задачи и модели устройства.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Формат файла</th>
+<th>Поддержка объединения</th>
+<th>Сложность настройки</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IJ Scan Utility</td>
+<td>PDF, JPEG</td>
+<td>Высокая</td>
+<td>Низкая</td>
+</tr>
+<tr>
+<td>WIA (Windows)</td>
+<td>PDF, TIFF</td>
+<td>Средняя</td>
+<td>Средняя</td>
+</tr>
+<tr>
+<td>Панель МФУ</td>
+<td>PDF</td>
+<td>Высокая</td>
+<td>Низкая</td>
+</tr>
+<tr>
+<td>Adobe Acrobat</td>
+<td>PDF</td>
+<td>Максимальная</td>
+<td>Высокая</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="pb-poll" id="poll-42157850"><div class="pb-poll-question">📊 Какой метод вы используете чаще всего?</div><div class="pb-poll-option" data-poll="42157850" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">IJ Scan Utility</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="42157850" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">WIA в Windows</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="42157850" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Панель МФУ</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="42157850" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Сторонний софт</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<blockquote>⚠️ Внимание: При использовании автоподатчика документов следите за тем, чтобы страницы не застревали, так как это может привести к созданию неполного файла с обрывом данных.</blockquote>
+
+<h2 id="экспорт-и-сохранение-результирующего-документа">Экспорт и сохранение результирующего документа</h2>
+
+<p>После того как вы просканировали все необходимые страницы, нажимайте кнопку «Сканировать» или «Сохранить». Если вы используете <em>Canon IJ Scan Utility</code>, программа предложит указать имя файла и папку для сохранения. Убедитесь, что расширение файла указано как <code>.pdf</code>.</p>
+
+<p>В некоторых случаях, если вы сканируете через <strong>Adobe Acrobat</em>, нужно нажать кнопку «Завершить сканирование» (Finish Scanning), чтобы программа объединила все буферные изображения в один документ. Без этого шага файл может остаться в режиме черновика.</p>
+
+<p>Проверьте полученный файл, открыв его в любом просмотрщике PDF. Прокрутите документ, чтобы убедиться, что все страницы на месте и в правильном порядке. Если страница пропала, возможно, вы закрыли окно сканирования слишком рано.</p>
+
+<p>Для оптимизации размера файла можно использовать функцию сжатия в настройках сохранения. Это особенно актуально, если вы планируете пересылать документ по электронной почте. Однако слишком сильное сжатие может ухудшить читаемость текста.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главная цель — выбрать формат PDF и включить опцию добавления страниц перед сохранением, чтобы избежать дробления документа.</p></aside>
+
+<details>
+<summary>Почему при сканировании создается много файлов?</summary>
+<p>Это происходит, если в настройках драйвера не включена опция объединения страниц или выбран формат изображения (JPEG/PNG), который не поддерживает многостраничность в стандартном режиме.</p>
+</details>
+
+<details>
+<summary>Можно ли объединить уже готовые файлы JPG в один PDF?</summary>
+<p>Да, для этого существуют онлайн-сервисы или программы типа <em>Adobe Acrobat</em>, которые позволяют загрузить несколько картинок и сохранить их как единый PDF-документ.</p>
+</details>
+
+<details>
+<summary>Работает ли сканирование в один файл на старых моделях Canon?</summary>
+<p>Да, если установлена соответствующая версия драйвера. На очень старых моделях может потребоваться использование утилиты <code>ScanGear</code> вместо стандартных средств Windows.</p>
+</details>
+
+<details>
+<summary>Что делать, если сканер Canon не видит PDF при сохранении?</summary>
+<p>Проверьте, установлен ли драйвер TWAIN. Стандартный драйвер WIA иногда не предлагает выбор формата PDF без дополнительных настроек реестра или утилиты.</p>
+</details>
+
+<details>
+<summary>Как сохранить сканы в один файл без установки дополнительного ПО?</summary>
+<p>Используйте стандартную утилиту «Факсы и сканирование Windows», выбрав формат PDF и включив опцию «Сохранить в один файл» в расширенных настройках.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-sdelat-skan-na-mfu-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать скан на МФУ Canon: Полная инструкция по настройке и работе</span>
+                <span class="pb-related-desc">Пошаговое руководство: как отсканировать документ на МФУ Canon с компьютера, телефона или напрямую в</span>
+            </a><a href="/articles/k/ka/kak-sdelat-skan-foto-na-kompyuter-s-printera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать фото на компьютер с принтера Canon: Полное руководство</span>
+                <span class="pb-related-desc">Подробная инструкция: как сделать скан фото на компьютер с принтера Canon через IJ Scan Utility или </span>
+            </a><a href="/articles/k/ka/kak-nastroit-skaner-canon-4730.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить сканер Canon 4730: драйверы, Wi-Fi и работа в сети</span>
+                <span class="pb-related-desc">Пошаговая инструкция по настройке МФУ Canon iC MF4730. Установка драйверов, подключение по USB и Wi-</span>
+            </a><a href="/articles/k/ka/kak-sdelat-skan-na-noutbuk-s-printera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать скан с принтера Canon на ноутбук: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по настройке сканирования с принтера Canon на ноутбук через USB/Wi-Fi. Решение</span>
+            </a><a href="/articles/k/ka/kak-otskanirovat-dokumenty-na-printere-canon-mg3540.html" class="pb-related-card">
+                <span class="pb-related-title">Как отсканировать документы на Canon MG3540: инструкции для ПК и телефона</span>
+                <span class="pb-related-desc">Полная инструкция по сканированию документов на МФУ Canon MG3540 через USB, Wi-Fi и мобильное прилож</span>
+            </a><a href="/articles/k/ka/kak-sdelat-skan-na-canon-ts3140.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать скан на принтере Canon TS3140: полное руководство</span>
+                <span class="pb-related-desc">Подробная инструкция по сканированию документов с Canon TS3140 через компьютер и смартфон. Настройка</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

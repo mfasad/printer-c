@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как прошить МФУ Canon: пошаговая инструкция по обновлению прошивки — Кэнон Инфо</title>
+    <meta name="description" content="Полное руководство по обновлению прошивки принтеров Canon. Способы через USB и LAN, устранение ошибок, важные нюансы для моделей imageRUNNER и Pixma.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-proshit-mfu-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как прошить МФУ Canon: пошаговая инструкция по обновлению прошивки">
+    <meta property="og:description" content="Полное руководство по обновлению прошивки принтеров Canon. Способы через USB и LAN, устранение ошибок, важные нюансы для моделей imageRUNNER и Pixma.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как прошить МФУ Canon: пошаговая инструкция по обновлению прошивки</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-оборудования-и-выбор-метода-обновления">Подготовка оборудования и выбор метода обновления</a></li><li><a href="#скачивание-правильной-версии-прошивки">Скачивание правильной версии прошивки</a></li><li><a href="#процесс-обновления-через-локальную-сеть-lan">Процесс обновления через локальную сеть (LAN)</a></li><li><a href="#установка-обновления-через-usb-соединение">Установка обновления через USB-соединение</a></li><li><a href="#решение-частых-проблем-и-ошибок">Решение частых проблем и ошибок</a></li><li><a href="#сравнение-методов-обновления">Сравнение методов обновления</a></li><li><a href="#заключительные-рекомендации">Заключительные рекомендации</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ca/canon-mf3010-kak-raspechatat-probnuyu-stranitsu.html">Canon MF3010: как распечатать пробную страницу — пошагово 2026</a></li><li><a href="/articles/k/ka/kak-otklyuchit-vaj-faj-na-printere-canon-mp-495.html">Как отключить Wi-Fi на принтере Canon MP495: пошаговая инструкция</a></li><li><a href="/articles/c/ch/cherez-kakuyu-programmu-luchshe-pechatat-fotografii-na-printere-canon.html">Лучшие программы для печати фото на принтерах Canon: Сравнение и выбор</a></li><li><a href="/articles/k/ka/kak-prognat-printer-canon-g2400.html">Как прогнать принтер Canon G2400: purge, очистка и сброс памяти</a></li><li><a href="/articles/k/ka/kak-ustanovit-drajvera-na-printer-canon-lbp-2900-dlya-windows-10.html">Установка драйверов Canon LBP 2900 на Windows 10: Полная инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как прошить МФУ Canon: полное руководство по обновлению</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-оборудования-и-выбор-метода-обновления">Подготовка оборудования и выбор метода обновления</a></li><li><a href="#скачивание-правильной-версии-прошивки">Скачивание правильной версии прошивки</a></li><li><a href="#процесс-обновления-через-локальную-сеть-lan">Процесс обновления через локальную сеть (LAN)</a></li><li><a href="#установка-обновления-через-usb-соединение">Установка обновления через USB-соединение</a></li><li><a href="#решение-частых-проблем-и-ошибок">Решение частых проблем и ошибок</a></li><li><a href="#сравнение-методов-обновления">Сравнение методов обновления</a></li><li><a href="#заключительные-рекомендации">Заключительные рекомендации</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2>Введение</
+<p>
+<p>Владельцы многофункциональных устройств <em>Canon</em> часто сталкиваются с необходимостью обновления программного обеспечения. Это процедура, известная как прошивка, позволяет исправить критические ошибки, улучшить скорость печати и добавить поддержку новых типов носителей. Без регулярного обновления <strong>прошивка</strong> может начать конфликтовать с современными драйверами операционной системы, что приведет к нестабильной работе всего оборудования.</p>
+</p>
+<p>
+<p>Процесс обновления зависит от конкретной модели вашего устройства. Для офисных комплексов <em>imageRUNNER</em> и <em>imagePRESS</em> инструкции могут отличаться от тех, что подходят для домашних принтеров серии <em>Pixma</em>. Важно понимать, что обновление <strong>ПО</strong> — это не просто установка новой версии, а замена базового кода устройства, отвечающего за управление печатными механизмами.</p>
+</p>
+
+<h2 id="подготовка-оборудования-и-выбор-метода-обновления">Подготовка оборудования и выбор метода обновления</h2>
+<p>
+<p>Перед началом любых манипуляций необходимо правильно оценить текущее состояние устройства. Убедитесь, что в лотке для бумаги нет посторонних предметов, а тонер-картридж установлен корректно. Для большинства моделей <em>Canon</em> существует два основных пути обновления: через локальную сеть <strong>LAN</strong> и с использованием прямого USB-соединения. Выбор метода диктуется доступностью сетевого подключения и стабильностью канала передачи данных.</p>
+</p>
+<p>
+<p>Если вы работаете в корпоративной среде, где МФУ подключено к серверу печати, обновление часто происходит централизованно через администраторскую панель. Однако для самостоятельной настройки лучше использовать метод локального доступа. Вам понадобится компьютер, на котором установлены последние версии драйверов, и стабильное подключение к тому же сегменту сети, что и принтер.</p>
+</p>
+<ul>
+<li>🔌 Используйте качественный USB-кабель длиной не более 2 метров для минимизации потерь сигнала.</li>
+<li>🔋 Проверьте уровень заряда источника бесперебойного питания, если прошивка проводится на критически важном оборудовании.</li>
+<li>🖥️ Закройте все сторонние антивирусные программы, которые могут блокировать запуск утилит обновления.</li>
+</ul>
+
+<h2 id="скачивание-правильной-версии-прошивки">Скачивание правильной версии прошивки</h2>
+<p>
+<p>Ключевым этапом является получение корректного файла прошивки. Зайдите на официальный сайт поддержки <em>Canon</em> и введите точную модель вашего устройства. Ошибка в названии модели, например, перепутать <em>MF445dw</em> с <em>MF4452</em>, приведет к тому, что устройство станет неработоспособным. Файл прошивки обычно имеет расширение <code>.exe</code> или <code>.rom</code> и должен быть скачан в архиве для удобства распаковки.</p>
+</p>
+<p>
+<p>Обратите внимание на версию операционной системы вашего компьютера. Некоторые утилиты обновления работают только под управлением <strong>Windows 10/11</strong> или специфических сборок Linux. Если вы используете устаревшую версию ОС, процесс может прерваться на этапе проверки совместимости. Внимательно изучите системные требования в описании файла на сайте.</p>
+</p>
+<blockquote>⚠️ Внимание: Файл прошивки, скачанный с неофициальных ресурсов или файлообменников, может содержать вредоносный код или быть модифицирован. Это гарантированно приведет к выходу из строя платы управления МФУ, ремонт которой будет нецелесообразен.</blockquote>
+<p>
+<p>После загрузки архива распакуйте его в отдельную папку. Не запускайте файл обновления, находясь внутри архива или в папке «Загрузки», так как это может вызвать ошибки путей доступа. Создайте чистую директорию на диске <code>C:\CanonUpdate\</code> и поместите туда все файлы. Это упростит процесс отката в случае возникновения непредвиденных ситуаций.</p>
+</p>
+
+<div class="pb-poll" id="poll-67df85eb"><div class="pb-poll-question">📊 Какой тип устройства у вас?</div><div class="pb-poll-option" data-poll="67df85eb" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Офисное МФУ (imageRUNNER)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="67df85eb" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Домашнее принтер-сканер (Pixma)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="67df85eb" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Фотопринтер</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="67df85eb" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Печатающее устройство Canon (другое)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="процесс-обновления-через-локальную-сеть-lan">Процесс обновления через локальную сеть (LAN)</h2>
+<p>
+<p>Метод обновления через сеть является наиболее удобным для офисных моделей, так как не требует физического подключения кабеля к каждому устройству. Запустите утилиту <strong>Remote UI</strong> или <em>Web Service</em> в браузере, введя IP-адрес вашего МФУ. В меню администратора найдите раздел <code>Системные настройки</code> и перейдите в пункт <code>Обновление прошивки</code>. Система предложит выбрать файл, который вы предварительно скачали и распаковали.</p>
+</p>
+<p>
+<p>Важно, чтобы во время процесса передачи данных и записи в память устройства не происходило резких скачков напряжения. Если прошивка прервется, устройство может войти в режим «кирпича», требуя перепрошивки через сервисный порт. Убедитесь, что никто из коллег не отправляет задания на печать в момент обновления, так как это может заблокировать запрос к серверу.</p>
+</p>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед запуском</h4><label class="check-item"><input type="checkbox"><span>Проверка IP-адреса</span></label><label class="check-item"><input type="checkbox"><span>Отключение антивируса</span></label><label class="check-item"><input type="checkbox"><span>Закрытие других приложений</span></label><label class="check-item"><input type="checkbox"><span>Готовность к перезагрузке</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+<p>
+<p>После выбора файла начнется процесс загрузки и валидации. Экран устройства будет отображать прогресс-бар. В этот момент категорически запрещено нажимать кнопки на панели управления или выключать принтер. Система будет перезагружаться несколько раз, и это нормальное поведение. Ожидайте появления сообщения об успешном завершении процедуры в интерфейсе устройства.</p>
+</p>
+
+<h2 id="установка-обновления-через-usb-соединение">Установка обновления через USB-соединение</h2>
+<p>
+<p>Если сетевое соединение нестабильно или отсутствует, используйте кабель USB. Подключите устройство к компьютеру и запустите скачанный исполняемый файл <code>.exe</code>. Утилита автоматически определит модель через установленные драйверы. Если драйверы не найдены, программа предложит их установить или потребует указать путь к ним вручную. Следуйте инструкциям на экране, выбирая опцию <strong>Обновление прошивки</strong>.</p>
+</p>
+<p>
+<p>В некоторых случаях, особенно для старых моделей, требуется использование специализированной утилиты <em>DFU Mode</em>. В этом режиме устройство находится в особом состоянии ожидания загрузки данных. Вам нужно будет зажать определенные кнопки на панели МФУ, чтобы перевести его в режим прошивки. Инструкции по комбинациям клавиш всегда прилагаются к файлу обновления в формате <code>.pdf</code>.</p>
+</p>
+<blockquote>⚠️ Внимание: При использовании USB-кабеля убедитесь, что в диспетчере устройств он определяется как принтер, а не как неизвестное устройство. Иначе процесс записи данных прервется автоматически системой безопасности Windows.</blockquote>
+<p>
+<p>После того как прогресс-бар достигнет 100%, устройство предложит перезагрузку. Не отключайте кабель до полного завершения процесса инициализации. Если экран останется черным более пяти минут, возможно, произошел сбой, и потребуется повторная попытка с проверкой целостности файла.</p>
+</p>
+
+<details class="pb-accordion"><summary>Что делать, если прошивка прервалась?</summary><div class="pb-accordion-body"><p>Если процесс прервался, не паникуйте сразу. Попробуйте перезагрузить устройство. Если экран не включается, проверьте комбинацию кнопок для входа в режим восстановления (обычно это удержание кнопки «Stop» или «Reset» при включении). В сложных случаях может потребоваться обращение в сервисный центр для перепайки чипа памяти или использования программатора СОМ порта.</p></div></details>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед началом обновления сделайте скриншот текущих настроек сети и сетевых параметров через меню устройства. Это поможет быстро восстановить конфигурацию, если после обновления настройки сбросятся до заводских значений.</p></aside>
+
+<h2 id="решение-частых-проблем-и-ошибок">Решение частых проблем и ошибок</h2>
+<p>
+<p>В процессе работы могут возникать ошибки с кодами, например, <code>E004</code> или сообщения о несоответствии версии. Часто это связано с тем, что текущая версия ПО слишком старая для прямой установки новой, и требуется промежуточная версия. Проверьте сайт производителя на наличие информации о <strong>промежуточных патчах</strong> (interim firmware).</p>
+</p>
+<p>
+<p>Другой распространенной проблемой является отказ устройства видеть файл прошивки. Это может быть вызвано неправильным форматом имени файла или использованием кириллицы в пути. Переименуйте файл в латинице, например, <code>fw_update_v20.bin</code>, и поместите его в корень флеш-накопителя, если обновление идет через USB-флешку.</p>
+</p>
+<ul>
+<li>🔄 Перезагрузите роутер и компьютер, чтобы сбросить сетевые кэши и конфликты IP-адресов.</li>
+<li>💾 Попробуйте использовать другой USB-порт на компьютере, желательно на задней панели системного блока.</li>
+<li>🔍 Проверьте корректность введенного IP-адреса или имени хоста в настройках сети МФУ.</li>
+</ul>
+
+<h2 id="сравнение-методов-обновления">Сравнение методов обновления</h2>
+<p>
+<p>Для наглядности сравним основные характеристики различных способов обновления, чтобы вы могли выбрать оптимальный вариант для вашей ситуации. Каждый метод имеет свои преимущества и недостатки, зависящие от конфигурации сети и модели устройства.</p>
+</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Скорость</th>
+<th>Стабильность</th>
+<th>Сложность</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Локальная сеть (LAN)</td>
+<td>Высокая</td>
+<td>Средняя</td>
+<td>Низкая</td>
+</tr>
+<tr>
+<td>USB-кабель (прямое)</td>
+<td>Средняя</td>
+<td>Высокая</td>
+<td>Средняя</td>
+</tr>
+<tr>
+<td>USB-флешка</td>
+<td>Низкая</td>
+<td>Высокая</td>
+<td>Высокая</td>
+</tr>
+</tbody>
+</table></div>
+<p>
+<p>Выбор метода также зависит от того, сколько устройств нужно обновить. Для одиночного обновления USB-кабель часто надежнее, так как исключает влияние сетевых помех. Однако для парка техники из 10 и более принтеров использование <strong>CDM</strong> (Canon Device Manager) или сервера управления будет гораздо эффективнее и быстрее.</p>
+</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Самый безопасный способ обновления — это использование официального ПО от Canon через USB-соединение, так как этот метод минимизирует риск потери пакетов данных по сравнению с wireless-соединением.</p></aside>
+
+<blockquote>⚠️ Внимание: После обновления прошивки настройки пользователя могут сброситься. Обязательно сохраните текущий конфигурационный отчет перед началом процесса, чтобы не потерять данные о настроенных сетевых папках и адресах электронной почты.</blockquote>
+
+<h2 id="заключительные-рекомендации">Заключительные рекомендации</h2>
+<p>
+<p>После успешного завершения процедуры обновления необходимо проверить работу основного функционала. Попробуйте распечатать тестовую страницу, выполнить сканирование и копирование. Убедитесь, что печать происходит без артефактов и задержек. В меню <code>Настройки</code> проверьте версию прошивки — она должна соответствовать той, которую вы устанавливали.</p>
+</p>
+<p>
+<p>Не забывайте, что регулярное обновление ПО обеспечивает безопасность ваших данных и стабильность работы в корпоративной сети. Игнорирование обновлений может привести к уязвимостям, которые могут использовать злоумышленники для доступа к локальной сети. Поддерживайте актуальность системы, проверяя сайт разработчика раз в полгода.</p>
+</p>
+<p>
+<p>Если вы столкнулись с трудностями, которые не удалось решить самостоятельно, лучше обратиться в авторизованный сервисный центр. Самостоятельные эксперименты с прошивкой без должных знаний могут привести к необратимым повреждениям электроники. Используйте официальные инструменты и следуйте инструкциям производителя для получения наилучшего результата.</p>
+</p>
+
+<details>
+<summary>Можно ли обновлять прошивку через Wi-Fi?</summary>
+<p>Да, большинство современных моделей Canon поддерживают обновление через Wi-Fi, если устройство подключено к сети интернет. Однако для критически важных обновлений рекомендуется использовать проводное соединение LAN для большей стабильности передачи данных.</p>
+</details>
+
+<details>
+<summary>Что делать, если устройство не видит файл прошивки на флешке?</summary>
+<p>Убедитесь, что флешка отформатирована в файловой системе FAT32. Имя файла должно быть переименовано в соответствии с инструкцией (обычно латиницей), а сам файл должен лежать в корне диска, а не в папках.</p>
+</details>
+
+<details>
+<summary>Сбросится ли настройка сети после обновления?</summary>
+<p>В большинстве случаев настройки сети сохраняются, но в редких случаях может произойти сброс до заводских значений. Рекомендуется заранее распечатать отчет о конфигурации системы, чтобы быстро восстановить IP-адреса и настройки.</p>
+</details>
+
+<details>
+<summary>Как узнать текущую версию прошивки на устройстве?</summary>
+<p>Зайдите в меню устройства, перейдите в раздел «Настройки», затем «Обслуживание» или «Об устройством». Там будет указан номер текущей версии прошивки (Firmware Version), который можно сравнить с актуальной версией на сайте производителя.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ca/canon-mf3010-kak-raspechatat-probnuyu-stranitsu.html" class="pb-related-card">
+                <span class="pb-related-title">Canon MF3010: как распечатать пробную страницу — пошагово 2026</span>
+                <span class="pb-related-desc">Подробная инструкция с фото и видео, как на принтере Canon MF3010 распечатать тестовую страницу для </span>
+            </a><a href="/articles/k/ka/kak-otklyuchit-vaj-faj-na-printere-canon-mp-495.html" class="pb-related-card">
+                <span class="pb-related-title">Как отключить Wi-Fi на принтере Canon MP495: пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как отключить беспроводную связь на Canon MP495. Подробное руководство по сбросу настроек с</span>
+            </a><a href="/articles/c/ch/cherez-kakuyu-programmu-luchshe-pechatat-fotografii-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Лучшие программы для печати фото на принтерах Canon: Сравнение и выбор</span>
+                <span class="pb-related-desc">Какая программа лучше для печати фотографий на Canon? Полный обзор Canon PRINT, Photoshop и драйверо</span>
+            </a><a href="/articles/k/ka/kak-prognat-printer-canon-g2400.html" class="pb-related-card">
+                <span class="pb-related-title">Как прогнать принтер Canon G2400: purge, очистка и сброс памяти</span>
+                <span class="pb-related-desc">Полная инструкция по очистке печатающей головки принтера Canon G2400, сбросу счетчика отработанных ч</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-drajvera-na-printer-canon-lbp-2900-dlya-windows-10.html" class="pb-related-card">
+                <span class="pb-related-title">Установка драйверов Canon LBP 2900 на Windows 10: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по установке драйверов принтера Canon LBP 2900 на Windows 10. Решаем проблему </span>
+            </a><a href="/articles/k/ka/kak-otklyuchit-tsvetnoj-kartridzh-canon-mg2540s.html" class="pb-related-card">
+                <span class="pb-related-title">Как отключить цветной картридж Canon MG2540S: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по отключению цветного картриджа в принтере Canon MG2540S. Способы для экономи</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

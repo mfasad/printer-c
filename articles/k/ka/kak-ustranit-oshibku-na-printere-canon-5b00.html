@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Ошибка 5B00 на принтере Canon: полное руководство по исправлению — Кэнон Инфо</title>
+    <meta name="description" content="Узнайте, как самостоятельно устранить ошибку 5B00 на принтерах Canon. Пошаговая инструкция сброса счетчика, чистка помпы и нюансы с чипами.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-ustranit-oshibku-na-printere-canon-5b00.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Ошибка 5B00 на принтере Canon: полное руководство по исправлению">
+    <meta property="og:description" content="Узнайте, как самостоятельно устранить ошибку 5B00 на принтерах Canon. Пошаговая инструкция сброса счетчика, чистка помпы и нюансы с чипами.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-nav-active">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/remont-i-oshibki/">Ремонт и ошибки</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Ошибка 5B00 на принтере Canon: полное руководство по исправлению</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#суть-ошибки-5b00-и-работа-системы-отвода-чернил">Суть ошибки 5B00 и работа системы отвода чернил</a></li><li><a href="#диагностика-и-подготовка-к-сбросу-счетчика">Диагностика и подготовка к сбросу счетчика</a></li><li><a href="#аппаратный-сброс-через-инженерное-меню-service-mode">Аппаратный сброс через инженерное меню (Service Mode)</a></li><li><a href="#программное-решение-с-помощью-утилиты-ssc-service-utility">Программное решение с помощью утилиты SSC Service Utility</a></li><li><a href="#физическая-чистка-и-замена-впитывающей-прокладки">Физическая чистка и замена впитывающей прокладки</a></li><li><a href="#нюансы-работы-с-чипами-и-снпч">Нюансы работы с чипами и СНПЧ</a></li><li><a href="#профилактика-и-советы-по-продлению-ресурса">Профилактика и советы по продлению ресурса</a></li><li><a href="#что-делать-если-ничего-не-помогло">Что делать, если ничего не помогло?</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ko/kod-podderzhki-1401-canon-mp230-chto-delat.html">Ошибка 1401 Canon MP230: что означает и как исправить код поддержки</a></li><li><a href="/articles/k/ka/kak-sbrosit-schetchik-na-printere-canon-g1400.html">Как сбросить счётчик на принтере Canon G1400: пошаговая инструкция</a></li><li><a href="/articles/c/ca/canon-mp250-kak-razobrat.html">Canon MP250: как разобрать принтер самостоятельно (пошагово)</a></li><li><a href="/articles/k/ka/kak-razobrat-printer-canon-mp520.html">Как разобрать Canon PIXMA MP520: пошаговая инструкция по демонтажу</a></li><li><a href="/articles/k/ka/kak-pereproshit-printer-canon-lbp-1120.html">Перепрошивка принтера Canon LBP 1120: инструкции и нюансы</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как устранить ошибку 5B00 на принтере Canon: пошаговое руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#суть-ошибки-5b00-и-работа-системы-отвода-чернил">Суть ошибки 5B00 и работа системы отвода чернил</a></li><li><a href="#диагностика-и-подготовка-к-сбросу-счетчика">Диагностика и подготовка к сбросу счетчика</a></li><li><a href="#аппаратный-сброс-через-инженерное-меню-service-mode">Аппаратный сброс через инженерное меню (Service Mode)</a></li><li><a href="#программное-решение-с-помощью-утилиты-ssc-service-utility">Программное решение с помощью утилиты SSC Service Utility</a></li><li><a href="#физическая-чистка-и-замена-впитывающей-прокладки">Физическая чистка и замена впитывающей прокладки</a></li><li><a href="#нюансы-работы-с-чипами-и-снпч">Нюансы работы с чипами и СНПЧ</a></li><li><a href="#профилактика-и-советы-по-продлению-ресурса">Профилактика и советы по продлению ресурса</a></li><li><a href="#что-делать-если-ничего-не-помогло">Что делать, если ничего не помогло?</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Принтеры <em>Canon</em> славятся своей надежностью и качеством печати, но даже они не застрахованы от неожиданных сбоев. Одной из самых распространенных и пугающих ошибок является код <code>5B00</code>, который часто появляется на дисплее устройства или в статусе принтера на компьютере. Это сообщение сигнализирует о том, что <strong>счетчик «падлов» (Waste Ink Counter)</strong> достиг своего предельного значения, и система блокирует дальнейшую печать для предотвращения разлива чернил.</p>
+
+<p>Многие пользователи впадают в панику, думая, что принтер <em>Canon</em> сломался навсегда и требует дорогостоящего ремонта или замены. Однако в большинстве случаев проблема решается программным сбросом счетчика или физической чисткой системы отвода чернил. Важно понимать, что ошибка 5B00 — это защита, а не фатальная неисправность платы, если устройство не имеет механических повреждений.</p>
+
+<p>Игнорирование этого кода невозможно: принтер просто откажется выполнять любые команды на печать, пока не будет проведена процедура сброса. В этой статье мы подробно разберем, что именно означает этот код, почему он возникает и как <strong>вернуть устройство к жизни</strong> своими силами, не прибегая к услугам сервисных центров.</p>
+
+<h2 id="суть-ошибки-5b00-и-работа-системы-отвода-чернил">Суть ошибки 5B00 и работа системы отвода чернил</h2>
+
+<p>Чтобы устранить ошибку, необходимо понимать механизм ее возникновения. Внутри каждого струйного принтера <em>Canon</em> есть <strong>прокладка-поглотитель</strong>, которая впитывает чернила, остающиеся при промывке печатающих головок или при старте работы. Эта система необходима для предотвращения загрязнения внутренних узлов и корпуса устройства.</p>
+
+<p>Когда прокладка насыщается чернилами примерно на 90-100%, встроенный чип передает сигнал на материнскую плату, и система выводит код <code>5B00</code>. Это происходит не потому, что чернила физически вылились, а потому, что <strong>программный счетчик</strong> достиг своего максимума. В некоторых случаях прокладка действительно переполняется, и чернила начинают вытекать наружу, особенно если не использовать поддон.</p>
+
+<p>Существует распространенное заблуждение, что ошибку можно устранить простой заменой прокладки. На самом деле <em>Canon</em> не продает эту деталь отдельно в комплекте с новым счетчиком. Поэтому даже после замены ватного поглотителя, если не сбросить программный счетчик, ошибка <code>5B00</code> продолжит блокировать работу. Необходимо либо физически очистить и высушить прокладку, либо полностью заменить её на сухую.</p>
+
+<blockquote>⚠️ Внимание: Если чернила вытекли на стол или пол, немедленно проведите чистку. Сухие чернила <em>Canon</em> могут въесться в поверхность и испортить мебель, а также вызвать замыкание в случае попадания на электронику при последующем включении.</blockquote>
+
+<h2 id="диагностика-и-подготовка-к-сбросу-счетчика">Диагностика и подготовка к сбросу счетчика</h2>
+
+<p>Перед тем как приступать к программному сбросу или разборке, нужно убедиться, что проблема именно в счетчике, а не в механическом засоре или неисправности датчика. Иногда ошибка 5B00 может сопровождаться другими кодами, указывающими на проблемы с кареткой или головками. Проверьте, не застряла ли каретка в процессе печати.</p>
+
+<p>Для диагностики необходимо открыть крышку принтера и визуально оценить состояние впитывающей подушки. Если она мокрая насквозь или чернила видны на корпусе, прокладку нужно извлечь и высушить. В некоторых моделях <em>Canon</em> прокладка находится под днищем, и для её доступа требуется снять нижнюю панель. Осторожно извлеките материал, не повредив пластиковые зажимы.</p>
+
+<p>Если прокладка сухая, но ошибка persists, возможно, сработал сбой программного обеспечения или датчик уровня чернил. Однако в 95% случаев причина именно в накопленном объеме чернил. Важно отметить, что сброс счетчика — это <strong>процедура, требующая точности</strong>. Неправильная последовательность действий может привести к переходу принтера в режим «Service Mode» без возможности выхода.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед началом любых манипуляций с электроникой отключите принтер от сети и выньте шнур из розетки. Это защитит вас от удара током и предотвратит короткое замыкание при случайном касании контактов во время разборки.</p></aside>
+
+<h2 id="аппаратный-сброс-через-инженерное-меню-service-mode">Аппаратный сброс через инженерное меню (Service Mode)</h2>
+
+<p>Самый надежный способ устранить ошибку 5B00 — это использование специальной комбинации клавиш для входа в инженерное меню. Этот метод не требует подключения к компьютеру и работает на большинстве моделей <em>Canon</em> серии Pixma. Процедура отличается для разных серий, но общий принцип остается схожим: удержание кнопок при включении.</p>
+
+<p>Для моделей с одной кнопкой «Resume/Cancel» (треугольник в круге) и одной кнопкой «Power» (включения) алгоритм следующий: выключите принтер, удерживая кнопку «Resume», нажмите «Power», затем отпустите «Resume», но продолжайте держать «Power». После этого нажмите «Resume» два раза и отпустите обе кнопки. Экран должен показать режим Service Mode.</p>
+
+<p>В некоторых моделях <em>Canon</em> с двумя кнопками «Resume» и «Power» порядок может отличаться. Например, нужно удерживать обе кнопки 5 секунд, затем отпустить «Power» и нажать «Resume» 4 раза. Точную комбинацию для вашей модели лучше уточнить в технической документации. В меню выберите опцию <code>Clear Ink Counter</code> или <code>5B00</code> и подтвердите действие.</p>
+
+<pre><code>Последовательность:
+<p>1. Power OFF</p>
+<p>2. Hold Resume</p>
+<p>3. Press Power (hold Resume)</p>
+<p>4. Release Resume</p>
+<p>5. Press Resume x2</p>
+<p>6. Release all</p>
+<p>7. Select "Clear Ink Counter" на экране</code></pre></p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к сбросу счетчика</h4><label class="check-item"><input type="checkbox"><span>Убедиться, что каретка в исходном положении</span></label><label class="check-item"><input type="checkbox"><span>Извлечь все картриджи</span></label><label class="check-item"><input type="checkbox"><span>Отключить принтер от сети</span></label><label class="check-item"><input type="checkbox"><span>Найти точную комбинацию для модели</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<div class="pb-poll" id="poll-fb72d533"><div class="pb-poll-question">📊 Какая у вас модель Canon?</div><div class="pb-poll-option" data-poll="fb72d533" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Печатающая (Pixma)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="fb72d533" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Многофункциональная (MF)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="fb72d533" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">С принтером (iP)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="fb72d533" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Другая серия</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="программное-решение-с-помощью-утилиты-ssc-service-utility">Программное решение с помощью утилиты SSC Service Utility</h2>
+
+<p>Если аппаратный сброс не сработал или вы боитесь зайти в инженерное меню, можно использовать специализированное программное обеспечение. Наиболее популярной утилитой является <strong>SSC Service Utility</strong> или аналогичные программы для сброса <em>Canon</em>. Эти программы позволяют управлять счетчиками через интерфейс Windows.</p>
+
+<p>Для работы потребуется загрузить утилиту с надежного источника, подключить принтер к ПК через USB-кабель и запустить программу от имени администратора. В интерфейсе выберите вашу модель принтера из списка, перейдите в раздел «Advanced Settings» и найдите пункт «Clear Waste Ink Counter». После нажатия кнопки сброса система покажет статус «OK».</p>
+
+<p> В таких случаях может потребоваться прошивка (firmware) или использование более сложных инструментов, таких как <code>KeyGen</code> для генерации кодов сброса. Никогда не используйте сомнительные программы из непроверенных источников, так как они могут содержать вирусы.</p>
+
+<blockquote>⚠️ Внимание: При использовании стороннего ПО убедитесь, что драйверы принтера установлены корректно. Если компьютер не видит устройство, сброс через SSC Service Utility будет невозможен.</blockquote>
+
+<details class="pb-accordion"><summary>Что делать, если программа не видит принтер?</summary><div class="pb-accordion-body"><p>Проверьте кабель USB, попробуйте другой порт. В диспетчере устройств убедитесь, что принтер не помечен желтым восклицательным знаком. Попробуйте отключить антивирус, который может блокировать доступ к порту.</p></div></details>
+
+<h2 id="физическая-чистка-и-замена-впитывающей-прокладки">Физическая чистка и замена впитывающей прокладки</h2>
+
+<p>Программный сброс — это лишь половина дела. Если прокладка физически переполнена, чернила могут продолжать капать на стол или внутрь корпуса, вызывая коррозию. Поэтому настоятельно рекомендуется провести <strong>физическую чистку</strong> или замену впитывающего элемента. Это продлит жизнь устройству и предотвратит повторное появление ошибки через короткое время.</p>
+
+<p>Для чистки необходимо вынуть прокладку из корпуса. Её можно промыть теплой водой с мягким моющим средством, тщательно выжать и просушить. Лучше всего сушить на батарее или феном (не горячим) до полного удаления влаги. Если прокладка пришла в негодность (рассыпается), её необходимо заменить на новую ватную или специальную абсорбирующую ткань.</p>
+
+<p>После установки сухой прокладки и сброса счетчика, ошибка 5B00 больше не должна появляться. Важно также проверить каналы отвода чернил на предмет засоров. Иногда чернила забивают трубочки, и даже сухая прокладка не сможет впитывать влагу, что приведет к переполнению.</p>
+
+<p>Для удобства восприятия информации о распространенных моделях и методах их сброса, приведем сводную таблицу.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Серия принтера</th>
+<th>Тип сброса</th>
+<th>Сложность</th>
+<th>Рекомендация</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pixma iP / MP (старые)</td>
+<td>Кнопки (Service Mode)</td>
+<td>Средняя</td>
+<td>Доступно без ПК</td>
+</tr>
+<tr>
+<td>Pixma MG / TS (новые)</td>
+<td>SSC Service Utility</td>
+<td>Высокая</td>
+<td>Требуется ПК и драйверы</td>
+</tr>
+<tr>
+<td>IP2700 / IP2800</td>
+<td>Кнопки + Утилита</td>
+<td>Низкая</td>
+<td>Легко сбросить вручную</td>
+</tr>
+<tr>
+<td>G-серия (с СНПЧ)</td>
+<td>Специальные утилиты</td>
+<td>Высокая</td>
+<td>Риск блокировки СНПЧ</td>
+</tr>
+</tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Физическая чистка прокладки обязательна для долгосрочной стабильности работы, даже если счетчик успешно сброшен программно.</p></aside>
+
+<h2 id="нюансы-работы-с-чипами-и-снпч">Нюансы работы с чипами и СНПЧ</h2>
+
+<p>Если ваш принтер <em>Canon</em> оборудован системой непрерывной подачи чернил (СНПЧ), ситуация усложняется. Многие СНПЧ имеют встроенные чипы, которые также отслеживают уровень чернил. Ошибка 5B00 может быть связана не только со счетчиком прокладки, но и с блокировкой чипов СНПЧ. В этом случае сброс счетчика прокладки не поможет.</p>
+
+<p>Необходимо проверить состояние чипов на картриджах. Если они загрязнены или повреждены, их нужно почистить спиртом или заменить на новые. В некоторых случаях требуется использование <strong>перепрограммируемых чипов</strong>, которые можно сбрасывать с помощью специального устройства (Resetter).</p>
+
+<p>Также стоит учитывать, что при установке СНПЧ может измениться логика работы счетчика. Некоторые системы требуют сброса как счетчика прокладки, так и счетчика уровня чернил в чипе. Пропуск одного из этапов приведет к тому, что ошибка вернется через несколько дней.</p>
+
+<blockquote>⚠️ Внимание: При работе с СНПЧ будьте предельно осторожны. Ошибки в настройке чипов могут привести к полной блокировке принтера, которую невозможно устранить без перепрошивки прошивки.</blockquote>
+
+<details class="pb-accordion"><summary>Можно ли просто вынуть чип СНПЧ?</summary><div class="pb-accordion-body"><p>В большинстве случаев нельзя. Принтер потребует наличия чипа для работы. Если вынуть чип, устройство перейдет в ошибку, но не позволит печатать. Лучше использовать сброс или замену чипа.</p></div></details>
+
+<h2 id="профилактика-и-советы-по-продлению-ресурса">Профилактика и советы по продлению ресурса</h2>
+
+<p>Чтобы ошибка 5B00 появлялась реже, необходимо следить за режимом использования принтера. Не допускайте частых промывок головок без необходимости. Каждое включение и промывка добавляет объем чернил в прокладку, увеличивая счетчик. Используйте принтер регулярно, чтобы чернила не засыхали, но и не включайте его без нужды.</p>
+
+<p>Регулярно проверяйте состояние прокладки, особенно если вы печатаете большие объемы. Если вы заметили, что чернила начинают подтекать, немедленно остановите печать и проведите чистку. <strong>Своевременная профилактика</strong> сэкономит вам время и деньги на ремонт.</p>
+
+<p>Также важно использовать качественные чернила. Дешевые аналоги часто имеют более жидкую консистенцию и быстрее переполняют прокладку, а также могут засорять каналы. Оригинальные или проверенные чернила от известных производителей (Sakura, Edelweiss) работают стабильнее и меньше загрязняют узлы.</p>
+
+<p>Если вы планируете долго не пользоваться принтером, лучше извлечь картриджи и хранить их в специальном контейнере с влажной губкой. Это предотвратит высыхание головок и необходимость частых промывок при следующем запуске.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ План профилактики</h4><label class="check-item"><input type="checkbox"><span>Проверить состояние прокладки</span></label><label class="check-item"><input type="checkbox"><span>Очистить контакты чипов</span></label><label class="check-item"><input type="checkbox"><span>Использовать качественные чернила</span></label><label class="check-item"><input type="checkbox"><span>Не делать лишних промывок головок</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="что-делать-если-ничего-не-помогло">Что делать, если ничего не помогло?</h2>
+
+<p>Иногда, несмотря на все усилия, ошибка 5B00 возвращается или не сбрасывается. Это может указывать на более серьезную проблему: неисправность датчика уровня чернил, повреждение материнской платы или заводской дефект. В таких случаях самостоятельный ремонт может быть неэффективен.</p>
+
+<p>Если после сброса и чистки принтер снова выдает ошибку в течение нескольких дней, возможно, прокладка установлена неправильно или каналы отвода забиты. Попробуйте полностью заменить прокладку на новую и проверить герметичность системы.</p>
+
+<p>В крайнем случае, если оборудование находится на гарантии, обратитесь в авторизованный сервисный центр. Однако помните, что попытка самостоятельного сброса счетчика часто лишает гарантии. Если гарантия утеряна, рассмотрите возможность замены принтера, так как стоимость ремонта может превысить его рыночную цену.</p>
+
+<p>Иногда проще купить новый принтер, чем тратить часы на поиск решения старой проблемы. Но если вы любите технику и разбираетесь в электронике, эксперименты с <em>Canon</em> могут быть интересным и полезным опытом.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если стандартные методы не помогают, проблема может быть в аппаратной части, и дальнейшие действия лучше доверить специалистам.</p></aside>
+
+<p>В заключение, ошибка 5B00 — это не приговор, а сигнал к действию. Понимание принципов работы системы отвода чернил и наличие правильных инструментов позволяют решить проблему самостоятельно.</p>
+
+<details>
+<summary>Что означает ошибка 5B00 на принтере Canon?</summary>
+<p>Это сообщение о том, что впитывающая прокладка (падл) достигла предельного уровня насыщения чернилами, и система безопасности заблокировала печать.</p>
+</details>
+
+<details>
+<summary>Можно ли сбросить ошибку 5B00 без компьютера?</summary>
+<p>Да, на большинстве старых моделей Canon можно войти в инженерное меню с помощью комбинации кнопок на корпусе и сбросить счетчик без подключения к ПК.</p>
+</details>
+
+<details>
+<summary>Нужно ли менять прокладку при ошибке 5B00?</summary>
+<p>Программный сброс не удаляет чернила из прокладки. Для предотвращения протечек рекомендуется вынуть, промыть и высушить прокладку или заменить её на новую.</p>
+</details>
+
+<details>
+<summary>Почему ошибка 5B00 появляется снова после сброса?</summary>
+<p>Это может произойти, если прокладка физически переполнена и продолжает капать, или если счетчик не был сброшен корректно, либо при использовании несовместимых утилит.</p>
+</details>
+
+<details>
+<summary>Можно ли печатать с ошибкой 5B00?</summary>
+<p>Нет, принтер Canon блокирует все функции печати при появлении кода 5B00 до тех пор, пока счетчик не будет сброшен.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ko/kod-podderzhki-1401-canon-mp230-chto-delat.html" class="pb-related-card">
+                <span class="pb-related-title">Ошибка 1401 Canon MP230: что означает и как исправить код поддержки</span>
+                <span class="pb-related-desc">Полная инструкция по устранению кода поддержки 1401 на принтере Canon MP230. Причины сбоя, способы с</span>
+            </a><a href="/articles/k/ka/kak-sbrosit-schetchik-na-printere-canon-g1400.html" class="pb-related-card">
+                <span class="pb-related-title">Как сбросить счётчик на принтере Canon G1400: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по сбросу счётчика отпечатков на принтере Canon PIXMA G1400. Способы для Windo</span>
+            </a><a href="/articles/c/ca/canon-mp250-kak-razobrat.html" class="pb-related-card">
+                <span class="pb-related-title">Canon MP250: как разобрать принтер самостоятельно (пошагово)</span>
+                <span class="pb-related-desc">Детальная инструкция по разборке принтера Canon PIXMA MP250: инструменты, порядок действий, типичные</span>
+            </a><a href="/articles/k/ka/kak-razobrat-printer-canon-mp520.html" class="pb-related-card">
+                <span class="pb-related-title">Как разобрать Canon PIXMA MP520: пошаговая инструкция по демонтажу</span>
+                <span class="pb-related-desc">Подробное руководство по разборке МФУ Canon MP520. Удаление замятий, замена датчиков, чистка системы</span>
+            </a><a href="/articles/k/ka/kak-pereproshit-printer-canon-lbp-1120.html" class="pb-related-card">
+                <span class="pb-related-title">Перепрошивка принтера Canon LBP 1120: инструкции и нюансы</span>
+                <span class="pb-related-desc">Подробная гайд по перепрошивке Canon LBP 1120. Как обновить микрокод, исправить ошибки печати и избе</span>
+            </a><a href="/articles/k/ka/kak-pochistit-printer-kenon-piksma-1411.html" class="pb-related-card">
+                <span class="pb-related-title">Чистка принтера Canon Pixma 1411: Инструкция и советы</span>
+                <span class="pb-related-desc">Пошаговая инструкция по очистке Canon Pixma 1411. Как промыть головку, убрать мусор и устранить засо</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

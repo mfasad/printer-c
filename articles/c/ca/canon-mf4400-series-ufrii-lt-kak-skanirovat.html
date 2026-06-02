@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как сканировать на Canon MF4400: UFR II LT драйвер и настройки — Кэнон Инфо</title>
+    <meta name="description" content="Полная инструкция по настройке сканирования на МФУ Canon MF4400 series. Работа с драйвером UFR II LT, Twain, WIA и передача файлов по сети.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-mf4400-series-ufrii-lt-kak-skanirovat.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как сканировать на Canon MF4400: UFR II LT драйвер и настройки">
+    <meta property="og:description" content="Полная инструкция по настройке сканирования на МФУ Canon MF4400 series. Работа с драйвером UFR II LT, Twain, WIA и передача файлов по сети.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как сканировать на Canon MF4400: UFR II LT драйвер и настройки</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-оборудования-и-установка-драйверов">Подготовка оборудования и установка драйверов</a></li><li><a href="#использование-утилиты-canon-ij-scan-utility">Использование утилиты Canon IJ Scan Utility</a></li><li><a href="#сканирование-через-стандартные-средства-windows">Сканирование через стандартные средства Windows</a></li><li><a href="#настройка-сетового-сканирования-scan-to-pc">Настройка сетового сканирования (Scan to PC)</a></li><li><a href="#решение-распространенных-проблем-и-ошибок">Решение распространенных проблем и ошибок</a></li><li><a href="#оптимизация-качества-и-производительности">Оптимизация качества и производительности</a></li><li><a href="#заключение-по-настройке-оборудования">Заключение по настройке оборудования</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-skanirovat-na-printere-canon-pixma-mg3640-na-kompyuter.html">Как сканировать на Canon Pixma MG3640: полное руководство для ПК</a></li><li><a href="/articles/c/ca/canon-imagerunner-2520-kak-nastroit-skaner.html">Настройка сканера Canon imageRUNNER 2520: пошаговая инструкция</a></li><li><a href="/articles/c/ch/chto-takoe-twain-drajver-skanera-canon.html">TWAIN-драйвер для сканера Canon: что это и как установить</a></li><li><a href="/articles/k/ka/kak-sdelat-kopiyu-na-printere-canon.html">Как сделать копию на принтере Canon: Полная инструкция</a></li><li><a href="/articles/m/mp/mp250-canon-kak-skanirovat.html">Как сканировать документы на Canon MP250: Инструкция и ПО</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как настроить сканирование на серии Canon MF4400 с драйвером UFR II LT</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-оборудования-и-установка-драйверов">Подготовка оборудования и установка драйверов</a></li><li><a href="#использование-утилиты-canon-ij-scan-utility">Использование утилиты Canon IJ Scan Utility</a></li><li><a href="#сканирование-через-стандартные-средства-windows">Сканирование через стандартные средства Windows</a></li><li><a href="#настройка-сетового-сканирования-scan-to-pc">Настройка сетового сканирования (Scan to PC)</a></li><li><a href="#решение-распространенных-проблем-и-ошибок">Решение распространенных проблем и ошибок</a></li><li><a href="#оптимизация-качества-и-производительности">Оптимизация качества и производительности</a></li><li><a href="#заключение-по-настройке-оборудования">Заключение по настройке оборудования</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Работа с многофункциональными устройствами серии <em>Canon imageCLASS MF4400</em> требует понимания специфики используемого программного обеспечения. В отличие от более дорогих моделей, здесь часто применяется облегченный драйвер <strong>UFR II LT</strong>, который оптимизирует скорость печати, но иногда вызывает вопросы при настройке сканирования. Пользователи часто сталкиваются с тем, что стандартные кнопки на панели не дают ожидаемого результата, а поиск нужных коэффициентов в меню затягивается на минуты.</p>
+
+<p>Для успешной работы необходимо четко разграничивать методы передачи данных: от классического подключения по кабелю до сетевого доступа через <strong>ScanGear</strong> или встроенный Twain-драйвер. Понимание архитектуры взаимодействия между аппаратной частью принтера и операционной системой позволит избежать распространенных ошибок, связанных с отсутствием реакции устройства или получением черно-белых копий вместо цветных.</p>
+
+<h2 id="подготовка-оборудования-и-установка-драйверов">Подготовка оборудования и установка драйверов</h2>
+
+<p>Первым шагом к успешному сканированию является проверка корректности установки драйвера <code>UFR II LT</code>. Этот драйвер является облегченной версией стандартного UFR II и содержит минимально необходимый набор функций для печати и сканирования. Если вы только что установили устройство, убедитесь, что в менеджере устройств Windows отображается не только принтер, но и соответствующее сканирующее оборудование.</p>
+
+<p>Иногда система автоматически подхватывает базовый <strong>WIA-драйвер</strong>, который работает нестабильно с моделями серии MF4400. В таком случае необходимо зайти на официальный сайт производителя и скачать полный пакет драйверов, выбрав именно версию для вашей операционной системы. Обратите внимание, что отсутствие компонентов WSD (Web Services for Devices) может блокировать сканирование по сети.</p>
+
+<p>Важно проверить подключение интерфейса. Для стабильной передачи больших объемов изображений лучше использовать USB-кабель, но при работе в офисе предпочтительна локальная сеть. Убедитесь, что IP-адрес устройства не конфликтует с другими устройствами в сети, иначе приложение для сканирования просто не найдет <em>Canon MF4400</em>.</p>
+
+<blockquote>⚠️ Внимание: Драйвер UFR II LT может не поддерживать функцию сканирования напрямую через панель управления без установленного ПО на ПК. Проверьте наличие утилиты ScanGear в системном трее.</blockquote>
+
+<div class="pb-poll" id="poll-3587f5e0"><div class="pb-poll-question">📊 Как вы подключаете принтер?</div><div class="pb-poll-option" data-poll="3587f5e0" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">По USB кабелю</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="3587f5e0" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">По Wi-Fi сети</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="3587f5e0" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">По локальной сети (Ethernet)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="3587f5e0" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Через облачный сервис</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="использование-утилиты-canon-ij-scan-utility">Использование утилиты Canon IJ Scan Utility</h2>
+
+<p>Основным инструментом для работы с этой серией является программа <strong>IJ Scan Utility</strong>. Она предоставляет удобный графический интерфейс для выбора режима сканирования. Запустите приложение и выберите тип задачи: <code>Document</code> для офисных бумаг или <code>Photo</code> для изображений с высоким разрешением. Интерфейс программы интуитивно понятен, но требует правильного выбора источника данных.</p>
+
+<p>В окне настроек вы сможете указать формат выходного файла. Для текстовых документов лучше всего подходит <code>PDF</code>, так как он сохраняет разметку и весит меньше. Если требуется дальнейшая обработка или распознание текста (OCR), выбирайте <code>TIFF</code> или <code>JPEG</code> с максимальным качеством. Параметр <strong>разрешение</strong> (DPI) критически важен: для печати 300 DPI достаточно, для архивации фотографий лучше взять 600 DPI.</p>
+
+<p>Не забудьте проверить галочку «Сохранить в» или «Показать окно предпросмотра». Предпросмотр позволяет оценить качество будущего скана и обрезать лишние поля, что особенно актуально при работе с документами нестандартного размера. Если программа не видит устройство, попробуйте перезапустить службу <strong>Spooler</strong> в системе.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед сканированием в IJ Scan Utility</h4><label class="check-item"><input type="checkbox"><span>Выбрать правильное устройство в списке</span></label><label class="check-item"><input type="checkbox"><span>Установить тип документа (PDF/JPEG)</span></label><label class="check-item"><input type="checkbox"><span>Настроить разрешение (DPI)</span></label><label class="check-item"><input type="checkbox"><span>Проверить путь сохранения файлов</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="сканирование-через-стандартные-средства-windows">Сканирование через стандартные средства Windows</h2>
+
+<p>Если специализированное ПО по каким-то причинам не запускается, можно воспользоваться встроенными средствами операционной системы. В Windows 10 и 11 для этого предусмотрена утилита <strong>Факсы и сканирование Windows</strong> или приложение <code>Сканер Windows</code>. Эти инструменты работают через стандартный интерфейс WIA, который должен быть доступен после установки драйверов.</p>
+
+<p>Запустите приложение и нажмите кнопку «Новое сканирование». В открывшемся окне выберите <em>Canon MF4400 series</em> из выпадающего списка. Здесь вы сможете настроить контрастность, яркость и тип изображения (цветной, черно-белый, оттенками серого). Часто пользователи забывают переключить режим с «Черно-белый» на «Цветной», получая вместо цветного документа серую копию.</p>
+
+<p>Система позволяет настроить профиль сканирования. Вы можете сохранить настройки для часто используемых задач, чтобы не вводить их каждый раз вручную. Например, создайте профиль «Документы для печати» с разрешением 300 DPI и режимом «Черно-белый текст». Это ускорит рабочий процесс при массовом сканировании.</p>
+
+<blockquote>⚠️ Внимание: Стандартный драйвер WIA может работать медленнее, чем проприетарный IJ Scan Utility, и иногда не поддерживает функцию двустороннего сканирования (дуплекс) на моделях серии MF4400.</blockquote>
+
+<h2 id="настройка-сетового-сканирования-scan-to-pc">Настройка сетового сканирования (Scan to PC)</h2>
+
+<p>Для офисной работы наиболее эффективным является функция прямого сканирования на компьютер без использования программного обеспечения на ПК. Это реализовано через функцию <strong>Scan to PC</strong>. Для её настройки необходимо открыть веб-интерфейс устройства, введя IP-адрес принтера в адресную строку браузера. Вход осуществляется под учетными данными администратора.</p>
+
+<p>В разделе <code>Network Settings</code> найдите подраздел «Scan Settings» или «Scan to PC». Здесь нужно добавить компьютер-получатель. Укажите IP-адрес ПК, логин и пароль пользователя Windows, у которого есть права на запись в папку. Также необходимо настроить папку назначения на самом компьютере и проверить права доступа к ней.</p>
+
+<p>После настройки на панели устройства появится кнопка «Scan to PC». Нажмите её, положите документ и выберите нужный профиль. Устройство автоматически отправит файл на указанный компьютер. Этот метод особенно удобен, когда необходимо быстро оцифровать документ, не тратя время на запуск программ.</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Параметр</th>
+      <th>Рекомендуемое значение</th>
+      <th>Описание</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Разрешение (DPI)</td>
+      <td>300</td>
+      <td>Оптимально для текста и офисных документов</td>
+    </tr>
+    <tr>
+      <td>Тип файла</td>
+      <td>PDF</td>
+      <td>Стандартный формат для документов</td>
+    </tr>
+    <tr>
+      <td>Цветовой режим</td>
+      <td>Цветной</td>
+      <td>Для фотографий и цветных графиков</td>
+    </tr>
+    <tr>
+      <td>Сжатие</td>
+      <td>Максимальное (JPEG)</td>
+      <td>Для экономии места, если качество не критично</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<details class="pb-accordion"><summary>Проблемы с правами доступа в сети</summary><div class="pb-accordion-body"><p>Если сканирование не работает, проверьте настройки файрвола на компьютере. Брандмауэр Windows может блокировать входящие соединения от принтера. Попробуйте добавить исключения для портов 445 и 139 или временно отключить защиту для теста.</p></div></details>
+
+<h2 id="решение-распространенных-проблем-и-ошибок">Решение распространенных проблем и ошибок</h2>
+
+<p>Самой частой проблемой является сообщение «Устройство не найдено» или бесконечный статус «Загрузка». Это часто связано с тем, что драйвер <strong>UFR II LT</strong> потерял связь с модулем сканирования. Попробуйте отключить USB-кабель, подождать 10 секунд и подключить его снова. Если используется сеть, убедитесь, что компьютер и принтер находятся в одной подсети.</p>
+
+<p>Другая проблема — сканирование происходит очень медленно или вылетает с ошибкой. Это может быть вызвано слишком высоким разрешением, установленным в настройках. Попробуйте снизить DPI до 150 или 200 для обычных документов. Также проверьте, не забит ли диск, куда сохраняются файлы. Если диск переполнен, процесс сканирования прервется.</p>
+
+<p>Иногда возникает ошибка цвета: документ сканируется в черно-белом режиме, хотя в настройках выбран цветной. Проверьте настройки в драйвере <em>Canon UFR II LT</em> на наличие скрытых профилей «ЧБ» по умолчанию. Переустановка драйвера с последующей очисткой временных файлов в папке <code>%temp%</code> часто решает эту проблему.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если устройство не отвечает, первым делом проверьте физическое подключение кабелей и статус службы Print Spooler в Windows, так как именно она управляет очередью задач.</p></aside>
+
+<h2 id="оптимизация-качества-и-производительности">Оптимизация качества и производительности</h2>
+
+<p>Для получения наилучшего результата важно правильно настроить параметры <strong>порогового уровня</strong> при сканировании текстовых документов. Это позволяет избежать появления серых пятен на странице и делает текст четким. В настройках драйвера можно выбрать режим «Текст» или «Фото», что автоматически подстраивает алгоритмы обработки изображения.</p>
+
+<p>Если вы сканируете документы для последующего распознавания текста (OCR), не используйте режим «Фото» и максимальное сжатие. Лучше всего подходит формат <code>TIFF</code> без сжатия или <code>PNG</code> с разрешением 300 DPI. Это обеспечит высокую точность распознавания символов программой, например, <em>ABBYY FineReader</em>.</p>
+
+<p>Регулярное обслуживание сканера также влияет на качество. Пыль на стекле или крышке может создавать черные полосы на сканах. Используйте мягкую безворсовую ткань и специальные средства для очистки оптики. Не применяйте агрессивные растворители, которые могут повредить покрытие стекла.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед сканированием мелкого текста (например, квитанций) слегка прижмите крышку к документу, чтобы избежать попадания постороннего света, который размывает края букв.</p></aside>
+
+<blockquote>⚠️ Внимание: Драйверы Canon периодически обновляются. Если после обновления Windows сканирование перестало работать, возможно, новая версия ОС несовместима с текущей версией драйвера UFR II LT. Проверьте сайт производителя на наличие обновлений.</blockquote>
+
+<details class="pb-accordion"><summary>Отключение службы WSD</summary><div class="pb-accordion-body"><p>В редких случаях служба Web Services для устройств конфликтует с драйвером. Попробуйте остановить её через «Службы» (services.msc), найти службу WSD и отключить её, затем перезагрузить компьютер.</p></div></details>
+
+<h2 id="заключение-по-настройке-оборудования">Заключение по настройке оборудования</h2>
+
+<p>Настройка сканирования на серии <em>Canon MF4400</em> с драйвером UFR II LT требует внимания к деталям подключения и выбору правильного программного обеспечения. Использование утилиты <strong>IJ Scan Utility</strong> предоставляет наибольший контроль над процессом, тогда как сетевое сканирование обеспечивает максимальную скорость работы в офисе.</p>
+
+<p>Правильная установка драйверов и настройка путей сохранения файлов избавят от большинства проблем. Если вы столкнулись с ошибками, проверьте соответствие настроек в программе и в самом устройстве. Регулярная очистка оптики и обновление ПО помогут поддерживать устройства в рабочем состоянии долгие годы.</p>
+
+<p>Помните, что эффективность работы зависит от комплексного подхода: от физического подключения до настроек цветопередачи. Экспериментируя с параметрами, вы сможете найти оптимальный баланс между скоростью и качеством сканирования для ваших задач.</p>
+
+<details>
+  <summary>Почему сканер не определяется в Windows?</summary>
+  <p>Причина может крыться в отсутствии драйвера UFR II LT или конфликте служб. Проверьте диспетчер устройств, обновите драйверы и перезапустите службу Print Spooler.</p>
+</details>
+
+<details>
+  <summary>Как изменить разрешение сканирования?</summary>
+  <p>Откройте настройки сканирования в IJ Scan Utility или стандартном приложении Windows. Найдите поле DPI и выберите нужное значение (обычно 300 для документов, 600 для фото).</p>
+</details>
+
+<details>
+  <summary>Можно ли сканировать по Wi-Fi на этой модели?</summary>
+  <p>Да, если модель поддерживает беспроводную сеть. Настройте IP-адрес устройства и добавьте его как сетевой принтер, затем используйте функцию Scan to PC.</p>
+</details>
+
+<details>
+  <summary>Что делать, если сканер сканирует в черно-белом режиме?</summary>
+  <p>Проверьте настройки цвета в драйвере. Возможно, выбран режим «ЧБ» или «Оттенки серого». Переключите на «Цветной» и сохраните профиль.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-skanirovat-na-printere-canon-pixma-mg3640-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на Canon Pixma MG3640: полное руководство для ПК</span>
+                <span class="pb-related-desc">Подробная инструкция по настройке и сканированию документов с МФУ Canon Pixma MG3640 на компьютер. Р</span>
+            </a><a href="/articles/c/ca/canon-imagerunner-2520-kak-nastroit-skaner.html" class="pb-related-card">
+                <span class="pb-related-title">Настройка сканера Canon imageRUNNER 2520: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по настройке сканирования на Canon imageRUNNER 2520. Настройка SMB, FTP, Email</span>
+            </a><a href="/articles/c/ch/chto-takoe-twain-drajver-skanera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">TWAIN-драйвер для сканера Canon: что это и как установить</span>
+                <span class="pb-related-desc">Разбираемся, что такое TWAIN-драйвер для сканеров Canon, как его скачать, установить и настроить. По</span>
+            </a><a href="/articles/k/ka/kak-sdelat-kopiyu-na-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать копию на принтере Canon: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по созданию копий на МФУ Canon. Настройка качества, цветности и форматов. Реше</span>
+            </a><a href="/articles/m/mp/mp250-canon-kak-skanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы на Canon MP250: Инструкция и ПО</span>
+                <span class="pb-related-desc">Подробное руководство по сканированию на принтере Canon MP250. Настройка драйверов, работа с утилито</span>
+            </a><a href="/articles/k/ke/kenon-i-sensys-mf3010-kak-skanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на Canon i-SENSYS MF3010: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по настройке и использованию сканера Canon i-SENSYS MF3010. Решения проблем с </span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

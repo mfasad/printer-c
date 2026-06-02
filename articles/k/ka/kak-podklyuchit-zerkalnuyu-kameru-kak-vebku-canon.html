@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как подключить зеркальную камеру Canon как веб-камеру: Полное руководство — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция по превращению зеркалки Canon в вебку. Обзор методов: EOS Utility, Zoom, OBS и чистый HDMI. Советы по настройке качества.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-podklyuchit-zerkalnuyu-kameru-kak-vebku-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как подключить зеркальную камеру Canon как веб-камеру: Полное руководство">
+    <meta property="og:description" content="Пошаговая инструкция по превращению зеркалки Canon в вебку. Обзор методов: EOS Utility, Zoom, OBS и чистый HDMI. Советы по настройке качества.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/podklyuchenie-k-pk/">Подключение к ПК</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как подключить зеркальную камеру Canon как веб-камеру: Полное руководство</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-камеры-и-выбор-кабеля">Подготовка камеры и выбор кабеля</a></li><li><a href="#метод-1-использование-eos-webcam-utility">Метод 1: Использование EOS Webcam Utility</a></li><li><a href="#метод-2-подключение-через-hdmi-и-карту-захвата">Метод 2: Подключение через HDMI и карту захвата</a></li><li><a href="#профессиональная-настройка-через-obs-studio">Профессиональная настройка через OBS Studio</a></li><li><a href="#сравнение-методов-подключения">Сравнение методов подключения</a></li><li><a href="#решение-проблем-со-звуком-и-перегревом">Решение проблем со звуком и перегревом</a></li><li><a href="#настройка-изображения-для-лучших-результатов">Настройка изображения для лучших результатов</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-sdelat-kserokopiyu-na-printere-canon-na-kompyuter.html">Как сделать ксерокопию на принтере Canon на компьютер: полное руководство</a></li><li><a href="/articles/c/ca/canon-lide-110-kak-nastroit-knopki.html">Настройка кнопок на сканере Canon Lide 110: Полное руководство</a></li><li><a href="/articles/c/ca/canon-capt-usb-device-ne-vidit-kak-printer.html">Canon CAPT USB устройство не видит принтер: причины и решения</a></li><li><a href="/articles/k/ka/kak-ustanovit-printer-canon-i-sensys-mf3228-na-windows-10.html">Как установить Canon i-SENSYS MF3228 на Windows 10: пошаговая настройка</a></li><li><a href="/articles/k/ka/kak-perekinut-video-s-videokamery-canon-na-kompyuter.html">Как перекинуть видео с видеокамеры Canon на компьютер: Полное руководство</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как подключить зеркальную камеру Canon как веб-камеру для стримов и звонков</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-камеры-и-выбор-кабеля">Подготовка камеры и выбор кабеля</a></li><li><a href="#метод-1-использование-eos-webcam-utility">Метод 1: Использование EOS Webcam Utility</a></li><li><a href="#метод-2-подключение-через-hdmi-и-карту-захвата">Метод 2: Подключение через HDMI и карту захвата</a></li><li><a href="#профессиональная-настройка-через-obs-studio">Профессиональная настройка через OBS Studio</a></li><li><a href="#сравнение-методов-подключения">Сравнение методов подключения</a></li><li><a href="#решение-проблем-со-звуком-и-перегревом">Решение проблем со звуком и перегревом</a></li><li><a href="#настройка-изображения-для-лучших-результатов">Настройка изображения для лучших результатов</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Видеоконференции, онлайн-уроки и трансляции требуют качественного изображения, которое стандартные веб-камеры ноутбуков часто не могут обеспечить. Зеркальные фотоаппараты <em>Canon</em> обладают крупными матрицами и сменными объективами, что дает естественное размытие фона и превосходную детализацию даже при слабом освещении. Превратить ваше устройство в профессиональный инструмент для видеосвязи проще, чем кажется, если выбрать правильный метод подключения.</p>
+<p>Существует несколько путей решения этой задачи: от бесплатных утилит производителя, использующих USB-соединение, до аппаратных захватов через HDMI, обеспечивающих максимальную четкость. Выбор оптимального способа зависит от вашей версии операционной системы, модели камеры и того, где именно вы планируете использовать видеопоток — в Zoom, Skype или OBS Studio. Разберем каждый метод подробно, чтобы вы могли выбрать наиболее подходящий вариант для своих задач.</p>
+
+<h2 id="подготовка-камеры-и-выбор-кабеля">Подготовка камеры и выбор кабеля</h2>
+<p>Прежде чем погружаться в программную часть, необходимо убедиться, что сама камера готова к длительной работе без внутреннего аккумулятора. Для стабильной трансляции крайне рекомендуется использовать <strong>псевдоаккумулятор</strong> (DC-пак), который подключается напрямую к розетке. Это исключит риск внезапного отключения питания в середине важной встречи или стрима.</p>
+<p>Второй критический момент — выбор интерфейса соединения. Если вы планируете использовать официальное программное обеспечение от Canon, достаточно стандартного кабеля <em>USB</em> с разъемом Mini или Micro-USB, идущего в комплекте. Для более продвинутых методов, таких как захват через HDMI, потребуется качественный экранированный кабель, способный передавать сигнал <code>Full HD</code> без помех.</p>
+<p>Не забудьте также проверить настройки самого устройства. В некоторых моделях <em>EOS</em> необходимо изменить режим работы USB на «Передача данных» или «Webcam mode», если такая опция доступна в меню. Также стоит отключить автоматическое выключение камеры за несколько минут бездействия, установив таймаут в <code>30 минут</code> или максимальное значение.</p>
+
+<blockquote>⚠️ Внимание: При использовании HDMI-кабеля убедитесь, что он полностью вставлен в порт камеры. Неплотное соединение может вызвать мерцание изображения или потерю сигнала во время движения.</blockquote>
+
+<h2 id="метод-1-использование-eos-webcam-utility">Метод 1: Использование EOS Webcam Utility</h2>
+<p>Самый простой и популярный способ превратить камеру в вебку — использовать официальную утилиту <strong>EOS Webcam Utility</strong> от компании Canon. Это программное обеспечение создает виртуальное веб-камерное устройство, которое автоматически отображается в списке источников видео в Zoom, Skype, Google Meet и других популярных приложениях. Вам не нужно устанавливать дополнительное стороннее ПО для захвата.</p>
+<p>Для начала работы скачайте драйвер с официального сайта производителя и установите его на компьютер. После установки обязательно перезагрузите устройство, чтобы система корректно распознала новые драйверы. Подключите камеру к ПК через USB-кабель и включите её в режим <code>Live View</code> (обычно это делается нажатием кнопки с изображением видеокамеры на корпусе).</p>
+<p>В настройках программы связи (например, Zoom) перейдите в раздел «Видео» и выберите в выпадающем списке устройство с названием <em>EOS Webcam Utility</em>. Изображение должно появиться мгновенно. Этот метод поддерживает разрешение до <code>1080p</code>, но не позволяет настраивать параметры экспозиции или фокусировку через компьютер — все регулируется непосредственно на камере.</p>
+
+<div class="pb-poll" id="poll-f3bed10f"><div class="pb-poll-question">📊 Какой метод подключения камеры вы планируете использовать?</div><div class="pb-poll-option" data-poll="f3bed10f" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Официальная утилита Canon</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f3bed10f" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">HDMI + Карта захвата</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f3bed10f" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Сторонний софт (OBS)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f3bed10f" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Пока не знаю</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="метод-2-подключение-через-hdmi-и-карту-захвата">Метод 2: Подключение через HDMI и карту захвата</h2>
+<p>Если вам критично важно получить изображение максимального качества без сжатия или задержек, метод с USB-драйвером может не подойти. В этом случае лучшим решением станет использование <strong>карты видеозахвата</strong> (HDMI Capture Card). Это небольшое устройство преобразует видеосигнал с камеры в цифровой поток, понятный для USB-порта компьютера.</p>
+<p>Схема подключения выглядит следующим образом: кабель HDMI вставляется в порт камеры, а другой конец — в карту захвата, которая, в свою очередь, подключается к USB-порту ПК. После включения камера должна автоматически перейти в режим вывода изображения. </p>
+<p>В настройках видеоприложений вы увидите устройство захвата (часто называемое <em>Cam Link</em> или по имени производителя карты). Этот метод позволяет использовать <strong>чистый HDMI</strong> без наложения логотипов и информации о настройках (инфоэкрана), если в камере отключен режим отображения данных. Это создает эффект «чистого» профессионального видеоряда.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к подключению HDMI</h4><label class="check-item"><input type="checkbox"><span>Включить камеру</span></label><label class="check-item"><input type="checkbox"><span>Подключить HDMI карту захвата</span></label><label class="check-item"><input type="checkbox"><span>Проверить настройки вывода сигнала</span></label><label class="check-item"><input type="checkbox"><span>Выбрать карту в программе связи</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Использование карты захвата открывает доступ к более широкому спектру настроек, включая возможность изменения разрешения до <code>4K</code> (если поддерживается камерой и картой). Однако этот способ требует дополнительных финансовых вложений на покупку внешнего устройства и качественного кабеля HDMI.</p>
+
+<details class="pb-accordion"><summary>Нужна ли карта захвата для OBS?Для OBS Studio карта захвата не обязательна, если вы используете плагин EOS Webcam Utility или сторонние утилиты, но для профессиональных стримов с внешними эффектами карта захвата обеспечивает лучшую стабильность сигнала.-->
+
+<h2 id="профессиональная-настройка-через-obs-studio">Профессиональная настройка через OBS Studio</h2>
+<p>Для тех, кто хочет не просто транслировать видео, а управлять картинкой, накладывать фильтры или использовать несколько источников, идеальным решением станет программа <strong>OBS Studio</strong>. Это мощное бесплатное ПО, которое позволяет захватывать видеопоток с камеры (через USB или HDMI) и передавать его в любую другую программу через виртуальную камеру.</p>
+<p>В OBS Studio добавьте новый источник «Захват видеозахватного устройства» и выберите вашу камеру или карту захвата. Здесь вы получаете полный контроль над экспозицией, балансом белого и фокусом, если используете плагин <em>Canon EOS Webcam Utility</em> или соответствующие фильтры для HDMI. После настройки картинки нажмите кнопку «Запуск виртуальной камеры» в нижней части интерфейса программы.</p>
+<p>Теперь в Zoom или Teams в качестве источника видео выберите <em>OBS Virtual Camera</em>. Это позволяет использовать все наложенные в OBS эффекты, текст и переходы в обычном звонке. Метод требует некоторого времени на обучение, но дает максимальную гибкость для создания уникального визуального стиля.</p>
+
+<!--WIDGET</summary><div class="pb-accordion-body"><p>tip:Перед началом стрима всегда проверяйте звук. Даже если вы подключили камеру по HDMI, аудиосигнал часто не передается автоматически, поэтому используйте внешний микрофон, подключенный к ПК.</p></div></details>
+
+<h2 id="сравнение-методов-подключения">Сравнение методов подключения</h2>
+<p>Выбор метода зависит от ваших приоритетов: простота или высокое качество. Для быстрых звонков в Zoom достаточно официальной утилиты, так как она требует минимум настроек и не требует покупки дополнительного оборудования. Если же вы проводите длительные лекции или трансляции, где важна детализация и отсутствие задержек, карта захвата будет незаменима.</p>
+<p>Ниже приведена таблица, сравнивающая ключевые характеристики популярных способов подключения зеркальных камер Canon к компьютеру.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Требования</th>
+<th>Качество видео</th>
+<th>Сложность настройки</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EOS Webcam Utility</td>
+<td>USB-кабель, ПК</td>
+<td>До 1080p</td>
+<td>Низкая</td>
+</tr>
+<tr>
+<td>HDMI + Карта захвата</td>
+<td>HDMI-кабель, Карта</td>
+<td>До 4K (зависит от модели)</td>
+<td>Средняя</td>
+</tr>
+<tr>
+<td>OBS Studio + Виртуальная камера</td>
+<td>Любой метод выше + ПО</td>
+<td>Максимальное</td>
+<td>Высокая</td>
+</tr>
+<tr>
+<td>EOS Utility (Live View)</td>
+<td>USB-кабель, ПО</td>
+<td>Компьютерное отображение</td>
+<td>Средняя</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="решение-проблем-со-звуком-и-перегревом">Решение проблем со звуком и перегревом</h2>
+<p>Частой ошибкой новичков является ожидание, что звук с микрофона камеры передастся автоматически. В большинстве случаев, особенно при использовании <strong>HDMI-подключения</strong>, аудиосигнал не передается через видеокабель. Необходимо подключить отдельный внешний микрофон к компьютеру и выбрать его в настройках звука вашего приложения для видеосвязи.</p>
+<p>Другая проблема — перегрев камеры при длительной работе. Зеркальные аппараты <em>Canon</em> не предназначены для непрерывной записи видео часами. Если вы заметили, что камера выключается или экран становится тусклым, это признак перегрева. В этом случае <mark>необходимо увеличить вентиляцию</mark>, сняв камеру с штатива и поставив её на открытое пространство или использовав кулер.</p>
+
+<blockquote>⚠️ Внимание: Не оставляйте камеру в режиме Live View без работы в течение длительного времени, если вы не планируете стрим. Это быстро разряжает батарею и нагревает матрицу.</blockquote>
+
+<p>Для минимизации нагрева также можно отключить подсветку дисплея на самой камере, так как изображение дублируется на ПК. Некоторые модели имеют режим энергосбережения, который стоит отключить перед началом трансляции. Перегрев может привести к сбоям в работе сенсора и появлению артефактов на изображении.</p>
+
+<h2 id="настройка-изображения-для-лучших-результатов">Настройка изображения для лучших результатов</h2>
+<p>Чтобы изображение выглядело профессионально, недостаточно просто подключить камеру. Необходимо правильно настроить параметры <strong>экспозиции</strong>. Вручную установите выдержку на значение, кратное частоте кадров видео (например, <code>1/50</code> или <code>1/60</code> для 25/30 к/с), чтобы избежать мерцания от искусственного освещения.</p>
+<p>Рекомендуется использовать режим «Приоритет диафрагмы» (Av) или ручной режим (M), чтобы контролировать глубину резкости. Откройте диафрагму на максимум для красивого размытия фона, но следите, чтобы резкость оставалась на глазах. Также не забудьте установить правильный баланс белого, чтобы цвета кожи выглядели естественно, а не желтовато или синевато.</p>
+
+<p>Важно учитывать, что при использовании HDMI-сигнала информация о настройках камеры (ISO, выдержка, диафрагма) не передается на экран компьютера. Это означает, что вы не сможете видеть параметры на мониторе, если не используете специальную программу мониторинга.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Правильная настройка баланса белого и выдержки важнее, чем просто высокое разрешение камеры, для создания качественного и естественного видеоряда.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы">Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Можно ли использовать старую зеркальную камеру Canon как вебку?</summary>
+<p>Да, большинство зеркальных камер Canon, начиная с моделей серии 500D и новее, поддерживают функцию Live View, что позволяет использовать их в качестве веб-камеры через USB или HDMI. Однако старые модели могут не поддерживать протокол UVC или требовать специфических драйверов.</p>
+</details>
+
+<details>
+<summary>Работает ли EOS Webcam Utility на Windows 10 и 11?</summary>
+<p>Официальная утилита EOS Webcam Utility поддерживает Windows 10 и Windows 11, а также macOS. Рекомендуется скачивать последнюю версию драйвера с официального сайта Canon для обеспечения совместимости с последними обновлениями ОС.</p>
+</details>
+
+<details>
+<summary>Нужен ли USB-кабель для работы с OBS через HDMI?</summary>
+<p>Для работы через карту захвата HDMI USB-кабель не требуется для видео. Однако некоторые пользователи подключают USB для одновременного управления настройками камеры через ПК или для передачи звука, если камера поддерживает этот режим. В большинстве случаев достаточно только HDMI.</p>
+</details>
+
+<details>
+<summary>Почему картинка в Zoom черная при подключении камеры?</summary>
+<p>Черный экран часто возникает, если камера не переведена в режим Live View (нажатием кнопки Live View), если кабель вставлен неплотно или если другое приложение уже захватило устройство. Закройте все программы, использующие камеру, и перезапустите Zoom.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать Wi-Fi для подключения камеры как веб-камеры?</summary>
+<p>Прямое подключение камеры Canon по Wi-Fi в качестве веб-камеры для видеозвонков (Zoom, Teams) штатными средствами обычно невозможно. Для этого требуется использование USB или HDMI. Wi-Fi используется для передачи фото или удаленного управления, но не для потокового видео низкой задержки.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-sdelat-kserokopiyu-na-printere-canon-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать ксерокопию на принтере Canon на компьютер: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по созданию ксерокопий с использованием драйверов и утилит Canon. Настройка ска</span>
+            </a><a href="/articles/c/ca/canon-lide-110-kak-nastroit-knopki.html" class="pb-related-card">
+                <span class="pb-related-title">Настройка кнопок на сканере Canon Lide 110: Полное руководство</span>
+                <span class="pb-related-desc">Инструкция по перенастройке кнопок Canon Lide 110. Настройка ПО, изменение действий кнопок, решение </span>
+            </a><a href="/articles/c/ca/canon-capt-usb-device-ne-vidit-kak-printer.html" class="pb-related-card">
+                <span class="pb-related-title">Canon CAPT USB устройство не видит принтер: причины и решения</span>
+                <span class="pb-related-desc">Почему Canon CAPT USB устройство не видит принтер? Полный разбор причин: от драйверов и порта до слу</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-printer-canon-i-sensys-mf3228-na-windows-10.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить Canon i-SENSYS MF3228 на Windows 10: пошаговая настройка</span>
+                <span class="pb-related-desc">Полная инструкция по драйверам и подключению МФУ Canon i-SENSYS MF3228 к Windows 10. Решение проблем</span>
+            </a><a href="/articles/k/ka/kak-perekinut-video-s-videokamery-canon-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как перекинуть видео с видеокамеры Canon на компьютер: Полное руководство</span>
+                <span class="pb-related-desc">Узнайте, как перенести видео с камеры Canon на ПК через USB, кардридер или Wi-Fi. Подробные инструкц</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-printer-canon-laser-shot-lbp-1120-dlya-windows-10-x64.html" class="pb-related-card">
+                <span class="pb-related-title">Установка Canon LBP 1120 на Windows 10 x64: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Полная инструкция по драйверам и настройке Canon Laser Shot LBP 1120 для 64-битной Windows 10. Решен</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

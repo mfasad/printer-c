@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>SMTP RX Canon: что это за код ошибки и как исправить сбой отправки — Кэнон Инфо</title>
+    <meta name="description" content="Код ошибки SMTP RX в принтерах Canon означает сбой входящего соединения при отправке email. Узнайте причины и пошаговое решение проблемы с почтой на МФУ.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/s/sm/smtp-rx-canon-chto-eto.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="SMTP RX Canon: что это за код ошибки и как исправить сбой отправки">
+    <meta property="og:description" content="Код ошибки SMTP RX в принтерах Canon означает сбой входящего соединения при отправке email. Узнайте причины и пошаговое решение проблемы с почтой на МФУ.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">SMTP RX Canon: что это за код ошибки и как исправить сбой отправки</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#суть-протокола-и-природа-сбоя">Суть протокола и природа сбоя</a></li><li><a href="#основные-причины-возникновения-настройки">Основные причины возникновения настройки</a></li><li><a href="#пошаговая-диагностика-и-устранение">Пошаговая диагностика и устранение</a></li><li><a href="#настройка-безопасности-и-шифрования">Настройка безопасности и шифрования</a></li><li><a href="#таблица-типовых-конфигураций-популярных-сервисов">Таблица типовых конфигураций популярных сервисов</a></li><li><a href="#дополнительные-факторы-блокировки">Дополнительные факторы блокировки</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-k-telefonu-samsung.html">Как подключить принтер Canon к телефону Samsung: полное руководство</a></li><li><a href="/articles/c/ca/canon-lbp-1120-drajver-windows-7-x32-kak-ustanovit.html">Установка драйвера Canon LBP 1120 на Windows 7 x32: пошаговая инструкция</a></li><li><a href="/articles/c/ca/canon-4550d-kak-uznat-probeg.html">Как узнать пробег Canon 4550d: 3 проверенных способа</a></li><li><a href="/articles/k/ka/kakie-nado-drajvera-dlya-vindovs-7-podklyuchenie-printera-canon-bjc-2000-k-portu-lpt.html">Драйверы Canon BJC-2000 для Windows 7: подключение через LPT</a></li><li><a href="/articles/k/ka/kak-raspechatat-kartinku-na-printere-canon-s-telefona.html">Как распечатать фото с телефона на принтер Canon: Полная инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>SMTP RX Canon: расшифровка ошибки и решение проблемы с почтой</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#суть-протокола-и-природа-сбоя">Суть протокола и природа сбоя</a></li><li><a href="#основные-причины-возникновения-настройки">Основные причины возникновения настройки</a></li><li><a href="#пошаговая-диагностика-и-устранение">Пошаговая диагностика и устранение</a></li><li><a href="#настройка-безопасности-и-шифрования">Настройка безопасности и шифрования</a></li><li><a href="#таблица-типовых-конфигураций-популярных-сервисов">Таблица типовых конфигураций популярных сервисов</a></li><li><a href="#дополнительные-факторы-блокировки">Дополнительные факторы блокировки</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Всякий раз, когда вы пытаетесь отправить скан или копию документа непосредственно на электронную почту с многофункционального устройства <em>Canon</em>, система может выдать неожиданный сбой. Одной из самых частых и запутанных ошибок является комбинация кодов, где фигурирует <strong>SMTP RX</strong>. Многие пользователи ошибочно полагают, что проблема кроется в самом сервере или у провайдера, однако чаще всего причина скрыта в локальных настройках сетевого интерфейса.</p>
+
+<p>Ошибка <strong>SMTP RX</strong> (от англ. Receiver — приемник) указывает на то, что устройство <em>Canon</em> успешно соединилось с почтовым сервером, но сервер отверг входящее соединение или не смог корректно обработать команду подтверждения принятия данных. В отличие от ошибок отправки (TX), где проблема обычно на стороне клиента, здесь конфликт возникает именно на этапе «рукопожатия» между принтером и почтовым шлюзом.</p>
+
+<p>Критически важно понимать, что этот статус не всегда означает поломку оборудования. В большинстве случаев это сигнал о несовпадении параметров безопасности, неверно указанном портe или блокировке трафика фаерволом. <mark>Код SMTP RX в экосистеме Canon почти всегда свидетельствует о том, что сервер получил запрос, но отказался принимать данные из-за несоответствия уровня шифрования или проверки подлинности.</mark></p>
+
+<h2 id="суть-протокола-и-природа-сбоя">Суть протокола и природа сбоя</h2>
+
+<p>Чтобы понять, почему происходит сбой, необходимо разобрать логику работы протокола. Когда <em>Canon</em> инициирует отправку, он выступает в роли клиента SMTP. Процесс начинается с установки TCP-соединения, затем следует этап аутентификации (логин/пароль) и, наконец, передача данных. Код <strong>RX</strong> появляется на одном из последних этапов, когда сервер сообщает: «Я тебя слышу, но я не приму этот пакет».</p>
+
+<p>Часто проблема кроется в конфликтующих настройках безопасности. Современные почтовые провайдеры (такие как <em>GoDaddy</em>, <em>Yandex</em>, <em>Gmail</em>) требуют использования шифрования TLS или SSL. Если принтер пытается отправить данные в открытом виде или использует устаревший протокол, сервер мгновенно разрывает соединение с кодом <strong>SMTP RX</strong>. Это защитный механизм, предотвращающий спам и перехват данных.</p>
+
+<p>Важно также учитывать, что некоторые серверы имеют ограничения на количество получателей или размер вложений. Если вы пытаетесь отправить большой файл (например, скан высокого разрешения) сразу на множество адресов, сервер может отклонить запрос, интерпретируя его как подозрительную активность. В таких случаях системное сообщение на дисплее принтера может быть кратким и не давать полной картины.</p>
+
+<blockquote>⚠️ Внимание: Ошибка <strong>SMTP RX</strong> может возникать при попытке отправки с <em>Canon</em> на корпоративные серверы, требующие дополнительной двухфакторной аутентификации, которую встроенный почтовый клиент МФУ не поддерживает.</blockquote>
+
+<h2 id="основные-причины-возникновения-настройки">Основные причины возникновения настройки</h2>
+
+<p>Существует несколько ключевых факторов, провоцирующих появление данного кода ошибки. Самая распространенная причина — <strong>неверный номер порта</strong>. Стандартный порт для SMTP часто меняется в зависимости от уровня безопасности: 25, 465 или 587. Если в настройках устройства указан порт 25, а сервер требует 587 с шифрованием, соединение будет отклонено.</p>
+
+<p>Другая частая проблема — <strong>неверная проверка имени хоста</strong> (Server Name Check). Для усиления безопасности многие серверы требуют, чтобы имя хоста, указанное в настройках принтера, в точности совпадало с доменным именем сервера. Любое расхождение, даже в регистре букв, приведет к отказу в обслуживании и появлению ошибки <strong>SMTP RX</strong>.</p>
+
+<p>Также стоит обратить внимание на параметр <strong>аутентификация</strong>. Если вы используете сложный пароль со специальными символами, встроенное меню <em>Canon</em> может некорректно его интерпретировать или обрезать. Кроме того, если на аккаунте включена функция «Аутентификация приложений», обычный пароль от почты может работать, а для отправки с устройств требуется специальный генерируемый токен.</p>
+
+<ul>
+<li>❌ <strong>Неверный порт:</strong> Использование порта 25 вместо 587 или 465.</li>
+<li>❌ <strong>Проблемы SSL/TLS:</strong> Несоответствие уровня шифрования требованиям сервера.</li>
+<li>❌ <strong>Ошибки DNS:</strong> Принтер не может корректно разрешить доменное имя почтового сервера.</li>
+<li>❌ <strong>Блокировка ISP:</strong> Интернет-провайдер блокирует исходящий трафик на почтовые порты.</li>
+</ul>
+
+<h2 id="пошаговая-диагностика-и-устранение">Пошаговая диагностика и устранение</h2>
+
+<p>Для решения проблемы необходимо войти в меню настройки сети принтера. Обычно это путь <code>Настройки → Настройки устройства → Настройки сети → Настройки протокола SMTP</code>. Внимательно проверьте поле «Адрес SMTP-сервера». Оно должно быть написано в точности так, как указано в инструкции вашего почтового провайдера (например, `smtp.yandex.ru` или `smtp.gmail.com`).</p>
+
+<p>Следующий критический шаг — проверка порта и настроек безопасности. Войдите в раздел <code>SSL/TLS</code> и убедитесь, что параметр «Использовать SSL» или «STARTTLS» установлен в нужное положение. Для большинства современных сервисов необходимо активировать <strong>SSL</strong> и выбрать порт <code>465</code> или <code>587</code>. Попытка отправки без шифрования на современные серверы гарантированно приведет к ошибке <strong>SMTP RX</strong>.</p>
+
+<p>Не забудьте проверить поле «Логин» и «Пароль». Убедитесь, что логин — это полный email-адрес, а не просто имя пользователя. Если вы меняли пароль недавно, обязательно обновите его в настройках принтера. Иногда помогает временное отключение проверки сертификата, но это снижает уровень безопасности.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка настроек SMTP</h4><label class="check-item"><input type="checkbox"><span>Убедитесь в правильности адреса сервера</span></label><label class="check-item"><input type="checkbox"><span>Проверьте номер порта (587 или 465)</span></label><label class="check-item"><input type="checkbox"><span>Активируйте SSL/TLS в настройках</span></label><label class="check-item"><input type="checkbox"><span>Введите корректный логин и пароль</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<details class="pb-accordion"><summary>Что делать, если порт 25 заблокирован?</summary><div class="pb-accordion-body"><p>Многие интернет-провайдеры блокируют порт 25 для предотвращения спама. Если при использовании этого порта вы получаете ошибку, попробуйте переключиться на порт 587 (с поддержкой STARTTLS) или 465 (с поддержкой SSL). Это стандартная практика для обхода блокировок провайдеров.</p></div></details>
+
+<p>Если проблема не решена, попробуйте выполнить тестовую отправку с помощью встроенного диагностического инструмента. Зайдите в <code>Настройки → Отправка тестового письма</code>. Этот инструмент позволит увидеть детальный код ошибки сервера, который принтер получил в ответ. Часто именно этот код (например, 535 или 550) дает подсказку о том, в чем именно заключается проблема: в пароле или в разрешении на отправку.</p>
+
+<h2 id="настройка-безопасности-и-шифрования">Настройка безопасности и шифрования</h2>
+
+<p>Современные почтовые системы требуют строгого соблюдения протоколов безопасности. При настройке <em>Canon</em> крайне важно правильно выбрать метод шифрования. Если сервер поддерживает <strong>STARTTLS</strong>, убедитесь, что в настройках принтера выбран именно этот вариант, а не просто «Нет шифрования» или принудительный SSL, если сервер его не поддерживает.</p>
+
+<p>Иногда возникает ситуация, когда принтер <em>Canon</em> использует устаревшие алгоритмы шифрования (например, TLS 1.0 или 1.1), которые уже отключены на большинстве почтовых серверов по соображениям безопасности. В этом случае вам может потребоваться обновление прошивки устройства до последней версии, чтобы получить поддержку актуальных протоколов TLS 1.2 или 1.3.</p>
+
+<p>Также стоит обратить внимание на функцию «Подтверждение имени хоста». Если она включена, сервер будет сверять сертификат своего соединения с тем именем, которое вы ввели в настройках. Ошибка <strong>SMTP RX</strong> часто возникает, если сертификат выдан на другой домен или если само доменное имя введено с ошибкой. Попробуйте временно отключить эту опцию для диагностики.</p>
+
+<blockquote>⚠️ Внимание: Неправильная настройка шифрования может привести к полному отказу сервера в обработке запроса. Всегда сверяйте требования безопасности вашего почтового провайдера с параметрами, доступными в меню вашего МФУ.</blockquote>
+
+<h2 id="таблица-типовых-конфигураций-популярных-сервисов">Таблица типовых конфигураций популярных сервисов</h2>
+
+<p>Чтобы упростить процесс настройки, ниже приведена таблица с корректными параметрами для наиболее популярных почтовых сервисов. Эти данные являются эталонными, но могут незначительно меняться в зависимости от региона или тарифного плана.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Сервис</th>
+<th>SMTP Адрес</th>
+<th>Порт</th>
+<th>Шифрование</th>
+<th>Требуется авторизация</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gmail</td>
+<td>smtp.gmail.com</td>
+<td>587</td>
+<td>TLS (STARTTLS)</td>
+<td>Да</td>
+</tr>
+<tr>
+<td>Яндекс.Почта</td>
+<td>smtp.yandex.ru</td>
+<td>465</td>
+<td>SSL</td>
+<td>Да</td>
+</tr>
+<tr>
+<td>Mail.ru</td>
+<td>smtp.mail.ru</td>
+<td>465</td>
+<td>SSL</td>
+<td>Да</td>
+</tr>
+<tr>
+<td>Rambler</td>
+<td>smtp.rambler.ru</td>
+<td>465</td>
+<td>SSL</td>
+<td>Да</td>
+</tr>
+<tr>
+<td>Outlook/Hotmail</td>
+<td>smtp-mail.outlook.com</td>
+<td>587</td>
+<td>TLS</td>
+<td>Да</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="pb-poll" id="poll-e1730e94"><div class="pb-poll-question">📊 Какой почтовый сервис вы используете?</div><div class="pb-poll-option" data-poll="e1730e94" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Gmail</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="e1730e94" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Яндекс</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="e1730e94" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Mail.ru</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="e1730e94" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Корпоративный сервер</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="e1730e94" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другой</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="дополнительные-факторы-блокировки">Дополнительные факторы блокировки</h2>
+
+<p>Иногда причина ошибки <strong>SMTP RX</strong> кроется не в настройках принтера, а в сетевой инфраструктуре. Корпоративные фаерволы или антивирусное ПО на шлюзе могут блокировать исходящие соединения с принтеров, считая их потенциально опасными. Если вы находитесь в офисе, обратитесь к администратору сети.</p>
+
+<p>Также возможна блокировка со стороны провайдера интернета. Некоторые домашние провайдеры блокируют порты 25 и 465 для всех пользователей, кроме своих серверов почты. В таком случае единственным выходом будет смена порта на альтернативный, например, 587, если он открыт.</p>
+
+<p>Не стоит забывать и о лимитах. Если вы отправляете слишком много писем подряд, сервер может временно заблокировать ваш IP-адрес, классифицируя действия как спам. В этом случае ошибка <strong>SMTP RX</strong> будет появляться до тех пор, пока бан не снимется (обычно от 15 минут до часа).</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед настройкой убедитесь, что ваш почтовый ящик не переполнен и имеет статус «активен». Временно заблокированные или неактивные ящики часто отклоняют входящие запросы на проверку подлинности с кодом ошибки RX.</p></aside>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Почему ошибка SMTP RX появляется только при отправке на определенные адреса?</summary>
+<p>Это может указывать на то, что почтовый сервер получателя имеет строгие фильтры безопасности или требует специфических заголовков, которые ваш принтер <em>Canon</em> не отправляет. Также возможно, что домен получателя запрещает отправку с внешних серверов.</p>
+</details>
+
+<details>
+<summary>Можно ли отключить проверку сертификата для решения проблемы?</summary>
+<p>Да, в настройках протокола SMTP часто есть опция «Проверка сертификата» (Certificate Check). Если её отключить, проблема может исчезнуть, но вы снизите уровень безопасности соединения, что не рекомендуется для корпоративных сетей.</p>
+</details>
+
+<details>
+<summary>Что делать, если я уверен, что пароль верный, но ошибка сохраняется?</summary>
+<p>Попробуйте сгенерировать «Пароль приложения» в настройках вашего аккаунта (если используется двухфакторная аутентификация) и введите его вместо основного пароля. Обычный пароль может не работать из-за политик безопасности.</p>
+</details>
+
+<details>
+<summary>Влияет ли прошивка принтера на появление ошибки SMTP RX?</summary>
+<p>Да, устаревшая прошивка может не поддерживать современные протоколы шифрования (TLS 1.2/1.3), что приводит к немедленному отклонению соединения сервером. Обновление ПО часто решает эту проблему.</p>
+</details>
+
+<details>
+<summary>Может ли проблема быть связана с DNS?</summary>
+<p>Абсолютно. Если принтер не может корректно преобразовать доменное имя сервера (например, `smtp.gmail.com`) в IP-адрес, он не сможет установить соединение, что также может быть интерпретировано как сбой входящего потока (RX). Проверьте настройки DNS в разделе сети.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-podklyuchit-printer-canon-k-telefonu-samsung.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon к телефону Samsung: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция: настройка Wi-Fi, использование приложения Canon Print и устранение ошибок при </span>
+            </a><a href="/articles/c/ca/canon-lbp-1120-drajver-windows-7-x32-kak-ustanovit.html" class="pb-related-card">
+                <span class="pb-related-title">Установка драйвера Canon LBP 1120 на Windows 7 x32: пошаговая инструкция</span>
+                <span class="pb-related-desc">Полное руководство по скачиванию и установке драйвера для Canon LBP 1120 на Windows 7 32-bit. Решени</span>
+            </a><a href="/articles/c/ca/canon-4550d-kak-uznat-probeg.html" class="pb-related-card">
+                <span class="pb-related-title">Как узнать пробег Canon 4550d: 3 проверенных способа</span>
+                <span class="pb-related-desc">Узнайте ресурс принтера Canon i-SENSYS LBP4550d. Пошаговая инструкция по проверке счетчика напечатал</span>
+            </a><a href="/articles/k/ka/kakie-nado-drajvera-dlya-vindovs-7-podklyuchenie-printera-canon-bjc-2000-k-portu-lpt.html" class="pb-related-card">
+                <span class="pb-related-title">Драйверы Canon BJC-2000 для Windows 7: подключение через LPT</span>
+                <span class="pb-related-desc">Полное руководство по установке драйвера принтера Canon BJC-2000 на Windows 7 через параллельный пор</span>
+            </a><a href="/articles/k/ka/kak-raspechatat-kartinku-na-printere-canon-s-telefona.html" class="pb-related-card">
+                <span class="pb-related-title">Как распечатать фото с телефона на принтер Canon: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая инструкция: настройка Canon PRINT, AirPrint и Mopria. Как распечатать картинку с iPhone ил</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-k-telefonu-canon-ip7240.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon PIXMA iP7240 к телефону: полные инструкции</span>
+                <span class="pb-related-desc">Пошаговое руководство по подключению Canon iP7240 к Android и iOS. Настройка Wi-Fi Direct, использов</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Инструкция: как настроить поля и отступы на принтерах Canon — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговое руководство по настройке полей печати на принтерах Canon. Настройка через драйвер, свойства документа и решение проблем с обрезкой.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-nastroit-polya-na-printere-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Инструкция: как настроить поля и отступы на принтерах Canon">
+    <meta property="og:description" content="Пошаговое руководство по настройке полей печати на принтерах Canon. Настройка через драйвер, свойства документа и решение проблем с обрезкой.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Инструкция: как настроить поля и отступы на принтерах Canon</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#понимание-физических-ограничений-и-драйвера">Понимание физических ограничений и драйвера</a></li><li><a href="#настройка-полей-через-драйвер-печати">Настройка полей через драйвер печати</a></li><li><a href="#режим-печати-без-полей-borderless">Режим печати без полей (Borderless)</a></li><li><a href="#настройка-полей-в-текстовых-редакторах">Настройка полей в текстовых редакторах</a></li><li><a href="#специфика-настройки-в-macos-и-windows">Специфика настройки в macOS и Windows</a></li><li><a href="#таблица-типичных-значений-отступов">Таблица типичных значений отступов</a></li><li><a href="#решение-проблем-с-обрезкой-текста">Решение проблем с обрезкой текста</a></li><li><a href="#настройка-полей-для-сканирования-и-копирования">Настройка полей для сканирования и копирования</a></li><li><a href="#финальная-проверка-и-рекомендации">Финальная проверка и рекомендации</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-ustanovit-printer-canon-lbp-6030-bez-diska.html">Как установить принтер Canon LBP 6030 без диска: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-perezagruzit-printer-canon-pixma-g3411.html">Как перезагрузить Canon Pixma G3411: 4 рабочих метода сброса</a></li><li><a href="/articles/k/ka/kak-nastroit-podachu-bumagi-v-printere-canon.html">Как настроить подачу бумаги в принтере Canon: инструкция и решение проблем</a></li><li><a href="/articles/k/ka/kak-ustanovit-drajver-na-canon-i-sensys-lbp6020b.html">Как установить драйвер Canon i-SENSYS LBP6020B: полное руководство</a></li><li><a href="/articles/k/ka/kak-nastroit-pechat-printera-canon-cherez-wifi.html">Как настроить печать Canon через Wi-Fi: пошаговая инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как настроить поля на принтере Canon: полное руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#понимание-физических-ограничений-и-драйвера">Понимание физических ограничений и драйвера</a></li><li><a href="#настройка-полей-через-драйвер-печати">Настройка полей через драйвер печати</a></li><li><a href="#режим-печати-без-полей-borderless">Режим печати без полей (Borderless)</a></li><li><a href="#настройка-полей-в-текстовых-редакторах">Настройка полей в текстовых редакторах</a></li><li><a href="#специфика-настройки-в-macos-и-windows">Специфика настройки в macOS и Windows</a></li><li><a href="#таблица-типичных-значений-отступов">Таблица типичных значений отступов</a></li><li><a href="#решение-проблем-с-обрезкой-текста">Решение проблем с обрезкой текста</a></li><li><a href="#настройка-полей-для-сканирования-и-копирования">Настройка полей для сканирования и копирования</a></li><li><a href="#финальная-проверка-и-рекомендации">Финальная проверка и рекомендации</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Настройка полей печати часто становится головной болью для пользователей офисной и домашней техники. Когда текст обрезается по краям или оставляется огромный белый зазор там, где его быть не должно, это раздражает и тратит бумагу. Проблема чаще всего кроется не в неисправности устройства, а в правильности настройки параметров печати в драйвере или исходном файле.</p>
+
+<p>Принтеры <em>Canon</em> обладают собственными алгоритмами обработки полей, которые могут конфликтовать с настройками текстовых редакторов. Чтобы получить идеальный результат, необходимо понимать разницу между физическими границами бумаги и программными отступами. Давайте разберемся, как управлять этими параметрами и добиться требуемого результата.</p>
+
+<h2 id="понимание-физических-ограничений-и-драйвера">Понимание физических ограничений и драйвера</h2>
+
+<p>Прежде чем лезть в настройки, важно осознавать физическую природу процесса печати. Лазерные и струйные модели <em>Canon</em> не могут печатать «до самого края» на всей поверхности листа без использования специальных режимов. Это связано с тем, что механизм подачи бумаги должен за что-то держаться.</p>
+
+<p>Обычно существует минимальная зона безопасности, где печатающая головка или лазерный блок не могут сформировать изображение. В драйвере эта зона называется <code>Отступы по умолчанию</code>. Если вы попытаетесь установить отступы меньше допустимых, система автоматически вернет их к стандартным значениям или выдаст предупреждение об ошибке.</p>
+
+<p>Убедитесь, что выбран правильный размер бумаги в свойствах принтера. Если в окне печати выбран формат <code>A4</code>, а в лотке лежит <code>Letter</code>, поля могут сместиться непредсказуемым образом. Проверка соответствия размера бумаги в драйвере и в лотке — это первый шаг к устранению проблем с полями.</p>
+
+<p>Важно различать настройки в самом документе (Word, PDF) и настройки в окне печати. Уменьшение полей в документе не поможет, если драйвер принтера принудительно вернет эти значения к стандартным при отправке задания на печать.</p>
+
+<h2 id="настройка-полей-через-драйвер-печати">Настройка полей через драйвер печати</h2>
+
+<p>Основной контроль над полями осуществляется через окно «Свойства» или «Настройка печати», которое открывается при нажатии кнопки <code>Настройки принтера</code> в стандартном окне печати программы. Здесь вы найдете вкладку, отвечающую за макет и качество.</p>
+
+<p>В моделях серии <em>imageRUNNER</em> или <em>PIXMA</em> часто используется вкладка <code>Главная</code> или <code>Макет</code>. Именно здесь нужно искать параметры, связанные с <code>Отступами</code> или <code>Полями</code>. Обычно доступны опции «По умолчанию» (10-12 мм) и «Минимальные» (около 3-5 мм).</p>
+
+<p>Для полного контроля иногда требуется переключить режим печати с автоматического на ручной. В окне свойств найдите раздел <code>Расширенные настройки</code>. Там можно вручную задать значения отступов для каждой стороны: сверху, снизу, слева и справа.</p>
+
+<p>Обратите внимание на опцию <code>Авто-масштабирование</code>. Если она включена, принтер может сам уменьшить страницу, чтобы вписать её в безопасные поля, даже если вы задали отступы вручную в документе. Это часто приводит к появлению неожиданных белых рамок.</p>
+
+<h2 id="режим-печати-без-полей-borderless">Режим печати без полей (Borderless)</h2>
+
+<p>Если ваша задача — печать фотографий, плакатов или визиток без белых краев, вам понадобится режим <code>Borderless</code> (Без полей). Этот режим доступен не на всех моделях и не для всех типов бумаги. Он требует наличия специальных лотков или роликов подачи.</p>
+
+<p>Чтобы активировать этот режим, перейдите в настройки драйвера и найдите выпадающий список «Размер бумаги». Выберите вариант с пометкой <code>Borderless</code> (например, <code>A4 без полей</code>). После этого принтер автоматически скорректирует масштаб изображения, чтобы заполнить весь лист.</p>
+
+<p>Важно понимать, что при печати без полей может происходить легкое искажение картинки по краям, так как принтер намеренно печатает чуть большую область, чтобы перекрыть возможные сдвиги бумаги. Это техническая особенность, а не дефект.</p>
+
+<p><strong>Внимание</strong>: Режим печати без полей значительно увеличивает расход чернил или тонера, так как «запас» по краям обрабатывается краской. Не используйте его для обычных текстовых документов, если это не требуется.</p>
+
+<p><strong>Внимание</strong>: Некоторые типы бумаги, например, плотный картон или специальные фотобумаги, могут плохо проходить через механизм при включенном режиме без полей, что приведет к замятию.</p>
+
+<div class="pb-poll" id="poll-6f10e7a1"><div class="pb-poll-question">📊 Какой тип документов вы чаще всего печатаете?</div><div class="pb-poll-option" data-poll="6f10e7a1" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Текстовые документы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6f10e7a1" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Фотографии и изображения</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6f10e7a1" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Слайды и презентации</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6f10e7a1" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Графики и таблицы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="настройка-полей-в-текстовых-редакторах">Настройка полей в текстовых редакторах</h2>
+
+<p>Частая ошибка пользователей заключается в том, что они настраивают поля только в драйвере принтера, забывая о параметрах самого документа. В <em>Microsoft Word</em> или <em>Google Docs</em> нужно установить минимально возможные отступы, совместимые с вашим принтером.</p>
+
+<p>Зайдите в меню <code>Макет → Поля → Настраиваемые поля</code>. Введите значения, которые вы узнали из инструкции к вашему принтеру. Если принтер требует минимум 5 мм, не ставьте 4 мм, даже если в Word это разрешено. Он просто не напечатает контент в этой зоне.</p>
+
+<p>Для создания профессиональных отчетов часто используется разное значение полей для левой и правой стороны. Это делается для того, чтобы учесть место под переплет или скрепление документов. В настройках выберите <code>Зеркальные поля</code> и задайте значение <code>Корешок</code> (обычно 20-25 мм).</p>
+
+<p>Не забывайте проверять режим <code>Масштабирование</code> в окне печати. Если он установлен в <code>Подогнать под размер</code>, он может игнорировать ваши ручные настройки полей в документе. Выставляйте масштаб <code>100%</code> или <code>Фактический размер</code> для точного контроля.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка документа к печати</h4><label class="check-item"><input type="checkbox"><span>Установить нужные поля в Word</span></label><label class="check-item"><input type="checkbox"><span>Проверить ориентацию страницы</span></label><label class="check-item"><input type="checkbox"><span>Выбрать правильный тип бумаги</span></label><label class="check-item"><input type="checkbox"><span>Отключить масштабирование в драйвере</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="специфика-настройки-в-macos-и-windows">Специфика настройки в macOS и Windows</h2>
+
+<p>Операционные системы по-разному обрабатывают драйверы <em>Canon</em>. В Windows настройки часто интегрированы прямо в контекстное меню «Печать» или доступны через <code>Свойства устройства</code> в панели управления. Здесь можно сохранить профиль настроек по умолчанию, чтобы не вводить их каждый раз.</p>
+
+<p>В среде macOS (macOS) процесс может быть немного сложнее из-за универсального драйвера CUPS. Часто требуется нажать кнопку <code>Просмотр деталей</code> (Show Details) в окне печати, чтобы разворачивается полный список настроек. Ищите раздел <code>Настройки принтера Canon</code> или <code>Макет</code>.</p>
+
+<p>Иногда пользователи сталкиваются с тем, что в Mac OS нет конкретного параметра «Поля», но есть опция <code>Стиль бумаги</code>. Выбор правильного размера (например, <code>A4</code> вместо <code>Letter</code>) автоматически подстраивает поля под стандарты региона.</p>
+
+<p><strong>Внимание</strong>: При обновлении драйверов в Windows старые профили печати могут сброситься. После обновления ПО обязательно проверьте настройки полей заново, чтобы не получить неожиданные отступы.</p>
+
+<details class="pb-accordion"><summary>Что делать, если настройки не сохраняются?</summary><div class="pb-accordion-body"><p>Если вы не можете сохранить настройки полей по умолчанию в драйвере, попробуйте удалить старый драйвер и установить свежую версию с официального сайта Canon. Иногда конфликт версий ПО блокирует сохранение пользовательских настроек.</p></div></details>
+
+<h2 id="таблица-типичных-значений-отступов">Таблица типичных значений отступов</h2>
+
+<p>Ниже приведена таблица с ориентировочными значениями минимальных полей для распространенных серий принтеров <em>Canon</em>. Эти данные могут варьироваться в зависимости от конкретной модели и версии прошивки.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Серия принтера</th>
+<th>Тип бумаги</th>
+<th>Мин. поле (мм)</th>
+<th>Режим без полей</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canon PIXMA</td>
+<td>Фотобумага</td>
+<td>0</td>
+<td>Поддерживается</td>
+</tr>
+<tr>
+<td>Canon imageRUNNER</td>
+<td>Обычная бумага</td>
+<td>5-10</td>
+<td>Не поддерживается</td>
+</tr>
+<tr>
+<td>Canon LBP</td>
+<td>Обычная бумага</td>
+<td>4-10</td>
+<td>Не поддерживается</td>
+</tr>
+<tr>
+<td>Canon серебристая серия</td>
+<td>Конверты</td>
+<td>15-20</td>
+<td>Не поддерживается</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Обратите внимание на конверты. Печать на конвертах требует специального режима подачи, иначе поля могут быть обрезаны неравномерно. В драйвере выберите тип носителя <code>Конверт</code>, и система автоматически увеличит безопасную зону.</p>
+
+<p>Для лазерных принтеров (серия <em>LBP</em>) минимальное отступ снизу часто больше, чем у струйных моделей. Это связано с фиксацией тонера в блоке термоузла. Игнорирование этого правила приведет к тому, что нижняя часть текста станет бледной или не напечатается вовсе.</p>
+
+<p>Если вам нужно печатать документы с очень узкими полями (менее 5 мм), убедитесь, что ваш документ сохранен в формате PDF. При печати из PDF часто проще контролировать точность отступов, чем при прямой печати из Word, так как рендеринг страницы происходит заранее.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед печатью большого тиража всегда делайте пробную печать на одном листе, чтобы убедиться, что все поля расположены корректно и ничего не обрезается.</p></aside>
+
+<h2 id="решение-проблем-с-обрезкой-текста">Решение проблем с обрезкой текста</h2>
+
+<p>Если текст все равно обрезается, несмотря на настройки, проверьте, не включен ли режим <code>Fit to Page</code> (Вписать в страницу) в вашей программе для просмотра PDF. Этот режим может автоматически сжимать документ, но иногда он работает некорректно с нестандартными размерами бумаги.</p>
+
+<p>Иногда проблема кроется в самой печатной форме. Если вы создаете документ в программе дизайна (например, CorelDRAW или InDesign), убедитесь, что <code>Служебные метки</code> и вылеты (bleeds) настроены правильно. Если вылеты отсутствуют, принтер может обрезать края.</p>
+
+<p>В некоторых случаях помогает сброс настроек принтера до заводских через меню самого устройства. Зайдите в <code>Настройки → Общие настройки → Сброс</code>. Это вернет параметры обработки данных, включая поля, к стандартным заводским значениям.</p>
+
+<p><strong>Внимание</strong>: Если вы используете сторонние драйверы (например, универсальный драйвер Microsoft), настройки полей могут работать некорректно. Для полной функциональности всегда используйте официальный драйвер с сайта производителя <em>Canon</em>.</p>
+
+<h2 id="настройка-полей-для-сканирования-и-копирования">Настройка полей для сканирования и копирования</h2>
+
+<p>Настройка полей актуальна не только для печати, но и для копирования. В меню принтера <code>Копирование → Настройки копии</code> можно выбрать параметр <code>Уменьшить/Увеличить</code> или <code>Выбор оригинала</code>. Это влияет на то, как принтер обрабатывает края оригинала.</p>
+
+<p>При копировании с полями важно выбрать режим <code>Авто-определение размера</code>. Если принтер ошибочно определит размер оригинала, он может обрезать важные части документа или добавить лишние белые поля. Вручную задайте размер, если автоматика не справляется.</p>
+
+<p>Для сканирования в сетевую папку (Scan to Folder) настройка полей происходит через веб-интерфейс устройства. Зайдите в <code>Настройки устройства → Сканер</code> и проверьте параметры отступов при формировании файла. Обычно там можно задать, нужно ли удалять белые края автоматически.</p>
+
+<p><em>Canon</em> предлагает функцию <code>Удаление полей</code> (Crop) в сканерах высокой производительности. Это позволяет автоматически обрезать белое пространство вокруг документа при сканировании, чтобы файл занимал меньше места и выглядел аккуратнее. Активируйте эту опцию в профиле сканирования.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Правильная настройка полей экономит бумагу и чернила, а также гарантирует, что важные элементы документа не будут утеряны при печати.</p></aside>
+
+<h2 id="финальная-проверка-и-рекомендации">Финальная проверка и рекомендации</h2>
+
+<p>Перед тем как отправить на печать объемный документ, всегда используйте функцию <code>Просмотр перед печатью</code> (Print Preview). Она позволяет увидеть, как документ будет выглядеть на бумаге с учетом всех настроек драйвера и полей.</p>
+
+<p>Если вы работаете с конфиденциальными данными, убедитесь, что настройки полей не оставляют пустых зон, в которые может быть случайно помещена информация из предыдущих страниц (при использовании двусторонней печати).</p>
+
+<p>Регулярно обновляйте прошивку принтера. Разработчики <em>Canon</em> часто выпускают исправления, которые улучшают алгоритмы обработки полей и устранения проблем с обрезкой краев для новых версий операционных систем.</p>
+
+<p><strong>Внимание</strong>: При печати на нестандартных носителях (наклейки, картон) автоматическая настройка полей может отключаться. Всегда проверяйте параметры вручную для каждого нового типа бумаги.</p>
+
+<h2 id="часто-задаваемые-вопросы">Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Почему принтер Canon не печатает текст по краю листа?</summary>
+<p>Большинство моделей Canon имеют физические ограничения на подачу бумаги. Существует зона безопасности (обычно 3-5 мм), где печатающая головка не может сформировать изображение. Если вам нужна печать до самого края, используйте режим «Borderless» (Без полей), если он поддерживается вашей моделью и типом бумаги.</p>
+</details>
+
+<details>
+<summary>Как сделать поля меньше в Word, чтобы они совпали с настройками принтера?</summary>
+<p>Зайдите в «Макет» -> «Поля» -> «Настраиваемые поля». Введите значения, которые указаны в инструкции к вашему принтеру (например, 5 мм). Не ставьте значения меньше минимально допустимых для вашей модели, иначе текст будет обрезан.</p>
+</details>
+
+<details>
+<summary>Можно ли сохранить настройки полей как шаблон?</summary>
+<p>Да, в окне свойств драйвера принтера на вкладке «Главная» или «Макет» обычно есть кнопка «Сохранить» или «Предустановка». Вы можете создать свой профиль с нужными полями и выбирать его при печати, не настраивая параметры каждый раз заново.</p>
+</details>
+
+<details>
+<summary>Почему поля меняются при печати из PDF и Word?</summary>
+<p>Разные программы используют разные механизмы рендеринга. Word может пытаться подогнать страницу под принтер, а PDF — сохранять точные размеры. Всегда проверяйте настройки масштабирования (Fit to Page или Actual Size) в окне печати конкретной программы.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-ustanovit-printer-canon-lbp-6030-bez-diska.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить принтер Canon LBP 6030 без диска: пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как правильно установить драйверы для Canon LBP 6030 без использования компакт-диска. Полно</span>
+            </a><a href="/articles/k/ka/kak-perezagruzit-printer-canon-pixma-g3411.html" class="pb-related-card">
+                <span class="pb-related-title">Как перезагрузить Canon Pixma G3411: 4 рабочих метода сброса</span>
+                <span class="pb-related-desc">Пошаговая инструкция по перезагрузке принтера Canon Pixma G3411. Решение зависаний, ошибок и сброс н</span>
+            </a><a href="/articles/k/ka/kak-nastroit-podachu-bumagi-v-printere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить подачу бумаги в принтере Canon: инструкция и решение проблем</span>
+                <span class="pb-related-desc">Полное руководство по настройке подачи бумаги в принтерах Canon. Исправление замятий, выбор лотков и</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-drajver-na-canon-i-sensys-lbp6020b.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить драйвер Canon i-SENSYS LBP6020B: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по установке драйвера Canon i-SENSYS LBP6020B на Windows и macOS. Решение пробл</span>
+            </a><a href="/articles/k/ka/kak-nastroit-pechat-printera-canon-cherez-wifi.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить печать Canon через Wi-Fi: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по подключению принтеров Canon к беспроводной сети. Настройка через WPS, прило</span>
+            </a><a href="/articles/m/ma/mac-adres-printera-canon-kak-uznat.html" class="pb-related-card">
+                <span class="pb-related-title">Как узнать MAC-адрес принтера Canon: 3 рабочих способа</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как найти MAC-адрес на принтерах Canon через меню, печать отчета или веб-интер</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

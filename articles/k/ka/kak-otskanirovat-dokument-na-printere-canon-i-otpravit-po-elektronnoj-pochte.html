@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как сканировать документ с принтера Canon и отправить на Email — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция: настройка сканирования документов на МФУ Canon, создание профиля отправки и отправка файла прямо с панели управления.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-otskanirovat-dokument-na-printere-canon-i-otpravit-po-elektronnoj-pochte.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как сканировать документ с принтера Canon и отправить на Email">
+    <meta property="og:description" content="Пошаговая инструкция: настройка сканирования документов на МФУ Canon, создание профиля отправки и отправка файла прямо с панели управления.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как сканировать документ с принтера Canon и отправить на Email</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#предварительная-настройка-сетевого-подключения">Предварительная настройка сетевого подключения</a></li><li><a href="#настройка-аутентификации-smtp-сервера">Настройка аутентификации SMTP-сервера</a></li><li><a href="#создание-профиля-отправки-на-панели-управления">Создание профиля отправки на панели управления</a></li><li><a href="#процесс-сканирования-и-отправки-документа">Процесс сканирования и отправки документа</a></li><li><a href="#решение-частых-проблем-при-отправке">Решение частых проблем при отправке</a></li><li><a href="#безопасность-и-конфиденциальность-данных">Безопасность и конфиденциальность данных</a></li><li><a href="#вопросы-и-ответы">Вопросы и ответы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/s/sk/skaner-canon-canoscan-lide-25-kak-polzovatsya.html">Как пользоваться сканером Canon CanoScan LiDE 25: Полное руководство</a></li><li><a href="/articles/c/ca/canon-280-kak-skanirovat.html">Как сканировать документы на Canon 280: Полная инструкция</a></li><li><a href="/articles/p/po/pochemu-ne-rabotaet-skaner-canon-mf3228-na-windows-10.html">Сканер Canon MF3228 не работает на Windows 10: причины и решения</a></li><li><a href="/articles/p/pr/printer-canon-mp250-kak-sdelat-kopiyu.html">Как сделать копию на принтере Canon Pixma MP250: полная инструкция</a></li><li><a href="/articles/k/ka/kak-otskanirovat-dokument-na-printere-canon-pixma.html">Как отсканировать документ на принтере Canon Pixma: Полная инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Полное руководство по сканированию и отправке документов на электронную почту с МФУ Canon</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#предварительная-настройка-сетевого-подключения">Предварительная настройка сетевого подключения</a></li><li><a href="#настройка-аутентификации-smtp-сервера">Настройка аутентификации SMTP-сервера</a></li><li><a href="#создание-профиля-отправки-на-панели-управления">Создание профиля отправки на панели управления</a></li><li><a href="#процесс-сканирования-и-отправки-документа">Процесс сканирования и отправки документа</a></li><li><a href="#решение-частых-проблем-при-отправке">Решение частых проблем при отправке</a></li><li><a href="#безопасность-и-конфиденциальность-данных">Безопасность и конфиденциальность данных</a></li><li><a href="#вопросы-и-ответы">Вопросы и ответы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современные офисные задачи часто требуют мгновенной передачи бумажных исходников в цифровой вид. Принтеры и многофункциональные устройства (МФУ) от бренда <em>Canon</em> оснащены продвинутыми сетевыми функциями, позволяющими не просто оцифровать текст, но и сразу отправить его получателю. Это избавляет от необходимости подключать устройство к компьютеру и использовать промежуточные мессенджеры.</p>
+
+<p>Процесс отправки требует предварительной настройки, которая выполняется один раз в интерфейсе устройства или через веб-браузер. После правильной конфигурации достаточно положить лист под стекло, выбрать адрес электронной почты и нажать кнопку запуска. Такая технология называется <strong>Scan to Email</strong> и является стандартом для корпоративных сетей.</p>
+
+<h2 id="предварительная-настройка-сетевого-подключения">Предварительная настройка сетевого подключения</h2>
+
+<p>Чтобы МФУ могло передавать данные по сети, ему необходим стабильный IP-адрес. В домашних условиях адрес может меняться при перезагрузке роутера, что приведет к потере связи с почтовым сервером. Поэтому настоятельно рекомендуется настроить <strong>статический IP-адрес</strong> для принтера в настройках вашего маршрутизатора.</p>
+
+<p>Используйте функцию DHCP-резервации, чтобы устройство <em>Canon</em> всегда получало один и тот же адрес. Зайдите в веб-интерфейс принтера, введя текущий IP в адресную строку браузера, и проверьте раздел <code>Настройки сети</code>. Убедитесь, что устройство отображается в списке клиентов роутера с корректным параметром.</p>
+
+<blockquote>⚠️ Внимание: Если IP-адрес устройства изменится после перезагрузки сети, профиль отправки на электронную почту перестанет работать и потребует повторной настройки.</blockquote>
+
+<p>Не забудьте также проверить корректность настроек DNS-серверов. Без них устройство не сможет найти почтовый сервер для отправки, даже если интернет-соединение стабильно. В разделе сетевых настроек укажите надежные DNS, например, от Google или вашего провайдера.</p>
+
+<h2 id="настройка-аутентификации-smtp-сервера">Настройка аутентификации SMTP-сервера</h2>
+
+<p>Самый сложный этап — настройка протокола <strong>SMTP</strong> для отправки писем. МФУ должно «войти» в ваш почтовый ящик, чтобы отправить письмо от вашего имени. Для этого необходимо создать специальный пароль для приложений, если используется Gmail, Яндекс или Mail.ru, так как обычный пароль от аккаунта часто не подходит из-за двухфакторной аутентификации.</p>
+
+<p>В меню устройства перейдите в <code>Настройки → Настройки устройства → Настройки регистрации → Настройки регистрации сервера</code>. Здесь вводится адрес сервера, порт (обычно <code>587</code> или <code>465</code>) и логин. Важно использовать именно тот адрес, который указан для исходящей почты вашего провайдера.</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Почтовый провайдер</th>
+      <th>SMTP-сервер</th>
+      <th>Порт</th>
+      <th>Тип шифрования</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Gmail</td>
+      <td>smtp.gmail.com</td>
+      <td>587</td>
+      <td>STARTTLS</td>
+    </tr>
+    <tr>
+      <td>Яндекс</td>
+      <td>smtp.yandex.ru</td>
+      <td>465</td>
+      <td>SSL/TLS</td>
+    </tr>
+    <tr>
+      <td>Mail.ru</td>
+      <td>smtp.mail.ru</td>
+      <td>465</td>
+      <td>SSL/TLS</td>
+    </tr>
+    <tr>
+      <td>Rambler</td>
+      <td>smtp.rambler.ru</td>
+      <td>465</td>
+      <td>SSL/TLS</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>После ввода данных нажмите <code>Проверить</code> или <code>Тестовая отправка</code>. Если устройство выдаст ошибку аутентификации, проверьте, не заблокировал ли почтовый сервис вход с «неизвестного устройства». В этом случае потребуется разрешить доступ в настройках безопасности личного кабинета.</p>
+
+<blockquote>⚠️ Внимание: Использование вашего личного пароля от почтового ящика может быть заблокировано системой безопасности Google или Яндекса. Всегда используйте специальные пароли для приложений в настройках безопасности аккаунта.</blockquote>
+
+<div class="pb-poll" id="poll-96cd17bb"><div class="pb-poll-question">📊 Какой почтовый сервис вы используете для настройки?</div><div class="pb-poll-option" data-poll="96cd17bb" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Gmail</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="96cd17bb" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Яндекс</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="96cd17bb" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Mail.ru</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="96cd17bb" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Корпоративная почта</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="96cd17bb" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другой</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="создание-профиля-отправки-на-панели-управления">Создание профиля отправки на панели управления</h2>
+
+<p>Когда сервер настроен, нужно создать <strong>адресную книгу</strong> или профиль отправки прямо на сенсорном экране МФУ. Это позволит не вводить адрес электронной почты вручную каждый раз. В меню выберите <code>Регистрация/Редактирование</code> и нажмите <code>Добавить адрес</code>.</p>
+
+<p>Введите имя контакта, например, «Мой ПК» или «Бухгалтерия», и укажите полный адрес получателя. Можно также добавить описание, чтобы понимать, куда будет направлен документ. Для групповой рассылки создайте группу адресов, добавив туда несколько получателей одновременно.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка профиля отправки</h4><label class="check-item"><input type="checkbox"><span>Ввести логин и пароль от почты</span></label><label class="check-item"><input type="checkbox"><span>Указать SMTP-сервер и порт</span></label><label class="check-item"><input type="checkbox"><span>Зарегистрировать адреса получателей</span></label><label class="check-item"><input type="checkbox"><span>Провести тестовую отправку</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Некоторые модели <em>Canon</em> позволяют назначать эти адреса на специальные кнопки быстрого вызова. Это удобно, если вы сканируете документы для одного и того же человека регулярно. Кнопка будет обозначена именем контакта, и для отправки достаточно одного нажатия.</p>
+
+<details class="pb-accordion"><summary>Как найти настройки адресной книги на старых моделях?</summary><div class="pb-accordion-body"><p>На старых моделях без сенсорного экрана (серия i-SENSYS) настройки часто находятся в меню «Сеть» -> «Почта» или через веб-интерфейс в разделе «Книга адресов».</p></div></details>
+
+<h2 id="процесс-сканирования-и-отправки-документа">Процесс сканирования и отправки документа</h2>
+
+<p>Теперь, когда все параметры заданы, можно приступать к работе. Положите документ на стекло сканера или в автоматический подаватель (ADF), если нужно отсканировать многостраничный файл. Убедитесь, что бумага выровнена по меткам, чтобы текст не был обрезан.</p>
+
+<p>На главном экране нажмите кнопку <code>Отправить</code> (Send) или выберите иконку <strong>Scan to Email</strong>. Устройство предложит выбрать получателя из списка или ввести новый адрес. Если вы создали профиль, просто нажмите на его название.</p>
+
+<p>Перед запуском настройки можно изменить формат файла. Выберите между <strong>PDF</strong> для документов или <strong>JPEG</strong> для фотографий. Для текстовых файлов лучше всего подходит формат PDF/A, который обеспечивает высокую четкость и компактный размер.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если документ содержит несколько страниц, убедитесь, что в настройках сканирования выбран режим «Многостраничный», иначе каждая страница будет отправлена отдельным письмом.</p></aside>
+
+<p>После выбора всех параметров нажмите <strong>Старт</strong>. Устройство начнет сканирование, а затем отправит файл. Процесс занимает от нескольких секунд до минуты в зависимости от размера файла и скорости интернет-соединения.</p>
+
+<h2 id="решение-частых-проблем-при-отправке">Решение частых проблем при отправке</h2>
+
+<p>Иногда процесс отправки может завершиться ошибкой. Наиболее частая причина — неверный пароль от SMTP-сервера или блокировка со стороны почтового провайдера. Если появляется ошибка «Аутентификация не удалась», проверьте настройки безопасности вашего почтового ящика.</p>
+
+<p>Другая распространённая проблема — превышение размера вложения. Почтовые серверы обычно ограничивают размер письма до 20-25 МБ. Если вы сканируете цветные документы высокого разрешения, файл может быть слишком большим. В этом случае уменьшите качество сканирования или разрешение до <code>200 dpi</code>.</p>
+
+<blockquote>⚠️ Внимание: Ошибки сетевых соединений часто возникают из-за блокировки портов корпоративным фаерволом. Убедитесь, что на вашем рабочем месте разрешен исходящий трафик на порт 465 или 587.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Правильная настройка SMTP-сервера и использование специального пароля для приложений — ключ к стабильной работе функции отправки писем с принтера.</p></aside>
+
+<h2 id="безопасность-и-конфиденциальность-данных">Безопасность и конфиденциальность данных</h2>
+
+<p>Отправка документов по сети требует соблюдения мер безопасности. Убедитесь, что соединение с почтовым сервером зашифровано (используется <strong>SSL/TLS</strong>). Это защитит ваши данные от перехвата при передаче по публичной сети.</p>
+
+<p>Регулярно обновляйте встроенное программное обеспечение устройства <em>Canon</em>. Производители часто выпускают патчи, закрывающие уязвимости в сетевых протоколах. Обновление можно выполнить через веб-интерфейс или официальную утилиту.</p>
+
+<p>Если вы больше не пользуетесь функцией отправки, рекомендуется удалить сохраненные пароли и адреса из памяти устройства. Это предотвратит случайную утечку конфиденциальной информации при продаже или передаче оборудования.</p>
+
+<h2 id="вопросы-и-ответы">Вопросы и ответы</h2>
+
+<details>
+<summary>Можно ли отправить скан без настройки SMTP?</summary>
+<p>Нет, для прямой отправки с панели управления обязательно необходим настроенный SMTP-сервер. Альтернатива — использование программы на компьютере, которая перехватывает сканирование.</p>
+</details>
+
+<details>
+<summary>Что делать, если приходит пустое письмо?</summary>
+<p>Это может означать, что файл был слишком большим и отброшен сервером, или произошла ошибка при формировании вложения. Проверьте настройки размера вложения.</p>
+</details>
+
+<details>
+<summary>Можно ли сканировать в несколько адресов сразу?</summary>
+<p>Да, создайте группу в адресной книге устройства, включив туда несколько получателей. При выборе этой группы письмо уйдет всем участникам списка.</p>
+</details>
+
+<details>
+<summary>Почему устройство пишет «Ошибка сервера»?</summary>
+<p>Чаще всего это проблема с DNS или неверно указанным портом. Проверьте подключение к интернету и точность введенных данных в настройках SMTP.</p>
+</details>
+
+<details>
+<summary>Нужен ли компьютер для настройки этой функции?</summary>
+<p>Наиболее удобно настраивать через веб-интерфейс устройства (введя IP в браузере), но можно выполнить все настройки и через меню на сенсорном экране принтера.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/s/sk/skaner-canon-canoscan-lide-25-kak-polzovatsya.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться сканером Canon CanoScan LiDE 25: Полное руководство</span>
+                <span class="pb-related-desc">Подробная инструкция по эксплуатации сканера Canon CanoScan LiDE 25. Настройка драйверов, работа с П</span>
+            </a><a href="/articles/c/ca/canon-280-kak-skanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы на Canon 280: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по сканированию на Canon MF280. Настройка через драйвер, Панель управления и у</span>
+            </a><a href="/articles/p/po/pochemu-ne-rabotaet-skaner-canon-mf3228-na-windows-10.html" class="pb-related-card">
+                <span class="pb-related-title">Сканер Canon MF3228 не работает на Windows 10: причины и решения</span>
+                <span class="pb-related-desc">Почему Canon MF3228 не сканирует на Win 10? Полный разбор причин: драйверы, службы, настройки. Пошаг</span>
+            </a><a href="/articles/p/pr/printer-canon-mp250-kak-sdelat-kopiyu.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать копию на принтере Canon Pixma MP250: полная инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по копированию документов на МФУ Canon MP250. Настройка параметров, устранение</span>
+            </a><a href="/articles/k/ka/kak-otskanirovat-dokument-na-printere-canon-pixma.html" class="pb-related-card">
+                <span class="pb-related-title">Как отсканировать документ на принтере Canon Pixma: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая инструкция по сканированию документов на МФУ Canon Pixma через компьютер и панель управлен</span>
+            </a><a href="/articles/p/pr/printer-kenon-g3410-kak-skanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать с Canon PIXMA G3410: Полная инструкция по USB и Wi-Fi</span>
+                <span class="pb-related-desc">Пошаговое руководство: как сканировать документы и фото с Canon PIXMA G3410 через компьютер и смартф</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

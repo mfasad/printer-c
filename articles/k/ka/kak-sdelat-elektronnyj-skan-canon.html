@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как сделать электронный скан Canon: полное руководство — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция, как настроить и сделать электронный скан на принтерах Canon. Настройка драйверов, TWAIN, WIA и облачного доступа.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-sdelat-elektronnyj-skan-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как сделать электронный скан Canon: полное руководство">
+    <meta property="og:description" content="Пошаговая инструкция, как настроить и сделать электронный скан на принтерах Canon. Настройка драйверов, TWAIN, WIA и облачного доступа.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как сделать электронный скан Canon: полное руководство</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-оборудования-и-установка-драйверов">Подготовка оборудования и установка драйверов</a></li><li><a href="#использование-стандартного-по-windows-wia-и-twain">Использование стандартного ПО Windows (WIA и TWAIN)</a></li><li><a href="#работа-с-ij-scan-utility-и-специализированным-по">Работа с IJ Scan Utility и специализированным ПО</a></li><li><a href="#сканирование-по-сети-и-в-облако">Сканирование по сети и в облако</a></li><li><a href="#настройка-качества-и-форматов-файлов">Настройка качества и форматов файлов</a></li><li><a href="#решение-типичных-проблем-при-сканировании">Решение типичных проблем при сканировании</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-skanirovat-odnim-fajlom-neskolko-stranits-canon.html">Как сканировать несколько страниц в один файл на принтере Canon</a></li><li><a href="/articles/p/pr/printer-canon-kak-skanirovat-pasport.html">Как сканировать паспорт на принтере Canon: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-na-printere-kenon-otskanirovat-dokument-na-kompyuter.html">Как отсканировать документ на компьютер с принтера Canon: Полное руководство</a></li><li><a href="/articles/c/ca/canon-mf3010-kak-skanirovat.html">Как сканировать на Canon MF3010: Полная инструкция по настройке и драйверам</a></li><li><a href="/articles/k/ka/kak-otskanirovat-dokumenty-na-printere-canon-pixma.html">Как отсканировать документы на принтере Canon Pixma: полное руководство</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как сделать электронный скан на устройствах Canon: подробная инструкция</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-оборудования-и-установка-драйверов">Подготовка оборудования и установка драйверов</a></li><li><a href="#использование-стандартного-по-windows-wia-и-twain">Использование стандартного ПО Windows (WIA и TWAIN)</a></li><li><a href="#работа-с-ij-scan-utility-и-специализированным-по">Работа с IJ Scan Utility и специализированным ПО</a></li><li><a href="#сканирование-по-сети-и-в-облако">Сканирование по сети и в облако</a></li><li><a href="#настройка-качества-и-форматов-файлов">Настройка качества и форматов файлов</a></li><li><a href="#решение-типичных-проблем-при-сканировании">Решение типичных проблем при сканировании</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Современные многофункциональные устройства <em>Canon</em> превратили процесс оцифровки документов в рутинную, но крайне эффективную операцию. Если вы задались вопросом, как сделать электронный скан Canon, важно понимать, что результат зависит не только от качества оптической системы аппарата, но и от правильной настройки программного обеспечения на вашем компьютере. Без корректно установленного драйвера даже самая дорогая модель <em>imageRUNNER</em> или <em>PIXMA</em> останется просто бумажным прессом.</p>
+
+<p>Существует несколько фундаментальных способов связи сканера с ПК: через стандартные протоколы Windows, специализированное ПО от производителя или через облачные сервисы. Выбор метода зависит от ваших задач — нужно ли вам просто сохранить копию договора в PDF или провести глубокую обработку изображений с высоким разрешением. Разберем каждый вариант детально, чтобы вы могли выбрать оптимальный путь для своих нужд.</p>
+
+<h2 id="подготовка-оборудования-и-установка-драйверов">Подготовка оборудования и установка драйверов</h2>
+
+<p>Перед тем как сделать электронный скан Canon, необходимо убедиться в физической и программной готовности системы. Самая частая причина ошибок — отсутствие или некорректная установка <strong>драйверов сканирования</strong>. Стандартный драйвер печати часто не активирует функции сканирования автоматически, требуя отдельной установки пакета <strong>ScanGear</strong> или <strong>IJ Scan Utility</strong>.</p>
+
+<p>Убедитесь, что устройство подключено к сети стабильным кабелем USB или через Wi-Fi роутер. Если вы используете беспроводное соединение, проверьте, что принтер и компьютер находятся в одной подсети. Для стационарных офисных моделей <em>Canon imageRUNNER</em> процедура инициализации может потребовать ввода IP-адреса в настройках сетевого сканирования.</p>
+
+<p>Загрузите актуальное программное обеспечение с официального сайта производителя. Введите точную модель вашего устройства в поисковую строку раздела поддержки. Скачайте и запустите установочный файл, следуя мастеру настройки. Не прерывайте процесс установки, даже если система кажется неподвижной на несколько минут.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание</strong>: Если при подключении по Wi-Fi компьютер не видит устройство, попробуйте временно отключить фаервол или антивирус, так как они могут блокировать порты, необходимые для обнаружения сканера в локальной сети.</p>
+</blockquote>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка готовности к сканированию</h4><label class="check-item"><input type="checkbox"><span>Установлен драйвер ScanGear</span></label><label class="check-item"><input type="checkbox"><span>Подключен кабель USB или Wi-Fi</span></label><label class="check-item"><input type="checkbox"><span>Устройство включено и на дисплее нет ошибок</span></label><label class="check-item"><input type="checkbox"><span>Компьютер в той же сети Wi-Fi</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="использование-стандартного-по-windows-wia-и-twain">Использование стандартного ПО Windows (WIA и TWAIN)</h2>
+
+<p>Многие пользователи задаются вопросом, как сделать электронный скан Canon без установки дополнительного софта, используя только встроенные средства операционной системы. Windows обладает двумя основными протоколами для работы со сканерами: <strong>WIA</strong> (Windows Image Acquisition) и <strong>TWAIN</strong>. Оба метода позволяют получить файл, но имеют свои особенности интерфейса.</p>
+
+<p>Для запуска сканирования через WIA откройте меню «Пуск» и введите поиск «Факсы и сканирование Windows». Выберите в левой панели ваше устройство <em>Canon</em> и нажмите кнопку «Новое сканирование». Здесь вы можете задать базовые параметры: цветной режим, тип документа (фото или текст) и разрешение.</p>
+
+<p>Протокол TWAIN обычно вызывается через специализированные программы, такие как Adobe Photoshop или IrfanView, но может быть доступен и в системных утилитах. При выборе этого метода вы получаете доступ к более тонким настройкам, таким как коррекция цвета и удаление фона, которые недоступны в упрощенном интерфейсе WIA.</p>
+
+<p>Важно отметить, что скорость работы через WIA может быть ниже, чем через родное ПО, особенно при сканировании больших объемовdocumentов. Если вам требуется высокая производительность, лучше использовать специализированные утилиты.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание</strong>: При использовании стандартных драйверов Windows часто невозможно настроить автоматическое сохранение сканов в конкретную папку или конвертацию в многостраничный PDF без сторонних плагинов.</p>
+</blockquote>
+
+<div class="pb-poll" id="poll-79a15d68"><div class="pb-poll-question">📊 Какой способ сканирования вы используете чаще всего?</div><div class="pb-poll-option" data-poll="79a15d68" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Родное ПО Canon</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="79a15d68" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Стандартные средства Windows</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="79a15d68" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Сторонние программы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="79a15d68" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Сканирование через телефон</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="работа-с-ij-scan-utility-и-специализированным-по">Работа с IJ Scan Utility и специализированным ПО</h2>
+
+<p>Наиболее гибкий способ того, как сделать электронный скан Canon, — использование утилиты <em>IJ Scan Utility</em>, которая идет в комплекте с драйверами. Это программа предоставляет расширенный контроль над процессом оцифровки и позволяет создавать сложные профили сканирования для разных задач.</p>
+
+<p>Запустите программу и выберите режим сканирования: «Документ», «Фото», «PDF» или «Настройка». В режиме «Настройка» вы можете указать формат выходного файла, место сохранения и даже настроить автоматическое распознавание текста (OCR). Для бизнеса критически важно использовать опцию <strong>OCR</strong>, чтобы сделать сканированный текст редактируемым.</p>
+
+<p>Интерфейс <em>IJ Scan Utility</em> интуитивно понятен: вы видите предварительный просмотр изображения прямо в окне программы. Это позволяет обрезать ненужные поля и скорректировать яркость перед финальным сохранением. Обратите внимание на вкладку «Параметры», где можно установить разрешение в DPI — оптимальное значение для текста составляет 300 DPI, а для фотографий — 600 DPI и выше.</p>
+
+<p>Если вы работаете с архивами, используйте функцию пакетного сканирования. Программа позволит вам прогонять стопку документов через автоподатчик (ADF) без необходимости нажимать кнопку «Сканировать» после каждого листа. Это экономит огромное количество времени при оцифровке больших объемов.</p>
+
+<details class="pb-accordion"><summary>Как настроить OCR в IJ Scan Utility</summary><div class="pb-accordion-body"><p>В меню настроек выберите вкладку «PDF», поставьте галочку «Создать PDF с возможностью поиска» и выберите язык распознавания. Это превратит картинку в редактируемый текст.</p></div></details>
+
+<h2 id="сканирование-по-сети-и-в-облако">Сканирование по сети и в облако</h2>
+
+<p>В офисной среде часто требуется не сохранять скан на локальный компьютер, а отправлять его на сервер или в электронную почту. Как сделать электронный скан Canon по сети? Для этого используется функция <strong>Scan to Email</strong> или <strong>Scan to Folder</strong>. Эти опции настраиваются непосредственно на панели управления принтера.</p>
+
+<p>Вам потребуется ввести адрес электронной почты или путь к сетевой папке (SMB) в меню устройства. Для настройки Email-отправки часто требуется указать SMTP-сервер вашего почтового провайдера. Это позволяет отправлять сканы с панели управления, не прикасаясь к компьютеру вообще.</p>
+
+<p>Современные модели <em>Canon</em> также поддерживают прямой вывод в облачные хранилища, такие как Google Drive или Dropbox. Для активации этой функции необходимо авторизоваться в вашем аккаунте прямо через сенсорный экран принтера. Это идеальный вариант для мобильной работы, когда документы нужно получить на смартфон.</p>
+
+<p>Обратите внимание, что для работы сетевых функций скорость сети играет ключевую роль. При сканировании в высоком разрешении файл может занимать десятки мегабайт, что замедлит передачу при плохом Wi-Fi соединении. Используйте кабель Ethernet для стабильности.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед настройкой сканирования в папку убедитесь, что у учетной записи, от имени которой работает принтер, есть права на запись в эту папку. Часто ошибка «Не удалось сохранить» возникает именно из-за прав доступа Windows.</p></aside>
+
+<h2 id="настройка-качества-и-форматов-файлов">Настройка качества и форматов файлов</h2>
+
+<p>Качество электронного скана напрямую зависит от выбранных параметров. Если вы делаете архивную копию документа, не имеет смысла использовать максимальное разрешение, так как это создаст огромные файлы. Для текстовых документов оптимальным является формат <strong>PDF</strong> с разрешением 200-300 DPI.</p>
+
+<p>Для фотографий и графических материалов лучше использовать форматы <strong>TIFF</strong> или <strong>JPEG</strong> с высоким качеством сжатия. Формат TIFF считается без потерь и идеален для дальнейшей профессиональной обработки, тогда как JPEG удобен для быстрой отправки по почте благодаря меньшему весу.</p>
+
+<p>Важно учитывать цветовое пространство. Для черно-белых документов выбирайте режим «Черно-белый» (Binary) или «Оттенки серого». Это существенно уменьшит размер файла и ускорит процесс сканирования. Режим «Цветной» используйте только тогда, когда в документе есть цветные элементы, требующие сохранения.</p>
+
+<div class="pb-table-wrap"><table>
+ <thead>
+ <tr>
+ <th>Тип документа</th>
+ <th>Оптимальный формат</th>
+ <th>Разрешение (DPI)</th>
+ <th>Цветовой режим</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Текстовый документ</td>
+ <td>PDF</td>
+ <td>300</td>
+ <td>Ч/Б</td>
+ </tr>
+ <tr>
+ <td>Фотография</td>
+ <td>JPEG / TIFF</td>
+ <td>600</td>
+ <td>Цветной</td>
+ </tr>
+ <tr>
+ <td>Архивный документ</td>
+ <td>PDF (с OCR)</td>
+ <td>400</td>
+ <td>Оттенки серого</td>
+ </tr>
+ <tr>
+ <td>Детальное изображение</td>
+ <td>TIFF</td>
+ <td>1200</td>
+ <td>Цветной</td>
+ </tr>
+ </tbody>
+</table></div>
+
+<blockquote>
+<p>⚠️ <strong>Внимание</strong>: Избегайте использования настройки «Максимальное качество» для обычных отчетов, так как это может увеличить размер файла в 10-15 раз без видимой пользы для восприятия текста.</p>
+</blockquote>
+
+<blockquote>
+<p>⚠️ <strong>Внимание</strong>: При сканировании старых документов с пожелтевшим фоном обязательно включите функцию удаления фона или корректировки контрастности в настройках драйвера, иначе текст будет плохо читаться.</p>
+</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Правильный выбор формата и DPI — залог того, что ваши сканы будут занимать минимум места на диске, при этом сохраняя достойное качество для чтения и печати.</p></aside>
+
+<h2 id="решение-типичных-проблем-при-сканировании">Решение типичных проблем при сканировании</h2>
+
+<p>Иногда процесс прерывается, или сканер выдает ошибку. Одна из частых проблем — «Устройство не найдено». В этом случае проверьте подключение кабелей и перезагрузите и принтер, и компьютер. Если проблема в сети, попробуйте переподключить Wi-Fi или сменить канал роутера, чтобы избежать наложения сигналов.</p>
+
+<p>Если сканер работает, но выдаются пустые страницы или полосы, проверьте стекло сканера. Даже маленькая пылинка или капля корректора могут испортить результат. Протрите стекло мягкой безворсовой тканью со спиртовым раствором. Также проверьте, не перепутаны ли направляющие автоподатчика.</p>
+
+<p>При застревании бумаги в автоподатчике не пытайтесь выдернуть лист силой, чтобы не повредить механизмы. Откройте крышку и аккуратно удалите замятие, следуя стрелкам на корпусе. После устранения замятия убедитесь, что все ролики чистые и сухие.</p>
+
+<p>Если драйвер устанавливается, но не видит сканер, возможно, требуется переустановка службы WIA. В Windows Services найдите «Windows Image Acquisition», остановите службу и запустите её снова. Это часто помогает при сбоях после обновлений системы.</p>
+
+<details class="pb-accordion"><summary>Что делать при ошибке «Драйвер не отвечает»</summary><div class="pb-accordion-body"><p>Попробуйте удалить устройство из диспетчера устройств, отключить кабель, перезагрузить ПК, снова подключить кабель и дождаться автоматической установки драйвера.</p></div></details>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Почему сканер Canon не определяется при подключении по USB?</summary>
+<p>Частая причина — использование неоригинального кабеля или повреждение порта. Попробуйте сменить кабель и подключить устройство в другой USB-порт, желательно расположенный непосредственно на материнской плате (сзади системного блока), а не через USB-хаб. Также проверьте, установлен ли драйвер сканера, а не только драйвер принтера.</p>
+</details>
+
+<details>
+<summary>Как сделать скан в PDF с несколькими страницами на Canon?</summary>
+<p>Используйте функцию автоподатчика листов (ADF) и в настройках драйвера выберите формат выходного файла «PDF», а не «PDF (один файл)» или «JPEG». В утилите IJ Scan Utility активируйте опцию «Объединить в один файл», чтобы все страницы сохранились в одном документе.</p>
+</details>
+
+<details>
+<summary>Можно ли сканировать документы без компьютера?</summary>
+<p>Да, если у вас модель с поддержкой Wi-Fi и облачных сервисов. Вы можете настроить отправку сканов прямо на электронную почту или в облачное хранилище (Google Drive, Dropbox) через сенсорную панель принтера, не подключая его к ПК.</p>
+</details>
+
+<details>
+<summary>Как увеличить разрешение сканирования выше стандартного?</summary>
+<p>В настройках драйвера <em>ScanGear</em> можно вручную задать разрешение (DPI). Однако помните, что увеличение DPI сверх 1200 обычно не дает качественного прироста для документов, но значительно замедляет работу и увеличивает размер файла.</p>
+</details>
+
+<details>
+<summary>Что делать, если скан получается слишком темным или светлым?</summary>
+<p>Откройте настройки сканирования в программе и найдите ползунки яркости и контрастности. Также можно включить функцию автоматической коррекции экспозиции. Если это не помогает, проверьте, не загрязнено ли стекло сканера или лампа подсветки.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-skanirovat-odnim-fajlom-neskolko-stranits-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать несколько страниц в один файл на принтере Canon</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как объединить несколько листов в один PDF на сканерах Canon. Настройки драйве</span>
+            </a><a href="/articles/p/pr/printer-canon-kak-skanirovat-pasport.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать паспорт на принтере Canon: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по сканированию паспорта на принтерах Canon: выбор настроек, формат файла, сов</span>
+            </a><a href="/articles/k/ka/kak-na-printere-kenon-otskanirovat-dokument-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как отсканировать документ на компьютер с принтера Canon: Полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как сканировать документы с МФУ Canon на ПК через USB, Wi-Fi и программы IJ Sc</span>
+            </a><a href="/articles/c/ca/canon-mf3010-kak-skanirovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на Canon MF3010: Полная инструкция по настройке и драйверам</span>
+                <span class="pb-related-desc">Подробное руководство: как настроить сканирование на МФУ Canon MF3010 через драйвер, стандартные сре</span>
+            </a><a href="/articles/k/ka/kak-otskanirovat-dokumenty-na-printere-canon-pixma.html" class="pb-related-card">
+                <span class="pb-related-title">Как отсканировать документы на принтере Canon Pixma: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция по сканированию с Canon Pixma. Настройки через IJ Scan Utility, MFP Connect и в</span>
+            </a><a href="/articles/k/ka/kak-ochistit-pamyat-skanera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как очистить память сканера Canon: полное руководство по сбросу и оптимизации</span>
+                <span class="pb-related-desc">Узнайте, как эффективно освободить внутреннюю память устройств Canon. Пошаговые инструкции сброса, о</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как работает сканер Canon: принцип действия и технология — Кэнон Инфо</title>
+    <meta name="description" content="Разбираем, как работает сканер Canon. Технология CCD и CIS, оптическая система, процесс захвата изображения и особенности драйверов Capture One.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-rabotaet-skaner-kenon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как работает сканер Canon: принцип действия и технология">
+    <meta property="og:description" content="Разбираем, как работает сканер Canon. Технология CCD и CIS, оптическая система, процесс захвата изображения и особенности драйверов Capture One.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-nav-active">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/skanirovanie-i-kopirovanie/">Сканирование и копирование</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как работает сканер Canon: принцип действия и технология</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#оптическая-система-и-типы-сенсоров">Оптическая система и типы сенсоров</a></li><li><a href="#процесс-захвата-изображения-и-оцифровка">Процесс захвата изображения и оцифровка</a></li><li><a href="#роль-драйверов-и-программного-обеспечения">Роль драйверов и программного обеспечения</a></li><li><a href="#технологии-улучшения-качества-изображения">Технологии улучшения качества изображения</a></li><li><a href="#типичные-проблемы-и-их-причины">Типичные проблемы и их причины</a></li><li><a href="#профессиональные-нюансы-эксплуатации">Профессиональные нюансы эксплуатации</a></li><li><a href="#заключение-и-перспективы-развития">Заключение и перспективы развития</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-sdelat-skan-dokumenta-na-printere-canon-pixma-g2420.html">Как сделать скан на Canon PIXMA G2420: полное руководство</a></li><li><a href="/articles/k/ka/kak-ustanovit-programmu-dlya-skanera-canon.html">Установка ПО для сканера Canon: пошаговая инструкция 2026</a></li><li><a href="/articles/c/ca/canon-pixma-kak-sdelat-kopiyu.html">Как сделать копию на принтере Canon Pixma: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-otskanirovat-dokument-na-kompyuter-s-printera-canon-mg3640.html">Как отсканировать документ на компьютер с принтера Canon MG3640: Полная инструкция</a></li><li><a href="/articles/c/ca/canon-ts3340-kak-skanirovat-na-printere.html">Как сканировать на Canon TS3340: Полная инструкция по Wi-Fi и USB</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Принцип работы сканеров Canon: от оптики до драйвера</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#оптическая-система-и-типы-сенсоров">Оптическая система и типы сенсоров</a></li><li><a href="#процесс-захвата-изображения-и-оцифровка">Процесс захвата изображения и оцифровка</a></li><li><a href="#роль-драйверов-и-программного-обеспечения">Роль драйверов и программного обеспечения</a></li><li><a href="#технологии-улучшения-качества-изображения">Технологии улучшения качества изображения</a></li><li><a href="#типичные-проблемы-и-их-причины">Типичные проблемы и их причины</a></li><li><a href="#профессиональные-нюансы-эксплуатации">Профессиональные нюансы эксплуатации</a></li><li><a href="#заключение-и-перспективы-развития">Заключение и перспективы развития</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Многие пользователи, приобретая МФУ или планшетный сканер бренда, просто нажимают кнопку и получают результат, не задумываясь о сложнейших процессах, скрытых внутри корпуса. Однако понимание того, <strong>как работает сканер Canon</strong>, позволяет не только эффективнее использовать устройство, но и вовремя выявлять неисправности или оптимизировать настройки для получения идеального качества изображения. В основе лежит преобразование оптической информации в цифровые данные, что требует слаженной работы десятков компонентов.</p>
+
+<p>Современные устройства компании <em>Canon</em> используют передовые технологии сенсоров, которые значительно отличаются от устаревших аналогов других производителей. <strong>Точность цветопередачи</strong> и <strong>скорость обработки</strong> зависят от того, какой именно тип матрицы установлен в конкретную модель. Рассмотрим детально, какие физические и программные процессы происходят с момента нажатия кнопки «Сканировать» до появления файла на вашем компьютере.</p>
+
+<h2 id="оптическая-система-и-типы-сенсоров">Оптическая система и типы сенсоров</h2>
+
+<p>Сердцем любого сканера Canon является оптическая система, которая физически перемещается под стеклом пластины. В зависимости от класса устройства (планшетный или документ-сканер), здесь применяются две основные технологии: <strong>CCD (Charge-Coupled Device)</strong> и <strong>CIS (Contact Image Sensor)</strong>. Первая технология характерна для профессиональных моделей и МФУ, требующих глубокой проработки теней и высокой динамической Range.</p>
+
+<p>Система <em>CCD</em> использует сложную конструкцию с зеркалами и линзами для фокусировки света на сенсоре. Свет от лампы отражается от оригинала, проходит через систему призм и попадает на фоточувствительные элементы. Это позволяет получать изображение с минимальными потерями качества, особенно при работе с негативами или слайдами. В то же время, технология <em>CIS</em>, используемая в компактных моделях, прижимает сенсор вплотную к объекту, исключая громоздкую оптику.</p>
+
+<p>Ключевым отличием является то, что <strong>матрицы CCD</strong> обеспечивают более высокое разрешение при сканировании объемных объектов благодаря большему рабочему расстоянию. В устройствах <em>Canon imageRUNNER</em> или серии <em>Pixma</em> PRO устанавливаются именно такие модули. При этом CIS-модули выигрывают в энергопотреблении и скорости прохода, так как не требуют перемещения тяжелой оптической каретки.</p>
+
+<h2 id="процесс-захвата-изображения-и-оцифровка">Процесс захвата изображения и оцифровка</h2>
+
+<p>Когда вы запускаете задачу сканирования, световая лампа начинает движение вдоль линейки сенсора. Свет, отраженный от бумаги или фотографии, несет в себе информацию о цвете и яркости каждого пикселя. Этот аналоговый сигнал улавливается фотодиодами и преобразуется в электрический заряд, пропорциональный интенсивности света.</p>
+
+<p>Далее вступает в работу аналого-цифровой преобразователь (АЦП), который переводит электрические сигналы в цифровой код. Именно здесь формируется <strong>глубина цвета</strong> изображения. Если установлено значение 24 бита, это означает 8 бит на каждый канал (красный, зеленый, синий), что дает более 16 миллионов оттенков. Более продвинутые сканеры поддерживают 48-битный режим для профессиональной цветокоррекции.</p>
+
+<p>Важно отметить, что процесс не происходит мгновенно в одной точке. Сенсор считывает изображение построчно, двигаясь с высокой точностью. Любое дрожание или смещение оптической каретки может привести к искажениям, поэтому в устройствах <em>Canon</em> используются прецизионные направляющие. Результатом этого этапа становится массив сырых данных (RAW), который еще не готов к просмотру.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> При сканировании прозрачных материалов (негативов) используется отдельный источник подсветки, расположенный сверху, а не снизу. Всегда проверяйте, включен ли адаптер для негативов (TPA), иначе изображение будет полностью черным.</p>
+</blockquote>
+
+<div class="pb-poll" id="poll-5e38c543"><div class="pb-poll-question">📊 Какой тип сканера вы используете?</div><div class="pb-poll-option" data-poll="5e38c543" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Планшетный (CCD)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="5e38c543" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Документ-сканер (CIS)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="5e38c543" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">МФУ</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="5e38c543" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Мобильное приложение</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="роль-драйверов-и-программного-обеспечения">Роль драйверов и программного обеспечения</h2>
+
+<p>Аппаратная часть бесполезна без правильного программного управления. Драйвер сканера <em>Canon</em> выступает посредником между операционной системой и физическим устройством. Он инструктирует железо, с какой скоростью двигаться, какой цветовой профиль применять и как обрабатывать шум.</p>
+
+<p>Особое место в экосистеме компании занимает программное обеспечение <strong>Canon IJ Scan Utility</strong> и <em>Image Capture</em> (для macOS). Эти утилиты предоставляют пользователю доступ к продвинутым функциям, таким как <strong>автоматическое исправление цвета</strong> и удаление пыли. Без установки официального драйвера устройство часто работает только в базовом режиме через стандартный интерфейс WIA или TWAIN, что ограничивает возможности.</p>
+
+<p>Программное обеспечение также управляет <strong>потоком данных</strong> через интерфейс USB или Wi-Fi. Современные модели поддерживают прямую передачу в облачные сервисы, что требует от драйвера не только управления сканером, но и шифрования данных. Если вы замечаете, что сканирование идет очень медленно, проблема может быть не в железе, а в неправильно выбранном режиме разрешения в настройках драйвера.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Никогда не используйте драйверы от других брендов или универсальные решения, если вам критично качество цвета. <em>Canon</em> использует уникальные алгоритмы цветокоррекции, которые не работают в сторонних драйверах, что приводит к зеленоватому или красноватому оттенку.</p>
+</blockquote>
+
+<h2 id="технологии-улучшения-качества-изображения">Технологии улучшения качества изображения</h2>
+
+<p>Одной из сильных сторон устройств марки является встроенная обработка изображений еще на этапе оцифровки. Технология <strong>Fine Detail Plus</strong> позволяет автоматически распознавать и сглаживать границы объектов, делая текст более четким, а фотографии — резкими. Это особенно полезно при сканировании старых газет или размытых фотографий.</p>
+
+<ul>
+    <li>🔍 <strong>Auto Crop</strong> — функция автоматически определяет границы документа и обрезает пустые поля, экономя место на жестком диске.</li>
+    <li>🎨 <strong>Color Correction</strong> — алгоритмы анализируют баланс белого и корректируют цветовой сдвиг, характерный для старых фотобумаг.</li>
+    <li>🧹 <strong>Dust Removal</strong> — программное удаление пылинок и мелких царапин с оригинала без потери детализации.</li>
+</ul>
+
+<p>Эти функции работают в режиме реального времени, но могут существенно замедлять процесс. Если вам нужно быстро получить черновую копию, имеет смысл отключить их в настройках. Однако для архивирования документов или подготовки изображений к печати эти инструменты незаменимы. <strong>Адаптивная линза</strong> также подстраивается под толщину оригинала, если эта опция доступна в вашей модели.</p>
+
+<details class="pb-accordion"><summary>Что такое режим «Экономия места»?</summary><div class="pb-accordion-body"><p>В этом режиме сканер применяет агрессивное сжатие данных и отключает обработку теней, что позволяет увеличить скорость сканирования в 2-3 раза, но качество изображения значительно падает. Используйте только для черновиков.</p></div></details>
+
+<h2 id="типичные-проблемы-и-их-причины">Типичные проблемы и их причины</h2>
+
+<p>Даже надежная техника Canon может столкнуться с трудностями, если не соблюдать правила эксплуатации. Чаще всего пользователи жалуются на полосы на отсканированном изображении или размытость. В 90% случаев причина кроется в загрязнении стекла или оптической каретки. Пыль, попавшая на лампу или зеркало, создает постоянные артефакты на всех сканах.</p>
+
+<p>Другая частая проблема — «эффект радуги» или искажение цветов. Это может быть следствием износа лампы подсветки, которая со временем теряет интенсивность и меняет спектр излучения. Также причиной может стать перегрев сенсора при длительной интенсивной работе без перерыва. В таких случаях устройство может временно снизить производительность или выдать ошибку.</p>
+
+<p>Если сканер издает посторонний шум, это указывает на механическую неисправность шестеренок или направляющих. В профессиональных моделях часто требуется регулярная смазка механизмов. Игнорирование таких сигналов может привести к полному выходу из строя оптического блока, ремонт которого часто сопоставим со стоимостью нового устройства.</p>
+
+<div class="pb-table-wrap"><table>
+    <thead>
+        <tr>
+            <th>Проблема</th>
+            <th>Вероятная причина</th>
+            <th>Рекомендуемое действие</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Полосы на изображении</td>
+            <td>Грязное стекло или лампа</td>
+            <td>Очистка спец. средством</td>
+        </tr>
+        <tr>
+            <td>Размытое изображение</td>
+            <td>Неверное разрешение или сдвиг</td>
+            <td>Проверка драйвера и фокуса</td>
+        </tr>
+        <tr>
+            <td>Темные края документа</td>
+            <td>Потеря интенсивности лампы</td>
+            <td>Замена осветительного модуля</td>
+        </tr>
+        <tr>
+            <td>Шум при движении</td>
+            <td>Износ шестеренок</td>
+            <td>Смазка или замена редуктора</td>
+        </tr>
+    </tbody>
+</table></div>
+
+<h2 id="профессиональные-нюансы-эксплуатации">Профессиональные нюансы эксплуатации</h2>
+
+<p>Для профессионалов, работающих с фотографией, критически важно понимать разницу в работе режимов сканирования. В настройках драйвера <em>Canon Capture OnTouch</em> можно выбрать режим работы с пленкой. Здесь используется отдельная подсветка, и скорость сканирования падает в разы, так как свет проходит через толщу эмульсии.</p>
+
+<p>Важно учитывать, что <strong>оптическое разрешение</strong> (например, 4800 x 9600 dpi) не всегда равно реальному качеству. При сканировании документов с текстом избыточное разрешение только увеличивает размер файла без видимой пользы. Оптимальным стандартом для печати является 300 DPI, а для архивирования — 600 DPI. Все, что выше, используется только для репродукции картин или слайдов.</p>
+
+<p>Еще одним важным аспектом является цветовое пространство. Стандартный режим работы — sRGB, который подходит для веба и большинства принтеров. Однако при сканировании профессиональных негативов необходимо выбирать Adobe RGB или ProPhoto RGB, чтобы сохранить весь спектр цветов, захваченный пленкой. Это требует дальнейшего конвертирования в Photoshop.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к профессиональному сканированию</h4><label class="check-item"><input type="checkbox"><span>Протереть стекло спиртовой салфеткой</span></label><label class="check-item"><input type="checkbox"><span>Удалить пыль с оригинала кистью</span></label><label class="check-item"><input type="checkbox"><span>Закрепить пленку в держателе</span></label><label class="check-item"><input type="checkbox"><span>Выбрать профиль Adobe RGB в драйвере</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Делайте тестовый скан с низкой точностью перед запуском массового сканирования, чтобы убедиться в чистоте стекла и правильности настроек цвета. Это сэкономит время и нервы.</p></aside>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярная чистка стекла и оптической каретки — залог сохранения качества изображения на протяжении всего срока службы сканера Canon.</p></aside>
+
+<h2 id="заключение-и-перспективы-развития">Заключение и перспективы развития</h2>
+
+<p>Современные сканеры <em>Canon</em> представляют собой сложный симбиоз оптики, механики и интеллектуального программного обеспечения. Понимание того, как именно происходит захват и обработка сигнала, позволяет пользователю выжать максимум из своего устройства. От правильного выбора сенсора до настройки профиля цвета — каждый этап влияет на финальный результат.</p>
+
+<p>В будущем развитие направлено на увеличение скорости обработки данных при сохранении высокой глубины цвета. Технологии искусственного интеллекта уже начинают внедряться для автоматического восстановления поврежденных документов. Однако базовый принцип работы — от света к цифре — останется неизменным, а качественная оптика <strong>CCD-матриц</strong> по-прежнему будет эталоном для профессионалов.</p>
+
+<p>Используйте устройства бренда в соответствии с их назначением: компактные CIS-модели для офисной текучки и мощные планшетные сканеры для работы с графикой и пленкой. Соблюдение рекомендаций по эксплуатации и своевременное обновление драйверов обеспечат стабильную работу и высокое качество сканирования долгие годы.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> При обновлении прошивки устройства или драйверов всегда отключайте антивирусное ПО на время установки, чтобы избежать блокировки передачи данных, которая может привести к "окирпичиванию" сканера.</p>
+</blockquote>
+
+<h2 id="часто-задаваемые-вопросы">Часто задаваемые вопросы</h2>
+
+<details>
+    <summary>Почему сканер Canon издает громкий шум при сканировании?</summary>
+    <p>Это может быть вызвано износом шестеренок привода оптической каретки или попаданием постороннего предмета на направляющую. Если шум появился внезапно, проверьте, нет ли на стекле или под ним инородных предметов.</p>
+</details>
+
+<details>
+    <summary>Какое разрешение лучше выбрать для сканирования фотографий?</summary>
+    <p>Для печати фотографий размера A4 оптимальным является разрешение 300-600 DPI. Если вы планируете архивировать снимки с возможностью их дальнейшего увеличения, выбирайте 1200 DPI и выше.</p>
+</details>
+
+<details>
+    <summary>Можно ли сканировать документы через Wi-Fi без драйверов?</summary>
+    <p>Да, современные модели поддерживают режим WSD (Web Services for Devices) или APP-сканирование. Однако для доступа к полным настройкам цвета и формата файла установка официального драйвера Canon IJ Scan Utility обязательна.</p>
+</details>
+
+<details>
+    <summary>Почему при сканировании негативов изображение получается перевернутым?</summary>
+    <p>В драйвере Canon необходимо выбрать правильный тип оригинала в меню. Если выбран режим "Пленка" (Film), но физически вы сканируете слайд в обратном положении, программа может неверно интерпретировать ориентацию. Проверьте настройки в <code>Настройки сканирования → Тип оригинала</code>.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-sdelat-skan-dokumenta-na-printere-canon-pixma-g2420.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать скан на Canon PIXMA G2420: полное руководство</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как сканировать документы на принтере Canon PIXMA G2420 через компьютер и пане</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-programmu-dlya-skanera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Установка ПО для сканера Canon: пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Как правильно установить драйверы и программное обеспечение для сканера Canon на Windows/Mac. Официа</span>
+            </a><a href="/articles/c/ca/canon-pixma-kak-sdelat-kopiyu.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать копию на принтере Canon Pixma: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по созданию копий на принтерах Canon Pixma. Настройки, устранение ошибок и сов</span>
+            </a><a href="/articles/k/ka/kak-otskanirovat-dokument-na-kompyuter-s-printera-canon-mg3640.html" class="pb-related-card">
+                <span class="pb-related-title">Как отсканировать документ на компьютер с принтера Canon MG3640: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая инструкция сканирования с Canon MG3640 через IJ Scan Utility и приложение Canon. Решение п</span>
+            </a><a href="/articles/c/ca/canon-ts3340-kak-skanirovat-na-printere.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать на Canon TS3340: Полная инструкция по Wi-Fi и USB</span>
+                <span class="pb-related-desc">Пошаговое руководство: как настроить сканирование на Canon TS3340 через компьютер, смартфон и панель</span>
+            </a><a href="/articles/k/ka/kak-skanirovat-s-pomoshchyu-printera-canon-mf3010.html" class="pb-related-card">
+                <span class="pb-related-title">Как сканировать документы с Canon MF3010: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как настроить сканирование на принтере Canon MF3010 через USB и программу IJ Scan Utility. </span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

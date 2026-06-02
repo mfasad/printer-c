@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Установка драйвера Canon LiDE 25 на Windows 10 x64: пошаговая инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Подробное руководство по установке драйвера сканера Canon LiDE 25 на 64-битную Windows 10. Решение проблем совместимости, режим администратора и настройка TWAIN.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-lide-25-windows-10-x64-driver-kak-ustanovit.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Установка драйвера Canon LiDE 25 на Windows 10 x64: пошаговая инструкция">
+    <meta property="og:description" content="Подробное руководство по установке драйвера сканера Canon LiDE 25 на 64-битную Windows 10. Решение проблем совместимости, режим администратора и настройка TWAIN.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/podklyuchenie-k-pk/">Подключение к ПК</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Установка драйвера Canon LiDE 25 на Windows 10 x64: пошаговая инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#почему-windows-10-не-видит-canon-lide-25-автоматически">Почему Windows 10 не видит Canon LiDE 25 автоматически</a></li><li><a href="#скачивание-правильного-пакета-драйверов-и-по">Скачивание правильного пакета драйверов и ПО</a></li><li><a href="#пошаговая-инструкция-по-принудительной-установке">Пошаговая инструкция по принудительной установке</a></li><li><a href="#настройка-через-диспетчер-устройств-при-отсутствии-драйвера">Настройка через Диспетчер устройств при отсутствии драйвера</a></li><li><a href="#использование-утилиты-canon-ij-scan-utility-и-twain">Использование утилиты Canon IJ Scan Utility и TWAIN</a></li><li><a href="#таблица-совместимости-и-версий-по">Таблица совместимости и версий ПО</a></li><li><a href="#решение-типичных-проблем-и-ошибок">Решение типичных проблем и ошибок</a></li><li><a href="#особенности-работы-с-сервисами-и-обновлениями">Особенности работы с сервисами и обновлениями</a></li><li><a href="#заключение-и-итоговые-рекомендации">Заключение и итоговые рекомендации</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-ustanovit-printer-canon-lbp-810-na-windows-7-x64-video.html">Как установить принтер Canon LBP-810 на Windows 7 x64: видео + инструкция</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-lbp-1120-k-kompyuteru-windows-7-x64.html">Подключение Canon LBP 1120 к Windows 7 x64: Пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-ustanovit-printer-canon-i-sensys-mf4018.html">Как установить принтер Canon i-SENSYS MF4018: Полная инструкция</a></li><li><a href="/articles/k/ka/kak-podklyuchit-canon-500d-k-kompyuteru.html">Как подключить Canon 500D к компьютеру: USB, драйверы и передача фото</a></li><li><a href="/articles/k/ka/kak-soedinit-printer-kenon-s-kompyuterom.html">Как подключить принтер Canon к компьютеру: USB и Wi-Fi настройки</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как установить драйвер Canon LiDE 25 на Windows 10 x64: полное руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#почему-windows-10-не-видит-canon-lide-25-автоматически">Почему Windows 10 не видит Canon LiDE 25 автоматически</a></li><li><a href="#скачивание-правильного-пакета-драйверов-и-по">Скачивание правильного пакета драйверов и ПО</a></li><li><a href="#пошаговая-инструкция-по-принудительной-установке">Пошаговая инструкция по принудительной установке</a></li><li><a href="#настройка-через-диспетчер-устройств-при-отсутствии-драйвера">Настройка через Диспетчер устройств при отсутствии драйвера</a></li><li><a href="#использование-утилиты-canon-ij-scan-utility-и-twain">Использование утилиты Canon IJ Scan Utility и TWAIN</a></li><li><a href="#таблица-совместимости-и-версий-по">Таблица совместимости и версий ПО</a></li><li><a href="#решение-типичных-проблем-и-ошибок">Решение типичных проблем и ошибок</a></li><li><a href="#особенности-работы-с-сервисами-и-обновлениями">Особенности работы с сервисами и обновлениями</a></li><li><a href="#заключение-и-итоговые-рекомендации">Заключение и итоговые рекомендации</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Владельцы компактных планшетных сканеров <em>Canon LiDE 25</em> часто сталкиваются с непростой задачей при переходе на современные операционные системы. Модель, выпущенная в эпоху Windows 7 и 8, не имеет официального драйвера для <strong>Windows 10 x64</strong> в базе поддержки производителя, что вызывает панику у пользователей, ожидающих автоматического распознавания.</p>
+
+<p>Однако отказываться от использования надежного устройства нет причин, так как существуют проверенные методы принудительной установки или использования совместимых версий ПО. В этой статье мы подробно разберем, как заставить сканер работать на <em>64-битной системе</em>, используя режим совместимости и специальные настройки диспетчера устройств.</p>
+
+<h2 id="почему-windows-10-не-видит-canon-lide-25-автоматически">Почему Windows 10 не видит Canon LiDE 25 автоматически</h2>
+<p>Операционная система <strong>Windows 10</strong> обладает обширной базой драйверов, но она не может содержать информацию о каждом устройстве, выпущенном за последние десятилетия. <em>Canon LiDE 25</em> был разработан с расчетом на архитектуру и API старых версий ОС, которые кардинально отличаются от ядра современной Windows 10.</p>
+
+<p>Когда вы подключаете кабель USB, система распознает устройство как <strong>неизвестный USB-устройство</strong> или просто молчит, так как не находит в реестре подходящего программного модуля. Проблема усугубляется архитектурой <code>x64</code>, которая требует 64-битных драйверов, а многие старые версии ПО <em>Canon</em> были строго 32-битными.</p>
+
+<p>Важно понимать, что отсутствие драйвера на официальном сайте не означает поломку оборудования. Сканер остается полностью функциональным, ему лишь нужен правильный «ключ» — программный интерфейс, который переведет сигналы сенсора в понятный для компьютера формат.</p>
+
+<h2 id="скачивание-правильного-пакета-драйверов-и-по">Скачивание правильного пакета драйверов и ПО</h2>
+<p>Первым шагом является поиск корректного установочного файла. Официально <em>Canon</em> не выпускала драйвер для <strong>Windows 10</strong>, поэтому нужно ориентироваться на последнюю доступную версию, которая обладает наибольшей степенью совместимости.</p>
+
+<p>Большинство экспертов рекомендуют использовать драйвер для <em>Windows 7 64-bit</em> или <em>Windows 8.1 64-bit</em>, так как их архитектура наиболее близка к <code>Windows 10</code>. Файл обычно называется <code>LIDE25_UST_Win_1011_H20200915.exe</code> или имеет схожее наименование в архивах поддержки.</p>
+
+<p>Если вы скачиваете дистрибутив с официального сайта, убедитесь, что выбрали именно разрядность <code>x64</code>. Установка 32-битного пакета на 64-битную систему часто приводит к тому, что сканер определяется, но не может передавать изображения или выдает ошибку при запуске сканирования.</p>
+
+<ul>
+<li>🔍 Всегда проверяйте цифровую подпись файла перед запуском, чтобы избежать заражения системы вредоносным ПО.</li>
+<li>📥 Сохраняйте установочный файл в отдельную папку на диске <code>C:</code>, а не в папку «Загрузки», чтобы избежать проблем с правами доступа.</li>
+<li>💾 Заранее скачайте утилиту <em>TWAIN</em>, если стандартный драйвер не сработает, так как она часто работает стабильнее на новых ОС.</li>
+</ul>
+
+<h2 id="пошаговая-инструкция-по-принудительной-установке">Пошаговая инструкция по принудительной установке</h2>
+<p>Процесс установки требует выполнения определенных действий в режиме администратора. Откройте скачанный файл двойным щелчком, но не соглашайтесь на автоматическое выполнение сразу, если система предложит.</p>
+
+<p>Если окно установки не появляется или выдает ошибку совместимости, нажмите правой кнопкой мыши на файл <code>.exe</code> и выберите пункт «Свойства». Перейдите во вкладку <code>Совместимость</code> и отметьте галочкой «Запустить эту программу в режиме совместимости с: <strong>Windows 7</strong>».</p>
+
+<p>Обязательно активируйте опцию «Запускать эту программу от имени администратора» внизу окна свойств. Это критически важно, так как драйверу требуется доступ к системному реестру и портам USB, который стандартный пользователь не всегда имеет. Нажмите <code>Применить</code> и <code>ОК</code>, а затем запустите инсталлятор заново.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Если установщик зависает на этапе копирования файлов, это может означать конфликт с антивирусом. Временно отключите защиту и попробуйте снова, но не забудьте включить её после установки.</p>
+</blockquote>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к установке драйвера</h4><label class="check-item"><input type="checkbox"><span>Отключить интернет</span></label><label class="check-item"><input type="checkbox"><span>Запустить от имени администратора</span></label><label class="check-item"><input type="checkbox"><span>Выбрать режим совместимости Win 7</span></label><label class="check-item"><input type="checkbox"><span>Подключить сканер в конце</span></label><label class="check-item"><input type="checkbox"><span>Перезагрузить ПК</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="настройка-через-диспетчер-устройств-при-отсутствии-драйвера">Настройка через Диспетчер устройств при отсутствии драйвера</h2>
+<p>Иногда автоматический установщик не может корректно прописать устройство в систему. В этом случае необходимо использовать <strong>Диспетчер устройств</strong>. Откройте его через поиск Windows или нажав <code>Win + X</code> и выбрав соответствующий пункт в меню.</p>
+
+<p>Найдите в списке раздел «Контроллеры USB» или «Другие устройства», где может значиться ваше устройство с желтым восклицательным знаком. Нажмите на него правой кнопкой и выберите «Обновить драйвер», затем «Выполнить поиск драйверов на этом компьютере».</p>
+
+<p>В открывшемся окне укажите путь к папке, куда вы ранее распаковали файлы драйвера. Если система не находит драйвер автоматически, попробуйте выбрать «Из списка доступных драйверов на компьютере» и вручную указать модель <em>Canon LiDE 25</em> из списка, если она там присутствует.</p>
+
+<p>Важно не путать этот процесс с установкой обычного программного обеспечения. Здесь мы говорим о принудительной привязке <strong>системного драйвера</strong>, который позволит ОС видеть устройство как готовое к работе.</p>
+
+<div class="pb-poll" id="poll-7ada4fda"><div class="pb-poll-question">📊 Какую версию Windows вы используете?</div><div class="pb-poll-option" data-poll="7ada4fda" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 10 Home</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="7ada4fda" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 10 Pro</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="7ada4fda" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 10 Enterprise</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="7ada4fda" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 11</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="использование-утилиты-canon-ij-scan-utility-и-twain">Использование утилиты Canon IJ Scan Utility и TWAIN</h2>
+<p>После успешной установки драйвера самое время проверить работу сканирования. Стандартная утилита <em>Canon IJ Scan Utility</em> должна появиться в меню «Пуск» или в трее. Запустите её и проверьте, видит ли программа сканер.</p>
+
+<p>Если стандартное ПО отказывается работать, отличным решением станет использование универсальных TWAIN-драйверов. <strong>TWAIN</strong> — это стандартный протокол, который позволяет сканеру общаться с любой программой, будь то Photoshop, Word или специализированное ПО для архивации.</p>
+
+<p>Для работы в режиме <code>x64</code> убедитесь, что вы используете 64-битную версию принимающей программы. 32-битные программы часто не могут корректно взаимодействовать с 64-битными драйверами сканеров, выдавая ошибку «Устройство не найдено».</p>
+
+<ul>
+<li>🖼️ Попробуйте сканировать через <code>Windows Fax and Scan</code> — встроенное приложение часто работает без дополнительных драйверов.</li>
+<li>📄 Экспериментируйте с настройками <strong>разрешения</strong> и <code>глубины цвета</code> в утилите, чтобы найти оптимальный баланс скорости и качества.</li>
+<li>🔄 Обновите компоненты <em>Microsoft Visual C++</em>, так как драйверы Canon часто зависят от этих библиотек.</li>
+</ul>
+
+<p>В некоторых случаях помогает переустановка <strong>библиотек.NET Framework</strong>, если утилита выдает ошибку при запуске интерфейса. Это распространенная проблема на чистых сборках Windows 10.</p>
+
+<details class="pb-accordion"><summary>Что делать, если сканер определяется, но не сканирует?</summary><div class="pb-accordion-body"><p>Часто это связано с конфликтом портов USB. Попробуйте переподключить устройство в другой порт, желательно расположенный сзади системного блока напрямую в материнскую плату, минуя USB-хабы.</p></div></details>
+
+<h2 id="таблица-совместимости-и-версий-по">Таблица совместимости и версий ПО</h2>
+<p>Для наглядности приведем сводную таблицу, которая поможет понять, какой драйвер и для какой системы подходит, чтобы избежать путаницы при установке.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Драйвер/Версия</th>
+<th>Поддерживаемая ОС</th>
+<th>Архитектура</th>
+<th>Статус на Win 10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canon IJ Scan Utility 1.2</td>
+<td>Windows 7/8</td>
+<td>32-bit / 64-bit</td>
+<td>Работает с совместимостью</td>
+</tr>
+<tr>
+<td>Driver LIDE25 v1.0</td>
+<td>Windows XP/Vista</td>
+<td>32-bit</td>
+<td>Не рекомендуется</td>
+</tr>
+<tr>
+<td>Canon TWAIN Driver</td>
+<td>Windows 7/8.1</td>
+<td>64-bit</td>
+<td>Оптимальный выбор</td>
+</tr>
+<tr>
+<td>Windows драйвер</td>
+<td>Windows 10/11</td>
+<td>64-bit</td>
+<td>Часто отсутствует</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>
+<p>⚠️ Внимание: Характеристики совместимости могут меняться в зависимости от обновлений Windows 10 (например, после установки обновления 20H2 или 21H1). Всегда сверяйте детали в официальном центре поддержки Canon перед удалением старого ПО.</p>
+</blockquote>
+
+<h2 id="решение-типичных-проблем-и-ошибок">Решение типичных проблем и ошибок</h2>
+<p>Если после установки вы видите сообщение об ошибке «Нет ответа от сканера» или «Устройство не готово», проверьте физическое подключение. Сканеры <em>Canon LiDE</em> потребляют энергию от USB-порта, и если порт слабый, устройство может не включиться.</p>
+
+<p>Не используйте удлинители или USB-хабы без собственного питания. Подключите сканер напрямую в порт <code>USB 2.0</code> или <code>USB 3.0</code> на задней панели компьютера. <strong>Прямое подключение</strong> — залог стабильной работы.</p>
+
+<p>Еще одна частая проблема — конфликт с другим программным обеспечением для сканирования. Если у вас установлены программы от других брендов или старые версии <em>Acrobat</em>, они могут перехватывать управление портом. Попробуйте удалить лишнее ПО или отключить его автозагрузку.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед каждым сканированием убедитесь, что крышка сканера плотно закрыта и на стекле нет пыли. Это влияет на качество изображения и работу сенсора.</p></aside>
+
+<p>Если вы используете ноутбук, проверьте настройки электропитания. Система может отключать USB-порты для экономии энергии, из-за чего сканер пропадает из системы. Отключите опцию <code>Разрешить компьютеру отключать это устройство для экономии энергии</code> в свойствах USB-контроллера.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Стабильная работа сканера Canon LiDE 25 на Windows 10 x64 достигается комбинацией режима совместимости, запуска от администратора и прямого подключения к USB-порту.</p></aside>
+
+<h2 id="особенности-работы-с-сервисами-и-обновлениями">Особенности работы с сервисами и обновлениями</h2>
+<p>Регулярное обновление Windows может сбросить настройки драйверов, так как система попытается заменить имеющийся драйвер на свой собственный, более новый, но неподходящий. Это приводит к тому, что сканер снова перестает работать.</p>
+
+<p>Чтобы предотвратить это, рекомендуется отключить автоматическую установку драйверов через оснастку групповых политик или редактор реестра, если вы планируете долго использовать это оборудование без апгрейда.</p>
+
+<p> Вы получаете функционал классического сканирования в файл или PDF.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Детали автоматического обновления драйверов через Windows Update могут меняться в новых версиях сборок. Проверяйте настройки «Параметры обновлений» раз в полгода, чтобы убедиться, что система не перезаписала ваш ручной драйвер.</p>
+</blockquote>
+
+<h2 id="заключение-и-итоговые-рекомендации">Заключение и итоговые рекомендации</h2>
+<p>Установка драйвера для <em>Canon LiDE 25</em> на <strong>Windows 10 x64</strong> — задача выполнимая, хотя и требующая ручного вмешательства. Главное — не паниковать при отсутствии официального драйвера и использовать режим совместимости с Windows 7.</p>
+
+<p>Следуйте инструкции по настройке прав администратора и проверяйте физическое подключение. В большинстве случаев проблема кроется именно в отсутствии прав или плохом контакте, а не в сложном программном сбое.</p>
+
+<p>Если все вышеперечисленные методы не помогли, рассмотрите альтернативу в виде использования универсальных драйверов <strong>NAPS2</strong> или <em>VueScan</em>, которые поддерживают огромное количество старых моделей и часто работают даже там, где родное ПО бессильно.</p>
+
+<details>
+<summary>Вопрос 1: Почему сканер Canon LiDE 25 не определяется в Windows 10?</summary>
+<p>Основная причина — отсутствие официального драйвера для 64-битной Windows 10. Система не может автоматически подобрать совместимый модуль, поэтому требуется ручная установка драйвера для Windows 7 с включением режима совместимости.</p>
+</details>
+
+<details>
+<summary>Вопрос 2: Можно ли использовать драйвер для Windows XP?</summary>
+<p>Нет, использовать драйверы для Windows XP на 64-битной Windows 10 категорически не рекомендуется. Архитектура ядра слишком отличается, что приведет к ошибкам или полной неработоспособности устройства. Используйте драйверы для Windows 7/8 (x64).</p>
+</details>
+
+<details>
+<summary>Вопрос 3: Что делать, если установка драйвера выдает ошибку?</summary>
+<p>Запустите установочный файл от имени администратора и включите режим совместимости для Windows 7. Также временно отключите антивирус и проверьте, не заблокирован ли доступ к реестру.</p>
+</details>
+
+<details>
+<summary>Вопрос 4: Нужен ли отдельный драйвер для 32-битной и 64-битной версии Windows?</summary>
+<p>Да, это критически важно. Если у вас 64-битная система (x64), вы должны установить 64-битный драйвер. Установка 32-битного драйвера на 64-битную ОС невозможна или приведет к неработоспособности сканера.</p>
+</details>
+
+<details>
+<summary>Вопрос 5: Как сканировать без родной утилиты Canon?</summary>
+<p>Вы можете использовать стандартное приложение «Факсы и сканирование Windows», программу NAPS2 или Adobe Photoshop (через TWAIN-драйвер). Они работают с любыми сканерами, у которых установлены базовые драйверы.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-ustanovit-printer-canon-lbp-810-na-windows-7-x64-video.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить принтер Canon LBP-810 на Windows 7 x64: видео + инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по установке принтера Canon LBP-810 на Windows 7 x64 с видеоинструкцией, драйв</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-canon-lbp-1120-k-kompyuteru-windows-7-x64.html" class="pb-related-card">
+                <span class="pb-related-title">Подключение Canon LBP 1120 к Windows 7 x64: Пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как установить драйвер и подключить принтер Canon LBP 1120 к системе Windows 7 x64. Решение</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-printer-canon-i-sensys-mf4018.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить принтер Canon i-SENSYS MF4018: Полная инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка МФУ Canon i-SENSYS MF4018 на Windows и Mac. Установка драйверов, подключение по </span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-canon-500d-k-kompyuteru.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Canon 500D к компьютеру: USB, драйверы и передача фото</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению фотоаппарата Canon EOS 500D к ПК. Настройка драйверов, выбор реж</span>
+            </a><a href="/articles/k/ka/kak-soedinit-printer-kenon-s-kompyuterom.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon к компьютеру: USB и Wi-Fi настройки</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как соединить принтер Canon с ПК через кабель или Wi-Fi. Установка драйверов, </span>
+            </a><a href="/articles/k/ka/kak-peredat-foto-s-canon-na-kompyuter.html" class="pb-related-card">
+                <span class="pb-related-title">Как передать фото с Canon на компьютер: полные инструкции 2026</span>
+                <span class="pb-related-desc">Узнайте, как быстро и качественно перенести снимки с камеры Canon на ПК. Обзор USB, Wi-Fi, картридер</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

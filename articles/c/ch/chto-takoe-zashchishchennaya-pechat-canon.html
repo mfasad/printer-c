@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Защищенная печать Canon: как работает Secure Print и настройка — Кэнон Инфо</title>
+    <meta name="description" content="Разбор технологии защищенной печати Canon. Инструкция по настройке Secure Print, управление заданиями и защита конфиденциальных документов в офисе.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ch/chto-takoe-zashchishchennaya-pechat-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Защищенная печать Canon: как работает Secure Print и настройка">
+    <meta property="og:description" content="Разбор технологии защищенной печати Canon. Инструкция по настройке Secure Print, управление заданиями и защита конфиденциальных документов в офисе.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Защищенная печать Canon: как работает Secure Print и настройка</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-в-безопасность-документооборота">Введение в безопасность документооборота</a></li><li><a href="#принцип-работы-технологии-secure-print">Принцип работы технологии Secure Print</a></li><li><a href="#настройка-драйвера-для-защищенной-печати">Настройка драйвера для защищенной печати</a></li><li><a href="#управление-заданиями-на-панели-устройства">Управление заданиями на панели устройства</a></li><li><a href="#преимущества-и-ограничения-системы">Преимущества и ограничения системы</a></li><li><a href="#сравнение-режимов-печати-canon">Сравнение режимов печати Canon</a></li><li><a href="#решение-проблем-и-отладка">Решение проблем и отладка</a></li><li><a href="#интеграция-с-корпоративными-системами">Интеграция с корпоративными системами</a></li><li><a href="#faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-uznat-ip-adres-canon-mf4410.html">Как узнать IP адрес принтера Canon MF4410: 3 рабочих способа</a></li><li><a href="/articles/k/ka/kak-pravilno-zapravit-bumagu-v-printer-canon.html">Как заправить бумагу в принтер Canon: пошаговая инструкция и советы</a></li><li><a href="/articles/k/ka/kak-polzovatsya-printerom-canon-mf4410.html">Как пользоваться принтером Canon MF4410: Полное руководство</a></li><li><a href="/articles/k/ka/kak-podklyuchit-vaj-faj-k-printeru-canon-g3411.html">Как подключить Wi-Fi к принтеру Canon G3411: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-otpravit-faks-kenon.html">Как отправить факс на принтере Canon: Пошаговая инструкция и настройки</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Защищенная печать Canon: как работает Secure Print и настройка</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-в-безопасность-документооборота">Введение в безопасность документооборота</a></li><li><a href="#принцип-работы-технологии-secure-print">Принцип работы технологии Secure Print</a></li><li><a href="#настройка-драйвера-для-защищенной-печати">Настройка драйвера для защищенной печати</a></li><li><a href="#управление-заданиями-на-панели-устройства">Управление заданиями на панели устройства</a></li><li><a href="#преимущества-и-ограничения-системы">Преимущества и ограничения системы</a></li><li><a href="#сравнение-режимов-печати-canon">Сравнение режимов печати Canon</a></li><li><a href="#решение-проблем-и-отладка">Решение проблем и отладка</a></li><li><a href="#интеграция-с-корпоративными-системами">Интеграция с корпоративными системами</a></li><li><a href="#faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-в-безопасность-документооборота">Введение в безопасность документооборота</h2>
+<p>В современной офисной среде конфиденциальность данных становится приоритетом номер один для бизнеса. <strong>Защищенная печать Canon</strong> (Secure Print) представляет собой механизм, который предотвращает утечку информации через принтер. Задание остается в памяти устройства до тех пор, пока пользователь лично не подтвердит его вывод на бумагу.</p>
+<p>Без этой функции любой сотрудник, проходящий мимо принтера, может незаметно забрать чужой документ. Технология <em>Secure Print</em> решает эту проблему, блокируя физический выход листа. Вам потребуется ввести PIN-код или пароль непосредственно на панели управления МФУ.</p>
+<p>Это особенно важно при работе с финансовыми отчетами, персональными данными клиентов или юридическими контрактами. Система не просто хранит файл, она шифрует его и ждет прямого взаимодействия оператора.</p>
+
+<h2 id="принцип-работы-технологии-secure-print">Принцип работы технологии Secure Print</h2>
+<p>Когда вы отправляете документ на принтер с включенной опцией <strong>Secure Print</strong>, драйвер не передает данные на печатный движок сразу. Вместо этого файл зашифровывается и помещается в защищенную область памяти устройства. Никакие другие пользователи или даже администраторы не могут просто так просмотреть содержимое этого задания.</p>
+<p>Процесс печати запускается только после аутентификации. Вы подходите к <em>Canon imageRUNNER</em> или <em>Magicolor</em>, нажимаете кнопку «Печать» на экране, вводите свой уникальный <strong>пароль защиты</strong> и только тогда документ начинает формироваться на выходе. Это исключает человеческий фактор и случайные потери.</p>
+<p>Если вы введете неверный код несколько раз, система может заблокировать задание или потребовать сброса администратором. <strong>Безопасность данных</strong> здесь строится на строгой привязке задания к конкретному пользователю, прошедшему проверку личности.</p>
+
+<h2 id="настройка-драйвера-для-защищенной-печати">Настройка драйвера для защищенной печати</h2>
+<p>Чтобы воспользоваться функцией, необходимо правильно настроить параметры в драйвере принтера. Откройте документ, который планируете распечатать, и выберите пункт «Печать» в меню программы. В окне настроек найдите вкладку с названием <code>Canon UFR II Printer Driver Properties</code> или аналогичное в зависимости от версии ПО.</p>
+<p>Перейдите на вкладку <code>Advanced</code> и найдите раздел <strong>Secure Print</strong>. В выпадающем списке выберите режим «Защищенная печать» (Secure Print). После этого появится поле для ввода пароля, который вы будете использовать на самом устройстве.</p>
+<p>Важно задать <strong>уникальный PIN-код</strong>, который вы легко запомните, но который сложно угадать. Рекомендуется использовать сочетание цифр, не связанных с датой рождения. Убедитесь, что в поле «Имя пользователя» указано ваше реальное имя для идентификации в очереди заданий.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Настройка драйвера</h4><label class="check-item"><input type="checkbox"><span>Открыть свойства принтера</span></label><label class="check-item"><input type="checkbox"><span>Выбрать вкладку Secure Print</span></label><label class="check-item"><input type="checkbox"><span>Ввести уникальный PIN-код</span></label><label class="check-item"><input type="checkbox"><span>Нажать ОК и отправить задание</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="управление-заданиями-на-панели-устройства">Управление заданиями на панели устройства</h2>
+<p>После отправки задания на принтер, его можно найти в меню <code>Список заданий</code> (Job List) на сенсорном дисплее. Перейдите в раздел «Пользовательские задания» (My Jobs) и выберите категорию <strong>Secure Print</strong>. Там отобразится список всех ваших ожидающих документов.</p>
+<p>Нажмите на нужный файл и выберите опцию <code>Печать</code>. Система запросит ввод пароля. Используйте цифровую клавиатуру на экране или физическую клавиатуру, если она подключена. Введите тот же код, что задали в драйвере.</p>
+<p>Если пароль введен верно, устройство начнет печать. Если вы ошиблись, попробуйте еще раз, но помните о лимите попыток. После успешной печати задание автоматически удаляется из памяти принтера, освобождая место для новых <strong>конфиденциальных заданий</strong>.</p>
+<blockquote>
+<p>⚠️ Внимание: Если вы забудете пароль, восстановить доступ к заданию невозможно. Вам придется удалить его и отправить заново, так как шифрование не допускает сброса кода без потери данных.</p>
+</blockquote>
+
+<h2 id="преимущества-и-ограничения-системы">Преимущества и ограничения системы</h2>
+<p>Использование <strong>Secure Print</strong> имеет ряд очевидных плюсов для корпоративной безопасности. Основной avantage — гарантия того, что документ не попадет в чужие руки. Это также помогает сократить количество «забытых» листов, которые лежат на выходе и портятся, а затем выбрасываются, создавая ненужный расход бумаги.</p>
+<p>Однако существуют и ограничения. Зашифрованные задания занимают больше оперативной памяти устройства и могут замедлять работу, если заданий много. Кроме того, если принтер перезагружается или отключается от сети, очередь <em>Secure Print</em> может потребовать повторного ввода паролей.</p>
+<p>Существует также риск «взлома» методом подбора, если пароль слишком простой. Необходимо регулярно менять коды доступа и обучать сотрудников созданию <strong>надежных паролей</strong>. Некоторые старые модели могут не поддерживать сложные алгоритмы шифрования.</p>
+
+<div class="pb-poll" id="poll-c3c95d89"><div class="pb-poll-question">📊 Какой тип защиты вы используете?</div><div class="pb-poll-option" data-poll="c3c95d89" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Нет защиты</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c3c95d89" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Простой PIN-код</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c3c95d89" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Сложный пароль</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c3c95d89" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Интеграция с Active Directory</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="сравнение-режимов-печати-canon">Сравнение режимов печати Canon</h2>
+<p>Canon предлагает несколько режимов работы с заданиями, которые часто путают. Понимание различий поможет выбрать правильный инструмент. Обычная печать (Normal Print) отправляет данные сразу, а Защищенная печать (Secure Print) ждет подтверждения. Есть также режим «Отложенная печать» (Delayed Print), который запускается по таймеру, а не по паролю.</p>
+<p>Следующая таблица наглядно демонстрирует различия между основными режимами работы с заданиями в экосистеме Canon.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Режим печати</th>
+<th>Требует ввода пароля</th>
+<th>Хранение в памяти</th>
+<th>Цель использования</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Обычная печать</td>
+<td>Нет</td>
+<td>Временное</td>
+<td>Быстрая печать документов</td>
+</tr>
+<tr>
+<td>Secure Print</td>
+<td>Да</td>
+<td>До ввода кода</td>
+<td>Конфиденциальные данные</td>
+</tr>
+<tr>
+<td>Отложенная печать</td>
+<td>Нет</td>
+<td>До заданного времени</td>
+<td>Печать в определенное время</td>
+</tr>
+<tr>
+<td>Повторная печать</td>
+<td>Нет</td>
+<td>До удаления</td>
+<td>Восстановление потерянных листов</td>
+</tr>
+</tbody>
+</table></div>
+<p>Выбор правильного режима зависит от конкретной задачи. Для внутренней переписки достаточно обычной печати, а для зарплатных ведомостей — только <strong>Secure Print</strong>. Неправильный выбор может привести к утечке или неэффективному использованию ресурсов.</p>
+
+<h2 id="решение-проблем-и-отладка">Решение проблем и отладка</h2>
+<p>Иногда пользователи сталкиваются с ошибками: задание не появляется в списке или принтер не принимает пароль. Первое, что нужно проверить — это целостность соединения с сетью. Если <em>Canon printer</em> потерял IP-адрес, задание может не дойти до устройства.</p>
+<p>Проверьте настройки драйвера: убедитесь, что поле «Имя пользователя» совпадает с вашим логином в системе. В некоторых случаях требуется перенастройка <strong>аутентификации</strong> через веб-интерфейс устройства. Зайдите в <code>Web Connection Settings</code> и проверьте раздел безопасности.</p>
+<p>Если задание зависло, попробуйте удалить его через административную панель. Это потребует прав администратора. Не забудьте очистить очередь, чтобы мемори устройства не переполнилась. <strong>Сбои в работе</strong> часто связаны с устаревшими драйверами или конфликтом сетевых настроек.</p>
+
+<details class="pb-accordion"><summary>Что делать при блокировке задания?</summary><div class="pb-accordion-body"><p>Если вы много раз ввели неверный пароль, задание может быть заблокировано. Подождите 5-10 минут перед повторной попыткой или удалите задание через админ-панель, чтобы освободить память.</p></div></details>
+
+<h2 id="интеграция-с-корпоративными-системами">Интеграция с корпоративными системами</h2>
+<p>Для крупных организаций ручное введение паролей может быть неудобным. Canon предлагает интеграцию с системами управления идентификацией, такими как <strong>Active Directory</strong> или LDAP. В этом случае аутентификация происходит автоматически при прикладывании карты или вводе доменного логина.</p>
+<p>Администраторы могут настраивать политики безопасности через веб-интерфейс устройства. Можно задать обязательный пароль для всех сотрудников или разрешить печать только определенным группам. Это существенно повышает уровень <strong>кибербезопасности</strong> офиса.</p>
+<p>Мониторинг печати также становится проще. Система ведет подробные логи о том, кто и когда печатал какие документы. Если произошла утечка, всегда можно отследить цепочку событий до конкретного пользователя и момента ввода пароля.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярно очищайте историю заданий в памяти принтера, чтобы избежать замедления работы устройства и утечки данных через временные файлы.</p></aside>
+
+<h2 id="faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</h2>
+<details>
+<summary>Можно ли распечатать документ без ввода пароля?</summary>
+<p>Нет, функция <strong>Secure Print</strong> специально разработана для предотвращения печати без подтверждения. Без ввода корректного PIN-кода документ останется в памяти устройства.</p>
+</details>
+<details>
+<summary>Что делать, если я забыл пароль от защищенного задания?</summary>
+<p>К сожалению, восстановить пароль невозможно из-за особенностей шифрования. Вам придется удалить задание через панель администратора и отправить его заново с новым паролем.</p>
+</details>
+<details>
+<summary>Занимает ли защищенная печать больше памяти принтера?</summary>
+<p>Да, зашифрованные файлы могут занимать больше оперативной памяти, так как система хранит их в зашифрованном виде до момента печати. Это требует достаточного объема RAM на устройстве.</p>
+</details>
+<details>
+<summary>Работает ли Secure Print с мобильными устройствами?</summary>
+<p>Да, через приложение Canon PRINT Business или Apple AirPrint (при правильной настройке) можно отправлять защищенные задания с мобильных устройств, однако ввод пароля все равно потребуется на панели принтера.</p>
+</details>
+
+<blockquote>
+<p>⚠️ Внимание: Настройки безопасности могут быть изменены администратором сети. Если функция недоступна, обратитесь к IT-специалисту вашей компании для проверки прав доступа.</p>
+</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Защищенная печать Canon — это необходимая мера для защиты коммерческой тайны, требующая дисциплины от сотрудников при вводе паролей.</p></aside></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-uznat-ip-adres-canon-mf4410.html" class="pb-related-card">
+                <span class="pb-related-title">Как узнать IP адрес принтера Canon MF4410: 3 рабочих способа</span>
+                <span class="pb-related-desc">Инструкция по проверке IP-адреса для Canon imageRUNNER MF4410. Настройка печати через сеть, вывод от</span>
+            </a><a href="/articles/k/ka/kak-pravilno-zapravit-bumagu-v-printer-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как заправить бумагу в принтер Canon: пошаговая инструкция и советы</span>
+                <span class="pb-related-desc">Подробное руководство по правильной загрузке бумаги в принтеры Canon. Избегайте замятий, узнайте про</span>
+            </a><a href="/articles/k/ka/kak-polzovatsya-printerom-canon-mf4410.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться принтером Canon MF4410: Полное руководство</span>
+                <span class="pb-related-desc">Инструкция по эксплуатации МФУ Canon MF4410: установка драйверов, печать, сканирование, копирование </span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-vaj-faj-k-printeru-canon-g3411.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить Wi-Fi к принтеру Canon G3411: пошаговая инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по настройке беспроводной сети на принтере Canon Pixma G3411. Методы подключен</span>
+            </a><a href="/articles/k/ka/kak-otpravit-faks-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Как отправить факс на принтере Canon: Пошаговая инструкция и настройки</span>
+                <span class="pb-related-desc">Узнайте, как отправить факс на устройствах Canon. Инструкция по настройке линии, заполнению номеров,</span>
+            </a><a href="/articles/s/sk/skolko-pechatayushchikh-golovok-u-printera-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Сколько печатающих головок у принтеров Canon: виды и типы</span>
+                <span class="pb-related-desc">Узнайте, сколько печатающих головок у принтеров Canon: в струйных, фотопринтерах и МФУ. Разбор техно</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

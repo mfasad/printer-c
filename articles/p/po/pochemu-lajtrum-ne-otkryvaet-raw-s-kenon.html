@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Почему Lightroom не открывает RAW с Canon: причины и решение — Кэнон Инфо</title>
+    <meta name="description" content="Разбираем, почему Adobe Lightroom не видит файлы RAW от камер Canon. Решения: обновление DNG, проверка версии ПО, конвертация и настройка импорта.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/p/po/pochemu-lajtrum-ne-otkryvaet-raw-s-kenon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Почему Lightroom не открывает RAW с Canon: причины и решение">
+    <meta property="og:description" content="Разбираем, почему Adobe Lightroom не видит файлы RAW от камер Canon. Решения: обновление DNG, проверка версии ПО, конвертация и настройка импорта.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/fotoapparaty-canon/">Фотоаппараты Canon</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Почему Lightroom не открывает RAW с Canon: причины и решение</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-в-проблему-совместимости-форматов">Введение в проблему совместимости форматов</a></li><li><a href="#отставание-версии-lightroom-от-релиза-камеры">Отставание версии Lightroom от релиза камеры</a></li><li><a href="#статус-лицензии-и-доступ-к-обновлениям">Статус лицензии и доступ к обновлениям</a></li><li><a href="#специфика-формата-cr3-и-сжатия-данных">Специфика формата CR3 и сжатия данных</a></li><li><a href="#использование-конвертера-dng-как-обходного-пути">Использование конвертера DNG как обходного пути</a></li><li><a href="#таблица-совместимости-моделей-и-версий-по">Таблица совместимости моделей и версий ПО</a></li><li><a href="#настройки-импорта-и-проблемы-с-каталогом">Настройки импорта и проблемы с каталогом</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kakie-matritsy-ispolzuet-canon.html">Типы матриц в камерах Canon: CMOS, Full Frame и APS-C</a></li><li><a href="/articles/c/ca/canon-sx500-is-kak-zaryadit.html">Как зарядить Canon PowerShot SX500 IS: способы и нюансы батареи</a></li><li><a href="/articles/c/ca/canon-7d-live-view-kak-vklyuchit.html">Как включить Live View на Canon 7D: Полная инструкция по настройке</a></li><li><a href="/articles/k/ka/kak-pravilno-vybrat-fotoapparat-kenon.html">Как выбрать фотоаппарат Canon: обзор линеек и советы эксперта</a></li><li><a href="/articles/k/ka/kakaya-karta-pamyati-nuzhna-dlya-fotoapparata-canon-eos-2000d.html">Какая карта памяти для Canon EOS 2000D: выбор скорости и объема</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Почему Adobe Lightroom не открывает файлы RAW с камер Canon</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-в-проблему-совместимости-форматов">Введение в проблему совместимости форматов</a></li><li><a href="#отставание-версии-lightroom-от-релиза-камеры">Отставание версии Lightroom от релиза камеры</a></li><li><a href="#статус-лицензии-и-доступ-к-обновлениям">Статус лицензии и доступ к обновлениям</a></li><li><a href="#специфика-формата-cr3-и-сжатия-данных">Специфика формата CR3 и сжатия данных</a></li><li><a href="#использование-конвертера-dng-как-обходного-пути">Использование конвертера DNG как обходного пути</a></li><li><a href="#таблица-совместимости-моделей-и-версий-по">Таблица совместимости моделей и версий ПО</a></li><li><a href="#настройки-импорта-и-проблемы-с-каталогом">Настройки импорта и проблемы с каталогом</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-в-проблему-совместимости-форматов">Введение в проблему совместимости форматов</h2>
+<p>Ошибка «Не удалось открыть файл» или полное отсутствие RAW-снимков при импорте в Adobe Lightroom чаще всего возникает при попытке работы с файлами от новых моделей Canon в версиях программного обеспечения, еще не поддерживающих соответствующий профиль камеры. Пользователь подключает карту памяти и обнаруживает, что редактор игнорирует изображения или выдает подтверждение о несовместимом формате, что блокирует дальнейшую обработку и вынуждает срочно обновлять приложение до последнего релиза с поддержкой актуального оборудования.</p>
+<p>Основная причина кроется в разрыве между скоростью выпуска новых моделей фотоаппаратов <em>Canon</em> и графиком обновлений программного обеспечения от Adobe. Компания <em>Adobe</em> использует базу данных DNG (Digital Negative) для поддержки новых сенсоров, и если вы не обновили <strong>Lightroom</strong> до последней версии, программа физически не знает, как декодировать уникальный алгоритм сжатия, примененный в новом <em>Canon EOS R5</em> или <em>R3</em>. Без соответствующего драйвера или обновления профиля камеры файл остается для программы "чёрным ящиком".</p>
+<p>Важно понимать, что это не всегда ошибка самого оборудования или карточек памяти. Часто проблема решается простым обновлением, но иногда требуется ручное вмешательство в настройки импорта или конвертацию файлов. Ниже мы подробно разберем технические аспекты несовместимости и пошаговые инструкции по восстановлению доступа к вашим снимкам.</p>
+
+<h2 id="отставание-версии-lightroom-от-релиза-камеры">Отставание версии Lightroom от релиза камеры</h2>
+<p>Самая частая причина отказа в открытии RAW-файлов — это использование устаревшей версии программного обеспечения. Когда <em>Canon</em> анонсирует новую модель, например, <em>EOS R6 Mark II</em>, она использует новый формат сенсора и специфические метаданные, которые <strong>Camera Raw</strong> (движок, лежащий в основе Lightroom) еще не поддерживает.</p>
+<p>Adobe выпускает обновления поддержки камер примерно раз в месяц, но если вы работаете на версии Lightroom Classic 11.0, выпущенной полгода назад, она просто не содержит кода для распознавания нового оборудования. В этом случае вам необходимо зайти в <code>Help → Updates</code> и установить последнюю версию пакета <strong>Camera Raw</strong>, чтобы расширить список поддерживаемых форматов.</p>
+<p>Если вы используете облачную версию Lightroom (не Classic), процесс обновления происходит автоматически, но иногда требуется принудительная проверка в магазине приложений. Отсутствие актуального обновления блокирует не только импорт, но и возможность просмотра превью даже если файл был скопирован на жесткий диск ранее.</p>
+<blockquote>⚠️ Внимание: Не пытайтесь открывать файлы RAW от камер, выпущенных после даты выхода вашей версии ПО, используя сторонние плагины или "кряки". Это может привести к повреждению базы каталога и потере всех ваших предыдущих настроек редактирования.</blockquote>
+
+<h2 id="статус-лицензии-и-доступ-к-обновлениям">Статус лицензии и доступ к обновлениям</h2>
+<p>Иногда проблема кроется не в технической части, а в статусе вашей подписки. Если срок действия лицензии <strong>Adobe Creative Cloud</strong> истек или оплата не прошла, программа автоматически прекращает загрузку обновлений поддержки камер. Вы можете продолжать работать с уже открытыми файлами, но импорт новых RAW-файлов станет невозможным.</p>
+<p>Проверьте статус подписки в меню <code>Account & Subscription</code> внутри приложения. Если подписка активна, но обновления не приходят, возможно, у вас отключен доступ к автоматическим обновлениям в настройках <code>Preferences → Updates</code>.</p>
+<p>В редких случаях, при использовании корпоративных версий ПО, администратор сети может заблокировать доступ к серверам обновлений Adobe. В такой ситуации необходимо связаться с IT-отделом или использовать локальный установщик обновлений, предоставляемый корпоративным администратором.</p>
+<p><mark>Без активной подписки и обновленного движка Camera Raw программа физически не может декодировать байтовую структуру новых файлов Canon CR3.</mark></p>
+
+<div class="pb-poll" id="poll-d4472be7"><div class="pb-poll-question">📊 Какая камера Canon у вас вызывает проблемы?</div><div class="pb-poll-option" data-poll="d4472be7" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">EOS R-серия (R5, R6, R3)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d4472be7" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">EOS 90D или новее</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d4472be7" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">EOS M-серия</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d4472be7" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Старые модели Canon (5D, 7D)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="специфика-формата-cr3-и-сжатия-данных">Специфика формата CR3 и сжатия данных</h2>
+<p>Современные камеры <em>Canon</em> перешли на формат <strong>CR3</strong> (Canon Raw 3), который использует алгоритм сжатия, отличный от старого CR2. Существует два типа сжатия в CR3: несжатое и сжатое (Lossy и Lossless). Удаление или повреждение заголовка файла при копировании может привести к тому, что Lightroom не сможет прочитать структуру данных.</p>
+<p>Особенно часто проблемы возникают с файлами, снятыми в режиме <code>Lossy Compressed</code>. Некоторые версии Lightroom требуют специфических обновлений для корректного отображения таких файлов, так как алгоритм сжатия с потерей качества сложнее для декодирования, чем стандартный RAW.</p>
+<ul>
+<li>✅ Проверьте настройки качества RAW в меню камеры: переключите с <code>Lossy Compressed</code> на <code>Lossless</code> или <code>Uncompressed</code>.</li>
+<li>✅ Убедитесь, что вы не используете функцию <strong>Auto Lighting Optimizer</strong> в камере, которая может создавать конфликты с чтением RAW.</li>
+<li>✅ Попробуйте скопировать файлы напрямую через USB-кабель, а не через картридер, чтобы исключить ошибки чтения.</li>
+</ul>
+<p>Если файлы повреждены на уровне файловой системы, программа может выдавать ошибку "Неизвестный формат файла". В таких случаях попробуйте открыть файл через <strong>DNG Converter</strong> (бесплатный инструмент от Adobe) перед импортом в Lightroom.</p>
+<blockquote>⚠️ Внимание: Файлы CR3 с экстремальным сжатием (Lossy) могут не открываться в версиях Lightroom, выпущенных до 2020 года, даже после обновления, если не установлен пакет поддержки конкретных моделей.</blockquote>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка целостности файлов RAW</h4><label class="check-item"><input type="checkbox"><span>Проверить хеш-сумму файла</span></label><label class="check-item"><input type="checkbox"><span>Попробовать открыть в RawDigger</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в отсутствии ошибки цикла записи</span></label><label class="check-item"><input type="checkbox"><span>Скопировать файл заново на другой диск</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="использование-конвертера-dng-как-обходного-пути">Использование конвертера DNG как обходного пути</h2>
+<p>Если обновление Lightroom не помогает или вы вынуждены работать на старой версии ПО, отличным решением станет конвертация RAW в формат DNG. Это универсальный открытый формат, который поддерживается практически всеми версиями редакторов. Для этого используйте утилиту <strong>Adobe DNG Converter</strong>.</p>
+<p>Запустите конвертер, укажите папку с файлами от <em>Canon</em> и выберите параметры конвертации. Рекомендуется включить опцию <code>Embed Original Raw File</code>, чтобы сохранить оригинальный снимок внутри DNG-контейнера. Это позволит вам в будущем, обновив Lightroom, извлечь оригинал без потери качества.</p>
+<p>Процесс конвертации может занять время, но он гарантирует, что файлы станут читаемыми. После конвертации импортируйте полученные <code>.dng</code> файлы в Lightroom, и они откроются без ошибок, позволяя проводить полную обработку.</p>
+<details class="pb-accordion"><summary>Как конвертировать в DNG через командную строку?</summary><div class="pb-accordion-body"><p>Команда: AdobeDNGConverter.exe -c -r C:\Source C:\Destination -v 14.0 -e -f -n -o</p></div></details>
+
+<h2 id="таблица-совместимости-моделей-и-версий-по">Таблица совместимости моделей и версий ПО</h2>
+<p>Ниже приведена таблица, показывающая минимальные требования к версиям <strong>Lightroom Classic</strong> и <strong>Camera Raw</strong> для поддержки популярных камер Canon. Это поможет вам быстро определить, нужно ли вам обновление.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Модель камеры Canon</th>
+<th>Формат файла</th>
+<th>Мин. версия Lightroom Classic</th>
+<th>Мин. версия Camera Raw</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EOS R5 / R6</td>
+<td>CR3</td>
+<td>10.0</td>
+<td>13.0</td>
+</tr>
+<tr>
+<td>EOS R3</td>
+<td>CR3</td>
+<td>11.0</td>
+<td>14.0</td>
+</tr>
+<tr>
+<td>EOS R7 / R10</td>
+<td>CR3</td>
+<td>12.0</td>
+<td>15.0</td>
+</tr>
+<tr>
+<td>EOS R8</td>
+<td>CR3</td>
+<td>13.0</td>
+<td>16.0</td>
+</tr>
+</tbody>
+</table></div>
+<p>Если ваша версия ПО ниже указанной, программа не сможет прочитать метаданные сенсора. Внимательно сверьте данные своей системы с этой таблицей. Часто пользователи игнорируют уведомления об обновлении, полагая, что текущая версия достаточна для работы, но это не так для новых сенсоров.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Обновление версии Camera Raw является критически важным условием для работы с новейшими сенсорами Canon.</p></aside>
+
+<h2 id="настройки-импорта-и-проблемы-с-каталогом">Настройки импорта и проблемы с каталогом</h2>
+<p>Иногда проблема не в самом файле, а в настройках импорта в Lightroom. В окне импорта убедитесь, что параметр <code>Build Previews</code> установлен в значение <code>Standard</code> или <code>1:1</code>. Если выбрано <code>Smart Previews</code> и файл поврежден, программа может не создать превью и скрыть файл из списка.</p>
+<p>Также стоит проверить, не включен ли фильтр по типу файла. В верхней части окна импорта может стоять галочка <code>Don't Import Suspected Duplicates</code> или фильтр, скрывающий файлы определенных расширений. Попробуйте сбросить все фильтры и нажать кнопку <code>Reset Filters</code>.</p>
+<p>Если файл был скопирован через облачное хранилище (например, Dropbox или Google Drive), он может быть не полностью синхронизирован. В этом случае Lightroom видит только "заглушку" файла размером 0 байт. Необходимо дождаться полной загрузки файла на локальный диск перед импортом.</p>
+<p>В редких случаях помогает создание нового каталога. Зайдите в меню <code>File → New Catalog</code>, создайте временный каталог и попробуйте импортировать туда один проблемный файл. Если он откроется — проблема в повреждении основного каталога, и его нужно восстановить.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед импортом больших пакетов RAW-файлов от новой камеры Canon, протестируйте процесс на одной карте памяти, чтобы убедиться в корректной работе драйверов и версии ПО.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+<details>
+<summary>Почему Lightroom показывает файл, но не дает его открыть?</summary>
+<p>Это означает, что программа распознала расширение файла, но не смогла декодировать данные сенсора. Скорее всего, у вас устаревшая версия <strong>Camera Raw</strong>, которая не поддерживает алгоритмы сжатия вашей камеры. Обновите Lightroom до последней версии.</p>
+</details>
+<details>
+<summary>Можно ли открыть CR3 файлы в старых версиях Lightroom?</summary>
+<p>Нет, старые версии (например, Lightroom 6 или старше 2018 года) физически не содержат драйверов для сенсоров CR3. Вам придется либо обновить ПО, либо использовать бесплатный конвертер DNG от Adobe для перевода файлов в совместимый формат.</p>
+</details>
+<details>
+<summary>Что делать, если файлы открываются, но имеют странные цвета?</summary>
+<p>Это может быть связано с отсутствием профиля камеры в вашей версии. В меню <code>Develop</code> проверьте раздел <code>Camera Calibration</code>. Если профиля вашей модели нет, попробуйте обновить движок или использовать профиль <code>Standard</code> из списка доступных.</p>
+</details>
+<details>
+<summary>Помогает ли форматирование карты памяти?</summary>
+<p>Форматирование карты памяти не исправит проблему с несовместимостью версий ПО, но может помочь, если файл был поврежден при записи. Всегда форматируйте карты памяти в самой камере, а не через компьютер.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kakie-matritsy-ispolzuet-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Типы матриц в камерах Canon: CMOS, Full Frame и APS-C</span>
+                <span class="pb-related-desc">Подробный обзор матриц Canon: технологии CMOS, Dual Pixel, форматы APS-C и Full Frame. Сравнение хар</span>
+            </a><a href="/articles/c/ca/canon-sx500-is-kak-zaryadit.html" class="pb-related-card">
+                <span class="pb-related-title">Как зарядить Canon PowerShot SX500 IS: способы и нюансы батареи</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как зарядить аккумулятор Canon SX500 IS. Разбор зарядных устройств, процесс за</span>
+            </a><a href="/articles/c/ca/canon-7d-live-view-kak-vklyuchit.html" class="pb-related-card">
+                <span class="pb-related-title">Как включить Live View на Canon 7D: Полная инструкция по настройке</span>
+                <span class="pb-related-desc">Подробное руководство по активации режима Live View на камере Canon 7D. Настройка дисплея, управлени</span>
+            </a><a href="/articles/k/ka/kak-pravilno-vybrat-fotoapparat-kenon.html" class="pb-related-card">
+                <span class="pb-related-title">Как выбрать фотоаппарат Canon: обзор линеек и советы эксперта</span>
+                <span class="pb-related-desc">Полное руководство по выбору камеры Canon. Сравнение EOS R и DSLR, выбор объективов, сенсора и бюдже</span>
+            </a><a href="/articles/k/ka/kakaya-karta-pamyati-nuzhna-dlya-fotoapparata-canon-eos-2000d.html" class="pb-related-card">
+                <span class="pb-related-title">Какая карта памяти для Canon EOS 2000D: выбор скорости и объема</span>
+                <span class="pb-related-desc">Подробный гид по выбору карты памяти для Canon EOS 2000D. Разбор стандартов SD/SDHC/SDXC, скорости з</span>
+            </a><a href="/articles/k/ka/kak-vosstanovit-kartu-pamyati-na-fotoapparate-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Восстановление карты памяти Canon: 5 способов спасти фото</span>
+                <span class="pb-related-desc">Пошаговая инструкция как восстановить данные с SD-карты фотоаппарата Canon после форматирования, оши</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

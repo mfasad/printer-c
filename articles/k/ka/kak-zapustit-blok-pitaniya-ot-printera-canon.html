@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Запуск БП Canon без принтера: схема, проверка и нюансы — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция, как запустить блок питания Canon для тестирования. Методы замыкания контактов, проверка напряжения и меры предосторожности.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-zapustit-blok-pitaniya-ot-printera-canon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Запуск БП Canon без принтера: схема, проверка и нюансы">
+    <meta property="og:description" content="Пошаговая инструкция, как запустить блок питания Canon для тестирования. Методы замыкания контактов, проверка напряжения и меры предосторожности.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-nav-active">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/remont-i-oshibki/">Ремонт и ошибки</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Запуск БП Canon без принтера: схема, проверка и нюансы</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-в-диагностику-питания-canon">Введение в диагностику питания Canon</a></li><li><a href="#особенности-конструкции-и-типовые-разъемы">Особенности конструкции и типовые разъемы</a></li><li><a href="#подготовка-к-процедуре-запуска">Подготовка к процедуре запуска</a></li><li><a href="#схема-замыкания-контактов-для-старта">Схема замыкания контактов для старта</a></li><li><a href="#проверка-выходных-параметров">Проверка выходных параметров</a></li><li><a href="#меры-предосторожности-и-безопасность">Меры предосторожности и безопасность</a></li><li><a href="#альтернативные-методы-диагностики">Альтернативные методы диагностики</a></li><li><a href="#типичные-ошибки-при-запуске">Типичные ошибки при запуске</a></li><li><a href="#faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/p/pr/printer-canon-lbp-3010-pochemu-ne-pechataet.html">Canon LBP 3010 не печатает: 7 причин и способы решения</a></li><li><a href="/articles/f/fi/fiksatsiya-fe-canon-chto-eto.html">Ошибка FE на Canon: что означает и как устранить</a></li><li><a href="/articles/p/pr/printer-canon-pixma-mg2540s-ne-zakhvatyvaet-bumagu-chto-delat.html">Canon Pixma MG2540s не захватывает бумагу: как исправить проблему</a></li><li><a href="/articles/k/ka/kak-pochistit-canon-g3411.html">Как почистить Canon G3411: полная инструкция по обслуживанию</a></li><li><a href="/articles/k/ka/kak-otkryt-printer-canon-pixma.html">Как открыть принтер Canon Pixma: разбор крышек, люков и сервисных зон</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как запустить блок питания от принтера Canon: полное руководство по тестированию</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-в-диагностику-питания-canon">Введение в диагностику питания Canon</a></li><li><a href="#особенности-конструкции-и-типовые-разъемы">Особенности конструкции и типовые разъемы</a></li><li><a href="#подготовка-к-процедуре-запуска">Подготовка к процедуре запуска</a></li><li><a href="#схема-замыкания-контактов-для-старта">Схема замыкания контактов для старта</a></li><li><a href="#проверка-выходных-параметров">Проверка выходных параметров</a></li><li><a href="#меры-предосторожности-и-безопасность">Меры предосторожности и безопасность</a></li><li><a href="#альтернативные-методы-диагностики">Альтернативные методы диагностики</a></li><li><a href="#типичные-ошибки-при-запуске">Типичные ошибки при запуске</a></li><li><a href="#faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-в-диагностику-питания-canon">Введение в диагностику питания Canon</h2>
+<p>Блоки питания для принтеров <em>Canon</em> часто выходят из строя или становятся объектом проверки при ремонте. Многие мастера сталкиваются с необходимостью проверить исправность устройства без подключения к печатной машине, чтобы исключить ложные диагнозы.</p>
+<p>Стандартный блок питания от <em>Canon</em> имеет сложную логику запуска, отличную от простых компьютерных блоков. Он не включается сразу после подачи напряжения в сеть, а требует сигнала от самой принтерной платы или специфического замыкания контактов в разъеме.</p>
+<p>Понимание схемы работы <strong>нелинейных блоков</strong> и знание расположения сигнальных выводов позволит вам безопасно протестировать устройство. Ошибки в процессе могут привести к необратимому повреждению как самого блока, так и измерительных приборов.</p>
+
+<h2 id="особенности-конструкции-и-типовые-разъемы">Особенности конструкции и типовые разъемы</h2>
+<p>Блоки питания, используемые в линейке устройств <em>Canon imageRUNNER</em> или <em>imagePROGRAF</em>, часто оснащаются нестандартными разъемами. В отличие от бытовых адаптеров, они имеют дополнительные пины для обмена данными и контроля нагрузки.</p>
+<p>Наиболее распространенные типы разъемов включают многоконтактные шлейфы и разъемы типа <code>6-pin</code> или <code>8-pin</code>. Важно внимательно осмотреть маркировку на корпусе, где производитель указывает номинальное напряжение и ток, а также цветовую кодировку проводов.</p>
+<p>В большинстве случаев красный провод отвечает за положительное напряжение, а черный — за землю. Однако в некоторых модификациях <em>Canon</em> цветовая маркировка может отличаться, поэтому полагаться исключительно на цвет опасно.</p>
+<ul>
+    <li>⚡ Всегда проверяйте распиновку по официальному сервисному мануалу для конкретной модели принтера.</li>
+    <li>🔍 Внимательно осматривайте разъем на предмет окисления или механических повреждений контактов.</li>
+    <li>🛑 Не пытайтесь использовать универсальные адаптеры без точного знания полярности и сигнала запуска.</li>
+</ul>
+
+<h2 id="подготовка-к-процедуре-запуска">Подготовка к процедуре запуска</h2>
+<p>Перед тем как приступить к эксперименту, необходимо подготовить рабочее место и инструментальный набор. Вам понадобится мультиметр, способный измерять постоянное напряжение в диапазоне до 24-60 Вольт, а также набор перемычек.</p>
+<p>Используйте медный провод сечением не менее 0,5 мм² для создания перемычек. Изоляция перемычек должна быть качественной, чтобы исключить риск короткого замыкания между соседними контактами при вставке в разъем.</p>
+<p>Убедитесь, что блок питания установлен на негорючую поверхность. Лучше всего размещать устройство на деревянной или керамической подложке, исключая контакт с металлическими столами или батареями отопления.</p>
+<blockquote>⚠️ Внимание: Неправильное подключение перемычек может вызвать мгновенный пробой силовых транзисторов внутри блока, что приведет к пожару.</blockquote>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к тесту</h4><label class="check-item"><input type="checkbox"><span>Подготовить мультиметр</span></label><label class="check-item"><input type="checkbox"><span>Изолировать перемычки</span></label><label class="check-item"><input type="checkbox"><span>Осмотреть разъемы</span></label><label class="check-item"><input type="checkbox"><span>Отключить от сети перед подключением перемычек</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="схема-замыкания-контактов-для-старта">Схема замыкания контактов для старта</h2>
+<p>Для принудительного запуска блока питания необходимо замкнуть определенные контакты в разъеме с землей. В зависимости от серии принтера, это может быть контакт <code>PS_ON</code> или специфический сигнал <code>START</code>.</p>
+<p>В стандартной конфигурации для многих моделей <em>Canon</em> необходимо замкнуть контакт, идущий на управление, с минусовым проводом (землей). Обычно это выполняется через резистор на 1-2 кОм, но для кратковременного теста допустимо и прямое замыкание.</p>
+<p>Если вы не знаете точную распиновку, <mark>попробуйте найти на корпусе блока схему или маркировку, где буквой G обозначен Ground, а S — Signal запуска</mark>. Отсутствие маркировки требует обращения к схематическим данным в интернете по серийному номеру блока.</p>
+<p>Процедура выполняется в следующей последовательности: отключите блок от сети, вставьте перемычки в разъем, включите блок в розетку. Если блок исправен, вентиляторы должны начать вращаться, а на выходе появится напряжение.</p>
+<ul>
+    <li>🔌 Замыкание производите только при отключенном от сети блоке питания.</li>
+    <li>🛠 Используйте только изолированные инструменты и перчатки.</li>
+    <li>📉 Контролируйте работу вентилятора — если он не крутится, блок не запустился.</li>
+</ul>
+
+<details class="pb-accordion"><summary>Что делать, если вентилятор не запускается?</summary><div class="pb-accordion-body"><p>Если после замыкания контактов вентилятор не вращается и нет напряжения, возможно, сработала защита по току или неисправна обмотка трансформатора. В этом случае дальнейшие попытки запуска бесполезны и опасны.</p></div></details>
+
+<h2 id="проверка-выходных-параметров">Проверка выходных параметров</h2>
+<p>После успешного запуска необходимо проверить выходные напряжения. Подключите щупы мультиметра к соответствующим контактам разъема: красный щуп к плюсу, черный к минусу.</p>
+<p>Сравнивайте полученное значение с номиналом, указанным на шильдике. Для <em>Canon</em> это обычно <strong>24 Вольта</strong> или <strong>32 Вольта</strong>. Отклонение более чем на 5% от номинала свидетельствует о нестабильной работе блока.</p>
+<p>Если напряжение «плавает» или мультиметр показывает ноль, значит, блок находится в режиме защиты. Это может быть вызвано внутренним коротким замыканием или неисправностью цепи обратной связи.</p>
+<p><code>Vout = 24V (номинал)</code> — идеальное значение. Любое отклонение требует детальной диагностики схемы или замены устройства.</p>
+
+<div class="pb-table-wrap"><table>
+    <thead>
+        <tr>
+            <th>Тип напряжения</th>
+            <th>Номинал (В)</th>
+            <th>Допустимое отклонение</th>
+            <th>Признак неисправности</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Основное (Main)</td>
+            <td>24V / 32V</td>
+            <td>±5%</td>
+            <td>Постоянный ноль или скачки</td>
+        </tr>
+        <tr>
+            <td>Сигнал запуска</td>
+            <td>3.3V / 5V</td>
+            <td>±10%</td>
+            <td>Отсутствие сигнала при замыкании</td>
+        </tr>
+        <tr>
+            <td>Земля (GND)</td>
+            <td>0V</td>
+            <td>0V</td>
+            <td>Разрыв цепи с корпусом</td>
+        </tr>
+        <tr>
+            <td>Вентилятор</td>
+            <td>12V / 5V</td>
+            <td>±10%</td>
+            <td>Остановка вращения</td>
+        </tr>
+    </tbody>
+</table></div>
+
+<div class="pb-poll" id="poll-19f1356e"><div class="pb-poll-question">📊 Какой результат вы получили при тесте?</div><div class="pb-poll-option" data-poll="19f1356e" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Блок запустился, напряжение в норме</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="19f1356e" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Блок запустился, но напряжение скачет</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="19f1356e" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Блок не запустился (нет реакции)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="19f1356e" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Блок выдает ошибку (защита)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="меры-предосторожности-и-безопасность">Меры предосторожности и безопасность</h2>
+<p>Работа с высоковольтными блоками питания требует максимальной концентрации. Внутри корпуса находится конденсатор, который может хранить заряд даже после отключения от сети в течение длительного времени.</p>
+<p>Никогда не прикасайтесь к внутренним компонентам блока сразу после выключения. Разряд конденсаторов через лампу накаливания или специальный разрядный резистор является обязательной мерой безопасности.</p>
+<p>Используйте только исправные измерительные приборы. Неправильный выбор диапазона на мультиметре может привести к его выходу из строя или получению ожогов при пробое.</p>
+<blockquote>⚠️ Внимание: Конденсаторы в блоках питания Canon могут сохранять смертельно опасный заряд до 30 секунд после отключения от сети.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Безопасная работа с высоковольтными блоками требует обязательного разряда конденсаторов перед любыми вмешательствами.</p></aside>
+
+<h2 id="альтернативные-методы-диагностики">Альтернативные методы диагностики</h2>
+<p>Если у вас нет возможности замкнуть контакты напрямую, можно использовать программный метод эмуляции нагрузки. Для этого потребуется специальная карта тестирования или адаптер, имитирующий подключение к плате принтера.</p>
+<p>Такие адаптеры часто используются в сервисных центрах для быстрой проверки исправности блока без его демонтажа из принтера. Они подключаются в разрыв между блоком и машиной.</p>
+<p>В отсутствии специализированного оборудования можно попробовать подключить блок к маломощной нагрузке, например, к лампе накаливания на 12-24 Вольта. Свечение лампы подтвердит наличие напряжения.</p>
+<p>Этот метод менее точен, но безопасен для первичной оценки работоспособности. Лампа выступит в роли балластного резистора, ограничивая ток в случае короткого замыкания.</p>
+<ul>
+    <li>💡 Используйте лампу накаливания как визуальный индикатор наличия напряжения.</li>
+    <li>🔧 Адаптер эмуляции нагрузки — лучший инструмент для профессиональной диагностики.</li>
+    <li>⚠️ Не подключайте блок к нагрузке без предварительной проверки полярности.</li>
+</ul>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед началом тестирования сфотографируйте расположение проводов и их цвета — это поможет избежать путаницы при повторном подключении к принтеру.</p></aside>
+
+<h2 id="типичные-ошибки-при-запуске">Типичные ошибки при запуске</h2>
+<p>Одна из самых частых ошибок — неправильное определение контактов. Перепутав сигнальный провод с силовым, вы можете вывести из строя контроллер блока питания.</p>
+<p>Другая распространенная ошибка — попытка запуска блока без нагрузки. Некоторые модели <em>Canon</em> не запускаются или уходят в защиту, если на выходе нет минимального потребления тока.</p>
+<p>В таких случаях необходимо подключить к выходу резистор сопротивлением 10-50 Ом мощностью не менее 5 Ватт, чтобы создать искусственную нагрузку и стабилизировать работу.</p>
+<p>Игнорирование этого требования может привести к ложному выводу о неисправности устройства. Блок может быть исправен, но не способен работать в холостом режиме.</p>
+
+<blockquote>⚠️ Внимание: Блоки питания Canon часто требуют минимальной нагрузки для стабильной работы, иначе срабатывает защита по току холостого хода.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Наличие минимальной нагрузки на выходе часто является обязательным условием для запуска блоков питания Cannon.</p></aside>
+
+<h2 id="faq-частые-вопросы-пользователей">FAQ: Частые вопросы пользователей</h2>
+<details>
+    <summary>Можно ли запустить блок питания Canon без принтера?</summary>
+    <p>Да, это возможно путем замыкания сигнального контакта на землю в разъеме подключения. Однако для некоторых моделей требуется создание минимальной нагрузки на выходе.</p>
+</details>
+<details>
+    <summary>Как найти нужный провод для замыкания?</summary>
+    <p>Необходимо найти распиновку для конкретной модели блока. Обычно это провод, идущий от разъема к плате управления. Чаще всего это зеленый, синий или белый провод, но лучше свериться со схемой.</p>
+</details>
+<details>
+    <summary>Что делать, если блок запускается и сразу отключается?</summary>
+    <p>Это признак срабатывания защиты. Возможно, внутри блока короткое замыкание или неисправность выходных конденсаторов. Также возможно отсутствие необходимой нагрузки.</p>
+</details>
+<details>
+    <summary>Нужно ли использовать резистор при запуске?</summary>
+    <p>Для большинства моделей Canon рекомендуется использовать резистор-нагрузку на выходе, чтобы избежать нестабильной работы или срабатывания защиты по току.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/p/pr/printer-canon-lbp-3010-pochemu-ne-pechataet.html" class="pb-related-card">
+                <span class="pb-related-title">Canon LBP 3010 не печатает: 7 причин и способы решения</span>
+                <span class="pb-related-desc">Принтер Canon LBP 3010 молчит или пишет ошибку? Разбираем главные причины отказа: от зависших драйве</span>
+            </a><a href="/articles/f/fi/fiksatsiya-fe-canon-chto-eto.html" class="pb-related-card">
+                <span class="pb-related-title">Ошибка FE на Canon: что означает и как устранить</span>
+                <span class="pb-related-desc">Разбираем ошибку FE на фотоаппаратах Canon. Причины возникновения, методы диагностики и пошаговая ин</span>
+            </a><a href="/articles/p/pr/printer-canon-pixma-mg2540s-ne-zakhvatyvaet-bumagu-chto-delat.html" class="pb-related-card">
+                <span class="pb-related-title">Canon Pixma MG2540s не захватывает бумагу: как исправить проблему</span>
+                <span class="pb-related-desc">Принтер Canon Pixma MG2540s не берет бумагу? Подробная инструкция по устранению замятия, чистке роли</span>
+            </a><a href="/articles/k/ka/kak-pochistit-canon-g3411.html" class="pb-related-card">
+                <span class="pb-related-title">Как почистить Canon G3411: полная инструкция по обслуживанию</span>
+                <span class="pb-related-desc">Пошаговое руководство по чистке Canon G3411. Как устранить засоры, промыть головку и обслуживать сис</span>
+            </a><a href="/articles/k/ka/kak-otkryt-printer-canon-pixma.html" class="pb-related-card">
+                <span class="pb-related-title">Как открыть принтер Canon Pixma: разбор крышек, люков и сервисных зон</span>
+                <span class="pb-related-desc">Подробная инструкция как открыть принтер Canon Pixma для замены картриджей, чистки головок и ремонта</span>
+            </a><a href="/articles/k/ka/kak-sbrosit-pampers-na-canon-ipf770.html" class="pb-related-card">
+                <span class="pb-related-title">Сброс памперса на Canon iPF770: пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Как обнулить памперс на принтере Canon imagePROGRAF iPF770 без сервисного центра: официальные и альт</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

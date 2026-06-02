@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как установить BB на Canon: инструкция по прошивке и настройке — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция, как установить байонетный адаптер (BB) или прошивку на камеры Canon. Обзор совместимости, риски и технические нюансы настройки.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-ustanovit-bb-na-kenon.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как установить BB на Canon: инструкция по прошивке и настройке">
+    <meta property="og:description" content="Пошаговая инструкция, как установить байонетный адаптер (BB) или прошивку на камеры Canon. Обзор совместимости, риски и технические нюансы настройки.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/fotoapparaty-canon/">Фотоаппараты Canon</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как установить BB на Canon: инструкция по прошивке и настройке</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-в-модификацию-байонета-и-по">Введение в модификацию байонета и ПО</a></li><li><a href="#физическая-установка-байонетного-адаптера-bb-mount">Физическая установка байонетного адаптера (BB Mount)</a></li><li><a href="#программная-модификация-установка-прошивки-bb-magic-lantern">Программная модификация: Установка прошивки BB (Magic Lantern)</a></li><li><a href="#пошаговая-инструкция-по-настройке-системы">Пошаговая инструкция по настройке системы</a></li><li><a href="#совместимость-моделей-и-ограничения">Совместимость моделей и ограничения</a></li><li><a href="#технические-нюансы-и-безопасность">Технические нюансы и безопасность</a></li><li><a href="#устранение-типичных-ошибок">Устранение типичных ошибок</a></li><li><a href="#частые-вопросы-и-ответы">Частые вопросы и ответы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-vystavit-balans-belogo-na-fotoapparate-canon.html">Настройка баланса белого на Canon: инструкция и советы</a></li><li><a href="/articles/k/ka/kak-perenesti-foto-s-canon-na-telefon.html">Как перенести фото с Canon на телефон: 5 способов 2026</a></li><li><a href="/articles/k/ka/kak-ubrat-avtofokus-na-kamere-canon.html">Как отключить автофокус на Canon: ручная фокусировка и настройки</a></li><li><a href="/articles/k/ka/kak-pereslat-foto-s-fotoapparata-canon-na-telefon.html">Как переслать фото с Canon на телефон: полные инструкции</a></li><li><a href="/articles/k/ka/kak-uznat-god-proizvodstva-fotoapparata-canon.html">Как узнать год выпуска фотоаппарата Canon: 3 проверенных метода</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как установить BB на камеру Canon: полное руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-в-модификацию-байонета-и-по">Введение в модификацию байонета и ПО</a></li><li><a href="#физическая-установка-байонетного-адаптера-bb-mount">Физическая установка байонетного адаптера (BB Mount)</a></li><li><a href="#программная-модификация-установка-прошивки-bb-magic-lantern">Программная модификация: Установка прошивки BB (Magic Lantern)</a></li><li><a href="#пошаговая-инструкция-по-настройке-системы">Пошаговая инструкция по настройке системы</a></li><li><a href="#совместимость-моделей-и-ограничения">Совместимость моделей и ограничения</a></li><li><a href="#технические-нюансы-и-безопасность">Технические нюансы и безопасность</a></li><li><a href="#устранение-типичных-ошибок">Устранение типичных ошибок</a></li><li><a href="#частые-вопросы-и-ответы">Частые вопросы и ответы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-в-модификацию-байонета-и-по">Введение в модификацию байонета и ПО</h2>
+<p>
+<p>В мире фотографической техники аббревиатура <strong>BB</strong> может трактоваться двояко, что часто вводит пользователей в заблуждение при поиске инструкций. Чаще всего речь идет либо о физической установке <em>байонетного адаптера</em> (Bayonet Mount Bridge) для работы с объективами других систем, либо о внедрении модифицированной прошивки <strong>Custom Firmware</strong>, которая позволяет разблокировать скрытые функции камеры.</p>
+</p>
+<p>
+<p>Для владельцев систем <em>Canon EOS</em> и <em>Canon R</em> понимание различий критично, так как неправильные действия могут привести к полной неработоспособности устройства. В этой статье мы разберем оба сценария: механическую адаптацию оптических систем и программную доработку, чтобы вы могли выбрать оптимальный путь для своих задач.</p>
+</p>
+
+<h2 id="физическая-установка-байонетного-адаптера-bb-mount">Физическая установка байонетного адаптера (BB Mount)</h2>
+<p>
+<p>Если под <strong>BB</strong> вы подразумеваете механический переходник для крепления объективов с другим типом посадочного места, процесс требует ювелирной точности. Современные беззеркальные камеры <em>Canon EOS R</em> и <em>R5</em> имеют короткий рабочий отрезок, что делает их идеальной платформой для различных адаптеров, но риск повредить контакты высок.</p>
+</p>
+<p>
+<p>Перед началом работы убедитесь, что адаптер имеет надежную систему фиксации и не люфтит. Качественный <strong>байонетный переходник</strong> должен плотно прилегать к корпусу камеры, исключая попадание пыли на матрицу при смене оптики. Неправильный монтаж может привести к проседанию объектива и невозможности сфокусироваться в бесконечность.</p>
+</p>
+<p>
+<p>Установка осуществляется путем совмещения красной точки на адаптере с красной меткой на корпусе камеры <em>Canon</em>. После совмещения необходимо плавно повернуть адаптер по часовой стрелке до характерного щелчка. Убедитесь, что рычаг фиксации плотно зашел в паз, иначе объектив может открепиться в самый неподходящий момент.</p>
+</p>
+
+<blockquote>⚠️ Внимание: Никогда не применяйте излишнюю силу при вкручивании адаптера. Если резьба не идет, проверьте совместимость резьбовых соединений и отсутствие сорванных витков на корпусе камеры.
+</blockquote>
+
+<h2 id="программная-модификация-установка-прошивки-bb-magic-lantern">Программная модификация: Установка прошивки BB (Magic Lantern)</h2>
+<p>
+<p>В сообществе фотографов <strong>BB</strong> также часто ассоциируется с тестовыми билдами или специфическими сборками прошивок, такими как <em>Magic Lantern</em>, которые добавляют функции видеосъемки и ручного контроля. Установка такого ПО требует подготовки карты памяти и строгого следования алгоритму, иначе камера может превратиться в "кирпич".</p>
+</p>
+<p>
+<p>Процесс начинается с форматирования карты памяти непосредственно в самой камере <em>Canon</em>. Это критически важный шаг, так как загрузочная запись должна быть создана именно аппаратным способом. Используйте карты высокого класса скорости (UHS-I или UHS-II), чтобы избежать ошибок при чтении файлов прошивки.</p>
+</p>
+<p>
+<p>После форматирования скачайте архив с прошивкой <strong>ML</strong> с официального форума разработчиков. Распакуйте файлы в корень карты памяти, соблюдая структуру папок. Вставьте карту в выключенную камеру и включите её, удерживая кнопку <code>SET</code> или <code>Menu</code>, в зависимости от модели.</p>
+</p>
+
+<div class="pb-poll" id="poll-b90ca84a"><div class="pb-poll-question">📊 Какую модель камеры Canon вы используете?</div><div class="pb-poll-option" data-poll="b90ca84a" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">EOS R5/R6</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b90ca84a" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">5D Mark IV</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b90ca84a" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">6D Mark II</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b90ca84a" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Беззеркальная EOS M</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b90ca84a" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другое</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="пошаговая-инструкция-по-настройке-системы">Пошаговая инструкция по настройке системы</h2>
+<p>
+<p>После удачной загрузки модифицированного ПО необходимо провести первичную настройку интерфейса. Зайдите в меню <code>Magic Lantern Setup</code>, которое появится как дополнительная вкладка. Здесь важно настроить параметры экспозиции и видеозаписи под свои нужды, отключив лишние функции для экономии заряда аккумулятора.</p>
+</p>
+<p>
+<p>Особое внимание уделите параметрам <strong>AF-C</strong> (непрерывная автофокусировка) и <strong>Zebra</strong> (индикаторы перегрузки по свету). Эти инструменты превращают обычную фотосъемку в профессиональный видеопроцесс, но требуют грамотной калибровки. Не забудьте проверить совместимость версии прошивки с версией микрокода камеры.</p>
+</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к установке ПО</h4><label class="check-item"><input type="checkbox"><span>Скачать правильный файл прошивки</span></label><label class="check-item"><input type="checkbox"><span>Отформатировать карту в камере</span></label><label class="check-item"><input type="checkbox"><span>Выключить камеру перед вставкой карты</span></label><label class="check-item"><input type="checkbox"><span>Проверить заряд батареи на 100%</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>
+<p>Если вы хотите узнать, какие именно функции открывает конкретная версия <em>BB</em>, ознакомьтесь с детальным списком изменений. Часто разработчики добавляют поддержку <strong>RAW-видео</strong> с высоким битрейтом, что недоступно в стоковой прошивке.</p>
+</p>
+
+<details class="pb-accordion"><summary>Что делать, если камера не видит карту?</summary><div class="pb-accordion-body"><p>1. Проверьте, отформатирована ли карта в самой камере. 2. Убедитесь, что файлы прошивки лежат в корне, а не в папках. 3. Попробуйте другую карту памяти, так как некоторые бренды имеют несовместимые контроллеры.</p></div></details>
+
+<h2 id="совместимость-моделей-и-ограничения">Совместимость моделей и ограничения</h2>
+<p>
+<p>Не все камеры <em>Canon</em> поддерживают установку сторонних прошивок или сложных механических адаптеров <strong>BB</strong>. Модели начального уровня, такие как <em>EOS 2000D</em> или <em>4000D</em>, имеют урезанное железо и BIOS, что делает невозможным запуск альтернативного ПО.</p>
+</p>
+<p>
+<p>Следующая таблица демонстрирует уровень поддержки различных популярных моделей для всех типов модификаций (адаптеры и ПО).</p>
+</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Модель камеры</th>
+<th>Поддержка механических адаптеров</th>
+<th>Поддержка прошивок (ML/BB)</th>
+<th>Рекомендация</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canon EOS R5 / R6</td>
+<td>Полная (EF-EOS R)</td>
+<td>Частичная (Beta)</td>
+<td>Использовать только для фотосъемки</td>
+</tr>
+<tr>
+<td>Canon EOS 5D Mark IV</td>
+<td>Полная (EF-S/EOS-M)</td>
+<td>Полная (Stable)</td>
+<td>Идеально для видео</td>
+</tr>
+<tr>
+<td>Canon EOS 6D Mark II</td>
+<td>Полная</td>
+<td>Полная</td>
+<td>Отличный бюджетный вариант</td>
+</tr>
+<tr>
+<td>Canon EOS 2000D</td>
+<td>Ограниченная</td>
+<td>Нет</td>
+<td>Только стоковые функции</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>⚠️ Внимание: Установка прошивки на модели, не входящие в список поддержки, гарантированно приведет к выходу камеры из строя и потере гарантии.
+</blockquote>
+
+<h2 id="технические-нюансы-и-безопасность">Технические нюансы и безопасность</h2>
+<p>
+<p>При работе с <strong>байонетом</strong> и электроникой камеры важно соблюдать температурный режим. Не проводите установку или обновление ПО в условиях повышенной влажности или при экстремально низких температурах. Это может вызвать конденсат внутри корпуса, что замыкает контакты.</p>
+</p>
+<p>
+<p>Если вы используете адаптер с электронными контактами, проверьте их чистоту перед установкой. Очистка контактов должна производиться специальными спиртовыми салфетками для оптики. Обычная вата или сухая тряпка могут оставить ворсинки или статический заряд.</p>
+</p>
+<p>
+<p>Важно понимать, что после установки модифицированного ПО камера может вести себя непредсказуемо при передаче файлов через USB на компьютер. Иногда требуется отключение протоколов передачи данных в настройках меню.</p>
+</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед началом любой модификации сделайте полный сброс настроек камеры до заводских параметров. Это исключит конфликты между старыми конфигурациями и новым ПО или механикой.</p></aside>
+
+<h2 id="устранение-типичных-ошибок">Устранение типичных ошибок</h2>
+<p>
+<p>Самая частая проблема при установке — ошибка "Card Error" или "Firmware Error". Это означает, что камера не может прочитать загрузочный сектор карты памяти. В 90% случаев проблема решается повторным форматированием карты в камере <em>Canon</em>, а не на компьютере.</p>
+</p>
+<p>
+<p>Другая проблема — механический люфт адаптера. Если объектив проворачивается, не вынимаясь из байонета, немедленно прекратите съемку. Это признак износа фиксирующего кольца или несовпадения диаметров. Использование <strong>некачественного адаптера</strong> может повредить лепестки байонета камеры.</p>
+</p>
+
+<blockquote>⚠️ Внимание: Если после установки прошивки камера включается, но показывает черный экран, попробуйте вытащить батарею и карту памяти на 10 минут, чтобы сбросить контроллер питания.
+</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Успешная модификация требует терпения: всегда проверяйте каждый шаг, не торопитесь и используйте только проверенные источники файлов.</p></aside>
+
+<h2 id="частые-вопросы-и-ответы">Частые вопросы и ответы</h2>
+
+<details>
+<summary>Можно ли установить прошивку BB на Canon из Японии?</summary>
+<p>
+<p>Да, но с оговорками. Японские региональные версии камер (серия N) часто имеют заблокированные функции записи звука или видео-выходов. Прошивка <em>Magic Lantern</em> может снять некоторые ограничения, но не все, в зависимости от ревизии платы.</p>
+</p>
+</details>
+
+<details>
+<summary>Что будет, если прервать процесс обновления?</summary>
+<p>
+<p>Если прервать процесс обновления прошивки или установки <strong>байонетного адаптера</strong> с электроникой, это приведет к "окирпичиванию" устройства. Восстановление возможно только через сервисный центр с использованием специального оборудования для перепрошивки чипа памяти.</p>
+</p>
+</details>
+
+<details>
+<summary>Нужно ли удалять прошивку после использования?</summary>
+<p>
+<p>Нет, удаленная прошивка не влияет на работу камеры. Однако, если вы планируете вернуть камеру по гарантии, лучше вернуть стоковую прошивку. Физический адаптер <strong>BB</strong> можно снимать в любой момент без последствий для электроники.</p>
+</p>
+</details>
+
+<details>
+<summary>Как проверить версию установленной прошивки?</summary>
+<p>
+<p>Зайдите в меню камеры в раздел <code>Настройки (желтая вкладка)</code> → <code>Версия прошивки</code>. Если установлено стороннее ПО, в строке версии часто появляется пометка "ML" или дополнительные цифры, отличные от официальных версий Canon.</p>
+</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-vystavit-balans-belogo-na-fotoapparate-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Настройка баланса белого на Canon: инструкция и советы</span>
+                <span class="pb-related-desc">Полный гайд по настройке баланса белого на фотоаппаратах Canon. Разбор режимов, цветовая температура</span>
+            </a><a href="/articles/k/ka/kak-perenesti-foto-s-canon-na-telefon.html" class="pb-related-card">
+                <span class="pb-related-title">Как перенести фото с Canon на телефон: 5 способов 2026</span>
+                <span class="pb-related-desc">Пошаговые инструкции по передаче фото с фотоаппаратов Canon на Android/iPhone: через Wi-Fi, кабель, </span>
+            </a><a href="/articles/k/ka/kak-ubrat-avtofokus-na-kamere-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как отключить автофокус на Canon: ручная фокусировка и настройки</span>
+                <span class="pb-related-desc">Пошаговая инструкция по деактивации автофокуса на камерах Canon. Настройки переключателей на объекти</span>
+            </a><a href="/articles/k/ka/kak-pereslat-foto-s-fotoapparata-canon-na-telefon.html" class="pb-related-card">
+                <span class="pb-related-title">Как переслать фото с Canon на телефон: полные инструкции</span>
+                <span class="pb-related-desc">Узнайте, как быстро передать снимки с камеры Canon на смартфон через Wi-Fi, Bluetooth, приложение Ca</span>
+            </a><a href="/articles/k/ka/kak-uznat-god-proizvodstva-fotoapparata-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как узнать год выпуска фотоаппарата Canon: 3 проверенных метода</span>
+                <span class="pb-related-desc">Узнайте точный год производства камеры Canon по серийному номеру и меню. Полная инструкция для зерка</span>
+            </a><a href="/articles/k/ka/kak-prikryt-diafragmu-na-fotoapparate-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Как закрыть диафрагму на фотоаппаратах Canon: Полное руководство</span>
+                <span class="pb-related-desc">Узнайте, как прикрыть диафрагму на камерах Canon в разных режимах. Настройка f-числа, влияние на глу</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

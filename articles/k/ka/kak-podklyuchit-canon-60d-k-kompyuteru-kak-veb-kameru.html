@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Как подключить Canon 60D к компьютеру как веб-камеру: пошаговая инструкция — Кэнон Инфо</title>
+    <meta name="description" content="Полное руководство по превращению камеры Canon 60D в веб-камеру. Описаны методы через EOS Webcam Utility, OBS и захват видеосигнала для стриминга и звонков.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/k/ka/kak-podklyuchit-canon-60d-k-kompyuteru-kak-veb-kameru.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как подключить Canon 60D к компьютеру как веб-камеру: пошаговая инструкция">
+    <meta property="og:description" content="Полное руководство по превращению камеры Canon 60D в веб-камеру. Описаны методы через EOS Webcam Utility, OBS и захват видеосигнала для стриминга и звонков.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/fotoapparaty-canon/">Фотоаппараты Canon</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как подключить Canon 60D к компьютеру как веб-камеру: пошаговая инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-в-использование-зеркальной-камеры-для-видеосвязи">Введение в использование зеркальной камеры для видеосвязи</a></li><li><a href="#подготовка-оборудования-и-проверка-совместимости">Подготовка оборудования и проверка совместимости</a></li><li><a href="#установка-и-настройка-драйвера-eos-webcam-utility">Установка и настройка драйвера EOS Webcam Utility</a></li><li><a href="#альтернативный-метод-через-obs-studio-и-карту-захвата">Альтернативный метод через OBS Studio и карту захвата</a></li><li><a href="#оптимизация-настроек-изображения-для-стриминга-и-звонков">Оптимизация настроек изображения для стриминга и звонков</a></li><li><a href="#решение-частых-проблем-и-устранение-неполадок">Решение частых проблем и устранение неполадок</a></li><li><a href="#заключение-и-рекомендации-по-эксплуатации">Заключение и рекомендации по эксплуатации</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/6/60/600d-canon-kak-vebkamera.html">Canon 600D как вебкамера: настройка через EOS Webcam Utility и OBS</a></li><li><a href="/articles/k/ka/kak-snimat-video-na-fotoapparat-canon-1100d.html">Как снимать видео на Canon 1100D: Полное руководство</a></li><li><a href="/articles/m/mu/multiekspozitsiya-v-fotografii-kak-sdelat-canon.html">Мультиэкспозиция на Canon: инструкция по съемке и настройки</a></li><li><a href="/articles/c/ca/canon-1100d-skolko-snimkov-khodit-zatvor.html">Canon 1100D: ресурс затвора и как его продлить (2026)</a></li><li><a href="/articles/c/ca/canon-1100d-kak-veb-kamera-cherez-usb.html">Canon 110D как веб-камера: подключение через USB и софт</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как подключить Canon 60D к компьютеру как веб-камеру</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-в-использование-зеркальной-камеры-для-видеосвязи">Введение в использование зеркальной камеры для видеосвязи</a></li><li><a href="#подготовка-оборудования-и-проверка-совместимости">Подготовка оборудования и проверка совместимости</a></li><li><a href="#установка-и-настройка-драйвера-eos-webcam-utility">Установка и настройка драйвера EOS Webcam Utility</a></li><li><a href="#альтернативный-метод-через-obs-studio-и-карту-захвата">Альтернативный метод через OBS Studio и карту захвата</a></li><li><a href="#оптимизация-настроек-изображения-для-стриминга-и-звонков">Оптимизация настроек изображения для стриминга и звонков</a></li><li><a href="#решение-частых-проблем-и-устранение-неполадок">Решение частых проблем и устранение неполадок</a></li><li><a href="#заключение-и-рекомендации-по-эксплуатации">Заключение и рекомендации по эксплуатации</a></li><li><a href="#часто-задаваемые-вопросы">Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-в-использование-зеркальной-камеры-для-видеосвязи">Введение в использование зеркальной камеры для видеосвязи</h2>
+
+<p>Использование профессиональной оптики вместо стандартной веб-камеры кардинально меняет качество видеоконтента. Камера <em>Canon 60D</em> обладает крупным сенсором, который создает естественное размытие фона и обеспечивает отличную передачу цветов даже при недостаточном освещении. Вы получаете картинку уровня кинопроизводства прямо в окно видеочата или стриминговой платформы.</p>
+
+<p>Процесс настройки требует понимания нескольких технических нюансов, так как эта модель не имеет встроенного чипа прямой трансляции по USB, как более новые устройства. Вам придется использовать либо специальное программное обеспечение от производителя, либо сторонние инструменты захвата. Правильная конфигурация <strong>EOS Webcam Utility</strong> или использование <strong>OBS Studio</strong> позволит вам раскрыть весь потенциал вашего оборудования.</p>
+
+<h2 id="подготовка-оборудования-и-проверка-совместимости">Подготовка оборудования и проверка совместимости</h2>
+
+<p>Перед началом работы необходимо убедиться, что все физические компоненты готовы к соединению. Камера <em>Canon 60D</em> оснащена портом USB 2.0, который используется для передачи данных, но для видеосигнала в режиме вебкамеры часто требуется переходник или специфическое драйверное обеспечение. Проверьте наличие оригинального кабеля для подключения к ПК или приобретите качественный аналог, так как дешёвые кабели могут не обеспечивать стабильную передачу видеопотока.</p>
+
+<p>Важно также проверить состояние батареи. При длительной работе в режиме веб-камеры штатный аккумулятор разрядится достаточно быстро. Рекомендуется приобрести <strong>питание через USB-адаптер</strong> (DC Coupler), который вставляется вместо батареи и подключается к розетке. Это позволит вам вести трансляции или участвовать в совещаниях часами без риска внезапного отключения устройства.</p>
+
+<p>Для корректной работы программного обеспечения необходима операционная система не ниже Windows 10 (64-бит) или macOS версии 10.15 и выше. Убедитесь, что на компьютере установлен драйвер <strong>EOS Webcam Utility</strong> версии 1.1 или новее, так как более старые версии могут не поддерживать функцию видеопотока для этой модели.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед подключением обязательно отключите функцию сохранения фотографий на карту памяти, чтобы избежать лишних уведомлений и замедления работы интерфейса во время видеозвонка.</p></aside>
+
+<h2 id="установка-и-настройка-драйвера-eos-webcam-utility">Установка и настройка драйвера EOS Webcam Utility</h2>
+
+<p>Основной способ превращения вашей камеры в веб-камеру — использование официального инструмента от Canon. Этот драйвер эмулирует устройство ввода, которое распознается любым мессенджером или программой для видеоконференций. Скачайте утилиту с официального сайта производителя, выбрав раздел для вашей операционной системы.</p>
+
+<p>После установки драйвера важно правильно настроить саму камеру <em>Canon 60D</em>. Переключите режимный диск в положение Live View. В меню устройства найдите раздел <code>Настройки → Настройки подключения</code> и убедитесь, что функция <strong>Подключение ПК</strong> активна. При подключении кабеля USB к компьютеру устройство должно автоматически перейти в режим веб-камеры.</p>
+
+<p>Если система не видит камеру, проверьте настройки в приложении <strong>EOS Utility</strong>. Иногда требуется вручную переключить режим передачи данных в <code>Меню камеры → Настройка ПК</code>. В окне выбора устройства в Skype, Zoom или Teams появится новая запись с названием <em>EOS Webcam Utility</em>.</p>
+
+<details class="pb-accordion"><summary>Что делать, если драйвер не устанавливается?</summary><div class="pb-accordion-body"><p>Попробуйте отключить антивирус на время установки и запустите файл инсталлятора от имени администратора. Также проверьте, что на компьютере не установлены старые версии драйверов Canon EOS, которые могут конфликтовать с новой утилитой.</p></div></details>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Метод подключения</th>
+<th>Сложность настройки</th>
+<th>Качество изображения</th>
+<th>Необходимое оборудование</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EOS Webcam Utility</td>
+<td>Низкая</td>
+<td>Хорошее (сжатое)</td>
+<td>Кабель USB, драйвер</td>
+</tr>
+<tr>
+<td>OBS + Видеокарта</td>
+<td>Средняя</td>
+<td>Отличное (настроечное)</td>
+<td>Каптур-карта HDMI, OBS</td>
+</tr>
+<tr>
+<td>Чистый HDMI (без захвата)</td>
+<td>Высокая (недоступно)</td>
+<td>Максимальное</td>
+<td>Не применимо для 60D</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="pb-poll" id="poll-1705ce19"><div class="pb-poll-question">📊 Какой способ подключения вы планируете использовать?</div><div class="pb-poll-option" data-poll="1705ce19" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Официальный драйвер Canon</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1705ce19" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Сторонняя программа (OBS)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1705ce19" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Покупка карты захвата</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1705ce19" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Пока не знаю</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="альтернативный-метод-через-obs-studio-и-карту-захвата">Альтернативный метод через OBS Studio и карту захвата</h2>
+
+<p>Если встроенная утилита не дает желаемого качества или вы хотите использовать сложные сцены, лучшим решением станет связка <strong>OBS Studio</strong> и внешней карты захвата. Этот метод позволяет передавать несжатый видеосигнал с выхода HDMI камеры на компьютер. Для <em>Canon 60D</em> это единственный способ получить максимальное разрешение и битрейт, недоступные через USB-протокол.</p>
+
+<p>Вам потребуется приобрести устройство <strong>HDMI Video Capture Card</strong>. Это компактный адаптер, который подключается в USB-порт компьютера, а к нему через кабель HDMI подсоединяется камера. В настройках OBS вы добавляете источник захвата видео, выбирая вашу карту, и затем используете функцию виртуальной камеры.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к использованию карты захвата</h4><label class="check-item"><input type="checkbox"><span>Проверить выход камеры HDMI</span></label><label class="check-item"><input type="checkbox"><span>Купить карту захвата USB</span></label><label class="check-item"><input type="checkbox"><span>Установить OBS Studio</span></label><label class="check-item"><input type="checkbox"><span>Настроить виртуальную камеру</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>В программе OBS Studio перейдите в раздел <code>Инструменты → Виртуальная камера</code> и нажмите кнопку <strong>Запустить</strong>. После этого в настройках любого приложения для видеосвязи выберите устройство "OBS Virtual Camera". Этот метод дает больше контроля над картинкой: вы можете настроить экспозицию, баланс белого и добавить фильтры прямо в OBS перед отправкой сигнала.</p>
+
+<blockquote>⚠️ Внимание: При использовании HDMI выхода на камере <em>Canon 60D</em> экран камеры может оставаться черным или показывать минимальную информацию. Это нормально и является особенностью работы чистого видеосигнала через этот порт.</blockquote>
+
+<h2 id="оптимизация-настроек-изображения-для-стриминга-и-звонков">Оптимизация настроек изображения для стриминга и звонков</h2>
+
+<p>Качество картинки напрямую зависит от правильных настроек экспозиции и фокусировки. В режиме Live View отключите автоматическую регулировку диафрагмы, если вам нужно фиксированное размытие фона. Установите диафрагму на значение <code>f/2.8</code> или <code>f/4</code> — это создаст приятный боке и выделит вас на фоне.</p>
+
+<p>Баланс белого также играет критическую роль. Избегайте режима <strong>Auto White Balance</strong>, так как при появлении на экране новых объектов цвета могут "прыгать". Выберите ручной режим и установите значение <code>5500K</code> для дневного света или <code>3200K</code> для ламп накаливания, чтобы кожа выглядела естественно.</p>
+
+<p>Фокусировка должна быть ручной или в режиме <strong>One-Shot AF</strong> с фиксацией точки. Автофокус в старых моделях Canon может "охотиться" и терять резкость на лице, что раздражает собеседников. Установите точку фокусировки на центр или на область лица и зафиксируйте её.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для стабильной работы веб-камеры на базе Canon 60D критически важно обеспечить постоянное питание через адаптер, так как автономный режим быстро исчерпает заряд даже свежей батареи.</p></aside>
+
+<h2 id="решение-частых-проблем-и-устранение-неполадок">Решение частых проблем и устранение неполадок</h2>
+
+<p>Иногда камера не определяется или изображение отсутствует. В первую очередь проверьте кабель USB. Используйте кабель, идущий в комплекте с камерой, или качественный кабель с поддержкой передачи данных, а не только зарядки. Дешевые кабели часто имеют только контакты для питания, что не позволяет передавать видеопоток.</p>
+
+<p>Если изображение есть, но оно зернистое или прерывистое, проверьте разрешение USB-порта. Убедитесь, что вы подключились к порту <strong>USB 3.0</strong> (обычно они синего цвета), а не к старому USB 2.0. Также попробуйте отключить другие USB-устройства, чтобы исключить нехватку пропускной способности шины.</p>
+
+<blockquote>⚠️ Внимание: Если камера нагревается во время длительной работы, сделайте перерыв. Сенсоры <em>Canon 60D</em> не рассчитаны на круглосуточную работу как у профессиональных стриминговых камер, и перегрев может привести к аварийному отключению.</blockquote>
+
+<details class="pb-accordion"><summary>Как избежать перегрева при длительной трансляции?</summary><div class="pb-accordion-body"><p>Обеспечьте вентиляцию корпуса камеры, не накрывайте её тканью и установите минимально необходимую яркость дисплея. В экстренных случаях можно снять заднюю крышку, если позволяет конструкция штатива, для лучшего теплоотвода.</p></div></details>
+
+<h2 id="заключение-и-рекомендации-по-эксплуатации">Заключение и рекомендации по эксплуатации</h2>
+
+<p>Подключение <em>Canon 60D</em> в качестве веб-камеры — это отличный способ повысить уровень вашего видеоконтента без покупки нового оборудования. Использование драйверов позволяет решить задачу быстро, а связка с OBS дает максимальную гибкость. Главное — помнить о необходимости внешнего питания и правильной настройке фокуса.</p>
+
+<p>Регулярно обновляйте программное обеспечение, чтобы избежать багов. Следите за чистотой линзы объектива и сенсора камеры, так как даже мелкие пылинки будут видны на большом экране при малой глубине резкости. Правильная настройка сейчас сэкономит вам нервы во время важной встречи или трансляции.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте штатив с кронштейном "лебединая шея" для удобного позиционирования камеры на уровне глаз, чтобы избежать эффекта "двойного подбородка", типичного для веб-камер на мониторах.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы">Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Можно ли использовать Canon 60D как веб-камеру без установки драйверов?</summary>
+<p>Без драйверов <strong>EOS Webcam Utility</strong> стандартными средствами Windows камера будет определяться только как источник фото. Для видеопотока драйвер обязателен, либо нужно использовать карту захвата HDMI.</p>
+</details>
+
+<details>
+<summary>Почему изображение в камере есть, но на компьютере его нет?</summary>
+<p>Вероятно, не выбрано правильное устройство в настройках программы видеосвязи. Зайдите в настройки камеры видеосвязи и выберите <strong>EOS Webcam Utility</strong> вместо встроенной веб-камеры.</p>
+</details>
+
+<details>
+<summary>Какую программу лучше использовать для стрима?</summary>
+<p>Для простых звонков хватит встроенных приложений с выбранным драйвером. Для стриминга или сложных сцен лучше использовать <strong>OBS Studio</strong>, который позволяет накладывать графику и фильтры.</p>
+</details>
+
+<details>
+<summary>Нужен ли специальный кабель для подключения?</summary>
+<p>Рекомендуется использовать оригинальный кабель Canon или качественный аналог с поддержкой USB 2.0 Full Speed. Дешевые кабели могут не обеспечить стабильную передачу видеопотока.</p>
+</details>
+
+<details>
+<summary>Можно ли фотографировать во время видеозвонка?</summary>
+<p>Технически это возможно, но программа видеосвязи может прервать поток или сбросить настройки. Лучше отключить фотосъемку в меню камеры или использовать отдельное устройство для фото.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/6/60/600d-canon-kak-vebkamera.html" class="pb-related-card">
+                <span class="pb-related-title">Canon 600D как вебкамера: настройка через EOS Webcam Utility и OBS</span>
+                <span class="pb-related-desc">Пошаговая инструкция, как превратить зеркальную камеру Canon 600D в мощную вебкамеру. Обзор софта, н</span>
+            </a><a href="/articles/k/ka/kak-snimat-video-na-fotoapparat-canon-1100d.html" class="pb-related-card">
+                <span class="pb-related-title">Как снимать видео на Canon 1100D: Полное руководство</span>
+                <span class="pb-related-desc">Научитесь правильно настраивать Canon 1100D для видеосъемки. Разбор режимов, настроек экспозиции, фо</span>
+            </a><a href="/articles/m/mu/multiekspozitsiya-v-fotografii-kak-sdelat-canon.html" class="pb-related-card">
+                <span class="pb-related-title">Мультиэкспозиция на Canon: инструкция по съемке и настройки</span>
+                <span class="pb-related-desc">Полное руководство по созданию мультиэкспозиции на камерах Canon. Настройки, режимы наложения и сове</span>
+            </a><a href="/articles/c/ca/canon-1100d-skolko-snimkov-khodit-zatvor.html" class="pb-related-card">
+                <span class="pb-related-title">Canon 1100D: ресурс затвора и как его продлить (2026)</span>
+                <span class="pb-related-desc">Сколько снимков выдерживает затвор Canon EOS 1100D? Официальные данные, факторы износа и способы про</span>
+            </a><a href="/articles/c/ca/canon-1100d-kak-veb-kamera-cherez-usb.html" class="pb-related-card">
+                <span class="pb-related-title">Canon 110D как веб-камера: подключение через USB и софт</span>
+                <span class="pb-related-desc">Пошаговая инструкция: как превратить Canon 1100D в веб-камеру через USB. Обзор софта EOS Webcam Util</span>
+            </a><a href="/articles/c/ch/chto-vybrat-kenon-7d-ili-nikon-d7000.html" class="pb-related-card">
+                <span class="pb-related-title">Canon 7D или Nikon D7000: Полное сравнение для фотографа</span>
+                <span class="pb-related-desc">Сравнение Canon 7D и Nikon D7000 по качеству снимков, скорости съемки и эргономике. Узнайте, какая к</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🖨️</text></svg>">
+    <title>Установка драйвера Canon LBP 1120 на Windows 7: Полное руководство — Кэнон Инфо</title>
+    <meta name="description" content="Пошаговая инструкция по подключению и настройке принтера Canon LBP 1120 на Windows 7. Решение проблем с драйверами, режим совместимости и ручная установка.">
+    <link rel="canonical" href="https://printer-c.vercel.app/articles/c/ca/canon-lbp-1120-kak-ustanovit-na-windows-7.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Установка драйвера Canon LBP 1120 на Windows 7: Полное руководство">
+    <meta property="og:description" content="Пошаговая инструкция по подключению и настройке принтера Canon LBP 1120 на Windows 7. Решение проблем с драйверами, режим совместимости и ручная установка.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1780385575">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🖨️</span>
+                <span class="pb-logo-text">Кэнон Инфо</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/nastrojka-printerov/" class="pb-nav-active">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/nastrojka-printerov/" class="pb-dropdown-item">⚙️ Настройка принтеров</a>
+<a href="/category/zapravka-kartridzhej/" class="pb-dropdown-item">💧 Заправка картриджей</a>
+<a href="/category/remont-i-oshibki/" class="pb-dropdown-item">🔧 Ремонт и ошибки</a>
+<a href="/category/skanirovanie-i-kopirovanie/" class="pb-dropdown-item">📄 Сканирование и копирование</a>
+<a href="/category/fotoapparaty-canon/" class="pb-dropdown-item">📷 Фотоаппараты Canon</a>
+<a href="/category/nastrojki-kamery/" class="pb-dropdown-item">🎛️ Настройки камеры</a>
+<a href="/category/aksessuary-i-raskhodniki/" class="pb-dropdown-item">🔋 Аксессуары и расходники</a>
+<a href="/category/podklyuchenie-k-pk/" class="pb-dropdown-item">💻 Подключение к ПК</a>
+<a href="/category/ukhod-i-chistka/" class="pb-dropdown-item">🧼 Уход и чистка</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/nastrojka-printerov/">Настройка принтеров</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Установка драйвера Canon LBP 1120 на Windows 7: Полное руководство</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-системы-и-поиск-необходимых-файлов">Подготовка системы и поиск необходимых файлов</a></li><li><a href="#установка-драйвера-через-режим-совместимости">Установка драйвера через режим совместимости</a></li><li><a href="#работа-с-утилитой-lbp-tool">Работа с утилитой LBP Tool</a></li><li><a href="#ручное-добавление-принтера-в-системе">Ручное добавление принтера в системе</a></li><li><a href="#решение-частых-проблем-и-ошибок">Решение частых проблем и ошибок</a></li><li><a href="#технические-особенности-и-ограничения">Технические особенности и ограничения</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-ustanovit-printer-canon-lbp-6000.html">Установка принтера Canon LBP 6000: Драйверы и настройка на Windows</a></li><li><a href="/articles/k/ka/kak-ustanovit-printer-canon-mg2540s-bez-diska.html">Установка принтера Canon MG2540S без диска: полная инструкция</a></li><li><a href="/articles/k/ka/kak-pomenyat-tsvet-pechati-na-printere-canon-mg2540s.html">Как поменять цвет печати на принтере Canon MG2540s: инструкция</a></li><li><a href="/articles/k/ka/kak-vstavit-kartridzh-v-printer-canon-pixma-mg2500.html">Как вставить картридж в принтер Canon Pixma MG2500: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-podklyuchit-printer-canon-mp230.html">Как подключить принтер Canon MP230 к компьютеру: полная инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как установить Canon LBP 1120 на Windows 7: Пошаговая инструкция</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-системы-и-поиск-необходимых-файлов">Подготовка системы и поиск необходимых файлов</a></li><li><a href="#установка-драйвера-через-режим-совместимости">Установка драйвера через режим совместимости</a></li><li><a href="#работа-с-утилитой-lbp-tool">Работа с утилитой LBP Tool</a></li><li><a href="#ручное-добавление-принтера-в-системе">Ручное добавление принтера в системе</a></li><li><a href="#решение-частых-проблем-и-ошибок">Решение частых проблем и ошибок</a></li><li><a href="#технические-особенности-и-ограничения">Технические особенности и ограничения</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Принтер <em>Canon LBP 1120</em> остается одним из самых популярных компактных устройств для малого офиса и домашнего использования, несмотря на свой возраст. Однако при попытке подключить эту модель к операционной системе <code>Windows 7</code> пользователи часто сталкиваются с трудностями, так как официальная поддержка данной ОС со стороны производителя была прекращена довольно давно.</p>
+
+<p>В отличие от Windows 10 или 11, где система часто сама находит подходящие драйверы, в случае с <em>Windows 7</em> требуется более ручной подход и знание специфики драйверов Canon. Неправильная установка может привести к тому, что устройство будет определяться, но не печатать, или выдавать ошибки при формировании очереди печати.</p>
+
+<p>В этой статье мы подробно разберем, как корректно установить драйвер, используя универсальные методы и режим совместимости. Мы также рассмотрим нюансы работы с утилитой <strong>LBP Tool</strong>, которая является критически важной для функционирования этой модели на старых версиях ОС.</p>
+
+<h2 id="подготовка-системы-и-поиск-необходимых-файлов">Подготовка системы и поиск необходимых файлов</h2>
+<p>Перед началом процесса установки необходимо убедиться, что ваш компьютер готов к работе. Сначала проверьте, установлена ли у вас последняя версия <strong>Service Pack 1</strong> для <code>Windows 7</code>. Без этого обновления некоторые компоненты драйверов могут некорректно инициализироваться в системных реестрах.</p>
+
+<p>Вам не следует скачивать драйверы с сомнительных сторонних сайтов, так как это может привести к заражению системы вирусами. Лучше всего использовать официальный архив драйверов или проверенные репозитории. Ищите файл с названием, содержащим <em>Canon LBP1120</em> и пометку <code>x64</code> или <code>x86</code> в зависимости от разрядности вашей системы.</p>
+
+<p>Если вы используете 64-битную версию операционной системы, крайне важно выбрать именно соответствующий пакет. Установка 32-битного драйвера на 64-битную систему невозможна без специальных эмуляторов, которые только усложнят процесс настройки.</p>
+
+<blockquote>⚠️ Внимание: Не подключайте кабель USB к компьютеру до тех пор, пока вы не дойдете до этапа, когда программа установки explicitly попросит вас это сделать. Подключение раньше времени может привести к тому, что Windows 7 автоматически установит несовместимый универсальный драйвер, который придется удалять вручную.</blockquote>
+
+<p>Иногда в комплект поставки входит диск с программным обеспечением, но его содержимое может быть устаревшим. В таком случае скачанный из интернета файл часто содержит более свежие патчи. Сохраните архив в отдельную папку, чтобы избежать путаницы с временными файлами.</p>
+
+<h2 id="установка-драйвера-через-режим-совместимости">Установка драйвера через режим совместимости</h2>
+<p>Поскольку официальные установочные пакеты для <em>Canon LBP 1120</em> разрабатывались в эпоху <code>Windows XP</code> и <code>Vista</code>, прямой запуск может завершиться ошибкой. Решением является использование свойства <strong>Режим совместимости</strong>. Это позволяет эмулировать среду более старой операционной системы для запуска программы.</p>
+
+<p>Нажмите правой кнопкой мыши на скачанный установочный файл (обычно он имеет расширение <code>.exe</code>) и выберите пункт <code>Свойства</code>. Перейдите на вкладку <strong>Совместимость</strong>. В разделе "Режим совместимости" поставьте галочку напротив пункта <code>Запустить эту программу в режиме совместимости с</code>.</p>
+
+<p>В выпадающем списке выберите <em>Windows XP (Service Pack 3)</em> или <em>Windows Vista</em>. Также обязательно отметьте галочкой опцию <strong>Запускать эту программу от имени администратора</strong>. Это даст программе необходимые права для записи ключей в реестр и установки драйверов печати.</p>
+
+<ul>
+<li>✅ Нажмите <strong>Применить</strong>, чтобы сохранить настройки совместимости перед запуском.</li>
+<li>✅ Запустите файл установки двойным щелчком мыши и следуйте появившимся инструкциям.</li>
+<li>✅ Если установка зависнет на этапе копирования файлов, попробуйте запустить процесс в безопасном режиме.</li>
+</ul>
+
+<p>В процессе установки вас могут попросить подключить принтер. В этот момент вставьте USB-кабель в порт. Система Windows 7 должна обнаружить новое оборудование и завершить процесс конфигурации. Если окно установки исчезло, а принтер не появился, возможно, процесс прервался из-за блокировки антивирусом.</p>
+
+<details class="pb-accordion"><summary>Что делать, если установщик выдает ошибку о несовместимости ОС?
+<p>Попробуйте найти универсальный драйвер PCL6 или PostScript для серии LBP. Иногда помогает использование драйверов от более мощной модели, например Canon LBP 6000, так как их внутренние модули печати идентичны, а интерфейс в Windows 7 работает стабильнее.--></p>
+
+<p>После успешной установки перезагрузите компьютер. Это необходимо для того, чтобы службы печати <strong>Print Spooler</strong> проинициализировали новый драйвер и создали очередь печати.</p>
+
+<h2 id="работа-с-утилитой-lbp-tool">Работа с утилитой LBP Tool</h2>
+<p>Одной из главных особенностей моделей серии <em>Canon LBP</em> является их зависимость от специальной утилиты <strong>LBP Tool</strong>. Без этой программы принтер не сможет начать печать, даже если драйвер установлен корректно. <mark>Именно этот программный компонент является самым слабым местом при работе на Windows 7</mark>.</p>
+
+<p>Часто стандартный установщик не добавляет ярлык утилиты в меню "Пуск" или автоматически не запускает её при загрузке системы. Если вы видите, что принтер в списке устройств есть, но статус "Офлайн" или "Пауза", проблема кроется именно в работе LBP Tool.</p>
+
+<p>Запустите утилиту вручную через <code>Пуск → Программы → Canon → LBP Tool</code>. В интерфейсе программы вы должны увидеть кнопку <strong>Start</strong> или значок включения. Нажмите её, чтобы активировать порт печати. Если утилита не запускается, попробуйте снова применить режим совместимости к её исполняемому файлу.</p>
+
+<!--WIDGET</summary><div class="pb-accordion-body"><p>checklist:Проверка работы LBP Tool
+<p>1. Найти файл LBPTool.exe в папке установки</p>
+<p>2. Открыть свойства файла и включить режим совместимости</p>
+<p>3. Запустить программу от имени администратора</p>
+<p>4. Нажать кнопку Start в интерфейсе утилиты</p></div></details></p>
+
+<p>Важно отметить, что утилита должна работать постоянно в фоновом режиме. Если вы закрываете её, принтер перестанет принимать документы. Рекомендуется добавить ярлык программы в папку <code>Автозагрузка</code>, чтобы она запускалась вместе с Windows 7 каждый раз.</p>
+
+<div class="pb-poll" id="poll-9815b2c6"><div class="pb-poll-question">📊 Какую версию Windows 7 вы используете на данном устройстве?</div><div class="pb-poll-option" data-poll="9815b2c6" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 7 Starter</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9815b2c6" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 7 Home Premium</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9815b2c6" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 7 Professional</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9815b2c6" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Windows 7 Ultimate</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="ручное-добавление-принтера-в-системе">Ручное добавление принтера в системе</h2>
+<p>Если автоматическая установка не сработала, или вы хотите контролировать каждый шаг процесса, необходимо использовать метод ручного добавления устройства. Это часто позволяет избежать конфликтов, которые возникают при автоматическом поиске драйверов системой.</p>
+
+<p>Перейдите в <code>Панель управления → Устройства и принтеры</code>. Нажмите на кнопку <strong>Установка принтера</strong> в верхней части окна. В появившемся мастере выберите пункт <strong>Добавить локальный принтер</strong>. Не выбирайте автоматическое определение, если система не находит устройство корректно.</p>
+
+<p>На следующем этапе вам нужно выбрать порт. Для <em>Canon LBP 1120</em> обычно используется порт <code>USB001</code> (виртуальный порт для принтера). Если такого порта нет, создайте новый, выбрав тип <strong>Local Port</strong>, и введите имя <code>USB001</code> вручную.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Имя устройства</td>
+<td>Canon LBP1120</td>
+<td>Логическое имя для системы</td>
+</tr>
+<tr>
+<td>Порт</td>
+<td>USB001</td>
+<td>Виртуальный порт для USB-подключения</td>
+</tr>
+<tr>
+<td>Драйвер</td>
+<td>Canon LBP1120 Series</td>
+<td>Необходимый файл .inf</td>
+</tr>
+<tr>
+<td>Служба печати</td>
+<td>Print Spooler</td>
+<td>Фоновый процесс Windows</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>В списке производителей выберите <strong>Canon</strong>, а в списке принтеров — вашу модель. Если её нет в списке, нажмите кнопку <strong>Установить с диска</strong> и укажите путь к распакованным файлам драйвера (файл <code>.inf</code>). После этого нажмите <strong>Далее</strong> и завершите установку.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед установкой вручную убедитесь, что антивирус не блокирует доступ к драйверам. Иногда отключение защиты на время установки помогает избежать ошибок реестра.</p></aside>
+
+<h2 id="решение-частых-проблем-и-ошибок">Решение частых проблем и ошибок</h2>
+<p>Даже после правильной установки пользователи могут столкнуться с тем, что принтер не печатает или "виснет". Одной из самых распространенных причин является остановка службы <strong>Print Spooler</strong>. В Windows 7 эта служба иногда конфликтует с драйверами старых моделей Canon.</p>
+
+<p>Чтобы проверить её статус, нажмите <code>Win + R</code>, введите команду <code>services.msc</code> и нажмите Enter. В открывшемся окне найдите строку <strong>Диспетчер печати</strong> (или <code>Print Spooler</code>). Убедитесь, что её статус — <strong>Выполняется</strong>.</p>
+
+<p>Если служба остановлена, нажмите на неё правой кнопкой мыши и выберите <strong>Запустить</strong>. Также рекомендуется зайти в свойства этой службы и изменить тип запуска на <strong>Автоматически</strong>, чтобы проблема не повторялась после перезагрузки.</p>
+
+<ul>
+<li>❌ Ошибка "Не удалось найти порт": Проверьте, не меняется ли номер порта <code>USB001</code> при подключении к другим USB-разъемам.</li>
+<li>❌ Ошибка "Драйвер не загружен": Попробуйте удалить устройство и установить драйвер заново в режиме совместимости.</li>
+<li>❌ Проблемы с качеством: Убедитесь, что в настройках принтера выбран правильный режим экономии тонера или высокого качества.</li>
+</ul>
+
+<p>Иногда помогает очистка очереди печати. Для этого откройте <code>Устройства и принтеры</code>, нажмите на иконку вашего <em>Canon LBP 1120</em> и выберите <strong>Очередь печати</strong>. В меню "Принтер" выберите <strong>Очистить очередь печати</strong>. Это сбросит зависшие задания, которые могут блокировать работу всего устройства.</p>
+
+<blockquote>⚠️ Внимание: Если принтер перестал печатать после обновления Windows 7 (например, после установки Service Pack 1), скорее всего, драйвер был перезаписан. Необходимо переустановить его заново, предварительно удалив старое устройство из системы полностью.</blockquote>
+
+<p>Также стоит обратить внимание на сам USB-кабель. Используйте качественный экранированный кабель длиной не более 2 метров. Дешевые удлинители могут вызывать потерю связи, которую система интерпретирует как отключение принтера.</p>
+
+<h2 id="технические-особенности-и-ограничения">Технические особенности и ограничения</h2>
+<p>Модель <em>Canon LBP 1120</em> имеет свои особенности, о которых стоит знать при эксплуатации. Это лазерный принтер с поддержкой только черного цвета, что делает его идеальным для работы с текстовыми документами. Однако он не поддерживает прямую печать с флешек или телефонов без компьютера.</p>
+
+<p>Скорость печати составляет примерно 20 страниц в минуту, что является отличным показателем для бюджетного сегмента. Важным моментом является использование оригинальных картриджей или качественных аналогов, так как чувствительный фотобарабан требует стабильного качества тонера.</p>
+
+<p>Поскольку драйверы для этой модели больше не обновляются разработчиком, вы не получите поддержки новых функций безопасности или оптимизаций. Это означает, что на современных сетях безопасности могут возникать конфликты, если вы попытаетесь подключить принтер к общему доступу.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для стабильной работы Canon LBP 1120 на Windows 7 критически важно, чтобы утилита LBP Tool запускалась автоматически при старте системы и работала в фоновом режиме.</p></aside>
+
+<p>Если вам необходимо печатать много документов, следите за уровнем тонера. В отличие от струйных принтеров, лазерный тонер не высыхает, но его количество ограничено. Использование заправленных картриджей с чипами может вызывать ошибки, если чип не сбрасывается корректно.</p>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Можно ли установить Canon LBP 1120 на Windows 7 64-bit?</summary>
+<p>Да, можно. Для этого необходимо скачать специальную версию драйвера для 64-битных систем. Часто драйверы для серии LBP 6000 подходят и для LBP 1120, так как они построены на одной аппаратной базе.</p>
+</details>
+
+<details>
+<summary>Принтер определяется, но LBP Tool не запускается. Что делать?</summary>
+<p>Попробуйте запустить утилиту от имени администратора. Если это не помогает, проверьте, не заблокирован ли процесс антивирусом. В редких случаях помогает полная переустановка драйверов с очисткой реестра.</p>
+</details>
+
+<details>
+<summary>Почему принтер печатает только пустые листы?</summary>
+<p>Это обычно связано с отсутствием тонера или проблемами с картриджем. Также проверьте, не включен ли режим экономии тонера в настройках драйвера, который может быть слишком агрессивным для старых картриджей.</p>
+</details>
+
+<details>
+<summary>Можно ли подключить этот принтер через Wi-Fi?</summary>
+<p>Нет, модель Canon LBP 1120 не имеет встроенного Wi-Fi модуля и сетевой платы. Она подключается исключительно через USB-кабель к компьютеру. Для беспроводной печати потребуется внешний Wi-Fi сервер печати.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-ustanovit-printer-canon-lbp-6000.html" class="pb-related-card">
+                <span class="pb-related-title">Установка принтера Canon LBP 6000: Драйверы и настройка на Windows</span>
+                <span class="pb-related-desc">Пошаговая инструкция по установке принтера Canon LBP 6000. Скачивание драйверов, подключение по USB,</span>
+            </a><a href="/articles/k/ka/kak-ustanovit-printer-canon-mg2540s-bez-diska.html" class="pb-related-card">
+                <span class="pb-related-title">Установка принтера Canon MG2540S без диска: полная инструкция</span>
+                <span class="pb-related-desc">Как настроить Canon MG2540S без драйверов на диске. Пошаговая установка драйверов через официальный </span>
+            </a><a href="/articles/k/ka/kak-pomenyat-tsvet-pechati-na-printere-canon-mg2540s.html" class="pb-related-card">
+                <span class="pb-related-title">Как поменять цвет печати на принтере Canon MG2540s: инструкция</span>
+                <span class="pb-related-desc">Пошаговая настройка печати в цвете на Canon MG2540s. Решение проблем с черно-белым режимом, драйверы</span>
+            </a><a href="/articles/k/ka/kak-vstavit-kartridzh-v-printer-canon-pixma-mg2500.html" class="pb-related-card">
+                <span class="pb-related-title">Как вставить картридж в принтер Canon Pixma MG2500: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробная замена картриджей в Canon Pixma MG2500. Инструкция по замене черного и цветного картриджей</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-printer-canon-mp230.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить принтер Canon MP230 к компьютеру: полная инструкция</span>
+                <span class="pb-related-desc">Пошаговое руководство по подключению Canon MP230 через USB и Wi-Fi. Установка драйверов, устранение </span>
+            </a><a href="/articles/c/ca/canon-pixma-mp280-kak-ustanovit-drajver.html" class="pb-related-card">
+                <span class="pb-related-title">Как установить драйвер Canon Pixma MP280: Полная инструкция 2026</span>
+                <span class="pb-related-desc">Подробное руководство по установке драйверов для принтера Canon Pixma MP280 на Windows и Mac. Решени</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🖨️ Кэнон Инфо</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/nastrojka-printerov/">⚙️ Настройка принтеров</a> · <a href="/category/zapravka-kartridzhej/">💧 Заправка картриджей</a> · <a href="/category/remont-i-oshibki/">🔧 Ремонт и ошибки</a> · <a href="/category/skanirovanie-i-kopirovanie/">📄 Сканирование и копирование</a> · <a href="/category/fotoapparaty-canon/">📷 Фотоаппараты Canon</a> · <a href="/category/nastrojki-kamery/">🎛️ Настройки камеры</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Кэнон Инфо. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>
